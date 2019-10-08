@@ -1,0 +1,36 @@
+<template>
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <h2 class="slds-text-heading_small slds-m-bottom_medium">
+                Buttons with custom <code>onclick</code> handlers.
+            </h2>
+            <div class="slds-card">
+                <div class="slds-m-around_medium">
+                    <p class="slds-text-heading_x-small slds-m-bottom_medium">
+                        This button's handler toggles the icon used on the button and visibility of a content block. </p>
+                    <!-- Toggle visibility of a content block when clicked -->
+                    <c-button label="{toggleButtonLabel}" title="Toggle content action" icon-name="{toggleIconName}" onclick="{handleToggleClick}">
+                    </c-button>
+                </div>
+                <div class="slds-m-vertical_large slds-m-around_medium lgc-id_content-toggle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </div>
+            </div>
+            <div class="slds-card">
+                <div class="slds-m-around_medium">
+                    <p class="slds-text-heading_x-small slds-m-top_medium slds-m-bottom_large">
+                        This button's handler generates random content.</p>
+
+                    <!-- Generate random content when clicked -->
+                    <c-button label="Random greek letter" title="Random greek letter action" icon-name="utility:refresh" onclick="{handleRandomClick}" class="slds-m-left_x-small">
+                    </c-button>
+                    <div class="slds-m-vertical_large slds-p-vertical_medium slds-border_top slds-border_bottom">
+                        Random greek letter: <span class="slds-text-heading_small">{greekLetter}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
