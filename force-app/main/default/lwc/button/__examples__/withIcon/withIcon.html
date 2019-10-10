@@ -1,0 +1,43 @@
+<template>
+        <div class="slds-m-top_small slds-m-bottom_medium">
+            <h2 class="slds-text-heading_small slds-m-bottom_small">
+                Buttons with an icon before the label text, the default location.
+            </h2>
+                <p class="slds-m-bottom_medium">
+                    <code>icon-position</code> attribute is omitted to use the default value of <code>left</code>.
+                </p>
+
+            <!-- Base variant: Makes a button look like a link -->
+            <c-button variant="base" label="Download" title="Download action with base variant" icon-name="utility:download" class="slds-m-left_x-small"></c-button>
+
+            <!-- Neutral variant (default) -->
+            <c-button label="Download" title="Download action" icon-name="utility:download" class="slds-m-left_x-small"></c-button>
+
+            <!-- Brand variant: Identifies the primary action in a group of buttons -->
+            <c-button variant="brand" label="Download" title="Download action with brand variant" icon-name="utility:download" class="slds-m-left_x-small"></c-button>
+
+            <!-- Destructive variant: Identifies a potentially negative action -->
+            <c-button variant="destructive" label="Delete" title="Delete action with destructive variant" icon-name="utility:delete" class="slds-m-left_x-small"></c-button>
+        </div>
+
+        <div class="slds-m-top_x-large slds-m-bottom_small">
+                <h2 class="slds-text-heading_small slds-m-bottom_small">
+                  Buttons with an icon after the label text.
+                 </h2>
+                 <p class="slds-m-bottom_medium">
+                     <code>icon-position</code> attribute has a value of <code>right</code>.
+                 </p>
+
+                <!-- Base variant: Makes a button look like a link -->
+                <c-button variant="base" label="Download" title="Download action" icon-name="utility:download" icon-position="right" class="slds-m-left_x-small"></c-button>
+
+                <!-- Neutral variant (default) -->
+                <c-button label="Download" title="Download action" icon-name="utility:download" icon-position="right" class="slds-m-left_x-small"></c-button>
+
+                <!-- Brand variant: Identifies the primary action in a group of buttons -->
+                <c-button variant="brand" label="Download" title="Download action" icon-name="utility:download" icon-position="right" class="slds-m-left_x-small"></c-button>
+
+                <!-- Destructive variant: Identifies a potentially negative action -->
+                <c-button variant="destructive" label="Delete" title="Delete action" icon-name="utility:delete" icon-position="right" class="slds-m-left_x-small"></c-button>
+            </div>
+    </template>

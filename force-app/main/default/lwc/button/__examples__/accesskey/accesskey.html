@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-m-top_xx-small slds-m-bottom_xx-small">
+        <h2 class="slds-text-heading_small slds-m-bottom_xx-small">
+            Buttons with custom access keys.
+        </h2>
+        <div class="slds-m-bottom_medium slds-p-bottom_medium slds-border_bottom">
+            To activate the buttons using the access key, press the following keys:
+            <ul class="slds-list_dotted">
+                <li class="slds-m-vertical_x-small">Mac: &nbsp;<kbd>Control</kbd>&nbsp;+&nbsp;<kbd>Alt</kbd>&nbsp;+&nbsp;<kbd><em>key</em></kbd></li>
+                <li class="slds-m-vertical_x-small">Windows: &nbsp;<kbd>Alt</kbd>&nbsp;+&nbsp;<kbd><em>key</em></kbd></li>
+                <li class="slds-m-vertical_x-small">Firefox on Windows: &nbsp;<kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>Shift</kbd>&nbsp;+&nbsp;<kbd><em>key</em></kbd></li>
+            </ul>
+        </div>
+        <p>
+            The <code>accesskey</code> attribute has a value specified in the button's label text
+        </p>
+
+        <div class="slds-p-vertical_small">
+            <!-- Basic button -->
+            <c-button label="With accesskey 'x'" title="Download action" accesskey="x" onclick="{handleClick}" class="slds-m-left_x-small"></c-button>
+
+            <!-- Button with icon before the label text -->
+            <c-button label="With accesskey 'y'" title="Download action" accesskey="y" onclick="{handleClick}" icon-name="utility:download" class="slds-m-left_x-small"></c-button>
+
+            <!-- Button with icon after the label text -->
+            <c-button label="With accesskey 'z'" title="Download action" accesskey="z" onclick="{handleClick}" icon-name="utility:download" icon-position="right" class="slds-m-left_x-small"></c-button>
+        </div>
+
+        <div class="slds-m-vertical_medium slds-p-vertical_medium slds-border_bottom slds-border_top">
+            <p>The label of the button that was activated is: <span class="slds-text-heading_small">{clickedButtonLabel}</span></p>
+        </div>
+    </div>
+</template>

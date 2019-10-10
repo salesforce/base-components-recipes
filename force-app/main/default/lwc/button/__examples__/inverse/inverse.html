@@ -1,0 +1,42 @@
+<template>
+        <div class="slds-m-top_small slds-m-bottom_small">
+                <h2 class="slds-text-heading_small slds-m-bottom_xx-small">
+                    Inverse variant of buttons with varying attribute values.
+                </h2>
+                <p class="slds-m-bottom_medium">
+                    <code>variant</code> attribute has a value of <code>inverse</code>
+                </p>
+
+            <div class="slds-p-around_medium lgc-bg-inverse">
+                <!-- Basic button -->
+                <c-button variant="inverse" label="Download" title="Download action" class="slds-m-left_x-small"></c-button>
+
+                <!-- Button with icon before the label text -->
+                <c-button variant="inverse" label="Download" title="Download action" icon-name="utility:download" class="slds-m-left_x-small"></c-button>
+
+                <!-- Button with icon after the label text -->
+                <c-button variant="inverse" label="Download" title="Download action" icon-name="utility:download" icon-position="right" class="slds-m-left_x-small"></c-button>
+            </div>
+        </div>
+
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <h2 class="slds-text-heading_small slds-m-bottom_xx-small">
+                    Inverse variant of buttons that are disabled.
+                </h2>
+            <ul class="slds-list_dotted slds-m-bottom_medium">
+                <li><code>variant</code> attribute has a value of <code>inverse</code></li>
+                <li><code>disabled</code> attribute is present</li>
+            </ul>
+
+            <div class="slds-p-around_medium lgc-bg-inverse">
+                <!-- Button that is disabled -->
+                <c-button variant="inverse" label="Delete" title="Delete action" disabled="" class="slds-m-left_x-small"></c-button>
+
+                <!-- Button that is disabled and has an icon before the label text -->
+                <c-button variant="inverse" label="Delete" title="Delete action" disabled="" icon-name="utility:delete" class="slds-m-left_x-small"></c-button>
+
+                <!-- Button that is disabled and has an icon after the label text -->
+                <c-button variant="inverse" label="Delete" title="Delete action" disabled="" icon-name="utility:delete" icon-position="right" class="slds-m-left_x-small"></c-button>
+            </div>
+        </div>
+    </template>
