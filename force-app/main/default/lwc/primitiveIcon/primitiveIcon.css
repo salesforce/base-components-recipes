@@ -1,0 +1,10 @@
+/*
+"Temporary" fix for Edge SVG quirk. We can remove this when it is fixed either
+at the SLDS level or at the browser level.
+ https://git.soma.salesforce.com/aura/lightning-global/issues/1349
+
+ Also prevents IE11 from gacking during some interactions
+*/
+_:-ms-lang(x), svg {
+    pointer-events: none;
+}

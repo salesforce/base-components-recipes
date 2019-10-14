@@ -1,10 +1,10 @@
 import { api, track } from 'lwc';
-import { classSet } from 'lightning/utils';
-import { normalizeString as normalize } from 'lightning/utilsPrivate';
-import LightningPrimitiveButton from 'lightning/primitiveButton';
+import { classSet } from 'c/utils';
+import { normalizeString as normalize } from 'c/utilsPrivate';
+import cPrimitiveButton from 'c/primitiveButton';
 import template from './button.html';
 
-export default class cButton extends LightningPrimitiveButton {
+export default class cButton extends cPrimitiveButton {
   static delegatesFocus = true;
 
   @api name;
