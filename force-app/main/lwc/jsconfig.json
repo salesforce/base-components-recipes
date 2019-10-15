@@ -2,8 +2,14 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
+            "c/avatar": [
+                "../default/lwc/avatar/avatar.js"
+            ],
             "c/button": [
                 "../default/lwc/button/button.js"
+            ],
+            "c/card": [
+                "../default/lwc/card/card.js"
             ],
             "c/iconUtils": [
                 "../default/lwc/iconUtils/iconUtils.js"
@@ -19,6 +25,12 @@
             ],
             "c/utilsPrivate": [
                 "../default/lwc/utilsPrivate/utilsPrivate.js"
+            ],
+            "c/buttonRecipes": [
+                "buttonRecipes/buttonRecipes.js"
+            ],
+            "c/cardRecipes": [
+                "cardRecipes/cardRecipes.js"
             ]
         }
     }
