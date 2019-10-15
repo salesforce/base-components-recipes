@@ -377,11 +377,11 @@
     <name>lightning_LightningDatatable_showActions</name>
   </customLabels>
   <customLabels>
-    <label>交换文本</label>
+    <label>自动换行</label>
     <name>lightning_LightningDatatable_wrapText</name>
   </customLabels>
   <customLabels>
-    <label>剪切文本</label>
+    <label>剪辑文本</label>
     <name>lightning_LightningDatatable_clipText</name>
   </customLabels>
   <customLabels>
