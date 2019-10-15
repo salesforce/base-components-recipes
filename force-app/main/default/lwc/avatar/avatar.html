@@ -1,0 +1,7 @@
+<template>
+    <img if:true={_src} src={_src} onerror={handleImageError} alt={alternativeText} title={alternativeText}></img>
+
+    <abbr if:true={showInitials} class={computedInitialsClass} title={alternativeText}>{initials}</abbr>
+
+    <lightning-icon if:true={showIcon} icon-name={fallbackIconName} alternative-text={alternativeText} title={alternativeText}></lightning-icon>
+</template>
