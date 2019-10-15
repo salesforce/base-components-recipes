@@ -1,58 +1,96 @@
-# Salesforce App
+# Base Components Recipes
 
-This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
+View examples for base components in small bites. Each recipe demonstrates a building block to build pages and apps quickly. Use and customize the recipes in your apps.
 
-## Part 1: Choosing a Development Model
+> Base components recipes are designed to run on the Salesforce platform. To experience Lightning Web Components on any platform, visit https://lwc.dev.
 
-There are two types of developer processes or models supported in Salesforce Extensions for VS Code and Salesforce CLI. These models are explained below. Each model offers pros and cons and is fully supported.
+Base components implement Lightning Design System and are developed using Lightning Web Components. They use the `c` namespace and are a snapshot of the `lightning` namespaced components.
+A `c` namespaced component can contain components in the `lightning` namespace.
 
-### Package Development Model
 
-The package development model allows you to create self-contained applications or libraries that are deployed to your org as a single package. These packages are typically developed against source-tracked orgs called scratch orgs. This development model is geared toward a more modern type of software development process that uses org source tracking, source control, and continuous integration and deployment.
+## Usage
 
-If you are starting a new project, we recommend that you consider the package development model. To start developing with this model in Visual Studio Code, see [Package Development Model with VS Code](https://forcedotcom.github.io/salesforcedx-vscode/articles/user-guide/package-development-model). For details about the model, see the [Package Development Model](https://trailhead.salesforce.com/en/content/learn/modules/sfdx_dev_model) Trailhead module.
+Create a Lightning web component with a base component recipe, `c-button`.
 
-If you are developing against scratch orgs, use the command `SFDX: Create Project` (VS Code) or `sfdx force:project:create` (Salesforce CLI)  to create your project. If you used another command, you might want to start over with that command.
+```html
+<!--helloWorld.html-->
 
-When working with source-tracked orgs, use the commands `SFDX: Push Source to Org` (VS Code) or `sfdx force:source:push` (Salesforce CLI) and `SFDX: Pull Source from Org` (VS Code) or `sfdx force:source:pull` (Salesforce CLI). Do not use the `Retrieve` and `Deploy` commands with scratch orgs.
-
-### Org Development Model
-
-The org development model allows you to connect directly to a non-source-tracked org (sandbox, Developer Edition (DE) org, Trailhead Playground, or even a production org) to retrieve and deploy code directly. This model is similar to the type of development you have done in the past using tools such as Force.com IDE or MavensMate.
-
-To start developing with this model in Visual Studio Code, see [Org Development Model with VS Code](https://forcedotcom.github.io/salesforcedx-vscode/articles/user-guide/org-development-model). For details about the model, see the [Org Development Model](https://trailhead.salesforce.com/content/learn/modules/org-development-model) Trailhead module.
-
-If you are developing against non-source-tracked orgs, use the command `SFDX: Create Project with Manifest` (VS Code) or `sfdx force:project:create --manifest` (Salesforce CLI) to create your project. If you used another command, you might want to start over with this command to create a Salesforce DX project.
-
-When working with non-source-tracked orgs, use the commands `SFDX: Deploy Source to Org` (VS Code) or `sfdx force:source:deploy` (Salesforce CLI) and `SFDX: Retrieve Source from Org` (VS Code) or `sfdx force:source:retrieve` (Salesforce CLI). The `Push` and `Pull` commands work only on orgs with source tracking (scratch orgs).
-
-## The `sfdx-project.json` File
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-The most important parts of this file for getting started are the `sfdcLoginUrl` and `packageDirectories` properties.
-
-The `sfdcLoginUrl` specifies the default login URL to use when authorizing an org.
-
-The `packageDirectories` filepath tells VS Code and Salesforce CLI where the metadata files for your project are stored. You need at least one package directory set in your file. The default setting is shown below. If you set the value of the `packageDirectories` property called `path` to `force-app`, by default your metadata goes in the `force-app` directory. If you want to change that directory to something like `src`, simply change the `path` value and make sure the directory you’re pointing to exists.
-
-```json
-"packageDirectories" : [
-    {
-      "path": "force-app",
-      "default": true
-    }
-]
+<template>
+    <c-button label={greeting} title="greeting">
+    </c-button>
+</template>
 ```
 
-## Part 2: Working with Source
+ The `greeting` property in the template is bound to the `greeting` property in the JavaScript class.
 
-For details about developing against scratch orgs, see the [Package Development Model](https://trailhead.salesforce.com/en/content/learn/modules/sfdx_dev_model) module on Trailhead or [Package Development Model with VS Code](https://forcedotcom.github.io/salesforcedx-vscode/articles/user-guide/package-development-model).
+```javascript
+//helloWorld.js
 
-For details about developing against orgs that don’t have source tracking, see the [Org Development Model](https://trailhead.salesforce.com/content/learn/modules/org-development-model) module on Trailhead or [Org Development Model with VS Code](https://forcedotcom.github.io/salesforcedx-vscode/articles/user-guide/org-development-model).
+import { LightningElement, api } from 'lwc';
+export default class HelloWorld extends LightningElement {
+    @api greeting = 'Hello World';
+}
+```
 
-## Part 3: Deploying to Production
 
-Don’t deploy your code to production directly from Visual Studio Code. The deploy and retrieve commands do not support transactional operations, which means that a deployment can fail in a partial state. Also, the deploy and retrieve commands don’t run the tests needed for production deployments. The push and pull commands are disabled for orgs that don’t have source tracking, including production orgs.
+## Documentation
 
-Deploy your changes to production using [packaging](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_dev2gp.htm) or by [converting your source](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_source.htm#cli_reference_convert) into metadata format and using the [metadata deploy command](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_mdapi.htm#cli_reference_deploy).
+Base component recipes in the c namespace map to components in the lightning namespace. The components below link to documentation for components in the lightning namespace, but the usage is similar.
+ 
+The following components can be customized.
+
+**Component** | **Description** | **Comment** |
+-----|-----|-----|
+[c-avatar](https://developer.salesforce.com/docs/component-library/bundle/lightning-avatar) | A visual representation of an object, such as an account or user  |  |
+[c-badge](https://developer.salesforce.com/docs/component-library/bundle/lightning-badge) | A label which holds a small amount of information, such as the number of unread notifications  |  |
+[c-button](https://developer.salesforce.com/docs/component-library/bundle/lightning-button) | A button element that invokes an action | |
+[c-button-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-group) | A group of buttons that invokes similar actions | |
+[c-button-icon](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-icon) | An icon-only button that invokes an action | |
+[c-button-icon-stateful](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-icon-stateful) | An icon-only button that retains state | |
+[c-card](https://developer.salesforce.com/docs/component-library/bundle/lightning-card) | A stylized container around a group of information | |
+[c-carousel](https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel) | A collection of images and captions that are displayed one at a time | |
+[c-checkbox-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-checkbox-group) | A group of checkboxes that enables selection of single or multiple options | |
+[c-click-to-dial](https://developer.salesforce.com/docs/component-library/bundle/lightning-click-to-dial) | A formatted phone number for computer-telephony integrations | |
+[c-combobox](https://developer.salesforce.com/docs/component-library/bundle/lightning-combobox) | A dropdown menu for single selection that uses a read-only input field | |
+[c-dual-listbox](https://developer.salesforce.com/docs/component-library/bundle/lightning-dual-listbox) | A pair of lists that enables multiple options to be selected and reordered | |
+[c-dynamic-icon](https://developer.salesforce.com/docs/component-library/bundle/lightning-dynamic-icon) | A set of animated icons | |
+[c-formatted-date-time](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-date-time) | A pair of date and time that's displayed based on the user locale | |
+[c-formatted-email](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-email) | An email address that opens the default mail app when clicked | |
+[c-formatted-location](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-location) | A pair of latitude and longitude for a location | |
+[c-formatted-name](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-name) | A name that's displayed based on the user locale, which determines the format and order of the constituents (suffix, salutation, etc.) | |
+[c-formatted-number](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-number) | A decimal, currency, or percantage that's displayed base on the user locale | |
+[c-formatted-phone](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-phone) | A phone number that opens the default VOIP call app when clicked
+[c-formatted-rich-text](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-rich-text) | A group of rich text that's formatted with whitelisted tags and attributes | |
+[c-formatted-text](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-text) | A group of text with an option  to display URLs and email addresses as links | |
+[c-formatted-time](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-time) | A time value that's displayed based on the user locale | | 
+[c-formatted-url](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-url) | A URL that's displayed as a link | |
+[c-icon](https://developer.salesforce.com/docs/component-library/bundle/lightning-icon) | A visual element that provides context and enhances usability | |
+[c-input-location](https://developer.salesforce.com/docs/component-library/bundle/lightning-input-location) | A pair of latitude and longitude fields | |
+[c-layout](https://developer.salesforce.com/docs/component-library/bundle/lightning-layout) | A responsive grid system | |
+[c-layout-item](https://developer.salesforce.com/docs/component-library/bundle/lightning-layout-item) | A container in a grid system | |
+[c-output-field](https://developer.salesforce.com/docs/component-library/bundle/lightning-output-field) | A read-only display of a label, help text, and value for a field on a Salesforce object | |
+[c-pill](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill) | A label that can contain a link and can be removed from view | |
+[c-pill-container](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill-container) | A list of pills grouped in a container | |
+[c-progress-bar](https://developer.salesforce.com/docs/component-library/bundle/lightning-progress-bar) | A horizontal progress bar that indicates the progress of an operation | |
+[c-progress-indicator](https://developer.salesforce.com/docs/component-library/bundle/lightning-progress-indicator) | A visual indication on the current, previous, and later steps in a particular process | |
+[c-radio-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-radio-group) | A group of radio butons that can have a single option selected | |
+[c-record-edit-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form) | A form for creating or editing a record with one or more fields | Use `c-record-edit-form` with `lightning-input-field` |
+[c-record-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-form) | A form for creating, displaying, or editing a record with automatic switching between edit and view modes | | 
+[c-record-view-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-view-form) | A form for displaying record data | |
+[c-relative-date-time](https://developer.salesforce.com/docs/component-library/bundle/lightning-relative-date-time) | A group of text depicting how a specified time relates to the current time, such as "a few seconds ago" or "in 5 years" | |
+[c-slider](https://developer.salesforce.com/docs/component-library/bundle/lightning-slider) | An input range slider that enables selection of a value between two specified numbers | |
+[c-textarea](https://developer.salesforce.com/docs/component-library/bundle/lightning-textarea) | A textarea field for multi-line text input | |
+[c-tile](https://developer.salesforce.com/docs/component-library/bundle/lightning-tile) | A group of related information associated with a record | |
+[c-tree](https://developer.salesforce.com/docs/component-library/bundle/lightning-tree) | A visualization of a structural hierarchy with nested items that can be collapsed or expanded | |
+[c-vertical-navigation](https://developer.salesforce.com/docs/component-library/bundle/lightning-vertical-navigation) | A vertical list of links that can be grouped into sections | |
+[c-vertical-navigation-item](https://developer.salesforce.com/docs/component-library/bundle/lightning-vertical-navigation-item) | A text-only link within `c-vertical-navigation-section` or `c-vertical-navigation-overflow` | |
+[c-vertical-navigation-item-badge](https://developer.salesforce.com/docs/component-library/bundle/lightning-vertical-navigation-item-badge) | A link and badge within `c-vertical-navigation-section` or `c-vertical-navigation-overflow` | |
+[c-vertical-navigation-item-icon](https://developer.salesforce.com/docs/component-library/bundle/lightning-vertical-navigation-item-icon) | A link and icon within `c-vertical-navigation-section` or `c-vertical-navigation-overflow` | |
+[c-vertical-navigation-section](https://developer.salesforce.com/docs/component-library/bundle/lightning-vertical-navigation) | A group of navigation items within `c-vertical-navigation` with a header | |
+[c-vertical-navigation-overflow](https://developer.salesforce.com/docs/component-library/bundle/lightning-vertical-navigation) | A group of navigation items that can be expanded and collapsed | |
+
+
+## FAQ
+
+- **Where can I see more examples on how to use Lightning Web Components?**
+    - Check out [lwc-recipes](https://github.com/trailheadapps/lwc-recipes/). For sample apps using Lightning Web Components, visit https://trailhead.salesforce.com/sample-gallery.
