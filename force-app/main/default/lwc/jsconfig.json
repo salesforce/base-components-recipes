@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/button": [
+                "button/button.js"
+            ],
+            "c/iconUtils": [
+                "iconUtils/iconUtils.js"
+            ],
+            "c/primitiveButton": [
+                "primitiveButton/primitiveButton.js"
+            ],
+            "c/primitiveIcon": [
+                "primitiveIcon/primitiveIcon.js"
+            ],
+            "c/utils": [
+                "utils/utils.js"
+            ],
+            "c/utilsPrivate": [
+                "utilsPrivate/utilsPrivate.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

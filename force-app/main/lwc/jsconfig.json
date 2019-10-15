@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "c/button": [
+                "../default/lwc/button/button.js"
+            ],
+            "c/iconUtils": [
+                "../default/lwc/iconUtils/iconUtils.js"
+            ],
+            "c/primitiveButton": [
+                "../default/lwc/primitiveButton/primitiveButton.js"
+            ],
+            "c/primitiveIcon": [
+                "../default/lwc/primitiveIcon/primitiveIcon.js"
+            ],
+            "c/utils": [
+                "../default/lwc/utils/utils.js"
+            ],
+            "c/utilsPrivate": [
+                "../default/lwc/utilsPrivate/utilsPrivate.js"
+            ]
+        }
+    }
+}
