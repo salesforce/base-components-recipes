@@ -3,8 +3,14 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/avatar": [
+                "avatar/avatar.js"
+            ],
             "c/button": [
                 "button/button.js"
+            ],
+            "c/card": [
+                "card/card.js"
             ],
             "c/iconUtils": [
                 "iconUtils/iconUtils.js"
@@ -20,6 +26,12 @@
             ],
             "c/utilsPrivate": [
                 "utilsPrivate/utilsPrivate.js"
+            ],
+            "c/buttonRecipes": [
+                "../../lwc/buttonRecipes/buttonRecipes.js"
+            ],
+            "c/cardRecipes": [
+                "../../lwc/cardRecipes/cardRecipes.js"
             ]
         }
     },
