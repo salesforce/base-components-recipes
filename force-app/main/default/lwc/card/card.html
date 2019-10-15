@@ -1,0 +1,36 @@
+<template>
+    <article class={computedWrapperClassNames}>
+        <header class="slds-card__header slds-grid">
+            <div class="slds-media slds-media_center slds-has-flexi-truncate">
+                <template if:true={hasIcon}>
+                    <div class="slds-media__figure" >
+                        <lightning-icon icon-name={iconName} size="small"></lightning-icon>
+                    </div>
+                </template>
+                <div class="slds-media__body slds-truncate">
+                    <h2>
+                        <span class="slds-text-heading_small">
+                            <template if:true={hasStringTitle}>
+                                {title}
+                            </template>
+                            <template if:false={hasStringTitle}>
+                                <slot name="title"></slot>
+                            </template>
+                        </span>
+                    </h2>
+                </div>
+            </div>
+            <div class="slds-no-flex">
+                <slot name="actions"></slot>
+            </div>
+        </header>
+        <div class="slds-card__body">
+            <slot></slot>
+        </div>
+        <div class="slds-card__footer">
+            <slot name="footer">
+                <span data-id="default-content"></span>
+            </slot>
+        </div>
+    </article>
+</template>
