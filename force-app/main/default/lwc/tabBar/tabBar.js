@@ -1,7 +1,7 @@
-import labelOverflowMore from '@salesforce/label/LightningTabs.overflowMore';
-import labelOverflowMoreAlternativeText from '@salesforce/label/LightningTabs.overflowMoreAlternativeText';
-import labelOverflowMoreTitle from '@salesforce/label/LightningTabs.overflowMoreTitle';
-import labelErrorStateAlternativeText from '@salesforce/label/LightningTabs.errorStateAlternativeText';
+import labelOverflowMore from '@salesforce/label/c.lightning_LightningTabs_overflowMore';
+import labelOverflowMoreAlternativeText from '@salesforce/label/c.lightning_LightningTabs_overflowMoreAlternativeText';
+import labelOverflowMoreTitle from '@salesforce/label/c.lightning_LightningTabs_overflowMoreTitle';
+import labelErrorStateAlternativeText from '@salesforce/label/c.lightning_LightningTabs_errorStateAlternativeText';
 
 import { LightningElement, api, track } from 'lwc';
 import { classSet } from 'c/utils';

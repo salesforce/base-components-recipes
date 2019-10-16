@@ -381,7 +381,7 @@
     <name>lightning_LightningDatatable_wrapText</name>
   </customLabels>
   <customLabels>
-    <label>Szöveg kivágása</label>
+    <label>Szöveg levágása</label>
     <name>lightning_LightningDatatable_clipText</name>
   </customLabels>
   <customLabels>

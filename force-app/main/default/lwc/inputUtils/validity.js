@@ -1,12 +1,12 @@
-import labelBadInput from '@salesforce/label/LightningErrorMessage.validityBadInput';
-import labelPatternMismatch from '@salesforce/label/LightningErrorMessage.validityPatternMismatch';
-import labelRangeOverflow from '@salesforce/label/LightningErrorMessage.validityRangeOverflow';
-import labelRangeUnderflow from '@salesforce/label/LightningErrorMessage.validityRangeUnderflow';
-import labelStepMismatch from '@salesforce/label/LightningErrorMessage.validityStepMismatch';
-import labelTooLong from '@salesforce/label/LightningErrorMessage.validityTooLong';
-import labelTooShort from '@salesforce/label/LightningErrorMessage.validityTooShort';
-import labelTypeMismatch from '@salesforce/label/LightningErrorMessage.validityTypeMismatch';
-import labelValueMissing from '@salesforce/label/LightningErrorMessage.validityValueMissing';
+import labelBadInput from '@salesforce/label/c.lightning_LightningErrorMessage_validityBadInput';
+import labelPatternMismatch from '@salesforce/label/c.lightning_LightningErrorMessage_validityPatternMismatch';
+import labelRangeOverflow from '@salesforce/label/c.lightning_LightningErrorMessage_validityRangeOverflow';
+import labelRangeUnderflow from '@salesforce/label/c.lightning_LightningErrorMessage_validityRangeUnderflow';
+import labelStepMismatch from '@salesforce/label/c.lightning_LightningErrorMessage_validityStepMismatch';
+import labelTooLong from '@salesforce/label/c.lightning_LightningErrorMessage_validityTooLong';
+import labelTooShort from '@salesforce/label/c.lightning_LightningErrorMessage_validityTooShort';
+import labelTypeMismatch from '@salesforce/label/c.lightning_LightningErrorMessage_validityTypeMismatch';
+import labelValueMissing from '@salesforce/label/c.lightning_LightningErrorMessage_validityValueMissing';
 import { assert } from 'c/utilsPrivate';
 
 const constraintsSortedByPriority = [
