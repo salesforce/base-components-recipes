@@ -1,0 +1,10 @@
+<template>
+    <template if:true={state.isNavigable}>
+        <a href={state.url} onclick={handleClick}>
+            {displayValue}
+        </a>
+    </template>
+    <template if:false={state.isNavigable}>
+            {displayValue}
+    </template>
+</template>
