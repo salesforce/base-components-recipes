@@ -1,0 +1,60 @@
+<template>
+    <ul class={computedListClass}
+        role="tablist"
+        aria-orientation={computedAriaOrientation}
+        onkeydown={handleKeyDown}>
+        <template for:each={_allTabs} for:item="tab">
+            <template if:true={tab.visible}>
+                <li data-tab key={tab.value} class={tab.class} onclick={handleTabClick}
+                    title={tab.title} role="presentation" data-label={tab.label} data-tab-value={tab.value}>
+                    <a class={tab.linkClass}
+                        data-tab-value={tab.value}
+                        data-label={tab.label}
+                        role="tab"
+                        href="javascript:void(0)"
+                        onblur={handleBlur}
+                        onfocus={handleFocus}
+                        tabindex={tab.tabIndex}
+                        aria-selected={tab.ariaSelected}>
+                        <template if:true={tab.iconName}>
+                            <span class={computedLeftIconClass}>
+                                <lightning-icon icon-name={tab.iconName} data-tab-value={tab.value}
+                                    size="small" alternative-text={tab.iconAlternativeText}></lightning-icon>
+                            </span>
+                        </template>
+                        {tab.label}
+                        <template if:true={tab.endIconName}>
+                            <span class={computedRightIconClass}>
+                                <lightning-icon icon-name={tab.endIconName} data-tab-value={tab.value}
+                                    size="small" alternative-text={tab.endIconAlternativeText}></lightning-icon>
+                            </span>
+                        </template>
+                        <template if:true={tab.showErrorIndicator}>
+                            <span class={computedRightIconClass}>
+                                <lightning-icon icon-name="utility:error" variant="error" data-tab-value={tab.value}
+                                    size="small" alternative-text={i18n.errorStateAlternativeText}></lightning-icon>
+                            </span>
+                        </template>
+                    </a>
+                </li>
+            </template>
+        </template>
+        <template if:true={overflowSupported}>
+            <li data-overflow class={computedOverflowClass} style={computedOverflowVisibility}>
+                <lightning-button-menu variant="bare"
+                    alternative-text={i18n.moreAlternativeText}
+                    title={i18n.moreTitle}
+                    onselect={handleOverflowSelect}
+                    icon-name="utility:chevrondown"
+                    label={i18n.more}
+                    menu-alignment="right">
+                    <template for:each={_allTabs} for:item="tab">
+                        <template if:false={tab.visible}>
+                            <lightning-menu-item key={tab.value} label={tab.label} value={tab.value}></lightning-menu-item>
+                        </template>
+                    </template>
+                </lightning-button-menu>
+            </li>
+        </template>
+    </ul>
+</template>
