@@ -5,7 +5,7 @@ import labelErrorStateAlternativeText from '@salesforce/label/LightningTabs.erro
 
 import { LightningElement, api, track } from 'lwc';
 import { classSet } from 'c/utils';
-import { calculateOverflow } from 'lightning/overflowLibrary';
+import { calculateOverflow } from 'c/overflowLibrary';
 import { LightningResizeObserver } from 'c/resizeObserver';
 import { handleKeyDownOnTabList } from './keyboard';
 
