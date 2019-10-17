@@ -1,0 +1,30 @@
+<template>
+    <div class="slds-media__figure">
+        <slot name="media"></slot>
+    </div>
+    <div class="slds-media__body">
+        <template if:true={hasActions}>
+            <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
+                <h3 class="slds-tile__title slds-truncate" title={label}>
+                    <a href={href}>{label}</a>
+                </h3>
+                <div class="slds-shrink-none">
+                    <lightning-button-menu icon-size="x-small" alternative-text={buttonAlternateText} onselect={handleActionSelect}
+                        menu-alignment="right">
+                        <template for:each={actions} for:item="action">
+                            <lightning-menu-item key={action.label} value={action} label={action.label} icon-name={action.iconName} disabled={action.disabled}></lightning-menu-item>
+                        </template>
+                    </lightning-button-menu>
+                </div>
+            </div>
+        </template>
+        <template if:false={hasActions}>
+            <h3 class="slds-tile__title slds-truncate" title={label}>
+                <a href={href}>{label}</a>
+            </h3>
+        </template>
+        <div class="slds-tile__detail">
+            <slot></slot>
+        </div>
+    </div>
+</template>

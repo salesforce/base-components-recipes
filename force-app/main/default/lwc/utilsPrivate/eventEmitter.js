@@ -1,3 +1,5 @@
+import { ArraySlice } from './utilsPrivate';
+
 export class EventEmitter {
   constructor() {
     this.registry = {};
@@ -18,9 +20,11 @@ export class EventEmitter {
     return this;
   }
 
-  emit(name, ...args) {
+  emit(name) {
+    const args = ArraySlice.call(arguments, 1);
     const listeners = this.registry[name];
     let count = 0;
+
     if (listeners) {
       listeners.forEach(listener => {
         count += 1;

@@ -14,7 +14,7 @@ export function handleKeyDownOnTabList(
     case keyCodes.left:
     case keyCodes.right:
     case keyCodes.down:
-    case keyCodes.up:
+    case keyCodes.up: {
       const isArrowUp = event.keyCode === keyCodes.up;
       const isArrowDown = event.keyCode === keyCodes.down;
       const isArrowLeft = event.keyCode === keyCodes.left;
@@ -37,6 +37,7 @@ export function handleKeyDownOnTabList(
         tabsetInterface.selectTabIndex(newIndex);
       }
       break;
+    }
     default:
       break;
   }
