@@ -12,14 +12,56 @@
             "c/card": [
                 "card/card.js"
             ],
+            "c/formattedDateTime": [
+                "formattedDateTime/formattedDateTime.js"
+            ],
+            "c/formattedLocation": [
+                "formattedLocation/formattedLocation.js"
+            ],
+            "c/formattedLookup": [
+                "formattedLookup/formattedLookup.js"
+            ],
+            "c/formattedName": [
+                "formattedName/formattedName.js"
+            ],
+            "c/formattedNumber": [
+                "formattedNumber/formattedNumber.js"
+            ],
             "c/iconUtils": [
                 "iconUtils/iconUtils.js"
+            ],
+            "c/inputUtils": [
+                "inputUtils/inputUtils.js"
+            ],
+            "c/internationalizationLibrary": [
+                "internationalizationLibrary/internationalizationLibrary.js"
+            ],
+            "c/iso8601Utils": [
+                "iso8601Utils/iso8601Utils.js"
+            ],
+            "c/overflowLibrary": [
+                "overflowLibrary/overflowLibrary.js"
             ],
             "c/primitiveButton": [
                 "primitiveButton/primitiveButton.js"
             ],
             "c/primitiveIcon": [
                 "primitiveIcon/primitiveIcon.js"
+            ],
+            "c/resizeObserver": [
+                "resizeObserver/resizeObserver.js"
+            ],
+            "c/routingService": [
+                "routingService/routingService.js"
+            ],
+            "c/tab": [
+                "tab/tab.js"
+            ],
+            "c/tabBar": [
+                "tabBar/tabBar.js"
+            ],
+            "c/tabset": [
+                "tabset/tabset.js"
             ],
             "c/utils": [
                 "utils/utils.js"
@@ -32,6 +74,21 @@
             ],
             "c/cardRecipes": [
                 "../../lwc/cardRecipes/cardRecipes.js"
+            ],
+            "c/formattedDateTimeRecipes": [
+                "../../lwc/formattedDateTimeRecipes/formattedDateTimeRecipes.js"
+            ],
+            "c/formattedLocationRecipes": [
+                "../../lwc/formattedLocationRecipes/formattedLocationRecipes.js"
+            ],
+            "c/formattedNameRecipes": [
+                "../../lwc/formattedNameRecipes/formattedNameRecipes.js"
+            ],
+            "c/formattedNumberRecipes": [
+                "../../lwc/formattedNumberRecipes/formattedNumberRecipes.js"
+            ],
+            "c/tabsetRecipes": [
+                "../../lwc/tabsetRecipes/tabsetRecipes.js"
             ]
         }
     },
