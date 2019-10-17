@@ -22,13 +22,18 @@
             <c-button label="Refresh"></c-button>
             <c-button label="Edit"></c-button>
             <c-button label="Save" icon-name="utility:save"></c-button>
-            <c-button label="Delete" variant="destructive" icon-name="utility:delete"></c-button>
+            <c-button
+                label="Delete"
+                variant="destructive"
+                icon-name="utility:delete"
+            ></c-button>
         </c-button-group>
     </div>
 
     <div class="slds-m-top_medium slds-m-bottom_x-large">
         <h2 class="slds-text-heading_medium slds-m-bottom_medium">
-            Button group using several button types (standard, icon, stateful, icon-stateful, menu).
+            Button group using several button types (standard, icon, stateful,
+            icon-stateful, menu).
         </h2>
 
         <!-- Button group: simple buttons -->
@@ -36,8 +41,16 @@
             <c-button label="Refresh"></c-button>
             <c-button label="Edit"></c-button>
             <c-button label="Save" icon-name="utility:save"></c-button>
-            <c-button-icon icon-name="utility:delete" variant="border-filled" alternative-text="Delete"></c-button-icon>
-            <c-button-icon icon-name="utility:settings" variant="border-filled" alternative-text="Settings"></c-button-icon>
+            <c-button-icon
+                icon-name="utility:delete"
+                variant="border-filled"
+                alternative-text="Delete"
+            ></c-button-icon>
+            <c-button-icon
+                icon-name="utility:settings"
+                variant="border-filled"
+                alternative-text="Settings"
+            ></c-button-icon>
             <c-button-stateful
                 selected={buttonStatefulState}
                 label-when-off="Follow"
@@ -52,12 +65,16 @@
                 icon-name="utility:like"
                 selected={buttonIconStatefulState}
                 alternative-text="Like"
-                onclick={handleButtonIconStatefulClick}>
+                onclick={handleButtonIconStatefulClick}
+            >
             </c-button-icon-stateful>
             <c-button-menu alternative-text="Show menu">
                 <c-menu-item label="Menu Item One" value="item1"></c-menu-item>
                 <c-menu-item label="Menu Item Two" value="item2"></c-menu-item>
-                <c-menu-item label="Menu Item Three" value="item3"></c-menu-item>
+                <c-menu-item
+                    label="Menu Item Three"
+                    value="item3"
+                ></c-menu-item>
             </c-button-menu>
         </c-button-group>
     </div>

@@ -7,7 +7,7 @@ export default class ComboboxRecipes extends LightningElement {
         return [
             { label: 'New', value: 'new' },
             { label: 'In Progress', value: 'inProgress' },
-            { label: 'Finished', value: 'finished' },
+            { label: 'Finished', value: 'finished' }
         ];
     }
 
