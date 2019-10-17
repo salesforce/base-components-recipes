@@ -1,14 +1,15 @@
 <!-- !! NOTE: Do not commit changes to this file. It is intended as a starter shell only. -->
 <template>
-    <c-checkbox-group name="Checkbox Group"
-    label="Checkbox Group"
-    options={options}
-    value={value}
-    onchange={handleChange}></c-checkbox-group>
-<p>Selected Values are: {selectedValues}</p>
+    <c-checkbox-group
+        name="Checkbox Group"
+        label="Checkbox Group"
+        options={options}
+        value={value}
+        onchange={handleChange}
+    ></c-checkbox-group>
+    <p>Selected Values are: {selectedValues}</p>
 
-<button onclick={handleReset}>Uncheck All</button>
-<button onclick={handleCheckAll}>Check All (Adds an extra option) </button>
-<button onclick={handleSetToNull}>Set Value to Null </button>
-
+    <button onclick={handleReset}>Uncheck All</button>
+    <button onclick={handleCheckAll}>Check All (Adds an extra option)</button>
+    <button onclick={handleSetToNull}>Set Value to Null</button>
 </template>

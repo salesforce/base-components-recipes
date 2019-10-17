@@ -11,6 +11,6 @@ export default class BadgeRecipes extends LightningElement {
     }
 
     handleButtonTwoClick() {
-        this.badgeLabel = "Hello";
+        this.badgeLabel = 'Hello';
     }
 }

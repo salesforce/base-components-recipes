@@ -12,7 +12,7 @@ export default class CheckboxGroupRecipes extends LightningElement {
             { label: 'Rachel', value: 'option2' },
             { label: 'Bob', value: 'option3' },
             { label: 'Greg', value: 'option4' },
-            { label: 'Lokesh', value: 'option5' },
+            { label: 'Lokesh', value: 'option5' }
         ];
     }
 
@@ -31,6 +31,6 @@ export default class CheckboxGroupRecipes extends LightningElement {
         this.value = null;
     }
     handleCheckAll() {
-        this.value = [1,2,3,4,5,6].map(i => `option${i}`);
+        this.value = [1, 2, 3, 4, 5, 6].map(i => `option${i}`);
     }
 }
