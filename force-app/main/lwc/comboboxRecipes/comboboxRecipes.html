@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-box">
+    <h2 class="header">Basic Combobox</h2>
+    <c-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} ></c-combobox>
+
+    <p>Selected value is: {value}</p>
+    </div>
+</template>
