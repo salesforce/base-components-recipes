@@ -1,0 +1,10 @@
+<template>
+    <span data-slds-strength={normalizedOption} class="slds-icon-strength">
+        <svg viewBox="0 0 27 7" aria-hidden="true">
+            <circle r="3.025" cx="3.5" cy="3.5"></circle>
+            <circle r="3.025" cx="13.5" cy="3.5"></circle>
+            <circle r="3.025" cx="23.5" cy="3.5"></circle>
+        </svg>
+        <span if:true={alternativeText} class="slds-assistive-text">{alternativeText}</span>
+    </span>
+</template>

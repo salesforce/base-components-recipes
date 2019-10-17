@@ -1,0 +1,24 @@
+<template>
+    <button class={computedButtonClass}
+            disabled={disabled}
+            name={name}
+            type="button"
+            role="button"
+            value={value}
+            title={computedTitle}
+            aria-pressed={computedAriaPressed}
+            aria-describedby={computedAriaDescribedBy}
+            aria-label={computedAriaLabel}
+            aria-controls={computedAriaControls}
+            aria-expanded={computedAriaExpanded}
+            aria-live={computedAriaLive}
+            aria-atomic={computedAriaAtomic}>
+
+        <c-primitive-icon icon-name={iconName} svg-class="slds-button__icon" variant="bare"></c-primitive-icon>
+
+        <template if:true={alternativeText}>
+            <span class="slds-assistive-text">{alternativeText}</span>
+        </template>
+
+    </button>
+</template>

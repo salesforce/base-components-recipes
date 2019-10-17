@@ -1,0 +1,11 @@
+<template>
+    <span data-slds-state={normalizedOption} class="slds-icon-score">
+        <svg viewBox="0 0 5 5" class="slds-icon-score__positive" aria-hidden="true">
+            <circle cx="50%" cy="50%" r="1.875"></circle>
+        </svg>
+        <svg viewBox="0 0 5 5" class="slds-icon-score__negative" aria-hidden="true">
+            <circle cx="50%" cy="50%" r="1.875"></circle>
+        </svg>
+        <span if:true={alternativeText} class="slds-assistive-text">{alternativeText}</span>
+    </span>
+</template>
