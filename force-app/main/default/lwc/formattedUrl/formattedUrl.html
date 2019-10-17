@@ -1,0 +1,13 @@
+<template>
+    <template if:true={hasValue}>
+        <a
+            href={computedUrl}
+            title={tooltip}
+            target={target}
+            tabindex={tabIndex}
+            onclick={handleClick}
+        >
+            {computedLabel}
+        </a>
+    </template>
+</template>

@@ -1,0 +1,15 @@
+<template>
+   <a href={href}
+       class="slds-nav-vertical__action"
+       onclick={handleClick}
+       aria-current={ariaCurrent}>
+
+       {label}
+
+       <template if:true={showBadge}>
+           <span class="slds-badge slds-col_bump-left">
+               <span class="slds-assistive-text">:</span> {badgeCount} <span class="slds-assistive-text">{assistiveText}</span>
+           </span>
+       </template>
+   </a>
+</template>
