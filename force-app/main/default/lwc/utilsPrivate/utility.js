@@ -54,3 +54,5 @@ export function arraysEqual(array1, array2) {
 
   return true;
 }
+
+export const ArraySlice = Array.prototype.slice;

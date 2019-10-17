@@ -351,6 +351,7 @@ export default class cTabBar extends LightningElement {
     this._allTabs.forEach(tab => {
       tab.visible = true;
     });
+
     requestAnimationFrame(this._recomputeOverflow.bind(this));
   }
 

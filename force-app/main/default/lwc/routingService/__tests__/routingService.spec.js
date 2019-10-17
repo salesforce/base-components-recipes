@@ -15,7 +15,7 @@ describe('routing-service', () => {
         expect(event.cancelable).toBe(true);
       });
       getLinkInfo({ dispatchEvent }, stateRef);
-      expect(dispatchEvent).toBeCalled();
+      expect(dispatchEvent).toHaveBeenCalled();
     });
 
     it('passes state to event', () => {
@@ -35,7 +35,7 @@ describe('routing-service', () => {
       });
       const dispatchEvent = event => {
         event.detail.callback(null, linkInfo);
-        expect(resolveFn).toBeCalled();
+        expect(resolveFn).toHaveBeenCalled();
       };
       getLinkInfo({ dispatchEvent }, stateRef).then(resolveFn);
     });
@@ -50,7 +50,7 @@ describe('routing-service', () => {
       });
       const dispatchEvent = event => {
         event.detail.callback(errorObj, null);
-        expect(rejectFn).toBeCalled();
+        expect(rejectFn).toHaveBeenCalled();
       };
       getLinkInfo({ dispatchEvent }, stateRef).catch(rejectFn);
     });
@@ -65,7 +65,7 @@ describe('routing-service', () => {
         expect(event.cancelable).toBe(true);
       });
       updateRawLinkInfo({ dispatchEvent }, { url });
-      expect(dispatchEvent).toBeCalled();
+      expect(dispatchEvent).toHaveBeenCalled();
     });
 
     it('passes the correct state to event', () => {

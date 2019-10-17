@@ -133,7 +133,7 @@ export class ContentMutation {
       this.privateConnect();
     }
     for (const attrName in this.state) {
-      if (this.state.hasOwnProperty(attrName)) {
+      if (Object.prototype.hasOwnProperty.call(this.state, attrName)) {
         this.privateUpdate(attrName);
       }
     }
@@ -158,7 +158,7 @@ export class ContentMutation {
       return;
     }
     for (const liveId in this.liveIds) {
-      if (this.liveIds.hasOwnProperty(liveId)) {
+      if (Object.prototype.hasOwnProperty.call(this.liveIds, liveId)) {
         const thisId = this.liveIds[liveId];
         if (!thisId.elements) {
           thisId.elements = Array.prototype.slice.call(
