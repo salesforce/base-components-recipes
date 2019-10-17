@@ -6,6 +6,7 @@ export function calculateOverflow({
 }) {
   const visibleItems = [];
   const overflowItems = [];
+  const itemsLength = items.length;
 
   const allItemsWidth = items.reduce(
     (totalWidth, item) => totalWidth + item.width,
@@ -23,7 +24,9 @@ export function calculateOverflow({
   }
 
   let activeItemFitsWithoutRearrangement = false;
-  for (const item of items) {
+
+  for (let i = 0; i < itemsLength; i++) {
+    const item = items[i];
     if (activeItem.value === item.value) {
       activeItemFitsWithoutRearrangement = overflowItems.length === 0;
       if (activeItemFitsWithoutRearrangement) {

@@ -1,5 +1,5 @@
-import labelLoading from '@salesforce/label/c.lightning_LightningButtonMenu_loading';
-import labelShowMenu from '@salesforce/label/c.lightning_LightningButtonMenu_showMenu';
+import labelLoading from '@salesforce/label/c.lightning_c_lightning_LightningButtonMenu_loading';
+import labelShowMenu from '@salesforce/label/c.lightning_c_lightning_LightningButtonMenu_showMenu';
 import { api, LightningElement, track } from 'lwc';
 import { classSet } from 'c/utils';
 import {

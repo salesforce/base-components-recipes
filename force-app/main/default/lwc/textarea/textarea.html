@@ -1,0 +1,28 @@
+<template>
+    <label class={computedLabelClass} for="input">
+        <template if:true={required}>
+            <abbr class="slds-required" title={i18n.required}>*</abbr>
+        </template>
+        {label}
+    </label>
+    <lightning-helptext if:true={fieldLevelHelp} content={fieldLevelHelp}></lightning-helptext>
+    <div class="slds-form-element__control slds-grow">
+        <textarea id="input" class="slds-textarea"
+            aria-describedby={computedUniqueHelpElementId}
+            oninput={handleInput}
+            onchange={handleChange}
+            onfocus={handleFocus}
+            onblur={handleBlur}
+            readonly={readOnly}
+            disabled={disabled}
+            name={name}
+            maxlength={maxLength}
+            minlength={minLength}
+            placeholder={placeholder}
+            required={required}
+            accesskey={accessKey}>{_defaultValue}</textarea>
+    </div>
+    <template if:true={_helpMessage}>
+        <div id="help-message" data-help-message class="slds-form-element__help" aria-live="assertive">{_helpMessage}</div>
+    </template>
+</template>
