@@ -11,14 +11,56 @@
             "c/card": [
                 "../default/lwc/card/card.js"
             ],
+            "c/formattedDateTime": [
+                "../default/lwc/formattedDateTime/formattedDateTime.js"
+            ],
+            "c/formattedLocation": [
+                "../default/lwc/formattedLocation/formattedLocation.js"
+            ],
+            "c/formattedLookup": [
+                "../default/lwc/formattedLookup/formattedLookup.js"
+            ],
+            "c/formattedName": [
+                "../default/lwc/formattedName/formattedName.js"
+            ],
+            "c/formattedNumber": [
+                "../default/lwc/formattedNumber/formattedNumber.js"
+            ],
             "c/iconUtils": [
                 "../default/lwc/iconUtils/iconUtils.js"
+            ],
+            "c/inputUtils": [
+                "../default/lwc/inputUtils/inputUtils.js"
+            ],
+            "c/internationalizationLibrary": [
+                "../default/lwc/internationalizationLibrary/internationalizationLibrary.js"
+            ],
+            "c/iso8601Utils": [
+                "../default/lwc/iso8601Utils/iso8601Utils.js"
+            ],
+            "c/overflowLibrary": [
+                "../default/lwc/overflowLibrary/overflowLibrary.js"
             ],
             "c/primitiveButton": [
                 "../default/lwc/primitiveButton/primitiveButton.js"
             ],
             "c/primitiveIcon": [
                 "../default/lwc/primitiveIcon/primitiveIcon.js"
+            ],
+            "c/resizeObserver": [
+                "../default/lwc/resizeObserver/resizeObserver.js"
+            ],
+            "c/routingService": [
+                "../default/lwc/routingService/routingService.js"
+            ],
+            "c/tab": [
+                "../default/lwc/tab/tab.js"
+            ],
+            "c/tabBar": [
+                "../default/lwc/tabBar/tabBar.js"
+            ],
+            "c/tabset": [
+                "../default/lwc/tabset/tabset.js"
             ],
             "c/utils": [
                 "../default/lwc/utils/utils.js"
@@ -31,7 +73,32 @@
             ],
             "c/cardRecipes": [
                 "cardRecipes/cardRecipes.js"
+            ],
+            "c/formattedDateTimeRecipes": [
+                "formattedDateTimeRecipes/formattedDateTimeRecipes.js"
+            ],
+            "c/formattedLocationRecipes": [
+                "formattedLocationRecipes/formattedLocationRecipes.js"
+            ],
+            "c/formattedNameRecipes": [
+                "formattedNameRecipes/formattedNameRecipes.js"
+            ],
+            "c/formattedNumberRecipes": [
+                "formattedNumberRecipes/formattedNumberRecipes.js"
+            ],
+            "c/tabsetRecipes": [
+                "tabsetRecipes/tabsetRecipes.js"
             ]
-        }
+        },
+        "experimentalDecorators": true
+    },
+    "include": [
+        "**/*",
+        "../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
     }
 }

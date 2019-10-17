@@ -1,7 +1,7 @@
 import { timeout, animationFrame } from 'c/utilsPrivate';
 
 const DELAY_TIMEOUT = 200;
-export class cResizeObserver {
+export class LightningResizeObserver {
   constructor(resizeCallback) {
     this._resizeObserverAvailable = typeof ResizeObserver === 'function';
 

@@ -12,4 +12,8 @@ package.xml
 **/__tests__/**
 **/__test__/**
 
+# TODO: Remove this, we should deploy translations.
 force-app/main/default/translations
+
+# Licenses
+**/lwc/purifyLib/LICENSE.txt
