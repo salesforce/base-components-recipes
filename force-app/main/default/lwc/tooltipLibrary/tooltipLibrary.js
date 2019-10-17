@@ -9,7 +9,7 @@ import {
 import LightningPrimitiveBubble from 'lightning/primitiveBubble';
 import formFactor from '@salesforce/client/formFactor';
 
-export { Direction } from 'lightning/positionLibrary';
+export { Direction } from 'c/positionLibrary';
 
 const BUBBLE_ID = `salesforce-lightning-tooltip-bubble_${guid()}`;
 
