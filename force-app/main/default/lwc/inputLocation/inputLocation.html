@@ -1,0 +1,44 @@
+<template>
+    <fieldset class="slds-form-element">
+        <legend class={computedLegendClass}>{label}</legend>
+        <template if:true={fieldLevelHelp}>
+            <lightning-helptext content={fieldLevelHelp}></lightning-helptext>
+        </template>
+        <div class="slds-form-element__control">
+            <div class="slds-form-element__group">
+                <div class="slds-form-element__row">
+                    <div class="slds-size_1-of-2">
+                        <lightning-input data-latitude
+                            label={i18n.latitude}
+                            name="latitude"
+                            value={latitude}
+                            onchange={handleLatitudeChange}
+                            onfocus={handleFocus}
+                            onblur={handleLatitudeBlur}
+                            required={required}
+                            disabled={disabled}
+                            readonly={readOnly}
+                            message-when-bad-input={i18n.invalidLatitude}
+                            message-when-value-missing={i18n.coordinateIsRequired}>
+                        </lightning-input>
+                    </div>
+                    <div class="slds-size_1-of-2">
+                        <lightning-input data-longitude
+                            label={i18n.longitude}
+                            name="longitude"
+                            value={longitude}
+                            onchange={handleLongitudeChange}
+                            onfocus={handleFocus}
+                            onblur={handleLongitudeBlur}
+                            required={required}
+                            disabled={disabled}
+                            readonly={readOnly}
+                            message-when-bad-input={i18n.invalidLongitude}
+                            message-when-value-missing={i18n.coordinateIsRequired}>
+                        </lightning-input>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</template>

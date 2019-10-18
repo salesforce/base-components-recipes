@@ -14,7 +14,7 @@ import {
   doNormalization,
   resetResizeObserver,
   setLabelAlignment
-} from 'lightning/formDensityUtilsPrivate';
+} from 'c/formDensityUtilsPrivate';
 
 export default class cRecordView extends LightningElement {
   optionalFields = [];
