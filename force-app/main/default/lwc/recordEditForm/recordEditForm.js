@@ -21,7 +21,7 @@ import {
 import { deepCopy } from 'c/utilsPrivate';
 
 import { normalizeRecordId } from 'c/recordUtils';
-import { DependencyManager } from 'lightning/fieldDependencyManager';
+import { DependencyManager } from 'c/fieldDependencyManager';
 
 const MASTER_RECORD_TYPE_ID = '012000000000000AAA';
 
