@@ -6,7 +6,7 @@
         onclick={handleTriggerClick}>
         <div class={computedFormElementClass} role="none">
             <template if:true={hasInputPill}>
-                <lightning-icon icon-name={inputPill.iconName} alternative-text={inputPill.iconAlternativeText} size="x-small" class="slds-icon_container slds-combobox__input-entity-icon"></lightning-icon>
+                <c-icon icon-name={inputPill.iconName} alternative-text={inputPill.iconAlternativeText} size="x-small" class="slds-icon_container slds-combobox__input-entity-icon"></c-icon>
             </template>
             <input id="input"
                 class={computedInputClass}
@@ -47,7 +47,7 @@
                         </div>
                     </template>
                     <template if:true={inputIconName}>
-                        <lightning-icon alternative-text={inputIconAlternativeText} icon-name={inputIconName} size={inputIconSize} class="slds-input__icon slds-input__icon_right"></lightning-icon>
+                        <c-icon alternative-text={inputIconAlternativeText} icon-name={inputIconName} size={inputIconSize} class="slds-input__icon slds-input__icon_right"></c-icon>
                     </template>
                 </div>
             </template>
