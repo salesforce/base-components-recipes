@@ -280,6 +280,9 @@
             ],
             "c/textareaRecipes": [
                 "textareaRecipes/textareaRecipes.js"
+            ],
+            "c/tileRecipes": [
+                "tileRecipes/tileRecipes.js"
             ]
         },
         "experimentalDecorators": true

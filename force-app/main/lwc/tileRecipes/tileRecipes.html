@@ -1,0 +1,40 @@
+<template>
+     <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            A basic tile component.
+        </h2>
+
+        <!-- Simple -->
+        <div class="slds-p-around_medium lgc-bg">
+            <c-tile label="c component team" href="/path/to/somewhere">
+                <p class="slds-truncate" title="7 Members">7 Members</p>
+            </c-tile>
+        </div>
+    </div>
+
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            A tile component with a more complex layout.
+        </h2>
+
+        <!-- More complex content -->
+        <div class="slds-p-around_medium lgc-bg">
+            <c-tile label="Salesforce UX" href="/path/to/somewhere">
+                <dl class="slds-dl_horizontal">
+                    <dt class="slds-dl_horizontal__label">
+                        <p class="slds-truncate" title="Company">Company:</p>
+                    </dt>
+                    <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                        <p class="slds-truncate" title="Salesforce">Salesforce</p>
+                    </dd>
+                    <dt class="slds-dl_horizontal__label">
+                        <p class="slds-truncate" title="Email">Email:</p>
+                    </dt>
+                    <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                        <p class="slds-truncate" title="salesforce-ux@salesforce.com">salesforce-ux@salesforce.com</p>
+                    </dd>
+                </dl>
+            </c-tile>
+        </div>
+    </div>
+</template>

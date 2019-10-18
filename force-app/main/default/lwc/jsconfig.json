@@ -281,6 +281,9 @@
             ],
             "c/textareaRecipes": [
                 "../../lwc/textareaRecipes/textareaRecipes.js"
+            ],
+            "c/tileRecipes": [
+                "../../lwc/tileRecipes/tileRecipes.js"
             ]
         }
     },
