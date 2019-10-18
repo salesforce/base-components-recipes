@@ -1,5 +1,5 @@
 import { LightningElement, track } from 'lwc';
 
-export default class TextAreaRecipes extends LightningElement {   
+export default class TileRecipes extends LightningElement {   
     
 }

@@ -286,6 +286,9 @@
             ],
             "c/icon": [
                 "../default/lwc/icon/icon.js"
+            ],
+            "c/spinnerRecipes": [
+                "spinnerRecipes/spinnerRecipes.js"
             ]
         },
         "experimentalDecorators": true

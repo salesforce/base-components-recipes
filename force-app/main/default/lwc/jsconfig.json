@@ -287,6 +287,9 @@
             ],
             "c/icon": [
                 "icon/icon.js"
+            ],
+            "c/spinnerRecipes": [
+                "../../lwc/spinnerRecipes/spinnerRecipes.js"
             ]
         }
     },
