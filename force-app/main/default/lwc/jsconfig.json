@@ -309,9 +309,6 @@
             "c/progressbarRecipes": [
                 "../../lwc/progressbarRecipes/progressbarRecipes.js"
             ],
-            "c/accordionRecipes": [
-                "../../lwc/accordionRecipes/accordionRecipes.js"
-            ],
             "c/accordionBasic": [
                 "../../lwc/accordionBasic/accordionBasic.js"
             ],
@@ -326,6 +323,9 @@
             ],
             "c/accordionMultiple": [
                 "../../lwc/accordionMultiple/accordionMultiple.js"
+            ],
+            "c/layoutRecipes": [
+                "../../lwc/layoutRecipes/layoutRecipes.js"
             ]
         }
     },

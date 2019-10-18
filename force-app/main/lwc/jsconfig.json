@@ -308,9 +308,6 @@
             "c/progressbarRecipes": [
                 "progressbarRecipes/progressbarRecipes.js"
             ],
-            "c/accordionRecipes": [
-                "accordionRecipes/accordionRecipes.js"
-            ],
             "c/accordionBasic": [
                 "accordionBasic/accordionBasic.js"
             ],
@@ -325,6 +322,9 @@
             ],
             "c/accordionMultiple": [
                 "accordionMultiple/accordionMultiple.js"
+            ],
+            "c/layoutRecipes": [
+                "layoutRecipes/layoutRecipes.js"
             ]
         },
         "experimentalDecorators": true

@@ -1,0 +1,8 @@
+.custom-box {
+    border: solid 1px #ccc;
+    padding: 1rem;
+}
+.page-header,
+.page-footer {
+    height: 50px;
+}
