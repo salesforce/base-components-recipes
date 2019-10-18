@@ -3,6 +3,15 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/accordion": [
+                "accordion/accordion.js"
+            ],
+            "c/accordionSection": [
+                "accordionSection/accordionSection.js"
+            ],
+            "c/accordionUtilsPrivate": [
+                "accordionUtilsPrivate/accordionUtilsPrivate.js"
+            ],
             "c/avatar": [
                 "avatar/avatar.js"
             ],
@@ -228,6 +237,9 @@
             "c/verticalNavigationSection": [
                 "verticalNavigationSection/verticalNavigationSection.js"
             ],
+            "c/accordionRecipes": [
+                "../../lwc/accordionRecipes/accordionRecipes.js"
+            ],
             "c/badgeRecipes": [
                 "../../lwc/badgeRecipes/badgeRecipes.js"
             ],
@@ -284,6 +296,9 @@
             ],
             "c/verticalRecipes": [
                 "../../lwc/verticalRecipes/verticalRecipes.js"
+            ],
+            "c/iconRecipes": [
+                "../../lwc/iconRecipes/iconRecipes.js"
             ],
             "c/spinnerRecipes": [
                 "../../lwc/spinnerRecipes/spinnerRecipes.js"
