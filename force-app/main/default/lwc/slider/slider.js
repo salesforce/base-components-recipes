@@ -5,7 +5,7 @@ import {
   normalizeBoolean,
   normalizeString as normalize
 } from 'c/utilsPrivate';
-import numberUtils from 'lightning/numberUtils';
+import numberUtils from 'c/numberUtils';
 import { numberFormat } from 'c/internationalizationLibrary';
 import {
   InteractingState,
