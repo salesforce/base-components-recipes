@@ -20,9 +20,6 @@
             "c/button": [
                 "../default/lwc/button/button.js"
             ],
-            "c/buttonGroup": [
-                "../default/lwc/buttonGroup/buttonGroup.js"
-            ],
             "c/buttonIconStateful": [
                 "../default/lwc/buttonIconStateful/buttonIconStateful.js"
             ],

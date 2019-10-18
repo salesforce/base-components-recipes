@@ -5,4 +5,23 @@
             Footer content!
         </span>
     </c-card>
+
+    <c-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+        <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+        <p class="slds-p-horizontal_small">Card Body Narrow (custom component)</p>
+        <p slot="footer">Card Footer</p>
+    </c-card>
+
+    <c-card>
+        <h3 slot="title">
+            <c-icon icon-name="utility:connected_apps" size="small"></c-icon>
+            Card Title
+        </h3>
+        <div slot="footer">
+                <c-badge label="Tag1"></c-badge>
+                <c-badge label="Tag2"></c-badge>
+                <c-badge label="Tag3"></c-badge>
+        </div>
+        <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+    </c-card>
 </template>

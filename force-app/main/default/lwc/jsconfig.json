@@ -21,9 +21,6 @@
             "c/button": [
                 "button/button.js"
             ],
-            "c/buttonGroup": [
-                "buttonGroup/buttonGroup.js"
-            ],
             "c/buttonIconStateful": [
                 "buttonIconStateful/buttonIconStateful.js"
             ],
