@@ -299,6 +299,18 @@
             ],
             "c/accordionBasic": [
                 "../../lwc/accordionBasic/accordionBasic.js"
+            ],
+            "c/conditional": [
+                "../../lwc/conditional/conditional.js"
+            ],
+            "c/multiple": [
+                "../../lwc/multiple/multiple.js"
+            ],
+            "c/accordionConditional": [
+                "../../lwc/accordionConditional/accordionConditional.js"
+            ],
+            "c/accordionMultiple": [
+                "../../lwc/accordionMultiple/accordionMultiple.js"
             ]
         }
     },
