@@ -206,6 +206,72 @@
             ],
             "c/tabsetRecipes": [
                 "../../lwc/tabsetRecipes/tabsetRecipes.js"
+            ],
+            "c/layout": [
+                "layout/layout.js"
+            ],
+            "c/layoutItem": [
+                "layoutItem/layoutItem.js"
+            ],
+            "c/outputField": [
+                "recordForm/__raptorMocks__/lightning/outputField/outputField.js"
+            ],
+            "c/pill": [
+                "pill/pill.js"
+            ],
+            "c/pillContainer": [
+                "pillContainer/pillContainer.js"
+            ],
+            "c/progressBar": [
+                "progressBar/progressBar.js"
+            ],
+            "c/progressIndicator": [
+                "progressIndicator/progressIndicator.js"
+            ],
+            "c/radioGroup": [
+                "radioGroup/radioGroup.js"
+            ],
+            "c/recordEditUtils": [
+                "recordEditUtils/recordEditUtils.js"
+            ],
+            "c/recordForm": [
+                "recordForm/recordForm.js"
+            ],
+            "c/recordUtils": [
+                "recordUtils/recordUtils.js"
+            ],
+            "c/slider": [
+                "slider/slider.js"
+            ],
+            "c/container": [
+                "progressIndicator/__perf__DISABLED/container/container.js"
+            ],
+            "c/testCaseBase": [
+                "progressIndicator/__test__/testCaseBase/testCaseBase.js"
+            ],
+            "c/testCasePath": [
+                "progressIndicator/__test__/testCasePath/testCasePath.js"
+            ],
+            "c/createRecord": [
+                "recordForm/__container__/createRecord/createRecord.js"
+            ],
+            "c/editCompound": [
+                "recordForm/__container__/editCompound/editCompound.js"
+            ],
+            "c/editRecord": [
+                "recordForm/__container__/editRecord/editRecord.js"
+            ],
+            "c/inputField": [
+                "recordForm/__raptorMocks__/lightning/inputField/inputField.js"
+            ],
+            "c/recordEditForm": [
+                "recordForm/__raptorMocks__/lightning/recordEditForm/recordEditForm.js"
+            ],
+            "c/fieldUtils": [
+                "fieldUtils/fieldUtils.js"
+            ],
+            "c/numberUtils": [
+                "numberUtils/numberUtils.js"
             ]
         }
     },

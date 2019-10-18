@@ -205,6 +205,72 @@
             ],
             "c/tabsetRecipes": [
                 "tabsetRecipes/tabsetRecipes.js"
+            ],
+            "c/layout": [
+                "../default/lwc/layout/layout.js"
+            ],
+            "c/layoutItem": [
+                "../default/lwc/layoutItem/layoutItem.js"
+            ],
+            "c/outputField": [
+                "../default/lwc/recordForm/__raptorMocks__/lightning/outputField/outputField.js"
+            ],
+            "c/pill": [
+                "../default/lwc/pill/pill.js"
+            ],
+            "c/pillContainer": [
+                "../default/lwc/pillContainer/pillContainer.js"
+            ],
+            "c/progressBar": [
+                "../default/lwc/progressBar/progressBar.js"
+            ],
+            "c/progressIndicator": [
+                "../default/lwc/progressIndicator/progressIndicator.js"
+            ],
+            "c/radioGroup": [
+                "../default/lwc/radioGroup/radioGroup.js"
+            ],
+            "c/recordEditUtils": [
+                "../default/lwc/recordEditUtils/recordEditUtils.js"
+            ],
+            "c/recordForm": [
+                "../default/lwc/recordForm/recordForm.js"
+            ],
+            "c/recordUtils": [
+                "../default/lwc/recordUtils/recordUtils.js"
+            ],
+            "c/slider": [
+                "../default/lwc/slider/slider.js"
+            ],
+            "c/container": [
+                "../default/lwc/progressIndicator/__perf__DISABLED/container/container.js"
+            ],
+            "c/testCaseBase": [
+                "../default/lwc/progressIndicator/__test__/testCaseBase/testCaseBase.js"
+            ],
+            "c/testCasePath": [
+                "../default/lwc/progressIndicator/__test__/testCasePath/testCasePath.js"
+            ],
+            "c/createRecord": [
+                "../default/lwc/recordForm/__container__/createRecord/createRecord.js"
+            ],
+            "c/editCompound": [
+                "../default/lwc/recordForm/__container__/editCompound/editCompound.js"
+            ],
+            "c/editRecord": [
+                "../default/lwc/recordForm/__container__/editRecord/editRecord.js"
+            ],
+            "c/inputField": [
+                "../default/lwc/recordForm/__raptorMocks__/lightning/inputField/inputField.js"
+            ],
+            "c/recordEditForm": [
+                "../default/lwc/recordForm/__raptorMocks__/lightning/recordEditForm/recordEditForm.js"
+            ],
+            "c/fieldUtils": [
+                "../default/lwc/fieldUtils/fieldUtils.js"
+            ],
+            "c/numberUtils": [
+                "../default/lwc/numberUtils/numberUtils.js"
             ]
         },
         "experimentalDecorators": true
