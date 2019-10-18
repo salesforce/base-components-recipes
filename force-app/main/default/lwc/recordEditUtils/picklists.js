@@ -1,4 +1,4 @@
-import { Fields } from 'lightning/fieldUtils';
+import { Fields } from 'c/fieldUtils';
 
 export function filterByPicklistsInForm(objectInfo, picklistValues, fields) {
   const picklistsInForm = getPicklistFields(objectInfo, fields);

@@ -7,7 +7,7 @@ import {
   isCompoundField,
   isPersonAccount,
   UNSUPPORTED_REFERENCE_FIELDS
-} from 'lightning/fieldUtils';
+} from 'c/fieldUtils';
 import { normalizeString, deepCopy } from 'c/utilsPrivate';
 import { classSet } from 'c/utils';
 import labelSave from '@salesforce/label/c.lightning_LightningRecordForm_save';

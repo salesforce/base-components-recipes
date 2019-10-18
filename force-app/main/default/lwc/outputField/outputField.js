@@ -4,7 +4,7 @@ import {
   Fields,
   isCompoundField,
   isPersonAccount
-} from 'lightning/fieldUtils';
+} from 'c/fieldUtils';
 import { normalizeVariant, VARIANT } from 'c/inputUtils';
 import { classListMutation } from 'c/utilsPrivate';
 
