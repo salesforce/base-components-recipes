@@ -37,4 +37,94 @@
             </c-tile>
         </div>
     </div>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            A tile component with an icon.
+        </h2>
+
+        <!-- With an icon -->
+        <div class="slds-p-around_medium lgc-bg">
+            <c-tile label="c component team" type="media">
+                <c-icon slot="media" icon-name="standard:groups"></c-icon>
+                <p class="slds-truncate" title="7 Members">7 Members</p>
+            </c-tile>
+        </div>
+    </div>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            A tile component with an avatar.
+        </h2>
+
+        <!-- With an avatar -->
+        <div class="slds-p-around_medium lgc-bg">
+            <c-tile label="Bruce Wayne" href="/bruce.html" type="media">
+                <c-avatar slot="media" src="https://www.cdesignsystem.com/assets/images/avatar1.jpg" fallback-icon-name="standard:person_account" alternative-text="Bruce Wayne"></c-avatar>
+                <ul class="slds-list_horizontal slds-has-dividers_right">
+                    <li class="slds-item">Billionaire, Gotham City</li>
+                    <li class="slds-item">Dark Knight</li>
+                </ul>
+            </c-tile>
+        </div>
+    </div>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            A list of tile components with dividers.
+        </h2>
+
+        <!-- Simple -->
+        <div class="slds-p-around_medium lgc-bg">
+            <ul class="slds-has-dividers_bottom-space">
+                <li class="slds-item">
+                    <c-tile label="c component team" href="/path/to/somewhere">
+                        <p class="slds-truncate" title="7 Members">7 Members</p>
+                    </c-tile>
+                </li>
+                <li class="slds-item">
+                    <c-tile label="Salesforce UX" href="/path/to/somewhere">
+                        <dl class="slds-dl_horizontal">
+                            <dt class="slds-dl_horizontal__label">
+                                <p class="slds-truncate" title="Company">Company:</p>
+                            </dt>
+                            <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                                <p class="slds-truncate" title="Salesforce">Salesforce</p>
+                            </dd>
+                            <dt class="slds-dl_horizontal__label">
+                                <p class="slds-truncate" title="Email">Email:</p>
+                            </dt>
+                            <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                                <p class="slds-truncate" title="salesforce-ux@salesforce.com">salesforce-ux@salesforce.com</p>
+                            </dd>
+                        </dl>
+                    </c-tile>
+                </li>
+                <li class="slds-item">
+                    <c-tile label="Bruce Wayne" href="/bruce.html" type="media">
+                        <c-avatar slot="media" src="https://www.cdesignsystem.com/assets/images/avatar1.jpg" fallback-icon-name="standard:person_account" alternative-text="Bruce Wayne"></c-avatar>
+                        <ul class="slds-list_horizontal slds-has-dividers_right">
+                            <li class="slds-item">Billionaire, Gotham City</li>
+                            <li class="slds-item">Dark Knight</li>
+                        </ul>
+                    </c-tile>
+                </li>
+                <li class="slds-item">
+                    <c-tile label="Clark Kent" href="/clark.html" type="media">
+                        <c-avatar slot="media" src="https://www.cdesignsystem.com/assets/images/avatar1.jpg" fallback-icon-name="standard:person_account" alternative-text="Clark Kent"></c-avatar>
+                        <ul class="slds-list_horizontal slds-has-dividers_right">
+                            <li class="slds-item">Reporter, Daily Planet</li>
+                            <li class="slds-item">Man of Steel</li>
+                        </ul>
+                    </c-tile>
+                </li>
+                <li class="slds-item">
+                    <c-tile label="Diana Prince" href="/diana.html" type="media">
+                        <c-avatar slot="media" src="https://www.cdesignsystem.com/assets/images/avatar2.jpg" fallback-icon-name="standard:person_account" alternative-text="Diana Prince"></c-avatar>
+                        <ul class="slds-list_horizontal slds-has-dividers_right">
+                            <li class="slds-item">Honorary Ambassador, United Nations</li>
+                            <li class="slds-item">The Amazon Princess</li>
+                        </ul>
+                    </c-tile>
+                </li>
+            </ul>
+        </div>
+    </div>
 </template>

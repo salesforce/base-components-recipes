@@ -284,6 +284,9 @@
             ],
             "c/tileRecipes": [
                 "../../lwc/tileRecipes/tileRecipes.js"
+            ],
+            "c/icon": [
+                "icon/icon.js"
             ]
         }
     },

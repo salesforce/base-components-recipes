@@ -283,6 +283,9 @@
             ],
             "c/tileRecipes": [
                 "tileRecipes/tileRecipes.js"
+            ],
+            "c/icon": [
+                "../default/lwc/icon/icon.js"
             ]
         },
         "experimentalDecorators": true
