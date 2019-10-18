@@ -45,7 +45,7 @@ describe('c-progress-indicator', () => {
       return Promise.resolve().then(() => {
         const mockHandler = jest.fn();
         const step = element.shadowRoot
-          .querySelector('lightning-progress-step')
+          .querySelector('c-progress-step')
           .shadowRoot.querySelector('button');
         const progressIndicator = element.shadowRoot.querySelector(
           'c-progress-indicator'
@@ -66,7 +66,7 @@ describe('c-progress-indicator', () => {
       return Promise.resolve().then(() => {
         const mockHandler = jest.fn();
         const step = element.shadowRoot
-          .querySelector('lightning-progress-step')
+          .querySelector('c-progress-step')
           .shadowRoot.querySelector('button');
         const progressIndicator = element.shadowRoot.querySelector(
           'c-progress-indicator'
@@ -88,7 +88,7 @@ describe('c-progress-indicator', () => {
       return Promise.resolve().then(() => {
         const mockHandler = jest.fn();
         const step = element.shadowRoot
-          .querySelector('lightning-progress-step')
+          .querySelector('c-progress-step')
           .shadowRoot.querySelector('button');
         const progressIndicator = element.shadowRoot.querySelector(
           'c-progress-indicator'
@@ -115,7 +115,7 @@ describe('c-progress-indicator', () => {
       return Promise.resolve().then(() => {
         const mockHandler = jest.fn();
         const step = element.shadowRoot
-          .querySelector('lightning-progress-step')
+          .querySelector('c-progress-step')
           .shadowRoot.querySelector('button');
 
         const progressIndicator = element.shadowRoot.querySelector(

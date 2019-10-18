@@ -1,0 +1,19 @@
+<template>
+    <a aria-selected={ariaSelected}
+       class="slds-path__link"
+       href="javascript:void(0);"
+       role="option"
+       tabindex={tabIndex}
+       onmouseenter={handleMouseEnter}
+       onmouseleave={handleMouseLeave}
+       onfocus={handleFocus}>
+            <span class="slds-path__stage">
+                <c-primitive-icon
+                        icon-name="utility:check"
+                        size="x-small"
+                        variant="inverse"></c-primitive-icon>
+                <span if:true={assistiveText} class="slds-assistive-text">{assistiveText}</span>
+            </span>
+        <span class="slds-path__title">{label}</span>
+    </a>
+</template>

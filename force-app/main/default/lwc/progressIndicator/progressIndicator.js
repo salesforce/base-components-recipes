@@ -77,7 +77,7 @@ export default class cProgressIndicator extends LightningElement {
   }
 
   getSteps() {
-    return Array.from(this.querySelectorAll('lightning-progress-step'));
+    return Array.from(this.querySelectorAll('c-progress-step'));
   }
 
   handleStepRegister(event) {
