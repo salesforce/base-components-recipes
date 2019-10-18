@@ -1,0 +1,22 @@
+<template>
+    <template if:true={enabled}>
+        <a href="javascript:void(0)" onclick={handleClick}>
+            <span if:true={value} class="slds-icon_container slds-icon-utility-call" title={i18n.clickToDial}>
+                <svg style="fill: currentColor" class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                    <use xlink:href={iconPath}></use>
+                </svg>
+                <span class="slds-assistive-text">{i18n.clickToDial}</span>
+            </span>
+            <span>{formattedPhoneNumber}</span>
+        </a>
+    </template>
+    <template if:false={enabled}>
+        <span if:true={value} class="slds-icon_container slds-icon-utility-end_call" title={i18n.clickToDialDisabled}>
+            <svg style="fill: currentColor" class="slds-icon slds-icon_xx-small" aria-hidden="true">
+                <use xlink:href={iconPath}></use>
+            </svg>
+            <span class="slds-assistive-text">{i18n.clickToDialDisabled}</span>
+        </span>
+        <span>{formattedPhoneNumber}</span>
+    </template>
+</template>
