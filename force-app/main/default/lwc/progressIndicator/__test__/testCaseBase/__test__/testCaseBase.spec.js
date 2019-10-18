@@ -15,16 +15,14 @@ const createComponent = (props = {}) => {
 describe('c-progress-indicator test case type="base"', () => {
   it('should have 4 steps', () => {
     const element = createComponent();
-    const steps = element.shadowRoot.querySelectorAll(
-      'lightning-progress-step'
-    );
+    const steps = element.shadowRoot.querySelectorAll('c-progress-step');
 
     expect(steps).toHaveLength(4);
   });
   it('should have the step rendered with the right state based on the current step', () => {
     const element = createComponent();
     const steps = Array.from(
-      element.shadowRoot.querySelectorAll('lightning-progress-step')
+      element.shadowRoot.querySelectorAll('c-progress-step')
     );
 
     expect(steps[0].className).toEqual(
