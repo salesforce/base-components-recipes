@@ -301,6 +301,18 @@
             ],
             "c/accordionBasic": [
                 "accordionBasic/accordionBasic.js"
+            ],
+            "c/conditional": [
+                "conditional/conditional.js"
+            ],
+            "c/multiple": [
+                "multiple/multiple.js"
+            ],
+            "c/accordionConditional": [
+                "accordionConditional/accordionConditional.js"
+            ],
+            "c/accordionMultiple": [
+                "accordionMultiple/accordionMultiple.js"
             ]
         },
         "experimentalDecorators": true
