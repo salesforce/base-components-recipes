@@ -299,6 +299,9 @@
             ],
             "c/accordionRecipes": [
                 "../../lwc/accordionRecipes/accordionRecipes.js"
+            ],
+            "c/accordionBasic": [
+                "../../lwc/accordionBasic/accordionBasic.js"
             ]
         }
     },
