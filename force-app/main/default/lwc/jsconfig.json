@@ -110,7 +110,9 @@
             "c/accordionRecipes": [
                 "../../lwc/accordionRecipes/accordionRecipes.js"
             ],
-            "c/badgeRecipes": ["../../lwc/badgeRecipes/badgeRecipes.js"],
+            "c/badgeRecipes": [
+                "../../lwc/badgeRecipes/badgeRecipes.js"
+            ],
             "c/buttonGroupRecipes": [
                 "../../lwc/buttonGroupRecipes/buttonGroupRecipes.js"
             ],
@@ -163,9 +165,15 @@
             "c/progressbarRecipes": [
                 "../../lwc/progressbarRecipes/progressbarRecipes.js"
             ],
-            "c/accordionBasic": ["../../lwc/accordionBasic/accordionBasic.js"],
-            "c/conditional": ["../../lwc/conditional/conditional.js"],
-            "c/multiple": ["../../lwc/multiple/multiple.js"],
+            "c/accordionBasic": [
+                "../../lwc/accordionBasic/accordionBasic.js"
+            ],
+            "c/conditional": [
+                "../../lwc/conditional/conditional.js"
+            ],
+            "c/multiple": [
+                "../../lwc/multiple/multiple.js"
+            ],
             "c/accordionConditional": [
                 "../../lwc/accordionConditional/accordionConditional.js"
             ],
@@ -173,6 +181,9 @@
                 "../../lwc/accordionMultiple/accordionMultiple.js"
             ],
             "c/layoutRecipes": ["../../lwc/layoutRecipes/layoutRecipes.js"]
+            "c/buttonStatefulRecipes": [
+                "../../lwc/buttonStatefulRecipes/buttonStatefulRecipes.js"
+            ]
         }
     },
     "include": ["**/*", "../../../../.sfdx/typings/lwc/**/*.d.ts"],

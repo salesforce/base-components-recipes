@@ -159,7 +159,9 @@
                 "../default/lwc/verticalNavigationSection/verticalNavigationSection.js"
             ],
             "c/accordionRecipes": ["accordionRecipes/accordionRecipes.js"],
-            "c/badgeRecipes": ["badgeRecipes/badgeRecipes.js"],
+            "c/badgeRecipes": [
+                "badgeRecipes/badgeRecipes.js"
+            ],
             "c/buttonGroupRecipes": [
                 "buttonGroupRecipes/buttonGroupRecipes.js"
             ],
@@ -206,14 +208,27 @@
             "c/progressbarRecipes": [
                 "progressbarRecipes/progressbarRecipes.js"
             ],
-            "c/accordionBasic": ["accordionBasic/accordionBasic.js"],
-            "c/conditional": ["conditional/conditional.js"],
-            "c/multiple": ["multiple/multiple.js"],
+            "c/layoutRecipes": [
+                "layoutRecipes/layoutRecipes.js"
+            ],
+            "c/accordionBasic": [
+                "accordionBasic/accordionBasic.js"
+            ],
+            "c/conditional": [
+                "conditional/conditional.js"
+            ],
+            "c/multiple": [
+                "multiple/multiple.js"
+            ],
             "c/accordionConditional": [
                 "accordionConditional/accordionConditional.js"
             ],
-            "c/accordionMultiple": ["accordionMultiple/accordionMultiple.js"],
-            "c/layoutRecipes": ["layoutRecipes/layoutRecipes.js"]
+            "c/accordionMultiple": [
+                "accordionMultiple/accordionMultiple.js"
+            ],
+            "c/buttonStatefulRecipes": [
+                "buttonStatefulRecipes/buttonStatefulRecipes.js"
+            ]
         },
         "experimentalDecorators": true
     },
