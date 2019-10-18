@@ -264,13 +264,46 @@
                 "../default/lwc/recordForm/__raptorMocks__/lightning/inputField/inputField.js"
             ],
             "c/recordEditForm": [
-                "../default/lwc/recordForm/__raptorMocks__/lightning/recordEditForm/recordEditForm.js"
+                "../default/lwc/recordEditForm/recordEditForm.js"
             ],
             "c/fieldUtils": [
                 "../default/lwc/fieldUtils/fieldUtils.js"
             ],
             "c/numberUtils": [
                 "../default/lwc/numberUtils/numberUtils.js"
+            ],
+            "c/recordViewForm": [
+                "../default/lwc/recordViewForm/recordViewForm.js"
+            ],
+            "c/uiRecordApi": [
+                "../default/lwc/recordEditForm/__raptorMocks__/lightning/uiRecordApi/uiRecordApi.js"
+            ],
+            "c/formDensityUtilsPrivate": [
+                "../default/lwc/formDensityUtilsPrivate/formDensityUtilsPrivate.js"
+            ],
+            "c/inputLocation": [
+                "../default/lwc/inputLocation/inputLocation.js"
+            ],
+            "c/relativeDateTime": [
+                "../default/lwc/relativeDateTime/relativeDateTime.js"
+            ],
+            "c/tree": [
+                "../default/lwc/tree/tree.js"
+            ],
+            "c/treeItem": [
+                "../default/lwc/treeItem/treeItem.js"
+            ],
+            "c/helptext": [
+                "../default/lwc/inputLocation/__raptorMocks__/lightning/helptext/helptext.js"
+            ],
+            "c/uiObjectInfoApi": [
+                "../default/lwc/recordEditForm/__raptorMocks__/lightning/uiObjectInfoApi/uiObjectInfoApi.js"
+            ],
+            "c/layoutUtils": [
+                "../default/lwc/layoutUtils/layoutUtils.js"
+            ],
+            "c/fieldDependencyManager": [
+                "../default/lwc/fieldDependencyManager/fieldDependencyManager.js"
             ]
         },
         "experimentalDecorators": true
