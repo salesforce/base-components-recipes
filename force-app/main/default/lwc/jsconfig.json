@@ -183,6 +183,9 @@
             "c/layoutRecipes": ["../../lwc/layoutRecipes/layoutRecipes.js"]
             "c/buttonStatefulRecipes": [
                 "../../lwc/buttonStatefulRecipes/buttonStatefulRecipes.js"
+            ],
+            "c/tabOverflow": [
+                "../../lwc/tabOverflow/tabOverflow.js"
             ]
         }
     },

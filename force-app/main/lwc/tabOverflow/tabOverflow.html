@@ -1,0 +1,9 @@
+<template>
+    <c-tabset variant="scoped">
+        <template for:each={tabs} for:item="tab">
+            <c-tab label={tab.label} key={tab.value} value={tab.value}>
+                {tab.content}
+            </c-tab>
+        </template>
+    </c-tabset>
+</template>
