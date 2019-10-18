@@ -30,9 +30,6 @@
             "c/button": [
                 "button/button.js"
             ],
-            "c/buttonGroup": [
-                "buttonGroup/buttonGroup.js"
-            ],
             "c/buttonIconStateful": [
                 "buttonIconStateful/buttonIconStateful.js"
             ],
@@ -302,6 +299,33 @@
             ],
             "c/iconRecipes": [
                 "../../lwc/iconRecipes/iconRecipes.js"
+            ],
+            "c/spinnerRecipes": [
+                "../../lwc/spinnerRecipes/spinnerRecipes.js"
+            ],
+            "c/sliderRecipes": [
+                "../../lwc/sliderRecipes/sliderRecipes.js"
+            ],
+            "c/progressbarRecipes": [
+                "../../lwc/progressbarRecipes/progressbarRecipes.js"
+            ],
+            "c/accordionRecipes": [
+                "../../lwc/accordionRecipes/accordionRecipes.js"
+            ],
+            "c/accordionBasic": [
+                "../../lwc/accordionBasic/accordionBasic.js"
+            ],
+            "c/conditional": [
+                "../../lwc/conditional/conditional.js"
+            ],
+            "c/multiple": [
+                "../../lwc/multiple/multiple.js"
+            ],
+            "c/accordionConditional": [
+                "../../lwc/accordionConditional/accordionConditional.js"
+            ],
+            "c/accordionMultiple": [
+                "../../lwc/accordionMultiple/accordionMultiple.js"
             ]
         }
     },
