@@ -54,6 +54,15 @@
             "c/dynamicIcon": [
                 "dynamicIcon/dynamicIcon.js"
             ],
+            "c/fieldDependencyManager": [
+                "fieldDependencyManager/fieldDependencyManager.js"
+            ],
+            "c/fieldUtils": [
+                "fieldUtils/fieldUtils.js"
+            ],
+            "c/formDensityUtilsPrivate": [
+                "formDensityUtilsPrivate/formDensityUtilsPrivate.js"
+            ],
             "c/formattedDateTime": [
                 "formattedDateTime/formattedDateTime.js"
             ],
@@ -87,6 +96,9 @@
             "c/iconUtils": [
                 "iconUtils/iconUtils.js"
             ],
+            "c/inputLocation": [
+                "inputLocation/inputLocation.js"
+            ],
             "c/inputUtils": [
                 "inputUtils/inputUtils.js"
             ],
@@ -96,8 +108,29 @@
             "c/iso8601Utils": [
                 "iso8601Utils/iso8601Utils.js"
             ],
+            "c/layout": [
+                "layout/layout.js"
+            ],
+            "c/layoutItem": [
+                "layoutItem/layoutItem.js"
+            ],
+            "c/layoutUtils": [
+                "layoutUtils/layoutUtils.js"
+            ],
+            "c/numberUtils": [
+                "numberUtils/numberUtils.js"
+            ],
+            "c/outputField": [
+                "outputField/outputField.js"
+            ],
             "c/overflowLibrary": [
                 "overflowLibrary/overflowLibrary.js"
+            ],
+            "c/pill": [
+                "pill/pill.js"
+            ],
+            "c/pillContainer": [
+                "pillContainer/pillContainer.js"
             ],
             "c/positionLibrary": [
                 "positionLibrary/positionLibrary.js"
@@ -108,14 +141,44 @@
             "c/primitiveIcon": [
                 "primitiveIcon/primitiveIcon.js"
             ],
+            "c/progressBar": [
+                "progressBar/progressBar.js"
+            ],
+            "c/progressIndicator": [
+                "progressIndicator/progressIndicator.js"
+            ],
             "c/purifyLib": [
                 "purifyLib/purifyLib.js"
+            ],
+            "c/radioGroup": [
+                "radioGroup/radioGroup.js"
+            ],
+            "c/recordEditForm": [
+                "recordEditForm/recordEditForm.js"
+            ],
+            "c/recordEditUtils": [
+                "recordEditUtils/recordEditUtils.js"
+            ],
+            "c/recordForm": [
+                "recordForm/recordForm.js"
+            ],
+            "c/recordUtils": [
+                "recordUtils/recordUtils.js"
+            ],
+            "c/recordViewForm": [
+                "recordViewForm/recordViewForm.js"
+            ],
+            "c/relativeDateTime": [
+                "relativeDateTime/relativeDateTime.js"
             ],
             "c/resizeObserver": [
                 "resizeObserver/resizeObserver.js"
             ],
             "c/routingService": [
                 "routingService/routingService.js"
+            ],
+            "c/slider": [
+                "slider/slider.js"
             ],
             "c/spinner": [
                 "spinner/spinner.js"
@@ -134,6 +197,12 @@
             ],
             "c/tile": [
                 "tile/tile.js"
+            ],
+            "c/tree": [
+                "tree/tree.js"
+            ],
+            "c/treeItem": [
+                "treeItem/treeItem.js"
             ],
             "c/utils": [
                 "utils/utils.js"
@@ -207,104 +276,8 @@
             "c/tabsetRecipes": [
                 "../../lwc/tabsetRecipes/tabsetRecipes.js"
             ],
-            "c/layout": [
-                "layout/layout.js"
-            ],
-            "c/layoutItem": [
-                "layoutItem/layoutItem.js"
-            ],
-            "c/outputField": [
-                "recordForm/__raptorMocks__/lightning/outputField/outputField.js"
-            ],
-            "c/pill": [
-                "pill/pill.js"
-            ],
-            "c/pillContainer": [
-                "pillContainer/pillContainer.js"
-            ],
-            "c/progressBar": [
-                "progressBar/progressBar.js"
-            ],
-            "c/progressIndicator": [
-                "progressIndicator/progressIndicator.js"
-            ],
-            "c/radioGroup": [
-                "radioGroup/radioGroup.js"
-            ],
-            "c/recordEditUtils": [
-                "recordEditUtils/recordEditUtils.js"
-            ],
-            "c/recordForm": [
-                "recordForm/recordForm.js"
-            ],
-            "c/recordUtils": [
-                "recordUtils/recordUtils.js"
-            ],
-            "c/slider": [
-                "slider/slider.js"
-            ],
-            "c/container": [
-                "progressIndicator/__perf__DISABLED/container/container.js"
-            ],
-            "c/testCaseBase": [
-                "progressIndicator/__test__/testCaseBase/testCaseBase.js"
-            ],
-            "c/testCasePath": [
-                "progressIndicator/__test__/testCasePath/testCasePath.js"
-            ],
-            "c/createRecord": [
-                "recordForm/__container__/createRecord/createRecord.js"
-            ],
-            "c/editCompound": [
-                "recordForm/__container__/editCompound/editCompound.js"
-            ],
-            "c/editRecord": [
-                "recordForm/__container__/editRecord/editRecord.js"
-            ],
-            "c/inputField": [
-                "recordForm/__raptorMocks__/lightning/inputField/inputField.js"
-            ],
-            "c/recordEditForm": [
-                "recordEditForm/recordEditForm.js"
-            ],
-            "c/fieldUtils": [
-                "fieldUtils/fieldUtils.js"
-            ],
-            "c/numberUtils": [
-                "numberUtils/numberUtils.js"
-            ],
-            "c/recordViewForm": [
-                "recordViewForm/recordViewForm.js"
-            ],
-            "c/uiRecordApi": [
-                "recordEditForm/__raptorMocks__/lightning/uiRecordApi/uiRecordApi.js"
-            ],
-            "c/formDensityUtilsPrivate": [
-                "formDensityUtilsPrivate/formDensityUtilsPrivate.js"
-            ],
-            "c/inputLocation": [
-                "inputLocation/inputLocation.js"
-            ],
-            "c/relativeDateTime": [
-                "relativeDateTime/relativeDateTime.js"
-            ],
-            "c/tree": [
-                "tree/tree.js"
-            ],
-            "c/treeItem": [
-                "treeItem/treeItem.js"
-            ],
-            "c/helptext": [
-                "inputLocation/__raptorMocks__/lightning/helptext/helptext.js"
-            ],
-            "c/uiObjectInfoApi": [
-                "recordEditForm/__raptorMocks__/lightning/uiObjectInfoApi/uiObjectInfoApi.js"
-            ],
-            "c/layoutUtils": [
-                "layoutUtils/layoutUtils.js"
-            ],
-            "c/fieldDependencyManager": [
-                "fieldDependencyManager/fieldDependencyManager.js"
+            "c/verticalRecipes": [
+                "../../lwc/verticalRecipes/verticalRecipes.js"
             ]
         }
     },

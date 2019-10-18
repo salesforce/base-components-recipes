@@ -53,6 +53,15 @@
             "c/dynamicIcon": [
                 "../default/lwc/dynamicIcon/dynamicIcon.js"
             ],
+            "c/fieldDependencyManager": [
+                "../default/lwc/fieldDependencyManager/fieldDependencyManager.js"
+            ],
+            "c/fieldUtils": [
+                "../default/lwc/fieldUtils/fieldUtils.js"
+            ],
+            "c/formDensityUtilsPrivate": [
+                "../default/lwc/formDensityUtilsPrivate/formDensityUtilsPrivate.js"
+            ],
             "c/formattedDateTime": [
                 "../default/lwc/formattedDateTime/formattedDateTime.js"
             ],
@@ -86,6 +95,9 @@
             "c/iconUtils": [
                 "../default/lwc/iconUtils/iconUtils.js"
             ],
+            "c/inputLocation": [
+                "../default/lwc/inputLocation/inputLocation.js"
+            ],
             "c/inputUtils": [
                 "../default/lwc/inputUtils/inputUtils.js"
             ],
@@ -95,8 +107,29 @@
             "c/iso8601Utils": [
                 "../default/lwc/iso8601Utils/iso8601Utils.js"
             ],
+            "c/layout": [
+                "../default/lwc/layout/layout.js"
+            ],
+            "c/layoutItem": [
+                "../default/lwc/layoutItem/layoutItem.js"
+            ],
+            "c/layoutUtils": [
+                "../default/lwc/layoutUtils/layoutUtils.js"
+            ],
+            "c/numberUtils": [
+                "../default/lwc/numberUtils/numberUtils.js"
+            ],
+            "c/outputField": [
+                "../default/lwc/outputField/outputField.js"
+            ],
             "c/overflowLibrary": [
                 "../default/lwc/overflowLibrary/overflowLibrary.js"
+            ],
+            "c/pill": [
+                "../default/lwc/pill/pill.js"
+            ],
+            "c/pillContainer": [
+                "../default/lwc/pillContainer/pillContainer.js"
             ],
             "c/positionLibrary": [
                 "../default/lwc/positionLibrary/positionLibrary.js"
@@ -107,14 +140,44 @@
             "c/primitiveIcon": [
                 "../default/lwc/primitiveIcon/primitiveIcon.js"
             ],
+            "c/progressBar": [
+                "../default/lwc/progressBar/progressBar.js"
+            ],
+            "c/progressIndicator": [
+                "../default/lwc/progressIndicator/progressIndicator.js"
+            ],
             "c/purifyLib": [
                 "../default/lwc/purifyLib/purifyLib.js"
+            ],
+            "c/radioGroup": [
+                "../default/lwc/radioGroup/radioGroup.js"
+            ],
+            "c/recordEditForm": [
+                "../default/lwc/recordEditForm/recordEditForm.js"
+            ],
+            "c/recordEditUtils": [
+                "../default/lwc/recordEditUtils/recordEditUtils.js"
+            ],
+            "c/recordForm": [
+                "../default/lwc/recordForm/recordForm.js"
+            ],
+            "c/recordUtils": [
+                "../default/lwc/recordUtils/recordUtils.js"
+            ],
+            "c/recordViewForm": [
+                "../default/lwc/recordViewForm/recordViewForm.js"
+            ],
+            "c/relativeDateTime": [
+                "../default/lwc/relativeDateTime/relativeDateTime.js"
             ],
             "c/resizeObserver": [
                 "../default/lwc/resizeObserver/resizeObserver.js"
             ],
             "c/routingService": [
                 "../default/lwc/routingService/routingService.js"
+            ],
+            "c/slider": [
+                "../default/lwc/slider/slider.js"
             ],
             "c/spinner": [
                 "../default/lwc/spinner/spinner.js"
@@ -133,6 +196,12 @@
             ],
             "c/tile": [
                 "../default/lwc/tile/tile.js"
+            ],
+            "c/tree": [
+                "../default/lwc/tree/tree.js"
+            ],
+            "c/treeItem": [
+                "../default/lwc/treeItem/treeItem.js"
             ],
             "c/utils": [
                 "../default/lwc/utils/utils.js"
@@ -206,104 +275,8 @@
             "c/tabsetRecipes": [
                 "tabsetRecipes/tabsetRecipes.js"
             ],
-            "c/layout": [
-                "../default/lwc/layout/layout.js"
-            ],
-            "c/layoutItem": [
-                "../default/lwc/layoutItem/layoutItem.js"
-            ],
-            "c/outputField": [
-                "../default/lwc/recordForm/__raptorMocks__/lightning/outputField/outputField.js"
-            ],
-            "c/pill": [
-                "../default/lwc/pill/pill.js"
-            ],
-            "c/pillContainer": [
-                "../default/lwc/pillContainer/pillContainer.js"
-            ],
-            "c/progressBar": [
-                "../default/lwc/progressBar/progressBar.js"
-            ],
-            "c/progressIndicator": [
-                "../default/lwc/progressIndicator/progressIndicator.js"
-            ],
-            "c/radioGroup": [
-                "../default/lwc/radioGroup/radioGroup.js"
-            ],
-            "c/recordEditUtils": [
-                "../default/lwc/recordEditUtils/recordEditUtils.js"
-            ],
-            "c/recordForm": [
-                "../default/lwc/recordForm/recordForm.js"
-            ],
-            "c/recordUtils": [
-                "../default/lwc/recordUtils/recordUtils.js"
-            ],
-            "c/slider": [
-                "../default/lwc/slider/slider.js"
-            ],
-            "c/container": [
-                "../default/lwc/progressIndicator/__perf__DISABLED/container/container.js"
-            ],
-            "c/testCaseBase": [
-                "../default/lwc/progressIndicator/__test__/testCaseBase/testCaseBase.js"
-            ],
-            "c/testCasePath": [
-                "../default/lwc/progressIndicator/__test__/testCasePath/testCasePath.js"
-            ],
-            "c/createRecord": [
-                "../default/lwc/recordForm/__container__/createRecord/createRecord.js"
-            ],
-            "c/editCompound": [
-                "../default/lwc/recordForm/__container__/editCompound/editCompound.js"
-            ],
-            "c/editRecord": [
-                "../default/lwc/recordForm/__container__/editRecord/editRecord.js"
-            ],
-            "c/inputField": [
-                "../default/lwc/recordForm/__raptorMocks__/lightning/inputField/inputField.js"
-            ],
-            "c/recordEditForm": [
-                "../default/lwc/recordEditForm/recordEditForm.js"
-            ],
-            "c/fieldUtils": [
-                "../default/lwc/fieldUtils/fieldUtils.js"
-            ],
-            "c/numberUtils": [
-                "../default/lwc/numberUtils/numberUtils.js"
-            ],
-            "c/recordViewForm": [
-                "../default/lwc/recordViewForm/recordViewForm.js"
-            ],
-            "c/uiRecordApi": [
-                "../default/lwc/recordEditForm/__raptorMocks__/lightning/uiRecordApi/uiRecordApi.js"
-            ],
-            "c/formDensityUtilsPrivate": [
-                "../default/lwc/formDensityUtilsPrivate/formDensityUtilsPrivate.js"
-            ],
-            "c/inputLocation": [
-                "../default/lwc/inputLocation/inputLocation.js"
-            ],
-            "c/relativeDateTime": [
-                "../default/lwc/relativeDateTime/relativeDateTime.js"
-            ],
-            "c/tree": [
-                "../default/lwc/tree/tree.js"
-            ],
-            "c/treeItem": [
-                "../default/lwc/treeItem/treeItem.js"
-            ],
-            "c/helptext": [
-                "../default/lwc/inputLocation/__raptorMocks__/lightning/helptext/helptext.js"
-            ],
-            "c/uiObjectInfoApi": [
-                "../default/lwc/recordEditForm/__raptorMocks__/lightning/uiObjectInfoApi/uiObjectInfoApi.js"
-            ],
-            "c/layoutUtils": [
-                "../default/lwc/layoutUtils/layoutUtils.js"
-            ],
-            "c/fieldDependencyManager": [
-                "../default/lwc/fieldDependencyManager/fieldDependencyManager.js"
+            "c/verticalRecipes": [
+                "verticalRecipes/verticalRecipes.js"
             ]
         },
         "experimentalDecorators": true
