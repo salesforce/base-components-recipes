@@ -1,0 +1,5 @@
+:host:dir(rtl) {
+    direction: ltr;
+    text-align: right;
+    unicode-bidi: embed;
+}
