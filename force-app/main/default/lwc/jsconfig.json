@@ -93,6 +93,9 @@
             "c/formattedUrl": [
                 "formattedUrl/formattedUrl.js"
             ],
+            "c/icon": [
+                "icon/icon.js"
+            ],
             "c/iconUtils": [
                 "iconUtils/iconUtils.js"
             ],
@@ -276,17 +279,14 @@
             "c/tabsetRecipes": [
                 "../../lwc/tabsetRecipes/tabsetRecipes.js"
             ],
-            "c/verticalRecipes": [
-                "../../lwc/verticalRecipes/verticalRecipes.js"
-            ],
             "c/textareaRecipes": [
                 "../../lwc/textareaRecipes/textareaRecipes.js"
             ],
             "c/tileRecipes": [
                 "../../lwc/tileRecipes/tileRecipes.js"
             ],
-            "c/icon": [
-                "icon/icon.js"
+            "c/verticalRecipes": [
+                "../../lwc/verticalRecipes/verticalRecipes.js"
             ],
             "c/spinnerRecipes": [
                 "../../lwc/spinnerRecipes/spinnerRecipes.js"
@@ -296,6 +296,9 @@
             ],
             "c/progressbarRecipes": [
                 "../../lwc/progressbarRecipes/progressbarRecipes.js"
+            ],
+            "c/accordionRecipes": [
+                "../../lwc/accordionRecipes/accordionRecipes.js"
             ]
         }
     },
