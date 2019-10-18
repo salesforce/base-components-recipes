@@ -228,6 +228,9 @@
             ],
             "c/buttonStatefulRecipes": [
                 "buttonStatefulRecipes/buttonStatefulRecipes.js"
+            ],
+            "c/tabOverflow": [
+                "tabOverflow/tabOverflow.js"
             ]
         },
         "experimentalDecorators": true
