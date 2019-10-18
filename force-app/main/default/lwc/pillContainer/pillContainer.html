@@ -23,8 +23,8 @@
                     variant={pillViewModel.pill.variant}
                     aria-selected="true">
                     <template if:true={pillViewModel.pill.isIcon}>
-                        <lightning-icon class="slds-pill__icon_container" icon-name={pillViewModel.pill.item.iconName} alternative-text={pillViewModel.pill.item.alternativeText}>
-                        </lightning-icon>
+                        <c-icon class="slds-pill__icon_container" icon-name={pillViewModel.pill.item.iconName} alternative-text={pillViewModel.pill.item.alternativeText}>
+                        </c-icon>
                     </template>
                     <template if:true={pillViewModel.pill.isAvatar}>
                         <c-avatar src={pillViewModel.pill.item.src}
