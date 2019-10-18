@@ -1,0 +1,34 @@
+<template>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="input">
+            <span class="slds-slider-label">
+                <span class={computedLabelClass}>{label}</span>
+                <span class="slds-slider-label__range">{min}-{max}</span>
+            </span>
+        </label>
+        <div class="slds-form-element__control">
+            <div class={computedClass}>
+                <input
+                    id="input"
+                    type="range"
+                    aria-describedby="message-id"
+                    class="slds-slider__range"
+                    value={computedValue}
+                    oninput={handleInput}
+                    onchange={handleChange}
+                    min={min}
+                    max={max}
+                    step={step}
+                    disabled={disabled}
+                    onfocus={handleFocus}
+                    onblur={handleBlur}
+                    ontouchmove={handleTouchMove}
+                />
+                <span class="slds-slider__value" aria-hidden="true">{formattedValue}</span>
+            </div>
+        </div>
+        <template if:true={_helpMessage}>
+            <div id="message-id" class="slds-form-element__help" aria-live="assertive">{_helpMessage}</div>
+        </template>
+    </div>
+</template>
