@@ -1,0 +1,14 @@
+{
+  "Lead": [
+    {
+      "Id": "LEAD",
+      "FirstName": "Bob",
+      "LastName": "Bobberson",
+      "Street": "123 Fake Street",
+      "City": "San Francisco",
+      "State": "California",
+      "PostalCode": "94110",
+      "Company": "Bobface"
+    }
+  ]
+}

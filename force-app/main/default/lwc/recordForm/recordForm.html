@@ -1,0 +1,47 @@
+<template>
+        <lightning-record-edit-form
+            object-api-name={_objectApiName}
+            record-id={_recordId}
+            onload={handleLoad}
+            onsubmit={handleSubmit}
+            onsuccess={handleSuccess}
+            layout-type={_layout}
+            onerror={handleError}
+            record-type-id={recordTypeId} density={density}>
+            <div class="slds-form" role="list">
+                <lightning-messages></lightning-messages>
+                <div class="slds-is-relative record-form-spinner-holder">
+                    <c-spinner alternative-text={_labelLoading} if:true={_loading}></c-spinner>
+                    <template for:each={_rows} for:item="row">
+                        <div key={row.key} class="slds-grid slds-gutters_small">
+                            <template for:each={row.fields} for:item="field">
+                                <div class="slds-col slds-has-flexi-truncate" role="listitem" key={field.field} >
+                                    <template if:true={_editMode}>
+                                        <lightning-input-field if:true={field.updateable} field-name={field.field} class={computedInputClass}></lightning-input-field>
+                                        <c-output-field if:false={field.updateable} field-name={field.field} class={computedInputClass}></c-output-field>
+                                    </template>
+                                    <template if:true={_viewMode}>
+                                        <c-output-field field-class="slds-border_bottom" class={computedOutputClass} key={field.field} field-name={field.field}>
+                                            <lightning-button-icon
+                                                if:true={field.editable}
+                                                onclick={toggleEdit}
+                                                icon-class="slds-button__icon_hint"
+                                                icon-name="utility:edit"
+                                                variant="bare"
+                                                ></lightning-button-icon>
+                                        </c-output-field>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                    </div>
+                    <template if:true={_editMode}>
+                        <div class="slds-align_absolute-center slds-p-around_medium">
+                                <c-button class="slds-m-around_xx-small lightning-record-form-cancel" onclick={handleCancel} name="cancel" label={_labelCancel}></c-button>
+                                <c-button class="slds-m-around_xx-small lightning-record-form-submit" type="submit" name="submit" variant="brand" label={_labelSave}></c-button>
+                        </div>
+                    </template>
+                </div>
+        </lightning-record-edit-form>
+</template>

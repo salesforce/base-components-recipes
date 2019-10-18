@@ -1,0 +1,14 @@
+{
+  "Account": [
+    {
+      "Id": "ACCOUNT",
+      "Name": "My test Name"
+    }
+  ],
+  "MyCustomObj__c": [
+    {
+      "Id": "MYOBJ",
+      "Name": "A cool custom object"
+    }
+  ]
+}

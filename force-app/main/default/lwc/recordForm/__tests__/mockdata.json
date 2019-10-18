@@ -1,0 +1,1147 @@
+{
+  "objectInfo": {
+    "apiName": "Lead",
+    "fields": {
+      "Address": {
+        "apiName": "Address",
+        "compound": true,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Address",
+        "label": "Address"
+      },
+      "AnnualRevenue": {
+        "apiName": "AnnualRevenue",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Currency",
+        "label": "Annual Revenue",
+        "updateable": true
+      },
+      "City": {
+        "apiName": "City",
+        "compound": false,
+        "compoundComponentName": "City",
+        "compoundFieldName": "Address",
+        "dataType": "String",
+        "label": "City",
+        "updateable": true
+      },
+      "Company": {
+        "apiName": "Company",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "String",
+        "label": "Company",
+        "updateable": true
+      },
+      "Country": {
+        "apiName": "Country",
+        "compound": false,
+        "compoundComponentName": "Country",
+        "compoundFieldName": "Address",
+        "dataType": "String",
+        "label": "Country",
+        "updateable": true
+      },
+      "CountryCode": {
+        "apiName": "CountryCode",
+        "compound": false,
+        "compoundComponentName": "Country",
+        "compoundFieldName": "Address",
+        "dataType": "Picklist",
+        "label": "Country Code",
+        "updateable": true
+      },
+      "Description": {
+        "apiName": "Description",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "TextArea",
+        "label": "Description",
+        "updateable": true
+      },
+      "Email": {
+        "apiName": "Email",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Email",
+        "label": "Email",
+        "updateable": true
+      },
+      "FirstName": {
+        "apiName": "FirstName",
+        "compound": false,
+        "compoundComponentName": "FirstName",
+        "compoundFieldName": "Name",
+        "dataType": "String",
+        "label": "First Name",
+        "updateable": true
+      },
+      "Id": {
+        "apiName": "Id",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "String",
+        "label": "Lead ID"
+      },
+      "LastName": {
+        "apiName": "LastName",
+        "compound": false,
+        "compoundComponentName": "LastName",
+        "compoundFieldName": "Name",
+        "dataType": "String",
+        "label": "Last Name",
+        "updateable": true
+      },
+      "Name": {
+        "apiName": "Name",
+        "compound": true,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "String",
+        "label": "Full Name",
+        "updateable": true
+      },
+      "OwnerId": {
+        "apiName": "OwnerId",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Reference",
+        "label": "Owner ID"
+      },
+      "CreatedById": {
+        "apiName": "CreatedById",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Reference",
+        "label": "Created By Id"
+      },
+      "LastModifiedById": {
+        "apiName": "LastModifiedById",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Reference",
+        "label": "Last modified by Id"
+      },
+      "Phone": {
+        "apiName": "Phone",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Phone",
+        "label": "Phone",
+        "updateable": true
+      },
+      "PostalCode": {
+        "apiName": "PostalCode",
+        "compound": false,
+        "compoundComponentName": "PostalCode",
+        "compoundFieldName": "Address",
+        "dataType": "String",
+        "label": "Zip/Postal Code",
+        "updateable": true
+      },
+      "Rating": {
+        "apiName": "Rating",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Picklist",
+        "label": "Rating",
+        "updateable": true
+      },
+      "Salutation": {
+        "apiName": "Salutation",
+        "compound": false,
+        "compoundComponentName": "Salutation",
+        "compoundFieldName": "Name",
+        "dataType": "Picklist",
+        "label": "Salutation",
+        "updateable": true
+      },
+      "State": {
+        "apiName": "State",
+        "compound": false,
+        "compoundComponentName": "State",
+        "compoundFieldName": "Address",
+        "dataType": "String",
+        "label": "State/Province",
+        "updateable": true
+      },
+      "StateCode": {
+        "apiName": "StateCode",
+        "compound": false,
+        "compoundComponentName": "State",
+        "compoundFieldName": "Address",
+        "dataType": "Picklist",
+        "label": "State/Province Code",
+        "updateable": true
+      },
+      "Status": {
+        "apiName": "Status",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Picklist",
+        "label": "Status",
+        "updateable": true
+      },
+      "Street": {
+        "apiName": "Street",
+        "compound": false,
+        "compoundComponentName": "Street",
+        "compoundFieldName": "Address",
+        "dataType": "TextArea",
+        "label": "Street",
+        "updateable": true
+      },
+      "Title": {
+        "apiName": "Title",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "String",
+        "label": "Title",
+        "updateable": true
+      },
+      "Website": {
+        "apiName": "Website",
+        "compound": false,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Url",
+        "label": "Website",
+        "updateable": true
+      },
+      "ReadOnly__c": {
+        "apiName": "ReadOnly__c",
+        "compound": "false",
+        "dataType": "String",
+        "label": "read only",
+        "updateable": false
+      }
+    }
+  },
+  "layouts": {
+    "Lead": {
+      "Compact": {
+        "View": {
+          "eTag": "5147244cdf1644cee46220bfa0e500bc",
+          "id": null,
+          "layoutType": "Compact",
+          "mode": "View",
+          "sections": [
+            {
+              "collapsible": false,
+              "columns": 1,
+              "heading": null,
+              "id": null,
+              "layoutRows": [
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Name",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Salutation",
+                          "componentType": "Field",
+                          "label": "Salutation"
+                        },
+                        {
+                          "apiName": "FirstName",
+                          "componentType": "Field",
+                          "label": "First Name"
+                        },
+                        {
+                          "apiName": "LastName",
+                          "componentType": "Field",
+                          "label": "Last Name"
+                        }
+                      ],
+                      "lookupIdApiName": "Id",
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                },
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Title",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Title",
+                          "componentType": "Field",
+                          "label": "Title"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                },
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Company",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Company",
+                          "componentType": "Field",
+                          "label": "Company"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                },
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Phone",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Phone",
+                          "componentType": "Field",
+                          "label": "Phone"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                },
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Email",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Email",
+                          "componentType": "Field",
+                          "label": "Email"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                }
+              ],
+              "rows": 5,
+              "useHeading": false
+            }
+          ]
+        }
+      },
+      "Full": {
+        "View": {
+          "eTag": "e24017613f1e13931a683e0fc54d2601",
+          "id": "00hxx000000000LAAQ",
+          "layoutType": "Full",
+          "mode": "View",
+          "sections": [
+            {
+              "collapsible": false,
+              "columns": 2,
+              "heading": "Lead Information",
+              "id": "01Bxx000000000wEAA",
+              "layoutRows": [
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": false,
+                      "editableForUpdate": false,
+                      "label": "Lead Owner",
+                      "layoutComponents": [
+                        {
+                          "apiName": "OwnerId",
+                          "componentType": "Field",
+                          "label": "Owner ID"
+                        }
+                      ],
+                      "lookupIdApiName": "OwnerId",
+                      "required": false,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Lead Status",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Status",
+                          "componentType": "Field",
+                          "label": "Status"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": true,
+                      "sortable": false
+                    }
+                  ]
+                },
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Name",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Salutation",
+                          "componentType": "Field",
+                          "label": "Salutation"
+                        },
+                        {
+                          "apiName": "FirstName",
+                          "componentType": "Field",
+                          "label": "First Name"
+                        },
+                        {
+                          "apiName": "LastName",
+                          "componentType": "Field",
+                          "label": "Last Name"
+                        }
+                      ],
+                      "lookupIdApiName": "Id",
+                      "required": true,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Phone",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Phone",
+                          "componentType": "Field",
+                          "label": "Phone"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                },
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Company",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Company",
+                          "componentType": "Field",
+                          "label": "Company"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": true,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Email",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Email",
+                          "componentType": "Field",
+                          "label": "Email"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                },
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Title",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Title",
+                          "componentType": "Field",
+                          "label": "Title"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Rating",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Rating",
+                          "componentType": "Field",
+                          "label": "Rating"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                }
+              ],
+              "rows": 4,
+              "useHeading": false
+            },
+            {
+              "collapsible": true,
+              "columns": 2,
+              "heading": "Address Information",
+              "id": "01Bxx000000000xEAA",
+              "layoutRows": [
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Address",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Street",
+                          "componentType": "Field",
+                          "label": "Street"
+                        },
+                        {
+                          "apiName": "City",
+                          "componentType": "Field",
+                          "label": "City"
+                        },
+                        {
+                          "apiName": "State",
+                          "componentType": "Field",
+                          "label": "State/Province"
+                        },
+                        {
+                          "apiName": "PostalCode",
+                          "componentType": "Field",
+                          "label": "Zip/Postal Code"
+                        },
+                        {
+                          "apiName": "Country",
+                          "componentType": "Field",
+                          "label": "Country"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Website",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Website",
+                          "componentType": "Field",
+                          "label": "Website"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                }
+              ],
+              "rows": 1,
+              "useHeading": true
+            },
+            {
+              "collapsible": true,
+              "columns": 2,
+              "heading": "Additional Information",
+              "id": "01Bxx000000000yEAA",
+              "layoutRows": [
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Annual Revenue",
+                      "layoutComponents": [
+                        {
+                          "apiName": "AnnualRevenue",
+                          "componentType": "Field",
+                          "label": "Annual Revenue"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Industry",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Industry",
+                          "componentType": "Field",
+                          "label": "Industry"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                }
+              ],
+              "rows": 2,
+              "useHeading": true
+            },
+            {
+              "collapsible": false,
+              "columns": 1,
+              "heading": "Description Information",
+              "id": "01Bxx000000000zEAA",
+              "layoutRows": [
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": true,
+                      "editableForUpdate": true,
+                      "label": "Description",
+                      "layoutComponents": [
+                        {
+                          "apiName": "Description",
+                          "componentType": "Field",
+                          "label": "Description"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                }
+              ],
+              "rows": 1,
+              "useHeading": false
+            },
+            {
+              "collapsible": true,
+              "columns": 3,
+              "heading": "Custom Links",
+              "id": "01Bxx0000000011EAA",
+              "layoutRows": [
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": false,
+                      "editableForUpdate": false,
+                      "label": "",
+                      "layoutComponents": [
+                        {
+                          "apiName": "GoogleSearch",
+                          "behavior": "NewWindow",
+                          "componentType": "CustomLink",
+                          "customLinkUrl": "/servlet/servlet.Integration?lid=00bxx000000000G&eid=ENTITY_ID&ic=1",
+                          "label": "Google Search"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": false,
+                      "editableForUpdate": false,
+                      "label": "",
+                      "layoutComponents": [
+                        {
+                          "apiName": "GoogleMaps",
+                          "behavior": "NewWindow",
+                          "componentType": "CustomLink",
+                          "customLinkUrl": "/servlet/servlet.Integration?lid=00bxx000000000E&eid=ENTITY_ID&ic=1",
+                          "label": "Google Maps"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": false,
+                      "editableForUpdate": false,
+                      "label": "",
+                      "layoutComponents": [
+                        {
+                          "apiName": "SendGmail",
+                          "behavior": "NewWindow",
+                          "componentType": "CustomLink",
+                          "customLinkUrl": "/servlet/servlet.Integration?lid=00bxx000000000I&eid=ENTITY_ID&ic=1",
+                          "label": "Send Gmail"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                },
+                {
+                  "layoutItems": [
+                    {
+                      "editableForNew": false,
+                      "editableForUpdate": false,
+                      "label": "",
+                      "layoutComponents": [
+                        {
+                          "apiName": "GoogleNews",
+                          "behavior": "NewWindow",
+                          "componentType": "CustomLink",
+                          "customLinkUrl": "/servlet/servlet.Integration?lid=00bxx000000000F&eid=ENTITY_ID&ic=1",
+                          "label": "Google News"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": false,
+                      "editableForUpdate": false,
+                      "label": "",
+                      "layoutComponents": [
+                        {
+                          "apiName": "HooversProfile",
+                          "behavior": "NewWindow",
+                          "componentType": "CustomLink",
+                          "customLinkUrl": "/servlet/servlet.Integration?lid=00bxx000000000H&eid=ENTITY_ID&ic=1",
+                          "label": "Hoovers Profile"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    },
+                    {
+                      "editableForNew": false,
+                      "editableForUpdate": false,
+                      "label": "",
+                      "layoutComponents": [
+                        {
+                          "apiName": null,
+                          "componentType": "EmptySpace"
+                        }
+                      ],
+                      "lookupIdApiName": null,
+                      "required": false,
+                      "sortable": false
+                    }
+                  ]
+                }
+              ],
+              "rows": 2,
+              "useHeading": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "records": {
+    "LEADDEFAULTS": {
+      "apiName": "Lead",
+      "childRelationships": {},
+      "fields": {
+        "AnnualRevenue": {
+          "displayValue": null,
+          "value": null
+        },
+        "City": {
+          "displayValue": null,
+          "value": null
+        },
+        "Company": {
+          "displayValue": null,
+          "value": null
+        },
+        "Country": {
+          "displayValue": null,
+          "value": null
+        },
+        "CreatedBy": {
+          "displayValue": null,
+          "value": null
+        },
+        "Description": {
+          "displayValue": null,
+          "value": null
+        },
+        "Email": {
+          "displayValue": null,
+          "value": null
+        },
+        "Fax": {
+          "displayValue": null,
+          "value": null
+        },
+        "FirstName": {
+          "displayValue": null,
+          "value": null
+        },
+        "Industry": {
+          "displayValue": null,
+          "value": null
+        },
+        "IsUnreadByOwner": {
+          "displayValue": null,
+          "value": true
+        },
+        "LastModifiedBy": {
+          "displayValue": null,
+          "value": null
+        },
+        "LastName": {
+          "displayValue": null,
+          "value": null
+        },
+        "LeadSource": {
+          "displayValue": null,
+          "value": null
+        },
+        "MobilePhone": {
+          "displayValue": null,
+          "value": null
+        },
+        "Name": {
+          "displayValue": null,
+          "value": null
+        },
+        "NumberOfEmployees": {
+          "displayValue": null,
+          "value": null
+        },
+        "Owner": {
+          "displayValue": "User User",
+          "value": {
+            "apiName": "Name",
+            "childRelationships": {},
+            "fields": {
+              "Id": {
+                "displayValue": null,
+                "value": "00554000002wUlhAAE"
+              },
+              "Name": {
+                "displayValue": null,
+                "value": "User User"
+              }
+            },
+            "id": "00554000002wUlhAAE",
+            "lastModifiedById": null,
+            "lastModifiedDate": null,
+            "recordTypeInfo": null,
+            "systemModstamp": null
+          }
+        },
+        "OwnerId": {
+          "displayValue": null,
+          "value": "00554000002wUlhAAE"
+        },
+        "Phone": {
+          "displayValue": null,
+          "value": null
+        },
+        "PostalCode": {
+          "displayValue": null,
+          "value": null
+        },
+        "Rating": {
+          "displayValue": null,
+          "value": null
+        },
+        "Salutation": {
+          "displayValue": null,
+          "value": null
+        },
+        "State": {
+          "displayValue": null,
+          "value": null
+        },
+        "Status": {
+          "displayValue": null,
+          "value": "Open - Not Contacted"
+        },
+        "Street": {
+          "displayValue": null,
+          "value": null
+        },
+        "Title": {
+          "displayValue": null,
+          "value": null
+        },
+        "Website": {
+          "displayValue": null,
+          "value": null
+        }
+      },
+      "id": null,
+      "lastModifiedById": null,
+      "lastModifiedDate": null,
+      "recordTypeInfo": null,
+      "systemModstamp": null
+    },
+    "00abc": {
+      "apiName": "Lead",
+      "childRelationships": {},
+      "fields": {
+        "AnnualRevenue": {
+          "displayValue": null,
+          "value": null
+        },
+        "City": {
+          "displayValue": null,
+          "value": "San Francisco"
+        },
+        "Company": {
+          "displayValue": null,
+          "value": "Bobface"
+        },
+        "Country": {
+          "displayValue": null,
+          "value": null
+        },
+        "CreatedBy": {
+          "displayValue": "User User",
+          "value": {
+            "apiName": "User",
+            "childRelationships": {},
+            "fields": {
+              "Id": {
+                "displayValue": null,
+                "value": "005R0000000WElUIAW"
+              },
+              "Name": {
+                "displayValue": null,
+                "value": "User User"
+              }
+            },
+            "id": "005R0000000WElUIAW",
+            "lastModifiedById": "005R0000000WElUIAW",
+            "lastModifiedDate": "2019-09-29T17:42:05.000Z",
+            "recordTypeInfo": null,
+            "systemModstamp": "2019-09-29T17:42:35.000Z"
+          }
+        },
+        "CreatedById": {
+          "displayValue": null,
+          "value": "005R0000000WElUIAW"
+        },
+        "CreatedDate": {
+          "displayValue": "9/29/2019, 12:24 PM",
+          "value": "2019-09-29T19:24:25.000Z"
+        },
+        "CurrentGenerators__c": {
+          "displayValue": null,
+          "value": null
+        },
+        "Description": {
+          "displayValue": null,
+          "value": null
+        },
+        "Email": {
+          "displayValue": null,
+          "value": null
+        },
+        "Fax": {
+          "displayValue": null,
+          "value": null
+        },
+        "FirstName": {
+          "displayValue": null,
+          "value": "Bob"
+        },
+        "GeocodeAccuracy": {
+          "displayValue": null,
+          "value": null
+        },
+        "Industry": {
+          "displayValue": null,
+          "value": null
+        },
+        "LastModifiedBy": {
+          "displayValue": "User User",
+          "value": {
+            "apiName": "User",
+            "childRelationships": {},
+            "fields": {
+              "Id": {
+                "displayValue": null,
+                "value": "005R0000000WElUIAW"
+              },
+              "Name": {
+                "displayValue": null,
+                "value": "User User"
+              }
+            },
+            "id": "005R0000000WElUIAW",
+            "lastModifiedById": "005R0000000WElUIAW",
+            "lastModifiedDate": "2019-09-29T17:42:05.000Z",
+            "recordTypeInfo": null,
+            "systemModstamp": "2019-09-29T17:42:35.000Z"
+          }
+        },
+        "LastModifiedById": {
+          "displayValue": null,
+          "value": "005R0000000WElUIAW"
+        },
+        "LastModifiedDate": {
+          "displayValue": "9/29/2019, 12:24 PM",
+          "value": "2019-09-29T19:24:25.000Z"
+        },
+        "LastName": {
+          "displayValue": null,
+          "value": "Bobberson"
+        },
+        "Latitude": {
+          "displayValue": null,
+          "value": null
+        },
+        "LeadSource": {
+          "displayValue": null,
+          "value": null
+        },
+        "Longitude": {
+          "displayValue": null,
+          "value": null
+        },
+        "MobilePhone": {
+          "displayValue": null,
+          "value": null
+        },
+        "Name": {
+          "displayValue": null,
+          "value": "Bob Bobberson"
+        },
+        "NumberOfEmployees": {
+          "displayValue": null,
+          "value": null
+        },
+        "NumberofLocations__c": {
+          "displayValue": null,
+          "value": null
+        },
+        "Owner": {
+          "displayValue": "User User",
+          "value": {
+            "apiName": "Name",
+            "childRelationships": {},
+            "fields": {
+              "Id": {
+                "displayValue": null,
+                "value": "005R0000000WElUIAW"
+              },
+              "Name": {
+                "displayValue": null,
+                "value": "User User"
+              }
+            },
+            "id": "005R0000000WElUIAW",
+            "lastModifiedById": null,
+            "lastModifiedDate": null,
+            "recordTypeInfo": null,
+            "systemModstamp": null
+          }
+        },
+        "OwnerId": {
+          "displayValue": null,
+          "value": "005R0000000WElUIAW"
+        },
+        "Phone": {
+          "displayValue": null,
+          "value": null
+        },
+        "PostalCode": {
+          "displayValue": null,
+          "value": "94110"
+        },
+        "Primary__c": {
+          "displayValue": null,
+          "value": null
+        },
+        "ProductInterest__c": {
+          "displayValue": null,
+          "value": null
+        },
+        "Rating": {
+          "displayValue": null,
+          "value": null
+        },
+        "SICCode__c": {
+          "displayValue": null,
+          "value": null
+        },
+        "Salutation": {
+          "displayValue": null,
+          "value": null
+        },
+        "State": {
+          "displayValue": null,
+          "value": "California"
+        },
+        "Status": {
+          "displayValue": "New - Not Contacted",
+          "value": "New - Not Contacted"
+        },
+        "Street": {
+          "displayValue": null,
+          "value": "123 Fake Street"
+        },
+        "Title": {
+          "displayValue": null,
+          "value": null
+        },
+        "Website": {
+          "displayValue": null,
+          "value": null
+        }
+      },
+      "id": "00abc",
+      "lastModifiedById": "005R0000000WElUIAW",
+      "lastModifiedDate": "2019-09-29T19:24:25.000Z",
+      "recordTypeInfo": null,
+      "systemModstamp": "2019-09-29T19:24:25.000Z"
+    }
+  }
+}
