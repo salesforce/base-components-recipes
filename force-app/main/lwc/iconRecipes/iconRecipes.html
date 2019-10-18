@@ -1,0 +1,33 @@
+<template>
+     <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            A basic icon component.
+        </h2>
+
+        <!-- Simple -->
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-icon icon-name="action:approval" alternative-text="Approved" ></lightning-icon>
+            <lightning-icon icon-name="doctype:audio" alternative-text="Audio file" ></lightning-icon>
+            <lightning-icon icon-name="standard:event" alternative-text="Event" ></lightning-icon>
+            <lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" ></lightning-icon>
+            <lightning-icon icon-name="utility:warning" alternative-text="Warning!" variant="warning"></lightning-icon>
+            <lightning-icon icon-name="utility:error" alternative-text="Error!" variant="error"></lightning-icon>
+            <lightning-icon icon-name="utility:image" alternative-text="Utility image" ></lightning-icon>
+            <lightning-icon icon-name="doctype:image" alternative-text="Doc image" ></lightning-icon>
+        </div>
+
+        <!-- Variant Inverse -->
+        <div class="row dark-background">
+            <h4>Utility icon with inverse variant</h4>
+            <lightning-icon icon-name="utility:connected_apps" alternative-text="Connected" variant="inverse" size="small"></lightning-icon>
+        </div>
+
+        <!-- Variant success, warning, error -->
+        <div class="row">
+            <h4>Utility icons with success, warning and error variant</h4>
+            <lightning-icon icon-name="utility:success" alternative-text="Success!" variant="success" size="small"></lightning-icon>
+            <lightning-icon icon-name="utility:warning" alternative-text="Warning!" variant="warning" size="small"></lightning-icon>
+            <lightning-icon icon-name="utility:error" alternative-text="Error!" variant="error" size="small"></lightning-icon>
+        </div>
+    </div>
+</template>

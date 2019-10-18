@@ -2,6 +2,15 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
+            "c/accordion": [
+                "../default/lwc/accordion/accordion.js"
+            ],
+            "c/accordionSection": [
+                "../default/lwc/accordionSection/accordionSection.js"
+            ],
+            "c/accordionUtilsPrivate": [
+                "../default/lwc/accordionUtilsPrivate/accordionUtilsPrivate.js"
+            ],
             "c/avatar": [
                 "../default/lwc/avatar/avatar.js"
             ],
@@ -230,6 +239,9 @@
             "c/verticalNavigationSection": [
                 "../default/lwc/verticalNavigationSection/verticalNavigationSection.js"
             ],
+            "c/accordionRecipes": [
+                "accordionRecipes/accordionRecipes.js"
+            ],
             "c/badgeRecipes": [
                 "badgeRecipes/badgeRecipes.js"
             ],
@@ -287,8 +299,8 @@
             "c/verticalRecipes": [
                 "verticalRecipes/verticalRecipes.js"
             ],
-            "c/accordionRecipes": [
-                "accordionRecipes/accordionRecipes.js"
+            "c/iconRecipes": [
+                "iconRecipes/iconRecipes.js"
             ]
         },
         "experimentalDecorators": true
