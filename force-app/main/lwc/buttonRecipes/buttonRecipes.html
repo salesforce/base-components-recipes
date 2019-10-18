@@ -1,3 +1,32 @@
 <template>
-    <c-button label="Button Recipe"></c-button>
+    <div class="slds-m-top_small slds-m-bottom_medium">
+        <h2 class="slds-text-heading_small slds-m-bottom_small">
+            Click the buttons to activate the <code>onclick</code> handler and view the label of the clicked button.
+        </h2>
+
+        <!-- Base variant: Makes a button look like a link -->
+        <c-button variant="base" label="Base" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small"></c-button>
+
+        <!-- Neutral variant (default) -->
+        <c-button label="Neutral" title="Non-primary action" onclick={handleClick} class="slds-m-left_x-small"></c-button>
+
+        <!-- Brand variant: Identifies the primary action in a group of buttons -->
+        <c-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></c-button>
+
+        <!-- Brand outline variant: Identifies the primary action in a group of buttons, but has a lighter look -->
+        <c-button variant="brand-outline" label="Brand Outline" title="Primary action with lighter look" onclick={handleClick} class="slds-m-left_x-small"></c-button>
+
+        <!-- Destructive variant: Identifies a potentially negative action -->
+        <c-button variant="destructive" label="Destructive" title="Destructive action" onclick={handleClick} class="slds-m-left_x-small"></c-button>
+
+        <!-- Destructive text variant: Identifies a potentially negative action, but has a lighter look -->
+        <c-button variant="destructive-text" label="Destructive Text" title="Destructive action with a lighter look" onclick={handleClick} class="slds-m-left_x-small"></c-button>
+
+        <!-- Success variant: Identifies a successful action -->
+        <c-button variant="success" label="Success" title="Successful action" onclick={handleClick} class="slds-m-left_x-small"></c-button>
+    </div>
+
+    <div class="slds-m-vertical_medium">
+        <p>The label of the button that was clicked is: <span class="slds-text-heading_small">{clickedButtonLabel}</span></p>
+    </div>
 </template>
