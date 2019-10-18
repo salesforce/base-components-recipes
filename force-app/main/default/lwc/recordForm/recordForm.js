@@ -154,7 +154,7 @@ export default class cRecordForm extends LightningElement {
 
   @api
   submit(fields) {
-    this.template.querySelector('lightning-record-edit-form').submit(fields);
+    this.template.querySelector('c-record-edit-form').submit(fields);
   }
 
   addField(val) {
