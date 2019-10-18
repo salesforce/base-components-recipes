@@ -295,6 +295,9 @@
             ],
             "c/accordionRecipes": [
                 "accordionRecipes/accordionRecipes.js"
+            ],
+            "c/accordionBasic": [
+                "accordionBasic/accordionBasic.js"
             ]
         },
         "experimentalDecorators": true
