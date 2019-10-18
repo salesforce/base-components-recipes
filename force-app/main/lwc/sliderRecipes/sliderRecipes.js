@@ -1,6 +1,5 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 
-export default class SliderRecipes extends LightningElement {   
-     val = 50;
-    
+export default class SliderRecipes extends LightningElement {
+    val = 50;
 }
