@@ -1,0 +1,19 @@
+{
+  "Account": [
+    {
+      "Id": "ACCOUNT",
+      "Name": "Super Great Account",
+      "AccountSource": "Web",
+      "AccountNumber": "22",
+      "BillingStreet": "123 Fake Street",
+      "BillingCity": "San Francisco",
+      "BillingState": "California",
+      "BillingPostalCode": "94110",
+      "NumberOfEmployees": 120
+    },
+    {
+      "Id": "ACCOUNT2",
+      "Name": "A different account"
+    }
+  ]
+}

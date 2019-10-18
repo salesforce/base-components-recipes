@@ -1,0 +1,63 @@
+<template>
+    <fieldset>
+
+        <legend class={computedLegendClass}>
+            <template if:true={required}>
+                <abbr class="slds-required" title={i18n.required}>*</abbr>
+            </template>
+            {label}
+        </legend>
+
+        <div class="slds-form-element__control">
+            <template if:true={isRadio}>
+                <template for:each={transformedOptions} for:item="option">
+                    <span class="slds-radio" key={option.value}>
+                        <input type="radio"
+                               name={name}
+                               id={option.indexId}
+                               checked={option.isChecked}
+                               value={option.value}
+                               required={required}
+                               disabled={disabled}
+                               onchange={handleChange}
+                               onfocus={handleFocus}
+                               onblur={handleBlur}
+                               >
+                        <label class="slds-radio__label" for={option.indexId}>
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label">{option.label}</span>
+                        </label>
+                    </span>
+                </template>
+            </template>
+
+            <template if:true={isButton}>
+                <div class="slds-radio_button-group">
+                    <template for:each={transformedOptions} for:item="option">
+                        <span class="slds-button slds-radio_button" key={option.value}>
+                            <input type="radio"
+                                   name={name}
+                                   id={option.indexId}
+                                   checked={option.isChecked}
+                                   value={option.value}
+                                   required={required}
+                                   disabled={disabled}
+                                   onchange={handleChange}
+                                   onfocus={handleFocus}
+                                   onblur={handleBlur}
+                                   >
+                            <label class="slds-radio_button__label" for={option.indexId}>
+                                <span class="slds-radio_faux">{option.label}</span>
+                            </label>
+                        </span>
+                    </template>
+                </div>
+            </template>
+        </div>
+
+        <template if:true={_helpMessage}>
+            <div data-help-message id="help-message" class="slds-form-element__help">{_helpMessage}</div>
+        </template>
+
+    </fieldset>
+</template>

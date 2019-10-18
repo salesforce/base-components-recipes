@@ -1,0 +1,214 @@
+{
+  "objectInfo": {
+    "apiName": "entity",
+    "fields": {
+      "Text": {
+        "dataType": "String",
+        "label": "Plain Text"
+      },
+      "Boolean": {
+        "dataType": "Boolean",
+        "label": "Checkbox label"
+      },
+      "Email": {
+        "dataType": "Email",
+        "label": "Email"
+      },
+      "Phone": {
+        "dataType": "Phone",
+        "label": "Phone Number"
+      },
+      "Picklist": {
+        "dataType": "Picklist",
+        "label": "Picklist"
+      },
+      "RichText": {
+        "dataType": "TextArea",
+        "extraTypeInfo": "RichTextArea",
+        "htmlFormatted": true,
+        "label": "Rich Text"
+      },
+      "Url": {
+        "dataType": "Url",
+        "label": "Url"
+      },
+      "NameSimple": {
+        "apiName": "NameSimple",
+        "compound": true,
+        "compoundComponentName": "NameSimple",
+        "compoundFieldName": null,
+        "dataType": "String",
+        "extraTypeInfo": "PersonName",
+        "label": "Simple Name"
+      },
+      "FirstName": {
+        "apiName": "FirstName",
+        "compound": false,
+        "compoundComponentName": "FirstName",
+        "compoundFieldName": "Name",
+        "dataType": "String",
+        "extraTypeInfo": "PersonName",
+        "label": "First Name"
+      },
+      "LastName": {
+        "apiName": "LastName",
+        "compound": false,
+        "compoundComponentName": "LastName",
+        "compoundFieldName": "Name",
+        "dataType": "String",
+        "extraTypeInfo": "PersonName",
+        "label": "Last Name"
+      },
+      "Name": {
+        "apiName": "Name",
+        "compound": true,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "String",
+        "extraTypeInfo": "PersonName",
+        "label": "Full Name"
+      },
+      "Salutation": {
+        "apiName": "Salutation",
+        "compound": false,
+        "compoundComponentName": "Salutation",
+        "compoundFieldName": "Name",
+        "dataType": "Picklist",
+        "label": "Salutation"
+      },
+      "BillingAddress": {
+        "apiName": "BillingAddress",
+        "compound": true,
+        "compoundComponentName": null,
+        "compoundFieldName": null,
+        "dataType": "Address",
+        "label": "Address"
+      },
+      "BillingCity": {
+        "apiName": "BillingCity",
+        "compound": false,
+        "compoundComponentName": "BillingCity",
+        "compoundFieldName": "BillingAddress",
+        "dataType": "String",
+        "label": "City"
+      },
+      "BillingCountry": {
+        "apiName": "BillingCountry",
+        "compound": false,
+        "compoundComponentName": "BillingCountry",
+        "compoundFieldName": "BillingAddress",
+        "dataType": "String",
+        "label": "Country"
+      },
+      "BillingCountryCode": {
+        "apiName": "BillingCountryCode",
+        "compound": false,
+        "compoundComponentName": "BillingCountry",
+        "compoundFieldName": "BillingAddress",
+        "dataType": "Picklist",
+        "label": "Country Code"
+      },
+      "BillingPostalCode": {
+        "apiName": "BillingPostalCode",
+        "compound": false,
+        "compoundComponentName": "BillingPostalCode",
+        "compoundFieldName": "BillingAddress",
+        "dataType": "String",
+        "label": "Zip/Postal Code"
+      },
+      "BillingState": {
+        "apiName": "BillingState",
+        "compound": false,
+        "compoundComponentName": "BillingState",
+        "compoundFieldName": "BillingAddress",
+        "dataType": "String",
+        "label": "State/Province"
+      },
+      "BillingStateCode": {
+        "apiName": "BillingStateCode",
+        "compound": false,
+        "compoundComponentName": "BillingState",
+        "compoundFieldName": "BillingAddress",
+        "dataType": "Picklist",
+        "label": "State/Province Code"
+      },
+      "BillingStreet": {
+        "apiName": "BillingStreet",
+        "compound": false,
+        "compoundComponentName": "BillingStreet",
+        "compoundFieldName": "BillingAddress",
+        "dataType": "TextArea",
+        "label": "Street"
+      }
+    }
+  },
+  "record": {
+    "apiName": "entity",
+    "fields": {
+      "Text": {
+        "displayValue": null,
+        "value": "Some Plain Text"
+      },
+      "Boolean": {
+        "displayValue": null,
+        "value": true
+      },
+      "Email": {
+        "displayValue": null,
+        "value": "the@email.something"
+      },
+      "Picklist": {
+        "displayValue": "PicklistDisplayValue",
+        "value": "picklistValue"
+      },
+      "Phone": {
+        "displayValue": null,
+        "value": "403-203-1048"
+      },
+      "RichText": {
+        "displayValue": null,
+        "value": "\u003Cimg src=\"/servlet/servlet.FileDownload?file=01570000000Q6Ep\" alt=\"Red\" border=\"0\"/\u003E"
+      },
+      "Url": {
+        "displayValue": null,
+        "value": "www.google.com"
+      },
+      "NameSimple": {
+        "displayValue": null,
+        "value": "Simple Name"
+      },
+      "FirstName": {
+        "displayValue": null,
+        "value": "Jim"
+      },
+      "LastName": {
+        "displayValue": null,
+        "value": "Steele"
+      },
+      "Salutation": {
+        "displayValue": null,
+        "value": "Mr."
+      },
+      "BillingCity": {
+        "displayValue": null,
+        "value": "Hartford"
+      },
+      "BillingStreet": {
+        "displayValue": null,
+        "value": "11 Farm Avenue"
+      },
+      "BillingStateCode": {
+        "displayValue": "Alaska",
+        "value": "AK"
+      },
+      "BillingCountryCode": {
+        "displayValue": "United States",
+        "value": "US"
+      },
+      "BillingPostalCode": {
+        "displayValue": null,
+        "value": "6156"
+      }
+    }
+  }
+}
