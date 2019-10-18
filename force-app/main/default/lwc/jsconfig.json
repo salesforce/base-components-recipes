@@ -237,9 +237,6 @@
             "c/verticalNavigationSection": [
                 "verticalNavigationSection/verticalNavigationSection.js"
             ],
-            "c/accordionRecipes": [
-                "../../lwc/accordionRecipes/accordionRecipes.js"
-            ],
             "c/badgeRecipes": [
                 "../../lwc/badgeRecipes/badgeRecipes.js"
             ],
@@ -308,9 +305,6 @@
             ],
             "c/progressbarRecipes": [
                 "../../lwc/progressbarRecipes/progressbarRecipes.js"
-            ],
-            "c/accordionRecipes": [
-                "../../lwc/accordionRecipes/accordionRecipes.js"
             ],
             "c/accordionBasic": [
                 "../../lwc/accordionBasic/accordionBasic.js"
