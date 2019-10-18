@@ -1,0 +1,9 @@
+<template>
+    <c-primitive-icon
+        icon-name={state.iconName}
+        size={size}
+        variant={variant}
+        src={state.src}>
+    </c-primitive-icon>
+    <span if:true={alternativeText} class="slds-assistive-text">{alternativeText}</span>
+</template>

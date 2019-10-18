@@ -18,21 +18,21 @@
                         aria-selected={tab.ariaSelected}>
                         <template if:true={tab.iconName}>
                             <span class={computedLeftIconClass}>
-                                <lightning-icon icon-name={tab.iconName} data-tab-value={tab.value}
-                                    size="small" alternative-text={tab.iconAlternativeText}></lightning-icon>
+                                <c-icon icon-name={tab.iconName} data-tab-value={tab.value}
+                                    size="small" alternative-text={tab.iconAlternativeText}></c-icon>
                             </span>
                         </template>
                         {tab.label}
                         <template if:true={tab.endIconName}>
                             <span class={computedRightIconClass}>
-                                <lightning-icon icon-name={tab.endIconName} data-tab-value={tab.value}
-                                    size="small" alternative-text={tab.endIconAlternativeText}></lightning-icon>
+                                <c-icon icon-name={tab.endIconName} data-tab-value={tab.value}
+                                    size="small" alternative-text={tab.endIconAlternativeText}></c-icon>
                             </span>
                         </template>
                         <template if:true={tab.showErrorIndicator}>
                             <span class={computedRightIconClass}>
-                                <lightning-icon icon-name="utility:error" variant="error" data-tab-value={tab.value}
-                                    size="small" alternative-text={i18n.errorStateAlternativeText}></lightning-icon>
+                                <c-icon icon-name="utility:error" variant="error" data-tab-value={tab.value}
+                                    size="small" alternative-text={i18n.errorStateAlternativeText}></c-icon>
                             </span>
                         </template>
                     </a>
