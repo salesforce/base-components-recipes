@@ -5,11 +5,53 @@
             "c/avatar": [
                 "../default/lwc/avatar/avatar.js"
             ],
+            "c/badge": [
+                "../default/lwc/badge/badge.js"
+            ],
+            "c/baseCombobox": [
+                "../default/lwc/baseCombobox/baseCombobox.js"
+            ],
+            "c/baseComboboxFormattedText": [
+                "../default/lwc/baseComboboxFormattedText/baseComboboxFormattedText.js"
+            ],
+            "c/baseComboboxItem": [
+                "../default/lwc/baseComboboxItem/baseComboboxItem.js"
+            ],
             "c/button": [
                 "../default/lwc/button/button.js"
             ],
+            "c/buttonGroup": [
+                "../default/lwc/buttonGroup/buttonGroup.js"
+            ],
+            "c/buttonIconStateful": [
+                "../default/lwc/buttonIconStateful/buttonIconStateful.js"
+            ],
+            "c/buttonStateful": [
+                "../default/lwc/buttonStateful/buttonStateful.js"
+            ],
             "c/card": [
                 "../default/lwc/card/card.js"
+            ],
+            "c/carousel": [
+                "../default/lwc/carousel/carousel.js"
+            ],
+            "c/checkboxGroup": [
+                "../default/lwc/checkboxGroup/checkboxGroup.js"
+            ],
+            "c/clickToDial": [
+                "../default/lwc/clickToDial/clickToDial.js"
+            ],
+            "c/clickToDialService": [
+                "../default/lwc/clickToDialService/clickToDialService.js"
+            ],
+            "c/combobox": [
+                "../default/lwc/combobox/combobox.js"
+            ],
+            "c/dualListbox": [
+                "../default/lwc/dualListbox/dualListbox.js"
+            ],
+            "c/dynamicIcon": [
+                "../default/lwc/dynamicIcon/dynamicIcon.js"
             ],
             "c/formattedDateTime": [
                 "../default/lwc/formattedDateTime/formattedDateTime.js"
@@ -26,6 +68,21 @@
             "c/formattedNumber": [
                 "../default/lwc/formattedNumber/formattedNumber.js"
             ],
+            "c/formattedPhone": [
+                "../default/lwc/formattedPhone/formattedPhone.js"
+            ],
+            "c/formattedRichText": [
+                "../default/lwc/formattedRichText/formattedRichText.js"
+            ],
+            "c/formattedText": [
+                "../default/lwc/formattedText/formattedText.js"
+            ],
+            "c/formattedTime": [
+                "../default/lwc/formattedTime/formattedTime.js"
+            ],
+            "c/formattedUrl": [
+                "../default/lwc/formattedUrl/formattedUrl.js"
+            ],
             "c/iconUtils": [
                 "../default/lwc/iconUtils/iconUtils.js"
             ],
@@ -41,17 +98,26 @@
             "c/overflowLibrary": [
                 "../default/lwc/overflowLibrary/overflowLibrary.js"
             ],
+            "c/positionLibrary": [
+                "../default/lwc/positionLibrary/positionLibrary.js"
+            ],
             "c/primitiveButton": [
                 "../default/lwc/primitiveButton/primitiveButton.js"
             ],
             "c/primitiveIcon": [
                 "../default/lwc/primitiveIcon/primitiveIcon.js"
             ],
+            "c/purifyLib": [
+                "../default/lwc/purifyLib/purifyLib.js"
+            ],
             "c/resizeObserver": [
                 "../default/lwc/resizeObserver/resizeObserver.js"
             ],
             "c/routingService": [
                 "../default/lwc/routingService/routingService.js"
+            ],
+            "c/spinner": [
+                "../default/lwc/spinner/spinner.js"
             ],
             "c/tab": [
                 "../default/lwc/tab/tab.js"
@@ -62,17 +128,53 @@
             "c/tabset": [
                 "../default/lwc/tabset/tabset.js"
             ],
+            "c/textarea": [
+                "../default/lwc/textarea/textarea.js"
+            ],
+            "c/tile": [
+                "../default/lwc/tile/tile.js"
+            ],
             "c/utils": [
                 "../default/lwc/utils/utils.js"
             ],
             "c/utilsPrivate": [
                 "../default/lwc/utilsPrivate/utilsPrivate.js"
             ],
+            "c/verticalNavigation": [
+                "../default/lwc/verticalNavigation/verticalNavigation.js"
+            ],
+            "c/verticalNavigationItem": [
+                "../default/lwc/verticalNavigationItem/verticalNavigationItem.js"
+            ],
+            "c/verticalNavigationItemBadge": [
+                "../default/lwc/verticalNavigationItemBadge/verticalNavigationItemBadge.js"
+            ],
+            "c/verticalNavigationItemIcon": [
+                "../default/lwc/verticalNavigationItemIcon/verticalNavigationItemIcon.js"
+            ],
+            "c/verticalNavigationOverflow": [
+                "../default/lwc/verticalNavigationOverflow/verticalNavigationOverflow.js"
+            ],
+            "c/verticalNavigationSection": [
+                "../default/lwc/verticalNavigationSection/verticalNavigationSection.js"
+            ],
+            "c/badgeRecipes": [
+                "badgeRecipes/badgeRecipes.js"
+            ],
+            "c/buttonGroupRecipes": [
+                "buttonGroupRecipes/buttonGroupRecipes.js"
+            ],
             "c/buttonRecipes": [
                 "buttonRecipes/buttonRecipes.js"
             ],
             "c/cardRecipes": [
                 "cardRecipes/cardRecipes.js"
+            ],
+            "c/checkboxGroupRecipes": [
+                "checkboxGroupRecipes/checkboxGroupRecipes.js"
+            ],
+            "c/comboboxRecipes": [
+                "comboboxRecipes/comboboxRecipes.js"
             ],
             "c/formattedDateTimeRecipes": [
                 "formattedDateTimeRecipes/formattedDateTimeRecipes.js"
@@ -85,6 +187,21 @@
             ],
             "c/formattedNumberRecipes": [
                 "formattedNumberRecipes/formattedNumberRecipes.js"
+            ],
+            "c/formattedPhoneRecipes": [
+                "formattedPhoneRecipes/formattedPhoneRecipes.js"
+            ],
+            "c/formattedRichTextRecipes": [
+                "formattedRichTextRecipes/formattedRichTextRecipes.js"
+            ],
+            "c/formattedTextRecipes": [
+                "formattedTextRecipes/formattedTextRecipes.js"
+            ],
+            "c/formattedTimeRecipes": [
+                "formattedTimeRecipes/formattedTimeRecipes.js"
+            ],
+            "c/formattedUrlRecipes": [
+                "formattedUrlRecipes/formattedUrlRecipes.js"
             ],
             "c/tabsetRecipes": [
                 "tabsetRecipes/tabsetRecipes.js"
