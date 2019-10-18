@@ -320,6 +320,9 @@
             ],
             "c/accordionMultiple": [
                 "../../lwc/accordionMultiple/accordionMultiple.js"
+            ],
+            "c/buttonStatefulRecipes": [
+                "../../lwc/buttonStatefulRecipes/buttonStatefulRecipes.js"
             ]
         }
     },

@@ -319,6 +319,9 @@
             ],
             "c/accordionMultiple": [
                 "accordionMultiple/accordionMultiple.js"
+            ],
+            "c/buttonStatefulRecipes": [
+                "buttonStatefulRecipes/buttonStatefulRecipes.js"
             ]
         },
         "experimentalDecorators": true
