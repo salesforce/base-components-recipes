@@ -290,6 +290,12 @@
             ],
             "c/spinnerRecipes": [
                 "../../lwc/spinnerRecipes/spinnerRecipes.js"
+            ],
+            "c/sliderRecipes": [
+                "../../lwc/sliderRecipes/sliderRecipes.js"
+            ],
+            "c/progressbarRecipes": [
+                "../../lwc/progressbarRecipes/progressbarRecipes.js"
             ]
         }
     },
