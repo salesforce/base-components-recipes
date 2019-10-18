@@ -278,6 +278,9 @@
             ],
             "c/verticalRecipes": [
                 "../../lwc/verticalRecipes/verticalRecipes.js"
+            ],
+            "c/textareaRecipes": [
+                "../../lwc/textareaRecipes/textareaRecipes.js"
             ]
         }
     },

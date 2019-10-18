@@ -277,6 +277,9 @@
             ],
             "c/verticalRecipes": [
                 "verticalRecipes/verticalRecipes.js"
+            ],
+            "c/textareaRecipes": [
+                "textareaRecipes/textareaRecipes.js"
             ]
         },
         "experimentalDecorators": true
