@@ -1,8 +1,5 @@
 import { LightningResizeObserver } from 'c/resizeObserver';
-import {
-  APP_DENSIFICATION_BREAKPOINT,
-  appDensityValues
-} from 'lightning/layoutUtils';
+import { APP_DENSIFICATION_BREAKPOINT, appDensityValues } from 'c/layoutUtils';
 import { densityValues, labelAlignValues } from 'c/fieldUtils';
 import { normalizeString } from 'c/utilsPrivate';
 import { getOneConfig } from 'lightning/configProvider';
