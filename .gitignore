@@ -6,6 +6,9 @@
 .sfdx/
 .localdevserver
 
+# LWC VSCode autocomplete
+jsconfig.json
+
 # Logs
 logs
 *.log
