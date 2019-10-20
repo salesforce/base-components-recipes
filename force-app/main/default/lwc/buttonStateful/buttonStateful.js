@@ -5,178 +5,180 @@ import { normalizeBoolean, normalizeString as normalize } from 'c/utilsPrivate';
 const DEFAULT_VARIANT = 'neutral';
 
 export default class cButtonStateful extends LightningElement {
-  static delegatesFocus = true;
+    static delegatesFocus = true;
 
-  @api iconNameWhenOn;
+    @api iconNameWhenOn;
 
-  @api iconNameWhenOff;
+    @api iconNameWhenOff;
 
-  @api iconNameWhenHover;
+    @api iconNameWhenHover;
 
-  @api labelWhenOff;
+    @api labelWhenOff;
 
-  @api labelWhenOn;
+    @api labelWhenOn;
 
-  @api labelWhenHover;
+    @api labelWhenHover;
 
-  @api variant = DEFAULT_VARIANT;
+    @api variant = DEFAULT_VARIANT;
 
-  @track
-  state = {
-    isClicked: false
-  };
+    @track
+    state = {
+        isClicked: false
+    };
 
-  @track _order = null;
+    @track _order = null;
 
-  @api get selected() {
-    return this.state.selected || false;
-  }
-  set selected(value) {
-    this.state.selected = normalizeBoolean(value);
-  }
-
-  @api
-  focus() {
-    this.template.querySelector('button').focus();
-  }
-
-  get computedButtonClass() {
-    const classes = classSet('slds-button slds-button_stateful')
-      .add({
-        'slds-button_neutral': this.normalizedVariant === 'neutral',
-        'slds-button_brand': this.normalizedVariant === 'brand',
-        'slds-button_inverse': this.normalizedVariant === 'inverse',
-        'slds-button_destructive': this.normalizedVariant === 'destructive',
-        'slds-button_success': this.normalizedVariant === 'success'
-      })
-      .add({
-        'slds-not-selected': !this.selected,
-        'slds-is-selected': this.selected && !this.state.isClicked,
-        'slds-is-selected-clicked': this.selected && this.state.isClicked,
-
-        'slds-button_first': this._order === 'first',
-        'slds-button_middle': this._order === 'middle',
-        'slds-button_last': this._order === 'last'
-      });
-
-    return classes.toString();
-  }
-
-  get normalizedVariant() {
-    return normalize(this.variant, {
-      fallbackValue: DEFAULT_VARIANT,
-      validValues: [
-        'neutral',
-        'brand',
-        'inverse',
-        'destructive',
-        'success',
-        'text'
-      ]
-    });
-  }
-
-  get privateLabelWhenOn() {
-    let outputVal = this.labelWhenOn;
-
-    if (this.isValidLabel(outputVal)) {
-      return outputVal;
+    @api get selected() {
+        return this.state.selected || false;
+    }
+    set selected(value) {
+        this.state.selected = normalizeBoolean(value);
     }
 
-    outputVal = '';
-
-    console.warn(
-      `<lightning-button-stateful> The "labelWhenOn" attribute value is required to show the label when selected has a value of true`
-    );
-
-    return outputVal;
-  }
-
-  get privateLabelWhenOff() {
-    let outputVal = this.labelWhenOff;
-
-    if (this.isValidLabel(outputVal)) {
-      return outputVal;
+    @api
+    focus() {
+        this.template.querySelector('button').focus();
     }
 
-    outputVal = '';
+    get computedButtonClass() {
+        const classes = classSet('slds-button slds-button_stateful')
+            .add({
+                'slds-button_neutral': this.normalizedVariant === 'neutral',
+                'slds-button_brand': this.normalizedVariant === 'brand',
+                'slds-button_inverse': this.normalizedVariant === 'inverse',
+                'slds-button_destructive':
+                    this.normalizedVariant === 'destructive',
+                'slds-button_success': this.normalizedVariant === 'success'
+            })
+            .add({
+                'slds-not-selected': !this.selected,
+                'slds-is-selected': this.selected && !this.state.isClicked,
+                'slds-is-selected-clicked':
+                    this.selected && this.state.isClicked,
 
-    console.warn(
-      `<lightning-button-stateful> The "labelWhenOff" attribute value is required to show the label when selected has a value of false`
-    );
+                'slds-button_first': this._order === 'first',
+                'slds-button_middle': this._order === 'middle',
+                'slds-button_last': this._order === 'last'
+            });
 
-    return outputVal;
-  }
-
-  get privateLabelWhenHover() {
-    const outputVal = this.labelWhenHover;
-
-    if (this.isValidLabel(outputVal)) {
-      return outputVal;
+        return classes.toString();
     }
 
-    return this.privateLabelWhenOn;
-  }
-
-  get privateIconNameWhenHover() {
-    if (this.iconNameWhenHover) {
-      return this.iconNameWhenHover;
+    get normalizedVariant() {
+        return normalize(this.variant, {
+            fallbackValue: DEFAULT_VARIANT,
+            validValues: [
+                'neutral',
+                'brand',
+                'inverse',
+                'destructive',
+                'success',
+                'text'
+            ]
+        });
     }
 
-    return this.iconNameWhenOn;
-  }
+    get privateLabelWhenOn() {
+        let outputVal = this.labelWhenOn;
 
-  handleButtonClick() {
-    this.state.isClicked = true;
-  }
-
-  handleButtonBlur() {
-    this.state.isClicked = false;
-
-    this.dispatchEvent(new CustomEvent('blur'));
-  }
-
-  handleButtonFocus() {
-    this.dispatchEvent(new CustomEvent('focus'));
-  }
-
-  isValidLabel(labelVal) {
-    if (typeof labelVal !== 'string' || labelVal.length === 0) {
-      return false;
-    }
-
-    return true;
-  }
-
-  setOrder(order) {
-    this._order = order;
-  }
-
-  connectedCallback() {
-    const privatebuttonregister = new CustomEvent('privatebuttonregister', {
-      bubbles: true,
-      detail: {
-        callbacks: {
-          setOrder: this.setOrder.bind(this),
-          setDeRegistrationCallback: deRegistrationCallback => {
-            this._deRegistrationCallback = deRegistrationCallback;
-          }
+        if (this.isValidLabel(outputVal)) {
+            return outputVal;
         }
-      }
-    });
 
-    this.dispatchEvent(privatebuttonregister);
-  }
+        outputVal = '';
 
-  disconnectedCallback() {
-    if (this._deRegistrationCallback) {
-      this._deRegistrationCallback();
+        console.warn(
+            `<lightning-button-stateful> The "labelWhenOn" attribute value is required to show the label when selected has a value of true`
+        );
+
+        return outputVal;
     }
-  }
+
+    get privateLabelWhenOff() {
+        let outputVal = this.labelWhenOff;
+
+        if (this.isValidLabel(outputVal)) {
+            return outputVal;
+        }
+
+        outputVal = '';
+
+        console.warn(
+            `<lightning-button-stateful> The "labelWhenOff" attribute value is required to show the label when selected has a value of false`
+        );
+
+        return outputVal;
+    }
+
+    get privateLabelWhenHover() {
+        const outputVal = this.labelWhenHover;
+
+        if (this.isValidLabel(outputVal)) {
+            return outputVal;
+        }
+
+        return this.privateLabelWhenOn;
+    }
+
+    get privateIconNameWhenHover() {
+        if (this.iconNameWhenHover) {
+            return this.iconNameWhenHover;
+        }
+
+        return this.iconNameWhenOn;
+    }
+
+    handleButtonClick() {
+        this.state.isClicked = true;
+    }
+
+    handleButtonBlur() {
+        this.state.isClicked = false;
+
+        this.dispatchEvent(new CustomEvent('blur'));
+    }
+
+    handleButtonFocus() {
+        this.dispatchEvent(new CustomEvent('focus'));
+    }
+
+    isValidLabel(labelVal) {
+        if (typeof labelVal !== 'string' || labelVal.length === 0) {
+            return false;
+        }
+
+        return true;
+    }
+
+    setOrder(order) {
+        this._order = order;
+    }
+
+    connectedCallback() {
+        const privatebuttonregister = new CustomEvent('privatebuttonregister', {
+            bubbles: true,
+            detail: {
+                callbacks: {
+                    setOrder: this.setOrder.bind(this),
+                    setDeRegistrationCallback: deRegistrationCallback => {
+                        this._deRegistrationCallback = deRegistrationCallback;
+                    }
+                }
+            }
+        });
+
+        this.dispatchEvent(privatebuttonregister);
+    }
+
+    disconnectedCallback() {
+        if (this._deRegistrationCallback) {
+            this._deRegistrationCallback();
+        }
+    }
 }
 
 cButtonStateful.interopMap = {
-  props: {
-    selected: 'state'
-  }
+    props: {
+        selected: 'state'
+    }
 };

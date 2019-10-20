@@ -3,55 +3,55 @@ import { querySelector } from 'lightning/testUtils';
 import Element from 'c/icon';
 
 const createIcon = () => {
-  const element = createElement('c-icon', { is: Element });
-  document.body.appendChild(element);
-  return element;
+    const element = createElement('c-icon', { is: Element });
+    document.body.appendChild(element);
+    return element;
 };
 
 jest.mock('./../../utilsPrivate/browser', () => {
-  return { isIE11: true };
+    return { isIE11: true };
 });
 
 function getHref(iconElement) {
-  const icon = querySelector(iconElement, 'lightning-primitive-icon');
-  const use = querySelector(icon, 'use');
-  return use.getAttribute('xlink:href');
+    const icon = querySelector(iconElement, 'lightning-primitive-icon');
+    const use = querySelector(icon, 'use');
+    return use.getAttribute('xlink:href');
 }
 
 describe('c-icon', () => {
-  it('Tests that custom icon is set to standard:default when ran in IE11', () => {
-    const element = createIcon();
+    it('Tests that custom icon is set to standard:default when ran in IE11', () => {
+        const element = createIcon();
 
-    element.src = '/my/url/my.svg#custom-icon';
-    element.iconName = 'utility:down';
-    document.body.appendChild(element);
+        element.src = '/my/url/my.svg#custom-icon';
+        element.iconName = 'utility:down';
+        document.body.appendChild(element);
 
-    return Promise.resolve().then(() => {
-      expect(getHref(element)).toBe(
-        '/assets/icons/standard-sprite/svg/symbols.svg#default'
-      );
+        return Promise.resolve().then(() => {
+            expect(getHref(element)).toBe(
+                '/assets/icons/standard-sprite/svg/symbols.svg#default'
+            );
+        });
     });
-  });
 
-  it('When running in IE11 and src attribute is set, then removed, it tests that xlink:href value is set back to the original iconName', () => {
-    const element = createIcon();
+    it('When running in IE11 and src attribute is set, then removed, it tests that xlink:href value is set back to the original iconName', () => {
+        const element = createIcon();
 
-    element.src = '/my/url/my.svg#custom-icon';
-    element.iconName = 'utility:down';
-    document.body.appendChild(element);
+        element.src = '/my/url/my.svg#custom-icon';
+        element.iconName = 'utility:down';
+        document.body.appendChild(element);
 
-    return Promise.resolve()
-      .then(() => {
-        expect(getHref(element)).toBe(
-          '/assets/icons/standard-sprite/svg/symbols.svg#default'
-        );
+        return Promise.resolve()
+            .then(() => {
+                expect(getHref(element)).toBe(
+                    '/assets/icons/standard-sprite/svg/symbols.svg#default'
+                );
 
-        element.src = null;
-      })
-      .then(() => {
-        expect(getHref(element)).toBe(
-          '/assets/icons/utility-sprite/svg/symbols.svg#down'
-        );
-      });
-  });
+                element.src = null;
+            })
+            .then(() => {
+                expect(getHref(element)).toBe(
+                    '/assets/icons/utility-sprite/svg/symbols.svg#down'
+                );
+            });
+    });
 });

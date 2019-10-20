@@ -2,56 +2,59 @@ import { LightningElement, api } from 'lwc';
 import { numberFormat } from 'c/internationalizationLibrary';
 
 export default class cFormattedNumber extends LightningElement {
-  @api value;
+    @api value;
 
-  @api formatStyle = 'decimal';
+    @api formatStyle = 'decimal';
 
-  @api currencyCode;
+    @api currencyCode;
 
-  @api currencyDisplayAs = 'symbol';
+    @api currencyDisplayAs = 'symbol';
 
-  @api minimumIntegerDigits;
+    @api minimumIntegerDigits;
 
-  @api minimumFractionDigits;
+    @api minimumFractionDigits;
 
-  @api maximumFractionDigits;
+    @api maximumFractionDigits;
 
-  @api minimumSignificantDigits;
+    @api minimumSignificantDigits;
 
-  @api maximumSignificantDigits;
+    @api maximumSignificantDigits;
 
-  get formattedNumber() {
-    const value = this.value;
-    const options = {
-      style: this.formatStyle,
-      currency: this.currencyCode,
-      currencyDisplay: this.currencyDisplayAs,
-      minimumIntegerDigits: this.minimumIntegerDigits,
-      minimumFractionDigits: this.minimumFractionDigits,
-      maximumFractionDigits: this.maximumFractionDigits,
-      minimumSignificantDigits: this.minimumSignificantDigits,
-      maximumSignificantDigits: this.maximumSignificantDigits
-    };
+    get formattedNumber() {
+        const value = this.value;
+        const options = {
+            style: this.formatStyle,
+            currency: this.currencyCode,
+            currencyDisplay: this.currencyDisplayAs,
+            minimumIntegerDigits: this.minimumIntegerDigits,
+            minimumFractionDigits: this.minimumFractionDigits,
+            maximumFractionDigits: this.maximumFractionDigits,
+            minimumSignificantDigits: this.minimumSignificantDigits,
+            maximumSignificantDigits: this.maximumSignificantDigits
+        };
 
-    const canReturnValue =
-      value !== undefined && value !== null && value !== '' && isFinite(value);
+        const canReturnValue =
+            value !== undefined &&
+            value !== null &&
+            value !== '' &&
+            isFinite(value);
 
-    if (canReturnValue) {
-      let valueToFormat = value;
+        if (canReturnValue) {
+            let valueToFormat = value;
 
-      if (this.formatStyle === 'percent-fixed') {
-        options.style = 'percent';
-        valueToFormat = parseFloat(value) / 100;
-      }
-      return numberFormat(options).format(valueToFormat);
+            if (this.formatStyle === 'percent-fixed') {
+                options.style = 'percent';
+                valueToFormat = parseFloat(value) / 100;
+            }
+            return numberFormat(options).format(valueToFormat);
+        }
+
+        return '';
     }
-
-    return '';
-  }
 }
 
 cFormattedNumber.interopMap = {
-  props: {
-    formatStyle: 'style'
-  }
+    props: {
+        formatStyle: 'style'
+    }
 };
