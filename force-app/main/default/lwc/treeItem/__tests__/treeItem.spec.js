@@ -3,62 +3,62 @@ import { shadowQuerySelector } from 'lightning/testUtils';
 import Element from 'c/treeItem';
 
 describe('c-tree-item', () => {
-  it('renders leaf tree-item', () => {
-    const element = createElement('c-tree-item', { is: Element });
-    document.body.appendChild(element);
-    element.isRoot = false;
-    element.label = 'label';
-    element.href = 'href';
-    element.metatext = 'metatext';
-    element.nodeRef = {
-      expanded: false
-    };
+    it('renders leaf tree-item', () => {
+        const element = createElement('c-tree-item', { is: Element });
+        document.body.appendChild(element);
+        element.isRoot = false;
+        element.label = 'label';
+        element.href = 'href';
+        element.metatext = 'metatext';
+        element.nodeRef = {
+            expanded: false
+        };
 
-    element.isExpanded = false;
-    element.isDisabled = false;
-    element.nodename = '2234';
-    element.nodeKey = '1.1';
-    element.isLeaf = true;
+        element.isExpanded = false;
+        element.isDisabled = false;
+        element.nodename = '2234';
+        element.nodeKey = '1.1';
+        element.isLeaf = true;
 
-    return Promise.resolve().then(() => {
-      expect(element).toMatchSnapshot();
+        return Promise.resolve().then(() => {
+            expect(element).toMatchSnapshot();
+        });
     });
-  });
 
-  it('uses the correct icon for LTR', () => {
-    const element = createElement('c-tree-item', { is: Element });
-    document.body.appendChild(element);
+    it('uses the correct icon for LTR', () => {
+        const element = createElement('c-tree-item', { is: Element });
+        document.body.appendChild(element);
 
-    element.isRoot = false;
-    element.label = 'label';
-    element.href = 'href';
+        element.isRoot = false;
+        element.label = 'label';
+        element.href = 'href';
 
-    return Promise.resolve().then(() => {
-      const lightningIcon = shadowQuerySelector(
-        element,
-        'lightning-primitive-icon'
-      );
+        return Promise.resolve().then(() => {
+            const lightningIcon = shadowQuerySelector(
+                element,
+                'lightning-primitive-icon'
+            );
 
-      expect(lightningIcon.iconName).toBe('utility:chevronright');
+            expect(lightningIcon.iconName).toBe('utility:chevronright');
+        });
     });
-  });
 
-  it('uses the correct icon for RTL', () => {
-    const element = createElement('c-tree-item', { is: Element });
-    document.dir = 'rtl';
-    document.body.appendChild(element);
+    it('uses the correct icon for RTL', () => {
+        const element = createElement('c-tree-item', { is: Element });
+        document.dir = 'rtl';
+        document.body.appendChild(element);
 
-    element.isRoot = false;
-    element.label = 'label';
-    element.href = 'href';
+        element.isRoot = false;
+        element.label = 'label';
+        element.href = 'href';
 
-    return Promise.resolve().then(() => {
-      const lightningIcon = shadowQuerySelector(
-        element,
-        'lightning-primitive-icon'
-      );
+        return Promise.resolve().then(() => {
+            const lightningIcon = shadowQuerySelector(
+                element,
+                'lightning-primitive-icon'
+            );
 
-      expect(lightningIcon.iconName).toBe('utility:chevronleft');
+            expect(lightningIcon.iconName).toBe('utility:chevronleft');
+        });
     });
-  });
 });

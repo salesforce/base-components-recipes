@@ -1,0 +1,13 @@
+<template>
+    <div role="tabpanel" id="carousel-image" aria-hidden={ariaHidden}>
+        <a href={href} class="slds-carousel__panel-action slds-text-link_reset" tabindex={tabIndex}>
+            <div class="slds-carousel__image">
+                <img src={src} alt={alternativeText}>
+            </div>
+            <div class="slds-carousel__content">
+                <h2 class="slds-carousel__content-title">{header}</h2>
+                <p>{description}</p>
+            </div>
+        </a>
+    </div>
+</template>

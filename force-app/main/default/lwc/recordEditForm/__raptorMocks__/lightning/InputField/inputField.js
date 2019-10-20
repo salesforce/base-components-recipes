@@ -1,67 +1,67 @@
 import { LightningElement, api } from 'lwc';
 
 export default class MockInputField extends LightningElement {
-  wiredData = null;
-  errors = null;
-  internalValue = null;
-  @api fieldName;
+    wiredData = null;
+    errors = null;
+    internalValue = null;
+    @api fieldName;
 
-  set value(val) {
-    this.internalValue = val;
-  }
+    set value(val) {
+        this.internalValue = val;
+    }
 
-  @api get value() {
-    return this.internalValue;
-  }
+    @api get value() {
+        return this.internalValue;
+    }
 
-  @api
-  getErrors() {
-    return this.errors;
-  }
+    @api
+    getErrors() {
+        return this.errors;
+    }
 
-  @api dirty = false;
-  @api variant;
+    @api dirty = false;
+    @api variant;
 
-  @api
-  getWiredData() {
-    return this.wiredData;
-  }
+    @api
+    getWiredData() {
+        return this.wiredData;
+    }
 
-  @api
-  getWiredPicklistValues() {
-    return this.wiredPicklistValues;
-  }
+    @api
+    getWiredPicklistValues() {
+        return this.wiredPicklistValues;
+    }
 
-  @api
-  setErrors(errors) {
-    this.errors = errors;
-  }
+    @api
+    setErrors(errors) {
+        this.errors = errors;
+    }
 
-  @api
-  wireRecordUi(data) {
-    this.wiredData = data;
-  }
+    @api
+    wireRecordUi(data) {
+        this.wiredData = data;
+    }
 
-  @api
-  wirePicklistValues(data) {
-    this.wiredPicklistValues = data;
-  }
+    @api
+    wirePicklistValues(data) {
+        this.wiredPicklistValues = data;
+    }
 
-  @api
-  setValue(val) {
-    this.internalValue = val;
-  }
+    @api
+    setValue(val) {
+        this.internalValue = val;
+    }
 
-  @api
-  updateDependentField() {}
+    @api
+    updateDependentField() {}
 
-  renderedCallback() {
-    this.dispatchEvent(
-      new CustomEvent('registerinputfield', {
-        bubbles: true,
-        composed: true,
-        cancelable: true
-      })
-    );
-  }
+    renderedCallback() {
+        this.dispatchEvent(
+            new CustomEvent('registerinputfield', {
+                bubbles: true,
+                composed: true,
+                cancelable: true
+            })
+        );
+    }
 }
