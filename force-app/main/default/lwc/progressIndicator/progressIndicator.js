@@ -1,9 +1,9 @@
 import { LightningElement, api, track } from 'lwc';
 import { classSet } from 'c/utils';
 import {
-  getStepIndex,
-  getCurrentStepIndex,
-  computeProgressValue
+    getStepIndex,
+    getCurrentStepIndex,
+    computeProgressValue
 } from './utils';
 import base from './base.html';
 import path from './path.html';
@@ -19,129 +19,146 @@ const RIGHT = 39;
 const DOWN = 40;
 
 export default class cProgressIndicator extends LightningElement {
-  @api type = 'base';
+    @api type = 'base';
 
-  @api variant = 'base';
+    @api variant = 'base';
 
-  @api currentStep;
+    @api currentStep;
 
-  @api hasError = false;
+    @api hasError = false;
 
-  privateStepHandlers = {};
+    privateStepHandlers = {};
 
-  @track privateProgressValue = 0;
-  @track privateTooltipHidden = true;
-  @track privateTooltipLabel;
+    @track privateProgressValue = 0;
+    @track privateTooltipHidden = true;
+    @track privateTooltipLabel;
 
-  privateActiveStepIndex;
-  privateTooltipElement;
+    privateActiveStepIndex;
+    privateTooltipElement;
 
-  renderedCallback() {
-    this.updateSteps();
-  }
-
-  updateSteps(activeStep) {
-    const steps = this.getSteps();
-    const { privateStepHandlers, type, hasError, currentStep } = this;
-    const currentStepIndex = getCurrentStepIndex(steps, currentStep);
-    let activeStepIndex = -1;
-
-    if (activeStep) {
-      activeStepIndex = getStepIndex(steps, activeStep);
-      this.privateActiveStepIndex = activeStepIndex;
+    renderedCallback() {
+        this.updateSteps();
     }
 
-    const stepsArray = Array.prototype.slice.call(steps);
+    updateSteps(activeStep) {
+        const steps = this.getSteps();
+        const { privateStepHandlers, type, hasError, currentStep } = this;
+        const currentStepIndex = getCurrentStepIndex(steps, currentStep);
+        let activeStepIndex = -1;
 
-    stepsArray.forEach((step, index) => {
-      const stepName = step.value;
-      const isActive = index === activeStepIndex;
+        if (activeStep) {
+            activeStepIndex = getStepIndex(steps, activeStep);
+            this.privateActiveStepIndex = activeStepIndex;
+        }
 
-      if (index < currentStepIndex) {
-        privateStepHandlers[stepName](STATE_COMPLETED, type, index, isActive);
-      } else if (index === currentStepIndex) {
-        const state = hasError ? STATE_ERROR : STATE_CURRENT;
-        privateStepHandlers[stepName](state, type, index, isActive);
-      } else {
-        privateStepHandlers[stepName](STATE_INCOMPLETE, type, index, isActive);
-      }
-    });
+        const stepsArray = Array.prototype.slice.call(steps);
 
-    if (this.isBase) {
-      this.privateProgressValue = computeProgressValue(steps, currentStepIndex);
+        stepsArray.forEach((step, index) => {
+            const stepName = step.value;
+            const isActive = index === activeStepIndex;
+
+            if (index < currentStepIndex) {
+                privateStepHandlers[stepName](
+                    STATE_COMPLETED,
+                    type,
+                    index,
+                    isActive
+                );
+            } else if (index === currentStepIndex) {
+                const state = hasError ? STATE_ERROR : STATE_CURRENT;
+                privateStepHandlers[stepName](state, type, index, isActive);
+            } else {
+                privateStepHandlers[stepName](
+                    STATE_INCOMPLETE,
+                    type,
+                    index,
+                    isActive
+                );
+            }
+        });
+
+        if (this.isBase) {
+            this.privateProgressValue = computeProgressValue(
+                steps,
+                currentStepIndex
+            );
+        }
     }
-  }
 
-  isActive(stepName) {
-    return this.currentStep === stepName;
-  }
-
-  getSteps() {
-    return Array.from(this.querySelectorAll('c-progress-step'));
-  }
-
-  handleStepRegister(event) {
-    const { stepName, callback } = event.detail;
-    this.privateStepHandlers[stepName] = callback;
-  }
-
-  handleStepFocus(event) {
-    if (!this.isBase) {
-      this.updateActiveStepStatus(event.target);
+    isActive(stepName) {
+        return this.currentStep === stepName;
     }
-  }
 
-  handleStepKeyDown(event) {
-    if (this.privateActiveStepIndex >= 0) {
-      const steps = this.getSteps();
-
-      switch (event.keyCode) {
-        case UP:
-        case LEFT:
-          if (this.privateActiveStepIndex - 1 >= 0) {
-            this.updateSteps(steps[this.privateActiveStepIndex - 1].value);
-          }
-          break;
-        case DOWN:
-        case RIGHT:
-          if (this.privateActiveStepIndex + 1 <= steps.length) {
-            this.updateSteps(steps[this.privateActiveStepIndex + 1].value);
-          }
-          break;
-        default:
-          break;
-      }
+    getSteps() {
+        return Array.from(this.querySelectorAll('lightning-progress-step'));
     }
-  }
 
-  get computedWrapperClass() {
-    return classSet('slds-progress').add({
-      'slds-progress_shade': this.variant === 'shade'
-    });
-  }
-
-  get computedTooltipClass() {
-    return classSet(
-      'slds-popover slds-popover_tooltip slds-nubbin_bottom slds-is-absolute'
-    ).add({
-      'slds-hidden': this.privateTooltipHidden
-    });
-  }
-
-  updateActiveStepStatus(activeStep) {
-    if (this.currentStep !== activeStep) {
-      this.updateSteps(activeStep.value);
+    handleStepRegister(event) {
+        const { stepName, callback } = event.detail;
+        this.privateStepHandlers[stepName] = callback;
     }
-  }
 
-  get isBase() {
-    return this.type === 'base';
-  }
-
-  render() {
-    if (this.isBase) {
-      return base;
+    handleStepFocus(event) {
+        if (!this.isBase) {
+            this.updateActiveStepStatus(event.target);
+        }
     }
-    return path;
-  }
+
+    handleStepKeyDown(event) {
+        if (this.privateActiveStepIndex >= 0) {
+            const steps = this.getSteps();
+
+            switch (event.keyCode) {
+                case UP:
+                case LEFT:
+                    if (this.privateActiveStepIndex - 1 >= 0) {
+                        this.updateSteps(
+                            steps[this.privateActiveStepIndex - 1].value
+                        );
+                    }
+                    break;
+                case DOWN:
+                case RIGHT:
+                    if (this.privateActiveStepIndex + 1 <= steps.length) {
+                        this.updateSteps(
+                            steps[this.privateActiveStepIndex + 1].value
+                        );
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    get computedWrapperClass() {
+        return classSet('slds-progress').add({
+            'slds-progress_shade': this.variant === 'shade'
+        });
+    }
+
+    get computedTooltipClass() {
+        return classSet(
+            'slds-popover slds-popover_tooltip slds-nubbin_bottom slds-is-absolute'
+        ).add({
+            'slds-hidden': this.privateTooltipHidden
+        });
+    }
+
+    updateActiveStepStatus(activeStep) {
+        if (this.currentStep !== activeStep) {
+            this.updateSteps(activeStep.value);
+        }
+    }
+
+    get isBase() {
+        return this.type === 'base';
+    }
+
+    render() {
+        if (this.isBase) {
+            return base;
+        }
+        return path;
+    }
 }

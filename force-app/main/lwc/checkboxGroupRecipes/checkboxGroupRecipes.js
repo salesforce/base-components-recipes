@@ -16,21 +16,13 @@ export default class CheckboxGroupRecipes extends LightningElement {
         ];
     }
 
+
     get selectedValues() {
-        return this.value ? this.value.join(',') : '';
+        return this.value.join(',');
     }
 
     handleChange(e) {
         this.value = e.detail.value;
     }
 
-    handleReset() {
-        this.value = [];
-    }
-    handleSetToNull() {
-        this.value = null;
-    }
-    handleCheckAll() {
-        this.value = [1, 2, 3, 4, 5, 6].map(i => `option${i}`);
-    }
 }

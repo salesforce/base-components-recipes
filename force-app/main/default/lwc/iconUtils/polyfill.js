@@ -12,57 +12,60 @@ const spritesContainerId = 'slds-svg-sprites';
 let spritesEl;
 
 export function polyfill(el) {
-  if (!supportsSvg && isSvgElement(el)) {
-    if (!spritesEl) {
-      spritesEl = document.createElement('svg');
-      spritesEl.xmlns = 'http://www.w3.org/2000/svg';
-      spritesEl['xmlns:xlink'] = 'http://www.w3.org/1999/xlink';
-      spritesEl.style.display = 'none';
-      spritesEl.id = spritesContainerId;
+    if (!supportsSvg && isSvgElement(el)) {
+        if (!spritesEl) {
+            spritesEl = document.createElement('svg');
+            spritesEl.xmlns = 'http://www.w3.org/2000/svg';
+            spritesEl['xmlns:xlink'] = 'http://www.w3.org/1999/xlink';
+            spritesEl.style.display = 'none';
+            spritesEl.id = spritesContainerId;
 
-      document.body.insertBefore(spritesEl, document.body.childNodes[0]);
-    }
-
-    Array.from(el.getElementsByTagName('use')).forEach(use => {
-      const src = use.getAttribute('xlink:href') || use.getAttribute('href');
-
-      if (src) {
-        const parts = src.split('#');
-        const url = parts[0];
-        const id = parts[1];
-        const namespace = url.replace(/[^\w]/g, '-');
-        const href = `#${namespace}-${id}`;
-
-        if (url.length) {
-          if (use.getAttribute('xlink:href')) {
-            use.setAttribute('xlink:href', href);
-          } else {
-            use.setAttribute('href', href);
-          }
-
-          if (!requestCache[url]) {
-            requestCache[url] = fetchSvg(url);
-          }
-
-          requestCache[url].then(svgContent => {
-            if (!svgFragments[url]) {
-              const svgFragment = document
-                .createRange()
-                .createContextualFragment(svgContent);
-
-              svgFragments[url] = svgFragment;
-            }
-            if (!symbolEls[href]) {
-              const svgFragment = svgFragments[url];
-              const symbolEl = svgFragment.querySelector(`#${id}`);
-
-              symbolEls[href] = true;
-              symbolEl.id = `${namespace}-${id}`;
-              spritesEl.appendChild(symbolEl);
-            }
-          });
+            document.body.insertBefore(spritesEl, document.body.childNodes[0]);
         }
-      }
-    });
-  }
+
+        Array.from(el.getElementsByTagName('use')).forEach(use => {
+            const src =
+                use.getAttribute('xlink:href') || use.getAttribute('href');
+
+            if (src) {
+                const parts = src.split('#');
+                const url = parts[0];
+                const id = parts[1];
+                const namespace = url.replace(/[^\w]/g, '-');
+                const href = `#${namespace}-${id}`;
+
+                if (url.length) {
+                    if (use.getAttribute('xlink:href')) {
+                        use.setAttribute('xlink:href', href);
+                    } else {
+                        use.setAttribute('href', href);
+                    }
+
+                    if (!requestCache[url]) {
+                        requestCache[url] = fetchSvg(url);
+                    }
+
+                    requestCache[url].then(svgContent => {
+                        if (!svgFragments[url]) {
+                            const svgFragment = document
+                                .createRange()
+                                .createContextualFragment(svgContent);
+
+                            svgFragments[url] = svgFragment;
+                        }
+                        if (!symbolEls[href]) {
+                            const svgFragment = svgFragments[url];
+                            const symbolEl = svgFragment.querySelector(
+                                `#${id}`
+                            );
+
+                            symbolEls[href] = true;
+                            symbolEl.id = `${namespace}-${id}`;
+                            spritesEl.appendChild(symbolEl);
+                        }
+                    });
+                }
+            }
+        });
+    }
 }

@@ -38,9 +38,6 @@
             "c/card": [
                 "../default/lwc/card/card.js"
             ],
-            "c/carousel": [
-                "../default/lwc/carousel/carousel.js"
-            ],
             "c/checkboxGroup": [
                 "../default/lwc/checkboxGroup/checkboxGroup.js"
             ],
@@ -236,6 +233,9 @@
             "c/verticalNavigationSection": [
                 "../default/lwc/verticalNavigationSection/verticalNavigationSection.js"
             ],
+            "c/accordionRecipes": [
+                "accordionRecipes/accordionRecipes.js"
+            ],
             "c/badgeRecipes": [
                 "badgeRecipes/badgeRecipes.js"
             ],
@@ -305,6 +305,9 @@
             "c/progressbarRecipes": [
                 "progressbarRecipes/progressbarRecipes.js"
             ],
+            "c/layoutRecipes": [
+                "layoutRecipes/layoutRecipes.js"
+            ],
             "c/accordionBasic": [
                 "accordionBasic/accordionBasic.js"
             ],
@@ -322,6 +325,21 @@
             ],
             "c/relativeDateTimeRecipes": [
                 "relativeDateTimeRecipes/relativeDateTimeRecipes.js"
+            ],
+            "c/buttonStatefulRecipes": [
+                "buttonStatefulRecipes/buttonStatefulRecipes.js"
+            ],
+            "c/tabOverflow": [
+                "tabOverflow/tabOverflow.js"
+            ],
+            "c/carouselImage": [
+                "../default/lwc/carouselImage/carouselImage.js"
+            ],
+            "c/carousel": [
+                "../default/lwc/carousel/carousel.js"
+            ],
+            "c/carouselRecipes": [
+                "carouselRecipes/carouselRecipes.js"
             ]
         },
         "experimentalDecorators": true

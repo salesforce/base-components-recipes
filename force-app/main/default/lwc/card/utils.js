@@ -1,7 +1,7 @@
 export function isNarrow(variant) {
-  return typeof variant === 'string' && variant.toLowerCase() === 'narrow';
+    return typeof variant === 'string' && variant.toLowerCase() === 'narrow';
 }
 
 export function isBase(variant) {
-  return typeof variant === 'string' && variant.toLowerCase() === 'base';
+    return typeof variant === 'string' && variant.toLowerCase() === 'base';
 }

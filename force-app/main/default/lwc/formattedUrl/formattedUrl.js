@@ -3,99 +3,99 @@ import { isAbsoluteUrl } from 'c/utilsPrivate';
 import { updateRawLinkInfo } from 'c/routingService';
 
 export default class cFormattedUrl extends LightningElement {
-  @api target;
+    @api target;
 
-  @api tooltip;
+    @api tooltip;
 
-  @api label;
+    @api label;
 
-  @api tabIndex;
+    @api tabIndex;
 
-  @track _url;
-  @track _value;
+    @track _url;
+    @track _value;
 
-  _connected = false;
-  _dispatcher = () => {};
+    _connected = false;
+    _dispatcher = () => {};
 
-  @api get value() {
-    return this._value;
-  }
-  set value(value) {
-    this._value = value;
-    if (this._connected) {
-      this.updateLinkInfo(value);
+    @api get value() {
+        return this._value;
     }
-  }
-
-  connectedCallback() {
-    this._connected = true;
-    this.updateLinkInfo(this.value);
-  }
-
-  disconnectedCallback() {
-    this._connected = false;
-  }
-
-  @api
-  focus() {
-    if (this.urlAnchor) {
-      this.urlAnchor.focus();
+    set value(value) {
+        this._value = value;
+        if (this._connected) {
+            this.updateLinkInfo(value);
+        }
     }
-  }
 
-  @api
-  blur() {
-    if (this.urlAnchor) {
-      this.urlAnchor.blur();
+    connectedCallback() {
+        this._connected = true;
+        this.updateLinkInfo(this.value);
     }
-  }
 
-  @api
-  click() {
-    const anchor = this.urlAnchor;
-    if (anchor && anchor.click) {
-      anchor.click();
+    disconnectedCallback() {
+        this._connected = false;
     }
-  }
 
-  get urlAnchor() {
-    if (this._connected && this.hasValue) {
-      return this.template.querySelector('a');
+    @api
+    focus() {
+        if (this.urlAnchor) {
+            this.urlAnchor.focus();
+        }
     }
-    return undefined;
-  }
 
-  handleClick(event) {
-    if (this.target !== '_blank') {
-      this._dispatcher(event);
+    @api
+    blur() {
+        if (this.urlAnchor) {
+            this.urlAnchor.blur();
+        }
     }
-  }
 
-  updateLinkInfo(url) {
-    updateRawLinkInfo(this, {
-      url: this.makeAbsoluteUrl(url),
-      target: this.target
-    }).then(linkInfo => {
-      this._url = linkInfo.url;
-      this._dispatcher = linkInfo.dispatcher;
-    });
-  }
+    @api
+    click() {
+        const anchor = this.urlAnchor;
+        if (anchor && anchor.click) {
+            anchor.click();
+        }
+    }
 
-  get computedLabel() {
-    const { label, computedUrl } = this;
-    return label != null && label !== '' ? label : computedUrl;
-  }
+    get urlAnchor() {
+        if (this._connected && this.hasValue) {
+            return this.template.querySelector('a');
+        }
+        return undefined;
+    }
 
-  get computedUrl() {
-    return this._url || this.makeAbsoluteUrl(this.value);
-  }
+    handleClick(event) {
+        if (this.target !== '_blank') {
+            this._dispatcher(event);
+        }
+    }
 
-  get hasValue() {
-    const url = this.value;
-    return url != null && url !== '';
-  }
+    updateLinkInfo(url) {
+        updateRawLinkInfo(this, {
+            url: this.makeAbsoluteUrl(url),
+            target: this.target
+        }).then(linkInfo => {
+            this._url = linkInfo.url;
+            this._dispatcher = linkInfo.dispatcher;
+        });
+    }
 
-  makeAbsoluteUrl(url) {
-    return isAbsoluteUrl(url) ? url : `http://${url}`;
-  }
+    get computedLabel() {
+        const { label, computedUrl } = this;
+        return label != null && label !== '' ? label : computedUrl;
+    }
+
+    get computedUrl() {
+        return this._url || this.makeAbsoluteUrl(this.value);
+    }
+
+    get hasValue() {
+        const url = this.value;
+        return url != null && url !== '';
+    }
+
+    makeAbsoluteUrl(url) {
+        return isAbsoluteUrl(url) ? url : `http://${url}`;
+    }
 }

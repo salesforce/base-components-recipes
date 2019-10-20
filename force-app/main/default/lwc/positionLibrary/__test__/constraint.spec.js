@@ -3,453 +3,455 @@ import { Direction } from '../direction';
 import { mockWindow, getMockElement } from './mockUtil';
 
 describe('c-position-library Constraint', () => {
-  beforeEach(() => {
-    mockWindow();
-  });
-
-  it('should define class Constraint', () => {
-    expect(Constraint).not.toBeNull();
-  });
-
-  it('should create new Constraint', () => {
-    const target = getMockElement({
-      top: 0,
-      left: 0,
-      height: 200,
-      with: 200
+    beforeEach(() => {
+        mockWindow();
     });
 
-    const element = getMockElement({
-      top: 200,
-      left: 0,
-      height: 100,
-      width: 100
+    it('should define class Constraint', () => {
+        expect(Constraint).not.toBeNull();
     });
 
-    const myConstraint = new Constraint('top', {
-      element,
-      target,
-      targetAlign: {
-        horizontal: Direction.Left,
-        vertical: Direction.Top
-      }
+    it('should create new Constraint', () => {
+        const target = getMockElement({
+            top: 0,
+            left: 0,
+            height: 200,
+            with: 200
+        });
+
+        const element = getMockElement({
+            top: 200,
+            left: 0,
+            height: 100,
+            width: 100
+        });
+
+        const myConstraint = new Constraint('top', {
+            element,
+            target,
+            targetAlign: {
+                horizontal: Direction.Left,
+                vertical: Direction.Top
+            }
+        });
+
+        expect(myConstraint).not.toBeNull();
     });
 
-    expect(myConstraint).not.toBeNull();
-  });
+    it('should have default for target top element Bottom', () => {
+        const elementDimensions = {
+                top: 200,
+                left: 0,
+                height: 100,
+                width: 100
+            },
+            targetDimensions = { top: 500, left: 0, height: 200, width: 200 };
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-  it('should have default for target top element Bottom', () => {
-    const elementDimensions = {
-        top: 200,
-        left: 0,
-        height: 100,
-        width: 100
-      },
-      targetDimensions = { top: 500, left: 0, height: 200, width: 200 };
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+        const myConstraint = new Constraint('bottom', {
+            element,
+            target,
+            targetAlign: {
+                horizontal: Direction.Center,
+                vertical: Direction.Top
+            }
+        });
 
-    const myConstraint = new Constraint('bottom', {
-      element,
-      target,
-      targetAlign: {
-        horizontal: Direction.Center,
-        vertical: Direction.Top
-      }
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
+
+        const expected = targetDimensions.top - elementDimensions.height;
+
+        expect(element.top).toBe(expected);
     });
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+    it('should have default for target top element top', () => {
+        const elementDimensions = {
+                top: 200,
+                left: 0,
+                height: 100,
+                width: 100
+            },
+            targetDimensions = { top: 500, left: 0, height: 200, with: 200 };
 
-    const expected = targetDimensions.top - elementDimensions.height;
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-    expect(element.top).toBe(expected);
-  });
+        const myConstraint = new Constraint('top', {
+            element,
+            target,
+            targetAlign: {
+                horizontal: Direction.Left,
+                vertical: Direction.Top
+            }
+        });
 
-  it('should have default for target top element top', () => {
-    const elementDimensions = {
-        top: 200,
-        left: 0,
-        height: 100,
-        width: 100
-      },
-      targetDimensions = { top: 500, left: 0, height: 200, with: 200 };
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+        const expected = targetDimensions.top;
 
-    const myConstraint = new Constraint('top', {
-      element,
-      target,
-      targetAlign: {
-        horizontal: Direction.Left,
-        vertical: Direction.Top
-      }
+        expect(element.top).toBe(expected);
     });
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+    it('should have default for target bottom element top', () => {
+        const elementDimensions = {
+                top: 234,
+                left: 0,
+                height: 100,
+                width: 100
+            },
+            targetDimensions = { top: 500, left: 0, height: 200, with: 200 };
 
-    const expected = targetDimensions.top;
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-    expect(element.top).toBe(expected);
-  });
+        const myConstraint = new Constraint('top', {
+            element,
+            target,
+            targetAlign: {
+                horizontal: Direction.Center,
+                vertical: Direction.Bottom
+            }
+        });
 
-  it('should have default for target bottom element top', () => {
-    const elementDimensions = {
-        top: 234,
-        left: 0,
-        height: 100,
-        width: 100
-      },
-      targetDimensions = { top: 500, left: 0, height: 200, with: 200 };
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+        const expected = targetDimensions.top + targetDimensions.height;
 
-    const myConstraint = new Constraint('top', {
-      element,
-      target,
-      targetAlign: {
-        horizontal: Direction.Center,
-        vertical: Direction.Bottom
-      }
+        expect(element.top).toBe(expected);
     });
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+    it('should have default for target left element right', () => {
+        const elementDimensions = {
+                top: 200,
+                left: 0,
+                height: 100,
+                width: 100
+            },
+            targetDimensions = { top: 500, left: 600, height: 200, width: 200 };
 
-    const expected = targetDimensions.top + targetDimensions.height;
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-    expect(element.top).toBe(expected);
-  });
+        const myConstraint = new Constraint('right', {
+            element,
+            target,
+            targetAlign: 'left top'
+        });
 
-  it('should have default for target left element right', () => {
-    const elementDimensions = {
-        top: 200,
-        left: 0,
-        height: 100,
-        width: 100
-      },
-      targetDimensions = { top: 500, left: 600, height: 200, width: 200 };
+        const expected = targetDimensions.left - elementDimensions.width;
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const myConstraint = new Constraint('right', {
-      element,
-      target,
-      targetAlign: 'left top'
+        expect(element.left).toBe(expected);
     });
 
-    const expected = targetDimensions.left - elementDimensions.width;
+    it('should have default for target left element left', () => {
+        const targetDimensions = {
+            top: 500,
+            left: 600,
+            height: 200,
+            width: 200
+        };
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+        const elementDimensions = {
+            top: 200,
+            left: 0,
+            height: 100,
+            width: 100
+        };
 
-    expect(element.left).toBe(expected);
-  });
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-  it('should have default for target left element left', () => {
-    const targetDimensions = {
-      top: 500,
-      left: 600,
-      height: 200,
-      width: 200
-    };
+        const myConstraint = new Constraint('left', {
+            element,
+            target,
+            targetAlign: {
+                horizontal: Direction.Left,
+                vertical: Direction.Top
+            }
+        });
 
-    const elementDimensions = {
-      top: 200,
-      left: 0,
-      height: 100,
-      width: 100
-    };
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+        const expected = targetDimensions.left;
 
-    const myConstraint = new Constraint('left', {
-      element,
-      target,
-      targetAlign: {
-        horizontal: Direction.Left,
-        vertical: Direction.Top
-      }
+        expect(element.left).toBe(expected);
     });
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+    it('should have default for target right element right', () => {
+        const targetDimensions = {
+            top: 500,
+            left: 600,
+            height: 200,
+            width: 200
+        };
 
-    const expected = targetDimensions.left;
+        const elementDimensions = {
+            top: 200,
+            left: 0,
+            height: 100,
+            width: 100
+        };
 
-    expect(element.left).toBe(expected);
-  });
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-  it('should have default for target right element right', () => {
-    const targetDimensions = {
-      top: 500,
-      left: 600,
-      height: 200,
-      width: 200
-    };
+        const myConstraint = new Constraint('right', {
+            element,
+            target,
+            targetAlign: {
+                horizontal: Direction.Right,
+                vertical: Direction.Top
+            }
+        });
 
-    const elementDimensions = {
-      top: 200,
-      left: 0,
-      height: 100,
-      width: 100
-    };
+        const expected =
+            targetDimensions.left +
+            targetDimensions.width -
+            elementDimensions.width;
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const myConstraint = new Constraint('right', {
-      element,
-      target,
-      targetAlign: {
-        horizontal: Direction.Right,
-        vertical: Direction.Top
-      }
+        expect(element.left).toBe(expected);
     });
 
-    const expected =
-      targetDimensions.left + targetDimensions.width - elementDimensions.width;
+    it('should have default for target center element middle', () => {
+        const targetDimensions = {
+            top: 500,
+            left: 600,
+            height: 200,
+            width: 200
+        };
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+        const elementDimensions = {
+            top: 200,
+            left: 0,
+            height: 100,
+            width: 100
+        };
 
-    expect(element.left).toBe(expected);
-  });
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-  it('should have default for target center element middle', () => {
-    const targetDimensions = {
-      top: 500,
-      left: 600,
-      height: 200,
-      width: 200
-    };
+        const myConstraint = new Constraint('middle', {
+            element,
+            target,
+            targetAlign: {
+                horizontal: Direction.Right,
+                vertical: Direction.Center
+            }
+        });
 
-    const elementDimensions = {
-      top: 200,
-      left: 0,
-      height: 100,
-      width: 100
-    };
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+        const expected =
+            0.5 *
+            (2 * targetDimensions.top +
+                targetDimensions.height -
+                elementDimensions.height);
 
-    const myConstraint = new Constraint('middle', {
-      element,
-      target,
-      targetAlign: {
-        horizontal: Direction.Right,
-        vertical: Direction.Center
-      }
+        expect(element.top).toBe(expected);
     });
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+    it('should have default for target right element right with pad', () => {
+        const targetDimensions = {
+            top: 500,
+            left: 600,
+            height: 200,
+            width: 200
+        };
 
-    const expected =
-      0.5 *
-      (2 * targetDimensions.top +
-        targetDimensions.height -
-        elementDimensions.height);
+        const elementDimensions = {
+            top: 200,
+            left: 0,
+            height: 100,
+            width: 100
+        };
 
-    expect(element.top).toBe(expected);
-  });
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-  it('should have default for target right element right with pad', () => {
-    const targetDimensions = {
-      top: 500,
-      left: 600,
-      height: 200,
-      width: 200
-    };
+        const myConstraint = new Constraint('right', {
+            element,
+            target,
+            pad: 10,
+            targetAlign: {
+                horizontal: Direction.Right,
+                vertical: Direction.Top
+            }
+        });
 
-    const elementDimensions = {
-      top: 200,
-      left: 0,
-      height: 100,
-      width: 100
-    };
+        const expected =
+            targetDimensions.left +
+            targetDimensions.width -
+            elementDimensions.width -
+            10;
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
-
-    const myConstraint = new Constraint('right', {
-      element,
-      target,
-      pad: 10,
-      targetAlign: {
-        horizontal: Direction.Right,
-        vertical: Direction.Top
-      }
+        expect(element.left).toBe(expected);
     });
 
-    const expected =
-      targetDimensions.left +
-      targetDimensions.width -
-      elementDimensions.width -
-      10;
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+    it('should have default for target top element top with pad', () => {
+        const elementDimensions = {
+                top: 200,
+                left: 0,
+                height: 100,
+                width: 100
+            },
+            targetDimensions = { top: 500, left: 0, height: 200, with: 200 };
 
-    expect(element.left).toBe(expected);
-  });
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-  it('should have default for target top element top with pad', () => {
-    const elementDimensions = {
-        top: 200,
-        left: 0,
-        height: 100,
-        width: 100
-      },
-      targetDimensions = { top: 500, left: 0, height: 200, with: 200 };
+        const myConstraint = new Constraint('top', {
+            element,
+            target,
+            targetAlign: {
+                horizontal: Direction.Left,
+                vertical: Direction.Top
+            },
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+            pad: 10
+        });
 
-    const myConstraint = new Constraint('top', {
-      element,
-      target,
-      targetAlign: {
-        horizontal: Direction.Left,
-        vertical: Direction.Top
-      },
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-      pad: 10
+        const expected = targetDimensions.top + 10;
+
+        expect(element.top).toBe(expected);
     });
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+    it('should handle below', () => {
+        const elementDimensions = {
+            top: 200,
+            left: 0,
+            height: 100,
+            width: 100
+        };
 
-    const expected = targetDimensions.top + 10;
+        const targetDimensions = { top: 500, left: 0, height: 200, with: 200 };
 
-    expect(element.top).toBe(expected);
-  });
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-  it('should handle below', () => {
-    const elementDimensions = {
-      top: 200,
-      left: 0,
-      height: 100,
-      width: 100
-    };
+        const myConstraint = new Constraint('below', {
+            element,
+            target,
+            pad: 0,
+            align: {
+                horizontal: Direction.Left,
+                vertical: Direction.Top
+            },
 
-    const targetDimensions = { top: 500, left: 0, height: 200, with: 200 };
+            targetAlign: {
+                horizontal: Direction.Left,
+                vertical: Direction.Bottom
+            }
+        });
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const myConstraint = new Constraint('below', {
-      element,
-      target,
-      pad: 0,
-      align: {
-        horizontal: Direction.Left,
-        vertical: Direction.Top
-      },
+        const expected = targetDimensions.top + targetDimensions.height;
 
-      targetAlign: {
-        horizontal: Direction.Left,
-        vertical: Direction.Bottom
-      }
+        expect(element.top).toBe(expected);
     });
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+    it(`should shrink element size when target size didn't fit element size`, () => {
+        const elementDimensions = {
+            top: 100,
+            left: 0,
+            height: 300,
+            width: 200,
+            right: 200,
+            bottom: 400
+        };
 
-    const expected = targetDimensions.top + targetDimensions.height;
+        const targetDimensions = {
+            top: 200,
+            left: 10,
+            height: 100,
+            with: 100,
+            right: 110,
+            bottom: 300
+        };
 
-    expect(element.top).toBe(expected);
-  });
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-  it(`should shrink element size when target size didn't fit element size`, () => {
-    const elementDimensions = {
-      top: 100,
-      left: 0,
-      height: 300,
-      width: 200,
-      right: 200,
-      bottom: 400
-    };
+        const myConstraint = new Constraint('shrinking box', {
+            element,
+            target,
+            align: {},
+            targetAlign: {},
+            pad: 0,
+            boxDirections: {
+                top: true,
+                bottom: true,
+                left: true,
+                right: true
+            }
+        });
 
-    const targetDimensions = {
-      top: 200,
-      left: 10,
-      height: 100,
-      with: 100,
-      right: 110,
-      bottom: 300
-    };
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
-
-    const myConstraint = new Constraint('shrinking box', {
-      element,
-      target,
-      align: {},
-      targetAlign: {},
-      pad: 0,
-      boxDirections: {
-        top: true,
-        bottom: true,
-        left: true,
-        right: true
-      }
+        expect(element.top).toBe(200);
+        expect(element.left).toBe(10);
+        expect(element.height).toBe(100);
+        expect(element.width).toBe(190);
     });
 
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
+    it('should only shrink top/bottom, when only top/bottom is specified', () => {
+        const elementDimensions = {
+                top: 100,
+                left: 0,
+                height: 300,
+                width: 200,
+                right: 200,
+                bottom: 400
+            },
+            targetDimensions = {
+                top: 200,
+                left: 10,
+                height: 100,
+                with: 100,
+                right: 110,
+                bottom: 300
+            };
 
-    expect(element.top).toBe(200);
-    expect(element.left).toBe(10);
-    expect(element.height).toBe(100);
-    expect(element.width).toBe(190);
-  });
+        const target = getMockElement(targetDimensions);
+        const element = getMockElement(elementDimensions);
 
-  it('should only shrink top/bottom, when only top/bottom is specified', () => {
-    const elementDimensions = {
-        top: 100,
-        left: 0,
-        height: 300,
-        width: 200,
-        right: 200,
-        bottom: 400
-      },
-      targetDimensions = {
-        top: 200,
-        left: 10,
-        height: 100,
-        with: 100,
-        right: 110,
-        bottom: 300
-      };
+        const myConstraint = new Constraint('shrinking box', {
+            element,
+            target,
+            align: {},
+            targetAlign: {},
+            pad: 0,
+            boxDirections: {
+                top: true,
+                bottom: true
+            }
+        });
 
-    const target = getMockElement(targetDimensions);
-    const element = getMockElement(elementDimensions);
+        myConstraint.computeDisplacement();
+        myConstraint.computePosition();
 
-    const myConstraint = new Constraint('shrinking box', {
-      element,
-      target,
-      align: {},
-      targetAlign: {},
-      pad: 0,
-      boxDirections: {
-        top: true,
-        bottom: true
-      }
+        expect(element.top).toBe(200);
+        expect(element.left).toBe(0);
+        expect(element.height).toBe(100);
+        expect(element.width).toBe(200);
     });
-
-    myConstraint.computeDisplacement();
-    myConstraint.computePosition();
-
-    expect(element.top).toBe(200);
-    expect(element.left).toBe(0);
-    expect(element.height).toBe(100);
-    expect(element.width).toBe(200);
-  });
 });

@@ -1,47 +1,47 @@
 import { createElement } from 'lwc';
 import {
-  shadowQuerySelector,
-  shadowQuerySelectorAll,
-  verifyClassSet
+    shadowQuerySelector,
+    shadowQuerySelectorAll,
+    verifyClassSet
 } from 'lightning/testUtils';
 import LightningElement from 'lightningtest/verticalNavigationTest';
 import subPage from '@salesforce/label/c.lightning_LightningVerticalNavigation_subPage';
 
 const selector = {
-  nav: '.slds-nav-vertical',
-  firstNavigationSection: '.first-navigation-section',
-  activeItem: '.slds-is-active',
-  item: '.slds-nav-vertical__item',
-  section: '.asection',
-  heading: '.slds-nav-vertical__title',
-  overflow: '.anoverflow',
-  overflowButton: '.slds-nav-vertical__action_overflow',
-  overflowContent: 'button + div',
-  assistiveText: '.slds-assistive-text',
-  ulContainer: '.slds-nav-vertical__section ul'
+    nav: '.slds-nav-vertical',
+    firstNavigationSection: '.first-navigation-section',
+    activeItem: '.slds-is-active',
+    item: '.slds-nav-vertical__item',
+    section: '.asection',
+    heading: '.slds-nav-vertical__title',
+    overflow: '.anoverflow',
+    overflowButton: '.slds-nav-vertical__action_overflow',
+    overflowContent: 'button + div',
+    assistiveText: '.slds-assistive-text',
+    ulContainer: '.slds-nav-vertical__section ul'
 };
 
 const createVerticalNavigation = (props = {}) => {
-  const element = createElement('lightningtest-vertical-navigation-test', {
-    is: LightningElement
-  });
+    const element = createElement('lightningtest-vertical-navigation-test', {
+        is: LightningElement
+    });
 
-  Object.assign(element, props);
-  document.body.appendChild(element);
-  return element;
+    Object.assign(element, props);
+    document.body.appendChild(element);
+    return element;
 };
 
 function assertNthItemActive(n) {
-  return element => {
-    const items = shadowQuerySelectorAll(element, selector.item);
-    expect(items).toHaveLength(9);
+    return element => {
+        const items = shadowQuerySelectorAll(element, selector.item);
+        expect(items).toHaveLength(9);
 
-    items.forEach((item, index) => {
-      verifyClassSet(item, {
-        'slds-is-active': index === n ? true : false
-      });
-    });
-  };
+        items.forEach((item, index) => {
+            verifyClassSet(item, {
+                'slds-is-active': index === n ? true : false
+            });
+        });
+    };
 }
 
 const assertFirstItemActive = assertNthItemActive(0);
@@ -49,296 +49,298 @@ const assertSecondItemActive = assertNthItemActive(1);
 const assertThirdItemActive = assertNthItemActive(2);
 
 function getItemByName(element, name) {
-  const items = shadowQuerySelectorAll(element, selector.item);
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].name === name) {
-      return items[i];
+    const items = shadowQuerySelectorAll(element, selector.item);
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].name === name) {
+            return items[i];
+        }
     }
-  }
-  return null;
+    return null;
 }
 
 function getItemLinkByName(element, name) {
-  return shadowQuerySelector(getItemByName(element, name), 'a');
+    return shadowQuerySelector(getItemByName(element, name), 'a');
 }
 
 function getSectionByIndex(element, index) {
-  const section = shadowQuerySelectorAll(
-    element,
-    'lightning-vertical-navigation-section'
-  )[index];
-  expect(section).toBeTruthy();
-  return section;
+    const section = shadowQuerySelectorAll(
+        element,
+        'lightning-vertical-navigation-section'
+    )[index];
+    expect(section).toBeTruthy();
+    return section;
 }
 
 function getSectionHeadingByIndex(element, index) {
-  const section = getSectionByIndex(element, index);
-  const heading = shadowQuerySelector(section, selector.heading);
-  expect(heading).toBeTruthy();
-  return heading;
+    const section = getSectionByIndex(element, index);
+    const heading = shadowQuerySelector(section, selector.heading);
+    expect(heading).toBeTruthy();
+    return heading;
 }
 
 function getOverflowByIndex(element, index) {
-  const overflow = shadowQuerySelectorAll(
-    element,
-    'lightning-vertical-navigation-overflow'
-  )[index];
-  expect(overflow).toBeTruthy();
-  return overflow;
+    const overflow = shadowQuerySelectorAll(
+        element,
+        'lightning-vertical-navigation-overflow'
+    )[index];
+    expect(overflow).toBeTruthy();
+    return overflow;
 }
 
 function getOverflowButtonByIndex(element, index) {
-  const overflow = getOverflowByIndex(element, index);
-  const button = shadowQuerySelector(overflow, selector.overflowButton);
-  expect(button).toBeTruthy();
-  return button;
+    const overflow = getOverflowByIndex(element, index);
+    const button = shadowQuerySelector(overflow, selector.overflowButton);
+    expect(button).toBeTruthy();
+    return button;
 }
 
 describe('c-vertical-navigation', () => {
-  afterEach(() => {
-    while (document.body.firstChild) {
-      document.body.removeChild(document.body.firstChild);
-    }
-  });
-
-  it('default classes', () => {
-    const element = createVerticalNavigation();
-    const verticalNavigationELement = shadowQuerySelector(
-      element,
-      'lightning-vertical-navigation'
-    );
-
-    const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
-
-    verifyClassSet(navEl, {
-      'slds-nav-vertical': true,
-      'slds-nav-vertical_shade': false,
-      'slds-nav-vertical_compact': false
-    });
-  });
-  it('compact only', () => {
-    const element = createVerticalNavigation({
-      compact: true
+    afterEach(() => {
+        while (document.body.firstChild) {
+            document.body.removeChild(document.body.firstChild);
+        }
     });
 
-    const verticalNavigationELement = shadowQuerySelector(
-      element,
-      'lightning-vertical-navigation'
-    );
+    it('default classes', () => {
+        const element = createVerticalNavigation();
+        const verticalNavigationELement = shadowQuerySelector(
+            element,
+            'lightning-vertical-navigation'
+        );
 
-    const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
+        const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
 
-    verifyClassSet(navEl, {
-      'slds-nav-vertical': true,
-      'slds-nav-vertical_shade': false,
-      'slds-nav-vertical_compact': true
+        verifyClassSet(navEl, {
+            'slds-nav-vertical': true,
+            'slds-nav-vertical_shade': false,
+            'slds-nav-vertical_compact': false
+        });
     });
-  });
+    it('compact only', () => {
+        const element = createVerticalNavigation({
+            compact: true
+        });
 
-  it('shaded only', () => {
-    const element = createVerticalNavigation({
-      shaded: true
-    });
+        const verticalNavigationELement = shadowQuerySelector(
+            element,
+            'lightning-vertical-navigation'
+        );
 
-    const verticalNavigationELement = shadowQuerySelector(
-      element,
-      'lightning-vertical-navigation'
-    );
+        const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
 
-    const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
-
-    verifyClassSet(navEl, {
-      'slds-nav-vertical': true,
-      'slds-nav-vertical_shade': true,
-      'slds-nav-vertical_compact': false
-    });
-  });
-
-  it('shaded and compact', () => {
-    const element = createVerticalNavigation({
-      shaded: true,
-      compact: true
+        verifyClassSet(navEl, {
+            'slds-nav-vertical': true,
+            'slds-nav-vertical_shade': false,
+            'slds-nav-vertical_compact': true
+        });
     });
 
-    const verticalNavigationELement = shadowQuerySelector(
-      element,
-      'lightning-vertical-navigation'
-    );
+    it('shaded only', () => {
+        const element = createVerticalNavigation({
+            shaded: true
+        });
 
-    const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
+        const verticalNavigationELement = shadowQuerySelector(
+            element,
+            'lightning-vertical-navigation'
+        );
 
-    verifyClassSet(navEl, {
-      'slds-nav-vertical': true,
-      'slds-nav-vertical_shade': true,
-      'slds-nav-vertical_compact': true
-    });
-  });
+        const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
 
-  it('initial selected item and update', () => {
-    jest.useFakeTimers();
-    const element = createVerticalNavigation({
-      selectedItem: 'item3'
-    });
-
-    return Promise.resolve()
-      .then(() => {
-        assertThirdItemActive(element);
-        element.selectedItem = 'item5';
-      })
-      .then(() => {
-        assertNthItemActive(4);
-        element.selectedItem = 'item6';
-      })
-      .then(() => {
-        assertNthItemActive(5);
-        element.selectedItem = 'Item2';
-      })
-      .then(() => {
-        assertNthItemActive(5);
-      });
-  });
-
-  it('click on link', () => {
-    const element = createVerticalNavigation();
-
-    return Promise.resolve()
-      .then(() => {
-        const link1 = getItemLinkByName(element, 'item1');
-        link1.click();
-      })
-      .then(() => {
-        assertFirstItemActive(element);
-      })
-      .then(() => {
-        const link2 = getItemLinkByName(element, 'item2');
-        link2.click();
-      })
-      .then(() => {
-        assertSecondItemActive(element);
-      });
-  });
-
-  it.skip('header assistive text regular item', () => {
-    const element = createVerticalNavigation();
-
-    const heading = getSectionHeadingByIndex(element, 0);
-    const headingId = heading.id;
-
-    const link = getItemLinkByName(element, 'item1');
-    const describedby = link.getAttribute('aria-describedby');
-
-    expect(describedby).toBe(headingId);
-  });
-
-  it.skip('header assistive text overflow item', () => {
-    const element = createVerticalNavigation();
-
-    const heading = getSectionHeadingByIndex(element, 1);
-    const headingId = heading.id;
-
-    const link = getItemLinkByName(element, 'item7');
-    const describedby = link.getAttribute('aria-describedby');
-
-    expect(describedby).toBe(headingId);
-  });
-
-  it('aria current', () => {
-    const element = createVerticalNavigation({
-      selectedItem: 'item2'
+        verifyClassSet(navEl, {
+            'slds-nav-vertical': true,
+            'slds-nav-vertical_shade': true,
+            'slds-nav-vertical_compact': false
+        });
     });
 
-    return Promise.resolve()
-      .then(() => {
-        const item2 = getItemLinkByName(element, 'item2');
-        expect(item2.getAttribute('aria-current')).toBe('page');
-      })
-      .then(() => {
-        element.selectedItem = 'item3';
-      })
-      .then(() => {
-        const item2 = getItemLinkByName(element, 'item2');
-        const item3 = getItemLinkByName(element, 'item3');
-        expect(item2.getAttribute('aria-current')).toBe(null);
-        expect(item3.getAttribute('aria-current')).toBe('page');
-      });
-  });
+    it('shaded and compact', () => {
+        const element = createVerticalNavigation({
+            shaded: true,
+            compact: true
+        });
 
-  it('default aria label', () => {
-    const element = createVerticalNavigation();
-    const verticalNavigationELement = shadowQuerySelector(
-      element,
-      'lightning-vertical-navigation'
-    );
+        const verticalNavigationELement = shadowQuerySelector(
+            element,
+            'lightning-vertical-navigation'
+        );
 
-    const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
+        const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
 
-    expect(navEl.getAttribute('aria-label')).toBe(subPage);
-  });
-
-  it('set aria label', () => {
-    const customAriaLabel = 'my custom aria label';
-    const element = createVerticalNavigation({
-      ariaLabel: customAriaLabel
+        verifyClassSet(navEl, {
+            'slds-nav-vertical': true,
+            'slds-nav-vertical_shade': true,
+            'slds-nav-vertical_compact': true
+        });
     });
 
-    const verticalNavigationELement = shadowQuerySelector(
-      element,
-      'lightning-vertical-navigation'
-    );
+    it('initial selected item and update', () => {
+        jest.useFakeTimers();
+        const element = createVerticalNavigation({
+            selectedItem: 'item3'
+        });
 
-    const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
+        return Promise.resolve()
+            .then(() => {
+                assertThirdItemActive(element);
+                element.selectedItem = 'item5';
+            })
+            .then(() => {
+                assertNthItemActive(4);
+                element.selectedItem = 'item6';
+            })
+            .then(() => {
+                assertNthItemActive(5);
+                element.selectedItem = 'Item2';
+            })
+            .then(() => {
+                assertNthItemActive(5);
+            });
+    });
 
-    expect(navEl.getAttribute('aria-label')).toBe(customAriaLabel);
-  });
+    it('click on link', () => {
+        const element = createVerticalNavigation();
 
-  it('overflow assistive text', () => {
-    const element = createVerticalNavigation();
+        return Promise.resolve()
+            .then(() => {
+                const link1 = getItemLinkByName(element, 'item1');
+                link1.click();
+            })
+            .then(() => {
+                assertFirstItemActive(element);
+            })
+            .then(() => {
+                const link2 = getItemLinkByName(element, 'item2');
+                link2.click();
+            })
+            .then(() => {
+                assertSecondItemActive(element);
+            });
+    });
 
-    const heading = getSectionHeadingByIndex(element, 1);
-    const overflowButton = getOverflowButtonByIndex(element, 0);
+    it.skip('header assistive text regular item', () => {
+        const element = createVerticalNavigation();
 
-    const assistiveText = overflowButton.querySelector(selector.assistiveText);
+        const heading = getSectionHeadingByIndex(element, 0);
+        const headingId = heading.id;
 
-    expect(assistiveText.textContent).toBe(heading.textContent);
-  });
+        const link = getItemLinkByName(element, 'item1');
+        const describedby = link.getAttribute('aria-describedby');
 
-  it('public events', () => {
-    const element = createVerticalNavigation();
-    const beforeSelectHandler = jest.fn();
-    const selectHandler = jest.fn();
-    element.addEventListener('mockbeforeselect', beforeSelectHandler);
-    element.addEventListener('mockselect', selectHandler);
+        expect(describedby).toBe(headingId);
+    });
 
-    return Promise.resolve()
-      .then(() => {
-        element.selectedItem = 'item2';
-      })
-      .then(() => {
-        expect(beforeSelectHandler).toHaveBeenCalledTimes(1);
-        expect(selectHandler).toHaveBeenCalledTimes(1);
-      })
-      .then(() => {
-        const link1 = getItemLinkByName(element, 'item1');
-        link1.click();
-      })
-      .then(() => {
-        expect(beforeSelectHandler).toHaveBeenCalledTimes(2);
-        expect(selectHandler).toHaveBeenCalledTimes(2);
-      });
-  });
+    it.skip('header assistive text overflow item', () => {
+        const element = createVerticalNavigation();
 
-  it('default action prevented', () => {
-    const element = createVerticalNavigation();
-    const selectHandler = jest.fn();
-    element.addEventListener('mockbeforeselect', e => e.preventDefault());
-    element.addEventListener('mockselect', selectHandler);
+        const heading = getSectionHeadingByIndex(element, 1);
+        const headingId = heading.id;
 
-    return Promise.resolve()
-      .then(() => {
-        element.selectedItem = 'item2';
-      })
-      .then(() => {
-        expect(selectHandler).toHaveBeenCalledTimes(0);
-      });
-  });
+        const link = getItemLinkByName(element, 'item7');
+        const describedby = link.getAttribute('aria-describedby');
+
+        expect(describedby).toBe(headingId);
+    });
+
+    it('aria current', () => {
+        const element = createVerticalNavigation({
+            selectedItem: 'item2'
+        });
+
+        return Promise.resolve()
+            .then(() => {
+                const item2 = getItemLinkByName(element, 'item2');
+                expect(item2.getAttribute('aria-current')).toBe('page');
+            })
+            .then(() => {
+                element.selectedItem = 'item3';
+            })
+            .then(() => {
+                const item2 = getItemLinkByName(element, 'item2');
+                const item3 = getItemLinkByName(element, 'item3');
+                expect(item2.getAttribute('aria-current')).toBe(null);
+                expect(item3.getAttribute('aria-current')).toBe('page');
+            });
+    });
+
+    it('default aria label', () => {
+        const element = createVerticalNavigation();
+        const verticalNavigationELement = shadowQuerySelector(
+            element,
+            'lightning-vertical-navigation'
+        );
+
+        const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
+
+        expect(navEl.getAttribute('aria-label')).toBe(subPage);
+    });
+
+    it('set aria label', () => {
+        const customAriaLabel = 'my custom aria label';
+        const element = createVerticalNavigation({
+            ariaLabel: customAriaLabel
+        });
+
+        const verticalNavigationELement = shadowQuerySelector(
+            element,
+            'lightning-vertical-navigation'
+        );
+
+        const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
+
+        expect(navEl.getAttribute('aria-label')).toBe(customAriaLabel);
+    });
+
+    it('overflow assistive text', () => {
+        const element = createVerticalNavigation();
+
+        const heading = getSectionHeadingByIndex(element, 1);
+        const overflowButton = getOverflowButtonByIndex(element, 0);
+
+        const assistiveText = overflowButton.querySelector(
+            selector.assistiveText
+        );
+
+        expect(assistiveText.textContent).toBe(heading.textContent);
+    });
+
+    it('public events', () => {
+        const element = createVerticalNavigation();
+        const beforeSelectHandler = jest.fn();
+        const selectHandler = jest.fn();
+        element.addEventListener('mockbeforeselect', beforeSelectHandler);
+        element.addEventListener('mockselect', selectHandler);
+
+        return Promise.resolve()
+            .then(() => {
+                element.selectedItem = 'item2';
+            })
+            .then(() => {
+                expect(beforeSelectHandler).toHaveBeenCalledTimes(1);
+                expect(selectHandler).toHaveBeenCalledTimes(1);
+            })
+            .then(() => {
+                const link1 = getItemLinkByName(element, 'item1');
+                link1.click();
+            })
+            .then(() => {
+                expect(beforeSelectHandler).toHaveBeenCalledTimes(2);
+                expect(selectHandler).toHaveBeenCalledTimes(2);
+            });
+    });
+
+    it('default action prevented', () => {
+        const element = createVerticalNavigation();
+        const selectHandler = jest.fn();
+        element.addEventListener('mockbeforeselect', e => e.preventDefault());
+        element.addEventListener('mockselect', selectHandler);
+
+        return Promise.resolve()
+            .then(() => {
+                element.selectedItem = 'item2';
+            })
+            .then(() => {
+                expect(selectHandler).toHaveBeenCalledTimes(0);
+            });
+    });
 });

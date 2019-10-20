@@ -1,80 +1,80 @@
 function normalizeSectionNames(sectionName) {
-  let normalizedNames;
+    let normalizedNames;
 
-  if (Array.isArray(sectionName)) {
-    normalizedNames = sectionName;
-  } else {
-    normalizedNames = [];
-    normalizedNames.push(sectionName);
-  }
+    if (Array.isArray(sectionName)) {
+        normalizedNames = sectionName;
+    } else {
+        normalizedNames = [];
+        normalizedNames.push(sectionName);
+    }
 
-  return normalizedNames;
+    return normalizedNames;
 }
 
 function getSectionsToOpenMap(sectionList, namesToOpen) {
-  const idsToOpenMap = {};
+    const idsToOpenMap = {};
 
-  namesToOpen.forEach(sectionName => {
-    const section = sectionList.getSectionByName(sectionName);
+    namesToOpen.forEach(sectionName => {
+        const section = sectionList.getSectionByName(sectionName);
 
-    if (section) {
-      idsToOpenMap[section.id] = true;
-    }
-  });
+        if (section) {
+            idsToOpenMap[section.id] = true;
+        }
+    });
 
-  return idsToOpenMap;
+    return idsToOpenMap;
 }
 
 export class MultipleOpenSectionStrategy {
-  privateSectionList;
+    privateSectionList;
 
-  constructor(sectionList) {
-    this.privateSectionList = sectionList;
-  }
-
-  openFirstSection() {
-    return false;
-  }
-
-  openSectionByName(sectionName) {
-    const sectionsToOpenMap = getSectionsToOpenMap(
-      this.privateSectionList,
-      normalizeSectionNames(sectionName)
-    );
-
-    const sections = this.privateSectionList.sections;
-    let sectionsChanged = false;
-
-    sections.forEach(section => {
-      if (sectionsToOpenMap[section.id]) {
-        sectionsChanged = sectionsChanged || !section.isOpen();
-        section.open();
-      } else {
-        sectionsChanged = sectionsChanged || section.isOpen();
-        section.close();
-      }
-    });
-
-    return sectionsChanged;
-  }
-
-  handleSectionSelect(sectionId) {
-    const section = this.privateSectionList.getSectionById(sectionId);
-
-    if (section) {
-      if (section.isOpen()) {
-        section.close();
-      } else {
-        section.open();
-      }
-
-      return true;
+    constructor(sectionList) {
+        this.privateSectionList = sectionList;
     }
 
-    return false;
-  }
+    openFirstSection() {
+        return false;
+    }
 
-  handleSectionWillDeregister() {
-    return false;
-  }
+    openSectionByName(sectionName) {
+        const sectionsToOpenMap = getSectionsToOpenMap(
+            this.privateSectionList,
+            normalizeSectionNames(sectionName)
+        );
+
+        const sections = this.privateSectionList.sections;
+        let sectionsChanged = false;
+
+        sections.forEach(section => {
+            if (sectionsToOpenMap[section.id]) {
+                sectionsChanged = sectionsChanged || !section.isOpen();
+                section.open();
+            } else {
+                sectionsChanged = sectionsChanged || section.isOpen();
+                section.close();
+            }
+        });
+
+        return sectionsChanged;
+    }
+
+    handleSectionSelect(sectionId) {
+        const section = this.privateSectionList.getSectionById(sectionId);
+
+        if (section) {
+            if (section.isOpen()) {
+                section.close();
+            } else {
+                section.open();
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
+    handleSectionWillDeregister() {
+        return false;
+    }
 }

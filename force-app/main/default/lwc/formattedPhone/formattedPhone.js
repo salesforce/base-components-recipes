@@ -2,58 +2,58 @@ import { LightningElement, api } from 'lwc';
 import { toNorthAmericanPhoneNumber } from 'c/utilsPrivate';
 
 export default class cFormattedPhone extends LightningElement {
-  @api value;
+    @api value;
 
-  @api tabIndex;
+    @api tabIndex;
 
-  _connected = false;
+    _connected = false;
 
-  connectedCallback() {
-    this._connected = true;
-  }
-
-  disconnectedCallback() {
-    this._connected = false;
-  }
-
-  @api
-  focus() {
-    if (this.phoneAnchor) {
-      this.phoneAnchor.focus();
+    connectedCallback() {
+        this._connected = true;
     }
-  }
 
-  @api
-  blur() {
-    if (this.phoneAnchor) {
-      this.phoneAnchor.blur();
+    disconnectedCallback() {
+        this._connected = false;
     }
-  }
 
-  @api
-  click() {
-    const anchor = this.phoneAnchor;
-    if (anchor && anchor.click) {
-      anchor.click();
+    @api
+    focus() {
+        if (this.phoneAnchor) {
+            this.phoneAnchor.focus();
+        }
     }
-  }
 
-  get phoneAnchor() {
-    if (this._connected && this.showLink) {
-      return this.template.querySelector('a');
+    @api
+    blur() {
+        if (this.phoneAnchor) {
+            this.phoneAnchor.blur();
+        }
     }
-    return undefined;
-  }
 
-  get showLink() {
-    return this.value != null && this.value !== '';
-  }
+    @api
+    click() {
+        const anchor = this.phoneAnchor;
+        if (anchor && anchor.click) {
+            anchor.click();
+        }
+    }
 
-  get formattedPhoneNumber() {
-    return toNorthAmericanPhoneNumber(this.value);
-  }
+    get phoneAnchor() {
+        if (this._connected && this.showLink) {
+            return this.template.querySelector('a');
+        }
+        return undefined;
+    }
 
-  get link() {
-    return `tel:${this.value}`;
-  }
+    get showLink() {
+        return this.value != null && this.value !== '';
+    }
+
+    get formattedPhoneNumber() {
+        return toNorthAmericanPhoneNumber(this.value);
+    }
+
+    get link() {
+        return `tel:${this.value}`;
+    }
 }

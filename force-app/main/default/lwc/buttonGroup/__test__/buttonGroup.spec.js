@@ -4,381 +4,381 @@ import * as buttonGroupUtils from 'lightning/testUtilsButtonGroup';
 import Element from 'lightningtest/buttonGroupTest';
 
 const createButtonGroup = (props = {}) => {
-  const element = createElement('lightningtest-button-group-test', {
-    is: Element
-  });
+    const element = createElement('lightningtest-button-group-test', {
+        is: Element
+    });
 
-  Object.assign(element, props);
-  document.body.appendChild(element);
-  return element;
+    Object.assign(element, props);
+    document.body.appendChild(element);
+    return element;
 };
 
 describe('c-button-group', () => {
-  it.skip('should have the correct number of child button elements', () => {
-    const numButtons = 4;
-    const numButtonStatefuls = 1;
-    const numButtonIcons = 2;
-    const numButtonIconStatefuls = 2;
-    const numButtonMenus = 1;
-    const totalNumChildren =
-      numButtons +
-      numButtonStatefuls +
-      numButtonIcons +
-      numButtonIconStatefuls +
-      numButtonMenus;
+    it.skip('should have the correct number of child button elements', () => {
+        const numButtons = 4;
+        const numButtonStatefuls = 1;
+        const numButtonIcons = 2;
+        const numButtonIconStatefuls = 2;
+        const numButtonMenus = 1;
+        const totalNumChildren =
+            numButtons +
+            numButtonStatefuls +
+            numButtonIcons +
+            numButtonIconStatefuls +
+            numButtonMenus;
 
-    const element = createButtonGroup({
-      buttons: buttonGroupUtils.generateRandomButtonsArray(numButtons),
-      buttonStatefuls: buttonGroupUtils.generateRandomButtonStatefulsArray(
-        numButtonStatefuls
-      ),
+        const element = createButtonGroup({
+            buttons: buttonGroupUtils.generateRandomButtonsArray(numButtons),
+            buttonStatefuls: buttonGroupUtils.generateRandomButtonStatefulsArray(
+                numButtonStatefuls
+            ),
 
-      buttonIcons: buttonGroupUtils.generateRandomButtonIconsArray(
-        numButtonIcons
-      ),
+            buttonIcons: buttonGroupUtils.generateRandomButtonIconsArray(
+                numButtonIcons
+            ),
 
-      buttonIconStatefuls: buttonGroupUtils.generateRandomButtonIconStatefulsArray(
-        numButtonIconStatefuls
-      ),
+            buttonIconStatefuls: buttonGroupUtils.generateRandomButtonIconStatefulsArray(
+                numButtonIconStatefuls
+            ),
 
-      buttonMenus: buttonGroupUtils.generateRandomButtonMenusArray(
-        numButtonMenus
-      )
-    });
-
-    return Promise.resolve().then(() => {
-      const children = element.querySelector('slot').children;
-
-      expect(children).toHaveLength(totalNumChildren);
-    });
-  });
-
-  it.skip('each child button element should have the correct position/order SLDS class when initially rendered', () => {
-    const numButtons = 4;
-    const numButtonStatefuls = 1;
-    const numButtonIcons = 2;
-    const numButtonIconStatefuls = 2;
-    const numButtonMenus = 1;
-    const totalNumChildren =
-      numButtons +
-      numButtonStatefuls +
-      numButtonIcons +
-      numButtonIconStatefuls +
-      numButtonMenus;
-
-    const element = createButtonGroup({
-      buttons: buttonGroupUtils.generateRandomButtonsArray(numButtons),
-      buttonStatefuls: buttonGroupUtils.generateRandomButtonStatefulsArray(
-        numButtonStatefuls
-      ),
-
-      buttonIcons: buttonGroupUtils.generateRandomButtonIconsArray(
-        numButtonIcons
-      ),
-
-      buttonIconStatefuls: buttonGroupUtils.generateRandomButtonIconStatefulsArray(
-        numButtonIconStatefuls
-      ),
-
-      buttonMenus: buttonGroupUtils.generateRandomButtonMenusArray(
-        numButtonMenus
-      )
-    });
-
-    return Promise.resolve().then(() => {
-      const children = element.querySelector('slot').children;
-
-      expect(children).toHaveLength(totalNumChildren);
-
-      return Promise.resolve().then(() => {
-        const hasFirstClass = shadowQuerySelector(
-          children[0],
-          '.slds-button'
-        ).classList.contains('slds-button_first');
-        expect(hasFirstClass).toBe(true);
-
-        for (let i = 1; i < children.length - 2; i++) {
-          const hasMiddleClass = shadowQuerySelector(
-            children[i],
-            '.slds-button'
-          ).classList.contains('slds-button_middle');
-          expect(hasMiddleClass).toBe(true);
-        }
-
-        const hasLastClass = shadowQuerySelector(
-          children[children.length - 1],
-          '.slds-button'
-        ).classList.contains('slds-button_last');
-        expect(hasLastClass).toBe(true);
-      });
-    });
-  });
-
-  it.skip('each child button element should have the correct position/order SLDS class when a button is appended', () => {
-    const numButtons = 4;
-    const numButtonStatefuls = 1;
-    const numButtonIcons = 2;
-    const numButtonIconStatefuls = 2;
-    const numButtonMenus = 1;
-    const totalNumChildren =
-      numButtons +
-      numButtonStatefuls +
-      numButtonIcons +
-      numButtonIconStatefuls +
-      numButtonMenus;
-
-    const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
-    const buttonStatefuls = buttonGroupUtils.generateRandomButtonStatefulsArray(
-      numButtonStatefuls
-    );
-
-    const buttonIcons = buttonGroupUtils.generateRandomButtonIconsArray(
-      numButtonIcons
-    );
-
-    const buttonIconStatefuls = buttonGroupUtils.generateRandomButtonIconStatefulsArray(
-      numButtonIconStatefuls
-    );
-
-    const buttonMenus = buttonGroupUtils.generateRandomButtonMenusArray(
-      numButtonMenus
-    );
-
-    const element = createButtonGroup({
-      buttons,
-      buttonStatefuls,
-      buttonIcons,
-      buttonIconStatefuls,
-      buttonMenus
-    });
-
-    return Promise.resolve().then(() => {
-      buttons.push(buttonGroupUtils.generateRandomButtonsArray(1)[0]);
-      element.buttons = buttons;
-
-      return Promise.resolve().then(() => {
-        return Promise.resolve().then(() => {
-          const children = element.querySelector('slot').children;
-          expect(children).toHaveLength(totalNumChildren + 1);
-
-          const hasFirstClass = shadowQuerySelector(
-            children[0],
-            '.slds-button'
-          ).classList.contains('slds-button_first');
-          expect(hasFirstClass).toBe(true);
-
-          for (let i = 1; i < children.length - 2; i++) {
-            const hasMiddleClass = shadowQuerySelector(
-              children[i],
-              '.slds-button'
-            ).classList.contains('slds-button_middle');
-            expect(hasMiddleClass).toBe(true);
-          }
-
-          const hasLastClass = shadowQuerySelector(
-            children[children.length - 1],
-            '.slds-button'
-          ).classList.contains('slds-button_last');
-          expect(hasLastClass).toBe(true);
+            buttonMenus: buttonGroupUtils.generateRandomButtonMenusArray(
+                numButtonMenus
+            )
         });
-      });
-    });
-  });
 
-  it.skip('each child button element should have the correct position/order SLDS class when a button is prepended', () => {
-    const numButtons = 5;
-    const numButtonStatefuls = 1;
-    const numButtonIcons = 2;
-    const numButtonIconStatefuls = 2;
-    const numButtonMenus = 1;
-    const totalNumChildren =
-      numButtons +
-      numButtonStatefuls +
-      numButtonIcons +
-      numButtonIconStatefuls +
-      numButtonMenus;
-
-    const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
-    const buttonStatefuls = buttonGroupUtils.generateRandomButtonStatefulsArray(
-      numButtonStatefuls
-    );
-
-    const buttonIcons = buttonGroupUtils.generateRandomButtonIconsArray(
-      numButtonIcons
-    );
-
-    const buttonIconStatefuls = buttonGroupUtils.generateRandomButtonIconStatefulsArray(
-      numButtonIconStatefuls
-    );
-
-    const buttonMenus = buttonGroupUtils.generateRandomButtonMenusArray(
-      numButtonMenus
-    );
-
-    const element = createButtonGroup({
-      buttons,
-      buttonStatefuls,
-      buttonIcons,
-      buttonIconStatefuls,
-      buttonMenus
-    });
-
-    return Promise.resolve().then(() => {
-      buttons.unshift(buttonGroupUtils.generateRandomButtonsArray(1)[0]);
-      element.buttons = buttons;
-
-      return Promise.resolve().then(() => {
         return Promise.resolve().then(() => {
-          const children = element.querySelector('slot').children;
+            const children = element.querySelector('slot').children;
 
-          expect(children).toHaveLength(totalNumChildren + 1);
-
-          const hasFirstClass = shadowQuerySelector(
-            children[0],
-            '.slds-button'
-          ).classList.contains('slds-button_first');
-          expect(hasFirstClass).toBe(true);
-
-          for (let i = 1; i < children.length - 2; i++) {
-            const hasMiddleClass = shadowQuerySelector(
-              children[i],
-              '.slds-button'
-            ).classList.contains('slds-button_middle');
-            expect(hasMiddleClass).toBe(true);
-          }
-
-          const hasLastClass = shadowQuerySelector(
-            children[children.length - 1],
-            '.slds-button'
-          ).classList.contains('slds-button_last');
-          expect(hasLastClass).toBe(true);
+            expect(children).toHaveLength(totalNumChildren);
         });
-      });
-    });
-  });
-
-  it.skip('each child button element should have the correct position/order SLDS class when a button is inserted', () => {
-    const numButtons = 4;
-    const numButtonStatefuls = 1;
-    const numButtonIcons = 2;
-    const numButtonIconStatefuls = 2;
-    const numButtonMenus = 1;
-    const totalNumChildren =
-      numButtons +
-      numButtonStatefuls +
-      numButtonIcons +
-      numButtonIconStatefuls +
-      numButtonMenus;
-
-    const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
-    const buttonStatefuls = buttonGroupUtils.generateRandomButtonStatefulsArray(
-      numButtonStatefuls
-    );
-
-    const buttonIcons = buttonGroupUtils.generateRandomButtonIconsArray(
-      numButtonIcons
-    );
-
-    const buttonIconStatefuls = buttonGroupUtils.generateRandomButtonIconStatefulsArray(
-      numButtonIconStatefuls
-    );
-
-    const buttonMenus = buttonGroupUtils.generateRandomButtonMenusArray(
-      numButtonMenus
-    );
-
-    const element = createButtonGroup({
-      buttons,
-      buttonStatefuls,
-      buttonIcons,
-      buttonIconStatefuls,
-      buttonMenus
     });
 
-    return Promise.resolve().then(() => {
-      const centerIndex = Math.round((buttons.length - 1) / 2);
-      buttons.splice(
-        centerIndex,
-        0,
-        buttonGroupUtils.generateRandomButtonsArray(1)[0]
-      );
+    it.skip('each child button element should have the correct position/order SLDS class when initially rendered', () => {
+        const numButtons = 4;
+        const numButtonStatefuls = 1;
+        const numButtonIcons = 2;
+        const numButtonIconStatefuls = 2;
+        const numButtonMenus = 1;
+        const totalNumChildren =
+            numButtons +
+            numButtonStatefuls +
+            numButtonIcons +
+            numButtonIconStatefuls +
+            numButtonMenus;
 
-      element.buttons = buttons;
+        const element = createButtonGroup({
+            buttons: buttonGroupUtils.generateRandomButtonsArray(numButtons),
+            buttonStatefuls: buttonGroupUtils.generateRandomButtonStatefulsArray(
+                numButtonStatefuls
+            ),
 
-      return Promise.resolve().then(() => {
+            buttonIcons: buttonGroupUtils.generateRandomButtonIconsArray(
+                numButtonIcons
+            ),
+
+            buttonIconStatefuls: buttonGroupUtils.generateRandomButtonIconStatefulsArray(
+                numButtonIconStatefuls
+            ),
+
+            buttonMenus: buttonGroupUtils.generateRandomButtonMenusArray(
+                numButtonMenus
+            )
+        });
+
         return Promise.resolve().then(() => {
-          const children = element.querySelector('slot').children;
+            const children = element.querySelector('slot').children;
 
-          expect(children).toHaveLength(totalNumChildren + 1);
+            expect(children).toHaveLength(totalNumChildren);
 
-          const hasFirstClass = shadowQuerySelector(
-            children[0],
-            '.slds-button'
-          ).classList.contains('slds-button_first');
-          expect(hasFirstClass).toBe(true);
+            return Promise.resolve().then(() => {
+                const hasFirstClass = shadowQuerySelector(
+                    children[0],
+                    '.slds-button'
+                ).classList.contains('slds-button_first');
+                expect(hasFirstClass).toBe(true);
 
-          for (let i = 1; i < children.length - 2; i++) {
-            const hasMiddleClass = shadowQuerySelector(
-              children[i],
-              '.slds-button'
-            ).classList.contains('slds-button_middle');
-            expect(hasMiddleClass).toBe(true);
-          }
+                for (let i = 1; i < children.length - 2; i++) {
+                    const hasMiddleClass = shadowQuerySelector(
+                        children[i],
+                        '.slds-button'
+                    ).classList.contains('slds-button_middle');
+                    expect(hasMiddleClass).toBe(true);
+                }
 
-          const hasLastClass = shadowQuerySelector(
-            children[children.length - 1],
-            '.slds-button'
-          ).classList.contains('slds-button_last');
-          expect(hasLastClass).toBe(true);
+                const hasLastClass = shadowQuerySelector(
+                    children[children.length - 1],
+                    '.slds-button'
+                ).classList.contains('slds-button_last');
+                expect(hasLastClass).toBe(true);
+            });
         });
-      });
-    });
-  });
-
-  it.skip('when button list is reduced to only one button element the button should have no position/order SLDS class', () => {
-    const numButtons = 2;
-    const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
-    const element = createButtonGroup({
-      buttons
     });
 
-    return Promise.resolve().then(() => {
-      buttons.splice(1);
-      element.buttons = buttons;
+    it.skip('each child button element should have the correct position/order SLDS class when a button is appended', () => {
+        const numButtons = 4;
+        const numButtonStatefuls = 1;
+        const numButtonIcons = 2;
+        const numButtonIconStatefuls = 2;
+        const numButtonMenus = 1;
+        const totalNumChildren =
+            numButtons +
+            numButtonStatefuls +
+            numButtonIcons +
+            numButtonIconStatefuls +
+            numButtonMenus;
 
-      return Promise.resolve().then(() => {
+        const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
+        const buttonStatefuls = buttonGroupUtils.generateRandomButtonStatefulsArray(
+            numButtonStatefuls
+        );
+
+        const buttonIcons = buttonGroupUtils.generateRandomButtonIconsArray(
+            numButtonIcons
+        );
+
+        const buttonIconStatefuls = buttonGroupUtils.generateRandomButtonIconStatefulsArray(
+            numButtonIconStatefuls
+        );
+
+        const buttonMenus = buttonGroupUtils.generateRandomButtonMenusArray(
+            numButtonMenus
+        );
+
+        const element = createButtonGroup({
+            buttons,
+            buttonStatefuls,
+            buttonIcons,
+            buttonIconStatefuls,
+            buttonMenus
+        });
+
         return Promise.resolve().then(() => {
-          const children = element.querySelector('slot').children;
+            buttons.push(buttonGroupUtils.generateRandomButtonsArray(1)[0]);
+            element.buttons = buttons;
 
-          expect(children).toHaveLength(1);
+            return Promise.resolve().then(() => {
+                return Promise.resolve().then(() => {
+                    const children = element.querySelector('slot').children;
+                    expect(children).toHaveLength(totalNumChildren + 1);
 
-          const hasFirstClass = shadowQuerySelector(
-            children[0],
-            '.slds-button'
-          ).classList.contains('slds-button_first');
-          expect(hasFirstClass).toBe(false);
+                    const hasFirstClass = shadowQuerySelector(
+                        children[0],
+                        '.slds-button'
+                    ).classList.contains('slds-button_first');
+                    expect(hasFirstClass).toBe(true);
+
+                    for (let i = 1; i < children.length - 2; i++) {
+                        const hasMiddleClass = shadowQuerySelector(
+                            children[i],
+                            '.slds-button'
+                        ).classList.contains('slds-button_middle');
+                        expect(hasMiddleClass).toBe(true);
+                    }
+
+                    const hasLastClass = shadowQuerySelector(
+                        children[children.length - 1],
+                        '.slds-button'
+                    ).classList.contains('slds-button_last');
+                    expect(hasLastClass).toBe(true);
+                });
+            });
         });
-      });
-    });
-  });
-
-  it.skip('when only one button element is present it should have no position/order SLDS class', () => {
-    const numButtons = 1;
-    const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
-    const element = createButtonGroup({
-      buttons
     });
 
-    return Promise.resolve().then(() => {
-      const children = element.querySelector('slot').children;
+    it.skip('each child button element should have the correct position/order SLDS class when a button is prepended', () => {
+        const numButtons = 5;
+        const numButtonStatefuls = 1;
+        const numButtonIcons = 2;
+        const numButtonIconStatefuls = 2;
+        const numButtonMenus = 1;
+        const totalNumChildren =
+            numButtons +
+            numButtonStatefuls +
+            numButtonIcons +
+            numButtonIconStatefuls +
+            numButtonMenus;
 
-      expect(children).toHaveLength(numButtons);
+        const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
+        const buttonStatefuls = buttonGroupUtils.generateRandomButtonStatefulsArray(
+            numButtonStatefuls
+        );
 
-      const hasFirstClass = shadowQuerySelector(
-        children[0],
-        '.slds-button'
-      ).classList.contains('slds-button_first');
-      expect(hasFirstClass).toBe(false);
+        const buttonIcons = buttonGroupUtils.generateRandomButtonIconsArray(
+            numButtonIcons
+        );
+
+        const buttonIconStatefuls = buttonGroupUtils.generateRandomButtonIconStatefulsArray(
+            numButtonIconStatefuls
+        );
+
+        const buttonMenus = buttonGroupUtils.generateRandomButtonMenusArray(
+            numButtonMenus
+        );
+
+        const element = createButtonGroup({
+            buttons,
+            buttonStatefuls,
+            buttonIcons,
+            buttonIconStatefuls,
+            buttonMenus
+        });
+
+        return Promise.resolve().then(() => {
+            buttons.unshift(buttonGroupUtils.generateRandomButtonsArray(1)[0]);
+            element.buttons = buttons;
+
+            return Promise.resolve().then(() => {
+                return Promise.resolve().then(() => {
+                    const children = element.querySelector('slot').children;
+
+                    expect(children).toHaveLength(totalNumChildren + 1);
+
+                    const hasFirstClass = shadowQuerySelector(
+                        children[0],
+                        '.slds-button'
+                    ).classList.contains('slds-button_first');
+                    expect(hasFirstClass).toBe(true);
+
+                    for (let i = 1; i < children.length - 2; i++) {
+                        const hasMiddleClass = shadowQuerySelector(
+                            children[i],
+                            '.slds-button'
+                        ).classList.contains('slds-button_middle');
+                        expect(hasMiddleClass).toBe(true);
+                    }
+
+                    const hasLastClass = shadowQuerySelector(
+                        children[children.length - 1],
+                        '.slds-button'
+                    ).classList.contains('slds-button_last');
+                    expect(hasLastClass).toBe(true);
+                });
+            });
+        });
     });
-  });
+
+    it.skip('each child button element should have the correct position/order SLDS class when a button is inserted', () => {
+        const numButtons = 4;
+        const numButtonStatefuls = 1;
+        const numButtonIcons = 2;
+        const numButtonIconStatefuls = 2;
+        const numButtonMenus = 1;
+        const totalNumChildren =
+            numButtons +
+            numButtonStatefuls +
+            numButtonIcons +
+            numButtonIconStatefuls +
+            numButtonMenus;
+
+        const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
+        const buttonStatefuls = buttonGroupUtils.generateRandomButtonStatefulsArray(
+            numButtonStatefuls
+        );
+
+        const buttonIcons = buttonGroupUtils.generateRandomButtonIconsArray(
+            numButtonIcons
+        );
+
+        const buttonIconStatefuls = buttonGroupUtils.generateRandomButtonIconStatefulsArray(
+            numButtonIconStatefuls
+        );
+
+        const buttonMenus = buttonGroupUtils.generateRandomButtonMenusArray(
+            numButtonMenus
+        );
+
+        const element = createButtonGroup({
+            buttons,
+            buttonStatefuls,
+            buttonIcons,
+            buttonIconStatefuls,
+            buttonMenus
+        });
+
+        return Promise.resolve().then(() => {
+            const centerIndex = Math.round((buttons.length - 1) / 2);
+            buttons.splice(
+                centerIndex,
+                0,
+                buttonGroupUtils.generateRandomButtonsArray(1)[0]
+            );
+
+            element.buttons = buttons;
+
+            return Promise.resolve().then(() => {
+                return Promise.resolve().then(() => {
+                    const children = element.querySelector('slot').children;
+
+                    expect(children).toHaveLength(totalNumChildren + 1);
+
+                    const hasFirstClass = shadowQuerySelector(
+                        children[0],
+                        '.slds-button'
+                    ).classList.contains('slds-button_first');
+                    expect(hasFirstClass).toBe(true);
+
+                    for (let i = 1; i < children.length - 2; i++) {
+                        const hasMiddleClass = shadowQuerySelector(
+                            children[i],
+                            '.slds-button'
+                        ).classList.contains('slds-button_middle');
+                        expect(hasMiddleClass).toBe(true);
+                    }
+
+                    const hasLastClass = shadowQuerySelector(
+                        children[children.length - 1],
+                        '.slds-button'
+                    ).classList.contains('slds-button_last');
+                    expect(hasLastClass).toBe(true);
+                });
+            });
+        });
+    });
+
+    it.skip('when button list is reduced to only one button element the button should have no position/order SLDS class', () => {
+        const numButtons = 2;
+        const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
+        const element = createButtonGroup({
+            buttons
+        });
+
+        return Promise.resolve().then(() => {
+            buttons.splice(1);
+            element.buttons = buttons;
+
+            return Promise.resolve().then(() => {
+                return Promise.resolve().then(() => {
+                    const children = element.querySelector('slot').children;
+
+                    expect(children).toHaveLength(1);
+
+                    const hasFirstClass = shadowQuerySelector(
+                        children[0],
+                        '.slds-button'
+                    ).classList.contains('slds-button_first');
+                    expect(hasFirstClass).toBe(false);
+                });
+            });
+        });
+    });
+
+    it.skip('when only one button element is present it should have no position/order SLDS class', () => {
+        const numButtons = 1;
+        const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
+        const element = createButtonGroup({
+            buttons
+        });
+
+        return Promise.resolve().then(() => {
+            const children = element.querySelector('slot').children;
+
+            expect(children).toHaveLength(numButtons);
+
+            const hasFirstClass = shadowQuerySelector(
+                children[0],
+                '.slds-button'
+            ).classList.contains('slds-button_first');
+            expect(hasFirstClass).toBe(false);
+        });
+    });
 });
