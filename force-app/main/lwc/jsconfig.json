@@ -39,7 +39,6 @@
                 "../default/lwc/card/card.js"
             ],
             "c/carousel": [
-                "../default/lwc/carousel/carousel.js"
             "c/checkboxGroup": [
                 "../default/lwc/checkboxGroup/checkboxGroup.js"
             ],
