@@ -1,297 +1,297 @@
 import {
-  parseError,
-  createOrSaveRecord,
-  getFormValues,
-  validateForm
+    parseError,
+    createOrSaveRecord,
+    getFormValues,
+    validateForm
 } from 'c/recordEditUtils';
 import { RESPONSES } from 'force/lds';
 
 describe('page level errors', () => {
-  it('handles body parse error', () => {
-    expect(parseError(RESPONSES.POST_BODY_PARSE_ERROR)).toEqual({
-      detail: RESPONSES.POST_BODY_PARSE_ERROR.body[0].errorCode,
-      message: RESPONSES.POST_BODY_PARSE_ERROR.body[0].message,
-      output: {}
+    it('handles body parse error', () => {
+        expect(parseError(RESPONSES.POST_BODY_PARSE_ERROR)).toEqual({
+            detail: RESPONSES.POST_BODY_PARSE_ERROR.body[0].errorCode,
+            message: RESPONSES.POST_BODY_PARSE_ERROR.body[0].message,
+            output: {}
+        });
     });
-  });
 
-  it('handles weird transport errors', () => {
-    expect(parseError(RESPONSES.ILLEGAL_QUERY_PARAMETER_VALUE)).toEqual({
-      detail: RESPONSES.ILLEGAL_QUERY_PARAMETER_VALUE.body[0].errorCode,
-      message: RESPONSES.ILLEGAL_QUERY_PARAMETER_VALUE.body[0].message,
-      output: {}
+    it('handles weird transport errors', () => {
+        expect(parseError(RESPONSES.ILLEGAL_QUERY_PARAMETER_VALUE)).toEqual({
+            detail: RESPONSES.ILLEGAL_QUERY_PARAMETER_VALUE.body[0].errorCode,
+            message: RESPONSES.ILLEGAL_QUERY_PARAMETER_VALUE.body[0].message,
+            output: {}
+        });
     });
-  });
 
-  it('handles page validation errors', () => {
-    expect(parseError(RESPONSES.VALIDATION_ERROR)).toEqual({
-      detail: RESPONSES.VALIDATION_ERROR.body.output.errors[0].message,
-      message: RESPONSES.VALIDATION_ERROR.body.message,
-      output: RESPONSES.VALIDATION_ERROR.body.output
+    it('handles page validation errors', () => {
+        expect(parseError(RESPONSES.VALIDATION_ERROR)).toEqual({
+            detail: RESPONSES.VALIDATION_ERROR.body.output.errors[0].message,
+            message: RESPONSES.VALIDATION_ERROR.body.message,
+            output: RESPONSES.VALIDATION_ERROR.body.output
+        });
     });
-  });
 
-  it('handles disconnected errors', () => {
-    expect(parseError(RESPONSES.DISCONNECTED)).toEqual({
-      detail: '',
-      message: RESPONSES.DISCONNECTED.body.message,
-      output: {}
+    it('handles disconnected errors', () => {
+        expect(parseError(RESPONSES.DISCONNECTED)).toEqual({
+            detail: '',
+            message: RESPONSES.DISCONNECTED.body.message,
+            output: {}
+        });
     });
-  });
 });
 
 jest.mock(
-  'lightning/uiRecordApi',
-  () => ({
-    generateRecordInputForCreate: jest.fn(),
-    generateRecordInputForUpdate: jest.fn(),
-    createRecordInputFilteredByEditedFields: jest.fn(),
-    createRecord: () => Promise.resolve(),
-    updateRecord: () => Promise.resolve()
-  }),
+    'lightning/uiRecordApi',
+    () => ({
+        generateRecordInputForCreate: jest.fn(),
+        generateRecordInputForUpdate: jest.fn(),
+        createRecordInputFilteredByEditedFields: jest.fn(),
+        createRecord: () => Promise.resolve(),
+        updateRecord: () => Promise.resolve()
+    }),
 
-  { virtual: true }
+    { virtual: true }
 );
 
 describe('lds create record', () => {
-  it.skip('generates a normalized record', () => {
-    const lds = require('lightning/uiRecordApi');
-    const newRecord = {
-      fields: {
-        FirstName: null,
-        LastName: 'fff',
-        Salutation: 'Ms.'
-      },
+    it.skip('generates a normalized record', () => {
+        const lds = require('lightning/uiRecordApi');
+        const newRecord = {
+            fields: {
+                FirstName: null,
+                LastName: 'fff',
+                Salutation: 'Ms.'
+            },
 
-      apiName: 'Contact'
-    };
+            apiName: 'Contact'
+        };
 
-    const objectInfo = { fake: 'objectInfo' };
+        const objectInfo = { fake: 'objectInfo' };
 
-    return createOrSaveRecord(newRecord, null, objectInfo).then(() => {
-      expect(lds.generateRecordInputForCreate.mock.calls[0][0]).toEqual({
-        fields: {
-          FirstName: {
-            value: null
-          },
+        return createOrSaveRecord(newRecord, null, objectInfo).then(() => {
+            expect(lds.generateRecordInputForCreate.mock.calls[0][0]).toEqual({
+                fields: {
+                    FirstName: {
+                        value: null
+                    },
 
-          LastName: {
-            value: 'fff'
-          },
+                    LastName: {
+                        value: 'fff'
+                    },
 
-          Salutation: {
-            value: 'Ms.'
-          }
-        },
+                    Salutation: {
+                        value: 'Ms.'
+                    }
+                },
 
-        apiName: 'Contact'
-      });
+                apiName: 'Contact'
+            });
+        });
     });
-  });
 });
 
 describe('lds update record', () => {
-  it.skip('generates a normalized record and creates a recordInput for it', () => {
-    const ldsRecords = require('lightning/uiRecordApi');
-    const originalRecord = {
-      fields: {
-        FirstName: { value: null },
-        LastName: { value: 'bbb' },
-        Salutation: { value: 'hey' }
-      },
-
-      id: 'FAKEID',
-      apiName: 'Contact'
-    };
-
-    const newRecord = {
-      fields: {
-        FirstName: null,
-        LastName: 'fff',
-        Salutation: 'Ms.'
-      },
-
-      apiName: 'Contact'
-    };
-
-    const objectInfo = { fake: 'objectInfo' };
-    return createOrSaveRecord(newRecord, originalRecord, objectInfo).then(
-      () => {
-        expect(
-          ldsRecords.generateRecordInputForUpdate.mock.calls[0][0]
-        ).toEqual({
-          id: 'FAKEID',
-          fields: {
-            FirstName: {
-              value: null
+    it.skip('generates a normalized record and creates a recordInput for it', () => {
+        const ldsRecords = require('lightning/uiRecordApi');
+        const originalRecord = {
+            fields: {
+                FirstName: { value: null },
+                LastName: { value: 'bbb' },
+                Salutation: { value: 'hey' }
             },
 
-            LastName: {
-              value: 'fff'
+            id: 'FAKEID',
+            apiName: 'Contact'
+        };
+
+        const newRecord = {
+            fields: {
+                FirstName: null,
+                LastName: 'fff',
+                Salutation: 'Ms.'
             },
 
-            Salutation: {
-              value: 'Ms.'
+            apiName: 'Contact'
+        };
+
+        const objectInfo = { fake: 'objectInfo' };
+        return createOrSaveRecord(newRecord, originalRecord, objectInfo).then(
+            () => {
+                expect(
+                    ldsRecords.generateRecordInputForUpdate.mock.calls[0][0]
+                ).toEqual({
+                    id: 'FAKEID',
+                    fields: {
+                        FirstName: {
+                            value: null
+                        },
+
+                        LastName: {
+                            value: 'fff'
+                        },
+
+                        Salutation: {
+                            value: 'Ms.'
+                        }
+                    },
+
+                    apiName: null
+                });
             }
-          },
-
-          apiName: null
-        });
-      }
-    );
-  });
+        );
+    });
 });
 
 describe('validateForm', () => {
-  const getMockInputField = isValid => {
-    return {
-      tagName: 'LIGHTNING-INPUT-FIELD',
-      reportValidity() {
-        return isValid;
-      }
+    const getMockInputField = isValid => {
+        return {
+            tagName: 'LIGHTNING-INPUT-FIELD',
+            reportValidity() {
+                return isValid;
+            }
+        };
     };
-  };
 
-  const getMockoutOutputField = () => {
-    return {
-      tagName: 'LIGHTNING-OUTPUT-FIELD'
+    const getMockoutOutputField = () => {
+        return {
+            tagName: 'LIGHTNING-OUTPUT-FIELD'
+        };
     };
-  };
 
-  it('returns true if all fields are valid', () => {
-    const fields = [getMockInputField(true), getMockInputField(true)];
-    expect(validateForm(fields)).toEqual(true);
-  });
+    it('returns true if all fields are valid', () => {
+        const fields = [getMockInputField(true), getMockInputField(true)];
+        expect(validateForm(fields)).toEqual(true);
+    });
 
-  it('returns false if any field is invalid', () => {
-    const fields = [
-      getMockInputField(true),
-      getMockInputField(false),
-      getMockInputField(true)
-    ];
+    it('returns false if any field is invalid', () => {
+        const fields = [
+            getMockInputField(true),
+            getMockInputField(false),
+            getMockInputField(true)
+        ];
 
-    expect(validateForm(fields)).toEqual(false);
-  });
+        expect(validateForm(fields)).toEqual(false);
+    });
 
-  it('should return true for valid fields with an outputField in the array', () => {
-    const fields = [
-      getMockInputField(true),
-      getMockInputField(true),
-      getMockoutOutputField()
-    ];
+    it('should return true for valid fields with an outputField in the array', () => {
+        const fields = [
+            getMockInputField(true),
+            getMockInputField(true),
+            getMockoutOutputField()
+        ];
 
-    expect(validateForm(fields)).toEqual(true);
-  });
+        expect(validateForm(fields)).toEqual(true);
+    });
 });
 
 describe('getFormValues', () => {
-  it('returns a hash of fieldNames and values', () => {
-    const fields = [
-      {
-        fieldName: 'field1',
-        value: 'Hello'
-      },
+    it('returns a hash of fieldNames and values', () => {
+        const fields = [
+            {
+                fieldName: 'field1',
+                value: 'Hello'
+            },
 
-      {
-        fieldName: 'field2',
-        value: 'Goodbye'
-      },
+            {
+                fieldName: 'field2',
+                value: 'Goodbye'
+            },
 
-      {
-        fieldName: 'field3',
-        value: 'Auf wiedersehen'
-      }
-    ];
+            {
+                fieldName: 'field3',
+                value: 'Auf wiedersehen'
+            }
+        ];
 
-    expect(getFormValues(fields)).toEqual({
-      field1: 'Hello',
-      field2: 'Goodbye',
-      field3: 'Auf wiedersehen'
+        expect(getFormValues(fields)).toEqual({
+            field1: 'Hello',
+            field2: 'Goodbye',
+            field3: 'Auf wiedersehen'
+        });
     });
-  });
 
-  it('flattens compound values', () => {
-    const fields = [
-      {
-        fieldName: 'Name',
-        value: 'Bob'
-      },
+    it('flattens compound values', () => {
+        const fields = [
+            {
+                fieldName: 'Name',
+                value: 'Bob'
+            },
 
-      {
-        fieldName: 'BillingAddres',
-        value: {
-          BillingCity: 'Denver',
-          BillingCountry: 'United States',
-          BillingPostalCode: '80202',
-          BillingState: 'CO',
-          BillingStreet: '222 fake st'
-        }
-      },
+            {
+                fieldName: 'BillingAddres',
+                value: {
+                    BillingCity: 'Denver',
+                    BillingCountry: 'United States',
+                    BillingPostalCode: '80202',
+                    BillingState: 'CO',
+                    BillingStreet: '222 fake st'
+                }
+            },
 
-      {
-        fieldName: 'Geo__c',
-        value: {
-          longitude: 10,
-          latitude: 20
-        }
-      }
-    ];
+            {
+                fieldName: 'Geo__c',
+                value: {
+                    longitude: 10,
+                    latitude: 20
+                }
+            }
+        ];
 
-    expect(getFormValues(fields)).toEqual({
-      Name: 'Bob',
-      BillingCity: 'Denver',
-      BillingCountry: 'United States',
-      BillingPostalCode: '80202',
-      BillingState: 'CO',
-      BillingStreet: '222 fake st',
+        expect(getFormValues(fields)).toEqual({
+            Name: 'Bob',
+            BillingCity: 'Denver',
+            BillingCountry: 'United States',
+            BillingPostalCode: '80202',
+            BillingState: 'CO',
+            BillingStreet: '222 fake st',
 
-      Geo__Longitude__s: 10,
+            Geo__Longitude__s: 10,
 
-      Geo__Latitude__s: 20
+            Geo__Latitude__s: 20
+        });
     });
-  });
 
-  it('does not get confused by null values', () => {
-    const fields = [
-      {
-        fieldName: 'Name',
-        value: 'Bob'
-      },
+    it('does not get confused by null values', () => {
+        const fields = [
+            {
+                fieldName: 'Name',
+                value: 'Bob'
+            },
 
-      {
-        fieldName: 'NullLookup',
-        value: null
-      }
-    ];
+            {
+                fieldName: 'NullLookup',
+                value: null
+            }
+        ];
 
-    expect(getFormValues(fields)).toEqual({
-      Name: 'Bob',
-      NullLookup: null
+        expect(getFormValues(fields)).toEqual({
+            Name: 'Bob',
+            NullLookup: null
+        });
     });
-  });
 
-  it('does not return values for readonly fields', () => {
-    const fields = [
-      {
-        fieldName: 'field1',
-        value: 'Hello'
-      },
+    it('does not return values for readonly fields', () => {
+        const fields = [
+            {
+                fieldName: 'field1',
+                value: 'Hello'
+            },
 
-      {
-        fieldName: 'field2',
-        value: 'Goodbye'
-      },
+            {
+                fieldName: 'field2',
+                value: 'Goodbye'
+            },
 
-      {
-        fieldName: 'field3',
-        value: 'Auf wiedersehen',
-        readonly: true
-      }
-    ];
+            {
+                fieldName: 'field3',
+                value: 'Auf wiedersehen',
+                readonly: true
+            }
+        ];
 
-    expect(getFormValues(fields)).toEqual({
-      field1: 'Hello',
-      field2: 'Goodbye'
+        expect(getFormValues(fields)).toEqual({
+            field1: 'Hello',
+            field2: 'Goodbye'
+        });
     });
-  });
 });

@@ -4,77 +4,77 @@ import { LightningElement, api, track } from 'lwc';
 import { toNorthAmericanPhoneNumber } from 'c/utilsPrivate';
 import { getIconPath, polyfill } from 'c/iconUtils';
 import {
-  isEnabled,
-  addStateChangeListener,
-  dial,
-  removeStateChangeListener
+    isEnabled,
+    addStateChangeListener,
+    dial,
+    removeStateChangeListener
 } from 'c/clickToDialService';
 
 const Labels = {
-  clickToDial: labelClickToDial,
-  clickToDialDisabled: labelClickToDialDisabled
+    clickToDial: labelClickToDial,
+    clickToDialDisabled: labelClickToDialDisabled
 };
 
 const enabledIconPath = getIconPath('utility:call');
 const disabledIconPath = getIconPath('utility:end_call');
 
 export default class ClickToDial extends LightningElement {
-  @api value;
+    @api value;
 
-  @api recordId;
+    @api recordId;
 
-  @api params;
+    @api params;
 
-  @track
-  state = {
-    enabled: isEnabled()
-  };
-
-  stateChangeListener;
-
-  connectedCallback() {
-    this.stateChangeListener = () => {
-      this.state.enabled = isEnabled();
+    @track
+    state = {
+        enabled: isEnabled()
     };
-    addStateChangeListener(this.stateChangeListener);
-  }
 
-  disconnectedCallback() {
-    removeStateChangeListener(this.stateChangeListener);
-  }
+    stateChangeListener;
 
-  renderedCallback() {
-    const iconPath = this.iconPath;
-    if (iconPath !== this.prevIconPath) {
-      this.prevIconPath = iconPath;
-      polyfill(this.template.querySelector('svg'));
+    connectedCallback() {
+        this.stateChangeListener = () => {
+            this.state.enabled = isEnabled();
+        };
+        addStateChangeListener(this.stateChangeListener);
     }
-  }
 
-  get iconPath() {
-    return this.state.enabled ? enabledIconPath : disabledIconPath;
-  }
+    disconnectedCallback() {
+        removeStateChangeListener(this.stateChangeListener);
+    }
 
-  get formattedPhoneNumber() {
-    return toNorthAmericanPhoneNumber(this.value);
-  }
+    renderedCallback() {
+        const iconPath = this.iconPath;
+        if (iconPath !== this.prevIconPath) {
+            this.prevIconPath = iconPath;
+            polyfill(this.template.querySelector('svg'));
+        }
+    }
 
-  get enabled() {
-    return this.state.enabled;
-  }
+    get iconPath() {
+        return this.state.enabled ? enabledIconPath : disabledIconPath;
+    }
 
-  get i18n() {
-    return Labels;
-  }
+    get formattedPhoneNumber() {
+        return toNorthAmericanPhoneNumber(this.value);
+    }
 
-  handleClick() {
-    dial({
-      number: this.value,
-      recordId: this.recordId,
-      params: this.params,
-      pageInfo: {
-        hashFragment: window.location.hash
-      }
-    });
-  }
+    get enabled() {
+        return this.state.enabled;
+    }
+
+    get i18n() {
+        return Labels;
+    }
+
+    handleClick() {
+        dial({
+            number: this.value,
+            recordId: this.recordId,
+            params: this.params,
+            pageInfo: {
+                hashFragment: window.location.hash
+            }
+        });
+    }
 }

@@ -180,7 +180,10 @@
             "c/accordionMultiple": [
                 "../../lwc/accordionMultiple/accordionMultiple.js"
             ],
-            "c/layoutRecipes": ["../../lwc/layoutRecipes/layoutRecipes.js"]
+            "c/relativeDateTimeRecipes": [
+                "../../lwc/relativeDateTimeRecipes/relativeDateTimeRecipes.js
+            ],
+            "c/layoutRecipes": ["../../lwc/layoutRecipes/layoutRecipes.js"],
             "c/buttonStatefulRecipes": [
                 "../../lwc/buttonStatefulRecipes/buttonStatefulRecipes.js"
             ],

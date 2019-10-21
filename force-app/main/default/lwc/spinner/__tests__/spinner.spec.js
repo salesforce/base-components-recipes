@@ -4,55 +4,55 @@ import cElement from 'c/spinner';
 const alternativeText = 'required alternative text';
 
 function createComponent(props = {}) {
-  const element = createElement('c-spinner', {
-    is: cElement
-  });
+    const element = createElement('c-spinner', {
+        is: cElement
+    });
 
-  Object.assign(element, props);
-  document.body.appendChild(element);
-  return element;
+    Object.assign(element, props);
+    document.body.appendChild(element);
+    return element;
 }
 
 describe('c-spinner', () => {
-  afterEach(() => {
-    while (document.body.firstChild) {
-      document.body.removeChild(document.body.firstChild);
-    }
-  });
-
-  it('default', () => {
-    const element = createComponent({
-      alternativeText
+    afterEach(() => {
+        while (document.body.firstChild) {
+            document.body.removeChild(document.body.firstChild);
+        }
     });
 
-    return Promise.resolve().then(() => {
-      expect(element).toMatchSnapshot();
+    it('default', () => {
+        const element = createComponent({
+            alternativeText
+        });
+
+        return Promise.resolve().then(() => {
+            expect(element).toMatchSnapshot();
+        });
     });
-  });
 
-  ['small', 'medium', 'large'].forEach(size => {
-    it(`size=${size}`, () => {
-      const element = createComponent({
-        size,
-        alternativeText
-      });
+    ['small', 'medium', 'large'].forEach(size => {
+        it(`size=${size}`, () => {
+            const element = createComponent({
+                size,
+                alternativeText
+            });
 
-      return Promise.resolve().then(() => {
-        expect(element).toMatchSnapshot();
-      });
+            return Promise.resolve().then(() => {
+                expect(element).toMatchSnapshot();
+            });
+        });
     });
-  });
 
-  ['base', 'brand', 'inverse'].forEach(variant => {
-    it(`variant=${variant}`, () => {
-      const element = createComponent({
-        variant,
-        alternativeText
-      });
+    ['base', 'brand', 'inverse'].forEach(variant => {
+        it(`variant=${variant}`, () => {
+            const element = createComponent({
+                variant,
+                alternativeText
+            });
 
-      return Promise.resolve().then(() => {
-        expect(element).toMatchSnapshot();
-      });
+            return Promise.resolve().then(() => {
+                expect(element).toMatchSnapshot();
+            });
+        });
     });
-  });
 });

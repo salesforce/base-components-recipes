@@ -326,6 +326,9 @@
             "c/accordionMultiple": [
                 "accordionMultiple/accordionMultiple.js"
             ],
+            "c/relativeDateTimeRecipes": [
+                "relativeDateTimeRecipes/relativeDateTimeRecipes.js"
+            ],
             "c/buttonStatefulRecipes": [
                 "buttonStatefulRecipes/buttonStatefulRecipes.js"
             ],
@@ -334,6 +337,15 @@
             ],
             "c/buttonIconStatefulRecipes": [
                 "buttonIconStatefulRecipes/buttonIconStatefulRecipes.js"
+            ],
+            "c/carouselImage": [
+                "../default/lwc/carouselImage/carouselImage.js"
+            ],
+            "c/carousel": [
+                "../default/lwc/carousel/carousel.js"
+            ],
+            "c/carouselRecipes": [
+                "carouselRecipes/carouselRecipes.js"
             ]
         },
         "experimentalDecorators": true
