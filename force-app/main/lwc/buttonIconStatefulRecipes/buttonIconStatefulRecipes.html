@@ -1,0 +1,64 @@
+<template>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            A basic <code>button-icon-stateful</code> component.
+        </h2>
+
+        <!-- Simple -->
+        <div class="row">
+            <c-button-icon-stateful
+                icon-name="utility:like"
+                selected={likeState}
+                onclick={handleLikeButtonClick}
+                alternative-text="Like"
+            ></c-button-icon-stateful>
+            <c-button-icon-stateful
+                icon-name="utility:answer"
+                selected={answerState}
+                onclick={handleAnswerButtonClick}
+                alternative-text="Answer"
+                class="slds-m-left_xx-small"
+            ></c-button-icon-stateful>
+        </div>
+
+        <!-- Variant Border Inverse -->
+        <h3>Variant Border Inverse</h3>
+        <div class="row dark-background">
+            <c-button-icon-stateful
+                icon-name="utility:like"
+                variant="border-inverse"
+                selected={likeStateInverse}
+                onclick={handleLikeButtonInverseClick}
+                alternative-text="Like"
+            ></c-button-icon-stateful>
+            <c-button-icon-stateful
+                icon-name="utility:answer"
+                variant="border-inverse"
+                selected={answerStateInverse}
+                onclick={handleAnswerButtonInverseClick}
+                alternative-text="Answer"
+                class="slds-m-left_xx-small"
+            ></c-button-icon-stateful>
+        </div>
+
+        <!-- Variant Border Filled -->
+        <h3>Variant Border Filled</h3>
+        <div class="row light-background">
+            <c-button-icon-stateful
+                icon-name="utility:like"
+                variant="border-filled"
+                selected={likeStateFilled}
+                onclick={handleLikeButtonFilledClick}
+                alternative-text="Like"
+            ></c-button-icon-stateful>
+            <c-button-icon-stateful
+                icon-name="utility:answer"
+                variant="border-filled"
+                selected={answerStateFilled}
+                onclick={handleAnswerButtonFilledClick}
+                alternative-text="Answer"
+                class="slds-m-left_xx-small"
+            ></c-button-icon-stateful>
+        </div>
+    </div>
+</template>
