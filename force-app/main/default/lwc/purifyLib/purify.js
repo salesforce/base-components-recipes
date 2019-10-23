@@ -255,6 +255,7 @@ var html$1 = freeze$2([
     'color',
     'cols',
     'colspan',
+    'controls',
     'coords',
     'crossorigin',
     'datetime',
@@ -284,6 +285,7 @@ var html$1 = freeze$2([
     'media',
     'method',
     'min',
+    'minlength',
     'multiple',
     'name',
     'noshade',
@@ -369,6 +371,7 @@ var svg$1 = freeze$2([
     'fill-opacity',
     'fill-rule',
     'filter',
+    'filterunits',
     'flood-color',
     'flood-opacity',
     'font-family',
@@ -441,6 +444,7 @@ var svg$1 = freeze$2([
     'points',
     'preservealpha',
     'preserveaspectratio',
+    'primitiveunits',
     'r',
     'rx',
     'ry',
@@ -522,6 +526,7 @@ var mathMl$1 = freeze$2([
     'dir',
     'display',
     'displaystyle',
+    'encoding',
     'fence',
     'frame',
     'height',
@@ -715,7 +720,6 @@ var _createTrustedTypesPolicy = function _createTrustedTypesPolicy(
         console.warn(
             'TrustedTypes policy ' + policyName + ' could not be created.'
         );
-
         return null;
     }
 };
@@ -730,7 +734,7 @@ function createDOMPurify() {
         return createDOMPurify(root);
     };
 
-    DOMPurify.version = '1.0.10';
+    DOMPurify.version = '2.0.6';
 
     DOMPurify.removed = [];
 
@@ -770,7 +774,6 @@ function createDOMPurify() {
         TrustedTypes,
         originalDocument
     );
-
     var emptyHTML = trustedTypesPolicy ? trustedTypesPolicy.createHTML('') : '';
 
     var _document = document,
@@ -844,6 +847,8 @@ function createDOMPurify() {
 
     var RETURN_DOM_IMPORT = false;
 
+    var RETURN_TRUSTED_TYPE = false;
+
     var SANITIZE_DOM = true;
 
     var KEEP_CONTENT = true;
@@ -853,12 +858,23 @@ function createDOMPurify() {
     var USE_PROFILES = {};
 
     var FORBID_CONTENTS = addToSet({}, [
+        'annotation-xml',
         'audio',
+        'colgroup',
+        'desc',
+        'foreignobject',
         'head',
         'math',
+        'mi',
+        'mn',
+        'mo',
+        'ms',
+        'mtext',
         'script',
         'style',
         'template',
+        'thead',
+        'title',
         'svg',
         'video'
     ]);
@@ -871,7 +887,8 @@ function createDOMPurify() {
         'image'
     ]);
 
-    var URI_SAFE_ATTRIBUTES = addToSet({}, [
+    var URI_SAFE_ATTRIBUTES = null;
+    var DEFAULT_URI_SAFE_ATTRIBUTES = addToSet({}, [
         'alt',
         'class',
         'for',
@@ -912,6 +929,13 @@ function createDOMPurify() {
             'ALLOWED_ATTR' in cfg
                 ? addToSet({}, cfg.ALLOWED_ATTR)
                 : DEFAULT_ALLOWED_ATTR;
+        URI_SAFE_ATTRIBUTES =
+            'ADD_URI_SAFE_ATTR' in cfg
+                ? addToSet(
+                      clone(DEFAULT_URI_SAFE_ATTRIBUTES),
+                      cfg.ADD_URI_SAFE_ATTR
+                  )
+                : DEFAULT_URI_SAFE_ATTRIBUTES;
         FORBID_TAGS = 'FORBID_TAGS' in cfg ? addToSet({}, cfg.FORBID_TAGS) : {};
         FORBID_ATTR = 'FORBID_ATTR' in cfg ? addToSet({}, cfg.FORBID_ATTR) : {};
         USE_PROFILES = 'USE_PROFILES' in cfg ? cfg.USE_PROFILES : false;
@@ -924,6 +948,7 @@ function createDOMPurify() {
         RETURN_DOM = cfg.RETURN_DOM || false;
         RETURN_DOM_FRAGMENT = cfg.RETURN_DOM_FRAGMENT || false;
         RETURN_DOM_IMPORT = cfg.RETURN_DOM_IMPORT || false;
+        RETURN_TRUSTED_TYPE = cfg.RETURN_TRUSTED_TYPE || false;
         FORCE_BODY = cfg.FORCE_BODY || false;
         SANITIZE_DOM = cfg.SANITIZE_DOM !== false;
         KEEP_CONTENT = cfg.KEEP_CONTENT !== false;
@@ -996,6 +1021,7 @@ function createDOMPurify() {
 
         if (ALLOWED_TAGS.table) {
             addToSet(ALLOWED_TAGS, ['tbody']);
+            delete FORBID_TAGS.tbody;
         }
 
         if (freeze) {
@@ -1082,9 +1108,8 @@ function createDOMPurify() {
         (function() {
             try {
                 var doc = _initDocument(
-                    '<svg><p><style><img src="</style><img src=x onerror=1//">'
+                    '<svg><p><textarea><img src="</textarea><img src=x abc=1//">'
                 );
-
                 if (doc.querySelector('svg img')) {
                     useDOMParser = true;
                 }
@@ -1094,7 +1119,7 @@ function createDOMPurify() {
         (function() {
             try {
                 var doc = _initDocument('<x/><title>&lt;/title&gt;&lt;img&gt;');
-                if (doc.querySelector('title').innerHTML.match(/<\/title/)) {
+                if (/<\/title/.test(doc.querySelector('title').innerHTML)) {
                     removeTitle = true;
                 }
             } catch (error) {}
@@ -1126,7 +1151,8 @@ function createDOMPurify() {
             typeof elm.removeChild !== 'function' ||
             !(elm.attributes instanceof NamedNodeMap) ||
             typeof elm.removeAttribute !== 'function' ||
-            typeof elm.setAttribute !== 'function'
+            typeof elm.setAttribute !== 'function' ||
+            typeof elm.namespaceURI !== 'string'
         ) {
             return true;
         }
@@ -1172,6 +1198,14 @@ function createDOMPurify() {
             allowedTags: ALLOWED_TAGS
         });
 
+        if (
+            (tagName === 'svg' || tagName === 'math') &&
+            currentNode.querySelectorAll('p, br').length !== 0
+        ) {
+            _forceRemove(currentNode);
+            return true;
+        }
+
         if (!ALLOWED_TAGS[tagName] || FORBID_TAGS[tagName]) {
             if (
                 KEEP_CONTENT &&
@@ -1195,7 +1229,7 @@ function createDOMPurify() {
 
         if (
             tagName === 'noscript' &&
-            currentNode.innerHTML.match(/<\/noscript/i)
+            /<\/noscript/i.test(currentNode.innerHTML)
         ) {
             _forceRemove(currentNode);
             return true;
@@ -1203,7 +1237,7 @@ function createDOMPurify() {
 
         if (
             tagName === 'noembed' &&
-            currentNode.innerHTML.match(/<\/noembed/i)
+            /<\/noembed/i.test(currentNode.innerHTML)
         ) {
             _forceRemove(currentNode);
             return true;
@@ -1262,7 +1296,9 @@ function createDOMPurify() {
             IS_ALLOWED_URI$$1.test(value.replace(ATTR_WHITESPACE$$1, ''))
         ) {
         } else if (
-            (lcName === 'src' || lcName === 'xlink:href') &&
+            (lcName === 'src' ||
+                lcName === 'xlink:href' ||
+                lcName === 'href') &&
             lcTag !== 'script' &&
             value.indexOf('data:') === 0 &&
             DATA_URI_TAGS[lcTag]
@@ -1334,6 +1370,7 @@ function createDOMPurify() {
                 currentNode.nodeName === 'INPUT' &&
                 lcName === 'type' &&
                 value === 'file' &&
+                hookEvent.keepAttr &&
                 (ALLOWED_ATTR[lcName] || !FORBID_ATTR[lcName])
             ) {
                 continue;
@@ -1450,6 +1487,8 @@ function createDOMPurify() {
                 importedNode.nodeName === 'BODY'
             ) {
                 body = importedNode;
+            } else if (importedNode.nodeName === 'HTML') {
+                body = importedNode;
             } else {
                 body.appendChild(importedNode);
             }
@@ -1458,6 +1497,7 @@ function createDOMPurify() {
                 !RETURN_DOM &&
                 !SAFE_FOR_TEMPLATES &&
                 !WHOLE_DOCUMENT &&
+                RETURN_TRUSTED_TYPE &&
                 dirty.indexOf('<') === -1
             ) {
                 return trustedTypesPolicy
@@ -1531,7 +1571,7 @@ function createDOMPurify() {
             serializedHTML = serializedHTML.replace(ERB_EXPR$$1, ' ');
         }
 
-        return trustedTypesPolicy
+        return trustedTypesPolicy && RETURN_TRUSTED_TYPE
             ? trustedTypesPolicy.createHTML(serializedHTML)
             : serializedHTML;
     };

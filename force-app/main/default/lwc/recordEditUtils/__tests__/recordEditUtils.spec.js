@@ -154,7 +154,7 @@ describe('validateForm', () => {
 
     const getMockoutOutputField = () => {
         return {
-            tagName: 'LIGHTNING-OUTPUT-FIELD'
+            tagName: 'C-OUTPUT-FIELD'
         };
     };
 
