@@ -121,7 +121,7 @@ export default class cTree extends LightningElement {
         if (
             this._currentFocusedItem &&
             relatedTarget &&
-            relatedTarget.tagName !== 'LIGHTNING-TREE-ITEM'
+            relatedTarget.tagName !== 'C-TREE-ITEM'
         ) {
             this.setFocusToItem(this._currentFocusedItem, false);
         }

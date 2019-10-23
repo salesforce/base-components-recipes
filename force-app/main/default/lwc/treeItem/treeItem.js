@@ -128,7 +128,7 @@ export default class cTreeItem extends LightningElement {
             let target = 'anchor';
             if (
                 event.target.tagName === 'BUTTON' ||
-                event.target.tagName === 'LIGHTNING-PRIMITIVE-ICON'
+                event.target.tagName === 'C-PRIMITIVE-ICON'
             ) {
                 target = 'chevron';
             }

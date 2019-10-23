@@ -8,7 +8,7 @@ import {
 
 export { filterByPicklistsInForm, formHasPicklists } from './picklists';
 
-const OUTPUT_FIELD_TAGNAME = 'LIGHTNING-OUTPUT-FIELD';
+const OUTPUT_FIELD_TAGNAME = 'C-OUTPUT-FIELD';
 
 function normalizeRecord(newRecord) {
     const normalizedRecord = Object.assign({}, newRecord);

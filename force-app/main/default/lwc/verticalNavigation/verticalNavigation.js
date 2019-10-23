@@ -4,9 +4,9 @@ import { assert, normalizeBoolean, normalizeString } from 'c/utilsPrivate';
 import subPage from '@salesforce/label/c.lightning_LightningVerticalNavigation_subPage';
 
 const ALLOWED_CHILDREN = [
-    'LIGHTNING-VERTICAL-NAVIGATION-ITEM',
-    'LIGHTNING-VERTICAL-NAVIGATION-ITEM-BADGE',
-    'LIGHTNING-VERTICAL-NAVIGATION-ITEM-ICON'
+    'C-VERTICAL-NAVIGATION-ITEM',
+    'C-VERTICAL-NAVIGATION-ITEM-BADGE',
+    'C-VERTICAL-NAVIGATION-ITEM-ICON'
 ];
 
 export default class cVerticalNavigation extends LightningElement {
