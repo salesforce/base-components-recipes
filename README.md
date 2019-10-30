@@ -7,6 +7,49 @@ View examples for base components in small bites. Each recipe demonstrates a bui
 Base components implement Lightning Design System and are developed using Lightning Web Components. They use the `c` namespace and are a snapshot of the `lightning` namespaced components.
 A `c` namespaced component can contain components in the `lightning` namespace.
 
+## Getting Started
+
+We recommend using a scratch org to experience base component recipes on the Salesforce platform.
+
+1. Set up your environment by following the steps in the [Lightning Web Components Dev Guide](https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.install_setup_develop), which includes:
+    * Install the Salesforce CLI.
+    * Install Visual Studio Code and the Salesforce Extension Pack, or your own favorite code editor.
+    * Set up a Dev Hub org so you can work with Lightning web components in scratch orgs.
+
+2. Authenticate with your Dev Hub org and provide it with an alias, as shown by `mybaseorg` in the following command.
+
+```bash
+sfdx force:auth:web:login -d -a mybaseorg
+```
+
+3. Clone the base-component-recipes repository.
+
+```bash
+git clone https://github.com/forcedotcom/base-components-recipes
+cd base-components-recipes
+```
+
+4. Create a scratch org and provide it with an alias, as shown by `base-recipes` in the following command.
+
+```bash
+sfdx force:org:create -s -f config/project-scratch-def.json -a base-recipes
+```
+
+If you get an error "You do not have access to the [ScratchOrgInfo] object", make sure you have enabled your org as a Dev Hub org. See [Enable Dev Hub in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_enable_devhub.htm). Alternatively, sign up for a Dev Hub org at https://developer.salesforce.com/promotions/orgs/dx-signup.
+
+5. Deploy labels for base component recipes and then deploy the recipes.
+
+```bash
+sfdx force:source:deploy -u <scratch-org-username> -p force-app/main/default/labels
+sfdx force:source:deploy -u <scratch-org-username> -p force-app/main/default/lwc
+```
+
+6. Open the scratch org.
+
+```bash
+sfdx force:org:open
+```
+
 
 ## Usage
 
@@ -35,7 +78,7 @@ export default class HelloWorld extends LightningElement {
 
 ## Documentation
 
-Base component recipes in the c namespace map to components in the lightning namespace. The components below link to documentation for components in the lightning namespace, but the usage is similar.
+Base component recipes in the `c` namespace map to components in the `lightning` namespace. The components below link to documentation for components in the `lightning` namespace, but the usage is similar.
  
 The following components can be customized.
 
@@ -45,12 +88,10 @@ The following components can be customized.
 [c-badge](https://developer.salesforce.com/docs/component-library/bundle/lightning-badge) | A label which holds a small amount of information, such as the number of unread notifications  |  |
 [c-button](https://developer.salesforce.com/docs/component-library/bundle/lightning-button) | A button element that invokes an action | |
 [c-button-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-group) | A group of buttons that invokes similar actions | |
-[c-button-icon](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-icon) | An icon-only button that invokes an action | |
 [c-button-icon-stateful](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-icon-stateful) | An icon-only button that retains state | |
 [c-card](https://developer.salesforce.com/docs/component-library/bundle/lightning-card) | A stylized container around a group of information | |
 [c-carousel](https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel) | A collection of images and captions that are displayed one at a time | |
 [c-checkbox-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-checkbox-group) | A group of checkboxes that enables selection of single or multiple options | |
-[c-click-to-dial](https://developer.salesforce.com/docs/component-library/bundle/lightning-click-to-dial) | A formatted phone number for computer-telephony integrations | |
 [c-combobox](https://developer.salesforce.com/docs/component-library/bundle/lightning-combobox) | A dropdown menu for single selection that uses a read-only input field | |
 [c-dual-listbox](https://developer.salesforce.com/docs/component-library/bundle/lightning-dual-listbox) | A pair of lists that enables multiple options to be selected and reordered | |
 [c-dynamic-icon](https://developer.salesforce.com/docs/component-library/bundle/lightning-dynamic-icon) | A set of animated icons | |
@@ -58,9 +99,8 @@ The following components can be customized.
 [c-formatted-email](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-email) | An email address that opens the default mail app when clicked | |
 [c-formatted-location](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-location) | A pair of latitude and longitude for a location | |
 [c-formatted-name](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-name) | A name that's displayed based on the user locale, which determines the format and order of the constituents (suffix, salutation, etc.) | |
-[c-formatted-number](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-number) | A decimal, currency, or percantage that's displayed base on the user locale | |
+[c-formatted-number](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-number) | A decimal, currency, or percentage that's displayed base on the user locale | |
 [c-formatted-phone](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-phone) | A phone number that opens the default VOIP call app when clicked
-[c-formatted-rich-text](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-rich-text) | A group of rich text that's formatted with whitelisted tags and attributes | |
 [c-formatted-text](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-text) | A group of text with an option  to display URLs and email addresses as links | |
 [c-formatted-time](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-time) | A time value that's displayed based on the user locale | | 
 [c-formatted-url](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-url) | A URL that's displayed as a link | |
@@ -72,7 +112,6 @@ The following components can be customized.
 [c-pill](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill) | A label that can contain a link and can be removed from view | |
 [c-pill-container](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill-container) | A list of pills grouped in a container | |
 [c-progress-bar](https://developer.salesforce.com/docs/component-library/bundle/lightning-progress-bar) | A horizontal progress bar that indicates the progress of an operation | |
-[c-progress-indicator](https://developer.salesforce.com/docs/component-library/bundle/lightning-progress-indicator) | A visual indication on the current, previous, and later steps in a particular process | |
 [c-radio-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-radio-group) | A group of radio butons that can have a single option selected | |
 [c-record-edit-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form) | A form for creating or editing a record with one or more fields | Use `c-record-edit-form` with `lightning-input-field` |
 [c-record-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-form) | A form for creating, displaying, or editing a record with automatic switching between edit and view modes | | 
@@ -89,8 +128,20 @@ The following components can be customized.
 [c-vertical-navigation-section](https://developer.salesforce.com/docs/component-library/bundle/lightning-vertical-navigation) | A group of navigation items within `c-vertical-navigation` with a header | |
 [c-vertical-navigation-overflow](https://developer.salesforce.com/docs/component-library/bundle/lightning-vertical-navigation) | A group of navigation items that can be expanded and collapsed | |
 
+## Contributing
+
+We are not accepting contributions at this time. If you have any questions about base component recipes, please use the following channels.
+
+* [Trailblazer Community - Lightning Web Components](https://success.salesforce.com/ui/core/chatter/groups/GroupProfilePage?g=0F93A000000LlT2SAK)
+* [Salesforce Developer Forums](https://developer.salesforce.com/forums)
+* [Salesforce Stackexchange](https://salesforce.stackexchange.com/)
 
 ## FAQ
 
 - **Where can I see more examples on how to use Lightning Web Components?**
-    - Check out [lwc-recipes](https://github.com/trailheadapps/lwc-recipes/). For sample apps using Lightning Web Components, visit https://trailhead.salesforce.com/sample-gallery.
+ 
+  Check out [lwc-recipes](https://github.com/trailheadapps/lwc-recipes/). For sample apps using Lightning Web Components, visit https://trailhead.salesforce.com/sample-gallery.
+
+- **How do I create a Lightning Web Component?**
+
+  See the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/create-a-hello-world-lightning-web-component) Trailhead project.
