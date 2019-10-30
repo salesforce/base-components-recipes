@@ -171,10 +171,12 @@ export class FieldConstraintApi {
     reportValidity(callback) {
         const valid = this.checkValidity();
 
-        this.inputComponent.classList.toggle('slds-has-error', !valid);
+        if (this.inputComponent) {
+            this.inputComponent.classList.toggle('slds-has-error', !valid);
 
-        if (callback) {
-            callback(this.validationMessage);
+            if (callback) {
+                callback(this.validationMessage);
+            }
         }
 
         return valid;

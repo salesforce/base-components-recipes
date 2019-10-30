@@ -4,8 +4,7 @@ import iconSvgTemplates from 'lightning/iconSvgTemplates';
 import { getIconSvgTemplates } from 'lightning/configProvider';
 
 jest.mock('lightning/configProvider', () => ({
-    getIconSvgTemplates: jest.fn(),
-    getPathPrefix: jest.fn()
+    getIconSvgTemplates: jest.fn()
 }));
 
 const createPrimitiveIcon = (props = {}) => {

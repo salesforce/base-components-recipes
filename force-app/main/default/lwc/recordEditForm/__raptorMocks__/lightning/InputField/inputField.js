@@ -10,7 +10,8 @@ export default class MockInputField extends LightningElement {
         this.internalValue = val;
     }
 
-    @api get value() {
+    @api
+    get value() {
         return this.internalValue;
     }
 
@@ -57,10 +58,11 @@ export default class MockInputField extends LightningElement {
 
     renderedCallback() {
         this.dispatchEvent(
+            // eslint-disable-next-line lightning-global/no-custom-event-bubbling
             new CustomEvent('registerinputfield', {
                 bubbles: true,
                 composed: true,
-                cancelable: true
+                cancelable: true,
             })
         );
     }

@@ -478,7 +478,7 @@
     <language>en_US</language>
     <protected>false</protected>
     <shortDescription>incrementCounter</shortDescription>
-    <value>Increment counter</value>
+    <value>Increase number</value>
   </labels>
   <labels>
     <categories>lightning</categories>
@@ -486,7 +486,7 @@
     <language>en_US</language>
     <protected>false</protected>
     <shortDescription>decrementCounter</shortDescription>
-    <value>Decrement counter</value>
+    <value>Decrease number</value>
   </labels>
   <labels>
     <categories>lightning</categories>

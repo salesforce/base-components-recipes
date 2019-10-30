@@ -358,7 +358,9 @@ export default class cBaseCombobox extends LightningElement {
         const listbox = event.target;
         const height = listbox.getBoundingClientRect().height;
         const maxScroll = listbox.scrollHeight - height;
-        const bottomReached = listbox.scrollTop >= maxScroll;
+
+        const buffer = 20;
+        const bottomReached = listbox.scrollTop + buffer >= maxScroll;
         if (bottomReached) {
             this._events.dispatchEndReached();
         }
@@ -612,7 +614,8 @@ export default class cBaseCombobox extends LightningElement {
         }
 
         const noOptions = !Array.isArray(this.items) || this.items.length === 0;
-        if (noOptions) {
+
+        if (noOptions && !this._requestedDropdownOpen) {
             this._events.dispatchDropdownOpenRequest();
         }
 

@@ -98,6 +98,9 @@ function handleEscapeOrTabKey({ event, dropdownInterface }) {
 }
 
 function handleTypedCharacters({ event, currentIndex, dropdownInterface }) {
+    if (event.key && event.key.length > 1) {
+        return;
+    }
     if (!dropdownInterface.isDropdownVisible()) {
         dropdownInterface.openDropdownIfNotEmpty();
     }

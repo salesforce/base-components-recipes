@@ -1,7 +1,13 @@
 const ALLOWED_DOMAINS = new Set([
     'www.youtube.com',
     'player.vimeo.com',
-    'play.vidyard.com'
+    'play.vidyard.com',
+    'players.brightcove.net',
+    'bcove.video',
+    'player.cloudinary.com',
+    'fast.wistia.net',
+    'i1.adis.ws',
+    's1.adis.ws'
 ]);
 
 export function hasOnlyAllowedVideoIframes(htmlString) {

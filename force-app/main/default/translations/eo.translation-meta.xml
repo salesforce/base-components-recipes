@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>«คู้Eöש是[[Uploading images isn't supported for guest users.]]是שöEคู้是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>«คู้Eöש是[[required]]是שöEคู้»</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>«คู้Eöש是[[Clear]]是שöEคู้»</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Increase number]]是שöEคู้»</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Decrease number]]是שöEคู้»</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>«คู้Eöש是[[Warning]]是שöEคู้»</label>
