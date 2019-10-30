@@ -60,6 +60,10 @@ export default class cTabBar extends LightningElement {
         if (this._connected && value === 'vertical') {
             if (this._resizeObserver) {
                 this._resizeObserver.disconnect();
+
+                this._allTabs.forEach(tab => {
+                    tab.visible = true;
+                });
             }
         }
         this._variant = value;

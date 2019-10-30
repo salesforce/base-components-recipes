@@ -1,6 +1,6 @@
 import { LightningElement, api } from 'lwc';
 const initial = 'initial';
-export default class cInputField extends LightningElement {
+export default class LightningInputField extends LightningElement {
     @api fieldName;
     val = 'initial';
 
@@ -8,7 +8,8 @@ export default class cInputField extends LightningElement {
         this.val = val;
     }
 
-    @api get value() {
+    @api
+    get value() {
         return this.val;
     }
 

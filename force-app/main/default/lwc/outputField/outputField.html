@@ -53,7 +53,7 @@
         <c-formatted-text if:true={isTypeTextArea} class={computedFieldClass} linkify="true" value={value}></c-formatted-text>
 
         <!-- Rich Text Area -->
-        <c-formatted-rich-text if:true={isTypeRichText} class={computedFieldClass} value={value}></c-formatted-rich-text>
+        <lightning-formatted-rich-text if:true={isTypeRichText} class={computedFieldClass} value={value}></lightning-formatted-rich-text>
 
         <!-- Encrypted String -->
         <c-formatted-text if:true={isTypeEncryptedString} class={computedFieldClass} value={value}></c-formatted-text>

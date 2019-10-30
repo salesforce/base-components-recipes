@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>Uploading images isn't supported for guest users.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>required</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>Clear</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Increase number</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Decrease number</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>Warning</label>

@@ -1,4 +1,4 @@
-import { ArraySlice } from './utilsPrivate';
+import { ArraySlice } from './utility';
 
 export class EventEmitter {
     constructor() {
