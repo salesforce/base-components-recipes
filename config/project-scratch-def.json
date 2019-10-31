@@ -1,10 +1,10 @@
 {
-  "orgName": "My Company",
-  "edition": "Developer",
-  "features": [],
-  "settings": {
-    "lightningExperienceSettings": {
-        "enableS1DesktopEnabled": true
+    "orgName": "My Company",
+    "edition": "Developer",
+    "features": [],
+    "settings": {
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        }
     }
-  }
 }
