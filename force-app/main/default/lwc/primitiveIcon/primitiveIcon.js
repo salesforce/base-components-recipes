@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2019, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: MIT
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ */
+
 import dir from '@salesforce/i18n/dir';
 import { LightningElement, api } from 'lwc';
 import { classSet } from 'c/utils';

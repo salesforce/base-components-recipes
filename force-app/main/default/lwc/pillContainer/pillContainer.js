@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2019, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: MIT
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ */
+
 import labelContainerLabel from '@salesforce/label/c.lightning_LightningPillContainer_label';
 import pillContainerMoreLabel from '@salesforce/label/c.lightning_LightningPillContainer_more';
 import { LightningElement, api, track } from 'lwc';

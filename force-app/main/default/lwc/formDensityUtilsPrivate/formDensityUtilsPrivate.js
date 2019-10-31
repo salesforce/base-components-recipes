@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2019, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: MIT
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ */
+
 import { LightningResizeObserver } from 'c/resizeObserver';
 import { APP_DENSIFICATION_BREAKPOINT, appDensityValues } from 'c/layoutUtils';
 import { densityValues, labelAlignValues } from 'c/fieldUtils';

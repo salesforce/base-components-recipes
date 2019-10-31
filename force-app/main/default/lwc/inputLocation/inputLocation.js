@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2019, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: MIT
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ */
+
 import labelCoordinateIsRequired from '@salesforce/label/c.lightning_LightningInputLocation_coordinateIsRequired';
 import labelInvalidLatitude from '@salesforce/label/c.lightning_LightningInputLocation_invalidLatitude';
 import labelInvalidLongitude from '@salesforce/label/c.lightning_LightningInputLocation_invalidLongitude';
