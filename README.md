@@ -1,11 +1,8 @@
 # Base Components Recipes
 
-View examples for base components in small bites. Each recipe demonstrates a building block to build pages and apps quickly. Use and customize the recipes in your apps.
+View examples for base components in small bites. Each recipe demonstrates a building block to build pages and apps quickly. Use and customize the recipes in your apps. 
 
-> Base components recipes are designed to run on the Salesforce platform. To experience Lightning Web Components on any platform, visit https://lwc.dev.
-
-Base components implement Lightning Design System and are developed using Lightning Web Components. They use the `c` namespace and are a snapshot of the `lightning` namespaced components.
-A `c` namespaced component can contain components in the `lightning` namespace.
+Base component recipes open up the source for base components at https://developer.salesforce.com/docs/component-library. Explore the inner workings of the components and use the source to build new components with your own requirements. The possibilities are endless with the source in your hands! Base components recipes are designed to run on the Salesforce platform and on any platform. The components implement Lightning Design System and are developed using Lightning Web Components.
 
 ## Getting Started
 
@@ -78,7 +75,7 @@ export default class HelloWorld extends LightningElement {
 
 ## Documentation
 
-Base component recipes in the `c` namespace map to components in the `lightning` namespace. The components below link to documentation for components in the `lightning` namespace, but the usage is similar.
+Base component recipes in the `c` namespace map to components in the `lightning` namespace. The components below link to documentation for components in the `lightning` namespace, but the usage is similar unless otherwise noted.
 
 **Component** | **Description** | **Comment** |
 -----|-----|-----|
@@ -108,13 +105,13 @@ Base component recipes in the `c` namespace map to components in the `lightning`
 [c-input-location](https://developer.salesforce.com/docs/component-library/bundle/lightning-input-location) | A pair of latitude and longitude fields | |
 [c-layout](https://developer.salesforce.com/docs/component-library/bundle/lightning-layout) | A responsive grid system | This component contains slots and isn't supported as an Aura component.
 [c-layout-item](https://developer.salesforce.com/docs/component-library/bundle/lightning-layout-item) | A container in a grid system | This component contains slots and isn't supported as an Aura component.
-[c-output-field](https://developer.salesforce.com/docs/component-library/bundle/lightning-output-field) | A read-only display of a label, help text, and value for a field on a Salesforce object. Use this component within `c-record-view-form`. | |
+[c-output-field](https://developer.salesforce.com/docs/component-library/bundle/lightning-output-field) | A read-only display of a label, help text, and value for a field on a Salesforce object. Use this component within `c-record-view-form`. | For Salesforce platform only
 [c-pill](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill) | A label that can contain a link and can be removed from view | This component contains slots and isn't supported as an Aura component.
 [c-pill-container](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill-container) | A list of pills grouped in a container | |
 [c-radio-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-radio-group) | A group of radio butons that can have a single option selected | |
-[c-record-edit-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form) | A form for creating or editing a record with one or more fields | Use `c-record-edit-form` with `lightning-input-field`.
-[c-record-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-form) | A form for creating, displaying, or editing a record with automatic switching between edit and view modes | | 
-[c-record-view-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-view-form) | A form for displaying record data. Use `c-output-field` within `c-record-view-form`. | This component contains slots and isn't supported as an Aura component.
+[c-record-edit-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form) | A form for creating or editing a record with one or more fields | For Salesforce platform only. Use `c-record-edit-form` with `lightning-input-field`.
+[c-record-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-form) | A form for creating, displaying, or editing a record with automatic switching between edit and view modes | For Salesforce platform only 
+[c-record-view-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-view-form) | A form for displaying record data. Use `c-output-field` within `c-record-view-form`. | For Salesforce platform only. This component contains slots and isn't supported as an Aura component.
 [c-relative-date-time](https://developer.salesforce.com/docs/component-library/bundle/lightning-relative-date-time) | A group of text depicting how a specified time relates to the current time, such as "a few seconds ago" or "in 5 years" | |
 [c-slider](https://developer.salesforce.com/docs/component-library/bundle/lightning-slider) | An input range slider that enables selection of a value between two specified numbers | |
 [c-spinner](https://developer.salesforce.com/docs/component-library/bundle/lightning-spinner) | An animated spinner |
@@ -198,7 +195,7 @@ We are not accepting contributions at this time. If you have any questions about
 
 - **Where can I see more examples on how to use Lightning Web Components?**
  
-  Check out [lwc-recipes](https://github.com/trailheadapps/lwc-recipes/). For sample apps using Lightning Web Components, visit https://trailhead.salesforce.com/sample-gallery.
+  For examples on running Lightning Web Components on Salesforce platform, visit [lwc-recipes](https://github.com/trailheadapps/lwc-recipes/). For more sample apps using Lightning Web Components, visit https://trailhead.salesforce.com/sample-gallery. To experience Lightning Web Components on any platform, visit https://lwc.dev.
 
 - **How do I create a Lightning Web Component?**
 
