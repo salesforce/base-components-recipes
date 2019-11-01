@@ -3,6 +3,7 @@
 #
 
 **/staticresources/**
+.localdevserver
 .sfdx
 coverage/
 jsconfig.json
