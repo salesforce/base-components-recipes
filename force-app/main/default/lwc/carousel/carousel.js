@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2019, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: MIT
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ */
+
 import labelAutoPlay from '@salesforce/label/c.lightning_LightningCarousel_autoPlay';
 import labelTabString from '@salesforce/label/c.lightning_LightningCarousel_tabString';
 import { LightningElement, api, track } from 'lwc';

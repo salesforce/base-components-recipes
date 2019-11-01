@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2019, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: MIT
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ */
+
 import { LightningElement, track } from 'lwc';
 import showMoreLabel from '@salesforce/label/c.lightning_LightningVerticalNavigation_showMore';
 import showLessLabel from '@salesforce/label/c.lightning_LightningVerticalNavigation_showLess';

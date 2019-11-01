@@ -6,5 +6,6 @@
         "**/.sfdx": true
     },
     "html.suggest.angular1": false,
-    "html.suggest.ionic": false
+    "html.suggest.ionic": false,
+    "eslint.nodePath": "/Users/gcordero/.vscode/extensions/salesforce.salesforcedx-vscode-lwc-47.4.0/node_modules"
 }

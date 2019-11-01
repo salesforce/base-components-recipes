@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2019, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: MIT
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ */
+
 import numberFormat from '@salesforce/i18n/number.numberFormat';
 import percentFormat from '@salesforce/i18n/number.percentFormat';
 import currencyFormat from '@salesforce/i18n/number.currencyFormat';
