@@ -29,17 +29,10 @@ export default class cCard extends LightningElement {
     }
 
     renderedCallback() {
-        const footerWrapper = this.template.querySelector('.slds-card__footer');
-        const noFooterContent = this.template.querySelector(
-            'slot[name="footer"] [data-id="default-content"]'
-        );
-
-        if (noFooterContent) {
-            if (footerWrapper.remove) {
-                footerWrapper.remove();
-            } else if (footerWrapper.parentNode) {
-                footerWrapper.parentNode.removeChild(footerWrapper);
-            }
+        const footer = this.template.querySelector('.slds-card__footer');
+        const slot = footer.querySelector('slot');
+        if (slot.assignedElements().length === 0) {
+            footer.parentNode.removeChild(footer);
         }
     }
 

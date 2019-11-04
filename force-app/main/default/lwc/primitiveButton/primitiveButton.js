@@ -127,9 +127,6 @@ export default class cPrimitiveButton extends LightningElement {
         return this.state.ariaAtomic || null;
     }
 
-    @api
-    focus() {}
-
     constructor() {
         super();
 

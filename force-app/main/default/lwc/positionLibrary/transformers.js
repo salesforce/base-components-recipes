@@ -12,7 +12,6 @@ class Transformer {
         this.transformX = transformX || function() {};
         this.transformY = transformY || function() {};
     }
-    transform() {}
 }
 
 class TopTransformer extends Transformer {
