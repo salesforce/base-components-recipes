@@ -66,9 +66,7 @@ export function getMockElement(clientBoundingRect) {
 
     return mockElement;
 }
-class MockMutationObserver {
-    observe() {}
-}
+class MockMutationObserver {}
 
 const MockWindow = new MockElement({
     top: 2,
