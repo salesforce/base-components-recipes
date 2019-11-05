@@ -18,6 +18,9 @@ export function normalizeRecordId(recordId) {
             let decodeValue = 0;
             for (let bit = 0; bit < 5; bit++) {
                 const c = recordId.charAt(set * 5 + bit);
+                if (c >= 'A' && c <= 'Z') {
+                    decodeValue += 1 << bit;
+                }
             }
 
             suffix += CASE_DECODE_STRING.charAt(decodeValue);
