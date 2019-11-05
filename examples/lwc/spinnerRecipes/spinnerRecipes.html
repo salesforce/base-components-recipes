@@ -1,0 +1,26 @@
+<template>
+    <div class="exampleHolder">
+        <c-spinner alternative-text="Loading" size="small"></c-spinner>
+    </div>
+    <div class="exampleHolder">
+        <c-spinner alternative-text="Loading" size="medium"></c-spinner>
+    </div>
+    <div class="exampleHolder">
+        <c-spinner alternative-text="Loading" size="large"></c-spinner>
+    </div>
+
+    <div class="backgroundInverse">
+        <c-spinner alternative-text="Loading" variant="inverse"></c-spinner>
+    </div>
+
+    <c-button label="Toggle" variant="brand" onclick={handleClick}></c-button>
+
+    <div class="exampleHolder">
+        <template if:true={loaded}>
+            Put loaded content here
+        </template>
+        <template if:false={loaded}>
+            <c-spinner alternative-text="Loading"></c-spinner>
+        </template>
+    </div>
+</template>

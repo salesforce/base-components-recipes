@@ -1,0 +1,51 @@
+<template>
+    <c-button-stateful
+        label-when-off="Follow"
+        label-when-on="Following"
+        label-when-hover="Unfollow"
+        icon-name-when-off="utility:add"
+        icon-name-when-on="utility:check"
+        icon-name-when-hover="utility:close"
+        selected={isSelected}
+        onclick={handleClick}
+    >
+    </c-button-stateful>
+
+    <div class="backgroundInverse">
+        <c-button-stateful
+            label-when-off="Follow"
+            label-when-on="Following"
+            label-when-hover="Unfollow"
+            icon-name-when-off="utility:add"
+            icon-name-when-on="utility:check"
+            icon-name-when-hover="utility:close"
+            variant="inverse"
+            selected={isSelected}
+            onclick={handleClick}
+        >
+        </c-button-stateful>
+    </div>
+
+    <c-button-stateful
+        label-when-off="Follow"
+        label-when-on="Following"
+        label-when-hover="Unfollow"
+        variant="brand"
+        selected={isSelected}
+        onclick={handleClick}
+    >
+    </c-button-stateful>
+
+    <div class="backgroundInverse">
+        <c-button-stateful
+            label-when-off="Like"
+            label-when-on="Liked"
+            icon-name-when-off="utility:like"
+            icon-name-when-on="utility:like"
+            variant="text"
+            selected={isSelected}
+            onclick={handleClick}
+        >
+        </c-button-stateful>
+    </div>
+</template>

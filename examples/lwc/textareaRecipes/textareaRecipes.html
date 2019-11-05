@@ -1,0 +1,32 @@
+<template>
+    <c-textarea
+        name="input4"
+        readonly
+        value="initial value"
+        label="Read-only textarea field"
+    ></c-textarea>
+    <c-textarea
+        name="input5"
+        disabled
+        value="initial value"
+        label="Disabled textarea field"
+    ></c-textarea>
+    <c-textarea
+        name="input6"
+        required
+        value="initial value"
+        label="Required textarea field with a maximum length of 60 characters"
+        maxlength="60"
+    ></c-textarea>
+    <c-textarea
+        name="input7"
+        required
+        value=""
+        placeholder="compose your tweet"
+        label="Required textarea field with a maximum length of 140 characters"
+        maxlength="140"
+        message-when-too-long="A maximum of 140 characters are allowed in a tweet."
+        message-when-value-missing="An empty tweet cannot be posted."
+    >
+    </c-textarea>
+</template>
