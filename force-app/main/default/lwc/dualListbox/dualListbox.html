@@ -40,12 +40,12 @@
                     </div>
                 </div>
                 <div class="slds-dueling-list__column">
-                    <lightning-button-icon icon-name="utility:right" variant="container" onclick={handleRightButtonClick} disabled={moveButtonsDisabled}
+                    <c-button-icon icon-name="utility:right" variant="container" onclick={handleRightButtonClick} disabled={moveButtonsDisabled}
                         title={addButtonLabel} alternative-text={addButtonLabel}>
-                    </lightning-button-icon>
-                    <lightning-button-icon icon-name="utility:left" variant="container" onclick={handleLeftButtonClick} disabled={moveButtonsDisabled}
+                    </c-button-icon>
+                    <c-button-icon icon-name="utility:left" variant="container" onclick={handleLeftButtonClick} disabled={moveButtonsDisabled}
                         title={removeButtonLabel} alternative-text={removeButtonLabel}>
-                    </lightning-button-icon>
+                    </c-button-icon>
                 </div>
                 <div class="slds-dueling-list__column slds-dueling-list__column_responsive">
                     <span class="slds-form-element__label" id="selected-list-label">{selectedLabel}</span>
@@ -74,12 +74,12 @@
 
                 <template if:false={disableReordering}>
                     <div class="slds-dueling-list__column">
-                        <lightning-button-icon icon-name="utility:up" variant="container" onclick={handleUpButtonClick} disabled={disabled} title={upButtonLabel}
+                        <c-button-icon icon-name="utility:up" variant="container" onclick={handleUpButtonClick} disabled={disabled} title={upButtonLabel}
                             alternative-text={upButtonLabel}>
-                        </lightning-button-icon>
-                        <lightning-button-icon icon-name="utility:down" variant="container" onclick={handleDownButtonClick} disabled={disabled} title={downButtonLabel}
+                        </c-button-icon>
+                        <c-button-icon icon-name="utility:down" variant="container" onclick={handleDownButtonClick} disabled={disabled} title={downButtonLabel}
                             alternative-text={downButtonLabel}>
-                        </lightning-button-icon>
+                        </c-button-icon>
                     </div>
                 </template>
             </div>

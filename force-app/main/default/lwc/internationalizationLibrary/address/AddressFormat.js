@@ -1213,6 +1213,40 @@ var address = {
                     var singleChar = _step.value;
 
                     var codePoint = singleChar.codePointAt(0);
+                    if (
+                        (0x2e80 <= codePoint && codePoint <= 0x2eff) ||
+                        (0x3300 <= codePoint && codePoint <= 0x33ff) ||
+                        (0xfe30 <= codePoint && codePoint <= 0xfe4f) ||
+                        (0xf900 <= codePoint && codePoint <= 0xfaff) ||
+                        (0x2f800 <= codePoint && codePoint <= 0x2fa1f) ||
+                        (0x3000 <= codePoint && codePoint <= 0x303f) ||
+                        (0x4e00 <= codePoint && codePoint <= 0x9fff) ||
+                        (0x3400 <= codePoint && codePoint <= 0x4dbf) ||
+                        (0x20000 <= codePoint && codePoint <= 0x2a6df) ||
+                        (0x2a700 <= codePoint && codePoint <= 0x2b73f) ||
+                        (0x2b740 <= codePoint && codePoint <= 0x2b81f) ||
+                        (0x2b820 <= codePoint && codePoint <= 0x2ceaf) ||
+                        (0x2ceb0 <= codePoint && codePoint <= 0x2ebef) ||
+                        (0x3200 <= codePoint && codePoint <= 0x32ff) ||
+                        (0x31c0 <= codePoint && codePoint <= 0x31ef) ||
+                        (0x3100 <= codePoint && codePoint <= 0x312f) ||
+                        (0x31a0 <= codePoint && codePoint <= 0x31bf) ||
+                        (0x2f00 <= codePoint && codePoint <= 0x2fdf) ||
+                        (0x2ff0 <= codePoint && codePoint <= 0x2fff) ||
+                        (0xff00 <= codePoint && codePoint <= 0xffef) ||
+                        (0x3040 <= codePoint && codePoint <= 0x309f) ||
+                        (0x30a0 <= codePoint && codePoint <= 0x30ff) ||
+                        (0x31f0 <= codePoint && codePoint <= 0x31ff) ||
+                        (0x1b000 <= codePoint && codePoint <= 0x1b0ff) ||
+                        (0x1b100 <= codePoint && codePoint <= 0x1b12f) ||
+                        (0x1100 <= codePoint && codePoint <= 0x11ff) ||
+                        (0xac00 <= codePoint && codePoint <= 0xd7af) ||
+                        (0x3130 <= codePoint && codePoint <= 0x318f) ||
+                        (0xa960 <= codePoint && codePoint <= 0xa97f) ||
+                        (0xd7b0 <= codePoint && codePoint <= 0xd7ff)
+                    ) {
+                        return true;
+                    }
                 }
             } catch (err) {
                 _didIteratorError = true;

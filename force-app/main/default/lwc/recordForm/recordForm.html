@@ -29,13 +29,13 @@
                                     </template>
                                     <template if:true={_viewMode}>
                                         <c-output-field field-class="slds-border_bottom" class={computedOutputClass} key={field.field} field-name={field.field}>
-                                            <lightning-button-icon
+                                            <c-button-icon
                                                 if:true={field.editable}
                                                 onclick={toggleEdit}
                                                 icon-class="slds-button__icon_hint"
                                                 icon-name="utility:edit"
                                                 variant="bare"
-                                                ></lightning-button-icon>
+                                                ></c-button-icon>
                                         </c-output-field>
                                     </template>
                                 </div>
