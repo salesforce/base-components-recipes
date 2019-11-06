@@ -8,28 +8,28 @@ export default class ButtonMenuRecipes extends LightningElement {
         {
             id: 'item-01',
             label: 'Alpha',
-            value: 'alpha',
+            value: 'alpha'
         },
         {
             id: 'item-02',
             label: 'Beta',
-            value: 'beta',
+            value: 'beta'
         },
         {
             id: 'item-03',
             label: 'Gamma',
-            value: 'gamma',
+            value: 'gamma'
         },
         {
             id: 'item-04',
             label: 'Delta',
-            value: 'delta',
+            value: 'delta'
         },
         {
             id: 'item-05',
             label: 'Epsilon',
-            value: 'epsilon',
-        },
+            value: 'epsilon'
+        }
     ];
 
     // more complex data source with additional content
@@ -40,32 +40,32 @@ export default class ButtonMenuRecipes extends LightningElement {
             value: 'alpha',
             disabled: false,
             prefixIconName: 'utility:bookmark',
-            iconName: 'utility:animal_and_nature',
+            iconName: 'utility:animal_and_nature'
         },
         {
             id: 'item-02',
             label: 'Beta',
             value: 'beta',
             disabled: true,
-            iconName: 'utility:company',
+            iconName: 'utility:company'
         },
         {
             id: 'item-03',
             label: 'Gamma',
             value: 'gamma',
-            prefixIconName: 'utility:date_input',
+            prefixIconName: 'utility:date_input'
         },
         {
             id: 'item-04',
             label: 'Delta',
-            value: 'delta',
+            value: 'delta'
         },
         {
             id: 'item-05',
             label: 'Epsilon',
             value: 'epsilon',
-            iconName: 'utility:knowledge_base',
-        },
+            iconName: 'utility:knowledge_base'
+        }
     ];
 
     handleOnselect(event) {

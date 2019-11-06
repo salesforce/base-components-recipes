@@ -1,7 +1,7 @@
 import { LightningElement, track } from 'lwc';
 
 export default class ComboboxRecipes extends LightningElement {
-    value = 'inProgress'
+    value = 'inProgress';
     @track state = {
         progress: this.value,
         progressRequired: '',
