@@ -1,8 +1,10 @@
 # Base Components Recipes
 
-View examples for base components in small bites. Each recipe demonstrates a building block to build pages and apps quickly. Use and customize the recipes in your apps. 
+View examples for base components in small bites. Each recipe demonstrates a building block to build pages and apps quickly. Use and customize the recipes in your apps on any platform. 
 
-Base component recipes open up the source for base components at https://developer.salesforce.com/docs/component-library. Explore the inner workings of the components and use the source to build new components with your own requirements. The possibilities are endless with the source in your hands! Base components recipes are designed to run on the Salesforce platform and on any platform. The components implement Lightning Design System and are developed using Lightning Web Components.
+Base component recipes open up the source for base components at https://developer.salesforce.com/docs/component-library. Explore the inner workings of the components and use the source to build new components with your own requirements. The possibilities are endless with the source in your hands! 
+
+Base component recipes implement Lightning Design System and are developed using Lightning Web Components. A `c` namespaced component can contain components in the `lightning` namespace.
 
 ## Getting Started
 
@@ -34,11 +36,10 @@ sfdx force:org:create -s -f config/project-scratch-def.json -a base-recipes
 
 If you get an error "You do not have access to the [ScratchOrgInfo] object", make sure you have enabled your org as a Dev Hub org. See [Enable Dev Hub in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_enable_devhub.htm). Alternatively, sign up for a Dev Hub org at https://developer.salesforce.com/promotions/orgs/dx-signup.
 
-5. Deploy labels for base component recipes and then deploy the recipes.
+5. Push the recipes to your scratch org.
 
 ```bash
-sfdx force:source:deploy -u <scratch-org-username> -p force-app/main/default/labels
-sfdx force:source:deploy -u <scratch-org-username> -p force-app/main/default/lwc
+sfdx force:source:push
 ```
 
 6. Open the scratch org.
@@ -85,12 +86,14 @@ Base component recipes in the `c` namespace map to components in the `lightning`
 [c-badge](https://developer.salesforce.com/docs/component-library/bundle/lightning-badge) | A label which holds a small amount of information, such as the number of unread notifications  |  |
 [c-button](https://developer.salesforce.com/docs/component-library/bundle/lightning-button) | A button element that invokes an action | |
 [c-button-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-group) | A group of buttons that invokes similar actions | |
+[c-button-icon](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-icon) | An icon-only button element that invokes an action | The `tooltip` attribute isn't supported.
 [c-button-icon-stateful](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-icon-stateful) | An icon-only button that retains state | |
+[c-button-menu](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-menu) | A dropdown menu with a list of actions or functions. Use this component with `c-menu-divider` and `c-menu-subheader` to create menu dividers and sub-headings. | The `tooltip` attribute isn't supported. For the `menu-alignment` attribute, the `auto` alignment isn't supported.
 [c-button-stateful](https://developer.salesforce.com/docs/component-library/bundle/lightning-button-stateful) | A button that toggles between states | |
 [c-card](https://developer.salesforce.com/docs/component-library/bundle/lightning-card) | A stylized container around a group of information | This component contains slots and isn't supported as an Aura component. 
 [c-carousel](https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel) | A collection of images and captions that are displayed one at a time. Use this component with c-carousel-image | This component contains slots and isn't supported as an Aura component.
 [c-checkbox-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-checkbox-group) | A group of checkboxes that enables selection of single or multiple options | |
-[c-combobox](https://developer.salesforce.com/docs/component-library/bundle/lightning-combobox) | A dropdown menu for single selection that uses a read-only input field | |
+[c-combobox](https://developer.salesforce.com/docs/component-library/bundle/lightning-combobox) | A read-only input field with a dropdown list for single selection | |
 [c-dual-listbox](https://developer.salesforce.com/docs/component-library/bundle/lightning-dual-listbox) | A pair of lists that enables multiple options to be selected and reordered | |
 [c-dynamic-icon](https://developer.salesforce.com/docs/component-library/bundle/lightning-dynamic-icon) | A set of animated icons | |
 [c-formatted-date-time](https://developer.salesforce.com/docs/component-library/bundle/lightning-formatted-date-time) | A pair of date and time that's displayed based on the user locale | |
@@ -105,12 +108,13 @@ Base component recipes in the `c` namespace map to components in the `lightning`
 [c-input-location](https://developer.salesforce.com/docs/component-library/bundle/lightning-input-location) | A pair of latitude and longitude fields | |
 [c-layout](https://developer.salesforce.com/docs/component-library/bundle/lightning-layout) | A responsive grid system | This component contains slots and isn't supported as an Aura component.
 [c-layout-item](https://developer.salesforce.com/docs/component-library/bundle/lightning-layout-item) | A container in a grid system | This component contains slots and isn't supported as an Aura component.
-[c-output-field](https://developer.salesforce.com/docs/component-library/bundle/lightning-output-field) | A read-only display of a label, help text, and value for a field on a Salesforce object. Use this component within `c-record-view-form`. | For Salesforce platform only
+[c-menu-item](https://developer.salesforce.com/docs/component-library/bundle/lightning-menu-item/documentation) | A list item in a menu. Use this component within `c-button-menu` | |
+[c-output-field](https://developer.salesforce.com/docs/component-library/bundle/lightning-output-field) | A read-only display of a label, help text, and value for a field on a Salesforce object. Use this component within `c-record-view-form`. | For Salesforce platform only.
 [c-pill](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill) | A label that can contain a link and can be removed from view | This component contains slots and isn't supported as an Aura component.
 [c-pill-container](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill-container) | A list of pills grouped in a container | |
 [c-radio-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-radio-group) | A group of radio butons that can have a single option selected | |
 [c-record-edit-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form) | A form for creating or editing a record with one or more fields | For Salesforce platform only. Use `c-record-edit-form` with `lightning-input-field`.
-[c-record-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-form) | A form for creating, displaying, or editing a record with automatic switching between edit and view modes | For Salesforce platform only 
+[c-record-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-form) | A form for creating, displaying, or editing a record with automatic switching between edit and view modes | For Salesforce platform only. 
 [c-record-view-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-view-form) | A form for displaying record data. Use `c-output-field` within `c-record-view-form`. | For Salesforce platform only. This component contains slots and isn't supported as an Aura component.
 [c-relative-date-time](https://developer.salesforce.com/docs/component-library/bundle/lightning-relative-date-time) | A group of text depicting how a specified time relates to the current time, such as "a few seconds ago" or "in 5 years" | |
 [c-slider](https://developer.salesforce.com/docs/component-library/bundle/lightning-slider) | An input range slider that enables selection of a value between two specified numbers | |
@@ -132,15 +136,6 @@ You can create up to 5,000 custom labels for your organization, and they can be 
 #### Update Labels
 
 To update the Custom Labels metadata, go to the `force-app/main/default/labels directory`. The labels are available in the `CustomLabels.labels-meta.xml` file. For an example of a CustomLabels definition, see the [Metadata API Dev Guide](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_customlabels.htm).
-
-#### Deploy Labels
-
-Deploy your labels before deploying the base component recipes. You may encounter dependency check errors if you deploy your labels after deploying the base component recipes. To deploy labels, run the following SFDX commands.
-
-```bash
-sfdx force:source:deploy -u <scratch-org-username> -p force-app/main/default/labels
-sfdx force:source:deploy -u <scratch-org-username> -p force-app/main/default/lwc
-```
 
 #### Customize Labels
 
