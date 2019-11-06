@@ -9,7 +9,30 @@
             options={options}
             onchange={handleChange}
         ></c-combobox>
-
-        <p>Selected value is: {value}</p>
+        <p>Selected value is: {state.progress}</p>
+    </div>
+    <div class="slds-box">
+        <c-combobox
+            name="progressRequired"
+            label="Status"
+            value=""
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange}
+            required
+        ></c-combobox>
+        <p>Selected value is: {state.progressRequired}</p>
+    </div>
+    <div class="slds-box">
+        <c-combobox
+            name="progressDisabled"
+            label="Status"
+            value=""
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange}
+            disabled
+        ></c-combobox>
+        <p>Selected value is: {state.progressDisabled}</p>
     </div>
 </template>
