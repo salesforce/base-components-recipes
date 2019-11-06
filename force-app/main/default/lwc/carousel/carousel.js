@@ -66,7 +66,7 @@ export default class cCarousel extends LightningElement {
 
     swipeXStart = 0;
 
-    imageRegisterHandler(event) {
+    handlePrivateImageRegister(event) {
         const target = event.target,
             item = event.detail,
             currentIndex = this.carouselItems.length,
@@ -101,6 +101,10 @@ export default class cCarousel extends LightningElement {
 
     connectedCallback() {
         this.setAttribute('data-handles-touch', true);
+        this.addEventListener(
+            'privateimageregister',
+            this.handlePrivateImageRegister.bind(this)
+        );
     }
 
     renderedCallback() {

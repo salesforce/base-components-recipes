@@ -41,8 +41,13 @@ export default class cFormattedDateTime extends LightningElement {
     }
 
     set hour12(value) {
-        this._hour12Set = true;
-        this._hour12 = normalizeBoolean(value);
+        if (value === undefined) {
+            this._hour12Set = false;
+            this._hour12 = value;
+        } else {
+            this._hour12Set = true;
+            this._hour12 = normalizeBoolean(value);
+        }
     }
 
     get formattedValue() {

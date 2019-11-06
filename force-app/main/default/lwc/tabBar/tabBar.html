@@ -48,7 +48,7 @@
         </template>
         <template if:true={overflowSupported}>
             <li data-overflow class={computedOverflowClass} style={computedOverflowVisibility}>
-                <lightning-button-menu variant="bare"
+                <c-button-menu variant="bare"
                     alternative-text={i18n.moreAlternativeText}
                     title={i18n.moreTitle}
                     onselect={handleOverflowSelect}
@@ -57,10 +57,10 @@
                     menu-alignment="right">
                     <template for:each={_allTabs} for:item="tab">
                         <template if:false={tab.visible}>
-                            <lightning-menu-item key={tab.value} label={tab.label} value={tab.value}></lightning-menu-item>
+                            <c-menu-item key={tab.value} label={tab.label} value={tab.value}></c-menu-item>
                         </template>
                     </template>
-                </lightning-button-menu>
+                </c-button-menu>
             </li>
         </template>
     </ul>
