@@ -258,10 +258,7 @@ describe('is-loading attribute', () => {
         buttonEl.click();
 
         return Promise.resolve().then(() => {
-            const spinnerEl = shadowQuerySelector(
-                buttonMenu,
-                'lightning-spinner'
-            );
+            const spinnerEl = shadowQuerySelector(buttonMenu, 'c-spinner');
 
             expect(spinnerEl).toBeNull();
         });
@@ -274,10 +271,7 @@ describe('is-loading attribute', () => {
         buttonEl.click();
 
         return Promise.resolve().then(() => {
-            const spinnerEl = shadowQuerySelector(
-                buttonMenu,
-                'lightning-spinner'
-            );
+            const spinnerEl = shadowQuerySelector(buttonMenu, 'c-spinner');
 
             expect(buttonMenu.shadowRoot.contains(spinnerEl)).toBeTruthy();
         });
@@ -290,10 +284,7 @@ describe('is-loading attribute', () => {
         buttonEl.click();
 
         return Promise.resolve().then(() => {
-            const spinnerEl = shadowQuerySelector(
-                buttonMenu,
-                'lightning-spinner'
-            );
+            const spinnerEl = shadowQuerySelector(buttonMenu, 'c-spinner');
 
             expect(buttonMenu.shadowRoot.contains(spinnerEl)).toBeTruthy();
         });
@@ -306,10 +297,7 @@ describe('is-loading attribute', () => {
         buttonEl.click();
 
         return Promise.resolve().then(() => {
-            const spinnerEl = shadowQuerySelector(
-                buttonMenu,
-                'lightning-spinner'
-            );
+            const spinnerEl = shadowQuerySelector(buttonMenu, 'c-spinner');
 
             const spinnerAlternativeText = shadowQuerySelector(
                 spinnerEl,

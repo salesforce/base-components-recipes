@@ -43,7 +43,7 @@ const expectToEqualWiredData = data => {
 };
 
 const verifyDefaultNameValue = (element, resolve, reject) => {
-    const outputField = shadowQuerySelector(element, 'lightning-output-field');
+    const outputField = shadowQuerySelector(element, 'c-output-field');
     if (outputField) {
         try {
             const data = outputField.getWiredData();
@@ -67,7 +67,7 @@ describe('record view form', () => {
             element.addEventListener('load', () => {
                 const outputField = shadowQuerySelector(
                     element,
-                    'lightning-output-field'
+                    'c-output-field'
                 );
 
                 if (outputField) {
@@ -87,10 +87,7 @@ describe('record view form', () => {
                 }
             });
 
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
@@ -107,7 +104,7 @@ describe('record view form', () => {
             element.addEventListener('load', () => {
                 const outputField = shadowQuerySelector(
                     element,
-                    'lightning-output-field'
+                    'c-output-field'
                 );
 
                 if (outputField) {
@@ -127,10 +124,7 @@ describe('record view form', () => {
                 }
             });
 
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
@@ -141,10 +135,7 @@ describe('record view form', () => {
     it('throws error when record id is invalid', () => {
         const element = createMockedForm(DEFAULT_RECORD_ID, DEFAULT_API_NAME);
         return new Promise((resolve, reject) => {
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', () => {
                 resolve();
@@ -208,10 +199,7 @@ describe('record view form', () => {
             }
             element.addEventListener('load', loadHandler);
 
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error.message);
@@ -243,10 +231,7 @@ describe('record view form', () => {
     it('displays a warning when recordId is set to empty', () => {
         const element = createMockedForm(DEFAULT_RECORD_ID, DEFAULT_API_NAME);
         return new Promise((resolve, reject) => {
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
@@ -269,10 +254,7 @@ describe('record view form', () => {
     it('clears the record ui when record id is set to empty', () => {
         const element = createMockedForm(DEFAULT_RECORD_ID, DEFAULT_API_NAME);
         return new Promise((resolve, reject) => {
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
@@ -285,7 +267,7 @@ describe('record view form', () => {
                     Promise.resolve().then(() => {
                         const outputField = shadowQuerySelector(
                             element,
-                            'lightning-output-field'
+                            'c-output-field'
                         );
 
                         if (outputField) {
@@ -310,10 +292,7 @@ describe('record view form', () => {
     it('displays a warning when objectApiName is set to empty', () => {
         const element = createMockedForm(DEFAULT_RECORD_ID, DEFAULT_API_NAME);
         return new Promise((resolve, reject) => {
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
@@ -341,7 +320,7 @@ describe('record view form', () => {
             element.addEventListener('load', () => {
                 const outputField = shadowQuerySelector(
                     element,
-                    'lightning-output-field'
+                    'c-output-field'
                 );
 
                 if (outputField) {
@@ -360,10 +339,7 @@ describe('record view form', () => {
                 }
             });
 
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
@@ -396,10 +372,7 @@ describe('record view form', () => {
             }
             element.addEventListener('load', loadHandler);
 
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
@@ -446,10 +419,7 @@ describe('record view form', () => {
             }
             element.addEventListener('load', loadHandler);
 
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
@@ -466,7 +436,7 @@ describe('record view form', () => {
                     try {
                         const field = shadowQuerySelector(
                             element,
-                            'lightning-output-field'
+                            'c-output-field'
                         );
 
                         const data = field.getWiredData();
@@ -483,10 +453,7 @@ describe('record view form', () => {
             }
             element.addEventListener('load', loadHandler);
 
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error.message);
@@ -500,7 +467,7 @@ describe('record view form', () => {
             element.addEventListener('load', () => {
                 const outputField = shadowQuerySelector(
                     element,
-                    'lightning-output-field'
+                    'c-output-field'
                 );
 
                 if (outputField) {
@@ -534,7 +501,7 @@ describe('record view form', () => {
             element.addEventListener('load', () => {
                 const outputField = shadowQuerySelector(
                     element,
-                    'lightning-output-field'
+                    'c-output-field'
                 );
 
                 if (outputField) {
@@ -551,10 +518,7 @@ describe('record view form', () => {
                 }
             });
 
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
@@ -570,7 +534,7 @@ describe('record view form', () => {
             element.addEventListener('load', () => {
                 const outputField = shadowQuerySelector(
                     element,
-                    'lightning-output-field'
+                    'c-output-field'
                 );
 
                 if (outputField) {
@@ -587,19 +551,13 @@ describe('record view form', () => {
                 }
             });
 
-            const form = shadowQuerySelector(
-                element,
-                'lightning-record-view-form'
-            );
+            const form = shadowQuerySelector(element, 'c-record-view-form');
 
             form.addEventListener('error', error => {
                 reject(error);
             });
         }).then(() => {
-            const outputField = shadowQuerySelector(
-                element,
-                'lightning-output-field'
-            );
+            const outputField = shadowQuerySelector(element, 'c-output-field');
 
             const data = outputField.getWiredData();
             element.density = 'auto';

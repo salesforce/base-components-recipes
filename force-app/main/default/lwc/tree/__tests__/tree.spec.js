@@ -72,47 +72,41 @@ describe('c-tree', () => {
         element.items = items;
         element.selectedItem = 'c';
         return Promise.resolve().then(() => {
-            let tree = shadowQuerySelector(
-                element,
-                'lightning-tree-item[role="tree"]'
-            );
+            let tree = shadowQuerySelector(element, 'c-tree-item[role="tree"]');
 
             let levelOneChild = shadowQuerySelector(
                 tree,
-                'lightning-tree-item:nth-of-type(1)'
+                'c-tree-item:nth-of-type(1)'
             );
 
             expect(levelOneChild.getAttribute('aria-expanded')).toBe('true');
 
             let firstChild = shadowQuerySelector(
                 levelOneChild,
-                'div[role="group"] lightning-tree-item:nth-of-type(1)'
+                'div[role="group"] c-tree-item:nth-of-type(1)'
             );
 
             expect(firstChild.getAttribute('aria-expanded')).toBe('true');
 
             firstChild = shadowQuerySelector(
                 firstChild,
-                'div[role="group"] lightning-tree-item:nth-of-type(1)'
+                'div[role="group"] c-tree-item:nth-of-type(1)'
             );
 
             expect(firstChild.getAttribute('aria-selected')).toBe('true');
 
             element.selectedItem = 'd';
             return Promise.resolve().then(() => {
-                tree = shadowQuerySelector(
-                    element,
-                    'lightning-tree-item[role="tree"]'
-                );
+                tree = shadowQuerySelector(element, 'c-tree-item[role="tree"]');
 
                 levelOneChild = shadowQuerySelector(
                     tree,
-                    'lightning-tree-item:nth-of-type(1)'
+                    'c-tree-item:nth-of-type(1)'
                 );
 
                 const secondChild = shadowQuerySelector(
                     levelOneChild,
-                    'div[role="group"] lightning-tree-item:nth-of-type(2)'
+                    'div[role="group"] c-tree-item:nth-of-type(2)'
                 );
 
                 expect(secondChild.getAttribute('aria-selected')).toBe('true');
@@ -135,25 +129,25 @@ describe('c-tree', () => {
         return Promise.resolve().then(() => {
             const tree = shadowQuerySelector(
                 element,
-                'lightning-tree-item[role="tree"]'
+                'c-tree-item[role="tree"]'
             );
 
             let firstChild = shadowQuerySelector(
                 tree,
-                'lightning-tree-item:nth-of-type(1)'
+                'c-tree-item:nth-of-type(1)'
             );
 
             expect(firstChild.getAttribute('aria-expanded')).toBe('false');
             expect(firstChild.getAttribute('aria-selected')).toBe('false');
             firstChild = shadowQuerySelector(
                 firstChild,
-                'div[role="group"] lightning-tree-item:nth-of-type(1)'
+                'div[role="group"] c-tree-item:nth-of-type(1)'
             );
 
             expect(firstChild).toBe(null);
             const secondChild = shadowQuerySelector(
                 tree,
-                'lightning-tree-item:nth-of-type(2)'
+                'c-tree-item:nth-of-type(2)'
             );
 
             expect(secondChild.getAttribute('aria-selected')).toBe('false');

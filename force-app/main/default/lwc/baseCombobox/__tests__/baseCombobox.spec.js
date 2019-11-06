@@ -454,10 +454,7 @@ describe('c-base-combobox', () => {
             const input = shadowQuerySelector(element, 'input');
             input.click();
             return Promise.resolve().then(() => {
-                shadowQuerySelector(
-                    element,
-                    'lightning-base-combobox-item'
-                ).click();
+                shadowQuerySelector(element, 'c-base-combobox-item').click();
                 expect(onSelectFunc).toHaveBeenCalled();
             });
         });

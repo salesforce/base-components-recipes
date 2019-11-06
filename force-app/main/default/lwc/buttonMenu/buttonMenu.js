@@ -71,6 +71,8 @@ export default class cButtonMenu extends LightningElement {
     _menuAlignment = 'left';
     _boundingRect = {};
 
+    _needsFocusAfterRender = false;
+
     connectedCallback() {
         this._connected = true;
         this.keyboardInterface = this.menuKeyboardInterface();

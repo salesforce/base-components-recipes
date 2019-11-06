@@ -112,7 +112,7 @@ describe('c-vertical-navigation', () => {
         const element = createVerticalNavigation();
         const verticalNavigationELement = shadowQuerySelector(
             element,
-            'lightning-vertical-navigation'
+            'c-vertical-navigation'
         );
 
         const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
@@ -130,7 +130,7 @@ describe('c-vertical-navigation', () => {
 
         const verticalNavigationELement = shadowQuerySelector(
             element,
-            'lightning-vertical-navigation'
+            'c-vertical-navigation'
         );
 
         const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
@@ -149,7 +149,7 @@ describe('c-vertical-navigation', () => {
 
         const verticalNavigationELement = shadowQuerySelector(
             element,
-            'lightning-vertical-navigation'
+            'c-vertical-navigation'
         );
 
         const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
@@ -169,7 +169,7 @@ describe('c-vertical-navigation', () => {
 
         const verticalNavigationELement = shadowQuerySelector(
             element,
-            'lightning-vertical-navigation'
+            'c-vertical-navigation'
         );
 
         const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
@@ -274,7 +274,7 @@ describe('c-vertical-navigation', () => {
         const element = createVerticalNavigation();
         const verticalNavigationELement = shadowQuerySelector(
             element,
-            'lightning-vertical-navigation'
+            'c-vertical-navigation'
         );
 
         const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');
@@ -290,7 +290,7 @@ describe('c-vertical-navigation', () => {
 
         const verticalNavigationELement = shadowQuerySelector(
             element,
-            'lightning-vertical-navigation'
+            'c-vertical-navigation'
         );
 
         const navEl = shadowQuerySelector(verticalNavigationELement, 'nav');

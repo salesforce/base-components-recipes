@@ -43,7 +43,7 @@ describe('c-tree-item', () => {
         return Promise.resolve().then(() => {
             const lightningIcon = shadowQuerySelector(
                 element,
-                'lightning-primitive-icon'
+                'c-primitive-icon'
             );
 
             expect(lightningIcon.iconName).toBe('utility:chevronright');
@@ -62,7 +62,7 @@ describe('c-tree-item', () => {
         return Promise.resolve().then(() => {
             const lightningIcon = shadowQuerySelector(
                 element,
-                'lightning-primitive-icon'
+                'c-primitive-icon'
             );
 
             expect(lightningIcon.iconName).toBe('utility:chevronleft');

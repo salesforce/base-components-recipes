@@ -33,7 +33,7 @@ describe('c-card', () => {
             iconName
         });
 
-        const icon = shadowQuerySelector(card, 'lightning-icon');
+        const icon = shadowQuerySelector(card, 'c-icon');
         expect(icon).not.toBeNull();
         expect(icon.iconName).toBe(iconName);
     });

@@ -5,11 +5,13 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
-import { getToken } from 'lightning/configProvider';
+import { getPathPrefix, getToken } from 'lightning/configProvider';
 import isIframeInEdge from './isIframeInEdge';
 
 const validNameRe = /^([a-zA-Z]+):([a-zA-Z]\w*)$/;
 const underscoreRe = /_/g;
+
+let pathPrefix;
 
 const tokenNameMap = Object.assign(Object.create(null), {
     action: 'lightning.actionSprite',
@@ -64,14 +66,18 @@ export { getCategory, getName };
 export const isValidName = iconName => validNameRe.test(iconName);
 
 export const getIconPath = (iconName, direction = 'ltr') => {
+    pathPrefix = pathPrefix !== undefined ? pathPrefix : getPathPrefix();
+
     if (isValidName(iconName)) {
         const baseIconPath = getBaseIconPath(getCategory(iconName), direction);
         if (baseIconPath) {
             if (isIframeInEdge) {
                 const origin = `${window.location.protocol}//${window.location.host}`;
-                return `${origin}${baseIconPath}#${getName(iconName)}`;
+                return `${origin}${pathPrefix}${baseIconPath}#${getName(
+                    iconName
+                )}`;
             }
-            return `${baseIconPath}#${getName(iconName)}`;
+            return `${pathPrefix}${baseIconPath}#${getName(iconName)}`;
         }
     }
     return '';
