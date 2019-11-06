@@ -21,7 +21,7 @@ import {
     normalizeString,
     synchronizeAttrs
 } from 'c/utilsPrivate';
-import { AutoPosition, Direction } from 'c/positionLibrary';
+
 import { VARIANT } from 'c/inputUtils';
 
 const i18n = {
@@ -233,8 +233,6 @@ export default class cBaseCombobox extends LightningElement {
                         this.closeDropdown();
                     } else {
                         this.highlightDefaultItem();
-
-                        this.startDropdownAutoPositioning();
                     }
                 }
             }
@@ -642,7 +640,6 @@ export default class cBaseCombobox extends LightningElement {
 
         this._dropdownVisible = true;
 
-        this.startDropdownAutoPositioning();
         this.highlightDefaultItem();
 
         this._events.dispatchDropdownOpen();
@@ -652,7 +649,7 @@ export default class cBaseCombobox extends LightningElement {
         if (!this._dropdownVisible) {
             return;
         }
-        this.stopDropdownPositioning();
+
         this.removeHighlight();
         this._dropdownVisible = false;
     }
@@ -683,43 +680,6 @@ export default class cBaseCombobox extends LightningElement {
 
     get inputElement() {
         return this.template.querySelector('input');
-    }
-
-    startDropdownAutoPositioning() {
-        if (this.dropdownAlignment !== 'auto') {
-            return;
-        }
-
-        if (!this._autoPosition) {
-            this._autoPosition = new AutoPosition(this);
-        }
-
-        this._autoPosition.start({
-            target: () => this.template.querySelector('input'),
-            element: () => this.template.querySelector('div.slds-dropdown'),
-            align: {
-                horizontal: Direction.Left,
-                vertical: Direction.Top
-            },
-
-            targetAlign: {
-                horizontal: Direction.Left,
-                vertical: Direction.Bottom
-            },
-
-            autoFlip: true,
-            alignWidth: true,
-            autoShrinkHeight: true,
-            minHeight: this.isDropdownHeightSmall
-                ? SMALL_MIN_HEIGHT
-                : MEDIUM_MIN_HEIGHT
-        });
-    }
-
-    stopDropdownPositioning() {
-        if (this._autoPosition) {
-            this._autoPosition.stop();
-        }
     }
 
     get hasInputPill() {

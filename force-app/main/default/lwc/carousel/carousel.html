@@ -24,7 +24,7 @@
                 </span>
             </template>
             <div class="slds-carousel__panels" style={carouselPanelsStyle} ontouchstart={handleTouchStart} ontouchend={handleTouchEnd}>
-                <slot onprivateimageregister={imageRegisterHandler}></slot>
+                <slot></slot>
             </div>
             <ul class="slds-carousel__indicators" role="tablist" onkeydown={keyDownHandler}>
                 <template for:each={paginationItems} for:item="paginationItem" for:index="paginationIndex">
