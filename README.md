@@ -176,7 +176,29 @@ Use your labels in a Lightning web component.
 
 #### Translate Labels
 
-Base component recipes don’t currently support translations. To add your own translations using Translation Workbench, see [Support Users in Multiple Languages](https://help.salesforce.com/articleView?id=workbench_overview.htm&type=5) in Salesforce Help.
+Enable the Translation Workbench to support translations in your org. See [Enable and Disable the Translation Workbench](https://help.salesforce.com/articleView?id=customize_wbench.htm) in Salesforce Help. Next, modify `sfdx-project.json` to include the path for the translation files, which are available in the `optional` folder. 
+
+```json
+{
+ "packageDirectories": [
+  {
+   "path": "force-app",
+   "default": true
+  },
+  {
+   "path": "optional"
+  }
+ ],
+ "namespace": "",
+ "sfdcLoginUrl": "https://login.salesforce.com",
+ "sourceApiVersion": "46.0"
+}
+```
+After updating `sfdx-project.json`, push the files to your scratch org.
+
+```bash
+sfdx force:source:push
+```
 
 ## Contributing
 
