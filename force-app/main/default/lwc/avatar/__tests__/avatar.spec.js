@@ -39,7 +39,7 @@ describe('c-avatar', () => {
             });
 
             return Promise.resolve().then(() => {
-                const icon = shadowQuerySelector(element, 'lightning-icon');
+                const icon = shadowQuerySelector(element, 'c-icon');
                 expect(icon).toBeTruthy();
             });
         });

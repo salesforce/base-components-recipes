@@ -56,7 +56,7 @@ describe('c-tile slots', () => {
             contentSlotText: slotContent
         });
 
-        const tile = shadowQuerySelector(element, 'lightning-tile');
+        const tile = shadowQuerySelector(element, 'c-tile');
         const slot = shadowQuerySelector(tile, '.slds-tile__detail slot');
         const content = slot.assignedElements()[0];
         expect(content.textContent).toContain(slotContent);
@@ -68,7 +68,7 @@ describe('c-tile slots', () => {
             mediaSlotText: slotContent
         });
 
-        const tile = shadowQuerySelector(element, 'lightning-tile');
+        const tile = shadowQuerySelector(element, 'c-tile');
         const mediaSlotMarkup = shadowQuerySelector(
             tile,
             '.slds-media__figure'
@@ -87,7 +87,7 @@ describe('c-tile slots', () => {
             tileType: 'media'
         });
 
-        const tile = shadowQuerySelector(element, 'lightning-tile');
+        const tile = shadowQuerySelector(element, 'c-tile');
         const slot = shadowQuerySelector(tile, '.slds-tile__detail slot');
         const content = slot.assignedElements()[0];
         expect(content.textContent).toContain(slotContent);
@@ -100,7 +100,7 @@ describe('c-tile slots', () => {
             tileType: 'media'
         });
 
-        const tile = shadowQuerySelector(element, 'lightning-tile');
+        const tile = shadowQuerySelector(element, 'c-tile');
         const slot = shadowQuerySelector(tile, '.slds-media__figure slot');
         const content = slot.assignedElements()[0];
         expect(content.textContent).toContain(slotContent);
@@ -155,14 +155,11 @@ describe('c-tile', () => {
             actions: [{ label: 'action1label', value: 'action1value' }]
         });
 
-        const buttonMenu = shadowQuerySelector(
-            element,
-            'lightning-button-menu'
-        );
+        const buttonMenu = shadowQuerySelector(element, 'c-button-menu');
 
         const lightningIcon = shadowQuerySelector(
             buttonMenu,
-            'lightning-primitive-icon'
+            'c-primitive-icon'
         );
 
         return Promise.resolve().then(() => {

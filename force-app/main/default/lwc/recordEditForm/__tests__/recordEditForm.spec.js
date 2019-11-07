@@ -137,7 +137,7 @@ describe('record edit form', () => {
             element.addEventListener('load', () => {
                 const inputField = shadowQuerySelector(
                     element,
-                    'lightning-output-field'
+                    'c-output-field'
                 );
 
                 if (inputField) {
@@ -288,10 +288,7 @@ describe('record edit form', () => {
                     'lightning-input-field'
                 );
 
-                const form = shadowQuerySelector(
-                    element,
-                    'lightning-record-edit-form'
-                );
+                const form = shadowQuerySelector(element, 'c-record-edit-form');
 
                 input.setValue('Banana');
                 form.addEventListener('success', () => {
@@ -330,7 +327,7 @@ describe('record edit form', () => {
                     'lightning-input-field'
                 );
 
-                const button = shadowQuerySelector(element, 'lightning-button');
+                const button = shadowQuerySelector(element, 'c-button');
                 input.setValue('Banana');
 
                 element.addEventListener('success', () => {
@@ -364,10 +361,7 @@ describe('record edit form', () => {
         document.body.appendChild(element);
         return new Promise((resolve, reject) => {
             element.addEventListener('load', () => {
-                const form = shadowQuerySelector(
-                    element,
-                    'lightning-record-edit-form'
-                );
+                const form = shadowQuerySelector(element, 'c-record-edit-form');
 
                 form.addEventListener('success', () => {
                     try {
@@ -402,12 +396,9 @@ describe('record edit form', () => {
         document.body.appendChild(element);
         return new Promise((resolve, reject) => {
             element.addEventListener('load', () => {
-                const form = shadowQuerySelector(
-                    element,
-                    'lightning-record-edit-form'
-                );
+                const form = shadowQuerySelector(element, 'c-record-edit-form');
 
-                const button = shadowQuerySelector(element, 'lightning-button');
+                const button = shadowQuerySelector(element, 'c-button');
                 form.addEventListener('success', () => {
                     try {
                         expect(
@@ -434,12 +425,9 @@ describe('record edit form', () => {
         window.RECORD_SAVE_COUNT = 0;
         return new Promise((resolve, reject) => {
             element.addEventListener('load', () => {
-                const form = shadowQuerySelector(
-                    element,
-                    'lightning-record-edit-form'
-                );
+                const form = shadowQuerySelector(element, 'c-record-edit-form');
 
-                const button = shadowQuerySelector(element, 'lightning-button');
+                const button = shadowQuerySelector(element, 'c-button');
                 form.addEventListener('success', () => {
                     try {
                         expect(window.RECORD_SAVE_COUNT).toEqual(1);
@@ -465,12 +453,9 @@ describe('record edit form', () => {
         window.RECORD_SAVE_COUNT = 0;
         return new Promise((resolve, reject) => {
             element.addEventListener('load', () => {
-                const form = shadowQuerySelector(
-                    element,
-                    'lightning-record-edit-form'
-                );
+                const form = shadowQuerySelector(element, 'c-record-edit-form');
 
-                const button = shadowQuerySelector(element, 'lightning-button');
+                const button = shadowQuerySelector(element, 'c-button');
                 form.addEventListener('submit', e => {
                     e.preventDefault();
                 });
@@ -565,12 +550,9 @@ describe('record edit form', () => {
                     'lightning-input-field'
                 );
 
-                const form = shadowQuerySelector(
-                    element,
-                    'lightning-record-edit-form'
-                );
+                const form = shadowQuerySelector(element, 'c-record-edit-form');
 
-                const button = shadowQuerySelector(element, 'lightning-button');
+                const button = shadowQuerySelector(element, 'c-button');
                 input.setValue('Banana');
                 form.addEventListener('error', err => {
                     reject(err.detail);
@@ -787,10 +769,7 @@ describe('record edit form', () => {
                     'lightning-input-field'
                 );
 
-                const form = shadowQuerySelector(
-                    element,
-                    'lightning-record-edit-form'
-                );
+                const form = shadowQuerySelector(element, 'c-record-edit-form');
 
                 const e = new Error('Error happened');
 
@@ -849,12 +828,9 @@ describe('record edit form', () => {
                     'lightning-input-field'
                 );
 
-                const form = shadowQuerySelector(
-                    element,
-                    'lightning-record-edit-form'
-                );
+                const form = shadowQuerySelector(element, 'c-record-edit-form');
 
-                const button = shadowQuerySelector(element, 'lightning-button');
+                const button = shadowQuerySelector(element, 'c-button');
                 input.setValue('Banana');
                 form.addEventListener('error', () => {
                     const inputField = shadowQuerySelector(
@@ -909,12 +885,9 @@ describe('record edit form', () => {
                     'lightning-input-field'
                 );
 
-                const form = shadowQuerySelector(
-                    element,
-                    'lightning-record-edit-form'
-                );
+                const form = shadowQuerySelector(element, 'c-record-edit-form');
 
-                const button = shadowQuerySelector(element, 'lightning-button');
+                const button = shadowQuerySelector(element, 'c-button');
                 input.setValue('Banana');
                 form.addEventListener('error', () => {
                     const messages = shadowQuerySelector(
@@ -948,7 +921,7 @@ describe('record edit form', () => {
             element.addEventListener('load', () => {
                 const outputField = shadowQuerySelector(
                     element,
-                    'lightning-output-field'
+                    'c-output-field'
                 );
 
                 if (outputField) {
@@ -986,7 +959,7 @@ describe('record edit form', () => {
             element.addEventListener('load', () => {
                 const outputField = shadowQuerySelector(
                     element,
-                    'lightning-output-field'
+                    'c-output-field'
                 );
 
                 if (outputField) {

@@ -97,7 +97,7 @@ describe('c-menu-item-checked', () => {
                 expect(
                     shadowQuerySelector(
                         menuItem,
-                        'span.slds-truncate > lightning-primitive-icon'
+                        'span.slds-truncate > c-primitive-icon'
                     )
                 ).not.toBeNull();
                 menuItem.checked = undefined;
@@ -111,7 +111,7 @@ describe('c-menu-item-checked', () => {
                 expect(
                     shadowQuerySelector(
                         menuItem,
-                        'span.slds-truncate > lightning-primitive-icon'
+                        'span.slds-truncate > c-primitive-icon'
                     )
                 ).toBeNull();
                 menuItem.checked = false;
@@ -125,7 +125,7 @@ describe('c-menu-item-checked', () => {
                 expect(
                     shadowQuerySelector(
                         menuItem,
-                        'span.slds-truncate > lightning-primitive-icon'
+                        'span.slds-truncate > c-primitive-icon'
                     )
                 ).not.toBeNull();
             });
@@ -237,7 +237,7 @@ describe('prefix-icon-name attribute', () => {
         return Promise.resolve().then(() => {
             const primitiveIconEl = shadowQuerySelector(
                 menuItem,
-                'a > .slds-truncate lightning-primitive-icon'
+                'a > .slds-truncate c-primitive-icon'
             );
 
             if (primitiveIconEl) {
@@ -261,7 +261,7 @@ describe('prefix-icon-name attribute', () => {
         return Promise.resolve().then(() => {
             const lightningIcon = shadowQuerySelector(
                 menuItem,
-                'a > .slds-truncate lightning-primitive-icon'
+                'a > .slds-truncate c-primitive-icon'
             );
 
             const iconEl = shadowQuerySelector(
