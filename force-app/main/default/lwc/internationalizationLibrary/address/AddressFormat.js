@@ -5,6 +5,7 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
+/* eslint-disable */
 var data = {
     AE: {
         fmt: '%A%n%S%n%K',

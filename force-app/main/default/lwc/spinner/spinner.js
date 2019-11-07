@@ -53,6 +53,7 @@ export default class cSpinner extends LightningElement {
         const hasAlternativeText = !!this.alternativeText;
 
         if (!hasAlternativeText) {
+            // eslint-disable-next-line no-console
             console.warn(
                 `<lightning-spinner> The alternativeText attribute should not be empty. Please add a description of what is causing the wait.`
             );

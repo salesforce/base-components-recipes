@@ -38,12 +38,15 @@ describe('c-carousel-image', () => {
         });
     });
 
+    // eslint-disable-next-line @lwc/lwc/no-async-await
     it('runs accesibility testing on default template', async () => {
         expect.extend(toHaveNoViolations);
 
         const element = createCarouselImage(DEFAULT_ATTRIBUTES);
 
+        // eslint-disable-next-line @lwc/lwc/no-async-await
         return Promise.resolve().then(async () => {
+            // eslint-disable-next-line @lwc/lwc/no-inner-html
             expect(await axe(element.outerHTML)).toHaveNoViolations();
         });
     });

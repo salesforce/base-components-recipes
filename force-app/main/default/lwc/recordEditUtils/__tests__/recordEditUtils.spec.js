@@ -61,6 +61,7 @@ jest.mock(
 );
 
 describe('lds create record', () => {
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('generates a normalized record', () => {
         const lds = require('lightning/uiRecordApi');
         const newRecord = {
@@ -98,6 +99,7 @@ describe('lds create record', () => {
 });
 
 describe('lds update record', () => {
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('generates a normalized record and creates a recordInput for it', () => {
         const ldsRecords = require('lightning/uiRecordApi');
         const originalRecord = {
@@ -251,9 +253,9 @@ describe('getFormValues', () => {
             BillingPostalCode: '80202',
             BillingState: 'CO',
             BillingStreet: '222 fake st',
-
+            // eslint-disable-next-line camelcase
             Geo__Longitude__s: 10,
-
+            // eslint-disable-next-line camelcase
             Geo__Latitude__s: 20
         });
     });

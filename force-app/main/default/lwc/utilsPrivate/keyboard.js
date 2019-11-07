@@ -68,6 +68,7 @@ export function runActionOnBufferedTypedCharacters(event, action) {
 
     action(matchText);
 
+    // eslint-disable-next-line @lwc/lwc/no-async-operation
     buffer._clearBufferId = setTimeout(() => {
         buffer._keyBuffer = [];
     }, 700);

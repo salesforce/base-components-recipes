@@ -29,6 +29,7 @@ export function unregisterLinkProvider(element, providerFn) {
 
 export function getLinkInfo(element, stateRef) {
     return new Promise((resolve, reject) => {
+        // eslint-disable-next-line lightning-global/no-custom-event-identifier-arguments
         const getLinkInfoEvent = new CustomEvent(GET_LINK_INFO_EVENT, {
             detail: {
                 stateRef,
@@ -52,6 +53,7 @@ export function getLinkInfo(element, stateRef) {
 
 export function updateRawLinkInfo(element, { url, target }) {
     if (url === undefined || url === null) {
+        // eslint-disable-next-line no-console
         console.error('url must be specified');
     }
     if (target === '_blank') {

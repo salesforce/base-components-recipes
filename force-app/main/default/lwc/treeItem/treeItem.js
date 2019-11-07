@@ -129,6 +129,7 @@ export default class cTreeItem extends LightningElement {
 
     handleClick(event) {
         if (!this.isDisabled) {
+            // eslint-disable-next-line no-script-url
             if (this.href === 'javascript:void(0)') {
                 event.preventDefault();
             }
@@ -197,7 +198,7 @@ export default class cTreeItem extends LightningElement {
         if (item !== undefined) {
             eventObject.detail = { key: item };
         }
-
+        // eslint-disable-next-line lightning-global/no-custom-event-identifier-arguments
         this.dispatchEvent(new CustomEvent(eventName, eventObject));
     }
 

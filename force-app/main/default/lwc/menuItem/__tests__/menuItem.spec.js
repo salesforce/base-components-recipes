@@ -211,6 +211,7 @@ describe('href attribute', () => {
         menuItem.label = 'test-label';
 
         expect(shadowQuerySelector(menuItem, 'a').getAttribute('href')).toBe(
+            // eslint-disable-next-line no-script-url
             'javascript:void(0)'
         );
     });

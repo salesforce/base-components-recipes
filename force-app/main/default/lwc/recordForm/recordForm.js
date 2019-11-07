@@ -238,10 +238,10 @@ export default class cRecordForm extends LightningElement {
 
                     const fieldUpdateable = compound
                         ? compoundFieldIsUpdateable(
-                              compoundFields,
-                              this._record,
-                              this._objectInfo
-                          )
+                              compoundFields, // eslint-disable-line indent
+                              this._record, // eslint-disable-line indent
+                              this._objectInfo // eslint-disable-line indent
+                          ) // eslint-disable-line indent
                         : this._objectInfo &&
                           this._objectInfo.fields &&
                           this._objectInfo.fields[field].updateable;
@@ -347,6 +347,7 @@ export default class cRecordForm extends LightningElement {
         }
 
         if (this._loadedPending) {
+            // eslint-disable-next-line @lwc/lwc/no-async-operation
             setTimeout(() => {
                 this._loading = false;
                 this._loadedPending = false;
@@ -374,6 +375,7 @@ export default class cRecordForm extends LightningElement {
     }
 
     handleSubmit(e) {
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         setTimeout(() => {
             this._loading = !e.defaultPrevented;
         }, 0);

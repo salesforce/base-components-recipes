@@ -246,6 +246,7 @@ export default class cBaseCombobox extends LightningElement {
     @api
     highlightInputText() {
         if (this._connected) {
+            // eslint-disable-next-line @lwc/lwc/no-async-operation
             requestAnimationFrame(() => {
                 const { inputElement } = this;
                 inputElement.setSelectionRange(0, inputElement.value.length);
@@ -729,7 +730,7 @@ export default class cBaseCombobox extends LightningElement {
 
     highlightDefaultItem() {
         this.removeHighlight();
-
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         requestAnimationFrame(() => {
             this.highlightOptionAndScrollIntoView(
                 this.findOptionElementByIndex(this._highlightedItemIndex)

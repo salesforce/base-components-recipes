@@ -182,6 +182,7 @@ export default class cTree extends LightningElement {
                 this._selectedItem &&
                 this._selectedItem.key.startsWith(node.key)
             ) {
+                // eslint-disable-next-line @lwc/lwc/no-async-operation
                 setTimeout(() => {
                     this.setFocusToItem(this._selectedItem);
                 }, 0);

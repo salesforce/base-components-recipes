@@ -22,7 +22,7 @@ export function getTreeNode(node, level, parentKey, childNum) {
         metatext: node.metatext,
         level,
         key: computeKey(parentKey, childNum),
-
+        // eslint-disable-next-line no-script-url
         href: node.href || 'javascript:void(0)',
         isDisabled: node.disabled || false,
         visible: level === 1,

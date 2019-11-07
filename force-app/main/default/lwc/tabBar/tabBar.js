@@ -125,6 +125,7 @@ export default class cTabBar extends LightningElement {
         this._allTabs = allTabs;
 
         if (this._connected && this.overflowSupported) {
+            // eslint-disable-next-line @lwc/lwc/no-async-operation
             requestAnimationFrame(this._queueOverflow.bind(this));
         }
     }
@@ -367,7 +368,7 @@ export default class cTabBar extends LightningElement {
         this._allTabs.forEach(tab => {
             tab.visible = true;
         });
-
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         requestAnimationFrame(this._recomputeOverflow.bind(this));
     }
 
@@ -387,7 +388,7 @@ export default class cTabBar extends LightningElement {
 
             const tab = this._findTabByValue(tabValue);
             let tabWidth = tabHeaderElement.getBoundingClientRect().width;
-
+            // eslint-disable-next-line lightning-global/check-return-value-for-nullable-call
             const computedStyle = getComputedStyle(tabHeaderElement);
             if (computedStyle) {
                 tabWidth +=

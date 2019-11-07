@@ -91,6 +91,7 @@ export default class cAvatar extends LightningElement {
     }
 
     handleImageError(event) {
+        // eslint-disable-next-line no-console
         console.warn(
             `<lightning-avatar> Image with src="${event.target.src}" failed to load.`
         );

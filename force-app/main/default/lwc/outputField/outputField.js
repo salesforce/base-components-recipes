@@ -93,6 +93,7 @@ export default class cOutputField extends LightningElement {
     renderedCallback() {
         if (!this.uiField.type) {
             this.dispatchEvent(
+                // eslint-disable-next-line lightning-global/no-custom-event-bubbling
                 new CustomEvent('registeroutputfield', {
                     bubbles: true,
                     composed: true,
@@ -107,7 +108,7 @@ export default class cOutputField extends LightningElement {
             const fieldData = getUiField(this.fieldName, record, objectInfo);
             this.uiField = fieldData;
         } catch (e) {
-            console.warn(e);
+            console.warn(e); // eslint-disable-line no-console
             return;
         }
         this.setReady();

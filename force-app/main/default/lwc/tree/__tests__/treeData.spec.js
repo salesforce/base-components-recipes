@@ -123,7 +123,7 @@ describe('correctly returns array of TreeNodes', () => {
         expect(leafNode.level).toBe(4);
         expect(leafNode.isExpanded).toBe(true);
         expect(leafNode.isDisabled).toBe(false);
-
+        // eslint-disable-next-line no-script-url
         expect(leafNode.href).toBe('javascript:void(0)');
     });
     it('returns empty for no input', () => {
@@ -460,9 +460,8 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 2),
-                set: jest.fn(idx => {})
+                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
             });
-
             const indices = {};
             indices['1.1'] = { key: '1.1' };
             Object.defineProperty(data, '_indices', {
@@ -485,9 +484,8 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 1),
-                set: jest.fn(idx => {})
+                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
             });
-
             const indices = {};
             indices['1'] = { key: '1' };
             Object.defineProperty(data, '_indices', {
@@ -510,9 +508,8 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 0),
-                set: jest.fn(idx => {})
+                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
             });
-
             const indices = {};
             indices['1'] = { key: '1' };
             Object.defineProperty(data, '_indices', {
@@ -544,9 +541,8 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 0),
-                set: jest.fn(idx => {})
+                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
             });
-
             const indices = {};
             indices['2'] = { key: '2' };
             Object.defineProperty(data, '_indices', {
@@ -569,9 +565,8 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 4),
-                set: jest.fn(idx => {})
+                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
             });
-
             const indices = {};
             indices['3.3'] = { key: '3.3' };
             Object.defineProperty(data, '_indices', {
@@ -594,9 +589,8 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 5),
-                set: jest.fn(idx => {})
+                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
             });
-
             const indices = {};
             indices['2'] = { key: '2' };
             Object.defineProperty(data, '_indices', {

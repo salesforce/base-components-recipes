@@ -21,6 +21,7 @@ const createButtonGroup = (props = {}) => {
 };
 
 describe('c-button-group', () => {
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('should have the correct number of child button elements', () => {
         const numButtons = 4;
         const numButtonStatefuls = 1;
@@ -60,6 +61,7 @@ describe('c-button-group', () => {
         });
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('each child button element should have the correct position/order SLDS class when initially rendered', () => {
         const numButtons = 4;
         const numButtonStatefuls = 1;
@@ -121,6 +123,7 @@ describe('c-button-group', () => {
         });
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('each child button element should have the correct position/order SLDS class when a button is appended', () => {
         const numButtons = 4;
         const numButtonStatefuls = 1;
@@ -192,6 +195,7 @@ describe('c-button-group', () => {
         });
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('each child button element should have the correct position/order SLDS class when a button is prepended', () => {
         const numButtons = 5;
         const numButtonStatefuls = 1;
@@ -264,6 +268,7 @@ describe('c-button-group', () => {
         });
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('each child button element should have the correct position/order SLDS class when a button is inserted', () => {
         const numButtons = 4;
         const numButtonStatefuls = 1;
@@ -342,6 +347,7 @@ describe('c-button-group', () => {
         });
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('when button list is reduced to only one button element the button should have no position/order SLDS class', () => {
         const numButtons = 2;
         const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);
@@ -369,6 +375,7 @@ describe('c-button-group', () => {
         });
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('when only one button element is present it should have no position/order SLDS class', () => {
         const numButtons = 1;
         const buttons = buttonGroupUtils.generateRandomButtonsArray(numButtons);

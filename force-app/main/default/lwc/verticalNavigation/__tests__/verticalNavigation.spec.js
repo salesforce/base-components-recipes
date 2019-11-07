@@ -225,6 +225,7 @@ describe('c-vertical-navigation', () => {
             });
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('header assistive text regular item', () => {
         const element = createVerticalNavigation();
 
@@ -237,6 +238,7 @@ describe('c-vertical-navigation', () => {
         expect(describedby).toBe(headingId);
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('header assistive text overflow item', () => {
         const element = createVerticalNavigation();
 

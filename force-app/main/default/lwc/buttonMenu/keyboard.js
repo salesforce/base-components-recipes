@@ -113,7 +113,7 @@ export function handleKeyDownOnMenuTrigger(event, menuInterface) {
             } else if (!isVisible) {
                 break;
             }
-
+            // eslint-disable-next-line @lwc/lwc/no-async-operation
             window.requestAnimationFrame(() => {
                 moveFocusToTypedCharacters(event, menuInterface);
             });

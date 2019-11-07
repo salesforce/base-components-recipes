@@ -21,6 +21,7 @@ import {
     isEmptyString,
     VARIANT
 } from 'c/inputUtils';
+import { TouchScroller } from 'lightning/touchScrollLibrary';
 
 const i18n = {
     required: labelRequired
@@ -59,8 +60,6 @@ export default class cTextarea extends LightningElement {
     connectedCallback() {
         this.classList.add('slds-form-element');
         this.updateClassList();
-
-        this.setAttribute('data-handles-touch', true);
         this._connected = true;
         this.interactingState = new InteractingState();
         this.interactingState.onleave(() => this.showHelpMessageIfInvalid());
@@ -86,6 +85,12 @@ export default class cTextarea extends LightningElement {
             this._rendered = true;
             this.inputElement.value = this._defaultValue;
             this.synchronizeA11y();
+
+            const scrollTarget = this.template.querySelector(
+                '.textarea-container'
+            );
+
+            this.touchScroller = new TouchScroller(scrollTarget);
         }
         this.synchronizeA11y();
     }

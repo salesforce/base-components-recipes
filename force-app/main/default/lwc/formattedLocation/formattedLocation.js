@@ -31,6 +31,7 @@ export default class cFormattedLocation extends LightningElement {
         const valid = isLatitude(this.latitude) && isLongitude(this.longitude);
 
         if (!valid) {
+            // eslint-disable-next-line no-console
             console.warn(
                 `<lightning-formatted-location> expects latitude in range [-90.0, 90.0], longitude in range [-180.0, 180.0].`
             );

@@ -579,6 +579,7 @@ export default class cButtonMenu extends LightningElement {
 
     pollBoundingRect() {
         if (this.isAutoAlignment() && this._dropdownVisible) {
+            // eslint-disable-next-line @lwc/lwc/no-async-operation
             setTimeout(() => {
                 if (this._connected) {
                     observePosition(this, 300, this._boundingRect, () => {

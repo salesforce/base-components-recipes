@@ -216,6 +216,7 @@ export default class cRecordView extends LightningElement {
     }
 
     displayWarning(message) {
+        // eslint-disable-next-line no-console
         console.warn(message);
     }
 

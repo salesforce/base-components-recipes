@@ -22,6 +22,7 @@ const mockHandleFieldValueChange = jest.fn();
 const mockConstructor = jest.fn();
 jest.mock('lightning/fieldDependencyManager', () => {
     return {
+        // eslint-disable-next-line @lwc/lwc/no-rest-parameter
         DependencyManager: jest.fn().mockImplementation((...args) => {
             mockConstructor(...args);
             return {
@@ -459,7 +460,7 @@ describe('record edit form', () => {
                 form.addEventListener('submit', e => {
                     e.preventDefault();
                 });
-
+                // eslint-disable-next-line @lwc/lwc/no-async-operation
                 setTimeout(() => {
                     try {
                         expect(window.RECORD_SAVE_COUNT).toEqual(0);
@@ -614,6 +615,7 @@ describe('record edit form', () => {
         document.body.appendChild(element);
         return new Promise((resolve, reject) => {
             element.addEventListener('load', () => {
+                // eslint-disable-next-line lightning-global/no-custom-event-bubbling
                 const event = new CustomEvent('registerfielddependency', {
                     composed: true,
                     bubbles: true,
@@ -659,7 +661,7 @@ describe('record edit form', () => {
         return new Promise((resolve, reject) => {
             element.addEventListener('load', () => {
                 const fieldElement = shadowQuerySelector(element, '.picklist');
-
+                // eslint-disable-next-line lightning-global/no-custom-event-bubbling
                 const event = new CustomEvent('updatedependentfields', {
                     composed: true,
                     bubbles: true,
@@ -772,7 +774,7 @@ describe('record edit form', () => {
                 const form = shadowQuerySelector(element, 'c-record-edit-form');
 
                 const e = new Error('Error happened');
-
+                // eslint-disable-next-line lightning-global/no-custom-event-bubbling
                 const event = new CustomEvent('error', {
                     composed: true,
                     bubbles: true,
@@ -864,7 +866,7 @@ describe('record edit form', () => {
         });
 
         window.RECORD_UI_CURRENT_ERROR = RESPONSES.FIELD_ERROR;
-
+        // eslint-disable-next-line camelcase
         window.RECORD_UI_CURRENT_ERROR.body.output.fieldErrors.MissingField__c = [
             {
                 constituentField: null,
