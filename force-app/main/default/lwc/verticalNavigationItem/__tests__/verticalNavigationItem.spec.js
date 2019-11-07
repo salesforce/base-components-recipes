@@ -24,7 +24,7 @@ describe('c-vertical-navigation-item', () => {
 
         document.body.appendChild(element);
         expect(element.className).toBe('slds-nav-vertical__item');
-        expect(element.href).toBe('javascript:void(0);');
+        expect(element.href).toBe('javascript:void(0);'); // eslint-disable-line no-script-url
     });
 
     it('applies default classes to link', () => {

@@ -116,6 +116,7 @@ export default class cMenuItem extends LightningElement {
     }
 
     get computedHref() {
+        // eslint-disable-next-line no-script-url
         return this.href ? this.href : 'javascript:void(0)';
     }
 

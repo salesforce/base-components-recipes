@@ -87,7 +87,7 @@ export function debounce(func, delay, options) {
             invokeLeading = false;
         }
         clearTimeout(timer);
-
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         timer = setTimeout(function() {
             func.apply(this, args);
             invokeLeading = _options.leading;

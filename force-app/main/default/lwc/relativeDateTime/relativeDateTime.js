@@ -57,6 +57,7 @@ export default class cRelativeDateTime extends LightningElement {
         if (this.formattedValue !== '') {
             const units = getTimeoutUnitsTillInvalid(this.value);
 
+            // eslint-disable-next-line @lwc/lwc/no-async-operation
             this.formattedValueUpdateTask = setTimeout(
                 this.updateFormattedValue.bind(this),
                 units

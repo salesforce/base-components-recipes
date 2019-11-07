@@ -367,6 +367,7 @@ export default class cRecordEditForm extends LightningElement {
                     }
 
                     this.dispatchEvent(
+                        // eslint-disable-next-line lightning-global/no-custom-event-bubbling
                         new CustomEvent('success', {
                             composed: true,
                             bubbles: true,
@@ -480,6 +481,7 @@ export default class cRecordEditForm extends LightningElement {
 
         const fields = JSON.parse(JSON.stringify(this.getFormValues()));
 
+        // eslint-disable-next-line lightning-global/no-custom-event-bubbling
         const evt = new CustomEvent('submit', {
             composed: true,
             bubbles: true,
@@ -489,6 +491,7 @@ export default class cRecordEditForm extends LightningElement {
 
         this.dispatchEvent(evt);
 
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         setTimeout(() => {
             if (this._pendingAction) {
                 return;

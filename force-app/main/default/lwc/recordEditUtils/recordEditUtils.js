@@ -34,6 +34,7 @@ function normalizeRecord(newRecord) {
     return normalizedRecord;
 }
 
+// eslint-disable-next-line @lwc/lwc/no-async-await
 export async function ldsUpdateRecord(newRecord, originalRecord, objectInfo) {
     newRecord.id = originalRecord.id;
     newRecord.apiName = null;
@@ -50,6 +51,7 @@ export async function ldsUpdateRecord(newRecord, originalRecord, objectInfo) {
     return updateRecord(recordToSave);
 }
 
+// eslint-disable-next-line @lwc/lwc/no-async-await
 export async function ldsCreateRecord(newRecord, objectInfo) {
     const normalizedRecord = normalizeRecord(newRecord);
     const recordToSave = generateRecordInputForCreate(
@@ -60,6 +62,7 @@ export async function ldsCreateRecord(newRecord, objectInfo) {
     return createRecord(recordToSave);
 }
 
+// eslint-disable-next-line @lwc/lwc/no-async-await
 export async function createOrSaveRecord(
     newRecord,
     originalRecord,

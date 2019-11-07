@@ -81,6 +81,7 @@ function toDate(value) {
 
 const isTimeZonesSupported = (function() {
     try {
+        // eslint-disable-next-line new-cap
         Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles' });
     } catch (err) {
         return false;

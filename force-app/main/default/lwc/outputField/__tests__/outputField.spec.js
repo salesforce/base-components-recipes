@@ -30,7 +30,7 @@ function waitForReady(element) {
             reject('timed out waiting for ready');
         } else if (element.classList.contains('slds-hide')) {
             pollCount++;
-
+            // eslint-disable-next-line @lwc/lwc/no-async-operation
             setTimeout(pollClassList(resolve, reject), 0);
         } else {
             resolve();
@@ -93,6 +93,7 @@ describe('c-output-field', () => {
         });
     });
 
+    // eslint-disable-next-line @lwc/lwc/no-async-await
     it('nonexistent', async () => {
         const element = createOutputField('NonField');
         return Promise.resolve().then(() => {

@@ -556,6 +556,7 @@ describe('c-base-combobox', () => {
 
                     listbox.scrollTop = 50000;
                     listbox.dispatchEvent(
+                        // eslint-disable-next-line lightning-global/no-custom-event-bubbling
                         new CustomEvent('scroll', {
                             composed: true,
                             bubbles: true
@@ -608,6 +609,7 @@ describe('c-base-combobox', () => {
                 label: 'Some Choice'
             }
         ].forEach(inputPill => {
+            // eslint-disable-next-line jest/valid-describe
             describe(inputPill ? 'with pill' : 'without pill', () => {
                 [
                     {

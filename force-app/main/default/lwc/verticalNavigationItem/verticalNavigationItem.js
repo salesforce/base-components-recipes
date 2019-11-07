@@ -7,7 +7,7 @@
 
 import { LightningElement, api, track } from 'lwc';
 
-const DEFAULT_HREF = 'javascript:void(0);';
+const DEFAULT_HREF = 'javascript:void(0);'; // eslint-disable-line no-script-url
 
 export default class cVerticalNavigationItem extends LightningElement {
     @api label;

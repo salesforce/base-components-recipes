@@ -78,7 +78,7 @@ export default class cFormattedDateTime extends LightningElement {
         const errorMsg =
             `<lightning-formatted-date-time> The value attribute accepts either a Date object, a timestamp, or a valid ISO8601 formatted string ` +
             `with timezone offset. but we are getting the ${typeof value} value "${value}" instead.`;
-        console.warn(errorMsg);
+        console.warn(errorMsg); // eslint-disable-line no-console
     }
 
     getOptions() {

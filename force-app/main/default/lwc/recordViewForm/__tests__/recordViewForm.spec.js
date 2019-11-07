@@ -154,6 +154,7 @@ describe('record view form', () => {
 
     it('displays a warning in the console when record id is undefined', () => {
         return new Promise((resolve, reject) => {
+            // eslint-disable-next-line no-console
             console.warn = jest.fn(warn => {
                 expect(warn).toEqual(
                     'record id is required but is currently undefined or null'
@@ -169,6 +170,7 @@ describe('record view form', () => {
 
     it('displays a warning in the console when api name is undefined', () => {
         return new Promise((resolve, reject) => {
+            // eslint-disable-next-line no-console
             console.warn = jest.fn(warn => {
                 expect(warn).toEqual(
                     'API Name is required but is currently undefined or null'
@@ -186,6 +188,7 @@ describe('record view form', () => {
         return new Promise((resolve, reject) => {
             let warning = false;
 
+            // eslint-disable-next-line no-console
             console.warn = jest.fn(() => {
                 warning = true;
             });
@@ -238,6 +241,7 @@ describe('record view form', () => {
             });
 
             element.addEventListener('load', () => {
+                // eslint-disable-next-line no-console
                 console.warn = jest.fn(() => {
                     resolve();
                 });
@@ -263,6 +267,7 @@ describe('record view form', () => {
             element.addEventListener('load', () => {
                 verifyDefaultNameValue(element, resolve, reject);
 
+                // eslint-disable-next-line no-console
                 console.warn = jest.fn(() => {
                     Promise.resolve().then(() => {
                         const outputField = shadowQuerySelector(
@@ -301,6 +306,7 @@ describe('record view form', () => {
             element.addEventListener('load', () => {
                 verifyDefaultNameValue(element, resolve, reject);
 
+                // eslint-disable-next-line no-console
                 console.warn = jest.fn(warn => {
                     resolve(warn);
                 });
@@ -388,6 +394,7 @@ describe('record view form', () => {
                     initialData.detail.objectInfos.Bad_Guy__c.fields;
                 expect(expectedFields).toEqual(
                     expect.not.objectContaining({
+                        // eslint-disable-next-line camelcase
                         Additional_Field__c: expect.any(Object)
                     })
                 );
@@ -404,6 +411,7 @@ describe('record view form', () => {
                             const data = excludedField.getWiredData();
                             expect(data.objectInfo.fields).toEqual(
                                 expect.objectContaining({
+                                    // eslint-disable-next-line camelcase
                                     Additional_Field__c: expect.any(Object)
                                 })
                             );

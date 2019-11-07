@@ -148,7 +148,7 @@ export default class cCarousel extends LightningElement {
         }
 
         this.cancelAutoScrollTimeOut();
-
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         this.autoScrollTimeOut = setTimeout(
             this.startAutoScroll.bind(this),
             scrollDuration

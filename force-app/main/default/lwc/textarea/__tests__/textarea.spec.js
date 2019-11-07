@@ -5,6 +5,7 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
+/* eslint-disable @lwc/lwc/no-document-query */
 import { createElement } from 'lwc';
 import cElement from 'c/textarea';
 
@@ -31,6 +32,7 @@ describe('c-textarea', () => {
         });
 
         return Promise.resolve().then(() => {
+            // eslint-disable-next-line @lwc/lwc/no-document-query
             const txt = document
                 .querySelector('c-textarea')
                 .shadowRoot.querySelector('textarea');
@@ -48,6 +50,7 @@ describe('c-textarea', () => {
         });
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('should render with value', () => {
         createComponent({
             value: 'ASB'
@@ -61,6 +64,7 @@ describe('c-textarea', () => {
         });
     });
 
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('should be invalid when required and empty', () => {
         createComponent({
             required: true

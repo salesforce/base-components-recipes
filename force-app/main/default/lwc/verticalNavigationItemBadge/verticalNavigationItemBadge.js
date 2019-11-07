@@ -12,7 +12,7 @@ const i18n = {
     newItems: labelNewItems
 };
 
-const DEFAULT_HREF = 'javascript:void(0);';
+const DEFAULT_HREF = 'javascript:void(0);'; // eslint-disable-line no-script-url
 
 export default class cVerticalNavigationItemBadge extends LightningElement {
     @api label;

@@ -121,6 +121,7 @@ export class TreeData {
                 }
 
                 if (
+                    // eslint-disable-next-line no-prototype-builtins
                     currentNode.hasOwnProperty('items') &&
                     Array.isArray(currentNode.items)
                 ) {

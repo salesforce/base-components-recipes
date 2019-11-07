@@ -38,6 +38,7 @@ export class LightningResizeObserver {
     }
 
     observe(lightningElement) {
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         this._requestAnimationId = requestAnimationFrame(() => {
             if (this._resizeObserverAvailable) {
                 this._resizeObserver.observe(lightningElement);

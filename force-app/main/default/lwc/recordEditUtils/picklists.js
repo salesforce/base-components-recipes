@@ -19,6 +19,7 @@ export function formHasPicklists(objectInfo, fields) {
 function getPicklistFields(objectInfo, fields) {
     const picklistFields = new Set();
     for (const fieldName in objectInfo.fields) {
+        // eslint-disable-next-line no-prototype-builtins
         if (objectInfo.fields.hasOwnProperty(fieldName)) {
             const field = objectInfo.fields[fieldName];
             if (

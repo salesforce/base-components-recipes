@@ -51,6 +51,7 @@ export function parseDateTime(dateTimeString, format, strictMode) {
 export function syncUTCToWallTime(date, timeZone) {
     let converted = null;
 
+    // eslint-disable-next-line new-cap
     getLocalizationService().UTCToWallTime(date, timeZone, result => {
         converted = result;
     });
@@ -60,6 +61,7 @@ export function syncUTCToWallTime(date, timeZone) {
 export function syncWallTimeToUTC(date, timeZone) {
     let converted = null;
 
+    // eslint-disable-next-line new-cap
     getLocalizationService().WallTimeToUTC(date, timeZone, result => {
         converted = result;
     });

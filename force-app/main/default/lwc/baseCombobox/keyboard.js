@@ -31,6 +31,7 @@ function handlePageUpOrDownKey({ event, currentIndex, dropdownInterface }) {
     const pageUpDownOptionSkipCount = 10;
 
     if (dropdownInterface.getTotalOptions() > 0) {
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         requestAnimationFrame(() => {
             let highlightIndex = 0;
             if (event.key === 'PageUp') {
@@ -60,6 +61,7 @@ function handleHomeOrEndKey({ event, dropdownInterface }) {
         dropdownInterface.openDropdownIfNotEmpty();
     }
     if (dropdownInterface.getTotalOptions() > 0) {
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         requestAnimationFrame(() => {
             const highlightIndex =
                 event.key === 'Home'
@@ -91,6 +93,7 @@ function handleUpOrDownKey({ event, currentIndex, dropdownInterface }) {
     }
 
     if (dropdownInterface.getTotalOptions() > 0) {
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         requestAnimationFrame(() => {
             dropdownInterface.highlightOptionWithIndex(nextIndex);
         });
@@ -114,6 +117,7 @@ function handleTypedCharacters({ event, currentIndex, dropdownInterface }) {
     if (dropdownInterface.isInputReadOnly()) {
         event.preventDefault();
 
+        // eslint-disable-next-line @lwc/lwc/no-async-operation
         requestAnimationFrame(() =>
             runActionOnBufferedTypedCharacters(
                 event,
