@@ -1,17 +1,17 @@
 <template>
     <p class="slds-text-heading_small">{activeSectionMessage}</p>
 
-    <lightning-button
+    <c-button
         onclick={handleToggleSectionD}
         label="Toggle Section D"
-    ></lightning-button>
+    ></c-button>
 
-    <lightning-accordion
+    <c-accordion
         class="example-accordion"
         onsectiontoggle={handleToggleSection}
         active-section-name="B"
     >
-        <lightning-accordion-section name="A" label="Accordion Title A">
+        <c-accordion-section name="A" label="Accordion Title A">
             <p>This is the content area for section A.</p>
             <p>
                 Donec vitae tellus egestas, faucibus ipsum ac, imperdiet erat.
@@ -22,9 +22,9 @@
                 fermentum dolor. Nulla euismod consectetur leo, id condimentum
                 nunc consequat quis.
             </p>
-        </lightning-accordion-section>
+        </c-accordion-section>
 
-        <lightning-accordion-section name="B" label="Accordion Title B">
+        <c-accordion-section name="B" label="Accordion Title B">
             <p>This is the content area for section B.</p>
             <p>
                 Nam at elit et justo scelerisque ullamcorper vel a felis. Mauris
@@ -35,9 +35,9 @@
                 suscipit leo. Duis ut urna nec nibh hendrerit lacinia. Sed non
                 auctor libero. Sed pellentesque tempor mollis.
             </p>
-        </lightning-accordion-section>
+        </c-accordion-section>
 
-        <lightning-accordion-section name="C" label="Accordion Title C">
+        <c-accordion-section name="C" label="Accordion Title C">
             <p>This is the content area for section C.</p>
             <p>
                 Nulla ornare ipsum felis, vel aliquet dui blandit vel. Integer
@@ -50,10 +50,10 @@
                 eros efficitur semper. Nulla pulvinar venenatis quam vitae
                 efficitur. Nam facilisis sollicitudin quam ac imperdiet.
             </p>
-        </lightning-accordion-section>
+        </c-accordion-section>
 
         <template if:true={isDVisible}>
-            <lightning-accordion-section name="D" label="Accordion Title D">
+            <c-accordion-section name="D" label="Accordion Title D">
                 <p>This is the content area for section D.</p>
                 <p>
                     Suspendisse est eros, maximus et risus a, luctus bibendum
@@ -69,7 +69,7 @@
                     bibendum faucibus. Vestibulum eget ornare sapien, eget
                     ultrices orci.
                 </p>
-            </lightning-accordion-section>
+            </c-accordion-section>
         </template>
-    </lightning-accordion>
+    </c-accordion>
 </template>
