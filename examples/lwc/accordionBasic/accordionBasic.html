@@ -12,21 +12,15 @@
         active-section-name="B"
     >
         <c-accordion-section name="A" label="Accordion Title A">
-            <lightning-button-menu
+            <c-button-menu
                 slot="actions"
                 alternative-text="Show menu"
                 icon-size="x-small"
                 menu-alignment="right"
             >
-                <lightning-menu-item
-                    value="New"
-                    label="Menu Item One"
-                ></lightning-menu-item>
-                <lightning-menu-item
-                    value="Edit"
-                    label="Menu Item Two"
-                ></lightning-menu-item>
-            </lightning-button-menu>
+                <c-menu-item value="New" label="Menu Item One"></c-menu-item>
+                <c-menu-item value="Edit" label="Menu Item Two"></c-menu-item>
+            </c-button-menu>
             <p>This is the content area for section A.</p>
             <p>.</p>
             <p>.</p>
