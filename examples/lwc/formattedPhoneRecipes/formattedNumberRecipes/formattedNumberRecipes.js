@@ -6,4 +6,4 @@
  */
 import { LightningElement } from 'lwc';
 
-export default class CardRecipes extends LightningElement {}
+export default class FormattedNumberRecipes extends LightningElement {}
