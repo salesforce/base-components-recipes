@@ -12,7 +12,8 @@
         "test:unit:coverage": "lwc-jest --coverage",
         "prettier": "prettier --write '**/*.{cmp,component,css,html,js,json,md,page,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{html,js,json,yaml,yml,md,cmp,page,component}'",
-        "postinstall": "node bin/check-version.js"
+        "postinstall": "node bin/check-version.js",
+        "check:license": "node scripts/check-license-header.js"
     },
     "license": "CC0-1.0",
     "engines": {
@@ -26,11 +27,12 @@
         "husky": "^3.0.5",
         "lint-staged": "^9.3.0",
         "prettier": "^1.18",
-        "semver": "^6.3.0"
+        "semver": "^6.3.0",
+        "simple-git": "^1.126.0"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "yarn check:license"
         }
     },
     "lint-staged": {
@@ -43,5 +45,9 @@
         "*": [
             "git add"
         ]
-    }
+    },
+    "checkLicense": [
+        "examples",
+        "force-app"
+    ]
 }
