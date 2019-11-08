@@ -34,8 +34,10 @@
         <div class="slds-card__body">
             <slot></slot>
         </div>
-        <div class="slds-card__footer">
-            <slot name="footer"></slot>
-        </div>
+        <template if:true={showFooter}>
+            <div class="slds-card__footer">
+                <slot name="footer"></slot>
+            </div>
+        </template>
     </article>
 </template>

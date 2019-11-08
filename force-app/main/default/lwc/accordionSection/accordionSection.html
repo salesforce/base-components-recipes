@@ -8,7 +8,7 @@
 <template>
     <section class={computedSectionClasses}>
         <div class="slds-accordion__summary">
-            <h2 onkeydown={handleKeyDown} class="slds-accordion__summary-heading">
+            <h3 onkeydown={handleKeyDown} class="slds-accordion__summary-heading">
                 <button class="section-control slds-button slds-button_reset slds-accordion__summary-action"
                         type="button"
                         aria-expanded={computedAriaExpanded}
@@ -21,7 +21,7 @@
                     </c-primitive-icon>
                     <span class="slds-truncate" title={label}>{label}</span>
                 </button>
-            </h2>
+            </h3>
             <slot name="actions"></slot>
         </div>
         <div id='lgt-accordion-section' hidden={computedHidden} aria-hidden={computedAriaHidden} class="slds-accordion__content">

@@ -39,7 +39,21 @@ describe('c-card', () => {
     });
     it('should not render the footer wrapper when no footer was passed', () => {
         const card = createCard();
-        const footerWrapper = shadowQuerySelector(card, '.slds-card__footer');
-        expect(footerWrapper).toBeNull();
+        return Promise.resolve().then(() => {
+            const footerWrapper = shadowQuerySelector(
+                card,
+                '.slds-card__footer'
+            );
+
+            expect(footerWrapper).toBeNull();
+        });
+    });
+    it('should not throw in subsequent renders when no footer was passed', () => {
+        const card = createCard({ iconName: 'utility:down' });
+        return Promise.resolve().then(() => {
+            card.iconName = 'action:approval';
+
+            return new Promise(setTimeout);
+        });
     });
 });

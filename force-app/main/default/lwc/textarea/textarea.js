@@ -21,7 +21,7 @@ import {
     isEmptyString,
     VARIANT
 } from 'c/inputUtils';
-import { TouchScroller } from 'lightning/touchScrollLibrary';
+import { TouchScroller } from 'c/touchScrollLibrary';
 
 const i18n = {
     required: labelRequired

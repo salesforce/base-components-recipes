@@ -28,12 +28,15 @@ export default class cCard extends LightningElement {
         return this.privateVariant;
     }
 
+    @track showFooter = true;
     renderedCallback() {
-        const footer = this.template.querySelector('.slds-card__footer');
-        const slot = footer.querySelector('slot');
-        if (slot.assignedElements().length === 0) {
-            footer.parentNode.removeChild(footer);
+        if (this.footerSlot) {
+            this.showFooter = this.footerSlot.assignedElements().length !== 0;
         }
+    }
+
+    get footerSlot() {
+        return this.template.querySelector('slot[name=footer]');
     }
 
     get computedWrapperClassNames() {
