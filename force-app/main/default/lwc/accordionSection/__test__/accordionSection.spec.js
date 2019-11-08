@@ -210,7 +210,7 @@ describe('c-accordion-section', () => {
                     keydownEvent.keyCode = keyCodeMap[keyDesc];
 
                     elem.shadowRoot
-                        .querySelector('h2')
+                        .querySelector('h3')
                         .dispatchEvent(keydownEvent);
 
                     expect(
@@ -234,7 +234,7 @@ describe('c-accordion-section', () => {
             return Promise.resolve().then(() => {
                 const keydownEvent = new CustomEvent('keydown');
                 keydownEvent.keyCode = 41 + Math.ceil(Math.random() * 50);
-                elem.shadowRoot.querySelector('h2').dispatchEvent(keydownEvent);
+                elem.shadowRoot.querySelector('h3').dispatchEvent(keydownEvent);
 
                 expect(
                     sectionObserver.notifySectionKeyNav

@@ -7,5 +7,5 @@
 
 .slds-dropdown__list {
     max-height: 25rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
