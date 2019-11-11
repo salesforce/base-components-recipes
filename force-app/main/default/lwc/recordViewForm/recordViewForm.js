@@ -59,7 +59,6 @@ export default class cRecordView extends LightningElement {
     }
 
     renderedCallback() {
-        this.handleRegister();
         if (this._initialRender) {
             setLabelAlignment(this._formLayoutInterface);
             resetResizeObserver(
@@ -185,7 +184,7 @@ export default class cRecordView extends LightningElement {
         this.dispatchEvent(createErrorEvent(error));
     }
 
-    handleRegister() {
+    handleSlotChange() {
         this.fieldSet.concat(this.getFields());
 
         if (this.objectApiName) {

@@ -31,7 +31,6 @@ export default class cPrimitiveIcon extends LightningElement {
             this.prevIconName = this.iconName;
             const svgElement = this.template.querySelector('svg');
             iconUtils.polyfill(svgElement);
-            iconUtils.safariA11yPatch(svgElement);
         }
     }
 

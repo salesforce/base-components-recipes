@@ -126,7 +126,6 @@ export default class cRecordEditForm extends LightningElement {
         }
 
         this._initialRender = false;
-        this.handleRegister();
     }
 
     set layoutType(val) {
