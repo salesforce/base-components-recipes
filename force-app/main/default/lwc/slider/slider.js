@@ -66,10 +66,7 @@ export default class cSlider extends LightningElement {
         this.classList.add('slds-form-element');
 
         this.setAttribute('data-handles-touch', true);
-        assert(
-            this.label,
-            `<lightning-slider> Missing required "label" attribute.`
-        );
+        assert(this.label, `<c-slider> Missing required "label" attribute.`);
     }
 
     @api get min() {

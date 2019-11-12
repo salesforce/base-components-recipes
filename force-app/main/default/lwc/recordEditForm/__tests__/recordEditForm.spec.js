@@ -20,7 +20,7 @@ import { deepCopy } from 'c/utilsPrivate';
 const mockRegisterField = jest.fn();
 const mockHandleFieldValueChange = jest.fn();
 const mockConstructor = jest.fn();
-jest.mock('lightning/fieldDependencyManager', () => {
+jest.mock('c/fieldDependencyManager', () => {
     return {
         // eslint-disable-next-line @lwc/lwc/no-rest-parameter
         DependencyManager: jest.fn().mockImplementation((...args) => {

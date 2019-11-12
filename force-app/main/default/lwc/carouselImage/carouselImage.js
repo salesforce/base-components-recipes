@@ -104,13 +104,13 @@ export default class cCarouselImage extends LightningElement {
         assert(
             typeof this._alternativeText === 'string' &&
                 this._alternativeText.length,
-            `<lightning-carousel-image> The "alternative-text" attribute value is required.`
+            `<c-carousel-image> The "alternative-text" attribute value is required.`
         );
     }
     validateSrc() {
         assert(
             typeof this._src === 'string' && this._src.length,
-            `<lightning-carousel-image> The "src" attribute value is required.`
+            `<c-carousel-image> The "src" attribute value is required.`
         );
     }
 

@@ -57,7 +57,7 @@ export default class cIcon extends LightningElement {
             }
             this.state.iconName = value;
         } else {
-            console.warn(`<lightning-icon> Invalid icon name ${value}`); // eslint-disable-line no-console
+            console.warn(`<c-icon> Invalid icon name ${value}`); // eslint-disable-line no-console
 
             classListMutation(this.classList, {
                 'slds-icon_container_circle': false,

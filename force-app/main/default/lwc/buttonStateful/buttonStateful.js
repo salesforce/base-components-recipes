@@ -95,7 +95,7 @@ export default class cButtonStateful extends LightningElement {
         outputVal = '';
         // eslint-disable-next-line no-console
         console.warn(
-            `<lightning-button-stateful> The "labelWhenOn" attribute value is required to show the label when selected has a value of true`
+            `<c-button-stateful> The "labelWhenOn" attribute value is required to show the label when selected has a value of true`
         );
 
         return outputVal;
@@ -111,7 +111,7 @@ export default class cButtonStateful extends LightningElement {
         outputVal = '';
         // eslint-disable-next-line no-console
         console.warn(
-            `<lightning-button-stateful> The "labelWhenOff" attribute value is required to show the label when selected has a value of false`
+            `<c-button-stateful> The "labelWhenOff" attribute value is required to show the label when selected has a value of false`
         );
 
         return outputVal;
