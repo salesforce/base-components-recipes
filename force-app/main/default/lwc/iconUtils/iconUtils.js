@@ -93,24 +93,3 @@ export const computeSldsClass = iconName => {
 };
 
 export { polyfill } from './polyfill';
-
-const isSafari =
-    window.safari &&
-    window.safari.pushNotification &&
-    window.safari.pushNotification.toString() ===
-        '[object SafariRemoteNotification]';
-
-export function safariA11yPatch(svgElement) {
-    if (!svgElement || !isSafari) {
-        return;
-    }
-
-    const use = svgElement.querySelector('use');
-    if (!use) {
-        return;
-    }
-
-    svgElement.insertBefore(document.createTextNode('\n'), use);
-
-    svgElement.insertBefore(document.createTextNode('\n'), use.nextSibling);
-}
