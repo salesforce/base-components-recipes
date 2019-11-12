@@ -5,32 +5,26 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <c-input-location label="No default coordinates"></c-input-location>
-    <c-input-location
-        label="Default coordinates"
-        latitude="-15.1234"
-        longitude="99.5517"
-    ></c-input-location>
-    <c-input-location
-        label="Required"
-        latitude="-15.1234"
-        longitude="99.5517"
-        required
-    ></c-input-location>
-    <c-input-location
-        label="Disabled"
-        latitude="-15.1234"
-        longitude="99.5517"
-        disabled
-    ></c-input-location>
-    <c-input-location
-        label="Read-only"
-        latitude="-15.1234"
-        longitude="99.5517"
-        readonly
-    ></c-input-location>
-    <c-input-location
-        label="fieldLevelHelp presents"
-        field-level-help="Field level text example"
-    ></c-input-location>
+    <c-card title="Input Location">
+        <div class="slds-card__body slds-card__body_inner">
+            <c-input-location label="No default coordinates"></c-input-location>
+            <c-input-location label="Default coordinates"
+                              latitude="-15.1234"
+                              longitude="99.5517"></c-input-location>
+            <c-input-location label="Required"
+                              latitude="-15.1234"
+                              longitude="99.5517"
+                              required></c-input-location>
+            <c-input-location label="Disabled"
+                              latitude="-15.1234"
+                              longitude="99.5517"
+                              disabled></c-input-location>
+            <c-input-location label="Read-only"
+                              latitude="-15.1234"
+                              longitude="99.5517"
+                              readonly></c-input-location>
+            <c-input-location label="fieldLevelHelp presents"
+                              field-level-help="Field level text example"></c-input-location>
+        </div>
+    </c-card>
 </template>

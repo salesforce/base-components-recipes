@@ -5,11 +5,23 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <div class="slds-box">
-        <h3 class="header">Formatted Phone Number</h3>
-        <p><c-formatted-phone value="+18005551212"></c-formatted-phone></p>
-        <p><c-formatted-phone value="8005551212"></c-formatted-phone></p>
-        <p><c-formatted-phone value="18005551212"></c-formatted-phone></p>
-        <p><c-formatted-phone value="1333333"></c-formatted-phone></p>
-    </div>
+    <c-card title="Formatted Phone">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box">
+                <h3 class="header">Formatted Phone Number</h3>
+                <p>
+                    <c-formatted-phone value="+18005551212"></c-formatted-phone>
+                </p>
+                <p>
+                    <c-formatted-phone value="8005551212"></c-formatted-phone>
+                </p>
+                <p>
+                    <c-formatted-phone value="18005551212"></c-formatted-phone>
+                </p>
+                <p>
+                    <c-formatted-phone value="1333333"></c-formatted-phone>
+                </p>
+            </div>
+        </div>
+    </c-card>
 </template>

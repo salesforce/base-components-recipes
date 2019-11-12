@@ -5,15 +5,19 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <div class="slds-box">
-        <h3 class="header">Formatted Time</h3>
-        <p>
-            Simple Time value:
-            <c-formatted-time value="22:12:30.999"></c-formatted-time>
-        </p>
-        <p>
-            Time value with Z suffix:
-            <c-formatted-time value="22:12:30.999Z"></c-formatted-time>
-        </p>
-    </div>
+    <c-card title="Formatted Time">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box">
+                <h3 class="header">Formatted Time</h3>
+                <p>
+                    Simple Time value:
+                    <c-formatted-time value="22:12:30.999"></c-formatted-time>
+                </p>
+                <p>
+                    Time value with Z suffix:
+                    <c-formatted-time value="22:12:30.999Z"></c-formatted-time>
+                </p>
+            </div>
+        </div>
+    </c-card>
 </template>

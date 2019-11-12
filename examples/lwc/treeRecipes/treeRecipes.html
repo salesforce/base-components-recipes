@@ -5,15 +5,20 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <div class="slds-m-top_medium slds-m-bottom_x-large">
-        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
-            Tree component with a many levels of depth. Click on the arrow icons
-            to expand or collapse a branch.
-        </h2>
+    <c-card title="Tree">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                    Tree component with a many levels of depth. Click on the arrow icons
+                    to expand or collapse a branch.
+                </h2>
 
-        <!-- Simple -->
-        <div class="slds-p-around_medium lgc-bg">
-            <c-tree items={items} header="Roles"></c-tree>
+                <!-- Simple -->
+                <div class="slds-p-around_medium lgc-bg">
+                    <c-tree items={items}
+                            header="Roles"></c-tree>
+                </div>
+            </div>
         </div>
-    </div>
+    </c-card>
 </template>

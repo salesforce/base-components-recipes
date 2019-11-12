@@ -5,83 +5,79 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <div class="slds-m-top_medium slds-m-bottom_x-large">
-        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
-            Button group using simple buttons.
-        </h2>
+    <c-card title="Button Group">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                    Button group using simple buttons.
+                </h2>
 
-        <!-- Button group: simple buttons -->
-        <c-button-group>
-            <c-button label="Refresh"></c-button>
-            <c-button label="Edit"></c-button>
-            <c-button label="Save"></c-button>
-        </c-button-group>
-    </div>
+                <!-- Button group: simple buttons -->
+                <c-button-group>
+                    <c-button label="Refresh"></c-button>
+                    <c-button label="Edit"></c-button>
+                    <c-button label="Save"></c-button>
+                </c-button-group>
+            </div>
 
-    <div class="slds-m-top_medium slds-m-bottom_x-large">
-        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
-            Button group using several button variations.
-        </h2>
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                    Button group using several button variations.
+                </h2>
 
-        <!-- Button group: simple buttons -->
-        <c-button-group>
-            <c-button label="Refresh"></c-button>
-            <c-button label="Edit"></c-button>
-            <c-button label="Save" icon-name="utility:save"></c-button>
-            <c-button
-                label="Delete"
-                variant="destructive"
-                icon-name="utility:delete"
-            ></c-button>
-        </c-button-group>
-    </div>
+                <!-- Button group: simple buttons -->
+                <c-button-group>
+                    <c-button label="Refresh"></c-button>
+                    <c-button label="Edit"></c-button>
+                    <c-button label="Save"
+                              icon-name="utility:save"></c-button>
+                    <c-button label="Delete"
+                              variant="destructive"
+                              icon-name="utility:delete"></c-button>
+                </c-button-group>
+            </div>
 
-    <div class="slds-m-top_medium slds-m-bottom_x-large">
-        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
-            Button group using several button types (standard, icon, stateful,
-            icon-stateful, menu).
-        </h2>
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                    Button group using several button types (standard, icon, stateful,
+                    icon-stateful, menu).
+                </h2>
 
-        <!-- Button group: simple buttons -->
-        <c-button-group>
-            <c-button label="Refresh"></c-button>
-            <c-button label="Edit"></c-button>
-            <c-button label="Save" icon-name="utility:save"></c-button>
-            <c-button-icon
-                icon-name="utility:delete"
-                variant="border-filled"
-                alternative-text="Delete"
-            ></c-button-icon>
-            <c-button-icon
-                icon-name="utility:settings"
-                variant="border-filled"
-                alternative-text="Settings"
-            ></c-button-icon>
-            <c-button-stateful
-                selected={buttonStatefulState}
-                label-when-off="Follow"
-                label-when-on="Following"
-                label-when-hover="Unfollow"
-                icon-name-when-off="utility:add"
-                icon-name-when-on="utility:check"
-                icon-name-when-hover="utility:close"
-                onclick={handleButtonStatefulClick}
-            ></c-button-stateful>
-            <c-button-icon-stateful
-                icon-name="utility:like"
-                selected={buttonIconStatefulState}
-                alternative-text="Like"
-                onclick={handleButtonIconStatefulClick}
-            >
-            </c-button-icon-stateful>
-            <c-button-menu alternative-text="Show menu">
-                <c-menu-item label="Menu Item One" value="item1"></c-menu-item>
-                <c-menu-item label="Menu Item Two" value="item2"></c-menu-item>
-                <c-menu-item
-                    label="Menu Item Three"
-                    value="item3"
-                ></c-menu-item>
-            </c-button-menu>
-        </c-button-group>
-    </div>
+                <!-- Button group: simple buttons -->
+                <c-button-group>
+                    <c-button label="Refresh"></c-button>
+                    <c-button label="Edit"></c-button>
+                    <c-button label="Save"
+                              icon-name="utility:save"></c-button>
+                    <c-button-icon icon-name="utility:delete"
+                                   variant="border-filled"
+                                   alternative-text="Delete"></c-button-icon>
+                    <c-button-icon icon-name="utility:settings"
+                                   variant="border-filled"
+                                   alternative-text="Settings"></c-button-icon>
+                    <c-button-stateful selected={buttonStatefulState}
+                                       label-when-off="Follow"
+                                       label-when-on="Following"
+                                       label-when-hover="Unfollow"
+                                       icon-name-when-off="utility:add"
+                                       icon-name-when-on="utility:check"
+                                       icon-name-when-hover="utility:close"
+                                       onclick={handleButtonStatefulClick}></c-button-stateful>
+                    <c-button-icon-stateful icon-name="utility:like"
+                                            selected={buttonIconStatefulState}
+                                            alternative-text="Like"
+                                            onclick={handleButtonIconStatefulClick}>
+                    </c-button-icon-stateful>
+                    <c-button-menu alternative-text="Show menu">
+                        <c-menu-item label="Menu Item One"
+                                     value="item1"></c-menu-item>
+                        <c-menu-item label="Menu Item Two"
+                                     value="item2"></c-menu-item>
+                        <c-menu-item label="Menu Item Three"
+                                     value="item3"></c-menu-item>
+                    </c-button-menu>
+                </c-button-group>
+            </div>
+        </div>
+    </c-card>
 </template>
