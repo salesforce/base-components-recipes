@@ -27,7 +27,7 @@ describe('c-card', () => {
             expect(wrapper.classList.contains('slds-card_narrow')).toBe(true);
         });
     });
-    it('should contains the lightning-icon when icon-name prop is passed', () => {
+    it('should contains the c-icon when icon-name prop is passed', () => {
         const iconName = 'standard:opportunity';
         const card = createCard({
             iconName

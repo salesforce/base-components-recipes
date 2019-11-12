@@ -67,17 +67,17 @@ const DIRECTION = ['left', 'top', 'right', 'bottom'];
 
 export const STYLE_ERROR = {
     FLEX_CONFLICT:
-        'You cannot have `flexibility` value to be set to `auto` and `no-flex` together for <lightning-layout-item> component',
+        'You cannot have `flexibility` value to be set to `auto` and `no-flex` together for <c-layout-item> component',
     SIZE_RANGE:
-        'Invalid `size` attribute for <lightning-layout-item> component. The `size` attribute should be an integer between 1 and 12',
+        'Invalid `size` attribute for <c-layout-item> component. The `size` attribute should be an integer between 1 and 12',
     SMALL_SIZE_RANGE:
-        'Invalid `smallDeviceSize` attribute for <lightning-layout-item> component. The `smallDeviceSize` attribute should be an integer between 1 and 12',
+        'Invalid `smallDeviceSize` attribute for <c-layout-item> component. The `smallDeviceSize` attribute should be an integer between 1 and 12',
     MEDIUM_SIZE_RANGE:
-        'Invalid `mediumDeviceSize` attribute for <lightning-layout-item> component. The `mediumDeviceSize` attribute should be an integer between 1 and 12',
+        'Invalid `mediumDeviceSize` attribute for <c-layout-item> component. The `mediumDeviceSize` attribute should be an integer between 1 and 12',
     LARGE_SIZE_RANGE:
-        'Invalid `largeDeviceSize` attribute for <lightning-layout-item> component. The `largeDeviceSize` attribute should be an integer between 1 and 12',
+        'Invalid `largeDeviceSize` attribute for <c-layout-item> component. The `largeDeviceSize` attribute should be an integer between 1 and 12',
     SIZE_REQUIRED:
-        'You cannot have device specific size attributes for <lightning-layout-item> component without specifying the `size` attribute'
+        'You cannot have device specific size attributes for <c-layout-item> component without specifying the `size` attribute'
 };
 
 function hasConflict(value) {

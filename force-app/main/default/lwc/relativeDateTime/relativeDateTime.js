@@ -42,7 +42,7 @@ export default class cRelativeDateTime extends LightningElement {
             this.formattedValue = getFormattedRelativeDate(this.value);
         } catch (e) {
             const errorMessage =
-                `<lightning-relative-date-time>: Error while formatting ` +
+                `<c-relative-date-time>: Error while formatting ` +
                 `"${this.value}": ${e.message}`;
 
             assert(false, errorMessage);
