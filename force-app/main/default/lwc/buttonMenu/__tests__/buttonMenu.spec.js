@@ -56,10 +56,7 @@ describe('c-button-menu-onselect', () => {
 
             return Promise.resolve().then(() => {
                 shadowQuerySelector(
-                    shadowQuerySelectorAll(
-                        buttonMenu,
-                        'lightning-menu-item'
-                    )[2],
+                    shadowQuerySelectorAll(buttonMenu, 'c-menu-item')[2],
                     'a'
                 ).click();
                 expect(callback.mock.calls).toHaveLength(1);
@@ -124,8 +121,7 @@ describe('c-button-menu-icon-size-attr', () => {
 
 describe('c-button-menu-icon-name-attr', () => {
     const getIconCount = buttonMenu => {
-        return shadowQuerySelectorAll(buttonMenu, 'lightning-primitive-icon')
-            .length;
+        return shadowQuerySelectorAll(buttonMenu, 'c-primitive-icon').length;
     };
 
     it('should only show one icon when icon-name is utility:down', () => {

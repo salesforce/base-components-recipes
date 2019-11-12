@@ -72,7 +72,7 @@ function getItemLinkByName(element, name) {
 function getSectionByIndex(element, index) {
     const section = shadowQuerySelectorAll(
         element,
-        'lightning-vertical-navigation-section'
+        'c-vertical-navigation-section'
     )[index];
     expect(section).toBeTruthy();
     return section;
@@ -88,7 +88,7 @@ function getSectionHeadingByIndex(element, index) {
 function getOverflowByIndex(element, index) {
     const overflow = shadowQuerySelectorAll(
         element,
-        'lightning-vertical-navigation-overflow'
+        'c-vertical-navigation-overflow'
     )[index];
     expect(overflow).toBeTruthy();
     return overflow;

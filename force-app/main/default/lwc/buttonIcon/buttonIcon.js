@@ -100,7 +100,7 @@ export default class cButtonIcon extends cPrimitiveButton {
                     break;
                 case 'large':
                     console.warn(
-                        `<lightning-button-icon> The non-bare variants of buttonIcon do not support a size value of "large". Supported values include "xx-small", "x-small", "small", and "medium". Falling back to size value "medium".`
+                        `<c-button-icon> The non-bare variants of buttonIcon do not support a size value of "large". Supported values include "xx-small", "x-small", "small", and "medium". Falling back to size value "medium".`
                     );
 
                 case 'medium':
@@ -143,7 +143,7 @@ export default class cButtonIcon extends cPrimitiveButton {
                     break;
                 case 'xx-small':
                     console.warn(
-                        `<lightning-button-icon> The bare variant of buttonIcon does not support a size value of "xx-small". Supported values include "x-small", "small", "medium", and "large". The default is "medium".`
+                        `<c-button-icon> The bare variant of buttonIcon does not support a size value of "xx-small". Supported values include "x-small", "small", "medium", and "large". The default is "medium".`
                     );
 
                 case 'x-small':

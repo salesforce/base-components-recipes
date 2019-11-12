@@ -176,8 +176,19 @@ export const getUiFields = (fields, record, objectInfos) => {
 };
 
 export function compoundFieldIsUpdateable(fields, record, objectInfo) {
+    return fieldAttributesTruthy('updateable', fields, objectInfo);
+}
+
+export function compoundFieldIsCreateable(fields, record, objectInfo) {
+    return fieldAttributesTruthy('createable', fields, objectInfo);
+}
+
+function fieldAttributesTruthy(attribute, fields, objectInfo) {
     for (let i = 0; i < fields.length; i++) {
-        if (objectInfo.fields[fields[i]].updateable) {
+        if (!objectInfo.fields[fields[i]]) {
+            throw new Error(`Constituent field "${fields[i]}" does not exist`);
+        }
+        if (objectInfo.fields[fields[i]][attribute]) {
             return true;
         }
     }

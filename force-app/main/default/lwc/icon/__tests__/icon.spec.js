@@ -16,7 +16,7 @@ const createIcon = () => {
 };
 
 function getHref(iconElement) {
-    const icon = querySelector(iconElement, 'lightning-primitive-icon');
+    const icon = querySelector(iconElement, 'c-primitive-icon');
     const use = querySelector(icon, 'use');
     return use.getAttribute('xlink:href');
 }

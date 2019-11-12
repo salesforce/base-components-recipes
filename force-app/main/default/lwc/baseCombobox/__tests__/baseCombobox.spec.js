@@ -400,7 +400,7 @@ describe('c-base-combobox', () => {
                 jest.runAllTimers();
                 const items = shadowQuerySelectorAll(
                     element,
-                    'lightning-base-combobox-item[role="option"]'
+                    'c-base-combobox-item[role="option"]'
                 );
 
                 const selectedItem = shadowQuerySelector(
@@ -425,7 +425,7 @@ describe('c-base-combobox', () => {
                 jest.runAllTimers();
                 const items = shadowQuerySelectorAll(
                     element,
-                    'lightning-base-combobox-item[role="option"]'
+                    'c-base-combobox-item[role="option"]'
                 );
 
                 const selectedItem = shadowQuerySelector(

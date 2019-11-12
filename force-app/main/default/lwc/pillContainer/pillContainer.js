@@ -12,8 +12,6 @@ import LightningPillItem from './pillItem';
 import { keyCodes, normalizeBoolean, normalizeString } from 'c/utilsPrivate';
 import { LightningResizeObserver } from 'c/resizeObserver';
 
-const PILL_SELECTOR = 'lightning-pill';
-
 const i18n = {
     containerLabel: labelContainerLabel
 };
@@ -147,7 +145,7 @@ export default class cPillContainer extends LightningElement {
     }
 
     get pillNodes() {
-        return this.template.querySelectorAll(PILL_SELECTOR) || [];
+        return this.template.querySelectorAll('c-pill') || [];
     }
 
     get focusedNode() {

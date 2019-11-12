@@ -11,7 +11,9 @@ import {
     getFieldsForLayout,
     getMissingRelationshipFields,
     getReferenceRelationships,
-    getUiField
+    getUiField,
+    compoundFieldIsUpdateable,
+    compoundFieldIsCreateable
 } from 'c/fieldUtils';
 import store from './mockdata.json';
 import notperson from './notperson.json';
@@ -36,6 +38,70 @@ describe('getCompoundFields', () => {
         );
 
         expect(fields).toEqual(['FirstName', 'LastName', 'Salutation']);
+    });
+});
+
+describe('compoundFieldIsUpdateable', () => {
+    it('returns true for a name field if all fields are updateable', () => {
+        Object.keys(store.objectInfo.fields).forEach(key => {
+            if (key.match(/FirstName|LastName|Salutation/)) {
+                store.objectInfo.fields[key].updateable = true;
+            }
+        });
+        expect(
+            compoundFieldIsUpdateable(
+                ['FirstName', 'LastName', 'Salutation'],
+                null,
+                store.objectInfo
+            )
+        ).toEqual(true);
+    });
+
+    it('returns false for a name field if any field is not updateable', () => {
+        Object.keys(store.objectInfo.fields).forEach(key => {
+            if (key.match(/FirstName|LastName|Salutation/)) {
+                store.objectInfo.fields[key].updateable = false;
+            }
+        });
+        expect(
+            compoundFieldIsUpdateable(
+                ['FirstName', 'LastName', 'Salutation'],
+                null,
+                store.objectInfo
+            )
+        ).toEqual(false);
+    });
+});
+
+describe('compoundFieldIsCreateable', () => {
+    it('returns true for a name field if all fields are createable', () => {
+        Object.keys(store.objectInfo.fields).forEach(key => {
+            if (key.match(/FirstName|LastName|Salutation/)) {
+                store.objectInfo.fields[key].createable = true;
+            }
+        });
+        expect(
+            compoundFieldIsCreateable(
+                ['FirstName', 'LastName', 'Salutation'],
+                null,
+                store.objectInfo
+            )
+        ).toEqual(true);
+    });
+
+    it('returns false for a name field if any field is not creatable', () => {
+        Object.keys(store.objectInfo.fields).forEach(key => {
+            if (key.match(/FirstName|LastName|Salutation/)) {
+                store.objectInfo.fields[key].createable = false;
+            }
+        });
+        expect(
+            compoundFieldIsCreateable(
+                ['FirstName', 'LastName', 'Salutation'],
+                null,
+                store.objectInfo
+            )
+        ).toEqual(false);
     });
 });
 
