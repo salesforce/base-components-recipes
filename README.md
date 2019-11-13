@@ -1,6 +1,6 @@
 # Base Components Recipes
 
-View examples for base components in small bites. Each recipe demonstrates a building block to build pages and apps quickly. Use and customize the recipes in your apps on any platform. 
+View examples for base components in small bites. Each recipe demonstrates a building block to build pages and apps quickly. Use and customize the recipes in your apps. 
 
 Base component recipes open up the source for base components at https://developer.salesforce.com/docs/component-library. Explore the inner workings of the components and use the source to build new components with your own requirements. The possibilities are endless with the source in your hands! 
 
@@ -72,6 +72,8 @@ export default class HelloWorld extends LightningElement {
     @api greeting = 'Hello World';
 }
 ```
+
+> Base component recipes are supported on the Salesforce platform only. We are currently working to make them available for usage on any platform. Stay tuned!
 
 
 ## Documentation
