@@ -882,6 +882,22 @@
   </labels>
   <labels>
     <categories>lightning</categories>
+    <fullName>lightning_LightningDatatable_ariaLiveNavigationMode</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>ariaLiveNavigationMode</shortDescription>
+    <value>Navigation Mode</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
+    <fullName>lightning_LightningDatatable_ariaLiveActionMode</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>ariaLiveActionMode</shortDescription>
+    <value>Action Mode</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
     <fullName>lightning_LightningVerticalNavigation_newItems</fullName>
     <language>en_US</language>
     <protected>false</protected>
