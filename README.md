@@ -79,14 +79,14 @@ export default class HelloWorld extends LightningElement {
 
 Use the open-source Lightning Web Components to jump start your app development and build with base component recipes.
 
-1. Create your first app using the `create-lwc-app` tool.
+1. Create your app using the `create-lwc-app` tool.
 
 ```bash
 npx create-lwc-app my-app
 cd my-app
 ```
 
-2. Install the Lightning Design System.
+2. Install the Lightning Design System. Only the `2.11.0-beta.1` version is currently supported.
 
 ```bash
 npm install @salesforce-ux/design-system@2.11.0-beta.1 --save
