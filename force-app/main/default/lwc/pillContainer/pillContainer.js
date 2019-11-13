@@ -113,6 +113,7 @@ export default class cPillContainer extends LightningElement {
     set items(value) {
         this._items = Array.isArray(value) ? value : [];
     }
+    @track _items;
 
     get pillViewModels() {
         return this.items.map((item, index) => {
@@ -189,7 +190,7 @@ export default class cPillContainer extends LightningElement {
         this.dispatchEvent(
             new CustomEvent('itemremove', {
                 detail: {
-                    item: this.items[index].item,
+                    item: this.items[index],
                     index
                 }
             })
