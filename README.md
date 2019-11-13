@@ -73,7 +73,38 @@ export default class HelloWorld extends LightningElement {
 }
 ```
 
-> Base component recipes are supported on the Salesforce platform only. We are currently working to make them available for usage on any platform. Stay tuned!
+## Use Base Component Recipes in Your Own Project
+
+> We are currently working to make base component recipes available for usage on any platform. Stay tuned!
+
+Use the open-source Lightning Web Components to jump start your app development and build with base component recipes.
+
+1. Create your first app using the `create-lwc-app` tool.
+
+```bash
+npx create-lwc-app my-app
+cd my-app
+```
+
+2. Install the Lightning Design System.
+
+```bash
+npm install @salesforce-ux/design-system@2.11.0-beta.1 --save
+```
+
+3. Create a `c` folder in `src/modules` and copy over a base component recipe, for example, `src/modules/c/badge`. This folder includes the HTML, JS and the XML config file for the `c-badge` component recipe.
+
+4. In `src/modules/c/badge`, create a `badge.css` file and add this line.
+
+```css
+@import '@salesforce/slds/legacy';
+```
+
+5. Use the component recipe in your app. For example, in `src/modules/my/app/app.html`:
+
+```html
+<c-badge label="HELLO"></c-badge>
+```
 
 
 ## Documentation
