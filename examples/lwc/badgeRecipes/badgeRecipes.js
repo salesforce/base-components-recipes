@@ -10,7 +10,7 @@
 import { LightningElement, track } from 'lwc';
 
 export default class BadgeRecipes extends LightningElement {
-    @track badgeLabel = 'badge Label';
+    @track badgeLabel = 'The Badge Label';
 
     handleButtonOneClick() {
         this.badgeLabel = null;

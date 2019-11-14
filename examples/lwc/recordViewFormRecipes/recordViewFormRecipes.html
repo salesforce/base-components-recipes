@@ -7,13 +7,17 @@
 <template>
     <c-card title="Record View Form">
         <div class="slds-card__body slds-card__body_inner">
-            <c-record-view-form object-api-name="Account">
+            <c-record-view-form record-id={accountId} object-api-name="Account">
                 <div class="slds-box">
                     <c-output-field field-name="Name"> </c-output-field>
                     <c-output-field field-name="BillingAddress"> </c-output-field>
-                    <c-output-field field-name="Type"> </c-output-field>
+                    <c-output-field field-name="Phone"> </c-output-field>
+                    <c-output-field field-name="Website"> </c-output-field>
                 </div>
             </c-record-view-form>
+            <c-view-source source="recordViewFormRecipes" slot="footer">
+                Represents a record view layout that displays one or more fields, provided by lightning-output-field. This component only works on the Salesforce platform.
+            </c-view-source>
         </div>
     </c-card>
 </template>

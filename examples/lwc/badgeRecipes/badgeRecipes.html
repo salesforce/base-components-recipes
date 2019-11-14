@@ -8,16 +8,26 @@
 <template>
   <c-card title="Badge">
     <div class="slds-card__body slds-card__body_inner">
-      <h3>Badges only have labels in the API. 4th badge is dynamic.</h3>
+      <h3 class="slds-m-bottom_medium">Badges only have labels in the API. 4th badge is dynamic.</h3>
       <c-badge label="Badge 1"></c-badge>
       <c-badge label="Tests"></c-badge>
-      <c-badge label="Lables"></c-badge>
+      <c-badge label="Labels"></c-badge>
       <c-badge label={badgeLabel}></c-badge>
-      <br />
-      <br />
-      <br />
-      <button onclick={handleButtonOneClick}>Set 4th Badge Label to null</button>
-      <button onclick={handleButtonTwoClick}>Set 4th Badge Label to Hello</button>
+      <div class="slds-m-top_large">
+      <c-button variant="brand"
+                label="Set 4th Badge Label to null"
+                title="Set 4th Badge Label to null"
+                onclick={handleButtonOneClick}></c-button>
+      <c-button variant="brand"
+                label="Set 4th Badge Label to Hello"
+                title="Set 4th Badge Label to Hello"
+                onclick={handleButtonTwoClick}
+                class="slds-m-left_medium"></c-button>
+              </div>
+      <c-view-source source="badgeRecipes"
+                     slot="footer">
+                     Represents a label which holds a small amount of information, such as the number of unread notifications.
+      </c-view-source>
     </div>
   </c-card>
 </template>
