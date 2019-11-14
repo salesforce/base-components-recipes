@@ -5,18 +5,20 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <c-record-edit-form
-        record-id="001R0000005N1XvIAK"
-        object-api-name="Account"
-        density="comfy"
-    >
-        <div class="slds-box">
-            <lightning-input-field field-name="Name"> </lightning-input-field>
-            <lightning-input-field field-name="Active__c">
-            </lightning-input-field>
-            <lightning-input-field field-name="ShippingAddress">
-            </lightning-input-field>
-            <lightning-input-field field-name="Type"> </lightning-input-field>
+    <c-card title="Record Edit Form">
+        <div class="slds-card__body slds-card__body_inner">
+            <c-record-edit-form record-id="001R0000005N1XvIAK"
+                                object-api-name="Account"
+                                density="comfy">
+                <div class="slds-box">
+                    <lightning-input-field field-name="Name"> </lightning-input-field>
+                    <lightning-input-field field-name="Active__c">
+                    </lightning-input-field>
+                    <lightning-input-field field-name="ShippingAddress">
+                    </lightning-input-field>
+                    <lightning-input-field field-name="Type"> </lightning-input-field>
+                </div>
+            </c-record-edit-form>
         </div>
-    </c-record-edit-form>
+    </c-card>
 </template>

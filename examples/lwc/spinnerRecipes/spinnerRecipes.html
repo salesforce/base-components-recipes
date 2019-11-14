@@ -5,28 +5,21 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <div class="exampleHolder">
-        <c-spinner alternative-text="Loading" size="small"></c-spinner>
-    </div>
-    <div class="exampleHolder">
-        <c-spinner alternative-text="Loading" size="medium"></c-spinner>
-    </div>
-    <div class="exampleHolder">
-        <c-spinner alternative-text="Loading" size="large"></c-spinner>
-    </div>
-
-    <div class="backgroundInverse">
-        <c-spinner alternative-text="Loading" variant="inverse"></c-spinner>
-    </div>
-
-    <c-button label="Toggle" variant="brand" onclick={handleClick}></c-button>
-
-    <div class="exampleHolder">
-        <template if:true={loaded}>
-            Put loaded content here
-        </template>
-        <template if:false={loaded}>
-            <c-spinner alternative-text="Loading"></c-spinner>
-        </template>
-    </div>
+    <c-card title="Spinner">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="exampleHolder">
+                <template if:true={loaded}>
+                    Put loaded content here
+                </template>
+                <template if:false={loaded}>
+                    <c-spinner alternative-text="Loading" size="large"></c-spinner>
+                </template>
+            </div>
+        </div>
+        <div slot="footer">
+            <c-button label="Toggle"
+                      variant="brand"
+                      onclick={handleClick}></c-button>
+        </div>
+    </c-card>
 </template>

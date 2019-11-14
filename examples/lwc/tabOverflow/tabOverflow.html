@@ -5,11 +5,18 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <c-tabset variant="scoped">
-        <template for:each={tabs} for:item="tab">
-            <c-tab label={tab.label} key={tab.value} value={tab.value}>
-                {tab.content}
-            </c-tab>
-        </template>
-    </c-tabset>
+    <c-card title="Tab Overflow">
+        <div class="slds-card__body slds-card__body_inner">
+            <c-tabset variant="scoped">
+                <template for:each={tabs}
+                          for:item="tab">
+                    <c-tab label={tab.label}
+                           key={tab.value}
+                           value={tab.value}>
+                        {tab.content}
+                    </c-tab>
+                </template>
+            </c-tabset>
+        </div>
+    </c-card>
 </template>

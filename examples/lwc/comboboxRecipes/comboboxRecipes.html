@@ -5,40 +5,38 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <div class="slds-box">
-        <h2 class="header">Basic Combobox</h2>
-        <c-combobox
-            name="progress"
-            label="Status"
-            value={value}
-            placeholder="Select Progress"
-            options={options}
-            onchange={handleChange}
-        ></c-combobox>
-        <p>Selected value is: {state.progress}</p>
-    </div>
-    <div class="slds-box">
-        <c-combobox
-            name="progressRequired"
-            label="Status"
-            value=""
-            placeholder="Select Progress"
-            options={options}
-            onchange={handleChange}
-            required
-        ></c-combobox>
-        <p>Selected value is: {state.progressRequired}</p>
-    </div>
-    <div class="slds-box">
-        <c-combobox
-            name="progressDisabled"
-            label="Status"
-            value=""
-            placeholder="Select Progress"
-            options={options}
-            onchange={handleChange}
-            disabled
-        ></c-combobox>
-        <p>Selected value is: {state.progressDisabled}</p>
-    </div>
+    <c-card title="Combobox">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box">
+                <h2 class="header">Basic Combobox</h2>
+                <c-combobox name="progress"
+                            label="Status"
+                            value={value}
+                            placeholder="Select Progress"
+                            options={options}
+                            onchange={handleChange}></c-combobox>
+                <p>Selected value is: {state.progress}</p>
+            </div>
+            <div class="slds-box">
+                <c-combobox name="progressRequired"
+                            label="Status"
+                            value=""
+                            placeholder="Select Progress"
+                            options={options}
+                            onchange={handleChange}
+                            required></c-combobox>
+                <p>Selected value is: {state.progressRequired}</p>
+            </div>
+            <div class="slds-box">
+                <c-combobox name="progressDisabled"
+                            label="Status"
+                            value=""
+                            placeholder="Select Progress"
+                            options={options}
+                            onchange={handleChange}
+                            disabled></c-combobox>
+                <p>Selected value is: {state.progressDisabled}</p>
+            </div>
+        </div>
+    </c-card>
 </template>

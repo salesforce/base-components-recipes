@@ -5,25 +5,33 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <div class="slds-box">
-        <h3 class="header">Formatted URL</h3>
-        <p><c-formatted-url value="my/path"></c-formatted-url></p>
-        <p>
-            <c-formatted-url
-                value="https://my/path"
-                tooltip="Go to https://my/path"
-                label="My Cool Website"
-                target="_blank"
-            ></c-formatted-url>
-        </p>
-        <p>
-            <c-formatted-url
-                value="ftp://my/path"
-                tooltip="Go to ftp://my/path"
-            ></c-formatted-url>
-        </p>
-        <p><c-formatted-url value="http://my/path"></c-formatted-url></p>
-        <p><c-formatted-url value="/my/path"></c-formatted-url></p>
-        <p><c-formatted-url value=".my/path"></c-formatted-url></p>
-    </div>
+    <c-card title="Formatted URL">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box">
+                <h3 class="header">Formatted URL</h3>
+                <p>
+                    <c-formatted-url value="my/path"></c-formatted-url>
+                </p>
+                <p>
+                    <c-formatted-url value="https://my/path"
+                                     tooltip="Go to https://my/path"
+                                     label="My Cool Website"
+                                     target="_blank"></c-formatted-url>
+                </p>
+                <p>
+                    <c-formatted-url value="ftp://my/path"
+                                     tooltip="Go to ftp://my/path"></c-formatted-url>
+                </p>
+                <p>
+                    <c-formatted-url value="http://my/path"></c-formatted-url>
+                </p>
+                <p>
+                    <c-formatted-url value="/my/path"></c-formatted-url>
+                </p>
+                <p>
+                    <c-formatted-url value=".my/path"></c-formatted-url>
+                </p>
+            </div>
+        </div>
+    </c-card>
 </template>

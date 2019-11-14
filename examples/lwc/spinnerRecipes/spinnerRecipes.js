@@ -7,7 +7,7 @@
 import { LightningElement, track } from 'lwc';
 
 export default class SpinnerRecipes extends LightningElement {
-    @track loaded = false;
+    @track loaded = true;
 
     handleClick() {
         this.loaded = !this.loaded;

@@ -5,13 +5,15 @@
   For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  -->
 <template>
-    <c-record-form
-        record-id="001R0000005N1XvIAK"
-        object-api-name="Account"
-        fields={fields}
-        columns="2"
-        mode="edit"
-        onsubmit={handleSubmit}
-    >
-    </c-record-form>
+    <c-card title="Record Form">
+        <div class="slds-card__body slds-card__body_inner">
+            <c-record-form record-id="001R0000005N1XvIAK"
+                           object-api-name="Account"
+                           fields={fields}
+                           columns="2"
+                           mode="edit"
+                           onsubmit={handleSubmit}>
+            </c-record-form>
+        </div>
+    </c-card>
 </template>
