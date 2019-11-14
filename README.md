@@ -1,14 +1,14 @@
 # Base Components Recipes
 
-View examples for base components in small bites. Each recipe demonstrates a building block to build pages and apps quickly. Use and customize the recipes in your apps. 
+View examples for base components in small bites. Each recipe demonstrates a working example of the base components to build pages and apps quickly. Use and customize the base components and the recipes in your apps. 
 
-Base component recipes open up the source for base components at https://developer.salesforce.com/docs/component-library. Explore the inner workings of the components and use the source to build new components with your own requirements. The possibilities are endless with the source in your hands! 
+Base component recipes open up the source code for the base components shown in https://developer.salesforce.com/docs/component-library. We transpiled the base components into the `c` namespace so that you can use the components in your projects. Explore the inner workings of the components and use the source code to build new components with your own requirements. The possibilities are endless with the source in your hands! 
 
-Base component recipes implement Lightning Design System and are developed using Lightning Web Components. A `c` namespaced component can contain components in the `lightning` namespace.
+Base component implement Lightning Design System and are developed using Lightning Web Components. A `c` namespace component can contain components in the `lightning` namespace.
 
 ## Getting Started
 
-We recommend using a scratch org to experience base component recipes on the Salesforce platform.
+We recommend using a scratch org to work with base component recipes on the Salesforce platform.
 
 1. Set up your environment by following the steps in the [Lightning Web Components Dev Guide](https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.install_setup_develop), which includes:
     * Install the Salesforce CLI.
@@ -36,7 +36,7 @@ sfdx force:org:create -s -f config/project-scratch-def.json -a base-recipes
 
 If you get an error "You do not have access to the [ScratchOrgInfo] object", make sure you have enabled your org as a Dev Hub org. See [Enable Dev Hub in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_enable_devhub.htm). Alternatively, sign up for a Dev Hub org at https://developer.salesforce.com/promotions/orgs/dx-signup.
 
-5. Push the recipes to your scratch org.
+5. Push the base-components-recipes code to your scratch org.
 
 ```bash
 sfdx force:source:push
@@ -48,10 +48,19 @@ sfdx force:source:push
 sfdx force:org:open
 ```
 
+7. In App Launcher, select the **Base Components** app. This app shows the base component recipes at [base-components-recipes/example/lwc](https://github.com/salesforce/base-components-recipes/tree/master/examples/lwc).
 
-## Usage
+## Use Base Components on Salesforce Platform
 
-Create a Lightning web component with a base component recipe, `c-button`.
+Create a helloWorld Lightning web component that uses a base component, `c-button`. We'll use Visual Studio Code in this example.
+
+1. In Visual Studio code, open the Command Palette by pressing **Ctrl+Shift+P** on Windows or **Cmd+Shift+P** on macOS.
+2. Type SFDX.
+3. Select SFDX: Create Lightning Web Component.
+4. Press Enter to accept the default `force-app/main/default/lwc` directory.
+5. Enter helloWorld for the name of the new component.
+6. Press Enter. A `helloWorld` bundle is created in `force-app/main/default/lwc`.
+7. In the HTML file, `helloWorld.html`, copy and paste the following code. Save the file.
 
 ```html
 <!--helloWorld.html-->
@@ -62,7 +71,7 @@ Create a Lightning web component with a base component recipe, `c-button`.
 </template>
 ```
 
- The `greeting` property in the template is bound to the `greeting` property in the JavaScript class.
+ 8. In the JavaScript file, `helloWorld.js`, copy and paste the following code. Save the file.
 
 ```javascript
 //helloWorld.js
@@ -73,43 +82,40 @@ export default class HelloWorld extends LightningElement {
 }
 ```
 
-## Use Base Component Recipes in Your Own Project
+9. In the XML file, `helloWorld.js-meta.xml`, copy and paste the following code. Save the file.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+  </targets>
+</LightningComponentBundle>
+```
+
+10. Push your changes.
+
+```bash
+sfdx force:source:push
+```
+
+Your helloWorld component is now ready for action. You can add this component to your apps and pages via the Lightning App Builder.
+For more information, see the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/create-a-hello-world-lightning-web-component) Trailhead project.
+
+
+## Use Base Components in Your Own Project
 
 > We are currently working to make base component recipes available for usage on any platform. Stay tuned!
 
-Use the open-source Lightning Web Components to jump start your app development and build with base component recipes.
-
-1. Create your app using the `create-lwc-app` tool.
-
-```bash
-npx create-lwc-app my-app
-cd my-app
-```
-
-2. Install the Lightning Design System. Only the `2.11.0-beta.1` version is currently supported.
-
-```bash
-npm install @salesforce-ux/design-system@2.11.0-beta.1 --save
-```
-
-3. Create a `c` folder in `src/modules` and copy over a base component recipe, for example, `src/modules/c/badge`. This folder includes the HTML, JS and the XML config file for the `c-badge` component recipe.
-
-4. In `src/modules/c/badge`, create a `badge.css` file and add this line.
-
-```css
-@import '@salesforce/slds/legacy';
-```
-
-5. Use the component recipe in your app. For example, in `src/modules/my/app/app.html`:
-
-```html
-<c-badge label="HELLO"></c-badge>
-```
-
-
 ## Documentation
 
-Base component recipes in the `c` namespace map to components in the `lightning` namespace. The components below link to documentation for components in the `lightning` namespace, but the usage is similar unless otherwise noted.
+Base components in the `c` namespace map to components in the `lightning` namespace. We transpiled the base components into the `c` namespace so that you can use the components in your projects. Find the base components in the `c` namespace in [base-components-recipes/force-app/main/default/lwc/](https://github.com/salesforce/base-components-recipes/tree/master/force-app/main/default/lwc).
+
+The components below link to documentation for components in the `lightning` namespace, but the usage is similar unless otherwise noted.
 
 **Component** | **Description** | **Comment** |
 -----|-----|-----|
@@ -172,7 +178,7 @@ To update the Custom Labels metadata, go to the `force-app/main/default/labels d
 
 #### Customize Labels
 
-To customize your labels, from Setup, enter Custom Labels in the Quick Find box, then select **Custom Labels**. Only English labels are currently supported. For more information, see [Custom Labels](https://help.salesforce.com/articleView?id=cl_about.htm&type=5) in Salesforce Help.
+To customize your labels, from Setup, enter Custom Labels in the Quick Find box, then select **Custom Labels**. Our labels are shipped in English and can be translated to other languages. For more information, see the [Translate Labels](#translate-labels) section below and [Custom Labels](https://help.salesforce.com/articleView?id=cl_about.htm&type=5) in Salesforce Help.
 
 #### Use Labels
 
@@ -235,7 +241,7 @@ sfdx force:source:push
 
 ## Contributing
 
-We are not accepting contributions at this time. If you have any questions about base component recipes, please use the following channels.
+We are not accepting contributions at this time. If you have any questions about base components recipes, please use the following channels.
 
 * [Trailblazer Community - Lightning Web Components](https://success.salesforce.com/ui/core/chatter/groups/GroupProfilePage?g=0F93A000000LlT2SAK)
 * [Salesforce Developer Forums](https://developer.salesforce.com/forums)
@@ -245,8 +251,10 @@ We are not accepting contributions at this time. If you have any questions about
 
 - **Where can I see more examples on how to use Lightning Web Components?**
  
-  For examples on running Lightning Web Components on Salesforce platform, visit [lwc-recipes](https://github.com/trailheadapps/lwc-recipes/). For more sample apps using Lightning Web Components, visit https://trailhead.salesforce.com/sample-gallery. To experience Lightning Web Components on any platform, visit https://lwc.dev.
+  * For examples on running Lightning Web Components on Salesforce platform, visit [lwc-recipes](https://github.com/trailheadapps/lwc-recipes/).
+  * For more sample apps using Lightning Web Components, visit https://trailhead.salesforce.com/sample-gallery.
+  * To experience Lightning Web Components on any platform, visit https://lwc.dev.
 
 - **How do I create a Lightning Web Component?**
 
-  See the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/create-a-hello-world-lightning-web-component) Trailhead project.
+  See the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/create-a-hello-world-lightning-web-component) Trailhead project. The [Lightning Web Components Developer Guide](https://developer.salesforce.com/docs/component-library/documentation/lwc) is also a great resource.
