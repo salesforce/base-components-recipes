@@ -752,22 +752,22 @@ export default class cDualListbox extends LightningElement {
     assertRequiredAttributes() {
         assert(
             !!this.label,
-            `<lightning-dual-listbox> Missing required "label" attribute.`
+            `<c-dual-listbox> Missing required "label" attribute.`
         );
 
         assert(
             !!this.sourceLabel,
-            `<lightning-dual-listbox> Missing required "sourceLabel" attribute.`
+            `<c-dual-listbox> Missing required "sourceLabel" attribute.`
         );
 
         assert(
             !!this.selectedLabel,
-            `<lightning-dual-listbox> Missing required "selectedLabel" attribute.`
+            `<c-dual-listbox> Missing required "selectedLabel" attribute.`
         );
 
         assert(
             !!this.options,
-            `<lightning-dual-listbox> Missing required "options" attribute.`
+            `<c-dual-listbox> Missing required "options" attribute.`
         );
     }
 

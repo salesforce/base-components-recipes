@@ -239,13 +239,13 @@ export default class cTreeItem extends LightningElement {
 
     getImmediateChildItem(key) {
         return this.template.querySelector(
-            "lightning-tree-item[data-key='" + key + "']"
+            "c-tree-item[data-key='" + key + "']"
         );
     }
 
     getNthChildItem(n) {
         return this.template.querySelector(
-            'lightning-tree-item:nth-of-type(' + n + ')'
+            'c-tree-item:nth-of-type(' + n + ')'
         );
     }
 }
