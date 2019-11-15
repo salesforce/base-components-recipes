@@ -7,18 +7,36 @@
 <template>
     <c-card title="Record Edit Form">
         <div class="slds-card__body slds-card__body_inner">
-            <c-record-edit-form record-id="001R0000005N1XvIAK"
+            <c-record-edit-form record-id={accountId}
                                 object-api-name="Account"
-                                density="comfy">
+                                density="comfy"
+                                onsuccess={handleSuccess}
+                                onerror={handleError}>
                 <div class="slds-box">
                     <lightning-input-field field-name="Name"> </lightning-input-field>
-                    <lightning-input-field field-name="Active__c">
+                    <lightning-input-field field-name="Phone">
                     </lightning-input-field>
                     <lightning-input-field field-name="ShippingAddress">
                     </lightning-input-field>
-                    <lightning-input-field field-name="Type"> </lightning-input-field>
+                    <lightning-input-field field-name="Website"> </lightning-input-field>
+                    <c-button variant="neutral"
+                                    label="Cancel"
+                                    title="Cancel"
+                                    type="text"
+                                    onclick={handleCancel}
+                                    class="slds-m-right_small"></c-button>
+                  <c-button variant="brand"
+                                    label="Submit"
+                                    title="Submit"
+                                    type="submit"></c-button>
                 </div>
             </c-record-edit-form>
+            <div class="slds-box">
+                <h4 class="slds-text-heading_small">Status: {formStatus}</h4>
+            </div>
+            <c-view-source source="recordEditFormRecipes" slot="footer">
+                Represents a record edit layout that displays one or more fields, provided by lightning-input-field. This component only works on the Salesforce platform.
+            </c-view-source>
         </div>
     </c-card>
 </template>

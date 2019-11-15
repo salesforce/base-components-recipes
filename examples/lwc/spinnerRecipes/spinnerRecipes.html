@@ -12,14 +12,20 @@
                     Put loaded content here
                 </template>
                 <template if:false={loaded}>
-                    <c-spinner alternative-text="Loading" size="large"></c-spinner>
+                    <c-spinner alternative-text="Loading"
+                               size="large"></c-spinner>
                 </template>
             </div>
+            <div>
+                <c-button label="Toggle Spinner"
+                          variant="brand"
+                          onclick={handleClick}></c-button>
+            </div>
+            <c-view-source source="spinnerRecipes"
+                           slot="footer">
+                Displays an animated spinner.
+            </c-view-source>
         </div>
-        <div slot="footer">
-            <c-button label="Toggle"
-                      variant="brand"
-                      onclick={handleClick}></c-button>
-        </div>
+
     </c-card>
 </template>

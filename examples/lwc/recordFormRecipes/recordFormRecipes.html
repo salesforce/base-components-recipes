@@ -7,13 +7,17 @@
 <template>
     <c-card title="Record Form">
         <div class="slds-card__body slds-card__body_inner">
-            <c-record-form record-id="001R0000005N1XvIAK"
+            <c-record-form record-id={accountId}
                            object-api-name="Account"
                            fields={fields}
                            columns="2"
-                           mode="edit"
+                           mode="view"
                            onsubmit={handleSubmit}>
             </c-record-form>
+
+            <c-view-source source="recordFormRecipes" slot="footer">
+                Creates an editable form or display form for a record. This component only works on the Salesforce platform.
+            </c-view-source>
         </div>
     </c-card>
 </template>
