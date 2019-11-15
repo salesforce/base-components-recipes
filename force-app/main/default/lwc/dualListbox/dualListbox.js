@@ -235,6 +235,8 @@ export default class cDualListbox extends LightningElement {
         this.interactingState.onleave(() => {
             this.showHelpMessageIfInvalid();
             this.dispatchEvent(new CustomEvent('blur'));
+
+            this.optionToFocus = null;
         });
     }
 

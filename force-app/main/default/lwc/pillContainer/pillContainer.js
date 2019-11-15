@@ -20,6 +20,7 @@ export default class cPillContainer extends LightningElement {
     @api label = i18n.containerLabel;
 
     @track _variant;
+    @track _pills = [];
     @track _singleLine = false;
     @track _isExpanded = false;
     @track _isCollapsible = false;
@@ -58,7 +59,7 @@ export default class cPillContainer extends LightningElement {
         }
 
         const ul = this.template.querySelector('ul');
-        if (this.items.length === 0) {
+        if (this._pills.length === 0) {
             ul.tabIndex = 0;
         } else {
             ul.tabIndex = -1;
@@ -107,17 +108,17 @@ export default class cPillContainer extends LightningElement {
     }
 
     @api get items() {
-        return this._items;
+        return this._pills;
     }
 
     set items(value) {
-        this._items = Array.isArray(value) ? value : [];
+        this._pillsChanged = true;
+        value = Array.isArray(value) ? value : [];
+        this._pills = value.map(item => new LightningPillItem(item));
     }
-    @track _items;
 
     get pillViewModels() {
-        return this.items.map((item, index) => {
-            const pill = new LightningPillItem(item);
+        return this._pills.map((pill, index) => {
             return {
                 pill,
                 tabIndex:
@@ -132,11 +133,11 @@ export default class cPillContainer extends LightningElement {
     }
 
     get focusedIndex() {
-        if (this._focusedIndex >= this.items.length) {
-            this._focusedIndex = this._deleteLast ? this.items.length - 1 : 0;
+        if (this._focusedIndex >= this._pills.length) {
+            this._focusedIndex = this._deleteLast ? this._pills.length - 1 : 0;
             this._deleteLast = false;
         } else if (this._focusedIndex < 0) {
-            this._focusedIndex = this.items.length - 1;
+            this._focusedIndex = this._pills.length - 1;
         }
         return this._focusedIndex;
     }
@@ -146,7 +147,11 @@ export default class cPillContainer extends LightningElement {
     }
 
     get pillNodes() {
-        return this.template.querySelectorAll('c-pill') || [];
+        if (!this._pillNodes || this._pillsChanged) {
+            this._pillsChanged = false;
+            this._pillNodes = this.template.querySelectorAll('c-pill') || [];
+        }
+        return this._pillNodes;
     }
 
     get focusedNode() {
@@ -185,12 +190,12 @@ export default class cPillContainer extends LightningElement {
             this.switchFocus(index);
         }
 
-        this._deleteLast = index >= this.items.length - 1;
+        this._deleteLast = index >= this._pills.length - 1;
 
         this.dispatchEvent(
             new CustomEvent('itemremove', {
                 detail: {
-                    item: this.items[index],
+                    item: this.items[index].item,
                     index
                 }
             })
@@ -214,7 +219,7 @@ export default class cPillContainer extends LightningElement {
     }
 
     handleKeyDown(event) {
-        if (this.items.length <= 0) {
+        if (this._pills.length <= 0) {
             return;
         }
         const index = this.focusedIndex;

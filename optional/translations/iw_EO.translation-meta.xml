@@ -441,6 +441,14 @@
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
   </customLabels>
   <customLabels>
+    <label>Navigation Mode</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Action Mode</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
+  </customLabels>
+  <customLabels>
     <label>New Items</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>

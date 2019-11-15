@@ -441,6 +441,14 @@
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
   </customLabels>
   <customLabels>
+    <label>«คู้Eöש是[[Navigation Mode]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Action Mode]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
+  </customLabels>
+  <customLabels>
     <label>«คู้Eöש是[[New Items]]是שöEคู้»</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>

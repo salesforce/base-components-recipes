@@ -7,7 +7,7 @@
 
 import { LightningElement, api, track } from 'lwc';
 import { TreeData } from './treeData';
-import { keyCodes } from 'c/utilsPrivate';
+import { keyCodes, deepCopy } from 'c/utilsPrivate';
 
 export default class cTree extends LightningElement {
     @api header;
@@ -190,7 +190,9 @@ export default class cTree extends LightningElement {
 
             this.dispatchEvent(
                 new CustomEvent('change', {
-                    detail: { items: this._items }
+                    detail: {
+                        items: deepCopy(this._items)
+                    }
                 })
             );
         }
@@ -203,7 +205,7 @@ export default class cTree extends LightningElement {
 
             this.dispatchEvent(
                 new CustomEvent('change', {
-                    detail: { items: this._items }
+                    detail: { items: deepCopy(this._items) }
                 })
             );
         }
