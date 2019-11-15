@@ -9,10 +9,6 @@
         <apexClass>GetAccountId</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>GetContactId</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
     <custom>false</custom>
     <tabVisibilities>
         <tab>Buttons</tab>
