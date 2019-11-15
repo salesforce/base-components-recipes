@@ -109,7 +109,7 @@ For more information, see the [Quick Start: Lightning Web Components](https://tr
 
 ## Use Base Components in Your Own Project
 
-> We are currently working to make base component recipes available for usage on any platform. Stay tuned!
+Use the `c` namespace components as building blocks for your own projects. See the [LWC Storybook POC](https://github.com/reiniergs/lwc-storybooks-poc) for an example.
 
 ## Documentation
 
