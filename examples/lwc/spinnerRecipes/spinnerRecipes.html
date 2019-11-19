@@ -1,0 +1,31 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<template>
+    <c-card title="Spinner">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="exampleHolder">
+                <template if:true={loaded}>
+                    Put loaded content here
+                </template>
+                <template if:false={loaded}>
+                    <c-spinner alternative-text="Loading"
+                               size="large"></c-spinner>
+                </template>
+            </div>
+            <div>
+                <c-button label="Toggle Spinner"
+                          variant="brand"
+                          onclick={handleClick}></c-button>
+            </div>
+            <c-view-source source="spinnerRecipes"
+                           slot="footer">
+                Displays an animated spinner.
+            </c-view-source>
+        </div>
+
+    </c-card>
+</template>

@@ -1,0 +1,20 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<template>
+    <c-card title="Tab Set">
+        <div class="slds-card__body slds-card__body_inner">
+            <c-tabset>
+                <c-tab label="One Tab">One Content</c-tab>
+                <c-tab label="Two Tab">Two Content</c-tab>
+                <c-tab label="Three Tab">Three Content</c-tab>
+            </c-tabset>
+            <c-view-source source="tabsetRecipes" slot="footer">
+                Represents a list of tabs.
+            </c-view-source>
+        </div>
+    </c-card>
+</template>

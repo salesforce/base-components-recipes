@@ -1,0 +1,279 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<template>
+    <c-card title="Vertical Navigation">
+        <div class="slds-card__body slds-card__body_inner">
+            <c-vertical-navigation>
+                <c-vertical-navigation-section label="Reports">
+                    <c-vertical-navigation-item label="Recent"
+                                                name="recent"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Created by Me"
+                                                name="created"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Private Reports"
+                                                name="private"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Public Reports"
+                                                name="public"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="All Reports"
+                                                name="all"></c-vertical-navigation-item>
+                </c-vertical-navigation-section>
+            </c-vertical-navigation>
+            <c-vertical-navigation selected-item="recent">
+                <c-vertical-navigation-section label="Reports">
+                    <c-vertical-navigation-item-badge label="Recent"
+                                                      name="recent"
+                                                      badge-count="3"></c-vertical-navigation-item-badge>
+                    <c-vertical-navigation-item label="Created by Me"
+                                                name="usercreated"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Private Reports"
+                                                name="private"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Public Reports"
+                                                name="public"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="All Reports"
+                                                name="all"></c-vertical-navigation-item>
+                </c-vertical-navigation-section>
+            </c-vertical-navigation>
+            <c-vertical-navigation selected-item="reports_recent2">
+                <c-vertical-navigation-section label="Reports">
+                    <c-vertical-navigation-item-icon label="Recent"
+                                                     name="reports_recent2"
+                                                     icon-name="utility:clock">
+                    </c-vertical-navigation-item-icon>
+                    <c-vertical-navigation-item-icon label="Created by Me"
+                                                     name="reports_usercreated"
+                                                     icon-name="utility:user">
+                    </c-vertical-navigation-item-icon>
+                    <c-vertical-navigation-item-icon label="Private Reports"
+                                                     name="reports_private"
+                                                     icon-name="utility:lock">
+                    </c-vertical-navigation-item-icon>
+                    <c-vertical-navigation-item-icon label="Public Reports"
+                                                     name="reports_public"
+                                                     icon-name="utility:groups">
+                    </c-vertical-navigation-item-icon>
+                    <c-vertical-navigation-item label="All Reports"
+                                                name="reports_all">
+                    </c-vertical-navigation-item>
+                </c-vertical-navigation-section>
+                <c-vertical-navigation-section label="Folders">
+                    <c-vertical-navigation-item-icon label="Created by Me"
+                                                     name="folders_usercreated"
+                                                     icon-name="utility:open_folder">
+                    </c-vertical-navigation-item-icon>
+                    <c-vertical-navigation-item-icon label="Shared with Me"
+                                                     name="folders_shared"
+                                                     icon-name="utility:open_folder">
+                    </c-vertical-navigation-item-icon>
+                </c-vertical-navigation-section>
+            </c-vertical-navigation>
+            <c-vertical-navigation selected-item="recent">
+                <c-vertical-navigation-section label="Reports">
+                    <c-vertical-navigation-item label="Recent"
+                                                name="recent"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Created by Me"
+                                                name="created"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Private Reports"
+                                                name="private"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Public Reports"
+                                                name="public"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="All Reports"
+                                                name="all"></c-vertical-navigation-item>
+                </c-vertical-navigation-section>
+            </c-vertical-navigation>
+            <c-vertical-navigation>
+                <c-vertical-navigation-section label="Navigation">
+                    <c-vertical-navigation-item label="Home"
+                                                name="home"
+                                                href="/"></c-vertical-navigation-item>
+                </c-vertical-navigation-section>
+                <c-vertical-navigation-section label="Resources">
+                    <c-vertical-navigation-item label="Salesforce"
+                                                name="salesforce"
+                                                href="https://www.salesforce.com/">
+                    </c-vertical-navigation-item>
+
+                    <c-vertical-navigation-item label="Salesforce Developers"
+                                                name="developers"
+                                                href="https://developer.salesforce.com/">
+                    </c-vertical-navigation-item>
+
+                    <c-vertical-navigation-item label="Trailhead"
+                                                name="trailhead"
+                                                href="https://trailhead.salesforce.com">
+                    </c-vertical-navigation-item>
+                </c-vertical-navigation-section>
+            </c-vertical-navigation>
+            <c-vertical-navigation selected-item="recent"
+                                   compact>
+                <c-vertical-navigation-section label="Reports">
+                    <c-vertical-navigation-item label="Recent"
+                                                name="recent"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Created by Me"
+                                                name="created"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Private Reports"
+                                                name="private"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Public Reports"
+                                                name="public"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="All Reports"
+                                                name="all"></c-vertical-navigation-item>
+                </c-vertical-navigation-section>
+            </c-vertical-navigation>
+            <c-vertical-navigation selected-item="recent"
+                                   shaded>
+                <c-vertical-navigation-section label="Reports">
+                    <c-vertical-navigation-item label="Recent"
+                                                name="recent"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Created by Me"
+                                                name="created"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Private Reports"
+                                                name="private"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Public Reports"
+                                                name="public"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="All Reports"
+                                                name="all"></c-vertical-navigation-item>
+                </c-vertical-navigation-section>
+            </c-vertical-navigation>
+            <c-vertical-navigation selected-item="recent">
+                <c-vertical-navigation-section label="Reports">
+                    <c-vertical-navigation-item label="Recent"
+                                                name="recent"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Private Reports"
+                                                name="private"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Public Reports"
+                                                name="public"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="All Reports"
+                                                name="all"></c-vertical-navigation-item>
+                </c-vertical-navigation-section>
+                <c-vertical-navigation-overflow>
+                    <c-vertical-navigation-item label="Regional Sales NW"
+                                                name="1859008"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Regional Sales SW"
+                                                name="1919113"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Regional Sales NE"
+                                                name="1919115"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Regional Sales SE"
+                                                name="1919112"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Regional Sales - Outdated"
+                                                name="1213411"></c-vertical-navigation-item>
+                    <c-vertical-navigation-item label="Account Planning Fall Review"
+                                                name="1213114"></c-vertical-navigation-item>
+                </c-vertical-navigation-overflow>
+            </c-vertical-navigation>
+            <c-vertical-navigation selected-item={initiallySelected}>
+                <template for:each={navigationData}
+                          for:item="section">
+                    <c-vertical-navigation-section key={section.label}
+                                                   label={section.label}>
+                        <template for:each={section.items}
+                                  for:item="item">
+                            <template if:true={item.icon}>
+                                <c-vertical-navigation-item-icon key={item.name}
+                                                                 label={item.label}
+                                                                 name={item.name}
+                                                                 icon-name={item.icon}>
+                                </c-vertical-navigation-item-icon>
+                            </template>
+                            <template if:false={item.icon}>
+                                <c-vertical-navigation-item key={item.name}
+                                                            label={item.label}
+                                                            name={item.name}></c-vertical-navigation-item>
+                            </template>
+                        </template>
+                    </c-vertical-navigation-section>
+                </template>
+            </c-vertical-navigation>
+            <c-layout>
+                <c-layout-item>
+                    <c-vertical-navigation onbeforeselect={handleBeforeSelect}
+                                           selected-item={selectedItem}>
+                        <c-vertical-navigation-item label="Report 1"
+                                                    name="report_1"></c-vertical-navigation-item>
+                        <c-vertical-navigation-item label="Report 2"
+                                                    name="report_2"></c-vertical-navigation-item>
+                        <c-vertical-navigation-item label="Report 3"
+                                                    name="report_3"></c-vertical-navigation-item>
+                        <c-vertical-navigation-item label="Report 4"
+                                                    name="report_4"></c-vertical-navigation-item>
+                        <c-vertical-navigation-item label="Report 5"
+                                                    name="report_5"></c-vertical-navigation-item>
+                    </c-vertical-navigation>
+                </c-layout-item>
+                <c-layout-item class="layoutContent"
+                               padding="around-medium">
+                    <template if:true={asyncValidation}>
+                        <c-spinner alternative-text="Validating asynchronously"></c-spinner>
+                    </template>
+                    <template if:false={asyncValidation}>
+                        <c-button label="Click to require validation"
+                                  onclick={handleClick}></c-button>
+                        <p>You Are Viewing: {selectedItem}</p>
+                        <p>Validate on navigate: {hasBeenEdited}</p>
+                    </template>
+                </c-layout-item>
+            </c-layout>
+            <c-layout>
+                <c-layout-item>
+                    <c-vertical-navigation selected-item={selectedItem}
+                                           onselect={handleSelect}
+                                           class="navigation">
+                        <c-vertical-navigation-section label="Reports">
+                            <c-vertical-navigation-item label="Recently Viewed"
+                                                        name="reports_recent"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item label="Private Reports"
+                                                        name="reports_private"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item label="Public Reports"
+                                                        name="reports_public"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item label="All Reports"
+                                                        name="reports_all"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item-badge label="Recently Updated"
+                                                              name="reports_updated"
+                                                              badge-count={updatedCount}>
+                            </c-vertical-navigation-item-badge>
+                        </c-vertical-navigation-section>
+                        <c-vertical-navigation-section label="Folders">
+                            <c-vertical-navigation-item-icon label="Created by Me"
+                                                             name="folders_created"
+                                                             icon-name="utility:open_folder">
+                            </c-vertical-navigation-item-icon>
+                            <c-vertical-navigation-item-icon label="Shared with Me"
+                                                             name="folders_shared"
+                                                             icon-name="utility:open_folder">
+                            </c-vertical-navigation-item-icon>
+                            <c-vertical-navigation-item label="All Folders"
+                                                        name="folders_all"></c-vertical-navigation-item>
+                        </c-vertical-navigation-section>
+                        <c-vertical-navigation-overflow>
+                            <c-vertical-navigation-item label="Extra Report 1"
+                                                        name="reports_extra1"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item label="Extra Report 2"
+                                                        name="reports_extra2"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item label="Extra Report 3"
+                                                        name="reports_extra3"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item label="Extra Report 4"
+                                                        name="reports_extra4"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item label="Extra Report 5"
+                                                        name="reports_extra5"></c-vertical-navigation-item>
+                        </c-vertical-navigation-overflow>
+                        <c-vertical-navigation-overflow>
+                            <c-vertical-navigation-item label="Extra Folder 1"
+                                                        name="folders_extra1"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item label="Extra Folder 2"
+                                                        name="folders_extra2"></c-vertical-navigation-item>
+                            <c-vertical-navigation-item label="Extra Folder 3"
+                                                        name="folders_extra3"></c-vertical-navigation-item>
+                        </c-vertical-navigation-overflow>
+                    </c-vertical-navigation>
+                </c-layout-item>
+                <c-layout-item padding="around-medium">
+                    <p>You Are Viewing: {currentContent}</p>
+                </c-layout-item>
+            </c-layout>
+            <c-view-source source="verticalRecipes" slot="footer">
+                A vertical list of links that either take the user to another page or parts of the page the user is in.
+            </c-view-source>
+        </div>
+    </c-card>
+</template>

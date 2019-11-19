@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+  <customLabels>
+    <label>Upišite valjanu vrijednost.</label>
+    <name>lightning_LightningErrorMessage_validityBadInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Vaš unos ne odgovara dopuštenom uzorku.</label>
+    <name>lightning_LightningErrorMessage_validityPatternMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>Uneseni format nije valjan.</label>
+    <name>lightning_LightningErrorMessage_validityTypeMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>Ispunite ovo polje.</label>
+    <name>lightning_LightningErrorMessage_validityValueMissing</name>
+  </customLabels>
+  <customLabels>
+    <label>Broj je prevelik.</label>
+    <name>lightning_LightningErrorMessage_validityRangeOverflow</name>
+  </customLabels>
+  <customLabels>
+    <label>Broj je premalen.</label>
+    <name>lightning_LightningErrorMessage_validityRangeUnderflow</name>
+  </customLabels>
+  <customLabels>
+    <label>Vaš unos nije valjano povećanje.</label>
+    <name>lightning_LightningErrorMessage_validityStepMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>Vaš unos je predug.</label>
+    <name>lightning_LightningErrorMessage_validityTooLong</name>
+  </customLabels>
+  <customLabels>
+    <label>Vaš je unos prekratak.</label>
+    <name>lightning_LightningErrorMessage_validityTooShort</name>
+  </customLabels>
+  <customLabels>
+    <label>Stranica</label>
+    <name>lightning_LightningCarousel_tabString</name>
+  </customLabels>
+  <customLabels>
+    <label>Zaustavi automatsku reprodukciju</label>
+    <name>lightning_LightningCarousel_autoPlay</name>
+  </customLabels>
+  <customLabels>
+    <label>Prenesi datoteke</label>
+    <name>lightning_LightningInputFile_buttonLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Ili ispusti datoteke</label>
+    <name>lightning_LightningInputFile_bodyText</name>
+  </customLabels>
+  <customLabels>
+    <label>Zemljopisna širina</label>
+    <name>lightning_LightningInputLocation_latitude</name>
+  </customLabels>
+  <customLabels>
+    <label>Zemljopisna dužina</label>
+    <name>lightning_LightningInputLocation_longitude</name>
+  </customLabels>
+  <customLabels>
+    <label>Zemljopisna širina treba biti decimalni broj u rasponu [-90, 90]</label>
+    <name>lightning_LightningInputLocation_invalidLatitude</name>
+  </customLabels>
+  <customLabels>
+    <label>Zemljopisna dužina treba biti decimalni broj u rasponu [-180, 180]</label>
+    <name>lightning_LightningInputLocation_invalidLongitude</name>
+  </customLabels>
+  <customLabels>
+    <label>Obavezna je koordinata</label>
+    <name>lightning_LightningInputLocation_coordinateIsRequired</name>
+  </customLabels>
+  <customLabels>
+    <label>E-pošta</label>
+    <name>lightning_LightningFormattedEmail_emailIconLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberi font</label>
+    <name>lightning_LightningRichTextAssist_chooseFont</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberi veličinu fonta</label>
+    <name>lightning_LightningRichTextAssist_chooseSize</name>
+  </customLabels>
+  <customLabels>
+    <label>Sastavi tekst</label>
+    <name>lightning_LightningRichTextAssist_composeText</name>
+  </customLabels>
+  <customLabels>
+    <label>Podebljano</label>
+    <name>lightning_LightningRichTextButton_bold</name>
+  </customLabels>
+  <customLabels>
+    <label>Kurziv</label>
+    <name>lightning_LightningRichTextButton_italic</name>
+  </customLabels>
+  <customLabels>
+    <label>Podcrtano</label>
+    <name>lightning_LightningRichTextButton_underline</name>
+  </customLabels>
+  <customLabels>
+    <label>Precrtano</label>
+    <name>lightning_LightningRichTextButton_strike</name>
+  </customLabels>
+  <customLabels>
+    <label>Popis s grafičkim oznakama</label>
+    <name>lightning_LightningRichTextButton_bullet</name>
+  </customLabels>
+  <customLabels>
+    <label>Numerirani popis</label>
+    <name>lightning_LightningRichTextButton_number</name>
+  </customLabels>
+  <customLabels>
+    <label>Uvlaka</label>
+    <name>lightning_LightningRichTextButton_indent</name>
+  </customLabels>
+  <customLabels>
+    <label>Izvlaka</label>
+    <name>lightning_LightningRichTextButton_outdent</name>
+  </customLabels>
+  <customLabels>
+    <label>Lijevo poravnanje teksta</label>
+    <name>lightning_LightningRichTextButton_leftAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>Središnje poravnanje teksta</label>
+    <name>lightning_LightningRichTextButton_centerAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>Desno poravnanje teksta</label>
+    <name>lightning_LightningRichTextButton_rightAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>Više radnji</label>
+    <name>lightning_LightningRichTextButton_moreActions</name>
+  </customLabels>
+  <customLabels>
+    <label>Poveznica</label>
+    <name>lightning_LightningRichTextButton_link</name>
+  </customLabels>
+  <customLabels>
+    <label>Slika</label>
+    <name>lightning_LightningRichTextButton_image</name>
+  </customLabels>
+  <customLabels>
+    <label>Ukloni formatiranje</label>
+    <name>lightning_LightningRichTextButton_removeFormatting</name>
+  </customLabels>
+  <customLabels>
+    <label>Formatiraj tekst</label>
+    <name>lightning_LightningRichTextEditor_formatText</name>
+  </customLabels>
+  <customLabels>
+    <label>Formatiraj pozadinu i boju teksta</label>
+    <name>lightning_LightningRichTextEditor_formatBackground</name>
+  </customLabels>
+  <customLabels>
+    <label>Formatiraj tijelo</label>
+    <name>lightning_LightningRichTextEditor_formatBody</name>
+  </customLabels>
+  <customLabels>
+    <label>Poravnaj tekst</label>
+    <name>lightning_LightningRichTextEditor_alignText</name>
+  </customLabels>
+  <customLabels>
+    <label>Umetni sadržaj</label>
+    <name>lightning_LightningRichTextEditor_insertContent</name>
+  </customLabels>
+  <customLabels>
+    <label>Ukloni formatiranje</label>
+    <name>lightning_LightningRichTextEditor_removeFormatting</name>
+  </customLabels>
+  <customLabels>
+    <label>Formatiraj skup fontova i veličinu</label>
+    <name>lightning_LightningRichTextEditor_formatFont</name>
+  </customLabels>
+  <customLabels>
+    <label>Font</label>
+    <name>lightning_LightningRichTextEditor_font</name>
+  </customLabels>
+  <customLabels>
+    <label>Veličina fonta</label>
+    <name>lightning_LightningRichTextEditor_fontSize</name>
+  </customLabels>
+  <customLabels>
+    <label>URL poveznice</label>
+    <name>lightning_LightningRichTextEditor_linkInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Spremi</label>
+    <name>lightning_LightningRichTextEditor_linkSave</name>
+  </customLabels>
+  <customLabels>
+    <label>Odustani</label>
+    <name>lightning_LightningRichTextEditor_linkCancel</name>
+  </customLabels>
+  <customLabels>
+    <label>Slika premašuje maksimalnu veličinu od 1 MB.</label>
+    <name>lightning_LightningRichTextEditor_imageSizeExceeded</name>
+  </customLabels>
+  <customLabels>
+    <label>Došlo je do problema prilikom prenošenja datoteke.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
+  </customLabels>
+  <customLabels>
+    <label>obavezno</label>
+    <name>lightning_LightningControl_required</name>
+  </customLabels>
+  <customLabels>
+    <label>aktivno</label>
+    <name>lightning_LightningControl_active</name>
+  </customLabels>
+  <customLabels>
+    <label>Aktivno</label>
+    <name>lightning_LightningControl_activeCapitalized</name>
+  </customLabels>
+  <customLabels>
+    <label>neaktivno</label>
+    <name>lightning_LightningControl_inactive</name>
+  </customLabels>
+  <customLabels>
+    <label>Neaktivno</label>
+    <name>lightning_LightningControl_inactiveCapitalized</name>
+  </customLabels>
+  <customLabels>
+    <label>Učitavanje</label>
+    <name>lightning_LightningControl_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>Očisti</label>
+    <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Upozorenje</label>
+    <name>lightning_LightningPill_warning</name>
+  </customLabels>
+  <customLabels>
+    <label>Ukloni</label>
+    <name>lightning_LightningPill_remove</name>
+  </customLabels>
+  <customLabels>
+    <label>Pogreška</label>
+    <name>lightning_LightningPill_error</name>
+  </customLabels>
+  <customLabels>
+    <label>Za uklanjanje pritisnite Delete ili Backspace</label>
+    <name>lightning_LightningPill_delete</name>
+  </customLabels>
+  <customLabels>
+    <label>Za uklanjanje pritisnite Delete ili Backspace, a Enter za navigaciju</label>
+    <name>lightning_LightningPill_deleteAndNavigate</name>
+  </customLabels>
+  <customLabels>
+    <label>Odabrane opcije:</label>
+    <name>lightning_LightningPillContainer_label</name>
+  </customLabels>
+  <customLabels>
+    <label>+ još {0}</label>
+    <name>lightning_LightningPillContainer_more</name>
+  </customLabels>
+  <customLabels>
+    <label>Napredak</label>
+    <name>lightning_LightningProgressBar_progress</name>
+  </customLabels>
+  <customLabels>
+    <label>Pozivanje klikom</label>
+    <name>lightning_LightningClickToDial_enabled</name>
+  </customLabels>
+  <customLabels>
+    <label>Pozivanje klikom onemogućeno je</label>
+    <name>lightning_LightningClickToDial_disabled</name>
+  </customLabels>
+  <customLabels>
+    <label>Pritisnite Ctrl (Cmd za Mac) + lijeva strelica ili Ctrl (Cmd za Mac) + desna strelica kako biste premještali stavke s popisa na popis.</label>
+    <name>lightning_LightningDualListbox_componentAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>Premjestite odabir u {0}</label>
+    <name>lightning_LightningDualListbox_moveSelectionToAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>Premjestite odabir gore</label>
+    <name>lightning_LightningDualListbox_upButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>Premjestite odabir dolje</label>
+    <name>lightning_LightningDualListbox_downButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>: stavka se ne može ukloniti iz {0}</label>
+    <name>lightning_LightningDualListbox_optionLockAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label> [i maksimalno {0}]</label>
+    <name>lightning_LightningDualListbox_maxHelp</name>
+  </customLabels>
+  <customLabels>
+    <label> [i minimalno {0}]</label>
+    <name>lightning_LightningDualListbox_minHelp</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberite najviše {0} opcije/a</label>
+    <name>lightning_LightningDualListbox_maxError</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberite barem {0} opcije/a</label>
+    <name>lightning_LightningDualListbox_minErrorPlural</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberite barem 1 opciju</label>
+    <name>lightning_LightningDualListbox_minErrorSingular</name>
+  </customLabels>
+  <customLabels>
+    <label>Opcija mora biti odabrana</label>
+    <name>lightning_LightningDualListbox_requiredError</name>
+  </customLabels>
+  <customLabels>
+    <label>Najmanje {0} opcije/a moraju biti odabrane</label>
+    <name>lightning_LightningDualListbox_minRequiredErrorPlural</name>
+  </customLabels>
+  <customLabels>
+    <label>Najmanje 1 opcija mora biti odabrana</label>
+    <name>lightning_LightningDualListbox_minRequiredErrorSingular</name>
+  </customLabels>
+  <customLabels>
+    <label>Mora biti odabrano: {0}</label>
+    <name>lightning_LightningDualListbox_requiredOptionError</name>
+  </customLabels>
+  <customLabels>
+    <label>Faza je završena</label>
+    <name>lightning_LightningProgressIndicator_stageComplete</name>
+  </customLabels>
+  <customLabels>
+    <label>Trenutna faza</label>
+    <name>lightning_LightningProgressIndicator_currentStage</name>
+  </customLabels>
+  <customLabels>
+    <label>Učitaj više</label>
+    <name>lightning_LightningListView_loadMore</name>
+  </customLabels>
+  <customLabels>
+    <label>Označite sve</label>
+    <name>lightning_LightningDatatable_selectAll</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberite stavku</label>
+    <name>lightning_LightningDatatable_selectItem</name>
+  </customLabels>
+  <customLabels>
+    <label>širina stupca</label>
+    <name>lightning_LightningDatatable_columnWidth</name>
+  </customLabels>
+  <customLabels>
+    <label>Sortiraj prema:</label>
+    <name>lightning_LightningDatatable_sort</name>
+  </customLabels>
+  <customLabels>
+    <label>Sortirano uzlazno</label>
+    <name>lightning_LightningDatatable_sortAsc</name>
+  </customLabels>
+  <customLabels>
+    <label>Sortirano silazno</label>
+    <name>lightning_LightningDatatable_sortDesc</name>
+  </customLabels>
+  <customLabels>
+    <label>Sortirano: ništa</label>
+    <name>lightning_LightningDatatable_sortNone</name>
+  </customLabels>
+  <customLabels>
+    <label>Učitavanje</label>
+    <name>lightning_LightningDatatable_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>Prikaži radnje</label>
+    <name>lightning_LightningDatatable_showActions</name>
+  </customLabels>
+  <customLabels>
+    <label>Prelomi tekst</label>
+    <name>lightning_LightningDatatable_wrapText</name>
+  </customLabels>
+  <customLabels>
+    <label>Prikvači tekst</label>
+    <name>lightning_LightningDatatable_clipText</name>
+  </customLabels>
+  <customLabels>
+    <label>Uredi</label>
+    <name>lightning_LightningDatatable_edit</name>
+  </customLabels>
+  <customLabels>
+    <label>ima pogrešku</label>
+    <name>lightning_LightningDatatable_editHasError</name>
+  </customLabels>
+  <customLabels>
+    <label>Izaberi redak za odabir</label>
+    <name>lightning_LightningDatatable_chooseARow</name>
+  </customLabels>
+  <customLabels>
+    <label>Spremi</label>
+    <name>lightning_LightningDatatable_save</name>
+  </customLabels>
+  <customLabels>
+    <label>Primijeni</label>
+    <name>lightning_LightningDatatable_apply</name>
+  </customLabels>
+  <customLabels>
+    <label>Poništi</label>
+    <name>lightning_LightningDatatable_cancel</name>
+  </customLabels>
+  <customLabels>
+    <label>Ispravi pogreške i pokušaj ponovno spremiti</label>
+    <name>lightning_LightningDatatable_error</name>
+  </customLabels>
+  <customLabels>
+    <label>Zatvori dijalog</label>
+    <name>lightning_LightningDatatable_closeButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>{0} ima {1} pogreške/i</label>
+    <name>lightning_LightningDatatable_rowLevelErrorAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>Ažuriraj odabrane stavke: {0}</label>
+    <name>lightning_LightningDatatable_updateSelectedItems</name>
+  </customLabels>
+  <customLabels>
+    <label>Akcije</label>
+    <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Nove stavke</label>
+    <name>lightning_LightningVerticalNavigation_newItems</name>
+  </customLabels>
+  <customLabels>
+    <label>Prikažite manje</label>
+    <name>lightning_LightningVerticalNavigation_showLess</name>
+  </customLabels>
+  <customLabels>
+    <label>Prikažite više</label>
+    <name>lightning_LightningVerticalNavigation_showMore</name>
+  </customLabels>
+  <customLabels>
+    <label>Podstranica</label>
+    <name>lightning_LightningVerticalNavigation_subPage</name>
+  </customLabels>
+  <customLabels>
+    <label>U REDU</label>
+    <name>lightning_LightningNoticeFooter_okButton</name>
+  </customLabels>
+  <customLabels>
+    <label>Klizač</label>
+    <name>lightning_LightningSlider_slider</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberi opciju</label>
+    <name>lightning_LightningCombobox_placeholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Izbriši odabir</label>
+    <name>lightning_LightningCombobox_pillCloseButtonAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>Odabrana je 1 opcija</label>
+    <name>lightning_LightningCombobox_selectedLabelSingle</name>
+  </customLabels>
+  <customLabels>
+    <label>Odabrano opcija: {0}</label>
+    <name>lightning_LightningCombobox_selectedLabelMore</name>
+  </customLabels>
+  <customLabels>
+    <label>Trenutni odabir:</label>
+    <name>lightning_LightningCombobox_currentSelection</name>
+  </customLabels>
+  <customLabels>
+    <label>Odabrane opcije:</label>
+    <name>lightning_LightningCombobox_ariaSelectedOptions</name>
+  </customLabels>
+  <customLabels>
+    <label>Učitavanje</label>
+    <name>lightning_LightningCombobox_loadingText</name>
+  </customLabels>
+  <customLabels>
+    <label>Za uklanjanje pritisnite tipku Delete ili tipku Backspace</label>
+    <name>lightning_LightningCombobox_deselectOptionKeyboard</name>
+  </customLabels>
+  <customLabels>
+    <label>Zadano</label>
+    <name>lightning_LightningColorPickerPanel_defaultTab</name>
+  </customLabels>
+  <customLabels>
+    <label>Prilagođeno</label>
+    <name>lightning_LightningColorPickerPanel_customTab</name>
+  </customLabels>
+  <customLabels>
+    <label>Upotrijebite tipke strelica kako biste odabrali zasićenost ili svjetlinu, na x ili y osi.</label>
+    <name>lightning_LightningColorPicker_colorPickerInstructions</name>
+  </customLabels>
+  <customLabels>
+    <label>Izaberite boju. Trenutna boja: </label>
+    <name>lightning_LightningColorPicker_a11yTriggerText</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberite nijansu</label>
+    <name>lightning_LightningColorPicker_hueInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Heks.</label>
+    <name>lightning_LightningColorPicker_hexLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Crvena</label>
+    <name>lightning_LightningColorPicker_redAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>C</label>
+    <name>lightning_LightningColorPicker_rInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Zelena</label>
+    <name>lightning_LightningColorPicker_greenAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>Z</label>
+    <name>lightning_LightningColorPicker_gInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Plava</label>
+    <name>lightning_LightningColorPicker_blueAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>P</label>
+    <name>lightning_LightningColorPicker_bInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Gotovo</label>
+    <name>lightning_LightningColorPicker_doneButton</name>
+  </customLabels>
+  <customLabels>
+    <label>Odustanite</label>
+    <name>lightning_LightningColorPicker_cancelButton</name>
+  </customLabels>
+  <customLabels>
+    <label>Upišite valjanu heksadecimalnu vrijednost.</label>
+    <name>lightning_LightningColorPicker_errorMessage</name>
+  </customLabels>
+  <customLabels>
+    <label>Pomoć</label>
+    <name>lightning_LightningHelptext_buttonAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>Proširite granu stabla</label>
+    <name>lightning_LightningTree_expandBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>Sažmite granu stabla</label>
+    <name>lightning_LightningTree_collapseBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>Prethodni mjesec</label>
+    <name>lightning_LightningDateTimePicker_previousMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>Sljedeći mjesec</label>
+    <name>lightning_LightningDateTimePicker_nextMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberi godinu</label>
+    <name>lightning_LightningDateTimePicker_yearSelector</name>
+  </customLabels>
+  <customLabels>
+    <label>Danas</label>
+    <name>lightning_LightningDateTimePicker_today</name>
+  </customLabels>
+  <customLabels>
+    <label>Alat za odabir datuma: </label>
+    <name>lightning_LightningDateTimePicker_ariaLabelMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberi datum</label>
+    <name>lightning_LightningDateTimePicker_selectDate</name>
+  </customLabels>
+  <customLabels>
+    <label>Datum</label>
+    <name>lightning_LightningDateTimePicker_dateLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Vrijeme</label>
+    <name>lightning_LightningDateTimePicker_timeLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Vaš unos ne odgovara dopuštenom formatu {0}.</label>
+    <name>lightning_LightningDateTimePicker_invalidDate</name>
+  </customLabels>
+  <customLabels>
+    <label>Vrijednost mora biti {0} ili ranije.</label>
+    <name>lightning_LightningDateTimePicker_rangeOverflow</name>
+  </customLabels>
+  <customLabels>
+    <label>Vrijednost mora biti {0} ili kasnije.</label>
+    <name>lightning_LightningDateTimePicker_rangeUnderflow</name>
+  </customLabels>
+  <customLabels>
+    <label>Prikaži radnje</label>
+    <name>lightning_LightningPrimitiveCellActions_showActions</name>
+  </customLabels>
+  <customLabels>
+    <label>Učitavanje radnji</label>
+    <name>lightning_LightningPrimitiveCellActions_loadingActions</name>
+  </customLabels>
+  <customLabels>
+    <label>Oslovljavanje</label>
+    <name>lightning_LightningInputName_salutation</name>
+  </customLabels>
+  <customLabels>
+    <label>Ime</label>
+    <name>lightning_LightningInputName_firstName</name>
+  </customLabels>
+  <customLabels>
+    <label>Srednje ime</label>
+    <name>lightning_LightningInputName_middleName</name>
+  </customLabels>
+  <customLabels>
+    <label>Neformalno ime</label>
+    <name>lightning_LightningInputName_informalName</name>
+  </customLabels>
+  <customLabels>
+    <label>Prezime</label>
+    <name>lightning_LightningInputName_lastName</name>
+  </customLabels>
+  <customLabels>
+    <label>Sufiks</label>
+    <name>lightning_LightningInputName_suffix</name>
+  </customLabels>
+  <customLabels>
+    <label>Ništa</label>
+    <name>lightning_LightningInputName_none</name>
+  </customLabels>
+  <customLabels>
+    <label>Proširi {0}</label>
+    <name>lightning_LightningPrimitiveCellTree_expandBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>Sažmi {0}</label>
+    <name>lightning_LightningPrimitiveCellTree_collapseBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>API naziv {0} nije valjan, jeste li mislili "{1}"?</label>
+    <name>lightning_LightningRecordEditForm_apiNameMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>Pogreška dohvaćanja zapisa ili metapodataka zapisa.</label>
+    <name>lightning_LightningRecordEditForm_genericError</name>
+  </customLabels>
+  <customLabels>
+    <label>Pogreška dohvaćanja zapisa: nevažeći ID zapisa.</label>
+    <name>lightning_LightningRecordEditForm_invalidID</name>
+  </customLabels>
+  <customLabels>
+    <label>Vrijednost za atribut {0} nije važeća Aura.Action.</label>
+    <name>lightning_LightningRecordEditForm_invalidActionAsHandler</name>
+  </customLabels>
+  <customLabels>
+    <label>Spremi</label>
+    <name>lightning_LightningRecordForm_save</name>
+  </customLabels>
+  <customLabels>
+    <label>Poništi</label>
+    <name>lightning_LightningRecordForm_cancel</name>
+  </customLabels>
+  <customLabels>
+    <label>Učitavanje</label>
+    <name>lightning_LightningRecordForm_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>Dodaj</label>
+    <name>lightning_LightningLookup_add</name>
+  </customLabels>
+  <customLabels>
+    <label>Novo {0}</label>
+    <name>lightning_LightningLookup_createNewObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Trenutni odabir</label>
+    <name>lightning_LightningLookup_currentSelection</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberite opciju ili uklonite pojam za pretragu.</label>
+    <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
+  </customLabels>
+  <customLabels>
+    <label>Nedavno {0}</label>
+    <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Pretraži</label>
+    <name>lightning_LightningLookup_search</name>
+  </customLabels>
+  <customLabels>
+    <label>Pretraži {0}...</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Pretraži...</label>
+    <name>lightning_LightningLookup_searchPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>»{0}« u {1}</label>
+    <name>lightning_LightningLookup_searchForInObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Odaberi objekt</label>
+    <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Ništa</label>
+    <name>lightning_LightningLookup_none</name>
+  </customLabels>
+  <customLabels>
+    <label>Dostupno</label>
+    <name>lightning_LightningPicklist_available</name>
+  </customLabels>
+  <customLabels>
+    <label>Izabrano</label>
+    <name>lightning_LightningPicklist_chosen</name>
+  </customLabels>
+  <customLabels>
+    <label>--Ništa--</label>
+    <name>lightning_LightningPicklist_noneLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Markeri</label>
+    <name>lightning_LightningMap_coordinatesTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>Otvori u Google Maps</label>
+    <name>lightning_LightningMap_openInGoogleMaps</name>
+  </customLabels>
+  <customLabels>
+    <label>Spremnik karte</label>
+    <name>lightning_LightningMap_iframeTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>je trenutno odabrano</label>
+    <name>lightning_LightningPrimitiveCoordinate_selected</name>
+  </customLabels>
+  <customLabels>
+    <label>Učitavanje stavki izbornika...</label>
+    <name>lightning_LightningButtonMenu_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>Prikaži izbornik</label>
+    <name>lightning_LightningButtonMenu_showMenu</name>
+  </customLabels>
+  <customLabels>
+    <label>Više</label>
+    <name>lightning_LightningTabs_overflowMore</name>
+  </customLabels>
+  <customLabels>
+    <label>Više kartica</label>
+    <name>lightning_LightningTabs_overflowMoreTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>Kartice</label>
+    <name>lightning_LightningTabs_overflowMoreAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>Ova stavka ima pogrešku</label>
+    <name>lightning_LightningTabs_errorStateAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>za nekoliko sekundi</label>
+    <name>lightning_Duration_secondsLater</name>
+  </customLabels>
+  <customLabels>
+    <label>prije nekoliko sekundi</label>
+    <name>lightning_Duration_secondsAgo</name>
+  </customLabels>
+  <customLabels>
+    <label>Zatvori</label>
+    <name>lightning_LightningDialog_close</name>
+  </customLabels>
+</Translations>

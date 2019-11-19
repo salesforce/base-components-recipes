@@ -1,0 +1,54 @@
+{
+    "name": "base-components-recipes",
+    "private": true,
+    "version": "0.1.0",
+    "description": "Base Components Recipes",
+    "scripts": {
+        "lint:lwc": "eslint **/lwc/**",
+        "test": "npm run lint:lwc && npm run test:unit",
+        "test:unit": "lwc-jest",
+        "test:unit:watch": "lwc-jest --watch",
+        "test:unit:debug": "lwc-jest --debug",
+        "test:unit:coverage": "lwc-jest --coverage",
+        "prettier": "prettier --write '**/*.{cmp,component,css,html,js,json,md,page,yaml,yml}'",
+        "prettier:verify": "prettier --list-different '**/*.{html,js,json,yaml,yml,md,cmp,page,component}'",
+        "postinstall": "node bin/check-version.js",
+        "check:license": "node scripts/check-license-header.js"
+    },
+    "license": "CC0-1.0",
+    "engines": {
+        "node": ">= 10.13.0",
+        "npm": ">= 6.5.0"
+    },
+    "devDependencies": {
+        "@salesforce/eslint-config-lwc": "^0.4.0",
+        "@salesforce/sfdx-lwc-jest": "^0.6.1",
+        "eslint": "^5.16.0",
+        "husky": "^3.0.5",
+        "jest-canvas-mock": "^2.1.2",
+        "lint-staged": "^9.3.0",
+        "prettier": "^1.18",
+        "semver": "^6.3.0",
+        "simple-git": "^1.126.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn check:license"
+        }
+    },
+    "lint-staged": {
+        "**/*.{html,js,json,yaml,yml,md,cmp,page,component}": [
+            "prettier --write"
+        ],
+        "**/lwc/**": [
+            "eslint"
+        ],
+        "*": [
+            "git add"
+        ]
+    },
+    "checkLicense": [
+        "examples",
+        "force-app"
+    ]
+}

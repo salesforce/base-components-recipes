@@ -1,0 +1,23 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<template>
+    <c-card title="Record Form">
+        <div class="slds-card__body slds-card__body_inner">
+            <c-record-form record-id={accountId}
+                           object-api-name="Account"
+                           fields={fields}
+                           columns="2"
+                           mode="view"
+                           onsubmit={handleSubmit}>
+            </c-record-form>
+
+            <c-view-source source="recordFormRecipes" slot="footer">
+                Creates an editable form or display form for a record. This component only works on the Salesforce platform.
+            </c-view-source>
+        </div>
+    </c-card>
+</template>

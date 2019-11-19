@@ -1,0 +1,36 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<!-- !! NOTE: Do not commit changes to this file. It is intended as a starter shell only. -->
+<template>
+    <c-card title="Checkbox Group">
+        <div class="slds-card__body slds-card__body_inner">
+            <c-checkbox-group name="Checkbox Group"
+                              label="Checkbox Group"
+                              options={options}
+                              value={value}
+                              onchange={handleChange}>
+            </c-checkbox-group>
+            <p>Selected Values are: {selectedValues}</p>
+
+            <c-checkbox-group name="Checkbox Group"
+                              label="Checkbox Group"
+                              options={options}
+                              value={value}
+                              required>
+            </c-checkbox-group>
+            <c-checkbox-group name="Checkbox Group"
+                              label="Checkbox Group"
+                              options={options}
+                              value={value}
+                              disabled>
+            </c-checkbox-group>
+            <c-view-source source="checkboxGroupRecipes" slot="footer">
+                A checkbox group enables selection of single or multiple options, defined in the JavaScript.
+            </c-view-source>
+        </div>
+    </c-card>
+</template>

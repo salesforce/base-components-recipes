@@ -1,0 +1,17 @@
+/*
+ * Copyright (c) 2019, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: MIT
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ */
+.dark-background {
+    background-color: #16325c;
+    color: #fff;
+}
+.light-background {
+    background-color: rgb(242, 242, 242);
+}
+.row {
+    margin: 10px 0 10px;
+    padding: 0.5rem;
+}

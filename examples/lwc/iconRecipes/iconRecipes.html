@@ -1,0 +1,68 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<template>
+    <c-card title="Icon">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                    A basic icon component.
+                </h2>
+
+                <!-- Simple -->
+                <div class="slds-p-around_medium lgc-bg">
+                    <c-icon icon-name="action:approval"
+                            alternative-text="Approved"></c-icon>
+                    <c-icon icon-name="doctype:audio"
+                            alternative-text="Audio file"></c-icon>
+                    <c-icon icon-name="standard:event"
+                            alternative-text="Event"></c-icon>
+                    <c-icon icon-name="utility:connected_apps"
+                            alternative-text="Connected"></c-icon>
+                    <c-icon icon-name="utility:warning"
+                            alternative-text="Warning!"
+                            variant="warning"></c-icon>
+                    <c-icon icon-name="utility:error"
+                            alternative-text="Error!"
+                            variant="error"></c-icon>
+                    <c-icon icon-name="utility:image"
+                            alternative-text="Utility image"></c-icon>
+                    <c-icon icon-name="doctype:image"
+                            alternative-text="Doc image"></c-icon>
+                </div>
+
+                <!-- Variant Inverse -->
+                <div class="row dark-background">
+                    <h4>Utility icon with inverse variant</h4>
+                    <c-icon icon-name="utility:connected_apps"
+                            alternative-text="Connected"
+                            variant="inverse"
+                            size="small"></c-icon>
+                </div>
+
+                <!-- Variant success, warning, error -->
+                <div class="row">
+                    <h4>Utility icons with success, warning and error variant</h4>
+                    <c-icon icon-name="utility:success"
+                            alternative-text="Success!"
+                            variant="success"
+                            size="small"></c-icon>
+                    <c-icon icon-name="utility:warning"
+                            alternative-text="Warning!"
+                            variant="warning"
+                            size="small"></c-icon>
+                    <c-icon icon-name="utility:error"
+                            alternative-text="Error!"
+                            variant="error"
+                            size="small"></c-icon>
+                </div>
+            </div>
+            <c-view-source source="iconRecipes" slot="footer">
+                Represents a visual element that provides context and enhances usability.
+            </c-view-source>
+        </div>
+    </c-card>
+</template>

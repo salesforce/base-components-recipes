@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+  <customLabels>
+    <label>أدخل قيمة صالحة.</label>
+    <name>lightning_LightningErrorMessage_validityBadInput</name>
+  </customLabels>
+  <customLabels>
+    <label>إدخالك غير مطابق للنمط المسموح به.</label>
+    <name>lightning_LightningErrorMessage_validityPatternMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>لقد قمت بإدخال تنسيق غير صالح.</label>
+    <name>lightning_LightningErrorMessage_validityTypeMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>أكمل هذا الحقل.</label>
+    <name>lightning_LightningErrorMessage_validityValueMissing</name>
+  </customLabels>
+  <customLabels>
+    <label>الرقم كبير جدًا.</label>
+    <name>lightning_LightningErrorMessage_validityRangeOverflow</name>
+  </customLabels>
+  <customLabels>
+    <label>الرقم صغير جدًا.</label>
+    <name>lightning_LightningErrorMessage_validityRangeUnderflow</name>
+  </customLabels>
+  <customLabels>
+    <label>إدخالك ليس بزيادة صالحة.</label>
+    <name>lightning_LightningErrorMessage_validityStepMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>إدخالك طويل جدًا.</label>
+    <name>lightning_LightningErrorMessage_validityTooLong</name>
+  </customLabels>
+  <customLabels>
+    <label>إدخالك قصير جدًا.</label>
+    <name>lightning_LightningErrorMessage_validityTooShort</name>
+  </customLabels>
+  <customLabels>
+    <label>علامة تبويب</label>
+    <name>lightning_LightningCarousel_tabString</name>
+  </customLabels>
+  <customLabels>
+    <label>إيقاف التشغيل التلقائي</label>
+    <name>lightning_LightningCarousel_autoPlay</name>
+  </customLabels>
+  <customLabels>
+    <label>تحميل ملفات</label>
+    <name>lightning_LightningInputFile_buttonLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>أو إفلات الملفات</label>
+    <name>lightning_LightningInputFile_bodyText</name>
+  </customLabels>
+  <customLabels>
+    <label>دائرة العرض</label>
+    <name>lightning_LightningInputLocation_latitude</name>
+  </customLabels>
+  <customLabels>
+    <label>خط الطول</label>
+    <name>lightning_LightningInputLocation_longitude</name>
+  </customLabels>
+  <customLabels>
+    <label>ينبغي أن تكون دائرة العرض رقم عشري في النطاق [-90، 90]</label>
+    <name>lightning_LightningInputLocation_invalidLatitude</name>
+  </customLabels>
+  <customLabels>
+    <label>ينبغي أن يكون خط الطول رقم عشري في النطاق [-180، 180]</label>
+    <name>lightning_LightningInputLocation_invalidLongitude</name>
+  </customLabels>
+  <customLabels>
+    <label>يجب إدخال الإحداثيات</label>
+    <name>lightning_LightningInputLocation_coordinateIsRequired</name>
+  </customLabels>
+  <customLabels>
+    <label>البريد الإلكتروني</label>
+    <name>lightning_LightningFormattedEmail_emailIconLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>اختيار خط</label>
+    <name>lightning_LightningRichTextAssist_chooseFont</name>
+  </customLabels>
+  <customLabels>
+    <label>اختيار حجم خط</label>
+    <name>lightning_LightningRichTextAssist_chooseSize</name>
+  </customLabels>
+  <customLabels>
+    <label>كتابة نص</label>
+    <name>lightning_LightningRichTextAssist_composeText</name>
+  </customLabels>
+  <customLabels>
+    <label>عريض</label>
+    <name>lightning_LightningRichTextButton_bold</name>
+  </customLabels>
+  <customLabels>
+    <label>مائل</label>
+    <name>lightning_LightningRichTextButton_italic</name>
+  </customLabels>
+  <customLabels>
+    <label>تسطير</label>
+    <name>lightning_LightningRichTextButton_underline</name>
+  </customLabels>
+  <customLabels>
+    <label>يتوسطه خط</label>
+    <name>lightning_LightningRichTextButton_strike</name>
+  </customLabels>
+  <customLabels>
+    <label>قائمة ذات تعداد نقطي</label>
+    <name>lightning_LightningRichTextButton_bullet</name>
+  </customLabels>
+  <customLabels>
+    <label>قائمة مرقّمة</label>
+    <name>lightning_LightningRichTextButton_number</name>
+  </customLabels>
+  <customLabels>
+    <label>المسافة البادئة</label>
+    <name>lightning_LightningRichTextButton_indent</name>
+  </customLabels>
+  <customLabels>
+    <label>المسافة البادئة المعلقة</label>
+    <name>lightning_LightningRichTextButton_outdent</name>
+  </customLabels>
+  <customLabels>
+    <label>محاذاة النص إلى اليسار</label>
+    <name>lightning_LightningRichTextButton_leftAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>توسيط النص</label>
+    <name>lightning_LightningRichTextButton_centerAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>محاذاة النص إلى اليمين</label>
+    <name>lightning_LightningRichTextButton_rightAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>مزيد من الإجراءات</label>
+    <name>lightning_LightningRichTextButton_moreActions</name>
+  </customLabels>
+  <customLabels>
+    <label>ربط</label>
+    <name>lightning_LightningRichTextButton_link</name>
+  </customLabels>
+  <customLabels>
+    <label>صورة</label>
+    <name>lightning_LightningRichTextButton_image</name>
+  </customLabels>
+  <customLabels>
+    <label>إزالة التنسيق</label>
+    <name>lightning_LightningRichTextButton_removeFormatting</name>
+  </customLabels>
+  <customLabels>
+    <label>تنسيق النص</label>
+    <name>lightning_LightningRichTextEditor_formatText</name>
+  </customLabels>
+  <customLabels>
+    <label>تنسيق لون الخلفية والنص</label>
+    <name>lightning_LightningRichTextEditor_formatBackground</name>
+  </customLabels>
+  <customLabels>
+    <label>تنسيق النص</label>
+    <name>lightning_LightningRichTextEditor_formatBody</name>
+  </customLabels>
+  <customLabels>
+    <label>محاذاة النص</label>
+    <name>lightning_LightningRichTextEditor_alignText</name>
+  </customLabels>
+  <customLabels>
+    <label>إدراج محتوى</label>
+    <name>lightning_LightningRichTextEditor_insertContent</name>
+  </customLabels>
+  <customLabels>
+    <label>إزالة التنسيق</label>
+    <name>lightning_LightningRichTextEditor_removeFormatting</name>
+  </customLabels>
+  <customLabels>
+    <label>تنسيق عائلة الخطوط وحجم الخط</label>
+    <name>lightning_LightningRichTextEditor_formatFont</name>
+  </customLabels>
+  <customLabels>
+    <label>الخط</label>
+    <name>lightning_LightningRichTextEditor_font</name>
+  </customLabels>
+  <customLabels>
+    <label>حجم الخط</label>
+    <name>lightning_LightningRichTextEditor_fontSize</name>
+  </customLabels>
+  <customLabels>
+    <label>عنوان URL للرابط</label>
+    <name>lightning_LightningRichTextEditor_linkInput</name>
+  </customLabels>
+  <customLabels>
+    <label>حفظ</label>
+    <name>lightning_LightningRichTextEditor_linkSave</name>
+  </customLabels>
+  <customLabels>
+    <label>إلغاء</label>
+    <name>lightning_LightningRichTextEditor_linkCancel</name>
+  </customLabels>
+  <customLabels>
+    <label>تتجاوز الصورة الحد الأقصى للحجم المسموح به 1 ميجابايت.</label>
+    <name>lightning_LightningRichTextEditor_imageSizeExceeded</name>
+  </customLabels>
+  <customLabels>
+    <label>حدثت مشكلة أثناء تحميل الملف.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
+  </customLabels>
+  <customLabels>
+    <label>مطلوب</label>
+    <name>lightning_LightningControl_required</name>
+  </customLabels>
+  <customLabels>
+    <label>نشط</label>
+    <name>lightning_LightningControl_active</name>
+  </customLabels>
+  <customLabels>
+    <label>نشط</label>
+    <name>lightning_LightningControl_activeCapitalized</name>
+  </customLabels>
+  <customLabels>
+    <label>غير نشط</label>
+    <name>lightning_LightningControl_inactive</name>
+  </customLabels>
+  <customLabels>
+    <label>غير نشط</label>
+    <name>lightning_LightningControl_inactiveCapitalized</name>
+  </customLabels>
+  <customLabels>
+    <label>تحميل</label>
+    <name>lightning_LightningControl_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>مسح</label>
+    <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>تحذير</label>
+    <name>lightning_LightningPill_warning</name>
+  </customLabels>
+  <customLabels>
+    <label>إزالة</label>
+    <name>lightning_LightningPill_remove</name>
+  </customLabels>
+  <customLabels>
+    <label>خطأ</label>
+    <name>lightning_LightningPill_error</name>
+  </customLabels>
+  <customLabels>
+    <label>اضغط على حذف أو مفتاح مسافة للخلف لإزالته</label>
+    <name>lightning_LightningPill_delete</name>
+  </customLabels>
+  <customLabels>
+    <label>اضغط على مفتاح الحذف أو مسافة للخلف للإزالة، واضغط على مفتاح الإدخال للتنقل</label>
+    <name>lightning_LightningPill_deleteAndNavigate</name>
+  </customLabels>
+  <customLabels>
+    <label>الخيارات المحددة:</label>
+    <name>lightning_LightningPillContainer_label</name>
+  </customLabels>
+  <customLabels>
+    <label>+{0} أخرى</label>
+    <name>lightning_LightningPillContainer_more</name>
+  </customLabels>
+  <customLabels>
+    <label>التقدم</label>
+    <name>lightning_LightningProgressBar_progress</name>
+  </customLabels>
+  <customLabels>
+    <label>النقر للاتصال</label>
+    <name>lightning_LightningClickToDial_enabled</name>
+  </customLabels>
+  <customLabels>
+    <label>النقر للاتصال مُعطَّل</label>
+    <name>lightning_LightningClickToDial_disabled</name>
+  </customLabels>
+  <customLabels>
+    <label>اضغط على Ctrl (Cmd على الـ Mac) + السهم الأيسر أو Ctrl (Cmd على الـ Mac) + السهم الأيمن لنقل العناصر بين القوائم.</label>
+    <name>lightning_LightningDualListbox_componentAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>نقل التحديد إلى {0}</label>
+    <name>lightning_LightningDualListbox_moveSelectionToAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>نقل التحديد لأعلى</label>
+    <name>lightning_LightningDualListbox_upButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>نقل التحديد لأسفل</label>
+    <name>lightning_LightningDualListbox_downButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>: تتعذر إزالة العنصر من {0}</label>
+    <name>lightning_LightningDualListbox_optionLockAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label> [وحد أقصى يبلغ {0}]</label>
+    <name>lightning_LightningDualListbox_maxHelp</name>
+  </customLabels>
+  <customLabels>
+    <label> [وحد أدنى يبلغ {0}]</label>
+    <name>lightning_LightningDualListbox_minHelp</name>
+  </customLabels>
+  <customLabels>
+    <label>حدد على الأكثر خيارات {0}</label>
+    <name>lightning_LightningDualListbox_maxError</name>
+  </customLabels>
+  <customLabels>
+    <label>حدد على الأقل خيارات {0}</label>
+    <name>lightning_LightningDualListbox_minErrorPlural</name>
+  </customLabels>
+  <customLabels>
+    <label>حدد على الأقل خيارًا واحدًا</label>
+    <name>lightning_LightningDualListbox_minErrorSingular</name>
+  </customLabels>
+  <customLabels>
+    <label>يجب تحديد خيار</label>
+    <name>lightning_LightningDualListbox_requiredError</name>
+  </customLabels>
+  <customLabels>
+    <label>يجب تحديد {0} من الخيارات على الأقل</label>
+    <name>lightning_LightningDualListbox_minRequiredErrorPlural</name>
+  </customLabels>
+  <customLabels>
+    <label>يجب تحديد خيار واحد على الأقل</label>
+    <name>lightning_LightningDualListbox_minRequiredErrorSingular</name>
+  </customLabels>
+  <customLabels>
+    <label>يجب تحديد {0}</label>
+    <name>lightning_LightningDualListbox_requiredOptionError</name>
+  </customLabels>
+  <customLabels>
+    <label>المرحلة المكتملة</label>
+    <name>lightning_LightningProgressIndicator_stageComplete</name>
+  </customLabels>
+  <customLabels>
+    <label>المرحلة الحالية</label>
+    <name>lightning_LightningProgressIndicator_currentStage</name>
+  </customLabels>
+  <customLabels>
+    <label>تحميل المزيد</label>
+    <name>lightning_LightningListView_loadMore</name>
+  </customLabels>
+  <customLabels>
+    <label>تحديد الكل</label>
+    <name>lightning_LightningDatatable_selectAll</name>
+  </customLabels>
+  <customLabels>
+    <label>تحديد عنصر</label>
+    <name>lightning_LightningDatatable_selectItem</name>
+  </customLabels>
+  <customLabels>
+    <label>عرض العمود</label>
+    <name>lightning_LightningDatatable_columnWidth</name>
+  </customLabels>
+  <customLabels>
+    <label>فرز حسب:</label>
+    <name>lightning_LightningDatatable_sort</name>
+  </customLabels>
+  <customLabels>
+    <label>تم فرزه تصاعديًا</label>
+    <name>lightning_LightningDatatable_sortAsc</name>
+  </customLabels>
+  <customLabels>
+    <label>تم فرزه تنازليًا</label>
+    <name>lightning_LightningDatatable_sortDesc</name>
+  </customLabels>
+  <customLabels>
+    <label>مفروز حسب: بلا</label>
+    <name>lightning_LightningDatatable_sortNone</name>
+  </customLabels>
+  <customLabels>
+    <label>تحميل</label>
+    <name>lightning_LightningDatatable_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>إظهار الإجراءات</label>
+    <name>lightning_LightningDatatable_showActions</name>
+  </customLabels>
+  <customLabels>
+    <label>التفاف النص</label>
+    <name>lightning_LightningDatatable_wrapText</name>
+  </customLabels>
+  <customLabels>
+    <label>قص النص</label>
+    <name>lightning_LightningDatatable_clipText</name>
+  </customLabels>
+  <customLabels>
+    <label>تحرير</label>
+    <name>lightning_LightningDatatable_edit</name>
+  </customLabels>
+  <customLabels>
+    <label>به خطأ</label>
+    <name>lightning_LightningDatatable_editHasError</name>
+  </customLabels>
+  <customLabels>
+    <label>اختيار صف لتحديده</label>
+    <name>lightning_LightningDatatable_chooseARow</name>
+  </customLabels>
+  <customLabels>
+    <label>حفظ</label>
+    <name>lightning_LightningDatatable_save</name>
+  </customLabels>
+  <customLabels>
+    <label>تطبيق</label>
+    <name>lightning_LightningDatatable_apply</name>
+  </customLabels>
+  <customLabels>
+    <label>إلغاء</label>
+    <name>lightning_LightningDatatable_cancel</name>
+  </customLabels>
+  <customLabels>
+    <label>أصلِح الأخطاء وحاول الحفظ مرة أخرى</label>
+    <name>lightning_LightningDatatable_error</name>
+  </customLabels>
+  <customLabels>
+    <label>إغلاق مربع الحوار</label>
+    <name>lightning_LightningDatatable_closeButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>{0} لديه {1} من الأخطاء</label>
+    <name>lightning_LightningDatatable_rowLevelErrorAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>تحديث {0} من العناصر المحددة</label>
+    <name>lightning_LightningDatatable_updateSelectedItems</name>
+  </customLabels>
+  <customLabels>
+    <label>الإجراءات</label>
+    <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>العناصر الجديدة</label>
+    <name>lightning_LightningVerticalNavigation_newItems</name>
+  </customLabels>
+  <customLabels>
+    <label>عرض الأقل</label>
+    <name>lightning_LightningVerticalNavigation_showLess</name>
+  </customLabels>
+  <customLabels>
+    <label>إظهار المزيد</label>
+    <name>lightning_LightningVerticalNavigation_showMore</name>
+  </customLabels>
+  <customLabels>
+    <label>الصفحة الفرعية</label>
+    <name>lightning_LightningVerticalNavigation_subPage</name>
+  </customLabels>
+  <customLabels>
+    <label>موافق</label>
+    <name>lightning_LightningNoticeFooter_okButton</name>
+  </customLabels>
+  <customLabels>
+    <label>الشريحة</label>
+    <name>lightning_LightningSlider_slider</name>
+  </customLabels>
+  <customLabels>
+    <label>حدد خيارًا</label>
+    <name>lightning_LightningCombobox_placeholder</name>
+  </customLabels>
+  <customLabels>
+    <label>مسح التحديد</label>
+    <name>lightning_LightningCombobox_pillCloseButtonAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>خيار واحد محدد</label>
+    <name>lightning_LightningCombobox_selectedLabelSingle</name>
+  </customLabels>
+  <customLabels>
+    <label>{0} من الخيارات المحددة</label>
+    <name>lightning_LightningCombobox_selectedLabelMore</name>
+  </customLabels>
+  <customLabels>
+    <label>التحديد الحالي:</label>
+    <name>lightning_LightningCombobox_currentSelection</name>
+  </customLabels>
+  <customLabels>
+    <label>الخيارات المحددة:</label>
+    <name>lightning_LightningCombobox_ariaSelectedOptions</name>
+  </customLabels>
+  <customLabels>
+    <label>تحميل</label>
+    <name>lightning_LightningCombobox_loadingText</name>
+  </customLabels>
+  <customLabels>
+    <label>اضغط على حذف أو مفتاح مسافة للخلف لإزالته</label>
+    <name>lightning_LightningCombobox_deselectOptionKeyboard</name>
+  </customLabels>
+  <customLabels>
+    <label>افتراضي</label>
+    <name>lightning_LightningColorPickerPanel_defaultTab</name>
+  </customLabels>
+  <customLabels>
+    <label>مخصص</label>
+    <name>lightning_LightningColorPickerPanel_customTab</name>
+  </customLabels>
+  <customLabels>
+    <label>استخدم مفاتيح الأسهم لتحديد تشبع وسطوع، على محور س ومحور ص.</label>
+    <name>lightning_LightningColorPicker_colorPickerInstructions</name>
+  </customLabels>
+  <customLabels>
+    <label>اختر لونًا. اللون الحالي: </label>
+    <name>lightning_LightningColorPicker_a11yTriggerText</name>
+  </customLabels>
+  <customLabels>
+    <label>تحديد الصبغة</label>
+    <name>lightning_LightningColorPicker_hueInput</name>
+  </customLabels>
+  <customLabels>
+    <label>سداسي</label>
+    <name>lightning_LightningColorPicker_hexLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>أحمر</label>
+    <name>lightning_LightningColorPicker_redAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>R</label>
+    <name>lightning_LightningColorPicker_rInput</name>
+  </customLabels>
+  <customLabels>
+    <label>أخضر</label>
+    <name>lightning_LightningColorPicker_greenAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>G</label>
+    <name>lightning_LightningColorPicker_gInput</name>
+  </customLabels>
+  <customLabels>
+    <label>أزرق</label>
+    <name>lightning_LightningColorPicker_blueAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>B</label>
+    <name>lightning_LightningColorPicker_bInput</name>
+  </customLabels>
+  <customLabels>
+    <label>تم</label>
+    <name>lightning_LightningColorPicker_doneButton</name>
+  </customLabels>
+  <customLabels>
+    <label>إلغاء</label>
+    <name>lightning_LightningColorPicker_cancelButton</name>
+  </customLabels>
+  <customLabels>
+    <label>أدخل قيمة سداسية عشرية صالحة.</label>
+    <name>lightning_LightningColorPicker_errorMessage</name>
+  </customLabels>
+  <customLabels>
+    <label>مساعدة</label>
+    <name>lightning_LightningHelptext_buttonAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>توسيع فرع الشجرة</label>
+    <name>lightning_LightningTree_expandBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>طي فرع الشجرة</label>
+    <name>lightning_LightningTree_collapseBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>الشهر السابق</label>
+    <name>lightning_LightningDateTimePicker_previousMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>الشهر التالي</label>
+    <name>lightning_LightningDateTimePicker_nextMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>اختيار سنة</label>
+    <name>lightning_LightningDateTimePicker_yearSelector</name>
+  </customLabels>
+  <customLabels>
+    <label>اليوم</label>
+    <name>lightning_LightningDateTimePicker_today</name>
+  </customLabels>
+  <customLabels>
+    <label>منتقي التاريخ: </label>
+    <name>lightning_LightningDateTimePicker_ariaLabelMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>تحديد تاريخ</label>
+    <name>lightning_LightningDateTimePicker_selectDate</name>
+  </customLabels>
+  <customLabels>
+    <label>التاريخ</label>
+    <name>lightning_LightningDateTimePicker_dateLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>الوقت</label>
+    <name>lightning_LightningDateTimePicker_timeLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>إدخالك غير مطابق للتنسيق المسموح به {0}.</label>
+    <name>lightning_LightningDateTimePicker_invalidDate</name>
+  </customLabels>
+  <customLabels>
+    <label>يجب أن تكون القيمة {0} أو أقدم.</label>
+    <name>lightning_LightningDateTimePicker_rangeOverflow</name>
+  </customLabels>
+  <customLabels>
+    <label>يجب أن تكون القيمة {0} أو أحدث.</label>
+    <name>lightning_LightningDateTimePicker_rangeUnderflow</name>
+  </customLabels>
+  <customLabels>
+    <label>إظهار الإجراءات</label>
+    <name>lightning_LightningPrimitiveCellActions_showActions</name>
+  </customLabels>
+  <customLabels>
+    <label>إجراءات التحميل</label>
+    <name>lightning_LightningPrimitiveCellActions_loadingActions</name>
+  </customLabels>
+  <customLabels>
+    <label>التحية</label>
+    <name>lightning_LightningInputName_salutation</name>
+  </customLabels>
+  <customLabels>
+    <label>الاسم الأول</label>
+    <name>lightning_LightningInputName_firstName</name>
+  </customLabels>
+  <customLabels>
+    <label>الاسم الأوسط</label>
+    <name>lightning_LightningInputName_middleName</name>
+  </customLabels>
+  <customLabels>
+    <label>الاسم غير الرسمي</label>
+    <name>lightning_LightningInputName_informalName</name>
+  </customLabels>
+  <customLabels>
+    <label>الاسم الأخير</label>
+    <name>lightning_LightningInputName_lastName</name>
+  </customLabels>
+  <customLabels>
+    <label>اللاحقة</label>
+    <name>lightning_LightningInputName_suffix</name>
+  </customLabels>
+  <customLabels>
+    <label>لا شيء</label>
+    <name>lightning_LightningInputName_none</name>
+  </customLabels>
+  <customLabels>
+    <label>توسيع {0}</label>
+    <name>lightning_LightningPrimitiveCellTree_expandBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>طي {0}</label>
+    <name>lightning_LightningPrimitiveCellTree_collapseBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>اسم API {0} غير صالح، هل تقصد "{1}"؟</label>
+    <name>lightning_LightningRecordEditForm_apiNameMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>حدث خطأ أثناء جلب السجل أو بيانات تعريف السجل.</label>
+    <name>lightning_LightningRecordEditForm_genericError</name>
+  </customLabels>
+  <customLabels>
+    <label>حدث خطأ أثناء جلب السجل: معرف السجل غير صالح.</label>
+    <name>lightning_LightningRecordEditForm_invalidID</name>
+  </customLabels>
+  <customLabels>
+    <label>القيمة التي تم إدخالها للسمة {0} ليست قيمة Aura.Action صالحة.</label>
+    <name>lightning_LightningRecordEditForm_invalidActionAsHandler</name>
+  </customLabels>
+  <customLabels>
+    <label>حفظ</label>
+    <name>lightning_LightningRecordForm_save</name>
+  </customLabels>
+  <customLabels>
+    <label>إلغاء</label>
+    <name>lightning_LightningRecordForm_cancel</name>
+  </customLabels>
+  <customLabels>
+    <label>تحميل</label>
+    <name>lightning_LightningRecordForm_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>إضافة</label>
+    <name>lightning_LightningLookup_add</name>
+  </customLabels>
+  <customLabels>
+    <label>{0} جديد</label>
+    <name>lightning_LightningLookup_createNewObject</name>
+  </customLabels>
+  <customLabels>
+    <label>التحديد الحالي</label>
+    <name>lightning_LightningLookup_currentSelection</name>
+  </customLabels>
+  <customLabels>
+    <label>حدد خيارًا أو قم بإزالة مصطلح البحث.</label>
+    <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
+  </customLabels>
+  <customLabels>
+    <label>آخر {0}</label>
+    <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>بحث</label>
+    <name>lightning_LightningLookup_search</name>
+  </customLabels>
+  <customLabels>
+    <label>بحث في {0}...</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>بحث...</label>
+    <name>lightning_LightningLookup_searchPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>"{0}" في {1}</label>
+    <name>lightning_LightningLookup_searchForInObject</name>
+  </customLabels>
+  <customLabels>
+    <label>اختيار كائن</label>
+    <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>لا شيء</label>
+    <name>lightning_LightningLookup_none</name>
+  </customLabels>
+  <customLabels>
+    <label>متوفر</label>
+    <name>lightning_LightningPicklist_available</name>
+  </customLabels>
+  <customLabels>
+    <label>مُختار</label>
+    <name>lightning_LightningPicklist_chosen</name>
+  </customLabels>
+  <customLabels>
+    <label>--لا شيء--</label>
+    <name>lightning_LightningPicklist_noneLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>علامات</label>
+    <name>lightning_LightningMap_coordinatesTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>فتح في خرائط Google</label>
+    <name>lightning_LightningMap_openInGoogleMaps</name>
+  </customLabels>
+  <customLabels>
+    <label>حاوية الخرائط</label>
+    <name>lightning_LightningMap_iframeTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>محدد حاليًا</label>
+    <name>lightning_LightningPrimitiveCoordinate_selected</name>
+  </customLabels>
+  <customLabels>
+    <label>جارٍ تحميل عناصر القائمة...</label>
+    <name>lightning_LightningButtonMenu_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>إظهار القائمة</label>
+    <name>lightning_LightningButtonMenu_showMenu</name>
+  </customLabels>
+  <customLabels>
+    <label>المزيد</label>
+    <name>lightning_LightningTabs_overflowMore</name>
+  </customLabels>
+  <customLabels>
+    <label>مزيد من علامات التبويب</label>
+    <name>lightning_LightningTabs_overflowMoreTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>علامات التبويب</label>
+    <name>lightning_LightningTabs_overflowMoreAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>يحتوى هذا العنصر على خطأ</label>
+    <name>lightning_LightningTabs_errorStateAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>في بضع ثوانٍ</label>
+    <name>lightning_Duration_secondsLater</name>
+  </customLabels>
+  <customLabels>
+    <label>منذ بضع ثوانٍ</label>
+    <name>lightning_Duration_secondsAgo</name>
+  </customLabels>
+  <customLabels>
+    <label>إغلاق</label>
+    <name>lightning_LightningDialog_close</name>
+  </customLabels>
+</Translations>

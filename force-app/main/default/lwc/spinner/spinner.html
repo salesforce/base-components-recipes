@@ -1,0 +1,14 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <div role="status" class={computedClass}>
+        <span if:true={validAlternativeText} class="slds-assistive-text">{alternativeText}</span>
+        <div class="slds-spinner__dot-a"></div>
+        <div class="slds-spinner__dot-b"></div>
+    </div>
+</template>

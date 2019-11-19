@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+  <customLabels>
+    <label>«คู้Eöש是[[Enter a valid value.]]是שöEคู้»</label>
+    <name>lightning_LightningErrorMessage_validityBadInput</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Your entry does not match the allowed pattern.]]是שöEคู้是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningErrorMessage_validityPatternMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[You have entered an invalid format.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningErrorMessage_validityTypeMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Complete this field.]]是שöEคู้»</label>
+    <name>lightning_LightningErrorMessage_validityValueMissing</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[The number is too high.]]是שöEคู้»</label>
+    <name>lightning_LightningErrorMessage_validityRangeOverflow</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[The number is too low.]]是שöEคู้»</label>
+    <name>lightning_LightningErrorMessage_validityRangeUnderflow</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Your entry isn't a valid increment.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningErrorMessage_validityStepMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Your entry is too long.]]是שöEคู้»</label>
+    <name>lightning_LightningErrorMessage_validityTooLong</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Your entry is too short.]]是שöEคู้»</label>
+    <name>lightning_LightningErrorMessage_validityTooShort</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Tab]]是שöEคู้»</label>
+    <name>lightning_LightningCarousel_tabString</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Stop auto-play]]是שöEคู้»</label>
+    <name>lightning_LightningCarousel_autoPlay</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Upload Files]]是שöEคู้»</label>
+    <name>lightning_LightningInputFile_buttonLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Or drop files]]是שöEคู้»</label>
+    <name>lightning_LightningInputFile_bodyText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Latitude]]是שöEคู้»</label>
+    <name>lightning_LightningInputLocation_latitude</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Longitude]]是שöEคู้»</label>
+    <name>lightning_LightningInputLocation_longitude</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Latitude should be a decimal number in a range [-90, 90]]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningInputLocation_invalidLatitude</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Longitude should be a decimal number in a range [-180, 180]]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningInputLocation_invalidLongitude</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Coordinate is required]]是שöEคู้»</label>
+    <name>lightning_LightningInputLocation_coordinateIsRequired</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Email]]是שöEคู้»</label>
+    <name>lightning_LightningFormattedEmail_emailIconLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Choose a font]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextAssist_chooseFont</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Choose a font size]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextAssist_chooseSize</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Compose text]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextAssist_composeText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Bold]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_bold</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Italic]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_italic</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Underline]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_underline</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Strikethrough]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_strike</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Bulleted list]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_bullet</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Numbered list]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_number</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Indent]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_indent</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Outdent]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_outdent</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Left align text]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_leftAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Center align text]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_centerAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Right align text]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_rightAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[More actions]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_moreActions</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Link]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_link</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Image]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_image</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Remove formatting]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextButton_removeFormatting</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Format text]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_formatText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Format background and text color]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_formatBackground</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Format body]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_formatBody</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Align text]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_alignText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Insert content]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_insertContent</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Remove formatting]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_removeFormatting</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Format font family and size]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_formatFont</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Font]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_font</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Font Size]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_fontSize</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Link URL]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_linkInput</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Save]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_linkSave</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Cancel]]是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_linkCancel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[The image exceeded the maximum size of 1 MB.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_imageSizeExceeded</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[There was a problem uploading the file.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Uploading images isn't supported for guest users.]]是שöEคู้是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[required]]是שöEคู้»</label>
+    <name>lightning_LightningControl_required</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[active]]是שöEคู้»</label>
+    <name>lightning_LightningControl_active</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Active]]是שöEคู้»</label>
+    <name>lightning_LightningControl_activeCapitalized</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[inactive]]是שöEคู้»</label>
+    <name>lightning_LightningControl_inactive</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Inactive]]是שöEคู้»</label>
+    <name>lightning_LightningControl_inactiveCapitalized</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Loading]]是שöEคู้»</label>
+    <name>lightning_LightningControl_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Clear]]是שöEคู้»</label>
+    <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Increase number]]是שöEคู้»</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Decrease number]]是שöEคู้»</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Warning]]是שöEคู้»</label>
+    <name>lightning_LightningPill_warning</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Remove]]是שöEคู้»</label>
+    <name>lightning_LightningPill_remove</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Error]]是שöEคู้»</label>
+    <name>lightning_LightningPill_error</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Press delete or backspace to remove]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningPill_delete</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Press delete or backspace to remove, press enter to navigate]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningPill_deleteAndNavigate</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Selected Options:]]是שöEคู้»</label>
+    <name>lightning_LightningPillContainer_label</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[+{0} more]]是שöEคู้»</label>
+    <name>lightning_LightningPillContainer_more</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Progress]]是שöEคู้»</label>
+    <name>lightning_LightningProgressBar_progress</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Click to dial]]是שöEคู้»</label>
+    <name>lightning_LightningClickToDial_enabled</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Click to dial disabled]]是שöEคู้»</label>
+    <name>lightning_LightningClickToDial_disabled</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Press Ctrl (Cmd on Mac) + Left Arrow or Ctrl (Cmd on Mac) + Right Arrow to move items between lists.]]是שöEคู้是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_componentAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Move selection to {0}]]是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_moveSelectionToAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Move selection up]]是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_upButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Move selection down]]是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_downButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[: item cannot be removed from {0}]]是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_optionLockAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[ [and a maximum of {0}]]]是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_maxHelp</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[ [and a minimum of {0}]]]是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_minHelp</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Select at most {0} options]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_maxError</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Select at least {0} options]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_minErrorPlural</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Select at least 1 option]]是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_minErrorSingular</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[An option must be selected]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_requiredError</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[At least {0} options must be selected]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_minRequiredErrorPlural</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[At least 1 option must be selected]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_minRequiredErrorSingular</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[{0} must be selected]]是שöEคู้»</label>
+    <name>lightning_LightningDualListbox_requiredOptionError</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Stage Complete]]是שöEคู้»</label>
+    <name>lightning_LightningProgressIndicator_stageComplete</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Current Stage]]是שöEคู้»</label>
+    <name>lightning_LightningProgressIndicator_currentStage</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Load More]]是שöEคู้»</label>
+    <name>lightning_LightningListView_loadMore</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Select All]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_selectAll</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Select Item]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_selectItem</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[column width]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_columnWidth</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Sort by:]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_sort</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Sorted Ascending]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_sortAsc</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Sorted Descending]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_sortDesc</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Sorted: None]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_sortNone</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Loading]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Show actions]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_showActions</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Wrap text]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_wrapText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Clip text]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_clipText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Edit]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_edit</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[has error]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_editHasError</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Choose a Row to Select]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_chooseARow</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Save]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_save</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Apply]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_apply</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Cancel]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_cancel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Fix the errors and try saving again]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDatatable_error</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Close dialog]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_closeButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[{0} has {1} errors]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_rowLevelErrorAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Update {0} selected items]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_updateSelectedItems</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Actions]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Navigation Mode]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Action Mode]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[New Items]]是שöEคู้»</label>
+    <name>lightning_LightningVerticalNavigation_newItems</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Show Less]]是שöEคู้»</label>
+    <name>lightning_LightningVerticalNavigation_showLess</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Show More]]是שöEคู้»</label>
+    <name>lightning_LightningVerticalNavigation_showMore</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Sub page]]是שöEคู้»</label>
+    <name>lightning_LightningVerticalNavigation_subPage</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[OK]]是שöEคู้»</label>
+    <name>lightning_LightningNoticeFooter_okButton</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Slider]]是שöEคู้»</label>
+    <name>lightning_LightningSlider_slider</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Select an Option]]是שöEคู้»</label>
+    <name>lightning_LightningCombobox_placeholder</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Clear Selection]]是שöEคู้»</label>
+    <name>lightning_LightningCombobox_pillCloseButtonAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[1 Option Selected]]是שöEคู้»</label>
+    <name>lightning_LightningCombobox_selectedLabelSingle</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[{0} Options Selected]]是שöEคู้»</label>
+    <name>lightning_LightningCombobox_selectedLabelMore</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Current Selection:]]是שöEคู้»</label>
+    <name>lightning_LightningCombobox_currentSelection</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Selected Options:]]是שöEคู้»</label>
+    <name>lightning_LightningCombobox_ariaSelectedOptions</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Loading]]是שöEคู้»</label>
+    <name>lightning_LightningCombobox_loadingText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Press delete or backspace to remove]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningCombobox_deselectOptionKeyboard</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Default]]是שöEคู้»</label>
+    <name>lightning_LightningColorPickerPanel_defaultTab</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Custom]]是שöEคู้»</label>
+    <name>lightning_LightningColorPickerPanel_customTab</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Use arrow keys to select a saturation and brightness, on an x and y axis.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_colorPickerInstructions</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Choose a color. Current color: ]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_a11yTriggerText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Select Hue]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_hueInput</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Hex]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_hexLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Red]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_redAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[R]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_rInput</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Green]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_greenAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[G]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_gInput</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Blue]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_blueAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[B]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_bInput</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Done]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_doneButton</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Cancel]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_cancelButton</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Enter a valid hexadecimal value.]]是שöEคู้»</label>
+    <name>lightning_LightningColorPicker_errorMessage</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Help]]是שöEคู้»</label>
+    <name>lightning_LightningHelptext_buttonAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Expand Tree Branch]]是שöEคู้»</label>
+    <name>lightning_LightningTree_expandBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Collapse Tree Branch]]是שöEคู้»</label>
+    <name>lightning_LightningTree_collapseBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Previous Month]]是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_previousMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Next Month]]是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_nextMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Pick a Year]]是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_yearSelector</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Today]]是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_today</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Date picker: ]]是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_ariaLabelMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Select a date]]是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_selectDate</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Date]]是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_dateLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Time]]是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_timeLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Your entry does not match the allowed format {0}.]]是שöEคู้是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_invalidDate</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Value must be {0} or earlier.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_rangeOverflow</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Value must be {0} or later.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningDateTimePicker_rangeUnderflow</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Show actions]]是שöEคู้»</label>
+    <name>lightning_LightningPrimitiveCellActions_showActions</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Loading actions]]是שöEคู้»</label>
+    <name>lightning_LightningPrimitiveCellActions_loadingActions</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Salutation]]是שöEคู้»</label>
+    <name>lightning_LightningInputName_salutation</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[First Name]]是שöEคู้»</label>
+    <name>lightning_LightningInputName_firstName</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Middle Name]]是שöEคู้»</label>
+    <name>lightning_LightningInputName_middleName</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Informal Name]]是שöEคู้»</label>
+    <name>lightning_LightningInputName_informalName</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Last Name]]是שöEคู้»</label>
+    <name>lightning_LightningInputName_lastName</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Suffix]]是שöEคู้»</label>
+    <name>lightning_LightningInputName_suffix</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[None]]是שöEคู้»</label>
+    <name>lightning_LightningInputName_none</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Expand {0}]]是שöEคู้»</label>
+    <name>lightning_LightningPrimitiveCellTree_expandBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Collapse {0}]]是שöEคู้»</label>
+    <name>lightning_LightningPrimitiveCellTree_collapseBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[API Name {0} is invalid, did you mean "{1}?"]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningRecordEditForm_apiNameMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Error in fetching record or record metadata.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningRecordEditForm_genericError</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Error in fetching record: invalid record id.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningRecordEditForm_invalidID</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Value provided for attribute {0} is not a valid Aura.Action.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningRecordEditForm_invalidActionAsHandler</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Save]]是שöEคู้»</label>
+    <name>lightning_LightningRecordForm_save</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Cancel]]是שöEคู้»</label>
+    <name>lightning_LightningRecordForm_cancel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Loading]]是שöEคู้»</label>
+    <name>lightning_LightningRecordForm_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Add]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_add</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[New {0}]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_createNewObject</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Current Selection]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_currentSelection</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Select an option or remove the search term.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Recent {0}]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Search]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_search</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Search {0}...]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Search...]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_searchPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[["{0}" in {1}]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_searchForInObject</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Choose an object]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[None]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_none</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Available]]是שöEคู้»</label>
+    <name>lightning_LightningPicklist_available</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Chosen]]是שöEคู้»</label>
+    <name>lightning_LightningPicklist_chosen</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[--None--]]是שöEคู้»</label>
+    <name>lightning_LightningPicklist_noneLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Markers]]是שöEคู้»</label>
+    <name>lightning_LightningMap_coordinatesTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Open in Google Maps]]是שöEคู้»</label>
+    <name>lightning_LightningMap_openInGoogleMaps</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Map Container]]是שöEคู้»</label>
+    <name>lightning_LightningMap_iframeTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[is currently selected]]是שöEคู้»</label>
+    <name>lightning_LightningPrimitiveCoordinate_selected</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Loading menu items...]]是שöEคู้»</label>
+    <name>lightning_LightningButtonMenu_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Show menu]]是שöEคู้»</label>
+    <name>lightning_LightningButtonMenu_showMenu</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[More]]是שöEคู้»</label>
+    <name>lightning_LightningTabs_overflowMore</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[More Tabs]]是שöEคู้»</label>
+    <name>lightning_LightningTabs_overflowMoreTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Tabs]]是שöEคู้»</label>
+    <name>lightning_LightningTabs_overflowMoreAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[This item has an error]]是שöEคู้»</label>
+    <name>lightning_LightningTabs_errorStateAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[in a few seconds]]是שöEคู้»</label>
+    <name>lightning_Duration_secondsLater</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[a few seconds ago]]是שöEคู้»</label>
+    <name>lightning_Duration_secondsAgo</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Close]]是שöEคู้»</label>
+    <name>lightning_LightningDialog_close</name>
+  </customLabels>
+</Translations>

@@ -1,0 +1,33 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<!-- !! NOTE: Do not commit changes to this file. It is intended as a starter shell only. -->
+<template>
+  <c-card title="Badge">
+    <div class="slds-card__body slds-card__body_inner">
+      <h3 class="slds-m-bottom_medium">Badges only have labels in the API. 4th badge is dynamic.</h3>
+      <c-badge label="Badge 1"></c-badge>
+      <c-badge label="Tests"></c-badge>
+      <c-badge label="Labels"></c-badge>
+      <c-badge label={badgeLabel}></c-badge>
+      <div class="slds-m-top_large">
+      <c-button variant="brand"
+                label="Set 4th Badge Label to null"
+                title="Set 4th Badge Label to null"
+                onclick={handleButtonOneClick}></c-button>
+      <c-button variant="brand"
+                label="Set 4th Badge Label to Hello"
+                title="Set 4th Badge Label to Hello"
+                onclick={handleButtonTwoClick}
+                class="slds-m-left_medium"></c-button>
+              </div>
+      <c-view-source source="badgeRecipes"
+                     slot="footer">
+                     Represents a label which holds a small amount of information, such as the number of unread notifications.
+      </c-view-source>
+    </div>
+  </c-card>
+</template>

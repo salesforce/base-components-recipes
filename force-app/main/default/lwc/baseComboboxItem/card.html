@@ -1,0 +1,40 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <span class="slds-media__figure">
+        <c-icon size={iconSize} alternative-text={item.iconAlternativeText} icon-name={item.iconName}></c-icon>
+    </span>
+    <span class="slds-media__body">
+        <span class="slds-listbox__option-text slds-listbox__option-text_entity">
+            <template if:false={textHasParts}>
+                <span class="slds-truncate" title={item.text}>{item.text}</span>
+            </template>
+            <template if:true={textHasParts}>
+                <c-base-combobox-formatted-text title={text} class="slds-truncate"
+                    text={item.text}></c-base-combobox-formatted-text>
+            </template>
+        </span>
+        <template if:true={hasSubText}>
+            <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">
+                <template if:false={subTextHasParts}>
+                    <span class="slds-truncate" title={item.subText}>{item.subText}</span>
+                </template>
+                <template if:true={subTextHasParts}>
+                    <c-base-combobox-formatted-text title={subText} class="slds-truncate"
+                        text={item.subText}></c-base-combobox-formatted-text>
+                </template>
+            </span>
+        </template>
+    </span>
+
+    <template if:true={item.rightIconName}>
+        <span class="slds-media__figure slds-media__figure_reverse">
+            <c-icon size={rightIconSize} alternative-text={item.rightIconAlternativeText} icon-name={item.rightIconName}></c-icon>
+        </span>
+    </template>
+</template>

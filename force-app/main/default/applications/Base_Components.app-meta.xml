@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>recipeslogo</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Bite-size recipes using open source Base Components</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Base Components</label>
+    <navType>Standard</navType>
+    <tabs>UI_Elements</tabs>
+    <tabs>Container_Components</tabs>
+    <tabs>Buttons</tabs>
+    <tabs>Input_Output</tabs>
+    <tabs>Record_Forms</tabs>
+    <tabs>Vertical</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Base_Components_UtilityBar</utilityBar>
+</CustomApplication>

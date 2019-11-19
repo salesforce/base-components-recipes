@@ -1,0 +1,32 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<template>
+    <c-card title="Formatted Text">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box">
+                <h3 class="header">Formatted Text</h3>
+                <p>
+                    <c-formatted-text value="Email salesforce.com and info.salesforce.com"></c-formatted-text>
+                </p>
+                <p>
+                    <c-formatted-text value="Email info@salesforce.com"></c-formatted-text>
+                </p>
+                <p>
+                    <c-formatted-text value="Email salesforce.com and info.salesforce.com"
+                                      linkify></c-formatted-text>
+                </p>
+                <p>
+                    <c-formatted-text value="Email info@salesforce.com"
+                                      linkify></c-formatted-text>
+                </p>
+            </div>
+            <c-view-source source="formattedTextRecipes" slot="footer">
+                Displays text, replaces newlines with line breaks, and linkifies if requested.
+            </c-view-source>
+        </div>
+    </c-card>
+</template>

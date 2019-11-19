@@ -1,0 +1,22 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<template>
+    <c-card title="Formatted Location">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box">
+                <h2 class="header">Formatted Location</h2>
+                <p>
+                    <c-formatted-location latitude="22"
+                                          longitude="122.2222"></c-formatted-location>
+                </p>
+            </div>
+            <c-view-source source="formattedLocationRecipes" slot="footer">
+                Displays a geolocation in decimal degrees using the format [latitude, longitude].
+            </c-view-source>
+        </div>
+    </c-card>
+</template>
