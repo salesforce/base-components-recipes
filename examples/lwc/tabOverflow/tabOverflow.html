@@ -8,17 +8,15 @@
     <c-card title="Tab Overflow">
         <div class="slds-card__body slds-card__body_inner">
             <c-tabset variant="scoped">
-                <template for:each={tabs}
-                          for:item="tab">
-                    <c-tab label={tab.label}
-                           key={tab.value}
-                           value={tab.value}>
+                <template for:each={tabs} for:item="tab">
+                    <c-tab label={tab.label} key={tab.value} value={tab.value}>
                         {tab.content}
                     </c-tab>
                 </template>
             </c-tabset>
             <c-view-source source="tabOverflow" slot="footer">
-                Represents a list of tabs with too many tabs for the alloted space.
+                Represents a list of tabs with too many tabs for the alloted
+                space.
             </c-view-source>
         </div>
     </c-card>

@@ -5,7 +5,7 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 import { LightningElement, wire, track } from 'lwc';
-import getRecord  from '@salesforce/apex/GetAccountId.GetAccountId';
+import getRecord from '@salesforce/apex/GetAccountId.GetAccountId';
 
 import NAME_FIELD from '@salesforce/schema/Account.Name';
 import REVENUE_FIELD from '@salesforce/schema/Account.AnnualRevenue';
@@ -17,13 +17,12 @@ export default class RecordFormEditExample extends LightningElement {
 
     @wire(getRecord)
     wiredProperty(value) {
-        if(value.data) {
+        if (value.data) {
             this.accountId = value.data.Id;
         } else if (value.error) {
-            console.log("OOOPS: ", value.error)
+            console.log('OOOPS: ', value.error);
         }
     }
-
 
     handleSubmit(event) {
         event.preventDefault(); // stop the form from submitting

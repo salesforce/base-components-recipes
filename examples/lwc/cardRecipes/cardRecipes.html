@@ -10,17 +10,17 @@
             <c-card title="This a recipes card">
                 Hello world!
                 <span slot="footer">
-            Footer content!
-        </span>
+                    Footer content!
+                </span>
             </c-card>
 
-            <c-card variant="Narrow"
-                    title="Hello"
-                    icon-name="standard:account">
-                <c-button-icon icon-name="utility:down"
-                               variant="border-filled"
-                               alternative-text="Show More"
-                               slot="actions"></c-button-icon>
+            <c-card variant="Narrow" title="Hello" icon-name="standard:account">
+                <c-button-icon
+                    icon-name="utility:down"
+                    variant="border-filled"
+                    alternative-text="Show More"
+                    slot="actions"
+                ></c-button-icon>
                 <p class="slds-p-horizontal_small">
                     Card Body Narrow (custom component)
                 </p>
@@ -29,8 +29,10 @@
 
             <c-card>
                 <h3 slot="title">
-                    <c-icon icon-name="utility:connected_apps"
-                            size="small"></c-icon>
+                    <c-icon
+                        icon-name="utility:connected_apps"
+                        size="small"
+                    ></c-icon>
                     Card Title
                 </h3>
                 <div slot="footer">
@@ -38,10 +40,13 @@
                     <c-badge label="Tag2"></c-badge>
                     <c-badge label="Tag3"></c-badge>
                 </div>
-                <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+                <p class="slds-p-horizontal_small">
+                    Card Body (custom component)
+                </p>
             </c-card>
             <c-view-source source="cardRecipes" slot="footer">
-                Cards apply a container around a related grouping of information.
+                Cards apply a container around a related grouping of
+                information.
             </c-view-source>
         </div>
     </c-card>

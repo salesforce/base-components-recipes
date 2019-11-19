@@ -6,7 +6,12 @@
  -->
 
 <template>
-    <nav class={computedClass} onprivateitemselect={handleItemSelect} onprivateitemregister={handleItemRegister} aria-label={ariaLabel}>
+    <nav
+        class={computedClass}
+        onprivateitemselect={handleItemSelect}
+        onprivateitemregister={handleItemRegister}
+        aria-label={ariaLabel}
+    >
         <slot></slot>
     </nav>
 </template>

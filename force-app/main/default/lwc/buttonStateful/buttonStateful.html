@@ -6,29 +6,42 @@
  -->
 
 <template>
-    <button class={computedButtonClass}
-            onfocus={handleButtonFocus}
-            onblur={handleButtonBlur}
-            onclick={handleButtonClick}
-            aria-live="assertive">
-
-            <span class="slds-text-not-selected">
-                <template if:true={iconNameWhenOff}>
-                    <c-primitive-icon icon-name={iconNameWhenOff} svg-class="slds-button__icon_stateful slds-button__icon_left" variant="bare"></c-primitive-icon>
-                </template>
-                {privateLabelWhenOff}
-            </span>
-            <span class="slds-text-selected">
-                <template if:true={iconNameWhenOn}>
-                    <c-primitive-icon icon-name={iconNameWhenOn} svg-class="slds-button__icon_stateful slds-button__icon_left" variant="bare"></c-primitive-icon>
-                </template>
-                {privateLabelWhenOn}
-            </span>
-            <span class="slds-text-selected-focus">
-                <template if:true={privateIconNameWhenHover}>
-                    <c-primitive-icon icon-name={privateIconNameWhenHover} svg-class="slds-button__icon_stateful slds-button__icon_left" variant="bare"></c-primitive-icon>
-                </template>
-                {privateLabelWhenHover}
-            </span>
+    <button
+        class={computedButtonClass}
+        onfocus={handleButtonFocus}
+        onblur={handleButtonBlur}
+        onclick={handleButtonClick}
+        aria-live="assertive"
+    >
+        <span class="slds-text-not-selected">
+            <template if:true={iconNameWhenOff}>
+                <c-primitive-icon
+                    icon-name={iconNameWhenOff}
+                    svg-class="slds-button__icon_stateful slds-button__icon_left"
+                    variant="bare"
+                ></c-primitive-icon>
+            </template>
+            {privateLabelWhenOff}
+        </span>
+        <span class="slds-text-selected">
+            <template if:true={iconNameWhenOn}>
+                <c-primitive-icon
+                    icon-name={iconNameWhenOn}
+                    svg-class="slds-button__icon_stateful slds-button__icon_left"
+                    variant="bare"
+                ></c-primitive-icon>
+            </template>
+            {privateLabelWhenOn}
+        </span>
+        <span class="slds-text-selected-focus">
+            <template if:true={privateIconNameWhenHover}>
+                <c-primitive-icon
+                    icon-name={privateIconNameWhenHover}
+                    svg-class="slds-button__icon_stateful slds-button__icon_left"
+                    variant="bare"
+                ></c-primitive-icon>
+            </template>
+            {privateLabelWhenHover}
+        </span>
     </button>
 </template>
