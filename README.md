@@ -106,10 +106,6 @@ sfdx force:source:push
 Your helloWorld component is now ready for action. You can add this component to your apps and pages via the Lightning App Builder.
 For more information, see the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/create-a-hello-world-lightning-web-component) Trailhead project.
 
-## Use Base Components in Your Own Project
-
-Use the `c` namespace components as building blocks for your own projects. See the [LWC Storybook POC](https://github.com/reiniergs/lwc-storybooks-poc) for an example.
-
 ## Documentation
 
 Base components in the `c` namespace map to components in the `lightning` namespace. We transpiled the base components into the `c` namespace so that you can use the components in your projects. Find the base components in the `c` namespace in [base-components-recipes/force-app/main/default/lwc/](https://github.com/salesforce/base-components-recipes/tree/master/force-app/main/default/lwc).
