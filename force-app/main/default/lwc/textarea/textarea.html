@@ -12,9 +12,14 @@
         </template>
         {label}
     </label>
-    <lightning-helptext if:true={fieldLevelHelp} content={fieldLevelHelp}></lightning-helptext>
+    <lightning-helptext
+        if:true={fieldLevelHelp}
+        content={fieldLevelHelp}
+    ></lightning-helptext>
     <div class="slds-form-element__control slds-grow textarea-container">
-        <textarea id="input" class="slds-textarea"
+        <textarea
+            id="input"
+            class="slds-textarea"
             aria-describedby={computedUniqueHelpElementId}
             oninput={handleInput}
             onchange={handleChange}
@@ -27,9 +32,19 @@
             minlength={minLength}
             placeholder={placeholder}
             required={required}
-            accesskey={accessKey}>{_defaultValue}</textarea>
+            accesskey={accessKey}
+        >
+{_defaultValue}</textarea
+        >
     </div>
     <template if:true={_helpMessage}>
-        <div id="help-message" data-help-message class="slds-form-element__help" aria-live="assertive">{_helpMessage}</div>
+        <div
+            id="help-message"
+            data-help-message
+            class="slds-form-element__help"
+            aria-live="assertive"
+        >
+            {_helpMessage}
+        </div>
     </template>
 </template>

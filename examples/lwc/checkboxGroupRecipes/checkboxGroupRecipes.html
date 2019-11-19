@@ -8,28 +8,35 @@
 <template>
     <c-card title="Checkbox Group">
         <div class="slds-card__body slds-card__body_inner">
-            <c-checkbox-group name="Checkbox Group"
-                              label="Checkbox Group"
-                              options={options}
-                              value={value}
-                              onchange={handleChange}>
+            <c-checkbox-group
+                name="Checkbox Group"
+                label="Checkbox Group"
+                options={options}
+                value={value}
+                onchange={handleChange}
+            >
             </c-checkbox-group>
             <p>Selected Values are: {selectedValues}</p>
 
-            <c-checkbox-group name="Checkbox Group"
-                              label="Checkbox Group"
-                              options={options}
-                              value={value}
-                              required>
+            <c-checkbox-group
+                name="Checkbox Group"
+                label="Checkbox Group"
+                options={options}
+                value={value}
+                required
+            >
             </c-checkbox-group>
-            <c-checkbox-group name="Checkbox Group"
-                              label="Checkbox Group"
-                              options={options}
-                              value={value}
-                              disabled>
+            <c-checkbox-group
+                name="Checkbox Group"
+                label="Checkbox Group"
+                options={options}
+                value={value}
+                disabled
+            >
             </c-checkbox-group>
             <c-view-source source="checkboxGroupRecipes" slot="footer">
-                A checkbox group enables selection of single or multiple options, defined in the JavaScript.
+                A checkbox group enables selection of single or multiple
+                options, defined in the JavaScript.
             </c-view-source>
         </div>
     </c-card>

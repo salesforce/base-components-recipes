@@ -12,10 +12,14 @@
         </template>
         {label}
     </label>
-    <lightning-helptext if:true={_fieldLevelHelp} content={_fieldLevelHelp}></lightning-helptext>
+    <lightning-helptext
+        if:true={_fieldLevelHelp}
+        content={_fieldLevelHelp}
+    ></lightning-helptext>
 
     <div class="slds-form-element__control">
-        <c-base-combobox name={name}
+        <c-base-combobox
+            name={name}
             disabled={disabled}
             placeholder={placeholder}
             items={_items}
@@ -28,10 +32,17 @@
             onfocus={handleFocus}
             onblur={handleBlur}
             onready={handleComboboxReady}
-            onselect={handleSelect}></c-base-combobox>
+            onselect={handleSelect}
+        ></c-base-combobox>
     </div>
     <template if:true={_helpMessage}>
-        <div id="help-text" data-help-text class="slds-form-element__help" aria-live="assertive">{_helpMessage}</div>
+        <div
+            id="help-text"
+            data-help-text
+            class="slds-form-element__help"
+            aria-live="assertive"
+        >
+            {_helpMessage}
+        </div>
     </template>
-
 </template>

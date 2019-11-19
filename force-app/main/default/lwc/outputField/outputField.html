@@ -8,83 +8,181 @@
 <template>
     <template if:true={showLabel}>
         <span class="slds-form-element__label">{fieldLabel}</span>
-        <lightning-helptext if:true={showInlineHelpText} content={inlineHelpText}></lightning-helptext>
+        <lightning-helptext
+            if:true={showInlineHelpText}
+            content={inlineHelpText}
+        ></lightning-helptext>
     </template>
 
     <div class="slds-form-element__control">
         <!-- Reference -->
-        <c-formatted-lookup if:true={isTypeReference} class={computedFieldClass} record-id={value} display-value={displayValue}></c-formatted-lookup>
+        <c-formatted-lookup
+            if:true={isTypeReference}
+            class={computedFieldClass}
+            record-id={value}
+            display-value={displayValue}
+        ></c-formatted-lookup>
 
         <!-- Boolean -->
-        <lightning-input if:true={isTypeBoolean} name={_fieldName} type="checkbox" class={computedFieldClass} disabled variant="label-hidden" checked={value} label={fieldLabel}></lightning-input>
+        <lightning-input
+            if:true={isTypeBoolean}
+            name={_fieldName}
+            type="checkbox"
+            class={computedFieldClass}
+            disabled
+            variant="label-hidden"
+            checked={value}
+            label={fieldLabel}
+        ></lightning-input>
 
         <!-- Currency -->
-        <c-formatted-text if:true={isTypeCurrency} class={computedFieldClass} value={displayValue}></c-formatted-text>
+        <c-formatted-text
+            if:true={isTypeCurrency}
+            class={computedFieldClass}
+            value={displayValue}
+        ></c-formatted-text>
 
         <!-- TODO: Move to DateTime component -->
         <!-- Date -->
-        <c-formatted-text if:true={isTypeDate} class={computedFieldClass} value={displayValue}></c-formatted-text>
+        <c-formatted-text
+            if:true={isTypeDate}
+            class={computedFieldClass}
+            value={displayValue}
+        ></c-formatted-text>
 
         <!-- DateTime -->
-        <c-formatted-text if:true={isTypeDateTime} class={computedFieldClass} value={displayValue}></c-formatted-text>
+        <c-formatted-text
+            if:true={isTypeDateTime}
+            class={computedFieldClass}
+            value={displayValue}
+        ></c-formatted-text>
 
         <!-- Email -->
-        <lightning-formatted-email if:true={isTypeEmail} class={computedFieldClass} value={value} hide-icon></lightning-formatted-email>
+        <lightning-formatted-email
+            if:true={isTypeEmail}
+            class={computedFieldClass}
+            value={value}
+            hide-icon
+        ></lightning-formatted-email>
 
         <!-- Location -->
-        <c-formatted-location if:true={isTypeLocation} class={computedFieldClass} latitude={latitude} longitude={longitude}></c-formatted-location>
+        <c-formatted-location
+            if:true={isTypeLocation}
+            class={computedFieldClass}
+            latitude={latitude}
+            longitude={longitude}
+        ></c-formatted-location>
 
         <!-- Int -->
-        <c-formatted-number if:true={isTypeInt} class={computedFieldClass} format-style="decimal" value={value}></c-formatted-number>
+        <c-formatted-number
+            if:true={isTypeInt}
+            class={computedFieldClass}
+            format-style="decimal"
+            value={value}
+        ></c-formatted-number>
 
         <!-- Double -->
-        <c-formatted-number if:true={isTypeDouble} class={computedFieldClass} format-style="decimal" value={value} minimum-fraction-digits={scale} maximum-fraction-digits={scale}></c-formatted-number>
+        <c-formatted-number
+            if:true={isTypeDouble}
+            class={computedFieldClass}
+            format-style="decimal"
+            value={value}
+            minimum-fraction-digits={scale}
+            maximum-fraction-digits={scale}
+        ></c-formatted-number>
 
         <!-- Percent -->
-        <c-formatted-number if:true={isTypePercent} class={fieldClass} format-style="percent-fixed" value={value} minimum-fraction-digits={scale} maximum-fraction-digits={scale}></c-formatted-number>
+        <c-formatted-number
+            if:true={isTypePercent}
+            class={fieldClass}
+            format-style="percent-fixed"
+            value={value}
+            minimum-fraction-digits={scale}
+            maximum-fraction-digits={scale}
+        ></c-formatted-number>
 
         <!-- Phone -->
         <!-- Verify formatting properties -->
-        <c-formatted-phone if:true={isTypePhone} class={computedFieldClass} value={value}></c-formatted-phone>
+        <c-formatted-phone
+            if:true={isTypePhone}
+            class={computedFieldClass}
+            value={value}
+        ></c-formatted-phone>
 
         <!-- Picklist -->
-        <c-formatted-text if:true={isTypePicklist} class={computedFieldClass} value={displayValue}></c-formatted-text>
+        <c-formatted-text
+            if:true={isTypePicklist}
+            class={computedFieldClass}
+            value={displayValue}
+        ></c-formatted-text>
 
         <!-- Multi-select Picklist -->
-        <c-formatted-text if:true={isTypeMultiPicklist} class={computedFieldClass} value={displayValue}></c-formatted-text>
+        <c-formatted-text
+            if:true={isTypeMultiPicklist}
+            class={computedFieldClass}
+            value={displayValue}
+        ></c-formatted-text>
 
         <!-- Auto Number, Text -->
-        <c-formatted-text if:true={isTypeString} class={computedFieldClass} value={value}></c-formatted-text>
+        <c-formatted-text
+            if:true={isTypeString}
+            class={computedFieldClass}
+            value={value}
+        ></c-formatted-text>
 
         <!-- Text Area, Text Area Long -->
-        <c-formatted-text if:true={isTypeTextArea} class={computedFieldClass} linkify="true" value={value}></c-formatted-text>
+        <c-formatted-text
+            if:true={isTypeTextArea}
+            class={computedFieldClass}
+            linkify="true"
+            value={value}
+        ></c-formatted-text>
 
         <!-- Rich Text Area -->
-        <lightning-formatted-rich-text if:true={isTypeRichText} class={computedFieldClass} value={value}></lightning-formatted-rich-text>
+        <lightning-formatted-rich-text
+            if:true={isTypeRichText}
+            class={computedFieldClass}
+            value={value}
+        ></lightning-formatted-rich-text>
 
         <!-- Encrypted String -->
-        <c-formatted-text if:true={isTypeEncryptedString} class={computedFieldClass} value={value}></c-formatted-text>
+        <c-formatted-text
+            if:true={isTypeEncryptedString}
+            class={computedFieldClass}
+            value={value}
+        ></c-formatted-text>
 
         <!-- URL -->
-        <c-formatted-url if:true={isTypeUrl} class={computedFieldClass} label={displayValue} value={value}></c-formatted-url>
+        <c-formatted-url
+            if:true={isTypeUrl}
+            class={computedFieldClass}
+            label={displayValue}
+            value={value}
+        ></c-formatted-url>
 
         <!-- Name -->
-        <c-formatted-name if:true={isTypeName} class={computedFieldClass}
+        <c-formatted-name
+            if:true={isTypeName}
+            class={computedFieldClass}
             salutation={value.Salutation}
             first-name={value.FirstName}
             last-name={value.LastName}
             middle-name={value.MiddleName}
             suffix={value.Suffix}
-            informal-name={value.InformalName}>
+            informal-name={value.InformalName}
+        >
         </c-formatted-name>
 
         <!-- Address -->
-        <lightning-formatted-address if:true={isTypeAddress} class={computedFieldClass}
+        <lightning-formatted-address
+            if:true={isTypeAddress}
+            class={computedFieldClass}
             street={value.Street}
             city={value.City}
             country={value.Country}
             province={value.State}
-            postal-code={value.PostalCode}>
+            postal-code={value.PostalCode}
+        >
         </lightning-formatted-address>
         <slot></slot>
     </div>

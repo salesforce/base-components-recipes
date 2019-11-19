@@ -9,8 +9,16 @@
     <div class="slds-tree_container">
         <h4 class="slds-tree__group-header" id="treeheading">{header}</h4>
 
-            <c-tree-item if:true={hasChildren} class="slds-tree" role="tree" aria-labelledby="treeheading"
-                                 is-root node-key={rootElement} child-items={children} focused-child={focusedChild} >
-            </c-tree-item>
+        <c-tree-item
+            if:true={hasChildren}
+            class="slds-tree"
+            role="tree"
+            aria-labelledby="treeheading"
+            is-root
+            node-key={rootElement}
+            child-items={children}
+            focused-child={focusedChild}
+        >
+        </c-tree-item>
     </div>
 </template>

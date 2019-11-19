@@ -7,7 +7,6 @@
 
 <template>
     <fieldset aria-required={required}>
-
         <legend class={computedLegendClass}>
             <template if:true={required}>
                 <abbr class="slds-required" title={i18n.required}>*</abbr>
@@ -18,7 +17,9 @@
         <div class="slds-form-element__control">
             <template for:each={transformedOptions} for:item="option">
                 <span class="slds-checkbox" key={option.value}>
-                    <input type="checkbox" name={name}
+                    <input
+                        type="checkbox"
+                        name={name}
                         id={option.id}
                         checked={option.isChecked}
                         value={option.value}
@@ -27,18 +28,21 @@
                         onchange={handleChange}
                         onfocus={handleFocus}
                         onblur={handleBlur}
-                        >
+                    />
                     <label class="slds-checkbox__label" for={option.id}>
                         <span class="slds-checkbox_faux"></span>
-                        <span class="slds-form-element__label">{option.label}</span>
+                        <span class="slds-form-element__label"
+                            >{option.label}</span
+                        >
                     </label>
                 </span>
             </template>
         </div>
 
         <template if:true={_helpMessage}>
-            <div id="helptext" data-helptext class="slds-form-element__help">{_helpMessage}</div>
+            <div id="helptext" data-helptext class="slds-form-element__help">
+                {_helpMessage}
+            </div>
         </template>
-
     </fieldset>
 </template>

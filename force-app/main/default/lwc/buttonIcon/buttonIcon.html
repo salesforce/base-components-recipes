@@ -6,27 +6,31 @@
  -->
 
 <template>
-    <button class={computedButtonClass}
-            disabled={disabled}
-            name={name}
-            title={computedTitle}
-            accesskey={computedAccessKey}
-            type={normalizedType}
-            value={value}
-            onfocus={handleFocus}
-            onblur={handleBlur}
-            aria-describedby={computedAriaDescribedBy}
-            aria-label={computedAriaLabel}
-            aria-controls={computedAriaControls}
-            aria-expanded={computedAriaExpanded}
-            aria-live={computedAriaLive}
-            aria-atomic={computedAriaAtomic}>
-
-        <c-primitive-icon icon-name={iconName} svg-class={computedIconClass} variant="bare"></c-primitive-icon>
+    <button
+        class={computedButtonClass}
+        disabled={disabled}
+        name={name}
+        title={computedTitle}
+        accesskey={computedAccessKey}
+        type={normalizedType}
+        value={value}
+        onfocus={handleFocus}
+        onblur={handleBlur}
+        aria-describedby={computedAriaDescribedBy}
+        aria-label={computedAriaLabel}
+        aria-controls={computedAriaControls}
+        aria-expanded={computedAriaExpanded}
+        aria-live={computedAriaLive}
+        aria-atomic={computedAriaAtomic}
+    >
+        <c-primitive-icon
+            icon-name={iconName}
+            svg-class={computedIconClass}
+            variant="bare"
+        ></c-primitive-icon>
 
         <template if:true={alternativeText}>
             <span class="slds-assistive-text">{alternativeText}</span>
         </template>
-
     </button>
 </template>
