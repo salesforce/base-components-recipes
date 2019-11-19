@@ -108,7 +108,7 @@ For more information, see the [Quick Start: Lightning Web Components](https://tr
 
 ## Use Base Components Outside of Salesforce Platform
 
- Base Components in the `c` namespace are intended for use on the Salesforce platform. However, we realize the desire to use them in non-Salesforce scenarios. Currently, many components will work, but others will not, due to dependencies on the Salesforce platform. Our goal is to provide Base Components for non-Salesforce use cases, and we’ve created the [LWC Storybook PoC](https://github.com/reiniergs/lwc-storybooks-poc) to show what this might look like in the future. Please star the repo for updates on this subject as we move forward.
+ Base Components in the `c` namespace are intended for use on the Salesforce platform. However, we realize the desire to use them in non-Salesforce scenarios. Currently, many components will work, but others will not, due to dependencies on the Salesforce platform. Our goal is to provide Base Components for non-Salesforce use cases, and we’ve created the [LWC Storybook PoC](https://github.com/reiniergs/lwc-storybooks-poc) to show what this might look like in the future. Please click the Watch button on the repo for updates as we move forward.
 
 ## Documentation
 
