@@ -67,7 +67,7 @@ Create a helloWorld Lightning web component that uses a base component, `c-butto
 <!--helloWorld.html-->
 
 <template>
-    <c-button label="{greeting}" title="greeting"> </c-button>
+    <c-button label={greeting} title="greeting"> </c-button>
 </template>
 ```
 
