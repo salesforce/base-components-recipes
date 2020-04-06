@@ -3,4 +3,9 @@
 **/lwc/**/*.json
 **/lwc/**/*.svg
 **/lwc/**/*.xml
+**/test/**/*.css
+**/test/**/*.html
+**/test/**/*.json
+**/test/**/*.svg
+**/test/**/*.xml
 .sfdx

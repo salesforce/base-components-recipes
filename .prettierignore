@@ -2,8 +2,11 @@
 # More information: https://prettier.io/docs/en/ignore.html
 #
 
+**/*-meta.xml
 **/staticresources/**
 .localdevserver
 .sfdx
 coverage/
+optional/translations/
 jsconfig.json
+README.md
