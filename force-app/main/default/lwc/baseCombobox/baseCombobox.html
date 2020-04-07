@@ -6,19 +6,27 @@
  -->
 
 <template>
-    <div class={computedDropdownTriggerClass}
+    <div
+        class={computedDropdownTriggerClass}
         role="combobox"
         aria-expanded={computedAriaExpanded}
         aria-haspopup="listbox"
-        onclick={handleTriggerClick}>
+        onclick={handleTriggerClick}
+    >
         <div class={computedFormElementClass} role="none">
             <template if:true={hasInputPill}>
-                <c-icon icon-name={inputPill.iconName} alternative-text={inputPill.iconAlternativeText} size="x-small" class="slds-icon_container slds-combobox__input-entity-icon"></c-icon>
+                <c-icon
+                    icon-name={inputPill.iconName}
+                    alternative-text={inputPill.iconAlternativeText}
+                    size="x-small"
+                    class="slds-icon_container slds-combobox__input-entity-icon"
+                ></c-icon>
             </template>
             <!--  'required' on the input may present hints from the browser when within a form that doesn't have novalidate set,
               specifically it may be problematic for cases when a selection has already been made say via pills and then the validation hint
               is no longer correct/relevant -->
-            <input id="input"
+            <input
+                id="input"
                 class={computedInputClass}
                 type="text"
                 role="textbox"
@@ -37,34 +45,59 @@
                 onchange={handleTextChange}
                 oninput={handleInput}
                 onkeydown={handleInputKeyDown}
-                onblur={handleBlur}>
+                onblur={handleBlur}
+            />
             <template if:true={hasInputPill}>
-                <div class="slds-input__icon-group slds-input__icon-group_right">
-                    <button onclick={handlePillRemove} type="button"
+                <div
+                    class="slds-input__icon-group slds-input__icon-group_right"
+                >
+                    <button
+                        onclick={handlePillRemove}
+                        type="button"
                         class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
-                        title={i18n.pillCloseButtonAlternativeText}>
-                        <c-primitive-icon icon-name="utility:close" variant="bare" svg-class="slds-button__icon"></c-primitive-icon>
-                        <span class="slds-assistive-text">{i18n.pillCloseButtonAlternativeText}</span>
+                        title={i18n.pillCloseButtonAlternativeText}
+                    >
+                        <c-primitive-icon
+                            icon-name="utility:close"
+                            variant="bare"
+                            svg-class="slds-button__icon"
+                        ></c-primitive-icon>
+                        <span class="slds-assistive-text"
+                            >{i18n.pillCloseButtonAlternativeText}</span
+                        >
                     </button>
                 </div>
             </template>
             <template if:false={hasInputPill}>
-                <div class="slds-input__icon-group slds-input__icon-group_right">
+                <div
+                    class="slds-input__icon-group slds-input__icon-group_right"
+                >
                     <template if:true={showInputActivityIndicator}>
-                        <div role="status" class="slds-spinner slds-spinner_brand slds-spinner_x-small slds-input__spinner">
-                            <span class="slds-assistive-text">{i18n.loadingText}</span>
+                        <div
+                            role="status"
+                            class="slds-spinner slds-spinner_brand slds-spinner_x-small slds-input__spinner"
+                        >
+                            <span class="slds-assistive-text"
+                                >{i18n.loadingText}</span
+                            >
                             <div class="slds-spinner__dot-a"></div>
                             <div class="slds-spinner__dot-b"></div>
                         </div>
                     </template>
                     <template if:true={inputIconName}>
-                        <c-icon alternative-text={inputIconAlternativeText} icon-name={inputIconName} size={inputIconSize} class="slds-input__icon slds-input__icon_right"></c-icon>
+                        <c-icon
+                            alternative-text={inputIconAlternativeText}
+                            icon-name={inputIconName}
+                            size={inputIconSize}
+                            class="slds-input__icon slds-input__icon_right"
+                        ></c-icon>
                     </template>
                 </div>
             </template>
         </div>
 
-        <div id="dropdown-element"
+        <div
+            id="dropdown-element"
             data-dropdown-element
             class={computedDropdownClass}
             role="listbox"
@@ -73,25 +106,64 @@
             onmouseup={handleDropdownMouseUp}
             onmouseleave={handleDropdownMouseLeave}
             onclick={handleOptionClick}
-            >
+        >
             <template if:true={_hasDropdownOpened}>
                 <template for:each={_items} for:item="item">
                     <template if:false={item.items}>
-                        <c-base-combobox-item role="option" item={item} id={item.id} data-item-id={item.id} key={item.value} data-value={item.value} onmouseenter={handleOptionMouseEnter} class="slds-media slds-listbox__option slds-media_center">
+                        <c-base-combobox-item
+                            role="option"
+                            item={item}
+                            id={item.id}
+                            data-item-id={item.id}
+                            key={item.value}
+                            data-value={item.value}
+                            onmouseenter={handleOptionMouseEnter}
+                            class="slds-media slds-listbox__option slds-media_center"
+                        >
                         </c-base-combobox-item>
                     </template>
                     <template if:true={item.items}>
-                        <ul role="group" aria-label={item.label} key={item.label}>
+                        <ul
+                            role="group"
+                            aria-label={item.label}
+                            key={item.label}
+                        >
                             <template if:true={item.label}>
-                                <li role="presentation" class="slds-listbox__item">
-                                    <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="presentation">
-                                        <h3 role="presentation" title={item.label}>{item.label}</h3>
+                                <li
+                                    role="presentation"
+                                    class="slds-listbox__item"
+                                >
+                                    <div
+                                        class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                        role="presentation"
+                                    >
+                                        <h3
+                                            role="presentation"
+                                            title={item.label}
+                                        >
+                                            {item.label}
+                                        </h3>
                                     </div>
                                 </li>
                             </template>
-                            <template for:each={item.items} for:item="groupItem">
-                                <li role="presentation" class="slds-listbox__item" key={groupItem.value}>
-                                    <c-base-combobox-item role="option" item={groupItem} id={groupItem.id} data-item-id={groupItem.id} data-value={groupItem.value} class="slds-media slds-listbox__option slds-media_center" onmouseenter={handleOptionMouseEnter}>
+                            <template
+                                for:each={item.items}
+                                for:item="groupItem"
+                            >
+                                <li
+                                    role="presentation"
+                                    class="slds-listbox__item"
+                                    key={groupItem.value}
+                                >
+                                    <c-base-combobox-item
+                                        role="option"
+                                        item={groupItem}
+                                        id={groupItem.id}
+                                        data-item-id={groupItem.id}
+                                        data-value={groupItem.value}
+                                        class="slds-media slds-listbox__option slds-media_center"
+                                        onmouseenter={handleOptionMouseEnter}
+                                    >
                                     </c-base-combobox-item>
                                 </li>
                             </template>
@@ -100,9 +172,16 @@
                 </template>
                 <template if:true={showDropdownActivityIndicator}>
                     <div role="presentation" class="slds-listbox__item">
-                        <div class="slds-align_absolute-center slds-p-top_medium">
-                            <div role="status" class="slds-spinner slds-spinner_x-small slds-spinner_inline">
-                                <span class="slds-assistive-text">{i18n.loadingText}</span>
+                        <div
+                            class="slds-align_absolute-center slds-p-top_medium"
+                        >
+                            <div
+                                role="status"
+                                class="slds-spinner slds-spinner_x-small slds-spinner_inline"
+                            >
+                                <span class="slds-assistive-text"
+                                    >{i18n.loadingText}</span
+                                >
                                 <div class="slds-spinner__dot-a"></div>
                                 <div class="slds-spinner__dot-b"></div>
                             </div>
@@ -111,11 +190,15 @@
                 </template>
                 <template if:true={showAttribution}>
                     <div class="slds-align_absolute-center">
-                        <img src={attributionLogoUrl} class="slds-inline-logo" alt={attributionLogoAssistiveText} title={attributionLogoAssistiveText}/>
+                        <img
+                            src={attributionLogoUrl}
+                            class="slds-inline-logo"
+                            alt={attributionLogoAssistiveText}
+                            title={attributionLogoAssistiveText}
+                        />
                     </div>
                 </template>
             </template>
         </div>
     </div>
-
 </template>

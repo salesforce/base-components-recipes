@@ -14,7 +14,13 @@
         </template>
     </template>
     <template if:true={_hasError}>
-        <c-primitive-icon class="slds-icon_container slds-pill__icon_container" title={i18n.pillError} icon-name="utility:error" variant="bare" svg-class="slds-icon slds-icon-text-error">
+        <c-primitive-icon
+            class="slds-icon_container slds-pill__icon_container"
+            title={i18n.pillError}
+            icon-name="utility:error"
+            variant="bare"
+            svg-class="slds-icon slds-icon-text-error"
+        >
         </c-primitive-icon>
         <span class="slds-assistive-text">{i18n.pillWarning}</span>
     </template>
@@ -28,6 +34,14 @@
             <span class="slds-pill__label">{label}</span>
         </span>
     </template>
-    <c-button-icon icon-name="utility:close" class="slds-pill__remove" variant="bare" onclick={handleRemove} title={i18n.pillRemove} tabindex={_tabIndex} alternative-text={i18n.pillRemove}>
+    <c-button-icon
+        icon-name="utility:close"
+        class="slds-pill__remove"
+        variant="bare"
+        onclick={handleRemove}
+        title={i18n.pillRemove}
+        tabindex={_tabIndex}
+        alternative-text={i18n.pillRemove}
+    >
     </c-button-icon>
 </template>

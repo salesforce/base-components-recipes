@@ -6,9 +6,19 @@
  -->
 
 <template>
-    <c-carousel disable-auto-refresh={disableAutoRefresh} disable-auto-scroll={disableAutoScroll}>
-        <template for:each={items} for:item="item">
-            <c-carousel-image key={item.src} alternative-text={item.alternativeText} description={item.description} header={item.header} href={item.href} src={item.src}></c-carousel-image>
+    <c-carousel
+        disable-auto-refresh="{disableAutoRefresh}"
+        disable-auto-scroll="{disableAutoScroll}"
+    >
+        <template for:each="{items}" for:item="item">
+            <c-carousel-image
+                key="{item.src}"
+                alternative-text="{item.alternativeText}"
+                description="{item.description}"
+                header="{item.header}"
+                href="{item.href}"
+                src="{item.src}"
+            ></c-carousel-image>
         </template>
     </c-carousel>
 </template>

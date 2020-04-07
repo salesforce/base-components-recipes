@@ -77,7 +77,10 @@ describe('overflow-library', () => {
         expect(result.overflowItems).toEqual([items[1], items[2]]);
     });
     it('returns all items as visible if container width is zero', () => {
-        const items = [{ value: '1', width: 50 }, { value: '2', width: 70 }];
+        const items = [
+            { value: '1', width: 50 },
+            { value: '2', width: 70 }
+        ];
 
         const result = calculateOverflow({
             items,

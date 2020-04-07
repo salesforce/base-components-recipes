@@ -12,12 +12,18 @@
 
     <template if:true={iconName}>
         <span class={computedClass}>
-            <span class="slds-icon_container slds-current-color" title={iconAlternativeText}>
-                <c-primitive-icon icon-name={iconName} size="xx-small"></c-primitive-icon>
+            <span
+                class="slds-icon_container slds-current-color"
+                title={iconAlternativeText}
+            >
+                <c-primitive-icon
+                    icon-name={iconName}
+                    size="xx-small"
+                ></c-primitive-icon>
             </span>
         </span>
     </template>
- 
+
     <template if:true={isIconBeforeLabel}>
         {label}
     </template>

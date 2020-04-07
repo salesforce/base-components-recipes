@@ -6,12 +6,17 @@
  -->
 
 <template>
-    <a href={href}
+    <a
+        href={href}
         class="slds-nav-vertical__action"
         onclick={handleClick}
-        aria-current={ariaCurrent}>
-
-        <c-icon icon-name={iconName} size="x-small" class="slds-m-right_x-small slds-line-height_reset">
+        aria-current={ariaCurrent}
+    >
+        <c-icon
+            icon-name={iconName}
+            size="x-small"
+            class="slds-m-right_x-small slds-line-height_reset"
+        >
         </c-icon>
 
         {label}

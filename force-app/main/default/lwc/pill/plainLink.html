@@ -6,12 +6,24 @@
  -->
 
 <template>
-    <a href={href} onclick={handleClick} tabindex={_tabIndex} aria-selected={_ariaSelected} role={_role}>
+    <a
+        href={href}
+        onclick={handleClick}
+        tabindex={_tabIndex}
+        aria-selected={_ariaSelected}
+        role={_role}
+    >
         <template if:true={_hasMedia}>
             <slot></slot>
         </template>
         <span class="slds-pill__label">{label}</span>
-        <c-primitive-icon class="slds-icon_container slds-pill__remove" title={i18n.pillRemove} icon-name="utility:close" svg-class="slds-icon slds-icon_x-small slds-icon-text-default" variant="bare">
+        <c-primitive-icon
+            class="slds-icon_container slds-pill__remove"
+            title={i18n.pillRemove}
+            icon-name="utility:close"
+            svg-class="slds-icon slds-icon_x-small slds-icon-text-default"
+            variant="bare"
+        >
         </c-primitive-icon>
         <span class="slds-assistive-text">{assistiveText}</span>
     </a>
