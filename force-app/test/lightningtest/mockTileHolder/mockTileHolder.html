@@ -6,12 +6,12 @@
  -->
 
 <template>
-    <template if:true="{isMedia}">
+    <template if:true={isMedia}>
         <c-tile
-            type="{tileType}"
+            type={tileType}
             label="Salesforce UX"
             href="http://google.com"
-            onactiontriggered="{handleAction}"
+            onactiontriggered={handleAction}
         >
             <span slot="media">
                 <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
@@ -26,12 +26,12 @@
             <div id="slot_content">{contentSlotText}</div>
         </c-tile>
     </template>
-    <template if:true="{isStandard}">
+    <template if:true={isStandard}>
         <c-tile
-            type="{tileType}"
+            type={tileType}
             label="Salesforce UX"
             href="http://google.com"
-            onactiontriggered="{handleAction}"
+            onactiontriggered={handleAction}
         >
             <p class="slds-truncate" title="7 Members">The Slot Content</p>
         </c-tile>

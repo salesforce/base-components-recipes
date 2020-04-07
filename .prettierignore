@@ -7,6 +7,8 @@
 .localdevserver
 .sfdx
 coverage/
+force-app/test/@salesforce/label/
+force-app/test/lightning/iconSvgTemplates/buildTemplates/
 optional/translations/
 jsconfig.json
 README.md

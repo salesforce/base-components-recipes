@@ -6,12 +6,12 @@
  -->
 
 <template>
-    <template if:false="{isAccordionHidden}">
+    <template if:false={isAccordionHidden}>
         <c-accordion
             title="accordion title"
-            active-section-name="{activeSection}"
-            allow-multiple-sections-open="{allowMultipleSectionsOpen}"
-            onsectiontoggle="{sectiontoggleHandler}"
+            active-section-name={activeSection}
+            allow-multiple-sections-open={allowMultipleSectionsOpen}
+            onsectiontoggle={sectiontoggleHandler}
         >
             <c-accordion-section
                 class="section-a"
@@ -37,7 +37,7 @@
                 <p>This is the content area for section A.</p>
             </c-accordion-section>
 
-            <template if:true="{isBVisible}">
+            <template if:true={isBVisible}>
                 <c-accordion-section
                     class="section-b"
                     title="section B"

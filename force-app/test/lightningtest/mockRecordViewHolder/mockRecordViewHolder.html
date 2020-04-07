@@ -8,24 +8,24 @@
 <template>
     {_recordId}
     <c-record-view-form
-        record-id="{_recordId}"
-        object-api-name="{_apiName}"
-        onload="{handleLoad}"
-        density="{density}"
+        record-id={_recordId}
+        object-api-name={_apiName}
+        onload={handleLoad}
+        density={density}
     >
         <c-output-field field-name="Name"></c-output-field>
         <c-output-field
-            if:true="{showIncludedField}"
+            if:true={showIncludedField}
             class="includedField"
             field-name="Has_Website__c"
         ></c-output-field>
         <c-output-field
-            if:true="{showExcludedField}"
+            if:true={showExcludedField}
             class="excludedField"
             field-name="Additional_Field__c"
         ></c-output-field>
         <div class="nestedChild">
-            <template if:true="{_showNestedChild}">
+            <template if:true={_showNestedChild}>
                 <c-output-field
                     field-name="CreatedDate"
                     class="createdDate"

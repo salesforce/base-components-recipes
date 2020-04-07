@@ -4,6 +4,6 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 
 export default class TextAreaRecipes extends LightningElement {}

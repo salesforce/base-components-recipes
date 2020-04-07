@@ -8,27 +8,27 @@
 <template>
     {_recordId}
     <c-record-edit-form
-        record-id="{_recordId}"
-        object-api-name="{_objectApiName}"
-        record-type-id="{_recordTypeId}"
-        density="{density}"
-        onload="{handleLoad}"
+        record-id={_recordId}
+        object-api-name={_objectApiName}
+        record-type-id={_recordTypeId}
+        density={density}
+        onload={handleLoad}
     >
         <c-messages></c-messages>
         <lightning-input-field field-name="Name"></lightning-input-field>
         <c-output-field field-name="Name"></c-output-field>
         <lightning-input-field
-            if:true="{_showChild}"
+            if:true={_showChild}
             class="newChild"
             field-name="Has_Website__c"
         ></lightning-input-field>
         <lightning-input-field
-            if:true="{_showPicklist}"
+            if:true={_showPicklist}
             class="picklist"
             field-name="Weakness__c"
         ></lightning-input-field>
         <lightning-input-field
-            if:true="{_showPicklist}"
+            if:true={_showPicklist}
             class="picklist"
             field-name="Country__c"
         ></lightning-input-field>
@@ -36,7 +36,7 @@
             field-name="Description__c"
         ></lightning-input-field>
         <div class="nestedChild">
-            <template if:true="{_showNestedChild}">
+            <template if:true={_showNestedChild}>
                 <lightning-input-field
                     field-name="Description__c"
                     class="description"

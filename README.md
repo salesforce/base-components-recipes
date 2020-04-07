@@ -67,7 +67,7 @@ Create a helloWorld Lightning web component that uses a base component, `c-butto
 <!--helloWorld.html-->
 
 <template>
-    <c-button label="{greeting}" title="greeting"> </c-button>
+    <c-button label={greeting} title="greeting"> </c-button>
 </template>
 ```
 
@@ -204,7 +204,7 @@ Use your labels in a Lightning web component.
 <!-- myComponent.html -->
 
 <template>
-    <c-card title="{label.cardTitleLabel}">
+    <c-card title={label.cardTitleLabel}>
         {label.loadingLabel}
     </c-card>
 </template>

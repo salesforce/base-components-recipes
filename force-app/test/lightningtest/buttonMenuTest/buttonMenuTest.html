@@ -9,7 +9,7 @@
     <c-button-menu
         id="btn-menu1"
         alternative-text="Show actions"
-        onselect="{handleSelect}"
+        onselect={handleSelect}
         accesskey="M"
         title="Select from options"
     >
@@ -20,7 +20,7 @@
             label="menu1-label"
             icon-name="utility:table"
             accesskey="1"
-            checked="{unChecked}"
+            checked={unChecked}
         ></c-menu-item>
         <c-menu-item
             id="menu2-id"
@@ -36,8 +36,8 @@
             value="menu3-value"
             label="menu3-label"
             accesskey="3"
-            onfocus="{handleFocus}"
-            checked="{notChecked}"
+            onfocus={handleFocus}
+            checked={notChecked}
         ></c-menu-item>
     </c-button-menu>
 </template>
