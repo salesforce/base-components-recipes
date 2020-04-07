@@ -12,7 +12,6 @@ at the SLDS level or at the browser level.
 
  Also prevents IE11 from gacking during some interactions
 */
-_:-ms-lang(x),
-svg {
+_:-ms-lang(x), svg {
     pointer-events: none;
 }

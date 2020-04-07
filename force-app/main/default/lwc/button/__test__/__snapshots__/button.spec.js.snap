@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-button aria-attributes should be present and true 1`] = `
+<c-button>
+  #shadow-root(open)
+    <button
+      aria-atomic="true"
+      aria-expanded="true"
+      class="slds-button slds-button_neutral"
+      title="Click here"
+      type="button"
+    >
+      Test
+    </button>
+</c-button>
+`;
+
+exports[`c-button should set aria-controls attribute on the button 1`] = `
+<c-button>
+  #shadow-root(open)
+    <button
+      aria-controls="[shadow:guid]"
+      class="slds-button slds-button_neutral"
+      type="button"
+    />
+</c-button>
+`;
+
+exports[`c-button should set aria-describedby attribute on the button 1`] = `
+<c-button>
+  #shadow-root(open)
+    <button
+      aria-describedby="[shadow:guid]"
+      class="slds-button slds-button_neutral"
+      type="button"
+    />
+</c-button>
+`;
+
+exports[`c-button should set not set any aria-attributes 1`] = `
+<c-button
+  tabindex="-1"
+>
+  #shadow-root(open)
+    <button
+      class="slds-button slds-button_neutral"
+      title="Click here"
+      type="button"
+    >
+      Test
+    </button>
+</c-button>
+`;

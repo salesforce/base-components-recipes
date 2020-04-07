@@ -49,7 +49,7 @@
     <name>lightning_LightningInputFile_buttonLabel</name>
   </customLabels>
   <customLabels>
-    <label>Oder Dateien ablegen</label>
+    <label>oder Dateien ablegen</label>
     <name>lightning_LightningInputFile_bodyText</name>
   </customLabels>
   <customLabels>
@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>Das Hochladen von Bildern wird für Gastbenutzer nicht unterstützt.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>erforderlich</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>Löschen</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Anzahl erhöhen</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Anzahl verringern</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>Warnung</label>
@@ -427,6 +439,14 @@
   <customLabels>
     <label>Aktionen</label>
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Navigationsmodus</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Aktionsmodus</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
     <label>Neue Elemente</label>
@@ -725,7 +745,7 @@
     <name>lightning_LightningPicklist_chosen</name>
   </customLabels>
   <customLabels>
-    <label>--Ohne--</label>
+    <label>--Keine Angabe--</label>
     <name>lightning_LightningPicklist_noneLabel</name>
   </customLabels>
   <customLabels>
@@ -779,5 +799,9 @@
   <customLabels>
     <label>Schließen</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>Lightning-Nachrichtenservice – Ihre Komponente muss gerendert werden, bevor Sie im Kanal veröffentlichen können: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
   </customLabels>
 </Translations>

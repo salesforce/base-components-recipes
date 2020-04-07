@@ -12,7 +12,9 @@ import {
     normalizeBoolean,
     synchronizeAttrs,
     getRealDOMId,
-    classListMutation
+    classListMutation,
+    decorateInputForDragon,
+    setDecoratedDragonInputValueWithoutEvent
 } from 'c/utilsPrivate';
 import {
     InteractingState,
@@ -83,7 +85,7 @@ export default class cTextarea extends LightningElement {
     renderedCallback() {
         if (!this._rendered) {
             this._rendered = true;
-            this.inputElement.value = this._defaultValue;
+            this._setInputValue(this._defaultValue);
             this.synchronizeA11y();
 
             const scrollTarget = this.template.querySelector(
@@ -125,7 +127,7 @@ export default class cTextarea extends LightningElement {
         if (this._value !== value) {
             this._value = value || '';
             if (this._connected) {
-                this.inputElement.value = this._value;
+                this._setInputValue(this._value);
             } else {
                 this._defaultValue = this._value;
             }
@@ -270,12 +272,21 @@ export default class cTextarea extends LightningElement {
     }
 
     get inputElement() {
-        return this.template.querySelector('textarea');
+        if (this._inputElement) {
+            return this._inputElement;
+        }
+        this._inputElement = this.template.querySelector('textarea');
+        decorateInputForDragon(this._inputElement);
+        return this._inputElement;
     }
 
     get computedUniqueHelpElementId() {
         const helpMessage = this.template.querySelector('[data-help-message]');
         return getRealDOMId(helpMessage);
+    }
+
+    _setInputValue(value) {
+        setDecoratedDragonInputValueWithoutEvent(this.inputElement, value);
     }
 
     _updateProxyInputAttributes(attributes) {

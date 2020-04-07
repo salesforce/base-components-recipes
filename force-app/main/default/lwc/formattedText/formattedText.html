@@ -8,9 +8,7 @@
 <template>
     <template for:each={formattedParts} for:item="part">
         <template if:true={part.isLink}>
-            <a key={part.key} target="_blank" href={part.href} rel="noopener"
-                >{part.value}</a
-            >
+            <a key={part.key} target='_blank' href={part.href} rel="noopener">{part.value}</a>
         </template>
         <template if:true={part.isText}>
             {part.value}

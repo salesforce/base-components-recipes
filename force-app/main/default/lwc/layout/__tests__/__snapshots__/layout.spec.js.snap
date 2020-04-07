@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-layout-item align 1`] = `
+<c-layout
+  class="slds-grid slds-grid_align-center slds-grid_vertical-align-end"
+>
+  #shadow-root(open)
+    <slot
+      class="slds-slot"
+    />
+</c-layout>
+`;
+
+exports[`c-layout-item default 1`] = `
+<c-layout
+  class="slds-grid"
+>
+  #shadow-root(open)
+    <slot
+      class="slds-slot"
+    />
+</c-layout>
+`;
+
+exports[`c-layout-item multiRows 1`] = `
+<c-layout
+  class="slds-grid slds-grid_align-center slds-grid_vertical-align-end"
+>
+  #shadow-root(open)
+    <slot
+      class="slds-slot"
+    />
+</c-layout>
+`;
+
+exports[`c-layout-item pullToBoundary 1`] = `
+<c-layout
+  class="slds-grid slds-grid_align-center slds-grid_vertical-align-end slds-grid_pull-padded"
+>
+  #shadow-root(open)
+    <slot
+      class="slds-slot"
+    />
+</c-layout>
+`;

@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>«คู้Eöש是[[Row Number]]是שöEคู้»</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>«คู้Eöש是[[New Items]]是שöEคู้»</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -697,6 +701,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>«คู้Eöש是[[Show All Results for "{0}"]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>«คู้Eöש是[[New {0}]]是שöEคู้»</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -705,12 +713,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>«คู้Eöש是[[No results for "{0}"]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[No results yet...]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Try entering a search term.]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>«คู้Eöש是[[Select an option or remove the search term.]]是שöEคู้是שöEคู้»</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>«คู้Eöש是[[Relate {0} To]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>«คู้Eöש是[[Recent {0}]]是שöEคู้»</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[All Results for "{0}"]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>«คู้Eöש是[[Search]]是שöEคู้»</label>
@@ -719,6 +747,10 @@
   <customLabels>
     <label>«คู้Eöש是[[Search {0}...]]是שöEคู้»</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Search {0}]]是שöEคู้»</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>«คู้Eöש是[[Search...]]是שöEคู้»</label>
@@ -731,6 +763,10 @@
   <customLabels>
     <label>«คู้Eöש是[[Choose an object]]是שöEคู้»</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Initial Results for "{0}"]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>«คู้Eöש是[[None]]是שöEคู้»</label>
@@ -799,5 +835,13 @@
   <customLabels>
     <label>«คู้Eöש是[[Close]]是שöEคู้»</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Lightning Message Service - Your component must be rendered before you can publish to channel: {0}]]是שöEคู้是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>«คู้Eöש是[[Lightning Message Service - Cannot subscribe to channel {0} with invalid scope: {1}]]是שöEคู้是שöEคู้»</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

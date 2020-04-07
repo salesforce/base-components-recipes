@@ -5,7 +5,7 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
-import { LightningElement, api, track } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 const DEFAULT_HREF = 'javascript:void(0);'; // eslint-disable-line no-script-url
 
@@ -18,7 +18,7 @@ export default class cVerticalNavigationItemIcon extends LightningElement {
 
     @api href = DEFAULT_HREF;
 
-    @track _state = false;
+    _selected = false;
 
     connectedCallback() {
         this.setAttribute('role', 'listitem');
@@ -50,7 +50,7 @@ export default class cVerticalNavigationItemIcon extends LightningElement {
     }
 
     get ariaCurrent() {
-        return this._selected ? 'page' : false;
+        return this._selected ? 'page' : null;
     }
 
     handleClick(event) {

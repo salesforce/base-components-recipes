@@ -6,8 +6,8 @@
  -->
 
 <template>
-    <a
-        href={computedHref}
+    <a href={computedHref}
+        target={_target}
         role={computedRole}
         tabindex={computedTabIndex}
         accesskey={computedAccessKey}
@@ -17,35 +17,20 @@
         onclick={handleClick}
         onfocus={handleFocus}
         onkeydown={handleKeyDown}
-        onblur={handleBlur}
-    >
+        onblur={handleBlur}>
+
         <span class="slds-truncate">
             <template if:true={isMenuItemCheckbox}>
-                <c-primitive-icon
-                    icon-name="utility:check"
-                    size="x-small"
-                    svg-class={computedCheckedIconClass}
-                    variant="bare"
-                >
+                <c-primitive-icon icon-name="utility:check" size="x-small" svg-class={computedCheckedIconClass} variant="bare">
                 </c-primitive-icon>
             </template>
 
             <!-- draft marker -->
-            <abbr
-                if:true={isDraft}
-                class="slds-indicator_unsaved"
-                title={draftAlternativeText}
-                >*</abbr
-            >
+            <abbr if:true={isDraft} class="slds-indicator_unsaved" title={draftAlternativeText}>*</abbr>
 
             <!-- Prefix icon -->
             <template if:true={prefixIconName}>
-                <c-primitive-icon
-                    icon-name={prefixIconName}
-                    size="x-small"
-                    svg-class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
-                    variant="bare"
-                >
+                <c-primitive-icon icon-name={prefixIconName} size="x-small" svg-class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small" variant="bare">
                 </c-primitive-icon>
             </template>
 
@@ -54,12 +39,7 @@
 
         <!-- Suffix icon -->
         <template if:true={iconName}>
-            <c-primitive-icon
-                icon-name={iconName}
-                size="x-small"
-                svg-class="slds-icon-text-default slds-m-left_small slds-shrink-none"
-                variant="bare"
-            >
+            <c-primitive-icon icon-name={iconName} size="x-small" svg-class="slds-icon-text-default slds-m-left_small slds-shrink-none" variant="bare">
             </c-primitive-icon>
         </template>
     </a>

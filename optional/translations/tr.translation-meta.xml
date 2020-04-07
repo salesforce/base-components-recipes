@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>Konuk kullanıcılar için resim yükleme desteklenmiyor.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>gerekli</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>Temizle</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Sayıyı arttır</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Sayıyı azalt</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>Uyarı</label>
@@ -427,6 +439,14 @@
   <customLabels>
     <label>Eylemler</label>
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Gezinme Modu</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Eylem Modu</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
     <label>Yeni Öğeler</label>
@@ -697,7 +717,7 @@
     <name>lightning_LightningLookup_search</name>
   </customLabels>
   <customLabels>
-    <label>{0} Ara ...</label>
+    <label>{0} Ara...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
   </customLabels>
   <customLabels>
@@ -779,5 +799,9 @@
   <customLabels>
     <label>Kapat</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>Lightning Mesaj Hizmeti - Kanala yayınlayabilmeniz için bileşeninizin oluşturulması gerekir: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
   </customLabels>
 </Translations>

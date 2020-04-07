@@ -230,4 +230,9 @@ export default class cTabset extends LightningElement {
     get computedClass() {
         return tabClassPrefixByVariant[this.variant];
     }
+
+    @api
+    focus() {
+        this.template.querySelector('c-tab-bar').focus();
+    }
 }

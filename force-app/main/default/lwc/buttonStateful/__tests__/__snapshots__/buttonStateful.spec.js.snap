@@ -1,0 +1,521 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-button-stateful Variant should add correct classes on brand variant 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-button_brand slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="add"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+        </c-primitive-icon>
+        Follow
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="check"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+        </c-primitive-icon>
+        Following
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="close"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+        </c-primitive-icon>
+        Unfollow
+      </span>
+    </button>
+</c-button-stateful>
+`;
+
+exports[`c-button-stateful Variant should add correct classes on inverse variant 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-button_inverse slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="add"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+        </c-primitive-icon>
+        Follow
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="check"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+        </c-primitive-icon>
+        Following
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="close"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+        </c-primitive-icon>
+        Unfollow
+      </span>
+    </button>
+</c-button-stateful>
+`;
+
+exports[`c-button-stateful Variant should add correct classes on neutral variant 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="add"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+        </c-primitive-icon>
+        Follow
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="check"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+        </c-primitive-icon>
+        Following
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="close"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+        </c-primitive-icon>
+        Unfollow
+      </span>
+    </button>
+</c-button-stateful>
+`;
+
+exports[`c-button-stateful Variant should add correct classes on text variant 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="add"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+        </c-primitive-icon>
+        Follow
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="check"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+        </c-primitive-icon>
+        Following
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="close"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+        </c-primitive-icon>
+        Unfollow
+      </span>
+    </button>
+</c-button-stateful>
+`;
+
+exports[`c-button-stateful Variant should add default classes on invalid variant 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="add"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+        </c-primitive-icon>
+        Follow
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="check"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+        </c-primitive-icon>
+        Following
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="close"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+        </c-primitive-icon>
+        Unfollow
+      </span>
+    </button>
+</c-button-stateful>
+`;
+
+exports[`c-button-stateful default 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        Follow
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        Following
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        Unfollow
+      </span>
+    </button>
+</c-button-stateful>
+`;
+
+exports[`c-button-stateful testIconNames Expected icons should render for each state 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="add"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"
+              />
+            </svg>
+        </c-primitive-icon>
+        Follow
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="check"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+        </c-primitive-icon>
+        Following
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="close"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+              />
+            </svg>
+        </c-primitive-icon>
+        Unfollow
+      </span>
+    </button>
+</c-button-stateful>
+`;
+
+exports[`c-button-stateful testIconNames Invalid or empty icon names should render empty icon elements 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key=""
+              focusable="false"
+            >
+              <use
+                xlink:href=""
+              />
+            </svg>
+        </c-primitive-icon>
+        Follow
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        Following
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-button__icon_stateful slds-button__icon_left"
+              data-key="pickle"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#pickle"
+              />
+            </svg>
+        </c-primitive-icon>
+        Unfollow
+      </span>
+    </button>
+</c-button-stateful>
+`;
+
+exports[`c-button-stateful testLabels \`labelWhenOn\` value should be used when \`labelWhenHover\` is missing or invalid 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        Seek
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        Seeking
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        Seeking
+      </span>
+    </button>
+</c-button-stateful>
+`;
+
+exports[`c-button-stateful testLabels Expected labels should render for each state 1`] = `
+<c-button-stateful>
+  #shadow-root(open)
+    <button
+      aria-live="assertive"
+      class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
+    >
+      <span
+        class="slds-text-not-selected"
+      >
+        Seek
+      </span>
+      <span
+        class="slds-text-selected"
+      >
+        Seeking
+      </span>
+      <span
+        class="slds-text-selected-focus"
+      >
+        Ignore
+      </span>
+    </button>
+</c-button-stateful>
+`;

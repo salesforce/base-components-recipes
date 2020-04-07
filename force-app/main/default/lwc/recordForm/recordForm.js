@@ -11,6 +11,7 @@ import {
     densityValues,
     getCompoundFields,
     compoundFieldIsUpdateable,
+    compoundFieldIsCreateable,
     isCompoundField,
     isPersonAccount,
     UNSUPPORTED_REFERENCE_FIELDS
@@ -20,6 +21,7 @@ import { classSet } from 'c/utils';
 import labelSave from '@salesforce/label/c.lightning_LightningRecordForm_save';
 import labelCancel from '@salesforce/label/c.lightning_LightningRecordForm_cancel';
 import labelLoading from '@salesforce/label/c.lightning_LightningRecordForm_loading';
+import { normalizeRecordId } from 'c/recordUtils';
 
 const EDIT_MODE = 'edit';
 const VIEW_MODE = 'view';
@@ -133,7 +135,7 @@ export default class cRecordForm extends LightningElement {
             this._editMode = true;
         }
 
-        this._recordId = val;
+        this._recordId = normalizeRecordId(val);
     }
 
     @api get recordId() {
@@ -236,25 +238,34 @@ export default class cRecordForm extends LightningElement {
                         );
                     }
 
+                    const hasFields =
+                        this._objectInfo && this._objectInfo.fields;
+
                     const fieldUpdateable = compound
                         ? compoundFieldIsUpdateable(
                               compoundFields, // eslint-disable-line indent
                               this._record, // eslint-disable-line indent
                               this._objectInfo // eslint-disable-line indent
                           ) // eslint-disable-line indent
-                        : this._objectInfo &&
-                          this._objectInfo.fields &&
+                        : hasFields &&
                           this._objectInfo.fields[field].updateable;
+                    const fieldCreatable = compound
+                        ? compoundFieldIsCreateable(
+                              compoundFields, // eslint-disable-line indent
+                              this._record, // eslint-disable-line indent
+                              this._objectInfo // eslint-disable-line indent
+                          ) // eslint-disable-line indent
+                        : hasFields && this._objectInfo.fields[field].creatable;
+                    const shouldShowAsInputInEditMode =
+                        fieldUpdateable || (!this._recordId && fieldCreatable);
                     const updateable =
                         !isUnsupportedReferenceField(field) && this._objectInfo
-                            ? fieldUpdateable
+                            ? shouldShowAsInputInEditMode
                             : false;
                     const editable =
                         !isUnsupportedReferenceField(field) &&
                         this._editable &&
-                        (this._objectInfo &&
-                        this._objectInfo.fields &&
-                        this._objectInfo.fields[field]
+                        (hasFields && this._objectInfo.fields[field]
                             ? fieldUpdateable
                             : false);
                     thisRow.fields.push({
@@ -400,7 +411,7 @@ export default class cRecordForm extends LightningElement {
             this.clearForm();
         }
 
-        this.template.querySelector('lightning-messages').setError(null);
+        this.template.querySelector('c-messages').setError(null);
 
         this.dispatchEvent(new CustomEvent('cancel'));
     }

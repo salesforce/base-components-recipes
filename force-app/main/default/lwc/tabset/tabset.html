@@ -6,12 +6,9 @@
  -->
 
 <template>
-    <div
-        class={computedClass}
-        title={title}
+    <div class={computedClass} title={title}
         onprivatetabregister={handleTabRegister}
-        onprivatetabdatachange={handleTabDataChange}
-    >
+        onprivatetabdatachange={handleTabDataChange}>
         <c-tab-bar variant={variant} onselect={handleTabSelected}></c-tab-bar>
         <slot></slot>
     </div>

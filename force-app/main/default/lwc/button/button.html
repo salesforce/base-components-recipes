@@ -6,39 +6,27 @@
  -->
 
 <template>
-    <button
-        class={computedButtonClass}
-        disabled={disabled}
-        name={name}
-        accesskey={computedAccessKey}
-        title={computedTitle}
-        type={normalizedType}
-        value={value}
-        onfocus={handleButtonFocus}
-        onblur={handleButtonBlur}
-        aria-describedby={computedAriaDescribedBy}
-        aria-label={computedAriaLabel}
-        aria-controls={computedAriaControls}
-        aria-expanded={computedAriaExpanded}
-        aria-live={computedAriaLive}
-        aria-atomic={computedAriaAtomic}
-    >
+    <button class={computedButtonClass}
+            disabled={disabled}
+            name={name}
+            accesskey={computedAccessKey}
+            title={computedTitle}
+            type={normalizedType}
+            value={value}
+            onfocus={handleButtonFocus}
+            onblur={handleButtonBlur}
+            aria-label={computedAriaLabel}
+            aria-expanded={computedAriaExpanded}
+            aria-live={computedAriaLive}
+            aria-atomic={computedAriaAtomic}>
         <template if:true={showIconLeft}>
-            <c-primitive-icon
-                icon-name={iconName}
-                svg-class={computedIconClass}
-                variant="bare"
-            ></c-primitive-icon>
+            <c-primitive-icon icon-name={iconName} svg-class={computedIconClass} variant="bare"></c-primitive-icon>
         </template>
 
         {label}
 
         <template if:true={showIconRight}>
-            <c-primitive-icon
-                icon-name={iconName}
-                svg-class={computedIconClass}
-                variant="bare"
-            ></c-primitive-icon>
+            <c-primitive-icon icon-name={iconName} svg-class={computedIconClass} variant="bare"></c-primitive-icon>
         </template>
     </button>
 </template>

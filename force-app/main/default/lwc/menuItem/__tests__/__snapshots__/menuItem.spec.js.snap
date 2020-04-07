@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-menu-item-checked should have role menuitem without aria-checked and without checked icon 1`] = `
+<c-menu-item
+  class="slds-dropdown__item"
+  role="presentation"
+>
+  #shadow-root(open)
+    <a
+      aria-disabled="false"
+      href="javascript:void(0)"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <span
+        class="slds-truncate"
+      >
+        test-label
+      </span>
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-icon-text-default slds-m-left_small slds-shrink-none slds-icon_x-small"
+            data-key="table"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#table"
+            />
+          </svg>
+      </c-primitive-icon>
+    </a>
+</c-menu-item>
+`;
+
+exports[`c-menu-item-checked should show has role meuitemcheckbox 1`] = `
+<c-menu-item
+  class="slds-dropdown__item"
+  role="presentation"
+>
+  #shadow-root(open)
+    <a
+      aria-checked="false"
+      aria-disabled="false"
+      href="javascript:void(0)"
+      role="menuitemcheckbox"
+      tabindex="-1"
+    >
+      <span
+        class="slds-truncate"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small slds-icon_selected"
+              data-key="check"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+        </c-primitive-icon>
+        test-label
+      </span>
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-icon-text-default slds-m-left_small slds-shrink-none slds-icon_x-small"
+            data-key="table"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#table"
+            />
+          </svg>
+      </c-primitive-icon>
+    </a>
+</c-menu-item>
+`;
+
+exports[`c-menu-item-checked should show has role meuitemcheckbox with aria-checked-true and checked icon 1`] = `
+<c-menu-item
+  class="slds-dropdown__item slds-is-selected"
+  role="presentation"
+>
+  #shadow-root(open)
+    <a
+      aria-checked="true"
+      aria-disabled="false"
+      href="javascript:void(0)"
+      role="menuitemcheckbox"
+      tabindex="-1"
+    >
+      <span
+        class="slds-truncate"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+              data-key="check"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+        </c-primitive-icon>
+        test-label
+      </span>
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-icon-text-default slds-m-left_small slds-shrink-none slds-icon_x-small"
+            data-key="table"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#table"
+            />
+          </svg>
+      </c-primitive-icon>
+    </a>
+</c-menu-item>
+`;
+
+exports[`c-menu-item-default should default 1`] = `
+<c-menu-item
+  class="slds-dropdown__item"
+  role="presentation"
+>
+  #shadow-root(open)
+    <a
+      aria-disabled="false"
+      href="javascript:void(0)"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <span
+        class="slds-truncate"
+      />
+    </a>
+</c-menu-item>
+`;
+
+exports[`c-menu-item-disabled should be disabled 1`] = `
+<c-menu-item
+  class="slds-dropdown__item"
+  role="presentation"
+>
+  #shadow-root(open)
+    <a
+      aria-checked="false"
+      aria-disabled="true"
+      href="javascript:void(0)"
+      role="menuitemcheckbox"
+      tabindex="-1"
+    >
+      <span
+        class="slds-truncate"
+      >
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small slds-icon_selected"
+              data-key="check"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"
+              />
+            </svg>
+        </c-primitive-icon>
+        test-label
+      </span>
+    </a>
+</c-menu-item>
+`;
+
+exports[`c-menu-item-iconName should show label and iconName 1`] = `
+<c-menu-item
+  class="slds-dropdown__item"
+  role="presentation"
+>
+  #shadow-root(open)
+    <a
+      aria-disabled="false"
+      href="javascript:void(0)"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <span
+        class="slds-truncate"
+      >
+        test-label
+      </span>
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-icon-text-default slds-m-left_small slds-shrink-none slds-icon_x-small"
+            data-key="table"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#table"
+            />
+          </svg>
+      </c-primitive-icon>
+    </a>
+</c-menu-item>
+`;
+
+exports[`c-menu-item-label should show label 1`] = `
+<c-menu-item
+  class="slds-dropdown__item"
+  role="presentation"
+>
+  #shadow-root(open)
+    <a
+      aria-disabled="false"
+      href="javascript:void(0)"
+      role="menuitem"
+      tabindex="-1"
+    >
+      <span
+        class="slds-truncate"
+      >
+        test-label
+      </span>
+    </a>
+</c-menu-item>
+`;

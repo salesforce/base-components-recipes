@@ -7,7 +7,7 @@
 
 export const isIE11 = isIE11Test(navigator);
 export const isChrome = isChromeTest(navigator);
-export const isSafari = isSafariTest(window.safari);
+export const isSafari = isSafariTest(navigator);
 
 export function isIE11Test(navigator) {
     return /Trident.*rv[ :]*11\./.test(navigator.userAgent);
@@ -20,11 +20,6 @@ export function isChromeTest(navigator) {
     );
 }
 
-export function isSafariTest(safari) {
-    return (
-        safari &&
-        safari.pushNotification &&
-        safari.pushNotification.toString() ===
-            '[object SafariRemoteNotification]'
-    );
+export function isSafariTest(navigator) {
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 }

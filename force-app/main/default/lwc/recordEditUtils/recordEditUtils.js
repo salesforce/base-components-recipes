@@ -17,6 +17,8 @@ export { filterByPicklistsInForm, formHasPicklists } from './picklists';
 
 const OUTPUT_FIELD_TAGNAME = 'C-OUTPUT-FIELD';
 
+const MASTER_RECORD_TYPE_ID = '012000000000000AAA';
+
 function normalizeRecord(newRecord) {
     const normalizedRecord = Object.assign({}, newRecord);
     normalizedRecord.fields = {};
@@ -192,4 +194,10 @@ export function validateForm(inputFields) {
 
 export function getFieldSet(objectApiName) {
     return new FieldSet(objectApiName);
+}
+
+export function getDefaultRecordTypeId(objectInfo) {
+    const metadataDefaultRecordTypeId =
+        objectInfo && objectInfo.defaultRecordTypeId;
+    return metadataDefaultRecordTypeId || MASTER_RECORD_TYPE_ID;
 }

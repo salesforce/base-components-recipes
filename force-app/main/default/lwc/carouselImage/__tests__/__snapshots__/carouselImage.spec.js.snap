@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-carousel-image default 1`] = `
+<c-carousel-image
+  class="slds-carousel__panel"
+  data-handles-touch="true"
+>
+  #shadow-root(open)
+    <div
+      aria-hidden="true"
+      id="[shadow:guid]"
+      role="tabpanel"
+    >
+      <a
+        class="slds-carousel__panel-action slds-text-link_reset"
+        href="https://www.salesforce.com"
+        tabindex="-1"
+      >
+        <div
+          class="slds-carousel__image"
+        >
+          <img
+            alt="This is a card"
+            src="https://latest-212.lightningdesignsystem.com/assets/images/carousel/carousel-01.jpg"
+          />
+        </div>
+        <div
+          class="slds-carousel__content"
+        >
+          <h2
+            class="slds-carousel__content-title"
+          >
+            First card
+          </h2>
+          <p>
+            first card description
+          </p>
+        </div>
+      </a>
+    </div>
+</c-carousel-image>
+`;

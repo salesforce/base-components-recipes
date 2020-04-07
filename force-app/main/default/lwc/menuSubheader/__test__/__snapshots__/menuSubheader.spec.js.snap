@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-menu-subheader default state 1`] = `
+<c-menu-subheader
+  class="slds-dropdown__header slds-truncate"
+  role="separator"
+>
+  #shadow-root(open)
+    <span>
+      Subheader
+    </span>
+</c-menu-subheader>
+`;

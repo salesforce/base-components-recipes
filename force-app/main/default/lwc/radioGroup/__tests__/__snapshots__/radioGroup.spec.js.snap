@@ -1,0 +1,746 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-radio-group defaultButtonType 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <div
+          class="slds-radio_button-group"
+        >
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              id="[shadow:guid]"
+              name="testGroup"
+              type="radio"
+              value="option1"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Sales
+              </span>
+            </label>
+          </span>
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              id="[shadow:guid]"
+              name="testGroup"
+              type="radio"
+              value="option2"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Force
+              </span>
+            </label>
+          </span>
+        </div>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group defaultNoType 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-radio"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="radio"
+            value="option1"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Sales
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-radio"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="radio"
+            value="option2"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Force
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group defaultRadioType 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-radio"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="radio"
+            value="option1"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Sales
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-radio"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="radio"
+            value="option2"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Force
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group disabled button 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <div
+          class="slds-radio_button-group"
+        >
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              disabled=""
+              id="[shadow:guid]"
+              name="testGroup"
+              type="radio"
+              value="option1"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Sales
+              </span>
+            </label>
+          </span>
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              disabled=""
+              id="[shadow:guid]"
+              name="testGroup"
+              type="radio"
+              value="option2"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Force
+              </span>
+            </label>
+          </span>
+        </div>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group disabled radio 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-radio"
+        >
+          <input
+            disabled=""
+            id="[shadow:guid]"
+            name="testGroup"
+            type="radio"
+            value="option1"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Sales
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-radio"
+        >
+          <input
+            disabled=""
+            id="[shadow:guid]"
+            name="testGroup"
+            type="radio"
+            value="option2"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Force
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group one button selected 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <div
+          class="slds-radio_button-group"
+        >
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              id="[shadow:guid]"
+              name="testGroup"
+              type="radio"
+              value="option1"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Sales
+              </span>
+            </label>
+          </span>
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              id="[shadow:guid]"
+              name="testGroup"
+              type="radio"
+              value="option2"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Force
+              </span>
+            </label>
+          </span>
+        </div>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group one radio selected 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-radio"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="radio"
+            value="option1"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Sales
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-radio"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="radio"
+            value="option2"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Force
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group required and disabled button 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        <abbr
+          class="slds-required"
+          title="required"
+        >
+          *
+        </abbr>
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <div
+          class="slds-radio_button-group"
+        >
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              disabled=""
+              id="[shadow:guid]"
+              name="testGroup"
+              required=""
+              type="radio"
+              value="option1"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Sales
+              </span>
+            </label>
+          </span>
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              disabled=""
+              id="[shadow:guid]"
+              name="testGroup"
+              required=""
+              type="radio"
+              value="option2"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Force
+              </span>
+            </label>
+          </span>
+        </div>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group required and disabled radio 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        <abbr
+          class="slds-required"
+          title="required"
+        >
+          *
+        </abbr>
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-radio"
+        >
+          <input
+            disabled=""
+            id="[shadow:guid]"
+            name="testGroup"
+            required=""
+            type="radio"
+            value="option1"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Sales
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-radio"
+        >
+          <input
+            disabled=""
+            id="[shadow:guid]"
+            name="testGroup"
+            required=""
+            type="radio"
+            value="option2"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Force
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group required button 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        <abbr
+          class="slds-required"
+          title="required"
+        >
+          *
+        </abbr>
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <div
+          class="slds-radio_button-group"
+        >
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              id="[shadow:guid]"
+              name="testGroup"
+              required=""
+              type="radio"
+              value="option1"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Sales
+              </span>
+            </label>
+          </span>
+          <span
+            class="slds-button slds-radio_button"
+          >
+            <input
+              id="[shadow:guid]"
+              name="testGroup"
+              required=""
+              type="radio"
+              value="option2"
+            />
+            <label
+              class="slds-radio_button__label"
+              for="[shadow:guid]"
+            >
+              <span
+                class="slds-radio_faux"
+              >
+                Force
+              </span>
+            </label>
+          </span>
+        </div>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;
+
+exports[`c-radio-group required radio 1`] = `
+<lighting-radio-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset>
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        <abbr
+          class="slds-required"
+          title="required"
+        >
+          *
+        </abbr>
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-radio"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            required=""
+            type="radio"
+            value="option1"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Sales
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-radio"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            required=""
+            type="radio"
+            value="option2"
+          />
+          <label
+            class="slds-radio__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-radio_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Force
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</lighting-radio-group>
+`;

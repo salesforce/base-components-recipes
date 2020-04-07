@@ -8,11 +8,7 @@
 <template>
     <span class="slds-media__figure slds-listbox__option-icon">
         <template if:true={item.iconName}>
-            <c-icon
-                alternative-text={item.iconAlternativeText}
-                icon-name={item.iconName}
-                size="x-small"
-            ></c-icon>
+            <c-icon alternative-text={item.iconAlternativeText} icon-name={item.iconName} size="x-small"></c-icon>
         </template>
     </span>
     <span class="slds-media__body">
@@ -22,11 +18,7 @@
             <span class="slds-truncate" title={item.text}>{item.text}</span>
         </template>
         <template if:true={textHasParts}>
-            <c-base-combobox-formatted-text
-                text={item.text}
-                class="slds-truncate"
-                title={text}
-            ></c-base-combobox-formatted-text>
+            <c-base-combobox-formatted-text text={item.text} class="slds-truncate" title={text}></c-base-combobox-formatted-text>
         </template>
     </span>
 </template>

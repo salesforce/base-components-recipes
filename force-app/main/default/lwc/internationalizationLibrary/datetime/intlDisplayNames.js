@@ -5,25 +5,27 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
-import locale from '@salesforce/i18n/locale';
+import salesforceLocale from '@salesforce/i18n/locale';
+import salesforceLanguage from '@salesforce/i18n/lang';
 
-const FALLBACK_LOCALE = 'en-us';
+const FALLBACK_LOCALES = [salesforceLocale, 'en-us'];
 const symbolsCache = {};
 
-export function getNameOfWeekdays() {
-    const localeCache = symbolsCache[locale];
+export function getNameOfWeekdays(languageOverride) {
+    const language = languageOverride || salesforceLanguage;
+    const languageDataCache = symbolsCache[language];
 
-    if (localeCache && localeCache.weekdays) {
-        return localeCache.weekdays;
+    if (languageDataCache && languageDataCache.weekdays) {
+        return languageDataCache.weekdays;
     }
 
-    const locales = [locale, FALLBACK_LOCALE];
-    const fullNameFormatter = new Intl.DateTimeFormat(locales, {
+    const intlLocales = [language, ...FALLBACK_LOCALES];
+    const fullNameFormatter = new Intl.DateTimeFormat(intlLocales, {
         weekday: 'long',
         timeZone: 'UTC'
     });
 
-    const shortNameFormatter = new Intl.DateTimeFormat(locales, {
+    const shortNameFormatter = new Intl.DateTimeFormat(intlLocales, {
         weekday: 'short',
         timeZone: 'UTC'
     });
@@ -38,23 +40,24 @@ export function getNameOfWeekdays() {
         });
     }
 
-    if (!symbolsCache[locale]) {
-        symbolsCache[locale] = {};
+    if (!symbolsCache[language]) {
+        symbolsCache[language] = {};
     }
-    symbolsCache[locale].weekdays = weekdays;
+    symbolsCache[language].weekdays = weekdays;
 
     return weekdays;
 }
 
-export function getMonthNames() {
-    const localeCache = symbolsCache[locale];
+export function getMonthNames(languageOverride) {
+    const language = languageOverride || salesforceLanguage;
+    const languageDataCache = symbolsCache[language];
 
-    if (localeCache && localeCache.months) {
-        return localeCache.months;
+    if (languageDataCache && languageDataCache.months) {
+        return languageDataCache.months;
     }
 
-    const locales = [locale, FALLBACK_LOCALE];
-    const monthNameFormatter = new Intl.DateTimeFormat(locales, {
+    const intlLocales = [language, ...FALLBACK_LOCALES];
+    const monthNameFormatter = new Intl.DateTimeFormat(intlLocales, {
         month: 'long'
     });
 
@@ -67,10 +70,10 @@ export function getMonthNames() {
         });
     }
 
-    if (!symbolsCache[locale]) {
-        symbolsCache[locale] = {};
+    if (!symbolsCache[language]) {
+        symbolsCache[language] = {};
     }
-    symbolsCache[locale].months = months;
+    symbolsCache[language].months = months;
 
     return months;
 }

@@ -1,0 +1,439 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`record form columns does treats a negative value as 1 1`] = `
+<c-record-form>
+  #shadow-root(open)
+    <c-record-edit-form>
+      #shadow-root(open)
+        <form>
+          <slot />
+        </form>
+      <div
+        class="slds-form"
+        role="list"
+      >
+        <c-messages>
+          #shadow-root(open)
+        </c-messages>
+        <div
+          class="slds-is-relative record-form-spinner-holder"
+        >
+          <c-spinner
+            class="slds-spinner_container"
+          >
+            #shadow-root(open)
+              <div
+                class="slds-spinner slds-spinner_medium"
+                role="status"
+              >
+                <span
+                  class="slds-assistive-text"
+                >
+                  Loading
+                </span>
+                <div
+                  class="slds-spinner__dot-a"
+                />
+                <div
+                  class="slds-spinner__dot-b"
+                />
+              </div>
+          </c-spinner>
+        </div>
+        <div
+          class="slds-align_absolute-center slds-p-around_medium"
+        >
+          <c-button
+            class="slds-m-around_xx-small c-record-form-cancel"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_neutral"
+                name="cancel"
+                type="button"
+              >
+                Cancel
+              </button>
+          </c-button>
+          <c-button
+            class="slds-m-around_xx-small c-record-form-submit"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_brand"
+                name="submit"
+                type="submit"
+              >
+                Save
+              </button>
+          </c-button>
+        </div>
+      </div>
+    </c-record-edit-form>
+</c-record-form>
+`;
+
+exports[`record form columns renders two columns 1`] = `
+<c-record-form>
+  #shadow-root(open)
+    <c-record-edit-form>
+      #shadow-root(open)
+        <form>
+          <slot />
+        </form>
+      <div
+        class="slds-form"
+        role="list"
+      >
+        <c-messages>
+          #shadow-root(open)
+        </c-messages>
+        <div
+          class="slds-is-relative record-form-spinner-holder"
+        >
+          <c-spinner
+            class="slds-spinner_container"
+          >
+            #shadow-root(open)
+              <div
+                class="slds-spinner slds-spinner_medium"
+                role="status"
+              >
+                <span
+                  class="slds-assistive-text"
+                >
+                  Loading
+                </span>
+                <div
+                  class="slds-spinner__dot-a"
+                />
+                <div
+                  class="slds-spinner__dot-b"
+                />
+              </div>
+          </c-spinner>
+        </div>
+        <div
+          class="slds-align_absolute-center slds-p-around_medium"
+        >
+          <c-button
+            class="slds-m-around_xx-small c-record-form-cancel"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_neutral"
+                name="cancel"
+                type="button"
+              >
+                Cancel
+              </button>
+          </c-button>
+          <c-button
+            class="slds-m-around_xx-small c-record-form-submit"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_brand"
+                name="submit"
+                type="submit"
+              >
+                Save
+              </button>
+          </c-button>
+        </div>
+      </div>
+    </c-record-edit-form>
+</c-record-form>
+`;
+
+exports[`record form columns renders two columns with a string value 1`] = `
+<c-record-form>
+  #shadow-root(open)
+    <c-record-edit-form>
+      #shadow-root(open)
+        <form>
+          <slot />
+        </form>
+      <div
+        class="slds-form"
+        role="list"
+      >
+        <c-messages>
+          #shadow-root(open)
+        </c-messages>
+        <div
+          class="slds-is-relative record-form-spinner-holder"
+        >
+          <c-spinner
+            class="slds-spinner_container"
+          >
+            #shadow-root(open)
+              <div
+                class="slds-spinner slds-spinner_medium"
+                role="status"
+              >
+                <span
+                  class="slds-assistive-text"
+                >
+                  Loading
+                </span>
+                <div
+                  class="slds-spinner__dot-a"
+                />
+                <div
+                  class="slds-spinner__dot-b"
+                />
+              </div>
+          </c-spinner>
+        </div>
+        <div
+          class="slds-align_absolute-center slds-p-around_medium"
+        >
+          <c-button
+            class="slds-m-around_xx-small c-record-form-cancel"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_neutral"
+                name="cancel"
+                type="button"
+              >
+                Cancel
+              </button>
+          </c-button>
+          <c-button
+            class="slds-m-around_xx-small c-record-form-submit"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_brand"
+                name="submit"
+                type="submit"
+              >
+                Save
+              </button>
+          </c-button>
+        </div>
+      </div>
+    </c-record-edit-form>
+</c-record-form>
+`;
+
+exports[`record form columns rounds a non-integer value 1`] = `
+<c-record-form>
+  #shadow-root(open)
+    <c-record-edit-form>
+      #shadow-root(open)
+        <form>
+          <slot />
+        </form>
+      <div
+        class="slds-form"
+        role="list"
+      >
+        <c-messages>
+          #shadow-root(open)
+        </c-messages>
+        <div
+          class="slds-is-relative record-form-spinner-holder"
+        >
+          <c-spinner
+            class="slds-spinner_container"
+          >
+            #shadow-root(open)
+              <div
+                class="slds-spinner slds-spinner_medium"
+                role="status"
+              >
+                <span
+                  class="slds-assistive-text"
+                >
+                  Loading
+                </span>
+                <div
+                  class="slds-spinner__dot-a"
+                />
+                <div
+                  class="slds-spinner__dot-b"
+                />
+              </div>
+          </c-spinner>
+        </div>
+        <div
+          class="slds-align_absolute-center slds-p-around_medium"
+        >
+          <c-button
+            class="slds-m-around_xx-small c-record-form-cancel"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_neutral"
+                name="cancel"
+                type="button"
+              >
+                Cancel
+              </button>
+          </c-button>
+          <c-button
+            class="slds-m-around_xx-small c-record-form-submit"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_brand"
+                name="submit"
+                type="submit"
+              >
+                Save
+              </button>
+          </c-button>
+        </div>
+      </div>
+    </c-record-edit-form>
+</c-record-form>
+`;
+
+exports[`record form columns treats a NaN value as 1 1`] = `
+<c-record-form>
+  #shadow-root(open)
+    <c-record-edit-form>
+      #shadow-root(open)
+        <form>
+          <slot />
+        </form>
+      <div
+        class="slds-form"
+        role="list"
+      >
+        <c-messages>
+          #shadow-root(open)
+        </c-messages>
+        <div
+          class="slds-is-relative record-form-spinner-holder"
+        >
+          <c-spinner
+            class="slds-spinner_container"
+          >
+            #shadow-root(open)
+              <div
+                class="slds-spinner slds-spinner_medium"
+                role="status"
+              >
+                <span
+                  class="slds-assistive-text"
+                >
+                  Loading
+                </span>
+                <div
+                  class="slds-spinner__dot-a"
+                />
+                <div
+                  class="slds-spinner__dot-b"
+                />
+              </div>
+          </c-spinner>
+        </div>
+        <div
+          class="slds-align_absolute-center slds-p-around_medium"
+        >
+          <c-button
+            class="slds-m-around_xx-small c-record-form-cancel"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_neutral"
+                name="cancel"
+                type="button"
+              >
+                Cancel
+              </button>
+          </c-button>
+          <c-button
+            class="slds-m-around_xx-small c-record-form-submit"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_brand"
+                name="submit"
+                type="submit"
+              >
+                Save
+              </button>
+          </c-button>
+        </div>
+      </div>
+    </c-record-edit-form>
+</c-record-form>
+`;
+
+exports[`record form columns treats a zero value as 1 1`] = `
+<c-record-form>
+  #shadow-root(open)
+    <c-record-edit-form>
+      #shadow-root(open)
+        <form>
+          <slot />
+        </form>
+      <div
+        class="slds-form"
+        role="list"
+      >
+        <c-messages>
+          #shadow-root(open)
+        </c-messages>
+        <div
+          class="slds-is-relative record-form-spinner-holder"
+        >
+          <c-spinner
+            class="slds-spinner_container"
+          >
+            #shadow-root(open)
+              <div
+                class="slds-spinner slds-spinner_medium"
+                role="status"
+              >
+                <span
+                  class="slds-assistive-text"
+                >
+                  Loading
+                </span>
+                <div
+                  class="slds-spinner__dot-a"
+                />
+                <div
+                  class="slds-spinner__dot-b"
+                />
+              </div>
+          </c-spinner>
+        </div>
+        <div
+          class="slds-align_absolute-center slds-p-around_medium"
+        >
+          <c-button
+            class="slds-m-around_xx-small c-record-form-cancel"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_neutral"
+                name="cancel"
+                type="button"
+              >
+                Cancel
+              </button>
+          </c-button>
+          <c-button
+            class="slds-m-around_xx-small c-record-form-submit"
+          >
+            #shadow-root(open)
+              <button
+                class="slds-button slds-button_brand"
+                name="submit"
+                type="submit"
+              >
+                Save
+              </button>
+          </c-button>
+        </div>
+      </div>
+    </c-record-edit-form>
+</c-record-form>
+`;

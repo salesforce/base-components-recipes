@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-accordion using slots should render with the right markup 1`] = `
+<c-accordion-test>
+  #shadow-root(open)
+    <c-accordion
+      class="slds-accordion"
+      role="list"
+      title="accordion title"
+    >
+      #shadow-root(open)
+        <slot />
+      <c-accordion-section
+        class="section-a slds-accordion__list-item"
+        role="listitem"
+      >
+        #shadow-root(open)
+          <section
+            class="slds-accordion__section"
+          >
+            <div
+              class="slds-accordion__summary"
+            >
+              <h3
+                class="slds-accordion__summary-heading"
+              >
+                <button
+                  aria-controls="[shadow:guid]"
+                  aria-expanded="false"
+                  class="section-control slds-button slds-button_reset slds-accordion__summary-action"
+                  type="button"
+                >
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left slds-icon slds-icon-text-default slds-icon_x-small"
+                        data-key="switch"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+                  <span
+                    title="section A"
+                  >
+                    section A
+                  </span>
+                </button>
+              </h3>
+              <slot
+                name="actions"
+              />
+            </div>
+            <div
+              aria-hidden="true"
+              class="slds-accordion__content"
+              hidden=""
+              id="[shadow:guid]"
+            >
+              <slot />
+            </div>
+          </section>
+        <c-button-menu
+          class="slds-dropdown-trigger slds-dropdown-trigger_click"
+          slot="actions"
+        >
+          #shadow-root(open)
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="slds-button slds-button_icon-border slds-button_icon-x-small"
+              type="button"
+              value=""
+            >
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-button__icon"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+              <span
+                class="slds-assistive-text"
+              >
+                Show menu
+              </span>
+            </button>
+        </c-button-menu>
+        <p>
+          This is the content area for section A.
+        </p>
+      </c-accordion-section>
+      <c-accordion-section
+        class="section-c slds-accordion__list-item"
+        role="listitem"
+      >
+        #shadow-root(open)
+          <section
+            class="slds-accordion__section slds-is-open"
+          >
+            <div
+              class="slds-accordion__summary"
+            >
+              <h3
+                class="slds-accordion__summary-heading"
+              >
+                <button
+                  aria-controls="[shadow:guid]"
+                  aria-expanded="true"
+                  class="section-control slds-button slds-button_reset slds-accordion__summary-action"
+                  type="button"
+                >
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left slds-icon slds-icon-text-default slds-icon_x-small"
+                        data-key="switch"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+                  <span
+                    title="section C"
+                  >
+                    section C
+                  </span>
+                </button>
+              </h3>
+              <slot
+                name="actions"
+              />
+            </div>
+            <div
+              aria-hidden="false"
+              class="slds-accordion__content"
+              id="[shadow:guid]"
+            >
+              <slot />
+            </div>
+          </section>
+        <p>
+          This is the content area for section C.
+        </p>
+      </c-accordion-section>
+    </c-accordion>
+</c-accordion-test>
+`;

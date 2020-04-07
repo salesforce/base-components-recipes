@@ -1,0 +1,1 @@
+export default 'Show actions';

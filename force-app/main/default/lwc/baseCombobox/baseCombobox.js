@@ -49,6 +49,7 @@ export default class cBaseCombobox extends LightningElement {
     @api inputIconAlternativeText;
     @api inputMaxlength;
     @api showInputActivityIndicator = false;
+    @api required = false;
     @api dropdownAlignment = 'left';
     @api placeholder = 'Select an Item';
     @api inputLabel;
@@ -743,21 +744,6 @@ export default class cBaseCombobox extends LightningElement {
             !this.showDropdownActivityIndicator &&
             (!Array.isArray(this.items) || this.items.length === 0)
         );
-    }
-
-    get isDropdownHeightSmall() {
-        if (this.isDropdownEmpty) {
-            return true;
-        }
-
-        let count = this._items ? this._items.length : 0;
-        if (count === 1) {
-            count += this._items[0].items ? this._items[0].items.length : 0;
-        } else if (count === 2) {
-            count += this._items[0].items ? this._items[0].items.length : 0;
-            count += this._items[1].items ? this._items[1].items.length : 0;
-        }
-        return count < 3;
     }
 
     dropdownKeyboardInterface() {

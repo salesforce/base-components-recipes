@@ -898,6 +898,14 @@
   </labels>
   <labels>
     <categories>lightning</categories>
+    <fullName>lightning_LightningDatatable_rowNumber</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>rowNumber</shortDescription>
+    <value>Row Number</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
     <fullName>lightning_LightningVerticalNavigation_newItems</fullName>
     <language>en_US</language>
     <protected>false</protected>
@@ -1394,6 +1402,14 @@
   </labels>
   <labels>
     <categories>lightning</categories>
+    <fullName>lightning_LightningLookup_advancedSearchMobile</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>advancedSearchMobile</shortDescription>
+    <value>Show All Results for "{0}"</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
     <fullName>lightning_LightningLookup_createNewObject</fullName>
     <language>en_US</language>
     <protected>false</protected>
@@ -1410,6 +1426,30 @@
   </labels>
   <labels>
     <categories>lightning</categories>
+    <fullName>lightning_LightningLookup_emptyStateNoResultText</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>emptyStateNoResultText</shortDescription>
+    <value>No results for "{0}"</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
+    <fullName>lightning_LightningLookup_emptyStateNoResultMRUText</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>emptyStateNoResultMRUText</shortDescription>
+    <value>No results yet...</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
+    <fullName>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>emptyStateNoResultMRUWithoutText</shortDescription>
+    <value>Try entering a search term.</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
     <fullName>lightning_LightningLookup_messageWhenBadInputDefault</fullName>
     <language>en_US</language>
     <protected>false</protected>
@@ -1418,11 +1458,27 @@
   </labels>
   <labels>
     <categories>lightning</categories>
+    <fullName>lightning_LightningLookup_panelHeaderMobile</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>panelHeaderMobile</shortDescription>
+    <value>Relate {0} To</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
     <fullName>lightning_LightningLookup_recentObject</fullName>
     <language>en_US</language>
     <protected>false</protected>
     <shortDescription>recentObject</shortDescription>
     <value>Recent {0}</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
+    <fullName>lightning_LightningLookup_resultsListHeaderMobile</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>resultsListHeaderMobile</shortDescription>
+    <value>All Results for "{0}"</value>
   </labels>
   <labels>
     <categories>lightning</categories>
@@ -1439,6 +1495,14 @@
     <protected>false</protected>
     <shortDescription>searchObjectsPlaceholder</shortDescription>
     <value>Search {0}...</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
+    <fullName>lightning_LightningLookup_searchObjectsPlaceholderMobile</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>searchObjectsPlaceholderMobile</shortDescription>
+    <value>Search {0}</value>
   </labels>
   <labels>
     <categories>lightning</categories>
@@ -1463,6 +1527,14 @@
     <protected>false</protected>
     <shortDescription>selectObject</shortDescription>
     <value>Choose an object</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
+    <fullName>lightning_LightningLookup_typeaheadResultsListHeaderMobile</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>typeaheadResultsListHeaderMobile</shortDescription>
+    <value>Initial Results for "{0}"</value>
   </labels>
   <labels>
     <categories>lightning</categories>
@@ -1599,5 +1671,21 @@
     <protected>false</protected>
     <shortDescription>close</shortDescription>
     <value>Close</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
+    <fullName>lightning_LightningMessageChannel_publishWithoutContext</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>publishWithoutContext</shortDescription>
+    <value>Lightning Message Service - Your component must be rendered before you can publish to channel: {0}</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
+    <fullName>lightning_LightningMessageChannel_invalidScope</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>invalidScope</shortDescription>
+    <value>Lightning Message Service - Cannot subscribe to channel {0} with invalid scope: {1}</value>
   </labels>
 </CustomLabels>

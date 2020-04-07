@@ -295,7 +295,8 @@ export default class cButtonMenu extends LightningElement {
                     this.iconSize === 'xx-small' && !isBare,
                 'slds-button_icon-x-small':
                     this.iconSize === 'x-small' && !isBare,
-                'slds-button_icon-small': this.iconSize === 'small' && !isBare
+                'slds-button_icon-small': this.iconSize === 'small' && !isBare,
+                'slds-button_icon-large': this.iconSize === 'large' && !isBare
             });
         }
 

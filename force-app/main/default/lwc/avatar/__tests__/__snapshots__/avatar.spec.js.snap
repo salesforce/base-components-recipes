@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-avatar Size should add correct classes on large size 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_large"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar Size should add correct classes on medium size 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar Size should add correct classes on small size 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_small"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar Size should add correct classes on x-small size 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_x-small"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar Size should add default classes on invalid size 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar Variant should add correct classes on circle variant 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium slds-avatar_circle"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar Variant should add correct classes on square variant 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar Variant should add default classes on invalid variant 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar default 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <c-icon
+      class="slds-icon-standard-account slds-icon_container"
+      title="required alternative text"
+    >
+      #shadow-root(open)
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-icon"
+              data-key="account"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+              />
+            </svg>
+        </c-primitive-icon>
+        <span
+          class="slds-assistive-text"
+        >
+          required alternative text
+        </span>
+    </c-icon>
+</c-avatar>
+`;
+
+exports[`c-avatar testAltTitleAttributes Avatar component should set title of image correctly 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar testAltTitleAttributes Avatar component should set title of image correctly 2`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="Salesforce Contact"
+      src="/assets/images/avatar2.jpg"
+      title="Salesforce Contact"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar testSrcAttribute An img element should not render when v.src is undefined 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <abbr
+      class="slds-avatar__initials slds-icon-standard-account"
+      title="account owner"
+    >
+      EK
+    </abbr>
+</c-avatar>
+`;
+
+exports[`c-avatar testSrcAttribute image src should be correct when changed 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar2.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar testSrcAttribute image src should be correct when changed 2`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="account owner"
+      src="/assets/images/avatar1.jpg"
+      title="account owner"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar testTypePriority 1`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="required alternative text"
+      src="/assets/images/avatar2.jpg"
+      title="required alternative text"
+    />
+</c-avatar>
+`;
+
+exports[`c-avatar testTypePriority 2`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <abbr
+      class="slds-avatar__initials slds-icon-standard-account"
+      title="required alternative text"
+    >
+      EK
+    </abbr>
+</c-avatar>
+`;
+
+exports[`c-avatar testTypePriority 3`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <c-icon
+      class="slds-icon-standard-account slds-icon_container"
+      title="required alternative text"
+    >
+      #shadow-root(open)
+        <c-primitive-icon>
+          #shadow-root(open)
+            <svg
+              aria-hidden="true"
+              class="slds-icon"
+              data-key="account"
+              focusable="false"
+            >
+              <use
+                xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+              />
+            </svg>
+        </c-primitive-icon>
+        <span
+          class="slds-assistive-text"
+        >
+          required alternative text
+        </span>
+    </c-icon>
+</c-avatar>
+`;
+
+exports[`c-avatar testTypePriority 4`] = `
+<c-avatar
+  class="slds-avatar slds-avatar_medium"
+>
+  #shadow-root(open)
+    <img
+      alt="required alternative text"
+      src="/assets/images/avatar1.jpg"
+      title="required alternative text"
+    />
+</c-avatar>
+`;

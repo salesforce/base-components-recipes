@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>Opplasting av bilder støttes ikke for gjestebrukere.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>nødvendig</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>Fjern</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Øk antall</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Reduser antall</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>Advarsel</label>
@@ -429,6 +441,14 @@
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
   </customLabels>
   <customLabels>
+    <label>Navigeringsmodus</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Handlingsmodus</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
+  </customLabels>
+  <customLabels>
     <label>Nye elementer</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -505,7 +525,7 @@
     <name>lightning_LightningColorPicker_hueInput</name>
   </customLabels>
   <customLabels>
-    <label>Heksadesimal</label>
+    <label>Hex</label>
     <name>lightning_LightningColorPicker_hexLabel</name>
   </customLabels>
   <customLabels>
@@ -779,5 +799,9 @@
   <customLabels>
     <label>Lukk</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>Lightning-meldingstjeneste – Komponenten må gjengis før du kan publisere den i kanalen: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
   </customLabels>
 </Translations>

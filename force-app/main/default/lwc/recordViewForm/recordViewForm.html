@@ -6,7 +6,7 @@
  -->
 
 <template>
-    <div>
-        <slot onslotchange={handleSlotChange}></slot>
+    <div onregisteroutputfield={handleRegisterOutputField}>
+        <slot></slot>
     </div>
 </template>

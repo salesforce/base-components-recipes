@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-spinner default 1`] = `
+<c-spinner
+  class="slds-spinner_container"
+>
+  #shadow-root(open)
+    <div
+      class="slds-spinner slds-spinner_medium"
+      role="status"
+    >
+      <span
+        class="slds-assistive-text"
+      >
+        required alternative text
+      </span>
+      <div
+        class="slds-spinner__dot-a"
+      />
+      <div
+        class="slds-spinner__dot-b"
+      />
+    </div>
+</c-spinner>
+`;
+
+exports[`c-spinner size=large 1`] = `
+<c-spinner
+  class="slds-spinner_container"
+>
+  #shadow-root(open)
+    <div
+      class="slds-spinner slds-spinner_large"
+      role="status"
+    >
+      <span
+        class="slds-assistive-text"
+      >
+        required alternative text
+      </span>
+      <div
+        class="slds-spinner__dot-a"
+      />
+      <div
+        class="slds-spinner__dot-b"
+      />
+    </div>
+</c-spinner>
+`;
+
+exports[`c-spinner size=medium 1`] = `
+<c-spinner
+  class="slds-spinner_container"
+>
+  #shadow-root(open)
+    <div
+      class="slds-spinner slds-spinner_medium"
+      role="status"
+    >
+      <span
+        class="slds-assistive-text"
+      >
+        required alternative text
+      </span>
+      <div
+        class="slds-spinner__dot-a"
+      />
+      <div
+        class="slds-spinner__dot-b"
+      />
+    </div>
+</c-spinner>
+`;
+
+exports[`c-spinner size=small 1`] = `
+<c-spinner
+  class="slds-spinner_container"
+>
+  #shadow-root(open)
+    <div
+      class="slds-spinner slds-spinner_small"
+      role="status"
+    >
+      <span
+        class="slds-assistive-text"
+      >
+        required alternative text
+      </span>
+      <div
+        class="slds-spinner__dot-a"
+      />
+      <div
+        class="slds-spinner__dot-b"
+      />
+    </div>
+</c-spinner>
+`;
+
+exports[`c-spinner variant=base 1`] = `
+<c-spinner
+  class="slds-spinner_container"
+>
+  #shadow-root(open)
+    <div
+      class="slds-spinner slds-spinner_medium"
+      role="status"
+    >
+      <span
+        class="slds-assistive-text"
+      >
+        required alternative text
+      </span>
+      <div
+        class="slds-spinner__dot-a"
+      />
+      <div
+        class="slds-spinner__dot-b"
+      />
+    </div>
+</c-spinner>
+`;
+
+exports[`c-spinner variant=brand 1`] = `
+<c-spinner
+  class="slds-spinner_container"
+>
+  #shadow-root(open)
+    <div
+      class="slds-spinner slds-spinner_brand slds-spinner_medium"
+      role="status"
+    >
+      <span
+        class="slds-assistive-text"
+      >
+        required alternative text
+      </span>
+      <div
+        class="slds-spinner__dot-a"
+      />
+      <div
+        class="slds-spinner__dot-b"
+      />
+    </div>
+</c-spinner>
+`;
+
+exports[`c-spinner variant=inverse 1`] = `
+<c-spinner
+  class="slds-spinner_container"
+>
+  #shadow-root(open)
+    <div
+      class="slds-spinner slds-spinner_inverse slds-spinner_medium"
+      role="status"
+    >
+      <span
+        class="slds-assistive-text"
+      >
+        required alternative text
+      </span>
+      <div
+        class="slds-spinner__dot-a"
+      />
+      <div
+        class="slds-spinner__dot-b"
+      />
+    </div>
+</c-spinner>
+`;

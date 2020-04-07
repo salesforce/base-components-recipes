@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-formatted-url default 1`] = `
+<c-formatted-url>
+  #shadow-root(open)
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url label changes 1`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="someIFrame"
+      title="123"
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url label changes 2`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="someIFrame"
+      title="123"
+    >
+      A label
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url label changes 3`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="someIFrame"
+      title="123"
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url target changes 1`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="someIFrame"
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url target changes 2`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target=""
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url target changes 3`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="_blank"
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url tooltip changes 1`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="someIFrame"
+      title="123"
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url tooltip changes 2`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="someIFrame"
+      title=""
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url tooltip changes 3`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="someIFrame"
+      title=""
+    >
+      123
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url url has ftp prefix 1`] = `
+<c-formatted-url
+  title="123"
+>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="_blank"
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url url has http prefix 1`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="http://foo/nns"
+      target="_blank"
+    >
+      http://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url url has https prefix 1`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="_blank"
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url url has title 1`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="_blank"
+      title="123"
+    >
+      https://foo/nns
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url url has title, and target is _self 1`] = `
+<c-formatted-url
+  title="123"
+>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="_self"
+    >
+      TheLabel
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url url has title, and target is a named iframe 1`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="https://foo/nns"
+      target="someIFrame"
+      title="123"
+    >
+      TheLabel
+    </a>
+</c-formatted-url>
+`;
+
+exports[`c-formatted-url url without prefix 1`] = `
+<c-formatted-url>
+  #shadow-root(open)
+    <a
+      href="http://foo/sss"
+      target="_blank"
+    >
+      http://foo/sss
+    </a>
+</c-formatted-url>
+`;

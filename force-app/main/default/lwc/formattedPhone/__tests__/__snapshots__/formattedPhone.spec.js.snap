@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-formatted-phone 10 digits, should be formatted. 1`] = `
+<c-formatted-phone>
+  #shadow-root(open)
+    <a
+      href="tel:4255552255"
+    >
+      (425) 555-2255
+    </a>
+</c-formatted-phone>
+`;
+
+exports[`c-formatted-phone 11 digits (not start with 1), should not be formatted. 1`] = `
+<c-formatted-phone>
+  #shadow-root(open)
+    <a
+      href="tel:24255552255"
+    >
+      24255552255
+    </a>
+</c-formatted-phone>
+`;
+
+exports[`c-formatted-phone 11 digits (start with 1), should be formatted. 1`] = `
+<c-formatted-phone>
+  #shadow-root(open)
+    <a
+      href="tel:14255552255"
+    >
+      (425) 555-2255
+    </a>
+</c-formatted-phone>
+`;
+
+exports[`c-formatted-phone If no phone number, should show nothing. 1`] = `
+<c-formatted-phone>
+  #shadow-root(open)
+</c-formatted-phone>
+`;
+
+exports[`c-formatted-phone Non North American Phone Number, should not be formatted. 1`] = `
+<c-formatted-phone>
+  #shadow-root(open)
+    <a
+      href="tel:+24255552255"
+    >
+      +24255552255
+    </a>
+</c-formatted-phone>
+`;
+
+exports[`c-formatted-phone North American Phone Number with extensions, should not be formatted 1`] = `
+<c-formatted-phone>
+  #shadow-root(open)
+    <a
+      href="tel:1234567890 ext. 225"
+    >
+      1234567890 ext. 225
+    </a>
+</c-formatted-phone>
+`;
+
+exports[`c-formatted-phone default 1`] = `
+<c-formatted-phone>
+  #shadow-root(open)
+</c-formatted-phone>
+`;

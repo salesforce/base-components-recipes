@@ -29,6 +29,10 @@ export { isChrome, isIE11, isSafari } from './browser';
 export { ContentMutation } from './contentMutation';
 export { observePosition } from './observers';
 export { hasOnlyAllowedVideoIframes } from './videoUtils';
+export {
+    parseToFormattedLinkifiedParts,
+    parseToFormattedParts
+} from './linkify';
 import { smartSetAttribute } from './smartSetAttribute';
 
 export function synchronizeAttrs(element, values) {
@@ -118,4 +122,30 @@ export function animationFrame() {
         // eslint-disable-next-line @lwc/lwc/no-async-operation
         window.requestAnimationFrame(resolve);
     });
+}
+
+export function decorateInputForDragon(element) {
+    const valuePropertyDescriptor = getInputValuePropertyDescriptor(element);
+
+    Object.defineProperty(element, 'value', {
+        set(value) {
+            valuePropertyDescriptor.set.call(this, value);
+            this.dispatchEvent(new CustomEvent('input'));
+        },
+        get: valuePropertyDescriptor.get,
+        enumerable: true,
+        configurable: true
+    });
+}
+
+function getInputValuePropertyDescriptor(element) {
+    return Object.getOwnPropertyDescriptor(
+        Object.getPrototypeOf(element),
+        'value'
+    );
+}
+
+export function setDecoratedDragonInputValueWithoutEvent(element, value) {
+    const valuePropertyDescriptor = getInputValuePropertyDescriptor(element);
+    return valuePropertyDescriptor.set.call(element, value);
 }

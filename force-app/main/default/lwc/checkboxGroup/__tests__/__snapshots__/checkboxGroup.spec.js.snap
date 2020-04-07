@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-checkbox-group default 1`] = `
+<c-checkbox-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset
+      aria-required="false"
+    >
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-checkbox"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="checkbox"
+            value="option1"
+          />
+          <label
+            class="slds-checkbox__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-checkbox_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Ross
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-checkbox"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="checkbox"
+            value="option2"
+          />
+          <label
+            class="slds-checkbox__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-checkbox_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Rachel
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</c-checkbox-group>
+`;
+
+exports[`c-checkbox-group disabled 1`] = `
+<c-checkbox-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset
+      aria-required="false"
+    >
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-checkbox"
+        >
+          <input
+            disabled=""
+            id="[shadow:guid]"
+            name="testGroup"
+            type="checkbox"
+            value="option1"
+          />
+          <label
+            class="slds-checkbox__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-checkbox_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Ross
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-checkbox"
+        >
+          <input
+            disabled=""
+            id="[shadow:guid]"
+            name="testGroup"
+            type="checkbox"
+            value="option2"
+          />
+          <label
+            class="slds-checkbox__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-checkbox_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Rachel
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</c-checkbox-group>
+`;
+
+exports[`c-checkbox-group one selected option 1`] = `
+<c-checkbox-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset
+      aria-required="false"
+    >
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-checkbox"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="checkbox"
+            value="option1"
+          />
+          <label
+            class="slds-checkbox__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-checkbox_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Ross
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-checkbox"
+        >
+          <input
+            id="[shadow:guid]"
+            name="testGroup"
+            type="checkbox"
+            value="option2"
+          />
+          <label
+            class="slds-checkbox__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-checkbox_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Rachel
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</c-checkbox-group>
+`;
+
+exports[`c-checkbox-group required and disabled 1`] = `
+<c-checkbox-group
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <fieldset
+      aria-required="true"
+    >
+      <legend
+        class="slds-form-element__legend slds-form-element__label"
+      >
+        <abbr
+          class="slds-required"
+          title="required"
+        >
+          *
+        </abbr>
+        testGroup
+      </legend>
+      <div
+        class="slds-form-element__control"
+      >
+        <span
+          class="slds-checkbox"
+        >
+          <input
+            disabled=""
+            id="[shadow:guid]"
+            name="testGroup"
+            type="checkbox"
+            value="option1"
+          />
+          <label
+            class="slds-checkbox__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-checkbox_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Ross
+            </span>
+          </label>
+        </span>
+        <span
+          class="slds-checkbox"
+        >
+          <input
+            disabled=""
+            id="[shadow:guid]"
+            name="testGroup"
+            type="checkbox"
+            value="option2"
+          />
+          <label
+            class="slds-checkbox__label"
+            for="[shadow:guid]"
+          >
+            <span
+              class="slds-checkbox_faux"
+            />
+            <span
+              class="slds-form-element__label"
+            >
+              Rachel
+            </span>
+          </label>
+        </span>
+      </div>
+    </fieldset>
+</c-checkbox-group>
+`;

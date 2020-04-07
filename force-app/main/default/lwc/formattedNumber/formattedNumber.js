@@ -47,11 +47,23 @@ export default class cFormattedNumber extends LightningElement {
             isFinite(value);
 
         if (canReturnValue) {
-            let valueToFormat = value;
+            const valueAsString = value.toString();
+
+            let valueToFormat = valueAsString;
 
             if (this.formatStyle === 'percent-fixed') {
                 options.style = 'percent';
+
                 valueToFormat = parseFloat(value) / 100;
+
+                if (
+                    valueAsString.indexOf('.') > 0 &&
+                    valueAsString.indexOf('e') < 0
+                ) {
+                    valueToFormat = valueToFormat.toFixed(
+                        valueAsString.split('.')[1].length + 2
+                    );
+                }
             }
             return numberFormat(options).format(valueToFormat);
         }

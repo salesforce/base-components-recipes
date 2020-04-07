@@ -10,7 +10,7 @@ import labelOverflowMoreAlternativeText from '@salesforce/label/c.lightning_Ligh
 import labelOverflowMoreTitle from '@salesforce/label/c.lightning_LightningTabs_overflowMoreTitle';
 import labelErrorStateAlternativeText from '@salesforce/label/c.lightning_LightningTabs_errorStateAlternativeText';
 
-import { LightningElement, api, track } from 'lwc';
+import { api, LightningElement, track } from 'lwc';
 import { classSet } from 'c/utils';
 import { calculateOverflow } from 'c/overflowLibrary';
 import { LightningResizeObserver } from 'c/resizeObserver';
@@ -32,7 +32,8 @@ export default class cTabBar extends LightningElement {
     @track _hasOverflow = false;
 
     @track _variant;
-    _tabsChanged = false;
+
+    @track _queueSynchronizeA11 = false;
 
     connectedCallback() {
         this._connected = true;
@@ -46,9 +47,9 @@ export default class cTabBar extends LightningElement {
             this._resizeObserver = this._setupResizeObserver();
         }
 
-        if (this._tabsChanged) {
-            this.synchronizeA11y();
-            this._tabsChanged = false;
+        if (this._queueSynchronizeA11) {
+            this._synchronizeA11y();
+            this._queueSynchronizeA11 = false;
         }
     }
 
@@ -81,10 +82,9 @@ export default class cTabBar extends LightningElement {
     }
 
     set tabHeaders(tabHeaders = []) {
-        this._tabsChanged = true;
         this._tabHeaders = tabHeaders;
         const allTabs = tabHeaders.map(tab => {
-            const classNames = this.tabClass({});
+            const classNames = this._tabClass({});
             const linkClassNames = this.computedLinkClass;
             return {
                 label: tab.label,
@@ -118,11 +118,13 @@ export default class cTabBar extends LightningElement {
         }
         if (selectedTab) {
             this._selectedTab = selectedTab;
-            selectedTab.class = this.tabClass({ selected: true });
+            selectedTab.class = this._tabClass({ selected: true });
             selectedTab.ariaSelected = 'true';
             selectedTab.tabIndex = 0;
         }
         this._allTabs = allTabs;
+
+        this._queueSynchronizeA11 = true;
 
         if (this._connected && this.overflowSupported) {
             // eslint-disable-next-line @lwc/lwc/no-async-operation
@@ -133,6 +135,20 @@ export default class cTabBar extends LightningElement {
     @api
     selectTabByValue(tabValue) {
         this._selectTab(tabValue);
+    }
+
+    @api
+    focus() {
+        if (!this._selectedTab) {
+            return;
+        }
+        const tab = this.template.querySelector(
+            `a[data-tab-value="${this._selectedTab.value}"]`
+        );
+
+        if (tab) {
+            tab.focus();
+        }
     }
 
     get overflowSupported() {
@@ -147,7 +163,7 @@ export default class cTabBar extends LightningElement {
         const isScopedVariant = this._variant === 'scoped';
         const isVerticalVariant = this.isVerticalVariant;
 
-        const linkClassNames = classSet()
+        return classSet()
             .add({
                 'slds-tabs_default__link':
                     !isScopedVariant && !isVerticalVariant,
@@ -155,7 +171,6 @@ export default class cTabBar extends LightningElement {
                 'slds-vertical-tabs__link': isVerticalVariant
             })
             .toString();
-        return linkClassNames;
     }
 
     get computedOverflowVisibility() {
@@ -164,6 +179,43 @@ export default class cTabBar extends LightningElement {
 
     get i18n() {
         return i18n;
+    }
+
+    get _visibleTabs() {
+        return this._allTabs.filter(tab => tab.visible);
+    }
+
+    get computedAriaOrientation() {
+        return this.isVerticalVariant ? 'vertical' : null;
+    }
+
+    get computedListClass() {
+        const isScoped = this._variant === 'scoped';
+        const isVertical = this.isVerticalVariant;
+        return classSet()
+            .add({
+                'slds-tabs_scoped__nav': isScoped,
+                'slds-vertical-tabs__nav': isVertical,
+                'slds-tabs_default__nav': !isScoped && !isVertical
+            })
+            .toString();
+    }
+
+    get computedLeftIconClass() {
+        return this.isVerticalVariant
+            ? 'slds-vertical-tabs__left-icon'
+            : 'slds-tabs__left-icon';
+    }
+
+    get computedRightIconClass() {
+        return this.isVerticalVariant
+            ? 'slds-vertical-tabs__right-icon'
+            : 'slds-tabs__right-icon';
+    }
+
+    get computedOverflowClass() {
+        const tabStyle = this._variant === 'scoped' ? 'scoped' : 'default';
+        return `slds-tabs_${tabStyle}__item slds-tabs_${tabStyle}__overflow-button`;
     }
 
     handleOverflowSelect(event) {
@@ -178,8 +230,8 @@ export default class cTabBar extends LightningElement {
     handleTabClick(event) {
         event.preventDefault();
 
-        const clickedtabValue = event.target.getAttribute('data-tab-value');
-        this._selectTabAndFireSelectEvent(clickedtabValue, { hasFocus: true });
+        const clickedTabValue = event.target.getAttribute('data-tab-value');
+        this._selectTabAndFireSelectEvent(clickedTabValue, { hasFocus: true });
     }
 
     _findTabByValue(tabValue) {
@@ -215,12 +267,12 @@ export default class cTabBar extends LightningElement {
 
             this._selectedTab.hasFocus = false;
             this._selectedTab.ariaSelected = 'false';
-            this._selectedTab.class = this.tabClass({});
+            this._selectedTab.class = this._tabClass({});
             this._selectedTab.tabIndex = -1;
         }
         tab.hasFocus = true;
         tab.ariaSelected = 'true';
-        tab.class = this.tabClass({
+        tab.class = this._tabClass({
             selected: true,
             hasFocus: options.hasFocus
         });
@@ -234,7 +286,7 @@ export default class cTabBar extends LightningElement {
         const tabValue = event.target.getAttribute('data-tab-value');
         const tab = this._findTabByValue(tabValue);
         if (tab) {
-            tab.class = this.tabClass({
+            tab.class = this._tabClass({
                 selected: this._selectedTab.value === tab.value,
                 hasFocus: false
             });
@@ -245,14 +297,10 @@ export default class cTabBar extends LightningElement {
         const tabValue = event.target.getAttribute('data-tab-value');
         const tab = this._findTabByValue(tabValue);
 
-        tab.class = this.tabClass({
+        tab.class = this._tabClass({
             selected: this._selectedTab.value === tab.value,
             hasFocus: true
         });
-    }
-
-    get _visibleTabs() {
-        return this._allTabs.filter(tab => tab.visible);
     }
 
     handleKeyDown(event) {
@@ -279,23 +327,7 @@ export default class cTabBar extends LightningElement {
         });
     }
 
-    get computedAriaOrientation() {
-        return this.isVerticalVariant ? 'vertical' : null;
-    }
-
-    get computedListClass() {
-        const isScoped = this._variant === 'scoped';
-        const isVertical = this.isVerticalVariant;
-        return classSet()
-            .add({
-                'slds-tabs_scoped__nav': isScoped,
-                'slds-vertical-tabs__nav': isVertical,
-                'slds-tabs_default__nav': !isScoped && !isVertical
-            })
-            .toString();
-    }
-
-    tabClass({ selected = false, hasFocus = false }) {
+    _tabClass({ selected = false, hasFocus = false }) {
         const isScopedVariant = this._variant === 'scoped';
         const isVertical = this.isVerticalVariant;
         return classSet()
@@ -309,24 +341,7 @@ export default class cTabBar extends LightningElement {
             .toString();
     }
 
-    get computedLeftIconClass() {
-        return this.isVerticalVariant
-            ? 'slds-vertical-tabs__left-icon'
-            : 'slds-tabs__left-icon';
-    }
-
-    get computedRightIconClass() {
-        return this.isVerticalVariant
-            ? 'slds-vertical-tabs__right-icon'
-            : 'slds-tabs__right-icon';
-    }
-
-    get computedOverflowClass() {
-        const tabStyle = this._variant === 'scoped' ? 'scoped' : 'default';
-        return `slds-tabs_${tabStyle}__item slds-tabs_${tabStyle}__overflow-button`;
-    }
-
-    synchronizeA11y() {
+    _synchronizeA11y() {
         const tabLinks = this.template.querySelectorAll('a[role="tab"]');
 
         tabLinks.forEach(tabLink => {
@@ -419,5 +434,7 @@ export default class cTabBar extends LightningElement {
                 overflowItem.visible = true;
             }
         });
+
+        this._queueSynchronizeA11 = true;
     }
 }

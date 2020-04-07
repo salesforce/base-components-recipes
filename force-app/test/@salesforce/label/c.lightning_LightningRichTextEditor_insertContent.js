@@ -1,0 +1,1 @@
+export default 'Insert content';

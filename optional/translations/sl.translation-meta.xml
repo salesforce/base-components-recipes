@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>Gostujoči porabniki ne smejo nalagati slik.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>obvezno</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>Počisti</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Povečaj številko</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Zmanjšaj številko</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>Opozorilo</label>
@@ -427,6 +439,14 @@
   <customLabels>
     <label>Dejanja</label>
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Način krmarjenja</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Način ukrepanja</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
     <label>Novi elementi</label>
@@ -697,11 +717,11 @@
     <name>lightning_LightningLookup_search</name>
   </customLabels>
   <customLabels>
-    <label>Iskanje {0} ...</label>
+    <label>Iskanje {0}...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
   </customLabels>
   <customLabels>
-    <label>Iskanje ...</label>
+    <label>Iskanje...</label>
     <name>lightning_LightningLookup_searchPlaceholder</name>
   </customLabels>
   <customLabels>
@@ -745,7 +765,7 @@
     <name>lightning_LightningPrimitiveCoordinate_selected</name>
   </customLabels>
   <customLabels>
-    <label>Nalaganje elementov menija ...</label>
+    <label>Nalaganje elementov menija...</label>
     <name>lightning_LightningButtonMenu_loading</name>
   </customLabels>
   <customLabels>
@@ -779,5 +799,9 @@
   <customLabels>
     <label>Zapri</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>Storitev sporočanja Lightning – vaša komponenta mora biti upodobljena, da lahko začnete objavljati v kanalu: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
   </customLabels>
 </Translations>

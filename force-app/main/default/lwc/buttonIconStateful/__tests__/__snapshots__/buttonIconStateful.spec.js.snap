@@ -1,0 +1,401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-button-icon-stateful border filled variant with iconName and size small 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-border-filled"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful border variant with iconName and size small 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-small"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful default 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key=""
+            focusable="false"
+          >
+            <use
+              xlink:href=""
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful default variant with iconName 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="like"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#like"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful invalid size large 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful outputs title and assitive text span 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="true"
+      class="slds-button slds-button_icon slds-button_icon-border slds-is-selected"
+      role="button"
+      title="Click to answer"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+      <span
+        class="slds-assistive-text"
+      >
+        Click to answer
+      </span>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful selected state 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="true"
+      class="slds-button slds-button_icon slds-button_icon-border slds-is-selected"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="salesforce1"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful should match snapshot with aria-attributes 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-atomic="true"
+      aria-expanded="true"
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful should not set any aria-attribute and match snapshot 1`] = `
+<c-button-icon-stateful
+  tabindex="-1"
+>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful size change from default to small and selected state 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="true"
+      class="slds-button slds-button_icon slds-button_icon-border slds-is-selected slds-button_icon-small"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="salesforce1"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful size small 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-small"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful size x-small 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-x-small"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful size xx-small 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-xx-small"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful unsupported variant with iconName 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="answer"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;
+
+exports[`c-button-icon-stateful variant change from border to border-inverse 1`] = `
+<c-button-icon-stateful>
+  #shadow-root(open)
+    <button
+      aria-pressed="false"
+      class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-inverse"
+      role="button"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="salesforce1"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon-stateful>
+`;

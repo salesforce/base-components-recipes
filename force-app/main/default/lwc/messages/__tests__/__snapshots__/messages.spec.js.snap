@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-messages default 1`] = `
+<c-messages>
+  #shadow-root(open)
+    <div
+      class="slds-notify_container slds-is-relative"
+    >
+      <div
+        class="slds-notify slds-notify_toast slds-theme_error"
+        role="alert"
+      >
+        <div
+          class="slds-notify__content"
+        >
+          <h2
+            class="slds-text-heading_small"
+          >
+            bar
+          </h2>
+          <p>
+            foo
+          </p>
+        </div>
+      </div>
+    </div>
+</c-messages>
+`;
+
+exports[`c-messages has no error 1`] = `
+<c-messages>
+  #shadow-root(open)
+</c-messages>
+`;
+
+exports[`c-messages just a message 1`] = `
+<c-messages>
+  #shadow-root(open)
+    <div
+      class="slds-notify_container slds-is-relative"
+    >
+      <div
+        class="slds-notify slds-notify_toast slds-theme_error"
+        role="alert"
+      >
+        <div
+          class="slds-notify__content"
+        >
+          <h2
+            class="slds-text-heading_small"
+          >
+            bar
+          </h2>
+        </div>
+      </div>
+    </div>
+</c-messages>
+`;

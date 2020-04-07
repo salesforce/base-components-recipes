@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-primitive-icon default (size=medium, variant="", svg renders but is blank) 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-default"
+      data-key=""
+      focusable="false"
+    >
+      <use
+        xlink:href=""
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon iconName value change from utility:salesforce1 to standard:account 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-default"
+      data-key="account"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for size change from small to large 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-default slds-icon_large"
+      data-key="text_background_color"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_background_color"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for size large 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-default slds-icon_large"
+      data-key="text_background_color"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_background_color"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for size medium 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-default"
+      data-key="text_background_color"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_background_color"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for size small 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-default slds-icon_small"
+      data-key="text_background_color"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_background_color"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for size x-small 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-default slds-icon_x-small"
+      data-key="text_background_color"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_background_color"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for size xx-small 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-default slds-icon_xx-small"
+      data-key="text_background_color"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#text_background_color"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for variant bare 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class=""
+      data-key="salesforce1"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for variant change from inverse to error 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-error"
+      data-key="salesforce1"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for variant error 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-error"
+      data-key="salesforce1"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for variant inverse 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon"
+      data-key="salesforce1"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+      />
+    </svg>
+</c-primitive-icon>
+`;
+
+exports[`c-primitive-icon should render as expected for variant warning 1`] = `
+<c-primitive-icon>
+  #shadow-root(open)
+    <svg
+      aria-hidden="true"
+      class="slds-icon slds-icon-text-warning"
+      data-key="salesforce1"
+      focusable="false"
+    >
+      <use
+        xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"
+      />
+    </svg>
+</c-primitive-icon>
+`;

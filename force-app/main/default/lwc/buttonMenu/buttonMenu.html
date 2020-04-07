@@ -6,8 +6,7 @@
  -->
 
 <template>
-    <button
-        class={computedButtonClass}
+    <button class={computedButtonClass}
         disabled={disabled}
         aria-expanded={computedAriaExpanded}
         title={computedTitle}
@@ -19,57 +18,37 @@
         onblur={handleBlur}
         onfocus={handleFocus}
         type="button"
-        onmousedown={handleButtonMouseDown}
-    >
-        <abbr
-            if:true={isDraft}
-            class="slds-indicator_unsaved slds-p-right_xx-small"
-            title={draftAlternativeText}
-            >*</abbr
-        >
+        onmousedown={handleButtonMouseDown}>
+
+        <abbr if:true={isDraft} class="slds-indicator_unsaved slds-p-right_xx-small" title={draftAlternativeText}>*</abbr>
         {label}
 
-        <c-primitive-icon
-            icon-name={iconName}
-            svg-class="slds-button__icon"
-            variant="bare"
-        ></c-primitive-icon>
+        <c-primitive-icon icon-name={iconName} svg-class="slds-button__icon" variant="bare"></c-primitive-icon>
 
         <template if:true={computedShowDownIcon}>
-            <c-primitive-icon
-                icon-name="utility:down"
-                svg-class="slds-button__icon slds-button__icon_x-small slds-m-left_xx-small"
-                variant="bare"
-            ></c-primitive-icon>
+            <c-primitive-icon icon-name="utility:down" svg-class="slds-button__icon slds-button__icon_x-small slds-m-left_xx-small" variant="bare"></c-primitive-icon>
         </template>
 
         <span class="slds-assistive-text">{computedAlternativeText}</span>
     </button>
     <template if:true={_dropdownOpened}>
-        <div
-            class={computedDropdownClass}
-            onmousedown={handleDropdownMouseDown}
-            onmouseup={handleDropdownMouseUp}
-            onmouseleave={handleDropdownMouseLeave}
-            onscroll={handleDropdownScroll}
-        >
+        <div class={computedDropdownClass}
+             onmousedown={handleDropdownMouseDown}
+             onmouseup={handleDropdownMouseUp}
+             onmouseleave={handleDropdownMouseLeave}
+             onscroll={handleDropdownScroll}>
             <template if:true={isLoading}>
-                <c-spinner
-                    size="small"
-                    alternative-text={computedLoadingStateAlternativeText}
-                ></c-spinner>
+                <c-spinner size="small" alternative-text={computedLoadingStateAlternativeText}></c-spinner>
             </template>
             <template if:false={isLoading}>
-                <div
-                    class="slds-dropdown__list"
+                <div class="slds-dropdown__list slds-dropdown_length-with-icon-10"
                     role="menu"
                     onprivateselect={handleMenuItemPrivateSelect}
                     onprivateblur={handlePrivateBlur}
                     onprivatefocus={handlePrivateFocus}
                     onmouseover={handleMouseOverOnMenuItem}
                     onmouseout={allowBlur}
-                    onkeydown={handleKeyOnMenuItem}
-                >
+                    onkeydown={handleKeyOnMenuItem}>
                     <slot></slot>
                 </div>
             </template>

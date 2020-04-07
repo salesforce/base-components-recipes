@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-layout-item alignment-bump 1`] = `
+<c-layout-item
+  class="slds-size_12-of-12 slds-col_bump-right"
+>
+  #shadow-root(open)
+    <slot />
+</c-layout-item>
+`;
+
+exports[`c-layout-item default 1`] = `
+<c-layout-item
+  class="slds-size_12-of-12"
+>
+  #shadow-root(open)
+    <slot />
+</c-layout-item>
+`;
+
+exports[`c-layout-item flexibility 1`] = `
+<c-layout-item
+  class="slds-col slds-grow slds-shrink slds-size_12-of-12"
+>
+  #shadow-root(open)
+    <slot />
+</c-layout-item>
+`;
+
+exports[`c-layout-item padding 1`] = `
+<c-layout-item
+  class="slds-p-around_medium slds-size_12-of-12"
+>
+  #shadow-root(open)
+    <slot />
+</c-layout-item>
+`;

@@ -31,19 +31,11 @@
                     onblur={handleBlur}
                     ontouchmove={handleTouchMove}
                 />
-                <span class="slds-slider__value" aria-hidden="true"
-                    >{formattedValue}</span
-                >
+                <span class="slds-slider__value" aria-hidden="true">{formattedValue}</span>
             </div>
         </div>
         <template if:true={_helpMessage}>
-            <div
-                id="message-id"
-                class="slds-form-element__help"
-                aria-live="assertive"
-            >
-                {_helpMessage}
-            </div>
+            <div id="message-id" class="slds-form-element__help" aria-live="assertive">{_helpMessage}</div>
         </template>
     </div>
 </template>

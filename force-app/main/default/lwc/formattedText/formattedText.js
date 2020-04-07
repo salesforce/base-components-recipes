@@ -6,11 +6,11 @@
  */
 
 import { LightningElement, api, track } from 'lwc';
-import { normalizeBoolean } from 'c/utilsPrivate';
 import {
+    normalizeBoolean,
     parseToFormattedLinkifiedParts,
     parseToFormattedParts
-} from './linkify';
+} from 'c/utilsPrivate';
 
 export default class FormattedText extends LightningElement {
     @api value = '';
