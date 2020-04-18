@@ -818,6 +818,59 @@
                     </c-button-menu>
                 </div>
             </div>
+
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                    Button-menu with only <code>menu-item</code> elements,
+                    nubbin, and menu-alignment attributes set.
+                </h2>
+
+                <div class="slds-p-around_medium lgc-bg">
+                    <c-button-menu alternative-text="Show menu" nubbin>
+                        <c-menu-item
+                            value="MenuItemOne"
+                            label="Menu Item One"
+                        ></c-menu-item>
+                        <c-menu-item
+                            value="MenuItemTwo"
+                            label="Menu Item Two"
+                        ></c-menu-item>
+                        <c-menu-item
+                            value="MenuItemThree"
+                            label="Menu Item Three"
+                        ></c-menu-item>
+                        <c-menu-item
+                            value="MenuItemFour"
+                            label="Menu Item Four"
+                        ></c-menu-item>
+                    </c-button-menu>
+
+                    <c-button-menu
+                        alternative-text="Show menu"
+                        menu-alignment="center"
+                        nubbin
+                        class="slds-m-left_xx-small"
+                    >
+                        <c-menu-item
+                            value="MenuItemOne"
+                            label="Menu Item One"
+                        ></c-menu-item>
+                        <c-menu-item
+                            value="MenuItemTwo"
+                            label="Menu Item Two"
+                        ></c-menu-item>
+                        <c-menu-item
+                            value="MenuItemThree"
+                            label="Menu Item Three"
+                        ></c-menu-item>
+                        <c-menu-item
+                            value="MenuItemFour"
+                            label="Menu Item Four"
+                        ></c-menu-item>
+                    </c-button-menu>
+                </div>
+            </div>
+
             <c-view-source source="buttonMenuRecipes" slot="footer">
                 Button menus have more than 20 variations.
             </c-view-source>
