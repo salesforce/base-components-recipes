@@ -7,17 +7,47 @@
 <template>
     <c-card title="Spinner">
         <div class="slds-card__body slds-card__body_inner">
-            <div class="exampleHolder">
+            
                 <template if:true={loaded}>
                     Put loaded content here
                 </template>
                 <template if:false={loaded}>
-                    <c-spinner
-                        alternative-text="Loading"
-                        size="large"
-                    ></c-spinner>
+                    <div class="slds-align_absolute-center">
+                        <div class="exampleHolder">
+                            <c-spinner alternative-text="Loading" size="small"></c-spinner>
+                        </div>
+                        <div class="exampleHolder">
+                            <c-spinner alternative-text="Loading" size="medium"></c-spinner>
+                        </div>
+                        <div class="exampleHolder">
+                            <c-spinner alternative-text="Loading" size="large"></c-spinner>
+                        </div>
+                    </div>
+                        <br>
+                    <div class="slds-align_absolute-center">
+                        <div class="exampleHolder">
+                            <c-spinner alternative-text="Loading" size="small" variant="brand"></c-spinner>
+                        </div>
+                        <div class="exampleHolder">
+                            <c-spinner alternative-text="Loading" size="medium" variant="brand"></c-spinner>
+                        </div>
+                        <div class="exampleHolder">
+                            <c-spinner alternative-text="Loading" size="large" variant="brand"></c-spinner>
+                        </div>
+                    </div>
+                        <br>
+                    <div class="slds-align_absolute-center">
+                        <div class="exampleHolder backgroundInverse">
+                            <c-spinner alternative-text="Loading" size="small" variant="inverse"></c-spinner>
+                        </div>
+                        <div class="exampleHolder backgroundInverse">
+                            <c-spinner alternative-text="Loading" size="medium" variant="inverse"></c-spinner>
+                        </div>
+                        <div class="exampleHolder backgroundInverse">
+                            <c-spinner alternative-text="Loading" size="large" variant="inverse"></c-spinner>
+                        </div>
+                    </div>
                 </template>
-            </div>
             <div>
                 <c-button
                     label="Toggle Spinner"

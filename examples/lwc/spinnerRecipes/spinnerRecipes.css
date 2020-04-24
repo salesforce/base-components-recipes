@@ -6,5 +6,11 @@
  */
 .exampleHolder {
     position: relative;
-    min-height: 4rem;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+}
+
+.backgroundInverse {
+    background-color: #16325c;
 }

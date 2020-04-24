@@ -6,4 +6,14 @@
  */
 import { LightningElement } from 'lwc';
 
-export default class TileRecipes extends LightningElement {}
+export default class TileRecipes extends LightningElement {
+    actions = [
+        {label: 'Edit', value: 'edit', iconName: 'utility:edit'},
+        {label: 'Delete', value: 'delete', iconName: 'utility:delete'},
+    ];
+    
+    handleAction(event) {
+        const actionValue = event.detail.action.value;
+        console.log(`Action value selected: ${actionValue}`);
+    }
+}

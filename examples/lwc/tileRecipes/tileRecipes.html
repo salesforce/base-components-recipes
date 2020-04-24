@@ -230,6 +230,33 @@
                     </ul>
                 </div>
             </div>
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                    A tile component with actions.
+                </h2>
+
+                <!-- With actions -->
+                <div class="slds-p-around_medium lgc-bg">
+                    <c-tile label="Bruce Wayne"
+                        href="/bruce.html"
+                        type="media"
+                        actions={actions}
+                        onactiontriggered={handleAction} >
+                        <c-avatar
+                            slot="media"
+                            src="https://www.cdesignsystem.com/assets/images/avatar1.jpg"
+                            fallback-icon-name="standard:person_account"
+                            alternative-text="Bruce Wayne"
+                        ></c-avatar>
+                        <ul
+                            class="slds-list_horizontal slds-has-dividers_right"
+                        >
+                            <li class="slds-item">Billionaire, Gotham City</li>
+                            <li class="slds-item">Dark Knight</li>
+                        </ul>
+                    </c-tile>
+                </div>
+            </div>
             <c-view-source source="tileRecipes" slot="footer">
                 A grouping of related information associated with a record.
             </c-view-source>
