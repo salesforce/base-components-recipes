@@ -124,19 +124,7 @@ export function animationFrame() {
     });
 }
 
-export function decorateInputForDragon(element) {
-    const valuePropertyDescriptor = getInputValuePropertyDescriptor(element);
-
-    Object.defineProperty(element, 'value', {
-        set(value) {
-            valuePropertyDescriptor.set.call(this, value);
-            this.dispatchEvent(new CustomEvent('input'));
-        },
-        get: valuePropertyDescriptor.get,
-        enumerable: true,
-        configurable: true
-    });
-}
+export function decorateInputForDragon(element) {}
 
 function getInputValuePropertyDescriptor(element) {
     return Object.getOwnPropertyDescriptor(
@@ -146,6 +134,6 @@ function getInputValuePropertyDescriptor(element) {
 }
 
 export function setDecoratedDragonInputValueWithoutEvent(element, value) {
-    const valuePropertyDescriptor = getInputValuePropertyDescriptor(element);
-    return valuePropertyDescriptor.set.call(element, value);
+    element.value = value;
+    return value;
 }
