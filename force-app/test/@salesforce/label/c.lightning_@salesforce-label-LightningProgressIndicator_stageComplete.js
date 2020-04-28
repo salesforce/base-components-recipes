@@ -1,0 +1,1 @@
+export default 'Stage Complete';

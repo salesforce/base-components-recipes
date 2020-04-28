@@ -171,10 +171,30 @@ describe('c-output-field', () => {
     });
 
     describe('formatted-address', () => {
-        it('Default Address', () => {
+        it('should render address when display value is available', () => {
             const element = createOutputField('BillingAddress');
             return waitForReady(element).then(() => {
-                return expect(element).toMatchSnapshot();
+                const formattedAddress = element.shadowRoot.querySelector(
+                    'lightning-formatted-address'
+                );
+
+                expect(formattedAddress.shadowRoot.textContent).toEqual(
+                    '11 Farm AvenueHartford, Alaska 6156United States'
+                );
+            });
+        });
+
+        it('should render address when display value is null', () => {
+            const element = createOutputField('ShippingAddress');
+
+            return waitForReady(element).then(() => {
+                const formattedAddress = element.shadowRoot.querySelector(
+                    'lightning-formatted-address'
+                );
+
+                expect(formattedAddress.shadowRoot.textContent).toEqual(
+                    '11 Farm AvenueHartford, AK 6156US'
+                );
             });
         });
     });

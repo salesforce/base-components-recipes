@@ -54,8 +54,8 @@ export default class cRecordForm extends LightningElement {
     @track cols = 1;
     @track _loading = true;
     @track fieldsReady = false;
+    @track _recordTypeId;
 
-    @api recordTypeId;
     _record;
     _firstLoad = true;
     _loadError = false;
@@ -130,12 +130,24 @@ export default class cRecordForm extends LightningElement {
         });
     }
 
+    set recordTypeId(val) {
+        this._recordTypeId = val;
+
+        this._fieldsHandled = false;
+    }
+
+    @api get recordTypeId() {
+        return this._recordTypeId;
+    }
+
     set recordId(val) {
         if (!val && !this._mode) {
             this._editMode = true;
         }
 
         this._recordId = normalizeRecordId(val);
+
+        this._fieldsHandled = false;
     }
 
     @api get recordId() {

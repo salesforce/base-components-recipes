@@ -8,6 +8,7 @@
 import { createElement } from 'lwc';
 import Element from 'c/recordForm';
 import store from './mockdata.json';
+import accountStore from './mockBusinessAndPersonAccountData.json';
 import {
     shadowQuerySelector,
     shadowQuerySelectorAll
@@ -47,7 +48,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -77,7 +78,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -110,7 +111,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -143,7 +144,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -174,7 +175,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -215,7 +216,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -282,7 +283,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -335,7 +336,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layouts,
                         record: store.records.LEADDEFAULTS
                     }
@@ -388,7 +389,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layouts,
                         record: store.records.LEADDEFAULTS
                     }
@@ -432,7 +433,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -463,7 +464,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         records: store.records
                     }
@@ -501,7 +502,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         records: store.records
                     }
@@ -533,7 +534,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         records: store.records
                     }
@@ -570,7 +571,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -602,7 +603,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         records: store.records
                     }
@@ -640,7 +641,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         records: store.records
                     }
@@ -678,7 +679,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -824,7 +825,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -858,7 +859,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         records: store.records
                     }
@@ -890,7 +891,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -922,7 +923,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         record: store.records.LEADDEFAULTS
                     }
@@ -940,6 +941,7 @@ describe('record form', () => {
             });
         });
     });
+
     it('should not gack when input recordId is 15-digit long', () => {
         const element = createForm({
             objectApiName: 'Lead',
@@ -954,7 +956,7 @@ describe('record form', () => {
             form.dispatchEvent(
                 new CustomEvent('load', {
                     detail: {
-                        objectInfos: { Lead: store.objectInfo },
+                        objectInfos: store.objectInfos,
                         layout: store.layouts.Lead.Full.View,
                         records: store.records
                     }
@@ -971,6 +973,144 @@ describe('record form', () => {
                 expect(length).toBeGreaterThan(0);
             });
         });
+    });
+
+    it('should update the rendered fields when changing recordType', () => {
+        const element = createForm({
+            objectApiName: 'Account',
+            mode: 'edit',
+            layoutType: 'Full',
+            recordTypeId: '012xx0000005s0WAAQ'
+        });
+
+        function findInFields(fields, fieldName) {
+            return fields.find(field => {
+                return field.fieldName === fieldName;
+            });
+        }
+
+        return Promise.resolve()
+            .then(() => {
+                shadowQuerySelector(
+                    element,
+                    'c-record-edit-form'
+                ).dispatchEvent(
+                    new CustomEvent('load', {
+                        detail: {
+                            objectInfos: accountStore.objectInfos,
+                            layout: accountStore.layouts.BusinessAccount,
+                            record: accountStore.records.BACreate
+                        }
+                    })
+                );
+            })
+            .then(() => {
+                const inputFields = shadowQuerySelectorAll(
+                    element,
+                    'lightning-input-field'
+                );
+
+                expect(
+                    findInFields(inputFields, 'PersonMailingAddress')
+                ).toBeUndefined();
+                expect(
+                    findInFields(inputFields, 'ParentId')
+                ).not.toBeUndefined();
+
+                element.recordTypeId = '012xx0000005s28AAA';
+                shadowQuerySelector(
+                    element,
+                    'c-record-edit-form'
+                ).dispatchEvent(
+                    new CustomEvent('load', {
+                        detail: {
+                            objectInfos: accountStore.objectInfos,
+                            layout: accountStore.layouts.PersonAccount,
+                            record: accountStore.records.PACreate
+                        }
+                    })
+                );
+            })
+            .then(() => {
+                const inputFields = shadowQuerySelectorAll(
+                    element,
+                    'lightning-input-field'
+                );
+
+                expect(
+                    findInFields(inputFields, 'PersonMailingAddress')
+                ).not.toBeUndefined();
+                expect(findInFields(inputFields, 'ParentId')).toBeUndefined();
+            });
+    });
+
+    it('should update the rendered fields when switching to a record with a different recordType', () => {
+        const element = createForm({
+            objectApiName: 'Account',
+            mode: 'edit',
+            layoutType: 'Full',
+            recordId: '001xx000003GaUNAA0'
+        });
+
+        function findInFields(fields, fieldName) {
+            return fields.find(field => {
+                return field.fieldName === fieldName;
+            });
+        }
+
+        return Promise.resolve()
+            .then(() => {
+                shadowQuerySelector(
+                    element,
+                    'c-record-edit-form'
+                ).dispatchEvent(
+                    new CustomEvent('load', {
+                        detail: {
+                            objectInfos: accountStore.objectInfos,
+                            layout: accountStore.layouts.BusinessAccount,
+                            record: accountStore.records['001xx000003GaUNAA0']
+                        }
+                    })
+                );
+            })
+            .then(() => {
+                const inputFields = shadowQuerySelectorAll(
+                    element,
+                    'lightning-input-field'
+                );
+
+                expect(
+                    findInFields(inputFields, 'PersonMailingAddress')
+                ).toBeUndefined();
+                expect(
+                    findInFields(inputFields, 'ParentId')
+                ).not.toBeUndefined();
+
+                element.recordId = '001xx000003GaSlAAK';
+                shadowQuerySelector(
+                    element,
+                    'c-record-edit-form'
+                ).dispatchEvent(
+                    new CustomEvent('load', {
+                        detail: {
+                            objectInfos: accountStore.objectInfos,
+                            layout: accountStore.layouts.PersonAccount,
+                            record: accountStore.records['001xx000003GaSlAAK']
+                        }
+                    })
+                );
+            })
+            .then(() => {
+                const inputFields = shadowQuerySelectorAll(
+                    element,
+                    'lightning-input-field'
+                );
+
+                expect(
+                    findInFields(inputFields, 'PersonMailingAddress')
+                ).not.toBeUndefined();
+                expect(findInFields(inputFields, 'ParentId')).toBeUndefined();
+            });
     });
 
     describe('columns', () => {

@@ -164,12 +164,12 @@
         <c-formatted-name
             if:true={isTypeName}
             class={computedFieldClass}
-            salutation={value.Salutation}
-            first-name={value.FirstName}
-            last-name={value.LastName}
-            middle-name={value.MiddleName}
-            suffix={value.Suffix}
-            informal-name={value.InformalName}
+            salutation={displayValue.Salutation}
+            first-name={displayValue.FirstName}
+            last-name={displayValue.LastName}
+            middle-name={displayValue.MiddleName}
+            suffix={displayValue.Suffix}
+            informal-name={displayValue.InformalName}
         >
         </c-formatted-name>
 
@@ -177,11 +177,11 @@
         <lightning-formatted-address
             if:true={isTypeAddress}
             class={computedFieldClass}
-            street={value.Street}
-            city={value.City}
-            country={value.Country}
-            province={value.State}
-            postal-code={value.PostalCode}
+            street={displayValue.Street}
+            city={displayValue.City}
+            country={displayValue.Country}
+            province={displayValue.State}
+            postal-code={displayValue.PostalCode}
         >
         </lightning-formatted-address>
         <slot></slot>

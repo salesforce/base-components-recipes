@@ -868,8 +868,8 @@
                 "value": null
             },
             "Salutation": {
-                "displayValue": null,
-                "value": null
+                "displayValue": "Mister",
+                "value": "Mr."
             },
             "StateCode": {
                 "displayValue": null,

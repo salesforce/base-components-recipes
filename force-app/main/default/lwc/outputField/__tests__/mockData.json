@@ -139,6 +139,54 @@
                 "compoundFieldName": "BillingAddress",
                 "dataType": "TextArea",
                 "label": "Street"
+            },
+            "ShippingAddress": {
+                "apiName": "ShippingAddress",
+                "compound": true,
+                "compoundComponentName": null,
+                "compoundFieldName": null,
+                "dataType": "Address",
+                "label": "Address"
+            },
+            "ShippingCity": {
+                "apiName": "ShippingCity",
+                "compound": false,
+                "compoundComponentName": "ShippingCity",
+                "compoundFieldName": "ShippingAddress",
+                "dataType": "String",
+                "label": "City"
+            },
+            "ShippingCountry": {
+                "apiName": "ShippingCountry",
+                "compound": false,
+                "compoundComponentName": "ShippingCountry",
+                "compoundFieldName": "ShippingAddress",
+                "dataType": "String",
+                "label": "Country"
+            },
+            "ShippingPostalCode": {
+                "apiName": "ShippingPostalCode",
+                "compound": false,
+                "compoundComponentName": "ShippingPostalCode",
+                "compoundFieldName": "ShippingAddress",
+                "dataType": "String",
+                "label": "Zip/Postal Code"
+            },
+            "ShippingState": {
+                "apiName": "ShippingState",
+                "compound": false,
+                "compoundComponentName": "ShippingState",
+                "compoundFieldName": "ShippingAddress",
+                "dataType": "String",
+                "label": "State/Province"
+            },
+            "ShippingStreet": {
+                "apiName": "ShippingStreet",
+                "compound": false,
+                "compoundComponentName": "ShippingStreet",
+                "compoundFieldName": "ShippingAddress",
+                "dataType": "TextArea",
+                "label": "Street"
             }
         }
     },
@@ -186,7 +234,7 @@
                 "value": "Steele"
             },
             "Salutation": {
-                "displayValue": null,
+                "displayValue": "Mister",
                 "value": "Mr."
             },
             "BillingCity": {
@@ -206,6 +254,27 @@
                 "value": "US"
             },
             "BillingPostalCode": {
+                "displayValue": null,
+                "value": "6156"
+            },
+
+            "ShippingCity": {
+                "displayValue": null,
+                "value": "Hartford"
+            },
+            "ShippingStreet": {
+                "displayValue": null,
+                "value": "11 Farm Avenue"
+            },
+            "ShippingState": {
+                "displayValue": null,
+                "value": "AK"
+            },
+            "ShippingCountry": {
+                "displayValue": null,
+                "value": "US"
+            },
+            "ShippingPostalCode": {
                 "displayValue": null,
                 "value": "6156"
             }

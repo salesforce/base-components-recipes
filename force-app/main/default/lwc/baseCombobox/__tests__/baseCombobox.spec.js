@@ -59,6 +59,11 @@ describe('c-base-combobox', () => {
     beforeAll(() => {
         jest.useFakeTimers();
     });
+
+    beforeEach(() => {
+        global.innerHeight = 1024;
+    });
+
     describe('renders properly', () => {
         it('with items', () => {
             const element = createComponent({
@@ -397,6 +402,25 @@ describe('c-base-combobox', () => {
                 ).toBe(
                     indexes.reduce((a, b) => a + b, 0) + selectableItemsAmount
                 );
+            });
+        });
+
+        it('should render less options when viewport height is small', () => {
+            global.innerHeight = 700;
+
+            const element = createComponent({
+                label: 'List Box Example',
+                items: exampleData.exampleItems
+            });
+
+            return Promise.resolve().then(() => {
+                const dropdown = shadowQuerySelector(element, '.slds-dropdown');
+
+                expect(
+                    dropdown.classList.contains(
+                        'slds-dropdown_length-with-icon-7'
+                    )
+                ).toBe(true);
             });
         });
     });

@@ -610,7 +610,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         <c-base-combobox-item
           aria-selected="true"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
-          data-item-id="input-196-0"
+          data-item-id="input-199-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -652,7 +652,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         <c-base-combobox-item
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-196-1"
+          data-item-id="input-199-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"
@@ -768,7 +768,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         <c-base-combobox-item
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
-          data-item-id="input-196-0"
+          data-item-id="input-199-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -810,7 +810,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         <c-base-combobox-item
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-196-1"
+          data-item-id="input-199-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"
@@ -927,7 +927,7 @@ exports[`c-base-combobox triggers events triggers open dropdown on keyboard inpu
         <c-base-combobox-item
           aria-selected="true"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
-          data-item-id="input-178-0"
+          data-item-id="input-181-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -969,7 +969,7 @@ exports[`c-base-combobox triggers events triggers open dropdown on keyboard inpu
         <c-base-combobox-item
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-178-1"
+          data-item-id="input-181-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"

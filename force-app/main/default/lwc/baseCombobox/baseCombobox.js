@@ -34,6 +34,8 @@ const i18n = {
 const SMALL_MIN_HEIGHT = '2.25rem';
 const MEDIUM_MIN_HEIGHT = '6.75rem';
 
+const VIEWPORT_HEIGHT_SMALL = 834;
+
 const ARIA_CONTROLS = 'aria-controls';
 const ARIA_LABELLEDBY = 'aria-labelledby';
 const ARIA_DESCRIBEDBY = 'aria-describedby';
@@ -416,14 +418,23 @@ export default class cBaseCombobox extends LightningElement {
 
     get computedDropdownClass() {
         const alignment = this.dropdownAlignment;
+
+        let dropdownLengthClass;
+
+        if (this.dropdownHeight === 'standard') {
+            if (window.innerHeight <= VIEWPORT_HEIGHT_SMALL) {
+                dropdownLengthClass = 'slds-dropdown_length-with-icon-7';
+            } else {
+                dropdownLengthClass = 'slds-dropdown_length-with-icon-10';
+            }
+        } else if (this.dropdownHeight === 'small') {
+            dropdownLengthClass = 'slds-dropdown_length-with-icon-5';
+        }
+
         return classSet(
-            'slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid'
+            `slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid ${dropdownLengthClass}`
         )
             .add({
-                'slds-dropdown_length-with-icon-10':
-                    this._dropdownHeight === 'standard',
-                'slds-dropdown_length-with-icon-5':
-                    this._dropdownHeight === 'small',
                 'slds-dropdown_left':
                     alignment === 'left' || alignment === 'auto',
                 'slds-dropdown_center': alignment === 'center',

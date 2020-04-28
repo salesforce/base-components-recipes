@@ -49,29 +49,6 @@ exports[`c-output-field email 1`] = `
 </c-output-field>
 `;
 
-exports[`c-output-field formatted-address Default Address 1`] = `
-<c-output-field
-  class="slds-form-element slds-form-element_stacked"
->
-  #shadow-root(open)
-    <span
-      class="slds-form-element__label"
-    >
-      Address
-    </span>
-    <div
-      class="slds-form-element__control"
-    >
-      <lightning-formatted-address
-        class="slds-form-element__static"
-      >
-        #shadow-root(open)
-      </lightning-formatted-address>
-      <slot />
-    </div>
-</c-output-field>
-`;
-
 exports[`c-output-field formatted-name Default Name 1`] = `
 <c-output-field
   class="slds-form-element slds-form-element_stacked"
@@ -89,7 +66,7 @@ exports[`c-output-field formatted-name Default Name 1`] = `
         class="slds-form-element__static"
       >
         #shadow-root(open)
-          Mr. Jim Steele
+          Mister Jim Steele
       </c-formatted-name>
       <slot />
     </div>
@@ -276,7 +253,7 @@ exports[`c-output-field url 1`] = `
           <a
             href="http://www.google.com"
           >
-            http://www.google.com
+            www.google.com
           </a>
       </c-formatted-url>
       <slot />

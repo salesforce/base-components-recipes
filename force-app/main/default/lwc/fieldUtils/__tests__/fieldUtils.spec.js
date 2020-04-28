@@ -143,7 +143,11 @@ describe('getUiField', () => {
         expect(compoundField.value).toEqual({
             FirstName: 'Jim',
             LastName: 'Steele',
-            Salutation: null
+            Salutation: 'Mr.'
+        });
+
+        expect(compoundField.displayValue).toEqual({
+            Salutation: 'Mister'
         });
     });
 });
