@@ -17,7 +17,7 @@ export default class dualListboxRecipes extends LightningElement {
             { label: 'Spanish', value: 'es' },
             { label: 'French', value: 'fr' },
             { label: 'Italian', value: 'it' },
-            { label: 'Japanese', value: 'ja' },
+            { label: 'Japanese', value: 'ja' }
         ];
     }
 
@@ -26,11 +26,15 @@ export default class dualListboxRecipes extends LightningElement {
     }
 
     get selectedSimpleListbox() {
-        return this._selectedSimpleListbox.length ? this._selectedSimpleListbox : 'none';
+        return this._selectedSimpleListbox.length
+            ? this._selectedSimpleListbox
+            : 'none';
     }
 
     get selectedRequiredListbox() {
-        return this._selectedRequiredListbox.length ? this._selectedRequiredListbox : 'none';
+        return this._selectedRequiredListbox.length
+            ? this._selectedRequiredListbox
+            : 'none';
     }
 
     handleChangeInSimpleListbox(e) {
