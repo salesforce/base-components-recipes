@@ -55,7 +55,7 @@ exports[`c-base-combobox is accessible renders alternative text for icon 1`] = `
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -206,7 +206,7 @@ exports[`c-base-combobox renders properly with dropdown open 1`] = `
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left slds-dropdown_length-with-icon-10"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -364,7 +364,7 @@ exports[`c-base-combobox renders properly with items 1`] = `
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -424,7 +424,7 @@ exports[`c-base-combobox renders properly with maxlength 1`] = `
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -483,7 +483,7 @@ exports[`c-base-combobox renders properly with showSpinnerActivity, but only if 
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -542,7 +542,7 @@ exports[`c-base-combobox renders properly with showSpinnerActivity, but only if 
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -602,7 +602,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left slds-dropdown_length-with-icon-10"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -610,7 +610,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         <c-base-combobox-item
           aria-selected="true"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
-          data-item-id="input-199-0"
+          data-item-id="input-205-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -652,7 +652,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         <c-base-combobox-item
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-199-1"
+          data-item-id="input-205-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"
@@ -760,7 +760,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -768,7 +768,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         <c-base-combobox-item
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
-          data-item-id="input-199-0"
+          data-item-id="input-205-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -810,7 +810,7 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         <c-base-combobox-item
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-199-1"
+          data-item-id="input-205-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"
@@ -919,7 +919,7 @@ exports[`c-base-combobox triggers events triggers open dropdown on keyboard inpu
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left slds-dropdown_length-with-icon-10"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -927,7 +927,7 @@ exports[`c-base-combobox triggers events triggers open dropdown on keyboard inpu
         <c-base-combobox-item
           aria-selected="true"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
-          data-item-id="input-181-0"
+          data-item-id="input-187-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -969,7 +969,7 @@ exports[`c-base-combobox triggers events triggers open dropdown on keyboard inpu
         <c-base-combobox-item
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-181-1"
+          data-item-id="input-187-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"
@@ -1105,7 +1105,7 @@ exports[`c-base-combobox with a pill should render a pill when a pill is set 1`]
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -1164,7 +1164,7 @@ exports[`c-base-combobox with empty items will not open empty dropdown 1`] = `
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"
@@ -1224,7 +1224,7 @@ exports[`c-base-combobox with items supports groups 1`] = `
         </div>
       </div>
       <div
-        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_length-with-icon-10 slds-dropdown_left"
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left slds-dropdown_length-with-icon-10"
         data-dropdown-element="true"
         id="[shadow:guid]"
         role="listbox"

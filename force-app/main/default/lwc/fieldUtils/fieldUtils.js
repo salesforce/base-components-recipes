@@ -253,6 +253,8 @@ export function parseError(err) {
             detail = err.body[0].errorCode;
         } else if (err.body && err.body.message) {
             message = err.body.message;
+        } else if (err.body && err.body.error) {
+            message = err.body.error;
         } else if (err.body) {
             message = err.body;
         } else if (err.statusText) {
@@ -268,12 +270,9 @@ export function parseError(err) {
 }
 
 export function createErrorEvent(err) {
-    const { message, detail } = parseError(err);
-    const error = new Error(message);
-    return new ErrorEvent('error', {
-        error,
-        message,
-        detail
+    const parsed = parseError(err);
+    return new CustomEvent('error', {
+        detail: parsed
     });
 }
 

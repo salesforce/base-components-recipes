@@ -13,7 +13,8 @@ import {
     getReferenceRelationships,
     getUiField,
     compoundFieldIsUpdateable,
-    compoundFieldIsCreateable
+    compoundFieldIsCreateable,
+    parseError
 } from 'c/fieldUtils';
 import store from './mockdata.json';
 import notperson from './notperson.json';
@@ -237,5 +238,19 @@ describe('reference utils', () => {
             'Owner.LastName',
             'Owner.Name'
         ]);
+    });
+});
+
+describe('parseError', () => {
+    it('should extract error message when event came from LDS error event', () => {
+        const errorFromLDSWire = {
+            status: 500,
+            body: { error: 'Disconnected or Canceled' },
+            headers: {}
+        };
+
+        const parsedError = parseError(errorFromLDSWire);
+
+        expect(parsedError.message).toBe(errorFromLDSWire.body.error);
     });
 });

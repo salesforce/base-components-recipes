@@ -413,6 +413,9 @@ describe('c-base-combobox', () => {
                 items: exampleData.exampleItems
             });
 
+            const input = shadowQuerySelector(element, 'input');
+            input.click();
+
             return Promise.resolve().then(() => {
                 const dropdown = shadowQuerySelector(element, '.slds-dropdown');
 

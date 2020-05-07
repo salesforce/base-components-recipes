@@ -192,6 +192,7 @@ import { default as action_web_link } from './action/web_link.html';
 import { default as standard_account } from './standard/account.html';
 import { default as standard_action_list_component } from './standard/action_list_component.html';
 import { default as standard_actions_and_buttons } from './standard/actions_and_buttons.html';
+import { default as standard_activations } from './standard/activations.html';
 import { default as standard_address } from './standard/address.html';
 import { default as standard_agent_session } from './standard/agent_session.html';
 import { default as standard_all } from './standard/all.html';
@@ -206,7 +207,12 @@ import { default as standard_approval } from './standard/approval.html';
 import { default as standard_apps } from './standard/apps.html';
 import { default as standard_apps_admin } from './standard/apps_admin.html';
 import { default as standard_article } from './standard/article.html';
+import { default as standard_asset_action } from './standard/asset_action.html';
+import { default as standard_asset_action_source } from './standard/asset_action_source.html';
+import { default as standard_asset_downtime_period } from './standard/asset_downtime_period.html';
+import { default as standard_asset_object } from './standard/asset_object.html';
 import { default as standard_asset_relationship } from './standard/asset_relationship.html';
+import { default as standard_asset_state_period } from './standard/asset_state_period.html';
 import { default as standard_assigned_resource } from './standard/assigned_resource.html';
 import { default as standard_assignment } from './standard/assignment.html';
 import { default as standard_avatar } from './standard/avatar.html';
@@ -220,9 +226,11 @@ import { default as standard_buyer_account } from './standard/buyer_account.html
 import { default as standard_buyer_group } from './standard/buyer_group.html';
 import { default as standard_calibration } from './standard/calibration.html';
 import { default as standard_call } from './standard/call.html';
+import { default as standard_call_coaching } from './standard/call_coaching.html';
 import { default as standard_call_history } from './standard/call_history.html';
 import { default as standard_campaign } from './standard/campaign.html';
 import { default as standard_campaign_members } from './standard/campaign_members.html';
+import { default as standard_cancel_checkout } from './standard/cancel_checkout.html';
 import { default as standard_canvas } from './standard/canvas.html';
 import { default as standard_carousel } from './standard/carousel.html';
 import { default as standard_case } from './standard/case.html';
@@ -232,6 +240,7 @@ import { default as standard_case_email } from './standard/case_email.html';
 import { default as standard_case_log_a_call } from './standard/case_log_a_call.html';
 import { default as standard_case_milestone } from './standard/case_milestone.html';
 import { default as standard_case_transcript } from './standard/case_transcript.html';
+import { default as standard_case_wrap_up } from './standard/case_wrap_up.html';
 import { default as standard_catalog } from './standard/catalog.html';
 import { default as standard_category } from './standard/category.html';
 import { default as standard_channel_program_history } from './standard/channel_program_history.html';
@@ -257,11 +266,14 @@ import { default as standard_currency_input } from './standard/currency_input.ht
 import { default as standard_custom } from './standard/custom.html';
 import { default as standard_custom_notification } from './standard/custom_notification.html';
 import { default as standard_customer_360 } from './standard/customer_360.html';
+import { default as standard_customer_lifecycle_analytics } from './standard/customer_lifecycle_analytics.html';
 import { default as standard_customer_portal_users } from './standard/customer_portal_users.html';
 import { default as standard_customers } from './standard/customers.html';
 import { default as standard_dashboard } from './standard/dashboard.html';
 import { default as standard_dashboard_ea } from './standard/dashboard_ea.html';
 import { default as standard_data_integration_hub } from './standard/data_integration_hub.html';
+import { default as standard_data_model } from './standard/data_model.html';
+import { default as standard_data_streams } from './standard/data_streams.html';
 import { default as standard_datadotcom } from './standard/datadotcom.html';
 import { default as standard_dataset } from './standard/dataset.html';
 import { default as standard_date_input } from './standard/date_input.html';
@@ -288,6 +300,9 @@ import { default as standard_entity_milestone } from './standard/entity_mileston
 import { default as standard_environment_hub } from './standard/environment_hub.html';
 import { default as standard_event } from './standard/event.html';
 import { default as standard_events } from './standard/events.html';
+import { default as standard_expense } from './standard/expense.html';
+import { default as standard_expense_report } from './standard/expense_report.html';
+import { default as standard_expense_report_entry } from './standard/expense_report_entry.html';
 import { default as standard_feed } from './standard/feed.html';
 import { default as standard_feedback } from './standard/feedback.html';
 import { default as standard_file } from './standard/file.html';
@@ -403,6 +418,7 @@ import { default as standard_record_update } from './standard/record_update.html
 import { default as standard_recycle_bin } from './standard/recycle_bin.html';
 import { default as standard_related_list } from './standard/related_list.html';
 import { default as standard_relationship } from './standard/relationship.html';
+import { default as standard_reply_component } from './standard/reply_component.html';
 import { default as standard_report } from './standard/report.html';
 import { default as standard_resource_absence } from './standard/resource_absence.html';
 import { default as standard_resource_capacity } from './standard/resource_capacity.html';
@@ -421,6 +437,7 @@ import { default as standard_salesforce_cms } from './standard/salesforce_cms.ht
 import { default as standard_scan_card } from './standard/scan_card.html';
 import { default as standard_screen } from './standard/screen.html';
 import { default as standard_search } from './standard/search.html';
+import { default as standard_segments } from './standard/segments.html';
 import { default as standard_service_appointment } from './standard/service_appointment.html';
 import { default as standard_service_appointment_capacity_usage } from './standard/service_appointment_capacity_usage.html';
 import { default as standard_service_contract } from './standard/service_contract.html';
@@ -482,13 +499,21 @@ import { default as standard_visits } from './standard/visits.html';
 import { default as standard_visualforce_page } from './standard/visualforce_page.html';
 import { default as standard_voice_call } from './standard/voice_call.html';
 import { default as standard_waits } from './standard/waits.html';
+import { default as standard_webcart } from './standard/webcart.html';
 import { default as standard_work_capacity_limit } from './standard/work_capacity_limit.html';
 import { default as standard_work_capacity_usage } from './standard/work_capacity_usage.html';
 import { default as standard_work_order } from './standard/work_order.html';
 import { default as standard_work_order_item } from './standard/work_order_item.html';
+import { default as standard_work_plan } from './standard/work_plan.html';
+import { default as standard_work_plan_rule } from './standard/work_plan_rule.html';
+import { default as standard_work_plan_template } from './standard/work_plan_template.html';
+import { default as standard_work_plan_template_entry } from './standard/work_plan_template_entry.html';
 import { default as standard_work_queue } from './standard/work_queue.html';
+import { default as standard_work_step } from './standard/work_step.html';
+import { default as standard_work_step_template } from './standard/work_step_template.html';
 import { default as standard_work_type } from './standard/work_type.html';
 import { default as standard_work_type_group } from './standard/work_type_group.html';
+import { default as utility_account } from './utility/account.html';
 import { default as utility_activity } from './utility/activity.html';
 import { default as utility_ad_set } from './utility/ad_set.html';
 import { default as utility_add } from './utility/add.html';
@@ -510,6 +535,7 @@ import { default as utility_apps } from './utility/apps.html';
 import { default as utility_archive } from './utility/archive.html';
 import { default as utility_arrowdown } from './utility/arrowdown.html';
 import { default as utility_arrowup } from './utility/arrowup.html';
+import { default as utility_asset } from './utility/asset.html';
 import { default as utility_assignment } from './utility/assignment.html';
 import { default as utility_attach } from './utility/attach.html';
 import { default as utility_automate } from './utility/automate.html';
@@ -524,6 +550,7 @@ import { default as utility_broadcast } from './utility/broadcast.html';
 import { default as utility_brush } from './utility/brush.html';
 import { default as utility_bucket } from './utility/bucket.html';
 import { default as utility_builder } from './utility/builder.html';
+import { default as utility_button_choice } from './utility/button_choice.html';
 import { default as utility_call } from './utility/call.html';
 import { default as utility_campaign } from './utility/campaign.html';
 import { default as utility_cancel_file_request } from './utility/cancel_file_request.html';
@@ -556,6 +583,7 @@ import { default as utility_company } from './utility/company.html';
 import { default as utility_component_customization } from './utility/component_customization.html';
 import { default as utility_connected_apps } from './utility/connected_apps.html';
 import { default as utility_constant } from './utility/constant.html';
+import { default as utility_contact } from './utility/contact.html';
 import { default as utility_contact_request } from './utility/contact_request.html';
 import { default as utility_contract } from './utility/contract.html';
 import { default as utility_contract_alt } from './utility/contract_alt.html';
@@ -596,6 +624,7 @@ import { default as utility_einstein } from './utility/einstein.html';
 import { default as utility_email } from './utility/email.html';
 import { default as utility_email_open } from './utility/email_open.html';
 import { default as utility_emoji } from './utility/emoji.html';
+import { default as utility_employee_experience_object } from './utility/employee_experience_object.html';
 import { default as utility_end_call } from './utility/end_call.html';
 import { default as utility_end_chat } from './utility/end_chat.html';
 import { default as utility_end_messaging_session } from './utility/end_messaging_session.html';
@@ -632,6 +661,7 @@ import { default as utility_hide_mobile } from './utility/hide_mobile.html';
 import { default as utility_hierarchy } from './utility/hierarchy.html';
 import { default as utility_high_velocity_sales } from './utility/high_velocity_sales.html';
 import { default as utility_home } from './utility/home.html';
+import { default as utility_icon_watchlist } from './utility/icon_watchlist.html';
 import { default as utility_identity } from './utility/identity.html';
 import { default as utility_image } from './utility/image.html';
 import { default as utility_in_app_assistant } from './utility/in_app_assistant.html';
@@ -787,9 +817,11 @@ import { default as utility_salesforce1 } from './utility/salesforce1.html';
 import { default as utility_save } from './utility/save.html';
 import { default as utility_screen } from './utility/screen.html';
 import { default as utility_search } from './utility/search.html';
+import { default as utility_sections } from './utility/sections.html';
 import { default as utility_send } from './utility/send.html';
 import { default as utility_sentiment_negative } from './utility/sentiment_negative.html';
 import { default as utility_sentiment_neutral } from './utility/sentiment_neutral.html';
+import { default as utility_service_contract_utility } from './utility/service_contract_utility.html';
 import { default as utility_settings } from './utility/settings.html';
 import { default as utility_setup } from './utility/setup.html';
 import { default as utility_setup_assistant_guide } from './utility/setup_assistant_guide.html';
@@ -807,11 +839,13 @@ import { default as utility_signpost } from './utility/signpost.html';
 import { default as utility_skip } from './utility/skip.html';
 import { default as utility_skip_back } from './utility/skip_back.html';
 import { default as utility_skip_forward } from './utility/skip_forward.html';
+import { default as utility_slider } from './utility/slider.html';
 import { default as utility_smiley_and_people } from './utility/smiley_and_people.html';
 import { default as utility_sms } from './utility/sms.html';
 import { default as utility_snippet } from './utility/snippet.html';
 import { default as utility_sobject } from './utility/sobject.html';
 import { default as utility_sobject_collection } from './utility/sobject_collection.html';
+import { default as utility_social } from './utility/social.html';
 import { default as utility_socialshare } from './utility/socialshare.html';
 import { default as utility_sort } from './utility/sort.html';
 import { default as utility_spinner } from './utility/spinner.html';
@@ -832,9 +866,12 @@ import { default as utility_symbols } from './utility/symbols.html';
 import { default as utility_sync } from './utility/sync.html';
 import { default as utility_system_and_global_variable } from './utility/system_and_global_variable.html';
 import { default as utility_table } from './utility/table.html';
+import { default as utility_table_settings } from './utility/table_settings.html';
 import { default as utility_tablet_landscape } from './utility/tablet_landscape.html';
 import { default as utility_tablet_portrait } from './utility/tablet_portrait.html';
 import { default as utility_tabset } from './utility/tabset.html';
+import { default as utility_target_utility_1 } from './utility/target_utility_1.html';
+import { default as utility_target_utility_2 } from './utility/target_utility_2.html';
 import { default as utility_task } from './utility/task.html';
 import { default as utility_text } from './utility/text.html';
 import { default as utility_text_background_color } from './utility/text_background_color.html';
@@ -846,6 +883,7 @@ import { default as utility_threedots } from './utility/threedots.html';
 import { default as utility_threedots_vertical } from './utility/threedots_vertical.html';
 import { default as utility_thunder } from './utility/thunder.html';
 import { default as utility_tile_card_list } from './utility/tile_card_list.html';
+import { default as utility_toggle } from './utility/toggle.html';
 import { default as utility_toggle_panel_bottom } from './utility/toggle_panel_bottom.html';
 import { default as utility_toggle_panel_left } from './utility/toggle_panel_left.html';
 import { default as utility_toggle_panel_right } from './utility/toggle_panel_right.html';
@@ -874,6 +912,7 @@ import { default as utility_user } from './utility/user.html';
 import { default as utility_user_role } from './utility/user_role.html';
 import { default as utility_variable } from './utility/variable.html';
 import { default as utility_video } from './utility/video.html';
+import { default as utility_visits } from './utility/visits.html';
 import { default as utility_voicemail_drop } from './utility/voicemail_drop.html';
 import { default as utility_volume_high } from './utility/volume_high.html';
 import { default as utility_volume_low } from './utility/volume_low.html';
@@ -1230,6 +1269,7 @@ export default {
     standard_account,
     standard_action_list_component,
     standard_actions_and_buttons,
+    standard_activations,
     standard_address,
     standard_agent_session,
     standard_all,
@@ -1244,7 +1284,12 @@ export default {
     standard_apps,
     standard_apps_admin,
     standard_article,
+    standard_asset_action,
+    standard_asset_action_source,
+    standard_asset_downtime_period,
+    standard_asset_object,
     standard_asset_relationship,
+    standard_asset_state_period,
     standard_assigned_resource,
     standard_assignment,
     standard_avatar,
@@ -1258,9 +1303,11 @@ export default {
     standard_buyer_group,
     standard_calibration,
     standard_call,
+    standard_call_coaching,
     standard_call_history,
     standard_campaign,
     standard_campaign_members,
+    standard_cancel_checkout,
     standard_canvas,
     standard_carousel,
     standard_case,
@@ -1270,6 +1317,7 @@ export default {
     standard_case_log_a_call,
     standard_case_milestone,
     standard_case_transcript,
+    standard_case_wrap_up,
     standard_catalog,
     standard_category,
     standard_channel_program_history,
@@ -1295,11 +1343,14 @@ export default {
     standard_custom,
     standard_custom_notification,
     standard_customer_360,
+    standard_customer_lifecycle_analytics,
     standard_customer_portal_users,
     standard_customers,
     standard_dashboard,
     standard_dashboard_ea,
     standard_data_integration_hub,
+    standard_data_model,
+    standard_data_streams,
     standard_datadotcom,
     standard_dataset,
     standard_date_input,
@@ -1326,6 +1377,9 @@ export default {
     standard_environment_hub,
     standard_event,
     standard_events,
+    standard_expense,
+    standard_expense_report,
+    standard_expense_report_entry,
     standard_feed,
     standard_feedback,
     standard_file,
@@ -1441,6 +1495,7 @@ export default {
     standard_recycle_bin,
     standard_related_list,
     standard_relationship,
+    standard_reply_component,
     standard_report,
     standard_resource_absence,
     standard_resource_capacity,
@@ -1459,6 +1514,7 @@ export default {
     standard_scan_card,
     standard_screen,
     standard_search,
+    standard_segments,
     standard_service_appointment,
     standard_service_appointment_capacity_usage,
     standard_service_contract,
@@ -1520,13 +1576,21 @@ export default {
     standard_visualforce_page,
     standard_voice_call,
     standard_waits,
+    standard_webcart,
     standard_work_capacity_limit,
     standard_work_capacity_usage,
     standard_work_order,
     standard_work_order_item,
+    standard_work_plan,
+    standard_work_plan_rule,
+    standard_work_plan_template,
+    standard_work_plan_template_entry,
     standard_work_queue,
+    standard_work_step,
+    standard_work_step_template,
     standard_work_type,
     standard_work_type_group,
+    utility_account,
     utility_activity,
     utility_ad_set,
     utility_add,
@@ -1548,6 +1612,7 @@ export default {
     utility_archive,
     utility_arrowdown,
     utility_arrowup,
+    utility_asset,
     utility_assignment,
     utility_attach,
     utility_automate,
@@ -1562,6 +1627,7 @@ export default {
     utility_brush,
     utility_bucket,
     utility_builder,
+    utility_button_choice,
     utility_call,
     utility_campaign,
     utility_cancel_file_request,
@@ -1594,6 +1660,7 @@ export default {
     utility_component_customization,
     utility_connected_apps,
     utility_constant,
+    utility_contact,
     utility_contact_request,
     utility_contract,
     utility_contract_alt,
@@ -1634,6 +1701,7 @@ export default {
     utility_email,
     utility_email_open,
     utility_emoji,
+    utility_employee_experience_object,
     utility_end_call,
     utility_end_chat,
     utility_end_messaging_session,
@@ -1670,6 +1738,7 @@ export default {
     utility_hierarchy,
     utility_high_velocity_sales,
     utility_home,
+    utility_icon_watchlist,
     utility_identity,
     utility_image,
     utility_in_app_assistant,
@@ -1825,9 +1894,11 @@ export default {
     utility_save,
     utility_screen,
     utility_search,
+    utility_sections,
     utility_send,
     utility_sentiment_negative,
     utility_sentiment_neutral,
+    utility_service_contract_utility,
     utility_settings,
     utility_setup,
     utility_setup_assistant_guide,
@@ -1845,11 +1916,13 @@ export default {
     utility_skip,
     utility_skip_back,
     utility_skip_forward,
+    utility_slider,
     utility_smiley_and_people,
     utility_sms,
     utility_snippet,
     utility_sobject,
     utility_sobject_collection,
+    utility_social,
     utility_socialshare,
     utility_sort,
     utility_spinner,
@@ -1870,9 +1943,12 @@ export default {
     utility_sync,
     utility_system_and_global_variable,
     utility_table,
+    utility_table_settings,
     utility_tablet_landscape,
     utility_tablet_portrait,
     utility_tabset,
+    utility_target_utility_1,
+    utility_target_utility_2,
     utility_task,
     utility_text,
     utility_text_background_color,
@@ -1884,6 +1960,7 @@ export default {
     utility_threedots_vertical,
     utility_thunder,
     utility_tile_card_list,
+    utility_toggle,
     utility_toggle_panel_bottom,
     utility_toggle_panel_left,
     utility_toggle_panel_right,
@@ -1912,6 +1989,7 @@ export default {
     utility_user_role,
     utility_variable,
     utility_video,
+    utility_visits,
     utility_voicemail_drop,
     utility_volume_high,
     utility_volume_low,

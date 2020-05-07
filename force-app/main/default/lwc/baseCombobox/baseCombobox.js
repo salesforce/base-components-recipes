@@ -419,16 +419,18 @@ export default class cBaseCombobox extends LightningElement {
     get computedDropdownClass() {
         const alignment = this.dropdownAlignment;
 
-        let dropdownLengthClass;
+        let dropdownLengthClass = '';
 
-        if (this.dropdownHeight === 'standard') {
-            if (window.innerHeight <= VIEWPORT_HEIGHT_SMALL) {
-                dropdownLengthClass = 'slds-dropdown_length-with-icon-7';
-            } else {
-                dropdownLengthClass = 'slds-dropdown_length-with-icon-10';
+        if (this._dropdownVisible) {
+            if (this.dropdownHeight === 'standard') {
+                if (window.innerHeight <= VIEWPORT_HEIGHT_SMALL) {
+                    dropdownLengthClass = 'slds-dropdown_length-with-icon-7';
+                } else {
+                    dropdownLengthClass = 'slds-dropdown_length-with-icon-10';
+                }
+            } else if (this.dropdownHeight === 'small') {
+                dropdownLengthClass = 'slds-dropdown_length-with-icon-5';
             }
-        } else if (this.dropdownHeight === 'small') {
-            dropdownLengthClass = 'slds-dropdown_length-with-icon-5';
         }
 
         return classSet(
