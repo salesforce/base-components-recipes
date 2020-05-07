@@ -2,6 +2,8 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="relativeDateTimeRecipes">
     <apiVersion>46.0</apiVersion>
     <isExposed>true</isExposed>
+    <masterLabel>Relative Date Time Recipes</masterLabel>
+    <description>Relative Date Time Recipes</description>
     <targets>
         <target>lightning__AppPage</target>
         <target>lightning__RecordPage</target>
