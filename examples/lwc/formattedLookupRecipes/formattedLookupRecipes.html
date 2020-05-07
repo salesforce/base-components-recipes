@@ -1,0 +1,30 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<template>
+    <c-card title="Formatted Lookup">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box">
+                <h3 class="header">Basic Formatted Lookup</h3>
+                <c-formatted-lookup
+                    display-value={accountName}
+                    record-id={accountId}
+                ></c-formatted-lookup>
+            </div>
+            <div class="slds-box">
+                <h3 class="header">Disabled Formatted Lookup</h3>
+                <c-formatted-lookup
+                    display-value={accountName}
+                    record-id={accountId}
+                    disabled
+                ></c-formatted-lookup>
+            </div>
+            <c-view-source source="formattedLookupRecipes" slot="footer">
+                Displays a reference to a Salesforce record as a hyperlink.
+            </c-view-source>
+        </div>
+    </c-card>
+</template>

@@ -10,10 +10,46 @@
             <c-record-view-form record-id={accountId} object-api-name="Account">
                 <div class="slds-box">
                     <c-output-field field-name="Name"> </c-output-field>
+
+                    <div class="slds-grid">
+                        <c-output-field
+                            class="slds-col"
+                            field-name="TickerSymbol"
+                        >
+                        </c-output-field>
+                        <c-output-field class="slds-col" field-name="Type">
+                        </c-output-field>
+                    </div>
+
+                    <div class="slds-grid">
+                        <c-output-field class="slds-col" field-name="Industry">
+                        </c-output-field>
+                        <c-output-field
+                            class="slds-col"
+                            field-name="NumberOfEmployees"
+                        >
+                        </c-output-field>
+                    </div>
+
+                    <c-output-field field-name="AnnualRevenue">
+                    </c-output-field>
+
                     <c-output-field field-name="BillingAddress">
                     </c-output-field>
-                    <c-output-field field-name="Phone"> </c-output-field>
-                    <c-output-field field-name="Website"> </c-output-field>
+                    <div class="slds-grid">
+                        <c-output-field class="slds-col" field-name="Phone">
+                        </c-output-field>
+                        <c-output-field class="slds-col" field-name="Website">
+                        </c-output-field>
+                    </div>
+
+                    <div class="slds-box">
+                        <c-output-field
+                            field-name="Description"
+                            variant="label-hidden"
+                        >
+                        </c-output-field>
+                    </div>
                 </div>
             </c-record-view-form>
             <c-view-source source="recordViewFormRecipes" slot="footer">

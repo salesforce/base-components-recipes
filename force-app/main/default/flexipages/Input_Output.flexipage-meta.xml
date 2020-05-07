@@ -8,10 +8,7 @@
             <componentName>formattedLocationRecipes</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>formattedPhoneRecipes</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentName>formattedUrlRecipes</componentName>
+            <componentName>formattedNumberRecipes</componentName>
         </componentInstances>
         <componentInstances>
             <componentName>radioGroupRecipes</componentName>
@@ -27,10 +24,13 @@
             <componentName>comboboxRecipes</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>formattedNameRecipes</componentName>
+            <componentName>formattedLookupRecipes</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>formattedTextRecipes</componentName>
+            <componentName>formattedPhoneRecipes</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>formattedTimeRecipes</componentName>
         </componentInstances>
         <componentInstances>
             <componentName>inputLocationRecipes</componentName>
@@ -43,10 +43,13 @@
             <componentName>formattedDateTimeRecipes</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>formattedNumberRecipes</componentName>
+            <componentName>formattedNameRecipes</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>formattedTimeRecipes</componentName>
+            <componentName>formattedTextRecipes</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>formattedUrlRecipes</componentName>
         </componentInstances>
         <componentInstances>
             <componentName>textareaRecipes</componentName>
