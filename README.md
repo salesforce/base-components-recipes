@@ -2,7 +2,9 @@
 
 View examples for base components in small bites. Each recipe demonstrates a working example of the base components to build pages and apps quickly. Use and customize the base components and the recipes in your apps.
 
-Base component recipes open up the source code for the base components shown in https://developer.salesforce.com/docs/component-library. We transpiled the base components into the `c` namespace so that you can use the components in your projects. Explore the inner workings of the components and use the source code to build new components with your own requirements. The possibilities are endless with the source in your hands!
+Base component recipes open up the source code for the base components shown in the [Component Library](https://developer.salesforce.com/docs/component-library). We transpiled the base components into the `c` namespace so that you can use the components in your projects. Explore the inner workings of the components and use the source code to build new components with your own requirements. The possibilities are endless with the source in your hands!
+
+Only a subset of the components in the Component Library are available. For more information, see the [Documentation](#documentation) section.
 
 Base components implement Lightning Design System and are developed using Lightning Web Components. A `c` namespace component can contain components in the `lightning` namespace.
 
