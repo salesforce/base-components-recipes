@@ -58,10 +58,10 @@ sfdx force:org:open
 Create a helloWorld Lightning web component that uses a base component, `c-button`. We'll use Visual Studio Code in this example.
 
 1. In Visual Studio code, open the Command Palette by pressing **Ctrl+Shift+P** on Windows or **Cmd+Shift+P** on macOS.
-2. Type SFDX.
+2. Type __SFDX__.
 3. Select SFDX: Create Lightning Web Component.
 4. Press Enter to accept the default `force-app/main/default/lwc` directory.
-5. Enter helloWorld for the name of the new component.
+5. Type __helloWorld__ for the name of the new component.
 6. Press Enter. A `helloWorld` bundle is created in `force-app/main/default/lwc`.
 7. In the HTML file, `helloWorld.html`, copy and paste the following code. Save the file.
 
@@ -152,8 +152,8 @@ The components below link to documentation for components in the `lightning` nam
 | [c-output-field](https://developer.salesforce.com/docs/component-library/bundle/lightning-output-field)                                     | A read-only display of a label, help text, and value for a field on a Salesforce object. Use this component within `c-record-view-form`.                       | For use on Salesforce platform only.
 | [c-pill](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill)                                                     | A label that can contain a link and can be removed from view                                                                                                   | This component contains slots and isn't supported as an Aura component. This component references labels on Salesforce platform.
 | [c-pill-container](https://developer.salesforce.com/docs/component-library/bundle/lightning-pill-container)                                 | A list of pills grouped in a container                                                                                                                         | This component references labels on Salesforce platform.
-| [c-radio-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-radio-group)                                       | A group of radio butons that can have a single option selected                                                                                                 | This component references labels on Salesforce platform.
-| [c-record-edit-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form)                             | A form for creating or editing a record with one or more fields                                                                                                | For use on Salesforce platform only. Use `c-record-edit-form` with `lightning-input-field`. This component references labels on Salesforce platform.
+| [c-radio-group](https://developer.salesforce.com/docs/component-library/bundle/lightning-radio-group)                                       | A group of radio buttons that can have a single option selected                                                                                                 | This component references labels on Salesforce platform.
+| [c-record-edit-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form)                             | A form for creating or editing a record with one or more fields                                                                                                | For use on Salesforce platform only. Use `c-record-edit-form` with `lightning-input-field`. Use `c-messages` in the form to display server-side error messages. This component references labels on Salesforce platform.
 | [c-record-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-form)                                       | A form for creating, displaying, or editing a record with automatic switching between edit and view modes                                                      | For use on Salesforce platform only. This component references labels on Salesforce platform.
 | [c-record-view-form](https://developer.salesforce.com/docs/component-library/bundle/lightning-record-view-form)                             | A form for displaying record data. Use `c-output-field` within `c-record-view-form`.                                                                           | For use on Salesforce platform only. This component contains slots and isn't supported as an Aura component. This component references labels on Salesforce platform.
 | [c-relative-date-time](https://developer.salesforce.com/docs/component-library/bundle/lightning-relative-date-time)                         | A group of text depicting how a specified time relates to the current time, such as "a few seconds ago" or "in 5 years"                                        |
@@ -175,7 +175,7 @@ You can create up to 5,000 custom labels for your organization, and they can be 
 
 #### Update Labels
 
-To update the Custom Labels metadata, go to the `force-app/main/default/labels directory`. The labels are available in the `CustomLabels.labels-meta.xml` file. For an example of a CustomLabels definition, see the [Metadata API Dev Guide](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_customlabels.htm).
+To update the Custom Labels metadata, go to the `force-app/main/default/labels` directory. The labels are available in the `CustomLabels.labels-meta.xml` file. For an example of a CustomLabels definition, see the [Metadata API Dev Guide](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_customlabels.htm).
 
 #### Customize Labels
 
