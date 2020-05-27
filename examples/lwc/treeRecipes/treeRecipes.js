@@ -125,9 +125,7 @@ export default class TreeRecipes extends LightningElement {
     }
 
     toggleCTO() {
-        console.log('Deep cloning');
         const updatedItems = JSON.parse(JSON.stringify(this.items));
-        console.log(updatedItems[0].expanded);
         updatedItems[0] = {
             ...updatedItems[0],
             expanded: !updatedItems[0].expanded
