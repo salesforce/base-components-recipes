@@ -10,7 +10,9 @@
 import { LightningElement, track } from 'lwc';
 
 export default class CheckboxGroupRecipes extends LightningElement {
-    @track value = ['option1'];
+    @track value1 = ['option1'];
+    @track value2 = [];
+    @track value3 = [];
 
     get options() {
         return [
@@ -23,10 +25,13 @@ export default class CheckboxGroupRecipes extends LightningElement {
     }
 
     get selectedValues() {
-        return this.value.join(',');
+        return this.value1.join(',');
     }
 
-    handleChange(e) {
-        this.value = e.detail.value;
+    handleChangeOne(e) {
+        this.value1 = e.detail.value;
+    }
+    handleChangeTwo(e) {
+        this.value2 = e.detail.value;
     }
 }
