@@ -1,1 +1,0 @@
-export default 'h:mm:ss a';

@@ -1,1 +1,0 @@
-export default 'MMM d, yyyy';
