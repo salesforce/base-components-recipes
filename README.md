@@ -188,8 +188,8 @@ Import the labels from the `@salesforce/label` scoped module. Reference your lab
 ```javascript
 // myComponent.js
 
-import cardTitleLabel from '@salesforce/label/c.LightningCard_cardTitle';
-import loadingLabel from '@salesforce/label/c.LightningControl_loading';
+import cardTitleLabel from '@salesforce/label/c.MyCard_cardTitle';
+import loadingLabel from '@salesforce/label/c.lightning_LightningControl_loading';
 import { LightningElement } from 'lwc';
 
 export default class MyComponent extends LightningElement {
@@ -241,6 +241,46 @@ After updating `sfdx-project.json`, push the files to your scratch org.
 
 ```bash
 sfdx force:source:push
+```
+
+### Testing
+
+Tests should be added to the `__tests__` subfolder of the component and typically have a file name that ends with `.spec.js`. The [Jest JavaScript Testing Framework](https://jestjs.io/docs/en/getting-started) is used to author and run component tests.
+
+To illustrate how to test components we'll add a test to the helloWorld component created earlier.
+
+```javascript
+//__tests__/helloWorld.spec.js
+import { createElement } from 'lwc';
+import Element from 'c/helloWorld';
+
+const createComponent = (params = {}) => {
+    const element = createElement('c-hello-world', { is: Element });
+    Object.assign(element, params);
+    document.body.appendChild(element);
+    return element;
+};
+
+describe('c-hello-world', () => {
+    it('button has the expected message', () => {
+        const element = createComponent();
+        const button = element.shadowRoot.querySelector('c-button');
+        return Promise.resolve().then(() => {
+            expect(button.label).toEqual('Hello World');
+        });
+    });
+});
+```
+
+Run the helloWorld test suite.
+
+```bash
+npm run test helloWorld
+```
+
+You may also run all base components recipes test suites.
+```bash
+npm run test
 ```
 
 ## Contributing
