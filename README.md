@@ -306,7 +306,7 @@ npm run test helloWorld
 npm run test
 ```
 
-This runs lint and unit tests. See the package.json 
+This runs lint and unit tests. See the `package.json` file for all the available tests.
 
 ## Contributing
 
