@@ -57,23 +57,14 @@ sfdx force:org:open
 
 Create a helloWorld Lightning web component that uses a base component, `c-button`. We'll use Visual Studio Code in this example.
 
-1. In Visual Studio code, open the Command Palette by pressing **Ctrl+Shift+P** on Windows or **Cmd+Shift+P** on macOS.
-2. Type __SFDX__.
-3. Select SFDX: Create Lightning Web Component.
-4. Press Enter to accept the default `force-app/main/default/lwc` directory.
-5. Type __helloWorld__ for the name of the new component.
-6. Press Enter. A `helloWorld` bundle is created in `force-app/main/default/lwc`.
-7. In the HTML file, `helloWorld.html`, copy and paste the following code. Save the file.
-
-```html
-<!--helloWorld.html-->
-
-<template>
-    <c-button label={greeting} title="greeting"> </c-button>
-</template>
-```
-
-8.  In the JavaScript file, `helloWorld.js`, copy and paste the following code. Save the file.
+1. In Visual Studio Code, open your `base-components-recipes` directory.
+2. Open the Command Palette by pressing **Ctrl+Shift+P** on Windows or **Cmd+Shift+P** on macOS.
+3. Type __SFDX__.
+4. Select SFDX: Create Lightning Web Component.
+5. Type __helloWorld__ for the name of the new component and press Enter.
+6. Press Enter to accept the default `force-app/main/default/lwc` directory.
+7. A `helloWorld` bundle is created in `force-app/main/default/lwc` and the `helloWorld.js` JavaScript file opens in the editor.
+8. In `helloWorld.js`, replace the content with the following code. Save the file.
 
 ```javascript
 //helloWorld.js
@@ -84,7 +75,17 @@ export default class HelloWorld extends LightningElement {
 }
 ```
 
-9. In the XML file, `helloWorld.js-meta.xml`, copy and paste the following code. Save the file.
+9. Open the HTML file, `helloWorld.html`, and replace its content with the following code. Save the file.
+
+```html
+<!--helloWorld.html-->
+
+<template>
+    <c-button label={greeting} title="greeting"> </c-button>
+</template>
+```
+
+10. In the XML file, `helloWorld.js-meta.xml`, replace the content with the following code. Save the file.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -99,7 +100,7 @@ export default class HelloWorld extends LightningElement {
 </LightningComponentBundle>
 ```
 
-10. Push your changes.
+11. Push your changes.
 
 ```bash
 sfdx force:source:push
@@ -175,7 +176,20 @@ You can create up to 5,000 custom labels for your organization, and they can be 
 
 #### Update Labels
 
-To update the Custom Labels metadata, go to the `force-app/main/default/labels` directory. The labels are available in the `CustomLabels.labels-meta.xml` file. For an example of a CustomLabels definition, see the [Metadata API Dev Guide](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_customlabels.htm).
+To update the Custom Labels metadata, go to the `force-app/main/default/labels` directory. The labels are available in the `lightning.labels-meta.xml` file. For an example of a CustomLabels definition, see the [Metadata API Dev Guide](https://developer.salesforce.com/docs/atlas.en-us.api_meta.meta/api_meta/meta_customlabels.htm).
+
+Add labels for your custom components in the `lightning.labels-meta.xml` file. 
+
+```xml
+<labels>
+    <categories>lightning</categories>
+    <fullName>MyCard_cardTitle</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>cardTitleLabel</shortDescription>
+    <value>This is my card</value>
+  </labels>
+  ```
 
 #### Customize Labels
 
@@ -245,12 +259,21 @@ sfdx force:source:push
 
 ### Testing
 
-Tests should be added to the `__tests__` subfolder of the component and typically have a file name that ends with `.spec.js`. The [Jest JavaScript Testing Framework](https://jestjs.io/docs/en/getting-started) is used to author and run component tests.
+If you modify any base component recipes or add your own components, you'll want to run tests. We use the [Jest JavaScript Testing Framework](https://jestjs.io/docs/en/getting-started) to author and run component tests.
+
+For your own components, add tests to a `__tests__` sub-folder of your `componentName` folder and name the test `componentName.spec.js`. 
 
 To illustrate how to test components we'll add a test to the helloWorld component created earlier.
 
+1. Create a `__tests__` subfolder in the `helloWorld` folder.
+
+2. Create a file named `helloWorld.spec.js` in `__tests__`.
+
+3. Insert this code and save the file.
+
 ```javascript
 //__tests__/helloWorld.spec.js
+
 import { createElement } from 'lwc';
 import Element from 'c/helloWorld';
 
@@ -272,16 +295,18 @@ describe('c-hello-world', () => {
 });
 ```
 
-Run the helloWorld test suite.
+4. Run the helloWorld test suite from the `base-components-recipe` folder. 
 
 ```bash
 npm run test helloWorld
 ```
 
-You may also run all base components recipes test suites.
+5. Run all base components recipes test suites.
 ```bash
 npm run test
 ```
+
+This runs lint and unit tests. See the package.json 
 
 ## Contributing
 
