@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>列號</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>新增項目</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -697,6 +701,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>顯示「{0}」的所有結果</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>新增 {0}</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -705,12 +713,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>沒有「{0}」的結果</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>目前沒有任何結果...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>請嘗試輸入搜尋詞彙。</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>選取一個選項或移除搜尋字詞。</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>{0} 的相關對象 </label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>最近的 {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>「{0}」的所有結果</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>搜尋</label>
@@ -719,6 +747,10 @@
   <customLabels>
     <label>搜尋 {0}...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>搜尋 {0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>搜尋...</label>
@@ -731,6 +763,10 @@
   <customLabels>
     <label>選擇物件</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>「{0}」的初始結果</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>無</label>
@@ -803,5 +839,9 @@
   <customLabels>
     <label>Lightning Message Service - 您的元件必須先呈現，才能發佈至管道：{0}</label>
     <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Lightning 訊息服務 - 無法訂閱具有無效範圍 {1} 的管道 {0}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

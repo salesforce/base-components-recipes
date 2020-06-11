@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>행 번호</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>새 항목</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -697,6 +701,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>"{0}"에 대한 모든 결과 표시</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>새 {0}</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -705,12 +713,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>"{0}"에 대한 결과 없음</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>아직 결과가 없습니다...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>검색 용어를 입력하십시오.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>옵션을 선택하거나 검색 항목을 제거합니다.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>{0}을(를) 다음과 연관하십시오.</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>최신 {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>"{0}"에 대한 모든 결과</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>검색</label>
@@ -719,6 +747,10 @@
   <customLabels>
     <label>{0} 검색...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>{0} 검색</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>검색...</label>
@@ -731,6 +763,10 @@
   <customLabels>
     <label>개체 선택</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>"{0}"에 대한 초기 결과</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>없음</label>
@@ -803,5 +839,9 @@
   <customLabels>
     <label>Lightning 메시지 서비스 - 구성 요소가 렌더링되어야만 채널에 게시할 수 있습니다. {0}</label>
     <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Lightning 메시지 서비스 - {1} 범위가 잘못되어 {0} 채널에 가입할 수 없습니다.</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

@@ -8,7 +8,7 @@
 import {
     parseError,
     createOrSaveRecord,
-    getDefaultRecordTypeId,
+    getRecordTypeId,
     getFormValues,
     validateForm
 } from 'c/recordEditUtils';
@@ -306,18 +306,49 @@ describe('getFormValues', () => {
     });
 });
 
-describe('getDefaultRecordTypeId', () => {
-    it('should return the default recordTypeId from the metadata', () => {
-        const objectInfo = { defaultRecordTypeId: 'defaultRecordTypeId' };
-        expect(getDefaultRecordTypeId(objectInfo)).toEqual(
-            'defaultRecordTypeId'
-        );
+describe('retrieveRecordTypeId', () => {
+    it('should return the default recordTypeId when creating record', () => {
+        const recordTypeId = getRecordTypeId({
+            objectInfo: {
+                defaultRecordTypeId: 'defaultRecordTypeId'
+            },
+
+            record: {
+                recordTypeId: 'recordTypeId',
+                id: null
+            }
+        });
+
+        expect(recordTypeId).toEqual('defaultRecordTypeId');
     });
 
-    it('should return the default master recordTypeId when there is no default value in the metadata', () => {
-        const objectInfo = { defaultRecordTypeId: null };
-        expect(getDefaultRecordTypeId(objectInfo)).toEqual(
-            '012000000000000AAA'
-        );
+    it('should return master record type id when creating record and there is no default value in object metadata', () => {
+        const recordTypeId = getRecordTypeId({
+            objectInfo: {
+                defaultRecordTypeId: null
+            },
+
+            record: {
+                recordTypeId: 'recordTypeId',
+                id: null
+            }
+        });
+
+        expect(recordTypeId).toEqual('012000000000000AAA');
+    });
+
+    it('should return record type id when editing record', () => {
+        const recordTypeId = getRecordTypeId({
+            objectInfo: {
+                defaultRecordTypeId: 'defaultRecordTypeId'
+            },
+
+            record: {
+                recordTypeId: 'recordTypeId',
+                id: 'a07B0000007sodiIAA'
+            }
+        });
+
+        expect(recordTypeId).toEqual('recordTypeId');
     });
 });

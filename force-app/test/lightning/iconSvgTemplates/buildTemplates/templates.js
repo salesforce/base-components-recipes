@@ -287,8 +287,15 @@ import { default as standard_document } from './standard/document.html';
 import { default as standard_drafts } from './standard/drafts.html';
 import { default as standard_dynamic_record_choice } from './standard/dynamic_record_choice.html';
 import { default as standard_education } from './standard/education.html';
+import { default as standard_einstein_replies } from './standard/einstein_replies.html';
 import { default as standard_email } from './standard/email.html';
 import { default as standard_email_chatter } from './standard/email_chatter.html';
+import { default as standard_employee } from './standard/employee.html';
+import { default as standard_employee_asset } from './standard/employee_asset.html';
+import { default as standard_employee_contact } from './standard/employee_contact.html';
+import { default as standard_employee_job } from './standard/employee_job.html';
+import { default as standard_employee_job_position } from './standard/employee_job_position.html';
+import { default as standard_employee_organization } from './standard/employee_organization.html';
 import { default as standard_empty } from './standard/empty.html';
 import { default as standard_endorsement } from './standard/endorsement.html';
 import { default as standard_entitlement } from './standard/entitlement.html';
@@ -330,6 +337,8 @@ import { default as standard_invocable_action } from './standard/invocable_actio
 import { default as standard_iot_context } from './standard/iot_context.html';
 import { default as standard_iot_orchestrations } from './standard/iot_orchestrations.html';
 import { default as standard_javascript_button } from './standard/javascript_button.html';
+import { default as standard_job_family } from './standard/job_family.html';
+import { default as standard_job_position } from './standard/job_position.html';
 import { default as standard_job_profile } from './standard/job_profile.html';
 import { default as standard_kanban } from './standard/kanban.html';
 import { default as standard_knowledge } from './standard/knowledge.html';
@@ -418,7 +427,7 @@ import { default as standard_record_update } from './standard/record_update.html
 import { default as standard_recycle_bin } from './standard/recycle_bin.html';
 import { default as standard_related_list } from './standard/related_list.html';
 import { default as standard_relationship } from './standard/relationship.html';
-import { default as standard_reply_component } from './standard/reply_component.html';
+import { default as standard_reply_text } from './standard/reply_text.html';
 import { default as standard_report } from './standard/report.html';
 import { default as standard_resource_absence } from './standard/resource_absence.html';
 import { default as standard_resource_capacity } from './standard/resource_capacity.html';
@@ -435,6 +444,9 @@ import { default as standard_sales_path } from './standard/sales_path.html';
 import { default as standard_sales_value } from './standard/sales_value.html';
 import { default as standard_salesforce_cms } from './standard/salesforce_cms.html';
 import { default as standard_scan_card } from './standard/scan_card.html';
+import { default as standard_schedule_objective } from './standard/schedule_objective.html';
+import { default as standard_scheduling_constraints } from './standard/scheduling_constraints.html';
+import { default as standard_scheduling_policy } from './standard/scheduling_policy.html';
 import { default as standard_screen } from './standard/screen.html';
 import { default as standard_search } from './standard/search.html';
 import { default as standard_segments } from './standard/segments.html';
@@ -450,6 +462,8 @@ import { default as standard_service_territory_location } from './standard/servi
 import { default as standard_service_territory_member } from './standard/service_territory_member.html';
 import { default as standard_settings } from './standard/settings.html';
 import { default as standard_shift } from './standard/shift.html';
+import { default as standard_shift_preferences } from './standard/shift_preferences.html';
+import { default as standard_shift_template } from './standard/shift_template.html';
 import { default as standard_shift_type } from './standard/shift_type.html';
 import { default as standard_shipment } from './standard/shipment.html';
 import { default as standard_skill } from './standard/skill.html';
@@ -502,6 +516,7 @@ import { default as standard_waits } from './standard/waits.html';
 import { default as standard_webcart } from './standard/webcart.html';
 import { default as standard_work_capacity_limit } from './standard/work_capacity_limit.html';
 import { default as standard_work_capacity_usage } from './standard/work_capacity_usage.html';
+import { default as standard_work_contract } from './standard/work_contract.html';
 import { default as standard_work_order } from './standard/work_order.html';
 import { default as standard_work_order_item } from './standard/work_order_item.html';
 import { default as standard_work_plan } from './standard/work_plan.html';
@@ -513,7 +528,6 @@ import { default as standard_work_step } from './standard/work_step.html';
 import { default as standard_work_step_template } from './standard/work_step_template.html';
 import { default as standard_work_type } from './standard/work_type.html';
 import { default as standard_work_type_group } from './standard/work_type_group.html';
-import { default as utility_account } from './utility/account.html';
 import { default as utility_activity } from './utility/activity.html';
 import { default as utility_ad_set } from './utility/ad_set.html';
 import { default as utility_add } from './utility/add.html';
@@ -535,7 +549,6 @@ import { default as utility_apps } from './utility/apps.html';
 import { default as utility_archive } from './utility/archive.html';
 import { default as utility_arrowdown } from './utility/arrowdown.html';
 import { default as utility_arrowup } from './utility/arrowup.html';
-import { default as utility_asset } from './utility/asset.html';
 import { default as utility_assignment } from './utility/assignment.html';
 import { default as utility_attach } from './utility/attach.html';
 import { default as utility_automate } from './utility/automate.html';
@@ -583,7 +596,6 @@ import { default as utility_company } from './utility/company.html';
 import { default as utility_component_customization } from './utility/component_customization.html';
 import { default as utility_connected_apps } from './utility/connected_apps.html';
 import { default as utility_constant } from './utility/constant.html';
-import { default as utility_contact } from './utility/contact.html';
 import { default as utility_contact_request } from './utility/contact_request.html';
 import { default as utility_contract } from './utility/contract.html';
 import { default as utility_contract_alt } from './utility/contract_alt.html';
@@ -624,7 +636,6 @@ import { default as utility_einstein } from './utility/einstein.html';
 import { default as utility_email } from './utility/email.html';
 import { default as utility_email_open } from './utility/email_open.html';
 import { default as utility_emoji } from './utility/emoji.html';
-import { default as utility_employee_experience_object } from './utility/employee_experience_object.html';
 import { default as utility_end_call } from './utility/end_call.html';
 import { default as utility_end_chat } from './utility/end_chat.html';
 import { default as utility_end_messaging_session } from './utility/end_messaging_session.html';
@@ -644,6 +655,7 @@ import { default as utility_file } from './utility/file.html';
 import { default as utility_filter } from './utility/filter.html';
 import { default as utility_filterList } from './utility/filterList.html';
 import { default as utility_flow } from './utility/flow.html';
+import { default as utility_flow_alt } from './utility/flow_alt.html';
 import { default as utility_food_and_drink } from './utility/food_and_drink.html';
 import { default as utility_formula } from './utility/formula.html';
 import { default as utility_forward } from './utility/forward.html';
@@ -661,7 +673,6 @@ import { default as utility_hide_mobile } from './utility/hide_mobile.html';
 import { default as utility_hierarchy } from './utility/hierarchy.html';
 import { default as utility_high_velocity_sales } from './utility/high_velocity_sales.html';
 import { default as utility_home } from './utility/home.html';
-import { default as utility_icon_watchlist } from './utility/icon_watchlist.html';
 import { default as utility_identity } from './utility/identity.html';
 import { default as utility_image } from './utility/image.html';
 import { default as utility_in_app_assistant } from './utility/in_app_assistant.html';
@@ -817,11 +828,10 @@ import { default as utility_salesforce1 } from './utility/salesforce1.html';
 import { default as utility_save } from './utility/save.html';
 import { default as utility_screen } from './utility/screen.html';
 import { default as utility_search } from './utility/search.html';
-import { default as utility_sections } from './utility/sections.html';
+import { default as utility_section } from './utility/section.html';
 import { default as utility_send } from './utility/send.html';
 import { default as utility_sentiment_negative } from './utility/sentiment_negative.html';
 import { default as utility_sentiment_neutral } from './utility/sentiment_neutral.html';
-import { default as utility_service_contract_utility } from './utility/service_contract_utility.html';
 import { default as utility_settings } from './utility/settings.html';
 import { default as utility_setup } from './utility/setup.html';
 import { default as utility_setup_assistant_guide } from './utility/setup_assistant_guide.html';
@@ -845,7 +855,6 @@ import { default as utility_sms } from './utility/sms.html';
 import { default as utility_snippet } from './utility/snippet.html';
 import { default as utility_sobject } from './utility/sobject.html';
 import { default as utility_sobject_collection } from './utility/sobject_collection.html';
-import { default as utility_social } from './utility/social.html';
 import { default as utility_socialshare } from './utility/socialshare.html';
 import { default as utility_sort } from './utility/sort.html';
 import { default as utility_spinner } from './utility/spinner.html';
@@ -870,8 +879,7 @@ import { default as utility_table_settings } from './utility/table_settings.html
 import { default as utility_tablet_landscape } from './utility/tablet_landscape.html';
 import { default as utility_tablet_portrait } from './utility/tablet_portrait.html';
 import { default as utility_tabset } from './utility/tabset.html';
-import { default as utility_target_utility_1 } from './utility/target_utility_1.html';
-import { default as utility_target_utility_2 } from './utility/target_utility_2.html';
+import { default as utility_target } from './utility/target.html';
 import { default as utility_task } from './utility/task.html';
 import { default as utility_text } from './utility/text.html';
 import { default as utility_text_background_color } from './utility/text_background_color.html';
@@ -912,13 +920,13 @@ import { default as utility_user } from './utility/user.html';
 import { default as utility_user_role } from './utility/user_role.html';
 import { default as utility_variable } from './utility/variable.html';
 import { default as utility_video } from './utility/video.html';
-import { default as utility_visits } from './utility/visits.html';
 import { default as utility_voicemail_drop } from './utility/voicemail_drop.html';
 import { default as utility_volume_high } from './utility/volume_high.html';
 import { default as utility_volume_low } from './utility/volume_low.html';
 import { default as utility_volume_off } from './utility/volume_off.html';
 import { default as utility_waits } from './utility/waits.html';
 import { default as utility_warning } from './utility/warning.html';
+import { default as utility_watchlist } from './utility/watchlist.html';
 import { default as utility_weeklyview } from './utility/weeklyview.html';
 import { default as utility_wifi } from './utility/wifi.html';
 import { default as utility_work_order_type } from './utility/work_order_type.html';
@@ -1364,8 +1372,15 @@ export default {
     standard_drafts,
     standard_dynamic_record_choice,
     standard_education,
+    standard_einstein_replies,
     standard_email,
     standard_email_chatter,
+    standard_employee,
+    standard_employee_asset,
+    standard_employee_contact,
+    standard_employee_job,
+    standard_employee_job_position,
+    standard_employee_organization,
     standard_empty,
     standard_endorsement,
     standard_entitlement,
@@ -1407,6 +1422,8 @@ export default {
     standard_iot_context,
     standard_iot_orchestrations,
     standard_javascript_button,
+    standard_job_family,
+    standard_job_position,
     standard_job_profile,
     standard_kanban,
     standard_knowledge,
@@ -1495,7 +1512,7 @@ export default {
     standard_recycle_bin,
     standard_related_list,
     standard_relationship,
-    standard_reply_component,
+    standard_reply_text,
     standard_report,
     standard_resource_absence,
     standard_resource_capacity,
@@ -1512,6 +1529,9 @@ export default {
     standard_sales_value,
     standard_salesforce_cms,
     standard_scan_card,
+    standard_schedule_objective,
+    standard_scheduling_constraints,
+    standard_scheduling_policy,
     standard_screen,
     standard_search,
     standard_segments,
@@ -1527,6 +1547,8 @@ export default {
     standard_service_territory_member,
     standard_settings,
     standard_shift,
+    standard_shift_preferences,
+    standard_shift_template,
     standard_shift_type,
     standard_shipment,
     standard_skill,
@@ -1579,6 +1601,7 @@ export default {
     standard_webcart,
     standard_work_capacity_limit,
     standard_work_capacity_usage,
+    standard_work_contract,
     standard_work_order,
     standard_work_order_item,
     standard_work_plan,
@@ -1590,7 +1613,6 @@ export default {
     standard_work_step_template,
     standard_work_type,
     standard_work_type_group,
-    utility_account,
     utility_activity,
     utility_ad_set,
     utility_add,
@@ -1612,7 +1634,6 @@ export default {
     utility_archive,
     utility_arrowdown,
     utility_arrowup,
-    utility_asset,
     utility_assignment,
     utility_attach,
     utility_automate,
@@ -1660,7 +1681,6 @@ export default {
     utility_component_customization,
     utility_connected_apps,
     utility_constant,
-    utility_contact,
     utility_contact_request,
     utility_contract,
     utility_contract_alt,
@@ -1701,7 +1721,6 @@ export default {
     utility_email,
     utility_email_open,
     utility_emoji,
-    utility_employee_experience_object,
     utility_end_call,
     utility_end_chat,
     utility_end_messaging_session,
@@ -1721,6 +1740,7 @@ export default {
     utility_filter,
     utility_filterList,
     utility_flow,
+    utility_flow_alt,
     utility_food_and_drink,
     utility_formula,
     utility_forward,
@@ -1738,7 +1758,6 @@ export default {
     utility_hierarchy,
     utility_high_velocity_sales,
     utility_home,
-    utility_icon_watchlist,
     utility_identity,
     utility_image,
     utility_in_app_assistant,
@@ -1894,11 +1913,10 @@ export default {
     utility_save,
     utility_screen,
     utility_search,
-    utility_sections,
+    utility_section,
     utility_send,
     utility_sentiment_negative,
     utility_sentiment_neutral,
-    utility_service_contract_utility,
     utility_settings,
     utility_setup,
     utility_setup_assistant_guide,
@@ -1922,7 +1940,6 @@ export default {
     utility_snippet,
     utility_sobject,
     utility_sobject_collection,
-    utility_social,
     utility_socialshare,
     utility_sort,
     utility_spinner,
@@ -1947,8 +1964,7 @@ export default {
     utility_tablet_landscape,
     utility_tablet_portrait,
     utility_tabset,
-    utility_target_utility_1,
-    utility_target_utility_2,
+    utility_target,
     utility_task,
     utility_text,
     utility_text_background_color,
@@ -1989,13 +2005,13 @@ export default {
     utility_user_role,
     utility_variable,
     utility_video,
-    utility_visits,
     utility_voicemail_drop,
     utility_volume_high,
     utility_volume_low,
     utility_volume_off,
     utility_waits,
     utility_warning,
+    utility_watchlist,
     utility_weeklyview,
     utility_wifi,
     utility_work_order_type,

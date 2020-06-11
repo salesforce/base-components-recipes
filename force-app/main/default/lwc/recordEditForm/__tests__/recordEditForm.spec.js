@@ -1082,7 +1082,7 @@ describe('record edit form', () => {
 
     it('uses the default recordTypeId when none provided', () => {
         jest.useFakeTimers();
-        jest.spyOn(recordEditUtils, 'getDefaultRecordTypeId');
+        jest.spyOn(recordEditUtils, 'getRecordTypeId');
         const element = createElement('lightningtest-mock-record-edit-holder', {
             is: MockRecordHolder
         });
@@ -1095,8 +1095,12 @@ describe('record edit form', () => {
             element.addEventListener('load', () => {
                 try {
                     expect(
-                        recordEditUtils.getDefaultRecordTypeId
+                        recordEditUtils.getRecordTypeId
                     ).toHaveBeenCalledTimes(1);
+
+                    expect(
+                        recordEditUtils.getRecordTypeId.mock.results[0].value
+                    ).toBe('012000000000000AAA');
                 } catch (e) {
                     reject(e);
                 }

@@ -697,6 +697,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>Zobraziť všetky výsledky pre "{0}"</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Nový {0}</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -705,12 +709,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>Žiadne výsledky pre "{0}"</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>Zatiaľ žiadne výsledky</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>Skúste zadať vyhľadávaný termín.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>Vyberte možnosť alebo vyhľadaný výraz odstráňte.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>Priradiť {0} k</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Nedávne {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Všetky výsledky pre "{0}"</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Vyhľadať</label>
@@ -719,6 +743,10 @@
   <customLabels>
     <label>Vyhľadať {0}…</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Vyhľadať {0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>Vyhľadať…</label>
@@ -731,6 +759,10 @@
   <customLabels>
     <label>Vybrať objekt</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Pôvodné výsledky pre "{0}"</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Žiadne</label>
@@ -803,5 +835,9 @@
   <customLabels>
     <label>Služba správ Lightning - Váš komponent musí byt vyrenderovaný pred publikovaním do kanála: {0}</label>
     <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Služba Lightning Message - Nepodarilo sa prihlásiť na odber kanála {0} neplatným rozsahom: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

@@ -697,6 +697,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>הצג את כל התוצאות עבור "{0}"</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>{0} חדש</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -705,12 +709,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label> לא נמצאו תוצאות עבור "{0}"</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label> אין עדיין תוצאות...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label> נסה להזין מונח חיפוש.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>בחר אפשרות או הסר את מונח החיפוש.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>קשר את {0} אל</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>{0} אחרונות</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>כל התוצאות עבור "{0}"</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>חיפוש</label>
@@ -719,6 +743,10 @@
   <customLabels>
     <label>חיפוש {0}...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>חפש ב{0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>חיפוש...</label>
@@ -731,6 +759,10 @@
   <customLabels>
     <label>בחר אובייקט</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>תוצאות ראשוניות עבור "{0}"</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>ללא</label>
@@ -803,5 +835,9 @@
   <customLabels>
     <label>שירות הודעות Lightning - הרכיב שלך חייב לעבור עיבוד לפני שתוכל לפרסם לערוץ: {0}</label>
     <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>שירות הודעות Lightning - לא ניתן להירשם כמנוי לערוץ {0} עם טווח לא חוקי: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

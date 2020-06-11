@@ -697,6 +697,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>Az összes találat megjelenítése ehhez: „{0}”</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Új {0}</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -705,12 +709,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>Nincsenek találatok ehhez: „{0}”</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>Még nincsenek találatok...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>Adjon meg egy keresési kifejezést.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>Válasszon egy lehetőséget, vagy távolítsa el a keresési kifejezést.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>{0} kapcsolása ehhez:</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Legutóbbi {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Az összes találat ehhez: „{0}”</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Keresés</label>
@@ -719,6 +743,10 @@
   <customLabels>
     <label>Keresés: {0}...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>{0} keresése</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>Keresés...</label>
@@ -731,6 +759,10 @@
   <customLabels>
     <label>Objektum kiválasztása</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>A kezdeti találatok ehhez: „{0}”</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Nincs</label>
@@ -803,5 +835,9 @@
   <customLabels>
     <label>Lightning-üzenetszolgáltatás – Renderelni kell az összetevőt, mielőtt közzétehetné a csatornát: {0}</label>
     <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Lightning-üzenetszolgáltatás – Nem lehet feliratkozni a(z) {0} csatornára érvénytelen with invalid hatókörrel: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

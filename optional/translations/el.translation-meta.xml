@@ -697,6 +697,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>Εμφάνιση όλων των αποτελεσμάτων για "{0}"</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Δημιουργία: {0}</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -705,12 +709,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label> Δεν βρέθηκαν αποτελέσματα για "{0}"</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label> Δεν υπάρχουν ακόμη αποτελέσματα...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label> Δοκιμάστε να εισαγάγετε έναν όρο αναζήτησης.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>Ορίστε μια επιλογή ή καταργήστε τον όρο αναζήτησης.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>Συσχέτιση {0} με</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Πρόσφατα {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Όλα τα αποτελέσματα για "{0}"</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Αναζήτηση</label>
@@ -719,6 +743,10 @@
   <customLabels>
     <label>Αναζήτηση για {0}…</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Αναζήτηση για {0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>Αναζήτηση...</label>
@@ -731,6 +759,10 @@
   <customLabels>
     <label>Επιλογή αντικειμένου...</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Αρχικά αποτελέσματα για "{0}"</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Καμία επιλογή</label>
@@ -803,5 +835,9 @@
   <customLabels>
     <label>Υπηρεσία μηνυμάτων Lightning - Το στοιχείο σας πρέπει να αποδοθεί για να είναι δυνατή η δημοσίευση στο κανάλι: {0}</label>
     <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Υπηρεσία μηνυμάτων Lightning - Δεν είναι δυνατή η εγγραφή στο κανάλι {0} με μη έγκυρο εύρος: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

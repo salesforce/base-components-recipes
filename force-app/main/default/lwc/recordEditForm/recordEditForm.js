@@ -17,7 +17,7 @@ import {
     createErrorEvent,
     filterByPicklistsInForm,
     formHasPicklists,
-    getDefaultRecordTypeId,
+    getRecordTypeId,
     validateForm
 } from 'c/recordEditUtils';
 import { densityValues, labelAlignValues } from 'c/fieldUtils';
@@ -286,8 +286,9 @@ export default class cRecordEditForm extends LightningElement {
         const oldObjectApiName = this._wiredPicklistApiName;
 
         this._wiredPicklistApiName = this.objectApiName;
+
         this._wiredRecordTypeId =
-            this.recordTypeId || getDefaultRecordTypeId(this.recordUi);
+            this.recordTypeId || getRecordTypeId(this.recordUi);
 
         if (
             oldObjectApiName === this._wiredPicklistApiName &&

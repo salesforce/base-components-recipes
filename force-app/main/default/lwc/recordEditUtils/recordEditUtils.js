@@ -196,8 +196,16 @@ export function getFieldSet(objectApiName) {
     return new FieldSet(objectApiName);
 }
 
-export function getDefaultRecordTypeId(objectInfo) {
-    const metadataDefaultRecordTypeId =
-        objectInfo && objectInfo.defaultRecordTypeId;
-    return metadataDefaultRecordTypeId || MASTER_RECORD_TYPE_ID;
+export function getRecordTypeId(recordUi) {
+    const record = recordUi.record;
+    const objectInfo = recordUi.objectInfo;
+
+    const defaultRecordTypeId =
+        objectInfo.defaultRecordTypeId || MASTER_RECORD_TYPE_ID;
+
+    if (!record.id) {
+        return defaultRecordTypeId;
+    }
+
+    return record.recordTypeId || defaultRecordTypeId;
 }

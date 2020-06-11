@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Zeilennummer</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Neue Elemente</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -609,7 +613,7 @@
     <name>lightning_LightningDateTimePicker_timeLabel</name>
   </customLabels>
   <customLabels>
-    <label>Ihr Eintrag entspricht nicht dem zulässigen Format "{0}".</label>
+    <label>Ihr Eintrag entspricht nicht dem zulässigen Format: {0}.</label>
     <name>lightning_LightningDateTimePicker_invalidDate</name>
   </customLabels>
   <customLabels>
@@ -697,6 +701,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>Alle Ergebnisse für "{0}" anzeigen</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>{0} erstellen</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -705,12 +713,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>Keine Ergebnisse für "{0}"</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>Noch keine Ergebnisse gefunden...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>Geben Sie einen Suchbegriff ein.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>Wählen Sie eine Option aus oder entfernen Sie den Suchbegriff.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>{0} verbinden mit</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Letzte(r,s) {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Alle Ergebnisse für "{0}"</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Suche</label>
@@ -719,6 +747,10 @@
   <customLabels>
     <label>{0} durchsuchen...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>{0} suchen</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>Suche...</label>
@@ -731,6 +763,10 @@
   <customLabels>
     <label>Objekt auswählen</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Erste Ergebnisse für "{0}"</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Keine</label>
@@ -803,5 +839,9 @@
   <customLabels>
     <label>Lightning-Nachrichtenservice – Ihre Komponente muss gerendert werden, bevor Sie im Kanal veröffentlichen können: {0}</label>
     <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Lightning-Nachrichtenservice – Kanal {0} mit ungültigem Umfang kann nicht abonniert werden: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>
