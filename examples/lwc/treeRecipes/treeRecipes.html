@@ -15,7 +15,17 @@
 
                 <!-- Simple -->
                 <div class="slds-p-around_medium lgc-bg">
-                    <c-tree items={items} header="Roles"></c-tree>
+                    <c-button onclick={toggleCTO} label="Toggle CTO"></c-button>
+                    <c-button
+                        onclick={selectDirector}
+                        label="Select Director"
+                    ></c-button>
+                    <c-tree
+                        items={items}
+                        header="Roles"
+                        selected-item={selectedItem}
+                        onselect={handleSelect}
+                    ></c-tree>
                 </div>
             </div>
             <c-view-source source="treeRecipes" slot="footer">

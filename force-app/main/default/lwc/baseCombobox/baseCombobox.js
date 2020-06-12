@@ -34,6 +34,8 @@ const i18n = {
 const SMALL_MIN_HEIGHT = '2.25rem';
 const MEDIUM_MIN_HEIGHT = '6.75rem';
 
+const VIEWPORT_HEIGHT_SMALL = 834;
+
 const ARIA_CONTROLS = 'aria-controls';
 const ARIA_LABELLEDBY = 'aria-labelledby';
 const ARIA_DESCRIBEDBY = 'aria-describedby';
@@ -49,6 +51,7 @@ export default class cBaseCombobox extends LightningElement {
     @api inputIconAlternativeText;
     @api inputMaxlength;
     @api showInputActivityIndicator = false;
+    @api required = false;
     @api dropdownAlignment = 'left';
     @api placeholder = 'Select an Item';
     @api inputLabel;
@@ -415,14 +418,25 @@ export default class cBaseCombobox extends LightningElement {
 
     get computedDropdownClass() {
         const alignment = this.dropdownAlignment;
+
+        let dropdownLengthClass = '';
+
+        if (this._dropdownVisible) {
+            if (this.dropdownHeight === 'standard') {
+                if (window.innerHeight <= VIEWPORT_HEIGHT_SMALL) {
+                    dropdownLengthClass = 'slds-dropdown_length-with-icon-7';
+                } else {
+                    dropdownLengthClass = 'slds-dropdown_length-with-icon-10';
+                }
+            } else if (this.dropdownHeight === 'small') {
+                dropdownLengthClass = 'slds-dropdown_length-with-icon-5';
+            }
+        }
+
         return classSet(
-            'slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid'
+            `slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid ${dropdownLengthClass}`
         )
             .add({
-                'slds-dropdown_length-with-icon-10':
-                    this._dropdownHeight === 'standard',
-                'slds-dropdown_length-with-icon-5':
-                    this._dropdownHeight === 'small',
                 'slds-dropdown_left':
                     alignment === 'left' || alignment === 'auto',
                 'slds-dropdown_center': alignment === 'center',
@@ -743,21 +757,6 @@ export default class cBaseCombobox extends LightningElement {
             !this.showDropdownActivityIndicator &&
             (!Array.isArray(this.items) || this.items.length === 0)
         );
-    }
-
-    get isDropdownHeightSmall() {
-        if (this.isDropdownEmpty) {
-            return true;
-        }
-
-        let count = this._items ? this._items.length : 0;
-        if (count === 1) {
-            count += this._items[0].items ? this._items[0].items.length : 0;
-        } else if (count === 2) {
-            count += this._items[0].items ? this._items[0].items.length : 0;
-            count += this._items[1].items ? this._items[1].items.length : 0;
-        }
-        return count < 3;
     }
 
     dropdownKeyboardInterface() {

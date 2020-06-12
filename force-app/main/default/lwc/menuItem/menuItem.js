@@ -23,6 +23,7 @@ export default class cMenuItem extends LightningElement {
     @track _tabindex = '-1';
     @track _checked = undefined;
     @track _isDraft = false;
+    @track _target = null;
 
     @api prefixIconName;
 
@@ -60,6 +61,17 @@ export default class cMenuItem extends LightningElement {
     set tabIndex(newValue) {
         this._tabindex = newValue;
         this.handleTabIndexChange(newValue);
+    }
+
+    @api get target() {
+        return this._target;
+    }
+
+    set target(newValue) {
+        this._target = normalizeString(newValue, {
+            fallbackValue: null,
+            validValues: ['_self', '_blank']
+        });
     }
 
     handleAccessKeyChange(value) {
@@ -204,5 +216,13 @@ export default class cMenuItem extends LightningElement {
         this.template.querySelector('a').focus();
 
         this.dispatchEvent(new CustomEvent('focus'));
+    }
+
+    @api
+    click() {
+        const anchor = this.template.querySelector('a');
+        if (anchor) {
+            anchor.click();
+        }
     }
 }

@@ -1,0 +1,58 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <c-button-group>
+        <template for:each={buttons} for:item="button">
+            <c-button key={button.key} label={button.label}></c-button>
+        </template>
+        <template for:each={buttonStatefuls} for:item="button">
+            <c-button-stateful
+                key={button.key}
+                label-when-off={button.labelWhenOff}
+                label-when-on={button.labelWhenOn}
+                label-when-hover={button.labelWhenHober}
+                icon-name-when-off={button.iconNameWhenOff}
+                icon-name-when-on={button.iconNameWhenOn}
+                icon-name-when-hover={button.iconNameWhenHover}
+            ></c-button-stateful>
+        </template>
+        <template for:each={buttonIcons} for:item="button">
+            <c-button-icon
+                key={button.key}
+                icon-name={button.iconName}
+                variant="border-filled"
+                alternative-text={button.alternativeText}
+            >
+            </c-button-icon>
+        </template>
+        <template for:each={buttonIconStatefuls} for:item="button">
+            <c-button-icon-stateful
+                key={button.key}
+                icon-name={button.iconName}
+                selected={button.selected}
+                alternative-text={button.alternativeText}
+            >
+            </c-button-icon-stateful>
+        </template>
+        <template for:each={buttonMenus} for:item="button">
+            <c-button-menu
+                key={button.key}
+                alternative-text={button.alternativeText}
+            >
+                <template for:each={button.menuItems} for:item="menuItem">
+                    <c-menu-item
+                        key={menuItem.key}
+                        label={menuItem.label}
+                        value={menuItem.value}
+                    >
+                    </c-menu-item>
+                </template>
+            </c-button-menu>
+        </template>
+    </c-button-group>
+</template>

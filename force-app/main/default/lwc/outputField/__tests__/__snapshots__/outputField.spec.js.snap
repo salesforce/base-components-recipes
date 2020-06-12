@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-output-field boolean 1`] = `
+<c-output-field
+  class="slds-form-element slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    >
+      Checkbox label
+    </span>
+    <div
+      class="slds-form-element__control"
+    >
+      <lightning-input
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+          <input
+            disabled=""
+          />
+      </lightning-input>
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field email 1`] = `
+<c-output-field
+  class="slds-form-element slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    >
+      Email
+    </span>
+    <div
+      class="slds-form-element__control"
+    >
+      <lightning-formatted-email
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+      </lightning-formatted-email>
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field formatted-name Default Name 1`] = `
+<c-output-field
+  class="slds-form-element slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    >
+      Full Name
+    </span>
+    <div
+      class="slds-form-element__control"
+    >
+      <c-formatted-name
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+          Mister Jim Steele
+      </c-formatted-name>
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field noLabel 1`] = `
+<c-output-field
+  class="slds-form-element"
+>
+  #shadow-root(open)
+    <div
+      class="slds-form-element__control"
+    >
+      <c-formatted-text
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+          Some Plain Text
+      </c-formatted-text>
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field nonexistent 1`] = `
+<c-output-field
+  class="slds-form-element slds-hide slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    />
+    <div
+      class="slds-form-element__control"
+    >
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field phone 1`] = `
+<c-output-field
+  class="slds-form-element slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    >
+      Phone Number
+    </span>
+    <div
+      class="slds-form-element__control"
+    >
+      <c-formatted-phone
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+          <a
+            href="tel:403-203-1048"
+          >
+            403-203-1048
+          </a>
+      </c-formatted-phone>
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field picklist 1`] = `
+<c-output-field
+  class="slds-form-element slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    >
+      Picklist
+    </span>
+    <div
+      class="slds-form-element__control"
+    >
+      <c-formatted-text
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+          PicklistDisplayValue
+      </c-formatted-text>
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field richtext fallback 1`] = `
+<c-output-field
+  class="slds-form-element slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    >
+      Rich Text
+    </span>
+    <div
+      class="slds-form-element__control"
+    >
+      <lightning-formatted-rich-text
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+      </lightning-formatted-rich-text>
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field text 1`] = `
+<c-output-field
+  class="slds-form-element slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    >
+      Plain Text
+    </span>
+    <div
+      class="slds-form-element__control"
+    >
+      <c-formatted-text
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+          Some Plain Text
+      </c-formatted-text>
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field text with field reference 1`] = `
+<c-output-field
+  class="slds-form-element slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    >
+      Plain Text
+    </span>
+    <div
+      class="slds-form-element__control"
+    >
+      <c-formatted-text
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+          Some Plain Text
+      </c-formatted-text>
+      <slot />
+    </div>
+</c-output-field>
+`;
+
+exports[`c-output-field throws an error on objectApiName mismatch 1`] = `"objectApiName (notEntity) for field Text does not match the objectApiName provided for the form (entity)."`;
+
+exports[`c-output-field url 1`] = `
+<c-output-field
+  class="slds-form-element slds-form-element_stacked"
+>
+  #shadow-root(open)
+    <span
+      class="slds-form-element__label"
+    >
+      Url
+    </span>
+    <div
+      class="slds-form-element__control"
+    >
+      <c-formatted-url
+        class="slds-form-element__static"
+      >
+        #shadow-root(open)
+          <a
+            href="http://www.google.com"
+          >
+            www.google.com
+          </a>
+      </c-formatted-url>
+      <slot />
+    </div>
+</c-output-field>
+`;

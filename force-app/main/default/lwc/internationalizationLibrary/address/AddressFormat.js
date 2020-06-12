@@ -224,9 +224,9 @@ var data = {
     },
 
     GB: {
-        fmt: '%A%n%C%n%Z%n%S%n%K',
+        fmt: '%A%n%C%n%S%n%Z%n%K',
         require: 'ACZ',
-        input: 'ACZK'
+        input: 'ACSZK'
     },
 
     KE: {
@@ -370,9 +370,9 @@ var data = {
     },
 
     HK: {
-        fmt: '%K%C%n%A%n',
+        fmt: '%K%S%C%n%A%n%Z',
         require: 'CA',
-        input: 'KCA'
+        input: 'KSCAZ'
     },
 
     CO: {
@@ -625,6 +625,7 @@ var data = {
 var languageCodeToCountry = {
     languageCode: {
         ar: 'AE',
+        af: 'ZA',
         bg: 'BG',
         bn: 'BN',
         bs: 'BA',
@@ -640,7 +641,8 @@ var languageCodeToCountry = {
         fi: 'FI',
         fr: 'FR',
         ga: 'IE',
-        hi: 'HI',
+        gu: 'IN',
+        hi: 'IN',
         hr: 'HR',
         hu: 'HU',
         hy: 'HY',
@@ -650,11 +652,14 @@ var languageCodeToCountry = {
         iw: 'IL',
         ja: 'JP',
         ka: 'GE',
+        kn: 'IN',
         ko: 'KR',
         lb: 'LU',
         lt: 'IT',
         lv: 'LV',
         mk: 'MK',
+        ml: 'IN',
+        mr: 'IN',
         ms: 'MY',
         mt: 'MT',
         nl: 'NL',
@@ -670,14 +675,18 @@ var languageCodeToCountry = {
         sq: 'SQ',
         sr: 'RS',
         sv: 'SE',
-        ta: 'TA',
+        sw: 'ZA',
+        ta: 'IN',
+        te: 'IN',
         th: 'TH',
         tl: 'PH',
         tr: 'TR',
         uk: 'UK',
-        ur: 'UR',
+        ur: 'IN',
         vi: 'VN',
-        zh: 'CN'
+        xh: 'ZA',
+        zh: 'CN',
+        zu: 'ZA'
     }
 };
 
@@ -1083,6 +1092,15 @@ var address = {
     },
 
     getAddressInputOrder: function getAddressInputOrder(langCode, countryCode) {
+        if (
+            langCode &&
+            langCode.toLowerCase() == 'en' &&
+            countryCode &&
+            countryCode.toUpperCase() == 'HK'
+        ) {
+            langCode = 'en';
+            countryCode = 'US';
+        }
         var code = this.getCountryFromLocale(langCode, countryCode);
         if (data[code]) {
             return data[code].input;
@@ -1094,6 +1112,15 @@ var address = {
         langCode,
         countryCode
     ) {
+        if (
+            langCode &&
+            langCode.toLowerCase() == 'en' &&
+            countryCode &&
+            countryCode.toUpperCase() == 'HK'
+        ) {
+            langCode = 'en';
+            countryCode = 'US';
+        }
         var code = this.getCountryFromLocale(langCode, countryCode);
         if (data[code]) {
             var input = data[code].input;

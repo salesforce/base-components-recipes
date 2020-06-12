@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>Carregar imagens não tem suporte para usuários convidados.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>obrigatório</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>Limpar</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Aumentar número</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Diminuir número</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>Aviso</label>
@@ -427,6 +439,18 @@
   <customLabels>
     <label>Ações</label>
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Modo de navegação</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Modo de ação</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Número da linha</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
   </customLabels>
   <customLabels>
     <label>Novos itens</label>
@@ -677,6 +701,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>Exibir todos os resultados para "{0}"</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Criar {0}</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -685,12 +713,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>Nenhum resultado para "{0}"</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>Não há resultados ainda...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>Tente inserir um termo de pesquisa.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>Selecione uma opção ou remova o termo de pesquisa.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>Relacionar {0} a</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>{0} recente</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Todos os resultados para "{0}"</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Pesquisar</label>
@@ -699,6 +747,10 @@
   <customLabels>
     <label>Pesquisar {0}…</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Pesquisar {0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>Pesquisar...</label>
@@ -711,6 +763,10 @@
   <customLabels>
     <label>Escolha um objeto</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Resultados iniciais para "{0}"</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Nenhum</label>
@@ -779,5 +835,13 @@
   <customLabels>
     <label>Fechar</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>Serviço de mensagens do Lightning – seu componente deve ser renderizado antes que você possa publicar no canal: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Serviço de mensagens do Lightning – não é possível assinar o canal {0} com um escopo inválido: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

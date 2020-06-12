@@ -7,7 +7,12 @@
 import { LightningElement, track } from 'lwc';
 
 export default class RadioGroupRecipes extends LightningElement {
-    @track value = '';
+    @track value1 = '';
+    @track value2 = '';
+    @track value3 = '';
+    @track value4 = '';
+    @track value5 = '';
+    @track value6 = '';
 
     get options() {
         return [

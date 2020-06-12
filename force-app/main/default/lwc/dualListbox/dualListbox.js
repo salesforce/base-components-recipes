@@ -23,13 +23,12 @@ import labelMoveSelectionToAssistiveText from '@salesforce/label/c.lightning_Lig
 import labelLoadingText from '@salesforce/label/c.lightning_LightningCombobox_loadingText';
 import { LightningElement, api, track } from 'lwc';
 import { handleKeyDownOnOption } from './keyboard';
-import { classSet } from 'c/utils';
+import { classSet, formatLabel } from 'c/utils';
 import {
     assert,
     normalizeBoolean,
     getRealDOMId,
-    classListMutation,
-    ArraySlice
+    classListMutation
 } from 'c/utilsPrivate';
 import {
     InteractingState,
@@ -402,7 +401,7 @@ export default class cDualListbox extends LightningElement {
     }
 
     get computedLockAssistiveText() {
-        return this.formatString(
+        return formatLabel(
             this.i18n.optionLockAssistiveText,
             this.selectedLabel
         );
@@ -413,7 +412,7 @@ export default class cDualListbox extends LightningElement {
     }
 
     getRightButtonAssistiveText() {
-        return this.formatString(
+        return formatLabel(
             i18n.moveSelectionToAssistiveText,
             this.selectedLabel
         );
@@ -431,10 +430,7 @@ export default class cDualListbox extends LightningElement {
     }
 
     getLeftButtonAssistiveText() {
-        return this.formatString(
-            i18n.moveSelectionToAssistiveText,
-            this.sourceLabel
-        );
+        return formatLabel(i18n.moveSelectionToAssistiveText, this.sourceLabel);
     }
 
     @api get removeButtonLabel() {
@@ -708,22 +704,22 @@ export default class cDualListbox extends LightningElement {
 
     get _overflowMessage() {
         const minHelpMsg =
-            this.min > 0 ? this.formatString(this.i18n.minHelp, this.min) : '';
+            this.min > 0 ? formatLabel(this.i18n.minHelp, this.min) : '';
 
-        return this.formatString(this.i18n.maxError, this.max) + minHelpMsg;
+        return formatLabel(this.i18n.maxError, this.max) + minHelpMsg;
     }
 
     get _underflowMessage() {
         const maxHelpMsg = this.max
-            ? this.formatString(this.i18n.maxHelp, this.max)
+            ? formatLabel(this.i18n.maxHelp, this.max)
             : '';
         const minRequiredError =
             this.min > 1
-                ? this.formatString(this.i18n.minRequiredErrorPlural, this.min)
+                ? formatLabel(this.i18n.minRequiredErrorPlural, this.min)
                 : this.i18n.minRequiredErrorSingular;
         const minError =
             this.min > 1
-                ? this.formatString(this.i18n.minErrorPlural, this.min)
+                ? formatLabel(this.i18n.minErrorPlural, this.min)
                 : this.i18n.minErrorSingular;
 
         return this.required
@@ -777,17 +773,6 @@ export default class cDualListbox extends LightningElement {
         const temp = array[i];
         array[i] = array[j];
         array[j] = temp;
-    }
-
-    formatString(str) {
-        const args = ArraySlice.call(arguments, 1);
-
-        if (str) {
-            return str.replace(/{(\d+)}/g, (match, i) => {
-                return typeof args[i] !== 'undefined' ? args[i] : match;
-            });
-        }
-        return '';
     }
 
     getElementsOfList(listId) {

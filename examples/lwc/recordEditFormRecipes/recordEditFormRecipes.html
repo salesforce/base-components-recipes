@@ -7,19 +7,20 @@
 <template>
     <c-card title="Record Edit Form">
         <div class="slds-card__body slds-card__body_inner">
-            <c-record-edit-form
-                record-id={accountId}
-                object-api-name="Account"
-                density="comfy"
-                onsuccess={handleSuccess}
-                onerror={handleError}
-            >
-                <div class="slds-box">
+            <div class="slds-box slds-m-vertical_medium">
+                <h2 class="slds-text-heading_small">Record Edit Form</h2>
+                <c-record-edit-form
+                    record-id={accountId}
+                    object-api-name="Account"
+                    density="comfy"
+                    onsuccess={handleSuccess}
+                    onerror={handleError}
+                >
                     <lightning-input-field field-name="Name">
                     </lightning-input-field>
                     <lightning-input-field field-name="Phone">
                     </lightning-input-field>
-                    <lightning-input-field field-name="ShippingAddress">
+                    <lightning-input-field field-name="BillingAddress">
                     </lightning-input-field>
                     <lightning-input-field field-name="Website">
                     </lightning-input-field>
@@ -37,10 +38,29 @@
                         title="Submit"
                         type="submit"
                     ></c-button>
+                </c-record-edit-form>
+                <div class="slds-box">
+                    <h4 class="slds-text-heading_small">
+                        Status: {formStatus}
+                    </h4>
                 </div>
-            </c-record-edit-form>
-            <div class="slds-box">
-                <h4 class="slds-text-heading_small">Status: {formStatus}</h4>
+            </div>
+            <div class="slds-box slds-m-vertical_medium">
+                <h2 class="slds-text-heading_small">
+                    Record Edit Form with Automatic Error Handling
+                </h2>
+                <c-record-edit-form
+                    record-id={accountId}
+                    object-api-name="Contact"
+                >
+                    <c-messages></c-messages>
+                    <lightning-input-field field-name="Name">
+                    </lightning-input-field>
+                    <lightning-input-field field-name="Phone">
+                    </lightning-input-field>
+                    <lightning-input-field field-name="Website">
+                    </lightning-input-field>
+                </c-record-edit-form>
             </div>
             <c-view-source source="recordEditFormRecipes" slot="footer">
                 Represents a record edit layout that displays one or more

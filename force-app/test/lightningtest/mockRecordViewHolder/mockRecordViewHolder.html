@@ -1,0 +1,36 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    {_recordId}
+    <c-record-view-form
+        record-id={_recordId}
+        object-api-name={_apiName}
+        onload={handleLoad}
+        density={density}
+    >
+        <c-output-field field-name="Name"></c-output-field>
+        <c-output-field
+            if:true={showIncludedField}
+            class="includedField"
+            field-name="Has_Website__c"
+        ></c-output-field>
+        <c-output-field
+            if:true={showExcludedField}
+            class="excludedField"
+            field-name="Additional_Field__c"
+        ></c-output-field>
+        <div class="nestedChild">
+            <template if:true={_showNestedChild}>
+                <c-output-field
+                    field-name="CreatedDate"
+                    class="createdDate"
+                ></c-output-field>
+            </template>
+        </div>
+    </c-record-view-form>
+</template>

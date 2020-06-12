@@ -14,11 +14,11 @@
         onsuccess={handleSuccess}
         layout-type={_layout}
         onerror={handleError}
-        record-type-id={recordTypeId}
+        record-type-id={_recordTypeId}
         density={density}
     >
         <div class="slds-form" role="list">
-            <lightning-messages></lightning-messages>
+            <c-messages></c-messages>
             <div class="slds-is-relative record-form-spinner-holder">
                 <c-spinner
                     alternative-text={_labelLoading}
@@ -68,13 +68,13 @@
             <template if:true={_editMode}>
                 <div class="slds-align_absolute-center slds-p-around_medium">
                     <c-button
-                        class="slds-m-around_xx-small lightning-record-form-cancel"
+                        class="slds-m-around_xx-small c-record-form-cancel"
                         onclick={handleCancel}
                         name="cancel"
                         label={_labelCancel}
                     ></c-button>
                     <c-button
-                        class="slds-m-around_xx-small lightning-record-form-submit"
+                        class="slds-m-around_xx-small c-record-form-submit"
                         type="submit"
                         name="submit"
                         variant="brand"

@@ -14,5 +14,10 @@ package.xml
 **/.eslintrc.json
 
 # LWC Jest
+**/__raptorMocks__/**
 **/__tests__/**
 **/__test__/**
+force-app/test/**
+force-app/main/default/lwc/iconSvgTemplates/**
+force-app/main/default/lwc/testUtils/**
+force-app/main/default/lwc/testUtilsButtonGroup/**

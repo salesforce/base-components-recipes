@@ -1,0 +1,77 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <c-vertical-navigation
+        compact={compact}
+        shaded={shaded}
+        selected-item={selectedItem}
+        aria-label={ariaLabel}
+        onbeforeselect={handleBeforeSelect}
+        onselect={handleSelect}
+    >
+        <c-vertical-navigation-section label="First" class="asection">
+            <c-vertical-navigation-item
+                label="Item 1"
+                name="item1"
+            ></c-vertical-navigation-item>
+            <c-vertical-navigation-item
+                label="Item 2"
+                name="item2"
+            ></c-vertical-navigation-item>
+            <c-vertical-navigation-item
+                label="Item 3"
+                name="item3"
+            ></c-vertical-navigation-item>
+        </c-vertical-navigation-section>
+
+        <c-vertical-navigation-section label="Second" class="asection">
+            <c-vertical-navigation-item
+                label="Item 4"
+                name="item4"
+            ></c-vertical-navigation-item>
+            <c-vertical-navigation-item
+                label="Item 5"
+                name="item5"
+            ></c-vertical-navigation-item>
+            <c-vertical-navigation-item
+                label="Item 6"
+                name="item6"
+            ></c-vertical-navigation-item>
+            <c-vertical-navigation-overflow class="anoverflow">
+                <c-vertical-navigation-item
+                    label="Item 7"
+                    name="item7"
+                ></c-vertical-navigation-item>
+                <c-vertical-navigation-item
+                    label="Item 8"
+                    name="item8"
+                ></c-vertical-navigation-item>
+                <c-vertical-navigation-item
+                    label="Item 9"
+                    name="item9"
+                ></c-vertical-navigation-item>
+            </c-vertical-navigation-overflow>
+        </c-vertical-navigation-section>
+
+        <c-vertical-navigation-section label="Third">
+            <c-vertical-navigation-item-icon
+                label="Item 10"
+                name="item10"
+                icon-name="utility:open_folder"
+            >
+            </c-vertical-navigation-item-icon>
+
+            <c-vertical-navigation-item-icon
+                label="Item 11"
+                name="item11"
+                icon-name="utility:open_folder"
+            >
+            </c-vertical-navigation-item-icon>
+        </c-vertical-navigation-section>
+    </c-vertical-navigation>
+</template>

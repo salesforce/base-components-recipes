@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-menu-divider default state 1`] = `
+<c-menu-divider
+  role="separator"
+>
+  #shadow-root(open)
+    <div
+      class="slds-has-divider_top-space"
+    />
+</c-menu-divider>
+`;

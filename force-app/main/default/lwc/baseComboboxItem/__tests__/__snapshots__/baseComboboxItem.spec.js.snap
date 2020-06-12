@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-base-combobox-item renders card 1`] = `
+<c-base-combobox-item
+  class="slds-listbox__option_entity"
+>
+  #shadow-root(open)
+    <span
+      class="slds-media__figure"
+    >
+      <c-icon
+        class="slds-icon-utility-search slds-icon_container"
+      >
+        #shadow-root(open)
+          <c-primitive-icon>
+            #shadow-root(open)
+              <svg
+                aria-hidden="true"
+                class="slds-icon slds-icon-text-default slds-icon_small"
+                data-key="search"
+                focusable="false"
+              >
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+          </c-primitive-icon>
+      </c-icon>
+    </span>
+    <span
+      class="slds-media__body"
+    >
+      <span
+        class="slds-listbox__option-text slds-listbox__option-text_entity"
+      >
+        <span
+          class="slds-truncate"
+          title="Item Example"
+        >
+          Item Example
+        </span>
+      </span>
+      <span
+        class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+      >
+        <span
+          class="slds-truncate"
+          title="Item example info"
+        >
+          Item example info
+        </span>
+      </span>
+    </span>
+</c-base-combobox-item>
+`;
+
+exports[`c-base-combobox-item renders card w/ highlighted text 1`] = `
+<c-base-combobox-item
+  class="slds-listbox__option_entity"
+>
+  #shadow-root(open)
+    <span
+      class="slds-media__figure"
+    >
+      <c-icon
+        class="slds-icon-utility-search slds-icon_container"
+      >
+        #shadow-root(open)
+          <c-primitive-icon>
+            #shadow-root(open)
+              <svg
+                aria-hidden="true"
+                class="slds-icon slds-icon-text-default slds-icon_small"
+                data-key="search"
+                focusable="false"
+              >
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+          </c-primitive-icon>
+      </c-icon>
+    </span>
+    <span
+      class="slds-media__body"
+    >
+      <span
+        class="slds-listbox__option-text slds-listbox__option-text_entity"
+      >
+        <c-base-combobox-formatted-text
+          class="slds-truncate"
+          title="Highlighted Text"
+        >
+          #shadow-root(open)
+            Hi
+            <strong>
+              ghl
+            </strong>
+            ighted Text
+        </c-base-combobox-formatted-text>
+      </span>
+      <span
+        class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+      >
+        <c-base-combobox-formatted-text
+          class="slds-truncate"
+          title="Highlighted Text"
+        >
+          #shadow-root(open)
+            Hi
+            <strong>
+              ghl
+            </strong>
+            ighted Text
+        </c-base-combobox-formatted-text>
+      </span>
+    </span>
+</c-base-combobox-item>
+`;
+
+exports[`c-base-combobox-item renders card w/o subtext 1`] = `
+<c-base-combobox-item
+  class="slds-listbox__option_entity"
+>
+  #shadow-root(open)
+    <span
+      class="slds-media__figure"
+    >
+      <c-icon
+        class="slds-icon-utility-search slds-icon_container"
+      >
+        #shadow-root(open)
+          <c-primitive-icon>
+            #shadow-root(open)
+              <svg
+                aria-hidden="true"
+                class="slds-icon slds-icon-text-default slds-icon_small"
+                data-key="search"
+                focusable="false"
+              >
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+          </c-primitive-icon>
+      </c-icon>
+    </span>
+    <span
+      class="slds-media__body"
+    >
+      <span
+        class="slds-listbox__option-text slds-listbox__option-text_entity"
+      >
+        <span
+          class="slds-truncate"
+          title="Item Example"
+        >
+          Item Example
+        </span>
+      </span>
+    </span>
+</c-base-combobox-item>
+`;
+
+exports[`c-base-combobox-item renders inline text 1`] = `
+<c-base-combobox-item
+  class="slds-media_small slds-listbox__option_plain"
+>
+  #shadow-root(open)
+    <span
+      class="slds-media__figure slds-listbox__option-icon"
+    >
+      <c-icon
+        class="slds-icon-utility-search slds-icon_container"
+      >
+        #shadow-root(open)
+          <c-primitive-icon>
+            #shadow-root(open)
+              <svg
+                aria-hidden="true"
+                class="slds-icon slds-icon-text-default slds-icon_x-small"
+                data-key="search"
+                focusable="false"
+              >
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+          </c-primitive-icon>
+      </c-icon>
+    </span>
+    <span
+      class="slds-media__body"
+    >
+      <span
+        class="slds-truncate"
+        title="Inline Example"
+      >
+        Inline Example
+      </span>
+    </span>
+</c-base-combobox-item>
+`;
+
+exports[`c-base-combobox-item renders inline text w/ alternative text for card 1`] = `
+<c-base-combobox-item
+  class="slds-listbox__option_entity"
+>
+  #shadow-root(open)
+    <span
+      class="slds-media__figure"
+    >
+      <c-icon
+        class="slds-icon-utility-search slds-icon_container"
+      >
+        #shadow-root(open)
+          <c-primitive-icon>
+            #shadow-root(open)
+              <svg
+                aria-hidden="true"
+                class="slds-icon slds-icon-text-default slds-icon_small"
+                data-key="search"
+                focusable="false"
+              >
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+          </c-primitive-icon>
+          <span
+            class="slds-assistive-text"
+          >
+            example alternative text
+          </span>
+      </c-icon>
+    </span>
+    <span
+      class="slds-media__body"
+    >
+      <span
+        class="slds-listbox__option-text slds-listbox__option-text_entity"
+      >
+        <span
+          class="slds-truncate"
+          title="example text"
+        >
+          example text
+        </span>
+      </span>
+    </span>
+</c-base-combobox-item>
+`;
+
+exports[`c-base-combobox-item renders inline text w/ alternative text for inline 1`] = `
+<c-base-combobox-item
+  class="slds-media_small slds-listbox__option_plain"
+>
+  #shadow-root(open)
+    <span
+      class="slds-media__figure slds-listbox__option-icon"
+    >
+      <c-icon
+        class="slds-icon-utility-search slds-icon_container"
+      >
+        #shadow-root(open)
+          <c-primitive-icon>
+            #shadow-root(open)
+              <svg
+                aria-hidden="true"
+                class="slds-icon slds-icon-text-default slds-icon_x-small"
+                data-key="search"
+                focusable="false"
+              >
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+          </c-primitive-icon>
+          <span
+            class="slds-assistive-text"
+          >
+            example alternative text
+          </span>
+      </c-icon>
+    </span>
+    <span
+      class="slds-media__body"
+    >
+      <span
+        class="slds-truncate"
+        title="example text"
+      >
+        example text
+      </span>
+    </span>
+</c-base-combobox-item>
+`;
+
+exports[`c-base-combobox-item renders inline text w/ highlighted text 1`] = `
+<c-base-combobox-item
+  class="slds-media_small slds-listbox__option_plain"
+>
+  #shadow-root(open)
+    <span
+      class="slds-media__figure slds-listbox__option-icon"
+    >
+      <c-icon
+        class="slds-icon-utility-search slds-icon_container"
+      >
+        #shadow-root(open)
+          <c-primitive-icon>
+            #shadow-root(open)
+              <svg
+                aria-hidden="true"
+                class="slds-icon slds-icon-text-default slds-icon_x-small"
+                data-key="search"
+                focusable="false"
+              >
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                />
+              </svg>
+          </c-primitive-icon>
+      </c-icon>
+    </span>
+    <span
+      class="slds-media__body"
+    >
+      <c-base-combobox-formatted-text
+        class="slds-truncate"
+        title="Highlighted Text"
+      >
+        #shadow-root(open)
+          Hi
+          <strong>
+            ghl
+          </strong>
+          ighted Text
+      </c-base-combobox-formatted-text>
+    </span>
+</c-base-combobox-item>
+`;

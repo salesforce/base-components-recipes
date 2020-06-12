@@ -27,22 +27,32 @@ export const densityValues = DensityValues;
 
 export const densityLabelAlignMapping = DensityLabelAlignMapping;
 
-const getCompoundValue = (field, record, fieldInfo, objectInfo) => {
+function isLocalizedFieldType(type) {
+    return LocalizedFieldTypes.includes(type);
+}
+
+const getCompoundFieldData = (field, record, fieldInfo, objectInfo) => {
     if (FieldTypes.LOCATION === fieldInfo.dataType) {
         const prefix = field.slice(0, field.indexOf('__c'));
         const longitude = record.fields[prefix + '__Longitude__s'].value;
         const latitude = record.fields[prefix + '__Latitude__s'].value;
 
-        return { longitude, latitude };
+        return { value: { longitude, latitude } };
     }
 
     const compoundFields = getCompoundFields(field, record, objectInfo);
-    const ret = {};
+    const ret = { value: {}, displayValue: {} };
     compoundFields.forEach(childField => {
         if (record.fields[childField]) {
-            ret[childField] = record.fields[childField].value;
+            if (isLocalizedFieldType(objectInfo.fields[childField].dataType)) {
+                ret.displayValue[childField] =
+                    record.fields[childField].displayValue;
+            }
+
+            ret.value[childField] = record.fields[childField].value;
         }
     });
+
     return ret;
 };
 
@@ -134,36 +144,34 @@ export const getUiField = (field, record, objectInfo) => {
         throw new Error(`Field [${field}] was not found`);
     }
 
+    let result = { type: fieldInfo.dataType };
+
+    Object.assign(result, fieldInfo);
+
     const personAccount = isPersonAccount(record);
-
-    const value = isCompoundField(field, objectInfo, personAccount)
-        ? getCompoundValue(field, record, fieldInfo, objectInfo)
-        : record.fields[field] && record.fields[field].value;
-
-    let result = {
-        type: fieldInfo.dataType,
-        extraTypeInfo: fieldInfo.extraTypeInfo,
-        label: fieldInfo.label,
-        inlineHelpText: fieldInfo.inlineHelpText,
-        value
-    };
-
-    result = Object.assign(result, fieldInfo);
 
     if (fieldInfo.reference) {
         const referenceInfo = getReferenceInfo(record, fieldInfo);
 
         result.value = referenceInfo.referenceId;
         result.displayValue = referenceInfo.displayValue;
-    } else {
-        const includeDisplayValue = LocalizedFieldTypes.includes(
-            fieldInfo.dataType
+    } else if (isCompoundField(field, objectInfo, personAccount)) {
+        const fieldData = getCompoundFieldData(
+            field,
+            record,
+            fieldInfo,
+            objectInfo
         );
 
-        if (includeDisplayValue) {
+        Object.assign(result, fieldData);
+    } else {
+        result.value = record.fields[field] && record.fields[field].value;
+
+        if (isLocalizedFieldType(fieldInfo.dataType)) {
             result.displayValue = record.fields[field].displayValue;
         }
     }
+
     return result;
 };
 
@@ -245,6 +253,8 @@ export function parseError(err) {
             detail = err.body[0].errorCode;
         } else if (err.body && err.body.message) {
             message = err.body.message;
+        } else if (err.body && err.body.error) {
+            message = err.body.error;
         } else if (err.body) {
             message = err.body;
         } else if (err.statusText) {
@@ -260,12 +270,9 @@ export function parseError(err) {
 }
 
 export function createErrorEvent(err) {
-    const { message, detail } = parseError(err);
-    const error = new Error(message);
-    return new ErrorEvent('error', {
-        error,
-        message,
-        detail
+    const parsed = parseError(err);
+    return new CustomEvent('error', {
+        detail: parsed
     });
 }
 

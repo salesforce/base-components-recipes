@@ -1,0 +1,1 @@
+export default 'column width';

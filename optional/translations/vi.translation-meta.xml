@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>Tải lên hình ảnh không được hỗ trợ cho người dùng khách.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>bắt buộc</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>Xóa</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Tăng số lượng</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Giảm số lượng</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>Cảnh Báo</label>
@@ -427,6 +439,14 @@
   <customLabels>
     <label>Hành Động</label>
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Chế Độ Điều Hướng</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Chế Độ Hành Động</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
     <label>Các Mục Mới</label>
@@ -677,6 +697,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>Hiển Thị Tất Cả Kết Quả cho "{0}"</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>{0} Mới</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -685,12 +709,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label> Không có kết quả cho "{0}"</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label> Chưa tìm thấy kết quả nào...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label> Thử nhập một thuật ngữ tìm kiếm.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>Chọn một tùy chọn hoặc xóa cụm từ tìm kiếm.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>Liên Kết {0} Với</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>{0} Gần Đây</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Tất Cả Kết Quả cho "{0}"</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Tìm Kiếm</label>
@@ -699,6 +743,10 @@
   <customLabels>
     <label>Tìm Kiếm {0}...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Tìm Kiếm {0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>Tìm Kiếm...</label>
@@ -711,6 +759,10 @@
   <customLabels>
     <label>Chọn một đối tượng</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Kết Quả Ban Đầu cho "{0}"</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Không Có</label>
@@ -779,5 +831,13 @@
   <customLabels>
     <label>Đóng</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>Dịch Vụ Tin Nhắn Lightning - Thành phần của bạn phải được kết xuất trước khi bạn có thể đăng lên kênh: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Dịch Vụ Tin Nhắn Lightning - Không thể đăng ký kênh {0} với phạm vi không hợp lệ: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

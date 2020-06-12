@@ -1,0 +1,39 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <template if:true={isMedia}>
+        <c-tile
+            type={tileType}
+            label="Salesforce UX"
+            href="http://google.com"
+            onactiontriggered={handleAction}
+        >
+            <span slot="media">
+                <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+                    <img
+                        alt=""
+                        src="/assets/images/avatar2.jpg"
+                        title="Lexee L. Jackson avatar"
+                    />
+                    <div id="slot_media_content">{mediaSlotText}</div>
+                </span>
+            </span>
+            <div id="slot_content">{contentSlotText}</div>
+        </c-tile>
+    </template>
+    <template if:true={isStandard}>
+        <c-tile
+            type={tileType}
+            label="Salesforce UX"
+            href="http://google.com"
+            onactiontriggered={handleAction}
+        >
+            <p class="slds-truncate" title="7 Members">The Slot Content</p>
+        </c-tile>
+    </template>
+</template>

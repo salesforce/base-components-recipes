@@ -1,0 +1,20 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <div if:true={hasError} class="slds-notify_container slds-is-relative">
+        <div
+            class="slds-notify slds-notify_toast slds-theme_error"
+            role="alert"
+        >
+            <div class="slds-notify__content">
+                <h2 class="slds-text-heading_small ">{err.message}</h2>
+                <p if:true={err.detail}>{err.detail}</p>
+            </div>
+        </div>
+    </div>
+</template>

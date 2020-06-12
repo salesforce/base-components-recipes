@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-formatted-time Empty value 1`] = `
+<c-formatted-time>
+  #shadow-root(open)
+</c-formatted-time>
+`;
+
+exports[`c-formatted-time default by not passing any value 1`] = `
+<c-formatted-time>
+  #shadow-root(open)
+</c-formatted-time>
+`;

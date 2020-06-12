@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>Uploading images isn't supported for guest users.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>required</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>Clear</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Increase number</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Decrease number</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>Warning</label>
@@ -427,6 +439,14 @@
   <customLabels>
     <label>Actions</label>
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Navigation Mode</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Action Mode</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
     <label>New Items</label>
@@ -677,6 +697,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>Show All Results for "{0}"</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>New {0}</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -685,12 +709,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>​No results for "{0}"</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>​No results yet...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>​Try entering a search term.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>Select an option or remove the search term.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>Relate {0} To</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Recent {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>All Results for "{0}"</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Search</label>
@@ -699,6 +743,10 @@
   <customLabels>
     <label>Search {0}...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Search {0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>Search...</label>
@@ -711,6 +759,10 @@
   <customLabels>
     <label>Choose an object</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Initial Results for "{0}"</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>None</label>
@@ -779,5 +831,13 @@
   <customLabels>
     <label>Close</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>Lightning Message Service - Your component must be rendered before you can publish to channel: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Lightning Message Service - Cannot subscribe to channel {0} with invalid scope: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

@@ -2,8 +2,13 @@
 # More information: https://prettier.io/docs/en/ignore.html
 #
 
+**/*-meta.xml
 **/staticresources/**
 .localdevserver
 .sfdx
 coverage/
+force-app/test/@salesforce/label/
+force-app/test/lightning/iconSvgTemplates/buildTemplates/
+optional/translations/
 jsconfig.json
+README.md

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-tile variant snapshots renders media 1`] = `
+<c-tile
+  class="slds-tile slds-media"
+>
+  #shadow-root(open)
+    <div
+      class="slds-media__figure"
+    >
+      <slot
+        name="media"
+      />
+    </div>
+    <div
+      class="slds-media__body"
+    >
+      <h3
+        class="slds-tile__title slds-truncate"
+        title="Information tile"
+      >
+        <a
+          href=""
+        >
+          Information tile
+        </a>
+      </h3>
+      <div
+        class="slds-tile__detail"
+      >
+        <slot />
+      </div>
+    </div>
+</c-tile>
+`;
+
+exports[`c-tile variant snapshots renders standard 1`] = `
+<c-tile
+  class="slds-tile"
+>
+  #shadow-root(open)
+    <h3
+      class="slds-tile__title slds-truncate"
+      title="Information tile"
+    >
+      <a
+        href=""
+      >
+        Information tile
+      </a>
+    </h3>
+    <div
+      class="slds-tile__detail"
+    >
+      <slot />
+    </div>
+</c-tile>
+`;

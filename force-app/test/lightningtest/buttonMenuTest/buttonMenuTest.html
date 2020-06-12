@@ -1,0 +1,43 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <c-button-menu
+        id="btn-menu1"
+        alternative-text="Show actions"
+        onselect={handleSelect}
+        accesskey="M"
+        title="Select from options"
+    >
+        <c-menu-item
+            id="menu1-id"
+            disabled
+            value="menu1-value"
+            label="menu1-label"
+            icon-name="utility:table"
+            accesskey="1"
+            checked={unChecked}
+        ></c-menu-item>
+        <c-menu-item
+            id="menu2-id"
+            value="menu2-value"
+            label="menu2-label"
+            accesskey="2"
+            tabindex="0"
+            checked
+            >></c-menu-item
+        >
+        <c-menu-item
+            id="menu3-id"
+            value="menu3-value"
+            label="menu3-label"
+            accesskey="3"
+            onfocus={handleFocus}
+            checked={notChecked}
+        ></c-menu-item>
+    </c-button-menu>
+</template>

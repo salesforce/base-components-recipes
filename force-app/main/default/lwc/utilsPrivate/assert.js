@@ -5,5 +5,4 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
-export function assert() {
-}
+export function assert(condition, message) {}

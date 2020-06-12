@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-badge default 1`] = `
+<c-badge
+  class="slds-badge"
+>
+  #shadow-root(open)
+    Alpha
+</c-badge>
+`;

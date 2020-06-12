@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>Завантаження зображень не підтримується для користувачів гостей.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>обов’язково</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>Очистити</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Збільшити число</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Зменшити число</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>Попередження</label>
@@ -427,6 +439,14 @@
   <customLabels>
     <label>Дії</label>
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Режим навігації</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Режим дії</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
     <label>Нові елементи</label>
@@ -677,6 +697,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>Показати всі результати для «{0}»</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Створити {0}</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -685,12 +709,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>Жодного результату для «{0}»</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>Наразі немає результатів...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>Спробуйте ввести пошуковий запит.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>Виберіть варіант або видаліть пошуковий термін.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>Пов’язати {0} з</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>Нещодавн. {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Всі результати для «{0}»</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Пошук</label>
@@ -699,6 +743,10 @@
   <customLabels>
     <label>Пошук {0}...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Шукати {0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>Пошук...</label>
@@ -711,6 +759,10 @@
   <customLabels>
     <label>Виберіть об'єкт</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Початкові результати для «{0}»</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>Відсутні</label>
@@ -779,5 +831,13 @@
   <customLabels>
     <label>Закрити</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>Служба повідомлень Lightning - Компонент потрібно опрацювати, перш ніж публікувати в каналі: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Служба повідомлень Lightning - Не вдається підписатися на канал {0} з недійсним діапазоном: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-button-icon should match snapshot with aria-attributes 1`] = `
+<c-button-icon>
+  #shadow-root(open)
+    <button
+      aria-atomic="true"
+      aria-expanded="true"
+      class="slds-button slds-button_icon slds-button_icon-border"
+      title="Click here"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key=""
+            focusable="false"
+          >
+            <use
+              xlink:href=""
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon>
+`;
+
+exports[`c-button-icon should set not set any aria-attribute and match snapshot 1`] = `
+<c-button-icon
+  tabindex="-1"
+>
+  #shadow-root(open)
+    <button
+      class="slds-button slds-button_icon slds-button_icon-border"
+      title="Click here"
+      type="button"
+    >
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key=""
+            focusable="false"
+          >
+            <use
+              xlink:href=""
+            />
+          </svg>
+      </c-primitive-icon>
+    </button>
+</c-button-icon>
+`;

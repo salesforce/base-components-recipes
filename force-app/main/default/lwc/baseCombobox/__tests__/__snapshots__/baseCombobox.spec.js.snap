@@ -1,0 +1,1864 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-base-combobox is accessible renders alternative text for icon 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+              <span
+                class="slds-assistive-text"
+              >
+                Alternative Icon Text
+              </span>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      />
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox renders properly renders correctly an "option-card" item with all attributes 1`] = `
+<c-base-combobox-item
+  aria-selected="true"
+  class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity slds-has-focus"
+  data-item-id="input-4-0"
+  data-value="accountGlobalMediaCard"
+  id="[shadow:guid]"
+  role="option"
+>
+  #shadow-root(open)
+    <span
+      class="slds-media__figure"
+    >
+      <c-icon
+        class="slds-icon-standard-account slds-icon_container"
+      >
+        #shadow-root(open)
+          <c-primitive-icon>
+            #shadow-root(open)
+              <svg
+                aria-hidden="true"
+                class="slds-icon slds-icon_large"
+                data-key="account"
+                focusable="false"
+              >
+                <use
+                  xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                />
+              </svg>
+          </c-primitive-icon>
+          <span
+            class="slds-assistive-text"
+          >
+            Account icon
+          </span>
+      </c-icon>
+    </span>
+    <span
+      class="slds-media__body"
+    >
+      <span
+        class="slds-listbox__option-text slds-listbox__option-text_entity"
+      >
+        <span
+          class="slds-truncate"
+          title="Global Media"
+        >
+          Global Media
+        </span>
+      </span>
+      <span
+        class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+      >
+        <span
+          class="slds-truncate"
+          title="(905) 555-1212"
+        >
+          (905) 555-1212
+        </span>
+      </span>
+    </span>
+    <span
+      class="slds-media__figure slds-media__figure_reverse"
+    >
+      <c-icon
+        class="slds-icon-utility-chevronright slds-icon_container"
+      >
+        #shadow-root(open)
+          <c-primitive-icon>
+            #shadow-root(open)
+              <svg
+                aria-hidden="true"
+                class="slds-icon slds-icon-text-default slds-icon_large"
+                data-key="chevronright"
+                focusable="false"
+              >
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+                />
+              </svg>
+          </c-primitive-icon>
+          <span
+            class="slds-assistive-text"
+          >
+            Chevron icon
+          </span>
+      </c-icon>
+    </span>
+</c-base-combobox-item>
+`;
+
+exports[`c-base-combobox renders properly with dropdown open 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-activedescendant="[shadow:guid]"
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left slds-dropdown_length-with-icon-10"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      >
+        <c-base-combobox-item
+          aria-selected="true"
+          class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
+          data-item-id="input-18-0"
+          data-value="actionSearchAdvanced"
+          id="[shadow:guid]"
+          role="option"
+        >
+          #shadow-root(open)
+            <span
+              class="slds-media__figure slds-listbox__option-icon"
+            >
+              <c-icon
+                class="slds-icon-utility-search slds-icon_container"
+              >
+                #shadow-root(open)
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-icon slds-icon-text-default slds-icon_x-small"
+                        data-key="search"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+              </c-icon>
+            </span>
+            <span
+              class="slds-media__body"
+            >
+              <span
+                class="slds-truncate"
+                title="Advanced Search..."
+              >
+                Advanced Search...
+              </span>
+            </span>
+        </c-base-combobox-item>
+        <c-base-combobox-item
+          aria-selected="false"
+          class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
+          data-item-id="input-18-1"
+          data-value="accountGlobalMedia"
+          id="[shadow:guid]"
+          role="option"
+        >
+          #shadow-root(open)
+            <span
+              class="slds-media__figure"
+            >
+              <c-icon
+                class="slds-icon-standard-account slds-icon_container"
+              >
+                #shadow-root(open)
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-icon slds-icon_small"
+                        data-key="account"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+              </c-icon>
+            </span>
+            <span
+              class="slds-media__body"
+            >
+              <span
+                class="slds-listbox__option-text slds-listbox__option-text_entity"
+              >
+                <span
+                  class="slds-truncate"
+                  title="Global Media"
+                >
+                  Global Media
+                </span>
+              </span>
+              <span
+                class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+              >
+                <span
+                  class="slds-truncate"
+                  title="(905) 555-1212"
+                >
+                  (905) 555-1212
+                </span>
+              </span>
+            </span>
+        </c-base-combobox-item>
+      </div>
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox renders properly with items 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      />
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox renders properly with maxlength 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          maxlength="50"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      />
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox renders properly with showSpinnerActivity, but only if it's set 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      />
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox renders properly with showSpinnerActivity, but only if it's set 2`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      />
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox triggers events triggers closing dropdown with escape key 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-activedescendant="[shadow:guid]"
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left slds-dropdown_length-with-icon-10"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      >
+        <c-base-combobox-item
+          aria-selected="true"
+          class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
+          data-item-id="input-205-0"
+          data-value="actionSearchAdvanced"
+          id="[shadow:guid]"
+          role="option"
+        >
+          #shadow-root(open)
+            <span
+              class="slds-media__figure slds-listbox__option-icon"
+            >
+              <c-icon
+                class="slds-icon-utility-search slds-icon_container"
+              >
+                #shadow-root(open)
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-icon slds-icon-text-default slds-icon_x-small"
+                        data-key="search"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+              </c-icon>
+            </span>
+            <span
+              class="slds-media__body"
+            >
+              <span
+                class="slds-truncate"
+                title="Advanced Search..."
+              >
+                Advanced Search...
+              </span>
+            </span>
+        </c-base-combobox-item>
+        <c-base-combobox-item
+          aria-selected="false"
+          class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
+          data-item-id="input-205-1"
+          data-value="accountGlobalMedia"
+          id="[shadow:guid]"
+          role="option"
+        >
+          #shadow-root(open)
+            <span
+              class="slds-media__figure"
+            >
+              <c-icon
+                class="slds-icon-standard-account slds-icon_container"
+              >
+                #shadow-root(open)
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-icon slds-icon_small"
+                        data-key="account"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+              </c-icon>
+            </span>
+            <span
+              class="slds-media__body"
+            >
+              <span
+                class="slds-listbox__option-text slds-listbox__option-text_entity"
+              >
+                <span
+                  class="slds-truncate"
+                  title="Global Media"
+                >
+                  Global Media
+                </span>
+              </span>
+              <span
+                class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+              >
+                <span
+                  class="slds-truncate"
+                  title="(905) 555-1212"
+                >
+                  (905) 555-1212
+                </span>
+              </span>
+            </span>
+        </c-base-combobox-item>
+      </div>
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox triggers events triggers closing dropdown with escape key 2`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      >
+        <c-base-combobox-item
+          aria-selected="false"
+          class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
+          data-item-id="input-205-0"
+          data-value="actionSearchAdvanced"
+          id="[shadow:guid]"
+          role="option"
+        >
+          #shadow-root(open)
+            <span
+              class="slds-media__figure slds-listbox__option-icon"
+            >
+              <c-icon
+                class="slds-icon-utility-search slds-icon_container"
+              >
+                #shadow-root(open)
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-icon slds-icon-text-default slds-icon_x-small"
+                        data-key="search"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+              </c-icon>
+            </span>
+            <span
+              class="slds-media__body"
+            >
+              <span
+                class="slds-truncate"
+                title="Advanced Search..."
+              >
+                Advanced Search...
+              </span>
+            </span>
+        </c-base-combobox-item>
+        <c-base-combobox-item
+          aria-selected="false"
+          class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
+          data-item-id="input-205-1"
+          data-value="accountGlobalMedia"
+          id="[shadow:guid]"
+          role="option"
+        >
+          #shadow-root(open)
+            <span
+              class="slds-media__figure"
+            >
+              <c-icon
+                class="slds-icon-standard-account slds-icon_container"
+              >
+                #shadow-root(open)
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-icon slds-icon_small"
+                        data-key="account"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+              </c-icon>
+            </span>
+            <span
+              class="slds-media__body"
+            >
+              <span
+                class="slds-listbox__option-text slds-listbox__option-text_entity"
+              >
+                <span
+                  class="slds-truncate"
+                  title="Global Media"
+                >
+                  Global Media
+                </span>
+              </span>
+              <span
+                class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+              >
+                <span
+                  class="slds-truncate"
+                  title="(905) 555-1212"
+                >
+                  (905) 555-1212
+                </span>
+              </span>
+            </span>
+        </c-base-combobox-item>
+      </div>
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox triggers events triggers open dropdown on keyboard input for standard variant 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-activedescendant="[shadow:guid]"
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left slds-dropdown_length-with-icon-10"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      >
+        <c-base-combobox-item
+          aria-selected="true"
+          class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
+          data-item-id="input-187-0"
+          data-value="actionSearchAdvanced"
+          id="[shadow:guid]"
+          role="option"
+        >
+          #shadow-root(open)
+            <span
+              class="slds-media__figure slds-listbox__option-icon"
+            >
+              <c-icon
+                class="slds-icon-utility-search slds-icon_container"
+              >
+                #shadow-root(open)
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-icon slds-icon-text-default slds-icon_x-small"
+                        data-key="search"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+              </c-icon>
+            </span>
+            <span
+              class="slds-media__body"
+            >
+              <span
+                class="slds-truncate"
+                title="Advanced Search..."
+              >
+                Advanced Search...
+              </span>
+            </span>
+        </c-base-combobox-item>
+        <c-base-combobox-item
+          aria-selected="false"
+          class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
+          data-item-id="input-187-1"
+          data-value="accountGlobalMedia"
+          id="[shadow:guid]"
+          role="option"
+        >
+          #shadow-root(open)
+            <span
+              class="slds-media__figure"
+            >
+              <c-icon
+                class="slds-icon-standard-account slds-icon_container"
+              >
+                #shadow-root(open)
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-icon slds-icon_small"
+                        data-key="account"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+              </c-icon>
+            </span>
+            <span
+              class="slds-media__body"
+            >
+              <span
+                class="slds-listbox__option-text slds-listbox__option-text_entity"
+              >
+                <span
+                  class="slds-truncate"
+                  title="Global Media"
+                >
+                  Global Media
+                </span>
+              </span>
+              <span
+                class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+              >
+                <span
+                  class="slds-truncate"
+                  title="(905) 555-1212"
+                >
+                  (905) 555-1212
+                </span>
+              </span>
+            </span>
+        </c-base-combobox-item>
+      </div>
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox with a pill should render a pill when a pill is set 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right"
+        role="none"
+      >
+        <c-icon
+          class="slds-icon-standard-account slds-icon_container slds-combobox__input-entity-icon"
+        >
+          #shadow-root(open)
+            <c-primitive-icon>
+              #shadow-root(open)
+                <svg
+                  aria-hidden="true"
+                  class="slds-icon slds-icon_x-small"
+                  data-key="account"
+                  focusable="false"
+                >
+                  <use
+                    xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                  />
+                </svg>
+            </c-primitive-icon>
+            <span
+              class="slds-assistive-text"
+            >
+              Account
+            </span>
+        </c-icon>
+        <input
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input slds-combobox__input-value"
+          id="[shadow:guid]"
+          placeholder="Some Choice"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <button
+            class="slds-button slds-button_icon slds-input__icon slds-input__icon_right"
+            title="Clear Selection"
+            type="button"
+          >
+            <c-primitive-icon>
+              #shadow-root(open)
+                <svg
+                  aria-hidden="true"
+                  class="slds-button__icon"
+                  data-key="close"
+                  focusable="false"
+                >
+                  <use
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                  />
+                </svg>
+            </c-primitive-icon>
+            <span
+              class="slds-assistive-text"
+            >
+              Clear Selection
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      />
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox with empty items will not open empty dropdown 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      />
+    </div>
+</c-base-combobox>
+`;
+
+exports[`c-base-combobox with items supports groups 1`] = `
+<c-base-combobox
+  class="slds-combobox_container"
+>
+  #shadow-root(open)
+    <div
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+      role="combobox"
+    >
+      <div
+        class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+        role="none"
+      >
+        <input
+          aria-activedescendant="[shadow:guid]"
+          aria-autocomplete="none"
+          aria-controls="[shadow:guid]"
+          autocomplete="off"
+          class="slds-input slds-combobox__input"
+          id="[shadow:guid]"
+          placeholder="Select an Item"
+          readonly=""
+          role="textbox"
+          type="text"
+        />
+        <div
+          class="slds-input__icon-group slds-input__icon-group_right"
+        >
+          <c-icon
+            class="slds-icon-utility-down slds-input__icon slds-input__icon_right slds-icon_container"
+          >
+            #shadow-root(open)
+              <c-primitive-icon>
+                #shadow-root(open)
+                  <svg
+                    aria-hidden="true"
+                    class="slds-icon slds-icon-text-default slds-icon_x-small"
+                    data-key="down"
+                    focusable="false"
+                  >
+                    <use
+                      xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                    />
+                  </svg>
+              </c-primitive-icon>
+          </c-icon>
+        </div>
+      </div>
+      <div
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left slds-dropdown_length-with-icon-10"
+        data-dropdown-element="true"
+        id="[shadow:guid]"
+        role="listbox"
+      >
+        <c-base-combobox-item
+          aria-selected="false"
+          class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
+          data-item-id="input-80-0"
+          data-value="actionSearchAdvanced"
+          id="[shadow:guid]"
+          role="option"
+        >
+          #shadow-root(open)
+            <span
+              class="slds-media__figure slds-listbox__option-icon"
+            >
+              <c-icon
+                class="slds-icon-utility-search slds-icon_container"
+              >
+                #shadow-root(open)
+                  <c-primitive-icon>
+                    #shadow-root(open)
+                      <svg
+                        aria-hidden="true"
+                        class="slds-icon slds-icon-text-default slds-icon_x-small"
+                        data-key="search"
+                        focusable="false"
+                      >
+                        <use
+                          xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                        />
+                      </svg>
+                  </c-primitive-icon>
+              </c-icon>
+            </span>
+            <span
+              class="slds-media__body"
+            >
+              <span
+                class="slds-truncate"
+                title="Advanced Search..."
+              >
+                Advanced Search...
+              </span>
+            </span>
+        </c-base-combobox-item>
+        <ul
+          aria-label="Group 1"
+          role="group"
+        >
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <div
+              class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+              role="presentation"
+            >
+              <h3
+                role="presentation"
+                title="Group 1"
+              >
+                Group 1
+              </h3>
+            </div>
+          </li>
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <c-base-combobox-item
+              aria-selected="false"
+              class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
+              data-item-id="input-80-1"
+              data-value="actionSearchAdvanced"
+              id="[shadow:guid]"
+              role="option"
+            >
+              #shadow-root(open)
+                <span
+                  class="slds-media__figure slds-listbox__option-icon"
+                >
+                  <c-icon
+                    class="slds-icon-utility-search slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon-text-default slds-icon_x-small"
+                            data-key="search"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                  </c-icon>
+                </span>
+                <span
+                  class="slds-media__body"
+                >
+                  <span
+                    class="slds-truncate"
+                    title="Advanced Search..."
+                  >
+                    Advanced Search...
+                  </span>
+                </span>
+            </c-base-combobox-item>
+          </li>
+        </ul>
+        <ul
+          aria-label="Group 2"
+          role="group"
+        >
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <div
+              class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+              role="presentation"
+            >
+              <h3
+                role="presentation"
+                title="Group 2"
+              >
+                Group 2
+              </h3>
+            </div>
+          </li>
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <c-base-combobox-item
+              aria-selected="false"
+              class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
+              data-item-id="input-80-2"
+              data-value="accountGlobalMediaCardHighlighted"
+              id="[shadow:guid]"
+              role="option"
+            >
+              #shadow-root(open)
+                <span
+                  class="slds-media__figure"
+                >
+                  <c-icon
+                    class="slds-icon-standard-account slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon_small"
+                            data-key="account"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                  </c-icon>
+                </span>
+                <span
+                  class="slds-media__body"
+                >
+                  <span
+                    class="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="Global Media"
+                    >
+                      Global Media
+                    </span>
+                  </span>
+                  <span
+                    class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="(905) 555-1212"
+                    >
+                      (905) 555-1212
+                    </span>
+                  </span>
+                </span>
+            </c-base-combobox-item>
+          </li>
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <c-base-combobox-item
+              aria-selected="false"
+              class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
+              data-item-id="input-80-3"
+              data-value="accountGlobalMedia"
+              id="[shadow:guid]"
+              role="option"
+            >
+              #shadow-root(open)
+                <span
+                  class="slds-media__figure"
+                >
+                  <c-icon
+                    class="slds-icon-standard-account slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon_small"
+                            data-key="account"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                  </c-icon>
+                </span>
+                <span
+                  class="slds-media__body"
+                >
+                  <span
+                    class="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="Global Media"
+                    >
+                      Global Media
+                    </span>
+                  </span>
+                  <span
+                    class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="(905) 555-1212"
+                    >
+                      (905) 555-1212
+                    </span>
+                  </span>
+                </span>
+            </c-base-combobox-item>
+          </li>
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <c-base-combobox-item
+              aria-selected="false"
+              class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
+              data-item-id="input-80-4"
+              data-value="accountGlobalMediaCard"
+              id="[shadow:guid]"
+              role="option"
+            >
+              #shadow-root(open)
+                <span
+                  class="slds-media__figure"
+                >
+                  <c-icon
+                    class="slds-icon-standard-account slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon_large"
+                            data-key="account"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                      <span
+                        class="slds-assistive-text"
+                      >
+                        Account icon
+                      </span>
+                  </c-icon>
+                </span>
+                <span
+                  class="slds-media__body"
+                >
+                  <span
+                    class="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="Global Media"
+                    >
+                      Global Media
+                    </span>
+                  </span>
+                  <span
+                    class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="(905) 555-1212"
+                    >
+                      (905) 555-1212
+                    </span>
+                  </span>
+                </span>
+                <span
+                  class="slds-media__figure slds-media__figure_reverse"
+                >
+                  <c-icon
+                    class="slds-icon-utility-chevronright slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon-text-default slds-icon_large"
+                            data-key="chevronright"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                      <span
+                        class="slds-assistive-text"
+                      >
+                        Chevron icon
+                      </span>
+                  </c-icon>
+                </span>
+            </c-base-combobox-item>
+          </li>
+        </ul>
+        <ul
+          aria-label="Group 3"
+          role="group"
+        >
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <div
+              class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+              role="presentation"
+            >
+              <h3
+                role="presentation"
+                title="Group 3"
+              >
+                Group 3
+              </h3>
+            </div>
+          </li>
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <c-base-combobox-item
+              aria-selected="true"
+              class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity slds-has-focus"
+              data-item-id="input-80-5"
+              data-value="accountGlobalMediaCardHighlighted"
+              id="[shadow:guid]"
+              role="option"
+            >
+              #shadow-root(open)
+                <span
+                  class="slds-media__figure"
+                >
+                  <c-icon
+                    class="slds-icon-standard-account slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon_small"
+                            data-key="account"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                  </c-icon>
+                </span>
+                <span
+                  class="slds-media__body"
+                >
+                  <span
+                    class="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="Global Media"
+                    >
+                      Global Media
+                    </span>
+                  </span>
+                  <span
+                    class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="(905) 555-1212"
+                    >
+                      (905) 555-1212
+                    </span>
+                  </span>
+                </span>
+            </c-base-combobox-item>
+          </li>
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <c-base-combobox-item
+              aria-selected="false"
+              class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
+              data-item-id="input-80-6"
+              data-value="actionSearchAdvanced"
+              id="[shadow:guid]"
+              role="option"
+            >
+              #shadow-root(open)
+                <span
+                  class="slds-media__figure slds-listbox__option-icon"
+                >
+                  <c-icon
+                    class="slds-icon-utility-search slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon-text-default slds-icon_x-small"
+                            data-key="search"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                  </c-icon>
+                </span>
+                <span
+                  class="slds-media__body"
+                >
+                  <span
+                    class="slds-truncate"
+                    title="Advanced Search..."
+                  >
+                    Advanced Search...
+                  </span>
+                </span>
+            </c-base-combobox-item>
+          </li>
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <c-base-combobox-item
+              aria-selected="false"
+              class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
+              data-item-id="input-80-7"
+              data-value="accountGlobalMedia"
+              id="[shadow:guid]"
+              role="option"
+            >
+              #shadow-root(open)
+                <span
+                  class="slds-media__figure"
+                >
+                  <c-icon
+                    class="slds-icon-standard-account slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon_small"
+                            data-key="account"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                  </c-icon>
+                </span>
+                <span
+                  class="slds-media__body"
+                >
+                  <span
+                    class="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="Global Media"
+                    >
+                      Global Media
+                    </span>
+                  </span>
+                  <span
+                    class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="(905) 555-1212"
+                    >
+                      (905) 555-1212
+                    </span>
+                  </span>
+                </span>
+            </c-base-combobox-item>
+          </li>
+          <li
+            class="slds-listbox__item"
+            role="presentation"
+          >
+            <c-base-combobox-item
+              aria-selected="false"
+              class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
+              data-item-id="input-80-8"
+              data-value="accountGlobalMediaCard"
+              id="[shadow:guid]"
+              role="option"
+            >
+              #shadow-root(open)
+                <span
+                  class="slds-media__figure"
+                >
+                  <c-icon
+                    class="slds-icon-standard-account slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon_large"
+                            data-key="account"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                      <span
+                        class="slds-assistive-text"
+                      >
+                        Account icon
+                      </span>
+                  </c-icon>
+                </span>
+                <span
+                  class="slds-media__body"
+                >
+                  <span
+                    class="slds-listbox__option-text slds-listbox__option-text_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="Global Media"
+                    >
+                      Global Media
+                    </span>
+                  </span>
+                  <span
+                    class="slds-listbox__option-meta slds-listbox__option-meta_entity"
+                  >
+                    <span
+                      class="slds-truncate"
+                      title="(905) 555-1212"
+                    >
+                      (905) 555-1212
+                    </span>
+                  </span>
+                </span>
+                <span
+                  class="slds-media__figure slds-media__figure_reverse"
+                >
+                  <c-icon
+                    class="slds-icon-utility-chevronright slds-icon_container"
+                  >
+                    #shadow-root(open)
+                      <c-primitive-icon>
+                        #shadow-root(open)
+                          <svg
+                            aria-hidden="true"
+                            class="slds-icon slds-icon-text-default slds-icon_large"
+                            data-key="chevronright"
+                            focusable="false"
+                          >
+                            <use
+                              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"
+                            />
+                          </svg>
+                      </c-primitive-icon>
+                      <span
+                        class="slds-assistive-text"
+                      >
+                        Chevron icon
+                      </span>
+                  </c-icon>
+                </span>
+            </c-base-combobox-item>
+          </li>
+        </ul>
+      </div>
+    </div>
+</c-base-combobox>
+`;

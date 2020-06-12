@@ -53,6 +53,13 @@ export function resetResizeObserver(cmp, cmpInterface, isInitialRender) {
     }
 }
 
+export function disconnectResizeObserver(cmp) {
+    if (cmp._resizeObserver) {
+        cmp._resizeObserver.disconnect();
+        cmp._resizeObserver = undefined;
+    }
+}
+
 function isWiredDensityAuto(cmpInterface) {
     const density = cmpInterface.getDensityPrivate();
     const wiredDensity = getOneConfig().densitySetting;

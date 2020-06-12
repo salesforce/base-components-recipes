@@ -4,10 +4,12 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-import { LightningElement } from 'lwc';
+import { LightningElement, track } from 'lwc';
 
 export default class TreeRecipes extends LightningElement {
-    items = [
+    @track selectedItem = null;
+
+    @track items = [
         {
             label: 'CTO',
             name: 'CTO',
@@ -113,4 +115,21 @@ export default class TreeRecipes extends LightningElement {
             ]
         }
     ];
+
+    handleSelect(event) {
+        this.selectedItem = event.detail.name;
+    }
+
+    selectDirector() {
+        this.selectedItem = 'CTO-DIR';
+    }
+
+    toggleCTO() {
+        const updatedItems = JSON.parse(JSON.stringify(this.items));
+        updatedItems[0] = {
+            ...updatedItems[0],
+            expanded: !updatedItems[0].expanded
+        };
+        this.items = updatedItems;
+    }
 }

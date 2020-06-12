@@ -83,18 +83,20 @@ export default class cTree extends LightningElement {
     }
 
     normalizeData(items) {
-        this.treedata = new TreeData();
+        if (items) {
+            this.treedata = new TreeData();
 
-        this._items = items.map(item => {
-            return this.treedata.cloneItems(item);
-        });
+            this._items = items.map(item => {
+                return this.treedata.cloneItems(item);
+            });
 
-        const treeRoot = this.treedata.parse(this.items, this.selectedItem);
-        this._childNodes = treeRoot ? treeRoot.children : [];
-        this._selectedItem = treeRoot.selectedItem;
-        this._key = this._childNodes.length > 0 ? treeRoot.key : null;
-        if (this._key) {
-            this.syncCurrentFocused();
+            const treeRoot = this.treedata.parse(this.items, this.selectedItem);
+            this._childNodes = treeRoot ? treeRoot.children : [];
+            this._selectedItem = treeRoot.selectedItem;
+            this._key = this._childNodes.length > 0 ? treeRoot.key : null;
+            if (this._key) {
+                this.syncCurrentFocused();
+            }
         }
     }
 

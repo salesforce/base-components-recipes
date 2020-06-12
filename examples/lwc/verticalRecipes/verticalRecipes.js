@@ -84,7 +84,6 @@ export default class VerticalRecipes extends LightningElement {
             this.asyncValidation = true;
 
             // Simulate an async operation
-            // eslint-disable-next-line lwc/no-set-timeout
             // eslint-disable-next-line @lwc/lwc/no-async-operation
             setTimeout(() => {
                 this.hasBeenEdited = false;

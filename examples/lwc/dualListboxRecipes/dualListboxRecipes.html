@@ -1,0 +1,44 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+<template>
+    <c-card title="Dual Listbox">
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-box">
+                <h2 class="header">Basic Dual Listbox</h2>
+                <c-dual-listbox
+                    name="languages"
+                    label="Select Languages"
+                    source-label="Available"
+                    selected-label="Selected"
+                    field-level-help="Select your preferred languages"
+                    options={options}
+                    onchange={handleChangeInSimpleListbox}
+                ></c-dual-listbox>
+                <p>Selected languages are: {selectedSimpleListbox}</p>
+            </div>
+            <div class="slds-box">
+                <c-dual-listbox
+                    name="languages"
+                    label="Select Languages (At least 2 languages, English is required)"
+                    source-label="Available"
+                    selected-label="Selected"
+                    field-level-help="This is a dual listbox"
+                    options={options}
+                    required-options={requiredOptions}
+                    required
+                    onchange={handleChangeInRequiredListbox}
+                    min="2"
+                ></c-dual-listbox>
+                <p>Selected languages are: {selectedRequiredListbox}</p>
+            </div>
+            <c-view-source source="dualListboxRecipes" slot="footer">
+                A dual listbox provides a pair of listboxes that enables
+                multiple options to be selected and reordered.
+            </c-view-source>
+        </div>
+    </c-card>
+</template>

@@ -1,0 +1,61 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <template if:false={isAccordionHidden}>
+        <c-accordion
+            title="accordion title"
+            active-section-name={activeSection}
+            allow-multiple-sections-open={allowMultipleSectionsOpen}
+            onsectiontoggle={sectiontoggleHandler}
+        >
+            <c-accordion-section
+                class="section-a"
+                title="section A"
+                name="A"
+                label="section A"
+            >
+                <c-button-menu
+                    slot="actions"
+                    alternative-text="Show menu"
+                    menu-alignment="right"
+                    icon-size="x-small"
+                >
+                    <c-menu-item
+                        value="New"
+                        label="Menu Item One"
+                    ></c-menu-item>
+                    <c-menu-item
+                        value="Edit"
+                        label="Menu Item Two"
+                    ></c-menu-item>
+                </c-button-menu>
+                <p>This is the content area for section A.</p>
+            </c-accordion-section>
+
+            <template if:true={isBVisible}>
+                <c-accordion-section
+                    class="section-b"
+                    title="section B"
+                    name="B"
+                    label="section B"
+                >
+                    <p>This is the content area for section B.</p>
+                </c-accordion-section>
+            </template>
+
+            <c-accordion-section
+                class="section-c"
+                title="section C"
+                name="C"
+                label="section C"
+            >
+                <p>This is the content area for section C.</p>
+            </c-accordion-section>
+        </c-accordion>
+    </template>
+</template>

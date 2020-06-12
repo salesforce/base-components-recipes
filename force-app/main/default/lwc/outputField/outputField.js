@@ -152,7 +152,24 @@ export default class cOutputField extends LightningElement {
     }
 
     get displayValue() {
-        return this.uiField.displayValue;
+        if (this.uiField.displayValue == null) {
+            return this.value;
+        }
+
+        let displayValue;
+        if (this.isTypeAddress) {
+            displayValue = this.normalizeAddressValue(
+                this.uiField.displayValue
+            );
+        } else {
+            displayValue = this.uiField.displayValue;
+        }
+
+        if (typeof this.uiField.displayValue === 'object') {
+            return Object.assign({}, this.value, displayValue);
+        }
+
+        return displayValue;
     }
 
     get value() {
@@ -279,13 +296,14 @@ export default class cOutputField extends LightningElement {
         return this.uiField.compound && Fields.ADDRESS === this.uiField.type;
     }
 
-    getStateCountryValue(fieldName) {
-        const fieldCodeValue = this.uiField.value[`${fieldName}Code`];
+    getStateCountryValue(fieldValue, fieldName) {
+        const codeFieldName = `${fieldName}Code`;
 
-        const fieldValue = fieldCodeValue
-            ? fieldCodeValue
-            : this.uiField.value[fieldName];
-        return fieldValue;
+        if (codeFieldName in fieldValue) {
+            return fieldValue[codeFieldName];
+        }
+
+        return fieldValue[fieldName];
     }
 
     normalizeAddressValue(value) {
@@ -295,9 +313,9 @@ export default class cOutputField extends LightningElement {
             const key = this.removePrefix(rawKey, prefix);
 
             if (key === STATE_FIELD || key === STATE_CODE_FIELD) {
-                ret[STATE_FIELD] = this.getStateCountryValue(rawKey);
+                ret[STATE_FIELD] = this.getStateCountryValue(value, rawKey);
             } else if (key === COUNTRY_FIELD || key === COUNTRY_CODE_FIELD) {
-                ret[COUNTRY_FIELD] = this.getStateCountryValue(rawKey);
+                ret[COUNTRY_FIELD] = this.getStateCountryValue(value, rawKey);
             } else {
                 ret[key] = value[rawKey];
             }

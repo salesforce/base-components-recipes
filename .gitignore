@@ -4,7 +4,7 @@
 
 # Salesforce dev
 .sfdx/
-.localdevserver
+.localdevserver/
 
 # LWC VSCode autocomplete
 jsconfig.json
@@ -33,3 +33,6 @@ Thumbs.db
 ehthumbs.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
+
+# VS Code project settings
+.vscode/

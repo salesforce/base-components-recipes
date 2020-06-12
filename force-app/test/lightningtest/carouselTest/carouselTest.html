@@ -1,0 +1,24 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <c-carousel
+        disable-auto-refresh={disableAutoRefresh}
+        disable-auto-scroll={disableAutoScroll}
+    >
+        <template for:each={items} for:item="item">
+            <c-carousel-image
+                key={item.src}
+                alternative-text={item.alternativeText}
+                description={item.description}
+                header={item.header}
+                href={item.href}
+                src={item.src}
+            ></c-carousel-image>
+        </template>
+    </c-carousel>
+</template>

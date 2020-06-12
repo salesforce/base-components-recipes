@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`base-combobox-formatted-text renders 1`] = `
+<base-combobox-formatted-text>
+  #shadow-root(open)
+    text one
+    text two
+</base-combobox-formatted-text>
+`;

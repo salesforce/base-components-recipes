@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-formatted-name default by not passing any value 1`] = `
+<c-formatted-name>
+  #shadow-root(open)
+    Mr. John Middleton Doe The 3rd Jo
+</c-formatted-name>
+`;

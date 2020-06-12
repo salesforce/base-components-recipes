@@ -1,0 +1,176 @@
+{
+    "dependentFields": {
+        "Country": {
+            "MultiCity": {},
+            "States_Provinces": {
+                "City": {}
+            }
+        },
+        "Has_Weakness": {
+            "Weakness": {}
+        }
+    },
+    "picklistValues": {
+        "MultiCity": {
+            "controllerValues": {
+                "United States": 0,
+                "Canada": 1,
+                "United Kingdom": 2
+            },
+            "values": [
+                {
+                    "label": "Montreal",
+                    "validFor": [1],
+                    "value": "Montreal"
+                },
+                {
+                    "label": "Vancouver",
+                    "validFor": [1],
+                    "value": "Vancouver"
+                },
+                {
+                    "label": "Toronto",
+                    "validFor": [1],
+                    "value": "Toronto"
+                },
+                {
+                    "label": "Manchester",
+                    "validFor": [2],
+                    "value": "Manchester"
+                },
+                {
+                    "label": "Birmingham",
+                    "validFor": [2],
+                    "value": "Birmingham"
+                },
+                {
+                    "label": "London",
+                    "validFor": [2],
+                    "value": "London"
+                }
+            ]
+        },
+        "Weakness": {
+            "controllerValues": {
+                "false": 0,
+                "true": 1
+            },
+            "values": [
+                {
+                    "label": "Silver Bullet",
+                    "validFor": [1],
+                    "value": "Silver Bullet"
+                },
+                {
+                    "label": "Water",
+                    "validFor": [0],
+                    "value": "Water"
+                },
+                {
+                    "label": "Poison",
+                    "validFor": [0],
+                    "value": "Poison"
+                },
+                {
+                    "label": "Emotional Blackmail",
+                    "validFor": [1],
+                    "value": "Emotional Blackmail"
+                }
+            ]
+        },
+        "City": {
+            "controllerValues": {
+                "New York": 0,
+                "California": 1,
+                "Ontario": 2,
+                "British Columbia": 3
+            },
+            "values": [
+                {
+                    "label": "New York City",
+                    "validFor": [0],
+                    "value": "New York City"
+                },
+                {
+                    "label": "Buffalo",
+                    "validFor": [0],
+                    "value": "Buffalo"
+                },
+                {
+                    "label": "San Francisco",
+                    "validFor": [1],
+                    "value": "San Francisco"
+                },
+                {
+                    "label": "Los Angeles",
+                    "validFor": [1],
+                    "value": "Los Angeles"
+                },
+                {
+                    "label": "Toronto",
+                    "validFor": [2],
+                    "value": "Toronto"
+                },
+                {
+                    "label": "Ottawa",
+                    "validFor": [2],
+                    "value": "Ottawa"
+                },
+                {
+                    "label": "Vancouver",
+                    "validFor": [3],
+                    "value": "Vancouver"
+                }
+            ]
+        },
+        "Country": {
+            "controllerValues": {},
+            "values": [
+                {
+                    "label": "United States",
+                    "validFor": [],
+                    "value": "United States"
+                },
+                {
+                    "label": "Canada",
+                    "validFor": [],
+                    "value": "Canada"
+                },
+                {
+                    "label": "United Kingdom",
+                    "validFor": [],
+                    "value": "United Kingdom"
+                }
+            ]
+        },
+        "States_Provinces": {
+            "controllerValues": {
+                "United States": 0,
+                "Canada": 1,
+                "United Kingdom": 2
+            },
+            "values": [
+                {
+                    "label": "New York",
+                    "validFor": [0],
+                    "value": "New York"
+                },
+                {
+                    "label": "California",
+                    "validFor": [0],
+                    "value": "California"
+                },
+                {
+                    "label": "Ontario",
+                    "validFor": [1],
+                    "value": "Ontario"
+                },
+                {
+                    "label": "British Columbia",
+                    "validFor": [1],
+                    "value": "British Columbia"
+                }
+            ]
+        }
+    }
+}

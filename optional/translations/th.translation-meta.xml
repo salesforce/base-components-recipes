@@ -205,6 +205,10 @@
     <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
   </customLabels>
   <customLabels>
+    <label>ไม่รองรับการอัปโหลดรูปภาพสำหรับผู้ใช้ที่เป็นผู้เข้าชม</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
     <label>จำเป็น</label>
     <name>lightning_LightningControl_required</name>
   </customLabels>
@@ -231,6 +235,14 @@
   <customLabels>
     <label>ล้าง</label>
     <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>เพิ่มจำนวน</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>ลดจำนวน</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
   </customLabels>
   <customLabels>
     <label>คำเตือน</label>
@@ -427,6 +439,18 @@
   <customLabels>
     <label>การดำเนินการ</label>
     <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>โหมดการนำทาง</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>โหมดดำเนินการ</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
+  </customLabels>
+  <customLabels>
+    <label>หมายเลขแถว</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
   </customLabels>
   <customLabels>
     <label>รายการใหม่</label>
@@ -677,6 +701,10 @@
     <name>lightning_LightningLookup_add</name>
   </customLabels>
   <customLabels>
+    <label>แสดงผลลัพธ์ทั้งหมดสำหรับ "{0}"</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
     <label>สร้าง {0} ใหม่</label>
     <name>lightning_LightningLookup_createNewObject</name>
   </customLabels>
@@ -685,12 +713,32 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
+    <label>ไม่มีผลลัพธ์สำหรับ “{0}”</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>ยังไม่มีผลลัพธ์เลย...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>ลองป้อนคำค้นหา</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
     <label>เลือกตัวเลือกหรือลบเงื่อนไขการค้นหา</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
+    <label>เชื่อมโยง {0} กับ</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
     <label>ล่าสุด {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>ผลลัพธ์ทั้งหมดสำหรับ "{0}"</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>ค้นหา</label>
@@ -699,6 +747,10 @@
   <customLabels>
     <label>ค้นหา {0}...</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>ค้นหา {0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
   </customLabels>
   <customLabels>
     <label>ค้นหา...</label>
@@ -711,6 +763,10 @@
   <customLabels>
     <label>เลือกออบเจ็กต์</label>
     <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>การค้นหาเริ่มต้นสำหรับ "{0}"</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
   </customLabels>
   <customLabels>
     <label>ไม่มี</label>
@@ -779,5 +835,13 @@
   <customLabels>
     <label>ปิด</label>
     <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>บริการข้อความ Lightning - คอมโพเนนต์ของคุณจะต้องถูกแสดงเสียก่อน คุณจึงจะเผยแพร่ในช่องทางได้: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>บริการข้อความ Lightning  - ไม่สามารถสมัครในช่องทาง {0} ที่มีขอบเขตที่ไม่ถูกต้อง: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
   </customLabels>
 </Translations>

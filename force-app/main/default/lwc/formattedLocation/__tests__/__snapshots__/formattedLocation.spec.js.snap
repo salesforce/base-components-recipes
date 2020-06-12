@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`c-formatted-location default 1`] = `
+<c-formatted-location>
+  #shadow-root(open)
+    90
+    , 
+    100
+</c-formatted-location>
+`;
+
+exports[`c-formatted-location invalid longitude and latitude 1`] = `
+<c-formatted-location>
+  #shadow-root(open)
+</c-formatted-location>
+`;
+
+exports[`c-formatted-location missing longitude and latitude 1`] = `
+<c-formatted-location>
+  #shadow-root(open)
+</c-formatted-location>
+`;
+
+exports[`c-formatted-location normal longitude and latitude 1`] = `
+<c-formatted-location>
+  #shadow-root(open)
+    22.222
+    , 
+    122.222
+</c-formatted-location>
+`;
+
+exports[`c-formatted-location too big latitude 1`] = `
+<c-formatted-location>
+  #shadow-root(open)
+</c-formatted-location>
+`;
+
+exports[`c-formatted-location too big longitude 1`] = `
+<c-formatted-location>
+  #shadow-root(open)
+</c-formatted-location>
+`;

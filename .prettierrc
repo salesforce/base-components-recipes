@@ -4,7 +4,7 @@
   "tabWidth": 4,
   "overrides": [
     {
-      "files": "**/lwc/**/*.html",
+      "files": ["**/lwc/**/*.html", "force-app/stubs/**/*.html", "force-app/test/**/*.html"],
       "options": { "parser": "lwc" }
     },
     {

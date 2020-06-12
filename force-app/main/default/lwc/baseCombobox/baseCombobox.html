@@ -22,11 +22,15 @@
                     class="slds-icon_container slds-combobox__input-entity-icon"
                 ></c-icon>
             </template>
+            <!--  'required' on the input may present hints from the browser when within a form that doesn't have novalidate set,
+              specifically it may be problematic for cases when a selection has already been made say via pills and then the validation hint
+              is no longer correct/relevant -->
             <input
                 id="input"
                 class={computedInputClass}
                 type="text"
                 role="textbox"
+                required={required}
                 autocomplete="off"
                 value={computedInputValue}
                 name={name}

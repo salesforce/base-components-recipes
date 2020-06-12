@@ -6,9 +6,19 @@
  */
 
 import { LightningElement, api, track } from 'lwc';
-import { isIE11, normalizeBoolean, normalizeString } from 'c/utilsPrivate';
+import {
+    isIE11,
+    normalizeBoolean,
+    normalizeString,
+    synchronizeAttrs
+} from 'c/utilsPrivate';
+
+const ARIA_DESCRIBEDBY = 'aria-describedby';
+const ARIA_CONTROLS = 'aria-controls';
 
 export default class cPrimitiveButton extends LightningElement {
+    _initialized = false;
+
     @track
     state = {
         accesskey: null,
@@ -67,10 +77,10 @@ export default class cPrimitiveButton extends LightningElement {
 
     set ariaDescribedBy(value) {
         this.state.ariaDescribedBy = value;
-    }
-
-    get computedAriaDescribedBy() {
-        return this.state.ariaDescribedBy;
+        const button = this.template.querySelector('button');
+        synchronizeAttrs(button, {
+            [ARIA_DESCRIBEDBY]: value
+        });
     }
 
     @api get ariaControls() {
@@ -79,10 +89,10 @@ export default class cPrimitiveButton extends LightningElement {
 
     set ariaControls(value) {
         this.state.ariaControls = value;
-    }
-
-    get computedAriaControls() {
-        return this.state.ariaControls;
+        const button = this.template.querySelector('button');
+        synchronizeAttrs(button, {
+            [ARIA_CONTROLS]: value
+        });
     }
 
     @api get ariaExpanded() {
@@ -136,6 +146,18 @@ export default class cPrimitiveButton extends LightningElement {
                     event.stopImmediatePropagation();
                 }
             });
+        }
+    }
+
+    renderedCallback() {
+        if (!this._initialized) {
+            const button = this.template.querySelector('button');
+            synchronizeAttrs(button, {
+                [ARIA_CONTROLS]: this.state.ariaControls,
+                [ARIA_DESCRIBEDBY]: this.state.ariaDescribedBy
+            });
+
+            this._initialized = true;
         }
     }
 }
