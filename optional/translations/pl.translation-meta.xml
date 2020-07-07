@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Numer wiersza</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Nowe elementy</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -709,7 +713,7 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
-    <label>Brak wyników dla "{0}"</label>
+    <label>Brak wyników dla "{0}".</label>
     <name>lightning_LightningLookup_emptyStateNoResultText</name>
   </customLabels>
   <customLabels>

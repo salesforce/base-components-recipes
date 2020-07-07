@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Număr rând</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Elemente noi</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -709,15 +713,15 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
-    <label> Niciun rezultat pentru „{0}”</label>
+    <label>Niciun rezultat pentru „{0}”</label>
     <name>lightning_LightningLookup_emptyStateNoResultText</name>
   </customLabels>
   <customLabels>
-    <label> Încă nu există niciun rezultat...</label>
+    <label>Nu există niciun rezultat încă...</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
   </customLabels>
   <customLabels>
-    <label> Încercați un termen de căutare.</label>
+    <label>Încercați să introduceți un termen de căutare.</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>

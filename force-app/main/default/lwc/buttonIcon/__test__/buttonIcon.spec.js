@@ -135,4 +135,23 @@ describe('c-button-icon', () => {
             expect(btn.getAttribute('aria-atomic')).toBe(null);
         });
     });
+    it('should set pointer-events to none when buttonIcon is disabled', () => {
+        const element = createButtonIcon({
+            label: 'Test',
+            title: 'Click here',
+            disabled: true
+        });
+
+        expect(element.style.pointerEvents).toBe('none');
+
+        element.disabled = false;
+        return Promise.resolve()
+            .then(() => {
+                expect(element.style.pointerEvents).toBe('');
+                element.disabled = true;
+            })
+            .then(() => {
+                expect(element.style.pointerEvents).toBe('none');
+            });
+    });
 });

@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Sor száma</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Új elemek</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -717,7 +721,7 @@
     <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
   </customLabels>
   <customLabels>
-    <label>Adjon meg egy keresési kifejezést.</label>
+    <label>Próbáljon meg megadni egy keresőkifejezést.</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>

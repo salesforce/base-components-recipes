@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Номер рядка</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Нові елементи</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -717,7 +721,7 @@
     <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
   </customLabels>
   <customLabels>
-    <label>Спробуйте ввести пошуковий запит.</label>
+    <label>Спробуйте ввести пошуковий термін.</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>

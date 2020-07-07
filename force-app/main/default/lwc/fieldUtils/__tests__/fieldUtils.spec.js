@@ -90,7 +90,7 @@ describe('compoundFieldIsCreateable', () => {
         ).toEqual(true);
     });
 
-    it('returns false for a name field if any field is not creatable', () => {
+    it('returns false for a name field if any field is not createable', () => {
         Object.keys(store.objectInfo.fields).forEach(key => {
             if (key.match(/FirstName|LastName|Salutation/)) {
                 store.objectInfo.fields[key].createable = false;

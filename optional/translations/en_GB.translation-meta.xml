@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Row Number</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>New Items</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -709,15 +713,15 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
-    <label>​No results for "{0}"</label>
+    <label>No results for "{0}"</label>
     <name>lightning_LightningLookup_emptyStateNoResultText</name>
   </customLabels>
   <customLabels>
-    <label>​No results yet...</label>
+    <label>No results yet...</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
   </customLabels>
   <customLabels>
-    <label>​Try entering a search term.</label>
+    <label>Try entering a search term.</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>

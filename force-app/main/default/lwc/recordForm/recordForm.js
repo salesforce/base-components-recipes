@@ -261,15 +261,16 @@ export default class cRecordForm extends LightningElement {
                           ) // eslint-disable-line indent
                         : hasFields &&
                           this._objectInfo.fields[field].updateable;
-                    const fieldCreatable = compound
+                    const fieldCreateable = compound
                         ? compoundFieldIsCreateable(
                               compoundFields, // eslint-disable-line indent
                               this._record, // eslint-disable-line indent
                               this._objectInfo // eslint-disable-line indent
                           ) // eslint-disable-line indent
-                        : hasFields && this._objectInfo.fields[field].creatable;
+                        : hasFields &&
+                          this._objectInfo.fields[field].createable;
                     const shouldShowAsInputInEditMode =
-                        fieldUpdateable || (!this._recordId && fieldCreatable);
+                        fieldUpdateable || (!this._recordId && fieldCreateable);
                     const updateable =
                         !isUnsupportedReferenceField(field) && this._objectInfo
                             ? shouldShowAsInputInEditMode
