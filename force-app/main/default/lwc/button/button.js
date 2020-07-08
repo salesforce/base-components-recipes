@@ -151,6 +151,12 @@ export default class cButton extends cPrimitiveButton {
         this.dispatchEvent(privatebuttonregister);
     }
 
+    renderedCallback() {
+        super.renderedCallback();
+
+        this.template.host.style.pointerEvents = this.disabled ? 'none' : '';
+    }
+
     disconnectedCallback() {
         this._connected = false;
         if (this._deRegistrationCallback) {

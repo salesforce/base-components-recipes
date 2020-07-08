@@ -19,7 +19,7 @@
                     "dataType": "Currency",
                     "label": "Annual Revenue",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "City": {
                     "apiName": "City",
@@ -29,7 +29,7 @@
                     "dataType": "String",
                     "label": "City",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Company": {
                     "apiName": "Company",
@@ -39,7 +39,7 @@
                     "dataType": "String",
                     "label": "Company",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Country": {
                     "apiName": "Country",
@@ -49,7 +49,7 @@
                     "dataType": "String",
                     "label": "Country",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "CountryCode": {
                     "apiName": "CountryCode",
@@ -59,7 +59,7 @@
                     "dataType": "Picklist",
                     "label": "Country Code",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Description": {
                     "apiName": "Description",
@@ -69,7 +69,7 @@
                     "dataType": "TextArea",
                     "label": "Description",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Email": {
                     "apiName": "Email",
@@ -79,7 +79,7 @@
                     "dataType": "Email",
                     "label": "Email",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "FirstName": {
                     "apiName": "FirstName",
@@ -89,7 +89,7 @@
                     "dataType": "String",
                     "label": "First Name",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Id": {
                     "apiName": "Id",
@@ -107,7 +107,7 @@
                     "dataType": "String",
                     "label": "Last Name",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Name": {
                     "apiName": "Name",
@@ -117,7 +117,7 @@
                     "dataType": "String",
                     "label": "Full Name",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "OwnerId": {
                     "apiName": "OwnerId",
@@ -151,7 +151,7 @@
                     "dataType": "Phone",
                     "label": "Phone",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "PostalCode": {
                     "apiName": "PostalCode",
@@ -161,7 +161,7 @@
                     "dataType": "String",
                     "label": "Zip/Postal Code",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Rating": {
                     "apiName": "Rating",
@@ -171,7 +171,7 @@
                     "dataType": "Picklist",
                     "label": "Rating",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Salutation": {
                     "apiName": "Salutation",
@@ -181,7 +181,7 @@
                     "dataType": "Picklist",
                     "label": "Salutation",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "State": {
                     "apiName": "State",
@@ -191,7 +191,7 @@
                     "dataType": "String",
                     "label": "State/Province",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "StateCode": {
                     "apiName": "StateCode",
@@ -201,7 +201,7 @@
                     "dataType": "Picklist",
                     "label": "State/Province Code",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Status": {
                     "apiName": "Status",
@@ -211,7 +211,7 @@
                     "dataType": "Picklist",
                     "label": "Status",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Street": {
                     "apiName": "Street",
@@ -221,7 +221,7 @@
                     "dataType": "TextArea",
                     "label": "Street",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Title": {
                     "apiName": "Title",
@@ -231,7 +231,7 @@
                     "dataType": "String",
                     "label": "Title",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "Website": {
                     "apiName": "Website",
@@ -241,7 +241,7 @@
                     "dataType": "Url",
                     "label": "Website",
                     "updateable": true,
-                    "creatable": true
+                    "createable": true
                 },
                 "ReadOnly__c": {
                     "apiName": "ReadOnly__c",
@@ -250,13 +250,13 @@
                     "label": "read only",
                     "updateable": false
                 },
-                "CreatableNotUpdateable__c": {
-                    "apiName": "CreatableNotUpdateable__c",
+                "CreateableNotUpdateable__c": {
+                    "apiName": "CreateableNotUpdateable__c",
                     "compound": "false",
                     "dataType": "String",
-                    "label": "creatable but not updateable",
+                    "label": "createable but not updateable",
                     "updateable": false,
-                    "creatable": true
+                    "createable": true
                 }
             }
         }

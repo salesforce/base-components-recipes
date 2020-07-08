@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Číslo riadka</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Nové položky</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -709,15 +713,15 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
-    <label>Žiadne výsledky pre "{0}"</label>
+    <label>Nenašli sa žiadne výsledky pre „{0}“</label>
     <name>lightning_LightningLookup_emptyStateNoResultText</name>
   </customLabels>
   <customLabels>
-    <label>Zatiaľ žiadne výsledky</label>
+    <label>Zatiaľ žiadne výsledky...</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
   </customLabels>
   <customLabels>
-    <label>Skúste zadať vyhľadávaný termín.</label>
+    <label>Skúste zadať termín vyhľadávania.</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>

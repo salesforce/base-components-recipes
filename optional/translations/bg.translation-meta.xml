@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Номер на ред</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Нови елементи</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -709,15 +713,15 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
-    <label> Няма резултати за „{0}“</label>
+    <label>Няма резултати за „{0}“</label>
     <name>lightning_LightningLookup_emptyStateNoResultText</name>
   </customLabels>
   <customLabels>
-    <label> Все още няма резултати...</label>
+    <label>Все още няма резултати...</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
   </customLabels>
   <customLabels>
-    <label> Опитайте с по-дълъг термин за търсене.</label>
+    <label>Опитайте с въвеждане на термин за търсене.</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>

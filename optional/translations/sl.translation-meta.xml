@@ -213,19 +213,19 @@
     <name>lightning_LightningControl_required</name>
   </customLabels>
   <customLabels>
-    <label>dejavno</label>
+    <label>aktivirano</label>
     <name>lightning_LightningControl_active</name>
   </customLabels>
   <customLabels>
-    <label>Dejavno</label>
+    <label>Aktivirano</label>
     <name>lightning_LightningControl_activeCapitalized</name>
   </customLabels>
   <customLabels>
-    <label>nedejavno</label>
+    <label>ni aktivirano</label>
     <name>lightning_LightningControl_inactive</name>
   </customLabels>
   <customLabels>
-    <label>Nedejavno</label>
+    <label>Ni aktivirano</label>
     <name>lightning_LightningControl_inactiveCapitalized</name>
   </customLabels>
   <customLabels>
@@ -447,6 +447,10 @@
   <customLabels>
     <label>Način ukrepanja</label>
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Številka vrstice</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
   </customLabels>
   <customLabels>
     <label>Novi elementi</label>
@@ -709,15 +713,15 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
-    <label>​Ni rezultatov za "{0}"</label>
+    <label>Ni rezultatov za "{0}"</label>
     <name>lightning_LightningLookup_emptyStateNoResultText</name>
   </customLabels>
   <customLabels>
-    <label> Ni še nobenih rezultatov ...</label>
+    <label>Ni še nobenih rezultatov ...</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
   </customLabels>
   <customLabels>
-    <label>​Poskusite vnesti izraz za iskanje.</label>
+    <label>Poskusite vnesti izraz za iskanje.</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>
@@ -741,7 +745,7 @@
     <name>lightning_LightningLookup_search</name>
   </customLabels>
   <customLabels>
-    <label>Iskanje {0}...</label>
+    <label>Poiščite {0} …</label>
     <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
   </customLabels>
   <customLabels>

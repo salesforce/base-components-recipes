@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Số Hàng</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Các Mục Mới</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -709,15 +713,15 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
-    <label> Không có kết quả cho "{0}"</label>
+    <label>Không có kết quả cho "{0}"</label>
     <name>lightning_LightningLookup_emptyStateNoResultText</name>
   </customLabels>
   <customLabels>
-    <label> Chưa tìm thấy kết quả nào...</label>
+    <label>Chưa tìm thấy kết quả nào...</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
   </customLabels>
   <customLabels>
-    <label> Thử nhập một thuật ngữ tìm kiếm.</label>
+    <label>Thử nhập một thuật ngữ tìm kiếm.</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>
@@ -769,7 +773,7 @@
     <name>lightning_LightningLookup_none</name>
   </customLabels>
   <customLabels>
-    <label>Sẵn Sàng</label>
+    <label>Sẵn Có</label>
     <name>lightning_LightningPicklist_available</name>
   </customLabels>
   <customLabels>

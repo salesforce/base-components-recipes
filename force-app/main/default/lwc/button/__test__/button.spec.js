@@ -163,4 +163,19 @@ describe('c-button', () => {
             expect(evtListenerMock.mock.calls).toHaveLength(1);
         });
     });
+
+    it('should set pointer-events to none when button is disabled', () => {
+        const element = createButton({ label: 'Submit', disabled: true });
+        expect(element.style.pointerEvents).toBe('none');
+
+        element.disabled = false;
+        return Promise.resolve()
+            .then(() => {
+                expect(element.style.pointerEvents).toBe('');
+                element.disabled = true;
+            })
+            .then(() => {
+                expect(element.style.pointerEvents).toBe('none');
+            });
+    });
 });

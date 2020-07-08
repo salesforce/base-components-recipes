@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>‏‏رقم الصف</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>العناصر الجديدة</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>

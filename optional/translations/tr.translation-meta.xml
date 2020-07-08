@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Sıra Numarası</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Yeni Öğeler</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>

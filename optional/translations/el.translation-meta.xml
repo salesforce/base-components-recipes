@@ -449,6 +449,10 @@
     <name>lightning_LightningDatatable_ariaLiveActionMode</name>
   </customLabels>
   <customLabels>
+    <label>Αριθμός γραμμής</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
     <label>Νέα στοιχεία</label>
     <name>lightning_LightningVerticalNavigation_newItems</name>
   </customLabels>
@@ -709,15 +713,15 @@
     <name>lightning_LightningLookup_currentSelection</name>
   </customLabels>
   <customLabels>
-    <label> Δεν βρέθηκαν αποτελέσματα για "{0}"</label>
+    <label>Δεν βρέθηκαν αποτελέσματα για "{0}"</label>
     <name>lightning_LightningLookup_emptyStateNoResultText</name>
   </customLabels>
   <customLabels>
-    <label> Δεν υπάρχουν ακόμη αποτελέσματα...</label>
+    <label>Δεν υπάρχουν ακόμη αποτελέσματα...</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
   </customLabels>
   <customLabels>
-    <label> Δοκιμάστε να εισαγάγετε έναν όρο αναζήτησης.</label>
+    <label>Δοκιμάστε να εισαγάγετε έναν όρο αναζήτησης.</label>
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>
@@ -769,11 +773,11 @@
     <name>lightning_LightningLookup_none</name>
   </customLabels>
   <customLabels>
-    <label>Διαθέσιμο</label>
+    <label>Διαθέσιμες</label>
     <name>lightning_LightningPicklist_available</name>
   </customLabels>
   <customLabels>
-    <label>Επιλεγμένο</label>
+    <label>Επιλεγμένες</label>
     <name>lightning_LightningPicklist_chosen</name>
   </customLabels>
   <customLabels>
