@@ -313,7 +313,7 @@ This runs lint and unit tests. See the `package.json` file for all the available
 
 We are not accepting contributions at this time. If you have any questions about base components recipes, please use the following channels.
 
--   [Trailblazer Community - Lightning Web Components](https://success.salesforce.com/ui/core/chatter/groups/GroupProfilePage?g=0F93A000000LlT2SAK)
+-   [Trailblazer Community - Lightning Components Development](https://trailblazers.salesforce.com/_ui/core/chatter/groups/GroupProfilePage?g=0F930000000PbJa)
 -   [Salesforce Developer Forums](https://developer.salesforce.com/forums)
 -   [Salesforce Stackexchange](https://salesforce.stackexchange.com/)
 
