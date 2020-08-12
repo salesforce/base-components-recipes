@@ -12,7 +12,7 @@ import {
     generateRecordInputForUpdate,
     createRecordInputFilteredByEditedFields
 } from 'lightning/uiRecordApi';
-
+export { deepCopy } from 'c/utilsPrivate';
 export { filterByPicklistsInForm, formHasPicklists } from './picklists';
 
 const OUTPUT_FIELD_TAGNAME = 'C-OUTPUT-FIELD';

@@ -350,3 +350,11 @@ export function getFieldsForLayout(layout, objectInfo) {
         fieldsAccumulator(sections, getFieldsFromSection);
     return getFieldsFromSections(layout.sections);
 }
+
+export function isPersonNameField(field) {
+    return (
+        field &&
+        (Fields.PERSON_NAME === field.extraTypeInfo ||
+            Fields.SWITCHABLE_PERSON_NAME === field.extraTypeInfo)
+    );
+}
