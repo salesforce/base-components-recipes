@@ -137,3 +137,12 @@ export function setDecoratedDragonInputValueWithoutEvent(element, value) {
     element.value = value;
     return value;
 }
+
+export function escapeHTML(html) {
+    return html
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}

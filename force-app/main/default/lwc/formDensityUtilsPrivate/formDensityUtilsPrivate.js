@@ -98,7 +98,8 @@ function setupResizeObserver(cmpInterface) {
 
 export function resizeObserverCallback(cmpInterface) {
     const containerEle = cmpInterface.getContainerElement();
-    if (containerEle) {
+
+    if (containerEle && containerEle.clientWidth) {
         const containerWidth = containerEle.getBoundingClientRect().width;
         const fieldLabelAlignment = cmpInterface.getLabelAlignmentPrivate();
 
