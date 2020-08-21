@@ -14,11 +14,59 @@ import {
     getUiField,
     compoundFieldIsUpdateable,
     compoundFieldIsCreateable,
-    parseError
+    parseError,
+    isPersonNameField,
+    Fields
 } from 'c/fieldUtils';
 import store from './mockdata.json';
 import notperson from './notperson.json';
 import person from './yesperson.json';
+
+const PERSON_ACCOUNT_NAME_FILED = {
+    type: 'String',
+    apiName: 'Name',
+    calculated: false,
+    compound: true,
+    compoundComponentName: null,
+    compoundFieldName: 'Name',
+    controllerName: null,
+    controllingFields: [],
+    createable: true,
+    custom: false,
+    dataType: 'String',
+    extraTypeInfo: 'SwitchablePersonName',
+    filterable: true,
+    filteredLookupInfo: null,
+    highScaleNumber: false,
+    htmlFormatted: false,
+    inlineHelpText: null,
+    label: 'Account Name',
+    length: 255,
+    nameField: true,
+    polymorphicForeignKey: false,
+    precision: 0,
+    reference: false,
+    referenceTargetField: null,
+    referenceToInfos: [],
+    relationshipName: null,
+    required: false,
+    scale: 0,
+    searchPrefilterable: false,
+    sortable: true,
+    unique: false,
+    updateable: true,
+    value: {
+        FirstName: 'person',
+        LastName: 'person',
+        MiddleName: 'account',
+        Salutation: null,
+        Suffix: null
+    },
+
+    displayValue: {
+        Salutation: null
+    }
+};
 
 describe('getCompoundFields', () => {
     it('returns a list of component fields for Name', () => {
@@ -39,6 +87,22 @@ describe('getCompoundFields', () => {
         );
 
         expect(fields).toEqual(['FirstName', 'LastName', 'Salutation']);
+    });
+});
+
+describe('isPersonNameField', () => {
+    it('should return true if field is SWITCHABLE_PERSON_NAME', () => {
+        expect(isPersonNameField(PERSON_ACCOUNT_NAME_FILED)).toBeTruthy();
+    });
+    it('should return true if field is PERSON_NAME', () => {
+        const NonPersonNameField = Object.assign({}, PERSON_ACCOUNT_NAME_FILED);
+        NonPersonNameField.extraTypeInfo = Fields.PERSON_NAME;
+        expect(isPersonNameField(NonPersonNameField)).toBeTruthy();
+    });
+    it('should return false if field is not PERSON_NAME or SWITCHABLE_PERSON_NAME', () => {
+        const NonPersonNameField = Object.assign({}, PERSON_ACCOUNT_NAME_FILED);
+        NonPersonNameField.extraTypeInfo = '';
+        expect(isPersonNameField(NonPersonNameField)).toBeFalsy();
     });
 });
 
@@ -245,7 +309,10 @@ describe('parseError', () => {
     it('should extract error message when event came from LDS error event', () => {
         const errorFromLDSWire = {
             status: 500,
-            body: { error: 'Disconnected or Canceled' },
+            body: {
+                error: 'Disconnected or Canceled'
+            },
+
             headers: {}
         };
 
