@@ -1,3 +1,12 @@
+**/aura/**/*.auradoc
+**/aura/**/*.cmp
+**/aura/**/*.css
+**/aura/**/*.design
+**/aura/**/*.evt
+**/aura/**/*.json
+**/aura/**/*.svg
+**/aura/**/*.xml
+**/aura/**/*.tokens
 **/lwc/**/*.css
 **/lwc/**/*.html
 **/lwc/**/*.json

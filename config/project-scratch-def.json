@@ -1,11 +1,18 @@
 {
     "orgName": "Base Components Recipes",
     "edition": "Developer",
-    "features": [],
-    "hasSampleData": true,
+    "hasSampleData": false,
     "settings": {
         "lightningExperienceSettings": {
             "enableS1DesktopEnabled": true
+        },
+        "securitySettings": {
+            "passwordPolicies": {
+                "enableSetPasswordInApi": true
+            }
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
         }
     }
 }
