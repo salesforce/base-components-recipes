@@ -22,7 +22,7 @@ function getRaptorMock(modulePath, options) {
     }
 }
 
-module.exports = function(modulePath, options) {
+module.exports = function (modulePath, options) {
     const raptorMock = getRaptorMock(modulePath, options);
     if (raptorMock) {
         return raptorMock;
