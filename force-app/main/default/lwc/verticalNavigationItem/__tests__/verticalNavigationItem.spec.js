@@ -9,8 +9,8 @@ import { createElement } from 'lwc';
 import Element from 'c/verticalNavigationItem';
 
 function on(element, name) {
-    return new Promise(resolve => {
-        element.addEventListener(name, event => {
+    return new Promise((resolve) => {
+        element.addEventListener(name, (event) => {
             resolve(event);
         });
     });
@@ -57,7 +57,7 @@ describe('c-vertical-navigation-item', () => {
         });
 
         const assert = on(element, 'privateitemregister')
-            .then(event => {
+            .then((event) => {
                 event.detail.callbacks.select();
             })
             .then(() => {
@@ -73,11 +73,11 @@ describe('c-vertical-navigation-item', () => {
         });
 
         const assert = on(element, 'privateitemregister')
-            .then(event => {
+            .then((event) => {
                 event.detail.callbacks.select();
                 return event;
             })
-            .then(event => {
+            .then((event) => {
                 event.detail.callbacks.deselect();
             })
             .then(() => {

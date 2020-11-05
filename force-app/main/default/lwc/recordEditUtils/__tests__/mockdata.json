@@ -1,0 +1,170 @@
+{
+    "apiName": "Lead",
+    "fields": {
+        "Address": {
+            "apiName": "Address",
+            "dataType": "Address",
+            "compoundFieldName": null
+        },
+        "AnnualRevenue": {
+            "apiName": "AnnualRevenue",
+            "dataType": "Currency",
+            "compoundFieldName": null
+        },
+        "City": {
+            "apiName": "City",
+            "dataType": "String",
+            "compoundFieldName": "Address"
+        },
+        "CleanStatus": {
+            "apiName": "CleanStatus",
+            "dataType": "Picklist",
+            "compoundFieldName": null
+        },
+        "CloneSourceId": {
+            "apiName": "CloneSourceId",
+            "dataType": "Reference",
+            "compoundFieldName": null
+        },
+        "Company": {
+            "apiName": "Company",
+            "dataType": "String",
+            "compoundFieldName": null
+        },
+        "Country": {
+            "apiName": "Country",
+            "dataType": "String",
+            "compoundFieldName": "Address"
+        },
+        "CountryCode": {
+            "apiName": "CountryCode",
+            "dataType": "Picklist",
+            "compoundFieldName": "Address"
+        },
+        "Description": {
+            "apiName": "Description",
+            "dataType": "TextArea",
+            "compoundFieldName": null
+        },
+        "FirstName": {
+            "apiName": "FirstName",
+            "dataType": "String",
+            "compoundFieldName": "Name"
+        },
+        "GeocodeAccuracy": {
+            "apiName": "GeocodeAccuracy",
+            "dataType": "Picklist",
+            "compoundFieldName": "Address"
+        },
+        "Id": {
+            "apiName": "Id",
+            "dataType": "String",
+            "compoundFieldName": null
+        },
+        "LastName": {
+            "apiName": "LastName",
+            "dataType": "String",
+            "compoundFieldName": "Name"
+        },
+        "LastReferencedDate": {
+            "apiName": "LastReferencedDate",
+            "dataType": "DateTime",
+            "compoundFieldName": null
+        },
+        "LastViewedDate": {
+            "apiName": "LastViewedDate",
+            "dataType": "DateTime",
+            "compoundFieldName": null
+        },
+        "Latitude": {
+            "apiName": "Latitude",
+            "dataType": "Double",
+            "compoundFieldName": "Address"
+        },
+        "LeadSource": {
+            "apiName": "LeadSource",
+            "dataType": "Picklist",
+            "compoundFieldName": null
+        },
+        "Longitude": {
+            "apiName": "Longitude",
+            "dataType": "Double",
+            "compoundFieldName": "Address"
+        },
+        "MiddleName": {
+            "apiName": "MiddleName",
+            "dataType": "String",
+            "compoundFieldName": "Name"
+        },
+        "MobilePhone": {
+            "apiName": "MobilePhone",
+            "dataType": "Phone",
+            "compoundFieldName": null
+        },
+        "MultiPicklist__c": {
+            "apiName": "MultiPicklist__c",
+            "dataType": "MultiPicklist",
+            "compoundFieldName": null
+        },
+        "Name": {
+            "apiName": "Name",
+            "dataType": "String",
+            "compoundFieldName": null
+        },
+        "OwnerId": {
+            "apiName": "OwnerId",
+            "dataType": "Reference",
+            "compoundFieldName": null
+        },
+        "Phone": {
+            "apiName": "Phone",
+            "dataType": "Phone",
+            "compoundFieldName": null
+        },
+        "PhotoUrl": {
+            "apiName": "PhotoUrl",
+            "dataType": "Url",
+            "compoundFieldName": null
+        },
+        "PostalCode": {
+            "apiName": "PostalCode",
+            "dataType": "String",
+            "compoundFieldName": "Address"
+        },
+        "Rating": {
+            "apiName": "Rating",
+            "dataType": "Picklist",
+            "compoundFieldName": null
+        },
+        "Salutation": {
+            "apiName": "Salutation",
+            "dataType": "Picklist",
+            "compoundFieldName": "Name"
+        },
+        "State": {
+            "apiName": "State",
+            "dataType": "String",
+            "compoundFieldName": "Address"
+        },
+        "StateCode": {
+            "apiName": "StateCode",
+            "dataType": "Picklist",
+            "compoundFieldName": "Address"
+        },
+        "Status": {
+            "apiName": "Status",
+            "dataType": "Picklist",
+            "compoundFieldName": null
+        },
+        "Street": {
+            "apiName": "Street",
+            "dataType": "TextArea",
+            "compoundFieldName": "Address"
+        },
+        "Suffix": {
+            "apiName": "Suffix",
+            "dataType": "String",
+            "compoundFieldName": "Name"
+        }
+    }
+}

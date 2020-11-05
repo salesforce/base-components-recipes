@@ -55,8 +55,8 @@ function registerMockedWireService(engine) {
         getLookupRecords
     ];
 
-    mocks.forEach(mock => {
-        register(mock, wiredEventTarget => {
+    mocks.forEach((mock) => {
+        register(mock, (wiredEventTarget) => {
             let subscription;
             let config;
 
@@ -65,12 +65,12 @@ function registerMockedWireService(engine) {
             );
 
             const observer = {
-                next: data =>
+                next: (data) =>
                     wiredEventTarget.dispatchEvent(
                         new ValueChangedEvent({ data, error: undefined })
                     ),
 
-                error: error =>
+                error: (error) =>
                     wiredEventTarget.dispatchEvent(
                         new ValueChangedEvent({ data: undefined, error })
                     )
@@ -87,7 +87,7 @@ function registerMockedWireService(engine) {
                 subscription.unsubscribe();
             });
 
-            wiredEventTarget.addEventListener('config', newConfig => {
+            wiredEventTarget.addEventListener('config', (newConfig) => {
                 config = newConfig;
                 if (subscription) {
                     subscription.unsubscribe();

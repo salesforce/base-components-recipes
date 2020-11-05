@@ -725,7 +725,7 @@
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>
-    <label>Izberite eno od možnosti ali pa odstranite iskalni izraz.</label>
+    <label>Izberite možnost na izbirnem seznamu ali pa odstranite izraz za iskanje.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
@@ -767,6 +767,10 @@
   <customLabels>
     <label>Začetni rezultati za "{0}"</label>
     <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>Neznan zapis</label>
+    <name>lightning_LightningLookup_unknownRecord</name>
   </customLabels>
   <customLabels>
     <label>Brez</label>

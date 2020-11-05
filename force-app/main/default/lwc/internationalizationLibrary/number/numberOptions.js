@@ -20,19 +20,19 @@ function NumberOptions(options) {
     this.options = options || {};
 }
 
-NumberOptions.prototype.isCurrency = function() {
+NumberOptions.prototype.isCurrency = function () {
     return this.options.style === 'currency';
 };
 
-NumberOptions.prototype.isPercent = function() {
+NumberOptions.prototype.isPercent = function () {
     return this.options.style === 'percent';
 };
 
-NumberOptions.prototype.isDefaultCurrency = function() {
+NumberOptions.prototype.isDefaultCurrency = function () {
     return !this.options.currency || currency === this.options.currency;
 };
 
-NumberOptions.prototype.getDefaultSkeleton = function() {
+NumberOptions.prototype.getDefaultSkeleton = function () {
     return this.isCurrency()
         ? currencyFormat
         : this.isPercent()
@@ -40,7 +40,7 @@ NumberOptions.prototype.getDefaultSkeleton = function() {
         : numberFormat;
 };
 
-NumberOptions.prototype.getSkeleton = function() {
+NumberOptions.prototype.getSkeleton = function () {
     const options = this.options;
     const defaultSkeleton = this.getDefaultSkeleton();
     let skeleton = updateFractionPart(defaultSkeleton, options);

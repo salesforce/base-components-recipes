@@ -725,7 +725,7 @@
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>
-    <label>選取一個選項或移除搜尋字詞。</label>
+    <label>選取選項清單中的選項，或移除搜尋字詞。</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
@@ -767,6 +767,10 @@
   <customLabels>
     <label>「{0}」的初始結果</label>
     <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>不明記錄</label>
+    <name>lightning_LightningLookup_unknownRecord</name>
   </customLabels>
   <customLabels>
     <label>無</label>

@@ -36,6 +36,7 @@ const CURRENCY_DISPLAY = {
 };
 
 const SAFE_NUM_LENGTH = 15;
+const SAFE_NUM_REGEXP = /0+$/;
 
 const numberFormatInstancesCache = {};
 
@@ -184,8 +185,13 @@ function getFromCache(options) {
 }
 
 function exceedsSafeLength(value) {
-    const numberAsString = value.toString().replace('.', '');
-    return numberAsString.length >= SAFE_NUM_LENGTH;
+    const numberAsString = value.toString();
+    const [intPart, fractionPart] = numberAsString.split('.');
+
+    const digitCount =
+        intPart.length +
+        (fractionPart ? fractionPart.replace(SAFE_NUM_REGEXP, '').length : 0);
+    return digitCount >= SAFE_NUM_LENGTH;
 }
 
 function normalizedMinimumFractionDigits(options) {

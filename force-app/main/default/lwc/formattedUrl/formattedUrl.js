@@ -73,16 +73,14 @@ export default class cFormattedUrl extends LightningElement {
     }
 
     handleClick(event) {
-        if (this.target !== '_blank') {
-            this._dispatcher(event);
-        }
+        this._dispatcher(event);
     }
 
     updateLinkInfo(url) {
         updateRawLinkInfo(this, {
             url: this.makeAbsoluteUrl(url),
             target: this.target
-        }).then(linkInfo => {
+        }).then((linkInfo) => {
             this._url = linkInfo.url;
             this._dispatcher = linkInfo.dispatcher;
         });

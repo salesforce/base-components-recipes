@@ -18,7 +18,7 @@ const iconClasses = {
     iconRight: 'slds-badge__icon_right'
 };
 
-const createBadge = attributes => {
+const createBadge = (attributes) => {
     const element = createElement('c-badge', { is: Element });
 
     Object.assign(element, attributes);

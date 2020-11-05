@@ -155,6 +155,41 @@ exports[`c-button-menu-icon-size-attr button class attribute should reflect size
 
 exports[`c-button-menu-icon-size-attr button class attribute should reflect size=xx-small 1`] = `"slds-button slds-button_icon-border slds-button_icon-xx-small"`;
 
+exports[`c-button-menu-label should default with label defined 1`] = `
+<c-button-menu
+  class="slds-dropdown-trigger slds-dropdown-trigger_click"
+>
+  #shadow-root(open)
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="slds-button slds-button_neutral"
+      type="button"
+      value=""
+    >
+      label
+      <c-primitive-icon>
+        #shadow-root(open)
+          <svg
+            aria-hidden="true"
+            class="slds-button__icon"
+            data-key="down"
+            focusable="false"
+          >
+            <use
+              xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+            />
+          </svg>
+      </c-primitive-icon>
+      <span
+        class="slds-assistive-text"
+      >
+        Show menu
+      </span>
+    </button>
+</c-button-menu>
+`;
+
 exports[`c-button-menu-variant-attr button class attribute should reflect variant=bare 1`] = `"slds-button slds-button_icon-bare"`;
 
 exports[`c-button-menu-variant-attr button class attribute should reflect variant=bare-inverse 1`] = `"slds-button slds-button_icon-bare slds-button_icon-inverse"`;

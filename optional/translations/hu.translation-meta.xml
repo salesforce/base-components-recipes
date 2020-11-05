@@ -725,7 +725,7 @@
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>
-    <label>Válasszon egy lehetőséget, vagy távolítsa el a keresési kifejezést.</label>
+    <label>Válasszon egy lehetőséget az értéklistáról, vagy távolítsa el a keresési kifejezést.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
@@ -767,6 +767,10 @@
   <customLabels>
     <label>A kezdeti találatok ehhez: „{0}”</label>
     <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>Ismeretlen rekord</label>
+    <name>lightning_LightningLookup_unknownRecord</name>
   </customLabels>
   <customLabels>
     <label>Nincs</label>

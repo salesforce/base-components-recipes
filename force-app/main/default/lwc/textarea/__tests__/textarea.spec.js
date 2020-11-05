@@ -92,4 +92,59 @@ describe('c-textarea', () => {
             expect(txt.checkValidity()).toBe(true);
         });
     });
+
+    describe('setRangeText()', () => {
+        it('should insert text at the beginning of the input', () => {
+            const textarea = createComponent({
+                value: 'bar'
+            });
+
+            textarea.setRangeText('foo ', 0, 0);
+
+            return Promise.resolve().then(() => {
+                expect(textarea.value).toBe('foo bar');
+            });
+        });
+
+        it('should insert text at the end of the input', () => {
+            const textarea = createComponent({
+                value: 'foo '
+            });
+
+            textarea.setRangeText(
+                'bar',
+                textarea.value.length,
+                textarea.value.length
+            );
+
+            return Promise.resolve().then(() => {
+                expect(textarea.value).toBe('foo bar');
+            });
+        });
+
+        it('should insert text at the current cursor', () => {
+            const textarea = createComponent({
+                value: 'far'
+            });
+
+            textarea.shadowRoot.querySelector('textarea').selectionStart = 1;
+            textarea.setRangeText('oo b');
+
+            return Promise.resolve().then(() => {
+                expect(textarea.value).toBe('foo bar');
+            });
+        });
+
+        it('should replace text of the specified range', () => {
+            const textarea = createComponent({
+                value: 'feather'
+            });
+
+            textarea.setRangeText('oo ba', 1, 6, 'select');
+
+            return Promise.resolve().then(() => {
+                expect(textarea.value).toBe('foo bar');
+            });
+        });
+    });
 });

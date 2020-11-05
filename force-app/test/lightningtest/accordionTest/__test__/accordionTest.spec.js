@@ -39,7 +39,7 @@ describe('c-accordion using slots', () => {
         const elem = createAccordion();
 
         return Promise.resolve().then(() => {
-            const qsa = selector => querySelectorAll(elem, selector);
+            const qsa = (selector) => querySelectorAll(elem, selector);
 
             expect(qsa('c-accordion-section')).toHaveLength(2);
             elem.isBVisible = true;
@@ -75,7 +75,7 @@ describe('c-accordion using slots', () => {
 });
 
 describe('c-accordion that allows multiple sections open', () => {
-    const getDomInSection = elem => {
+    const getDomInSection = (elem) => {
         const testCmpShadow = elem.shadowRoot;
         return (sectionSelector, elementSelector) => {
             const section = testCmpShadow.querySelector(sectionSelector);

@@ -26,7 +26,7 @@ import {
     disconnectResizeObserver
 } from 'c/formDensityUtilsPrivate';
 
-export default class cRecordView extends LightningElement {
+export default class cRecordViewForm extends LightningElement {
     optionalFields = [];
     fieldSet;
 
@@ -191,7 +191,7 @@ export default class cRecordView extends LightningElement {
         this.dispatchEvent(createErrorEvent(error));
     }
 
-    registerOptionalFields = debounce(fields => {
+    registerOptionalFields = debounce((fields) => {
         this.optionalFields = fields;
     }, 0);
 
@@ -203,6 +203,8 @@ export default class cRecordView extends LightningElement {
             const newList = this.fieldSet.getList().sort();
             if (!arraysEqual(newList, this.optionalFields)) {
                 this.registerOptionalFields(newList);
+            } else if (this._recordUi) {
+                this.wireViewData(this._recordUi);
             }
         }
     }
@@ -219,7 +221,7 @@ export default class cRecordView extends LightningElement {
     getFields() {
         const fields = this.getOutputFieldComponents();
 
-        return Array.prototype.map.call(fields, field => {
+        return Array.prototype.map.call(fields, (field) => {
             return field.fieldName;
         });
     }
@@ -235,7 +237,7 @@ export default class cRecordView extends LightningElement {
 
     wireViewData(viewData) {
         this._recordUi = viewData;
-        this.getOutputFieldComponents().forEach(outputField => {
+        this.getOutputFieldComponents().forEach((outputField) => {
             outputField.wireRecordUi(viewData);
         });
     }

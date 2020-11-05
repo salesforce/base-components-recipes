@@ -64,7 +64,7 @@ export class TreeData {
         };
 
         if (item.items && item.items.length > 0) {
-            newItem.items = item.items.map(leaf => {
+            newItem.items = item.items.map((leaf) => {
                 return this.cloneItems(leaf);
             });
         }
@@ -170,7 +170,7 @@ export class TreeData {
         const tree = buildTreeFn(root, null, 0, 1);
         if (tree) {
             this._visibleTreeItems = new Set();
-            tree.visibleItems.forEach(item => {
+            tree.visibleItems.forEach((item) => {
                 this._visibleTreeItems.add(item);
             });
             tree.selectedItem = _selectedItem;
@@ -308,6 +308,7 @@ export class TreeData {
             this._currentFocusedItemIndex = focused;
             return this.getItemAtIndex(this.currentFocusedItemIndex);
         }
+        this._currentFocusedItemIndex = 0;
         return null;
     }
 

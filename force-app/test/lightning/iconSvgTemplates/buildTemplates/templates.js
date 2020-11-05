@@ -213,6 +213,7 @@ import { default as standard_asset_downtime_period } from './standard/asset_down
 import { default as standard_asset_object } from './standard/asset_object.html';
 import { default as standard_asset_relationship } from './standard/asset_relationship.html';
 import { default as standard_asset_state_period } from './standard/asset_state_period.html';
+import { default as standard_asset_warranty } from './standard/asset_warranty.html';
 import { default as standard_assigned_resource } from './standard/assigned_resource.html';
 import { default as standard_assignment } from './standard/assignment.html';
 import { default as standard_avatar } from './standard/avatar.html';
@@ -248,6 +249,7 @@ import { default as standard_channel_program_levels } from './standard/channel_p
 import { default as standard_channel_program_members } from './standard/channel_program_members.html';
 import { default as standard_channel_programs } from './standard/channel_programs.html';
 import { default as standard_chart } from './standard/chart.html';
+import { default as standard_checkout } from './standard/checkout.html';
 import { default as standard_choice } from './standard/choice.html';
 import { default as standard_client } from './standard/client.html';
 import { default as standard_cms } from './standard/cms.html';
@@ -272,6 +274,7 @@ import { default as standard_customers } from './standard/customers.html';
 import { default as standard_dashboard } from './standard/dashboard.html';
 import { default as standard_dashboard_ea } from './standard/dashboard_ea.html';
 import { default as standard_data_integration_hub } from './standard/data_integration_hub.html';
+import { default as standard_data_mapping } from './standard/data_mapping.html';
 import { default as standard_data_model } from './standard/data_model.html';
 import { default as standard_data_streams } from './standard/data_streams.html';
 import { default as standard_datadotcom } from './standard/datadotcom.html';
@@ -313,7 +316,9 @@ import { default as standard_expense_report_entry } from './standard/expense_rep
 import { default as standard_feed } from './standard/feed.html';
 import { default as standard_feedback } from './standard/feedback.html';
 import { default as standard_file } from './standard/file.html';
+import { default as standard_filiter_criteria_rule } from './standard/filiter_criteria_rule.html';
 import { default as standard_filter } from './standard/filter.html';
+import { default as standard_filter_criteria } from './standard/filter_criteria.html';
 import { default as standard_first_non_empty } from './standard/first_non_empty.html';
 import { default as standard_flow } from './standard/flow.html';
 import { default as standard_folder } from './standard/folder.html';
@@ -353,12 +358,14 @@ import { default as standard_list_email } from './standard/list_email.html';
 import { default as standard_live_chat } from './standard/live_chat.html';
 import { default as standard_live_chat_visitor } from './standard/live_chat_visitor.html';
 import { default as standard_location } from './standard/location.html';
+import { default as standard_location_permit } from './standard/location_permit.html';
 import { default as standard_log_a_call } from './standard/log_a_call.html';
 import { default as standard_logging } from './standard/logging.html';
 import { default as standard_loop } from './standard/loop.html';
 import { default as standard_macros } from './standard/macros.html';
 import { default as standard_maintenance_asset } from './standard/maintenance_asset.html';
 import { default as standard_maintenance_plan } from './standard/maintenance_plan.html';
+import { default as standard_maintenance_work_rule } from './standard/maintenance_work_rule.html';
 import { default as standard_marketing_actions } from './standard/marketing_actions.html';
 import { default as standard_merge } from './standard/merge.html';
 import { default as standard_messaging_conversation } from './standard/messaging_conversation.html';
@@ -398,8 +405,12 @@ import { default as standard_portal } from './standard/portal.html';
 import { default as standard_portal_roles } from './standard/portal_roles.html';
 import { default as standard_portal_roles_and_subordinates } from './standard/portal_roles_and_subordinates.html';
 import { default as standard_post } from './standard/post.html';
+import { default as standard_price_book_entries } from './standard/price_book_entries.html';
+import { default as standard_price_books } from './standard/price_books.html';
 import { default as standard_pricebook } from './standard/pricebook.html';
+import { default as standard_pricing_workspace } from './standard/pricing_workspace.html';
 import { default as standard_process } from './standard/process.html';
+import { default as standard_process_exception } from './standard/process_exception.html';
 import { default as standard_product } from './standard/product.html';
 import { default as standard_product_consumed } from './standard/product_consumed.html';
 import { default as standard_product_item } from './standard/product_item.html';
@@ -408,6 +419,9 @@ import { default as standard_product_request } from './standard/product_request.
 import { default as standard_product_request_line_item } from './standard/product_request_line_item.html';
 import { default as standard_product_required } from './standard/product_required.html';
 import { default as standard_product_transfer } from './standard/product_transfer.html';
+import { default as standard_product_warranty_term } from './standard/product_warranty_term.html';
+import { default as standard_product_workspace } from './standard/product_workspace.html';
+import { default as standard_products } from './standard/products.html';
 import { default as standard_proposition } from './standard/proposition.html';
 import { default as standard_question_best } from './standard/question_best.html';
 import { default as standard_question_feed } from './standard/question_feed.html';
@@ -449,6 +463,7 @@ import { default as standard_scheduling_constraints } from './standard/schedulin
 import { default as standard_scheduling_policy } from './standard/scheduling_policy.html';
 import { default as standard_screen } from './standard/screen.html';
 import { default as standard_search } from './standard/search.html';
+import { default as standard_section } from './standard/section.html';
 import { default as standard_segments } from './standard/segments.html';
 import { default as standard_service_appointment } from './standard/service_appointment.html';
 import { default as standard_service_appointment_capacity_usage } from './standard/service_appointment_capacity_usage.html';
@@ -462,6 +477,8 @@ import { default as standard_service_territory_location } from './standard/servi
 import { default as standard_service_territory_member } from './standard/service_territory_member.html';
 import { default as standard_settings } from './standard/settings.html';
 import { default as standard_shift } from './standard/shift.html';
+import { default as standard_shift_pattern } from './standard/shift_pattern.html';
+import { default as standard_shift_pattern_entry } from './standard/shift_pattern_entry.html';
 import { default as standard_shift_preferences } from './standard/shift_preferences.html';
 import { default as standard_shift_template } from './standard/shift_template.html';
 import { default as standard_shift_type } from './standard/shift_type.html';
@@ -469,6 +486,7 @@ import { default as standard_shipment } from './standard/shipment.html';
 import { default as standard_skill } from './standard/skill.html';
 import { default as standard_skill_entity } from './standard/skill_entity.html';
 import { default as standard_skill_requirement } from './standard/skill_requirement.html';
+import { default as standard_slider } from './standard/slider.html';
 import { default as standard_sms } from './standard/sms.html';
 import { default as standard_snippet } from './standard/snippet.html';
 import { default as standard_snippets } from './standard/snippets.html';
@@ -501,18 +519,23 @@ import { default as standard_timesheet } from './standard/timesheet.html';
 import { default as standard_timesheet_entry } from './standard/timesheet_entry.html';
 import { default as standard_timeslot } from './standard/timeslot.html';
 import { default as standard_today } from './standard/today.html';
+import { default as standard_toggle } from './standard/toggle.html';
 import { default as standard_topic } from './standard/topic.html';
 import { default as standard_topic2 } from './standard/topic2.html';
 import { default as standard_trailhead } from './standard/trailhead.html';
+import { default as standard_trailhead_alt } from './standard/trailhead_alt.html';
 import { default as standard_unmatched } from './standard/unmatched.html';
 import { default as standard_user } from './standard/user.html';
 import { default as standard_user_role } from './standard/user_role.html';
 import { default as standard_variable } from './standard/variable.html';
+import { default as standard_variation_attribute_setup } from './standard/variation_attribute_setup.html';
+import { default as standard_variation_products } from './standard/variation_products.html';
 import { default as standard_visit_templates } from './standard/visit_templates.html';
 import { default as standard_visits } from './standard/visits.html';
 import { default as standard_visualforce_page } from './standard/visualforce_page.html';
 import { default as standard_voice_call } from './standard/voice_call.html';
 import { default as standard_waits } from './standard/waits.html';
+import { default as standard_warranty_term } from './standard/warranty_term.html';
 import { default as standard_webcart } from './standard/webcart.html';
 import { default as standard_work_capacity_limit } from './standard/work_capacity_limit.html';
 import { default as standard_work_capacity_usage } from './standard/work_capacity_usage.html';
@@ -547,8 +570,11 @@ import { default as utility_apex_plugin } from './utility/apex_plugin.html';
 import { default as utility_approval } from './utility/approval.html';
 import { default as utility_apps } from './utility/apps.html';
 import { default as utility_archive } from './utility/archive.html';
+import { default as utility_arrow_bottom } from './utility/arrow_bottom.html';
+import { default as utility_arrow_top } from './utility/arrow_top.html';
 import { default as utility_arrowdown } from './utility/arrowdown.html';
 import { default as utility_arrowup } from './utility/arrowup.html';
+import { default as utility_asset_warranty } from './utility/asset_warranty.html';
 import { default as utility_assignment } from './utility/assignment.html';
 import { default as utility_attach } from './utility/attach.html';
 import { default as utility_automate } from './utility/automate.html';
@@ -579,6 +605,7 @@ import { default as utility_chart } from './utility/chart.html';
 import { default as utility_chat } from './utility/chat.html';
 import { default as utility_check } from './utility/check.html';
 import { default as utility_checkin } from './utility/checkin.html';
+import { default as utility_checkout } from './utility/checkout.html';
 import { default as utility_chevrondown } from './utility/chevrondown.html';
 import { default as utility_chevronleft } from './utility/chevronleft.html';
 import { default as utility_chevronright } from './utility/chevronright.html';
@@ -607,6 +634,7 @@ import { default as utility_currency_input } from './utility/currency_input.html
 import { default as utility_custom_apps } from './utility/custom_apps.html';
 import { default as utility_cut } from './utility/cut.html';
 import { default as utility_dash } from './utility/dash.html';
+import { default as utility_data_mapping } from './utility/data_mapping.html';
 import { default as utility_database } from './utility/database.html';
 import { default as utility_datadotcom } from './utility/datadotcom.html';
 import { default as utility_date_input } from './utility/date_input.html';
@@ -654,12 +682,15 @@ import { default as utility_feed } from './utility/feed.html';
 import { default as utility_file } from './utility/file.html';
 import { default as utility_filter } from './utility/filter.html';
 import { default as utility_filterList } from './utility/filterList.html';
+import { default as utility_filter_criteria } from './utility/filter_criteria.html';
+import { default as utility_filter_criteria_rule } from './utility/filter_criteria_rule.html';
 import { default as utility_flow } from './utility/flow.html';
 import { default as utility_flow_alt } from './utility/flow_alt.html';
 import { default as utility_food_and_drink } from './utility/food_and_drink.html';
 import { default as utility_formula } from './utility/formula.html';
 import { default as utility_forward } from './utility/forward.html';
 import { default as utility_forward_up } from './utility/forward_up.html';
+import { default as utility_freeze_column } from './utility/freeze_column.html';
 import { default as utility_frozen } from './utility/frozen.html';
 import { default as utility_fulfillment_order } from './utility/fulfillment_order.html';
 import { default as utility_full_width_view } from './utility/full_width_view.html';
@@ -686,10 +717,14 @@ import { default as utility_inspector_panel } from './utility/inspector_panel.ht
 import { default as utility_internal_share } from './utility/internal_share.html';
 import { default as utility_italic } from './utility/italic.html';
 import { default as utility_jump_to_bottom } from './utility/jump_to_bottom.html';
+import { default as utility_jump_to_left } from './utility/jump_to_left.html';
+import { default as utility_jump_to_right } from './utility/jump_to_right.html';
 import { default as utility_jump_to_top } from './utility/jump_to_top.html';
 import { default as utility_justify_text } from './utility/justify_text.html';
 import { default as utility_kanban } from './utility/kanban.html';
+import { default as utility_key } from './utility/key.html';
 import { default as utility_keyboard_dismiss } from './utility/keyboard_dismiss.html';
+import { default as utility_keypad } from './utility/keypad.html';
 import { default as utility_knowledge_base } from './utility/knowledge_base.html';
 import { default as utility_layers } from './utility/layers.html';
 import { default as utility_layout } from './utility/layout.html';
@@ -708,6 +743,7 @@ import { default as utility_list } from './utility/list.html';
 import { default as utility_listen } from './utility/listen.html';
 import { default as utility_live_message } from './utility/live_message.html';
 import { default as utility_location } from './utility/location.html';
+import { default as utility_location_permit } from './utility/location_permit.html';
 import { default as utility_lock } from './utility/lock.html';
 import { default as utility_locker_service_api_viewer } from './utility/locker_service_api_viewer.html';
 import { default as utility_locker_service_console } from './utility/locker_service_console.html';
@@ -741,6 +777,7 @@ import { default as utility_notification } from './utility/notification.html';
 import { default as utility_number_input } from './utility/number_input.html';
 import { default as utility_office365 } from './utility/office365.html';
 import { default as utility_offline } from './utility/offline.html';
+import { default as utility_offline_briefcase } from './utility/offline_briefcase.html';
 import { default as utility_offline_cached } from './utility/offline_cached.html';
 import { default as utility_omni_channel } from './utility/omni_channel.html';
 import { default as utility_open } from './utility/open.html';
@@ -758,6 +795,7 @@ import { default as utility_password } from './utility/password.html';
 import { default as utility_paste } from './utility/paste.html';
 import { default as utility_pause } from './utility/pause.html';
 import { default as utility_people } from './utility/people.html';
+import { default as utility_percent } from './utility/percent.html';
 import { default as utility_phone_landscape } from './utility/phone_landscape.html';
 import { default as utility_phone_portrait } from './utility/phone_portrait.html';
 import { default as utility_photo } from './utility/photo.html';
@@ -771,10 +809,16 @@ import { default as utility_podcast_webinar } from './utility/podcast_webinar.ht
 import { default as utility_pop_in } from './utility/pop_in.html';
 import { default as utility_power } from './utility/power.html';
 import { default as utility_preview } from './utility/preview.html';
+import { default as utility_price_book_entries } from './utility/price_book_entries.html';
+import { default as utility_price_books } from './utility/price_books.html';
+import { default as utility_pricing_workspace } from './utility/pricing_workspace.html';
 import { default as utility_print } from './utility/print.html';
 import { default as utility_priority } from './utility/priority.html';
 import { default as utility_privately_shared } from './utility/privately_shared.html';
 import { default as utility_process } from './utility/process.html';
+import { default as utility_product_warranty_term } from './utility/product_warranty_term.html';
+import { default as utility_product_workspace } from './utility/product_workspace.html';
+import { default as utility_products } from './utility/products.html';
 import { default as utility_prompt } from './utility/prompt.html';
 import { default as utility_prompt_edit } from './utility/prompt_edit.html';
 import { default as utility_push } from './utility/push.html';
@@ -841,6 +885,8 @@ import { default as utility_share_file } from './utility/share_file.html';
 import { default as utility_share_mobile } from './utility/share_mobile.html';
 import { default as utility_share_post } from './utility/share_post.html';
 import { default as utility_shield } from './utility/shield.html';
+import { default as utility_shift_pattern } from './utility/shift_pattern.html';
+import { default as utility_shift_pattern_entry } from './utility/shift_pattern_entry.html';
 import { default as utility_shift_ui } from './utility/shift_ui.html';
 import { default as utility_shopping_bag } from './utility/shopping_bag.html';
 import { default as utility_shortcuts } from './utility/shortcuts.html';
@@ -902,6 +948,7 @@ import { default as utility_touch_action } from './utility/touch_action.html';
 import { default as utility_tracker } from './utility/tracker.html';
 import { default as utility_trail } from './utility/trail.html';
 import { default as utility_trailhead } from './utility/trailhead.html';
+import { default as utility_trailhead_alt } from './utility/trailhead_alt.html';
 import { default as utility_travel_and_places } from './utility/travel_and_places.html';
 import { default as utility_trending } from './utility/trending.html';
 import { default as utility_turn_off_notifications } from './utility/turn_off_notifications.html';
@@ -919,6 +966,8 @@ import { default as utility_upload } from './utility/upload.html';
 import { default as utility_user } from './utility/user.html';
 import { default as utility_user_role } from './utility/user_role.html';
 import { default as utility_variable } from './utility/variable.html';
+import { default as utility_variation_attribute_setup } from './utility/variation_attribute_setup.html';
+import { default as utility_variation_products } from './utility/variation_products.html';
 import { default as utility_video } from './utility/video.html';
 import { default as utility_voicemail_drop } from './utility/voicemail_drop.html';
 import { default as utility_volume_high } from './utility/volume_high.html';
@@ -926,6 +975,7 @@ import { default as utility_volume_low } from './utility/volume_low.html';
 import { default as utility_volume_off } from './utility/volume_off.html';
 import { default as utility_waits } from './utility/waits.html';
 import { default as utility_warning } from './utility/warning.html';
+import { default as utility_warranty_term } from './utility/warranty_term.html';
 import { default as utility_watchlist } from './utility/watchlist.html';
 import { default as utility_weeklyview } from './utility/weeklyview.html';
 import { default as utility_wifi } from './utility/wifi.html';
@@ -1298,6 +1348,7 @@ export default {
     standard_asset_object,
     standard_asset_relationship,
     standard_asset_state_period,
+    standard_asset_warranty,
     standard_assigned_resource,
     standard_assignment,
     standard_avatar,
@@ -1333,6 +1384,7 @@ export default {
     standard_channel_program_members,
     standard_channel_programs,
     standard_chart,
+    standard_checkout,
     standard_choice,
     standard_client,
     standard_cms,
@@ -1357,6 +1409,7 @@ export default {
     standard_dashboard,
     standard_dashboard_ea,
     standard_data_integration_hub,
+    standard_data_mapping,
     standard_data_model,
     standard_data_streams,
     standard_datadotcom,
@@ -1398,7 +1451,9 @@ export default {
     standard_feed,
     standard_feedback,
     standard_file,
+    standard_filiter_criteria_rule,
     standard_filter,
+    standard_filter_criteria,
     standard_first_non_empty,
     standard_flow,
     standard_folder,
@@ -1438,12 +1493,14 @@ export default {
     standard_live_chat,
     standard_live_chat_visitor,
     standard_location,
+    standard_location_permit,
     standard_log_a_call,
     standard_logging,
     standard_loop,
     standard_macros,
     standard_maintenance_asset,
     standard_maintenance_plan,
+    standard_maintenance_work_rule,
     standard_marketing_actions,
     standard_merge,
     standard_messaging_conversation,
@@ -1483,8 +1540,12 @@ export default {
     standard_portal_roles,
     standard_portal_roles_and_subordinates,
     standard_post,
+    standard_price_book_entries,
+    standard_price_books,
     standard_pricebook,
+    standard_pricing_workspace,
     standard_process,
+    standard_process_exception,
     standard_product,
     standard_product_consumed,
     standard_product_item,
@@ -1493,6 +1554,9 @@ export default {
     standard_product_request_line_item,
     standard_product_required,
     standard_product_transfer,
+    standard_product_warranty_term,
+    standard_product_workspace,
+    standard_products,
     standard_proposition,
     standard_question_best,
     standard_question_feed,
@@ -1534,6 +1598,7 @@ export default {
     standard_scheduling_policy,
     standard_screen,
     standard_search,
+    standard_section,
     standard_segments,
     standard_service_appointment,
     standard_service_appointment_capacity_usage,
@@ -1547,6 +1612,8 @@ export default {
     standard_service_territory_member,
     standard_settings,
     standard_shift,
+    standard_shift_pattern,
+    standard_shift_pattern_entry,
     standard_shift_preferences,
     standard_shift_template,
     standard_shift_type,
@@ -1554,6 +1621,7 @@ export default {
     standard_skill,
     standard_skill_entity,
     standard_skill_requirement,
+    standard_slider,
     standard_sms,
     standard_snippet,
     standard_snippets,
@@ -1586,18 +1654,23 @@ export default {
     standard_timesheet_entry,
     standard_timeslot,
     standard_today,
+    standard_toggle,
     standard_topic,
     standard_topic2,
     standard_trailhead,
+    standard_trailhead_alt,
     standard_unmatched,
     standard_user,
     standard_user_role,
     standard_variable,
+    standard_variation_attribute_setup,
+    standard_variation_products,
     standard_visit_templates,
     standard_visits,
     standard_visualforce_page,
     standard_voice_call,
     standard_waits,
+    standard_warranty_term,
     standard_webcart,
     standard_work_capacity_limit,
     standard_work_capacity_usage,
@@ -1632,8 +1705,11 @@ export default {
     utility_approval,
     utility_apps,
     utility_archive,
+    utility_arrow_bottom,
+    utility_arrow_top,
     utility_arrowdown,
     utility_arrowup,
+    utility_asset_warranty,
     utility_assignment,
     utility_attach,
     utility_automate,
@@ -1664,6 +1740,7 @@ export default {
     utility_chat,
     utility_check,
     utility_checkin,
+    utility_checkout,
     utility_chevrondown,
     utility_chevronleft,
     utility_chevronright,
@@ -1692,6 +1769,7 @@ export default {
     utility_custom_apps,
     utility_cut,
     utility_dash,
+    utility_data_mapping,
     utility_database,
     utility_datadotcom,
     utility_date_input,
@@ -1739,12 +1817,15 @@ export default {
     utility_file,
     utility_filter,
     utility_filterList,
+    utility_filter_criteria,
+    utility_filter_criteria_rule,
     utility_flow,
     utility_flow_alt,
     utility_food_and_drink,
     utility_formula,
     utility_forward,
     utility_forward_up,
+    utility_freeze_column,
     utility_frozen,
     utility_fulfillment_order,
     utility_full_width_view,
@@ -1771,10 +1852,14 @@ export default {
     utility_internal_share,
     utility_italic,
     utility_jump_to_bottom,
+    utility_jump_to_left,
+    utility_jump_to_right,
     utility_jump_to_top,
     utility_justify_text,
     utility_kanban,
+    utility_key,
     utility_keyboard_dismiss,
+    utility_keypad,
     utility_knowledge_base,
     utility_layers,
     utility_layout,
@@ -1793,6 +1878,7 @@ export default {
     utility_listen,
     utility_live_message,
     utility_location,
+    utility_location_permit,
     utility_lock,
     utility_locker_service_api_viewer,
     utility_locker_service_console,
@@ -1826,6 +1912,7 @@ export default {
     utility_number_input,
     utility_office365,
     utility_offline,
+    utility_offline_briefcase,
     utility_offline_cached,
     utility_omni_channel,
     utility_open,
@@ -1843,6 +1930,7 @@ export default {
     utility_paste,
     utility_pause,
     utility_people,
+    utility_percent,
     utility_phone_landscape,
     utility_phone_portrait,
     utility_photo,
@@ -1856,10 +1944,16 @@ export default {
     utility_pop_in,
     utility_power,
     utility_preview,
+    utility_price_book_entries,
+    utility_price_books,
+    utility_pricing_workspace,
     utility_print,
     utility_priority,
     utility_privately_shared,
     utility_process,
+    utility_product_warranty_term,
+    utility_product_workspace,
+    utility_products,
     utility_prompt,
     utility_prompt_edit,
     utility_push,
@@ -1926,6 +2020,8 @@ export default {
     utility_share_mobile,
     utility_share_post,
     utility_shield,
+    utility_shift_pattern,
+    utility_shift_pattern_entry,
     utility_shift_ui,
     utility_shopping_bag,
     utility_shortcuts,
@@ -1987,6 +2083,7 @@ export default {
     utility_tracker,
     utility_trail,
     utility_trailhead,
+    utility_trailhead_alt,
     utility_travel_and_places,
     utility_trending,
     utility_turn_off_notifications,
@@ -2004,6 +2101,8 @@ export default {
     utility_user,
     utility_user_role,
     utility_variable,
+    utility_variation_attribute_setup,
+    utility_variation_products,
     utility_video,
     utility_voicemail_drop,
     utility_volume_high,
@@ -2011,6 +2110,7 @@ export default {
     utility_volume_off,
     utility_waits,
     utility_warning,
+    utility_warranty_term,
     utility_watchlist,
     utility_weeklyview,
     utility_wifi,

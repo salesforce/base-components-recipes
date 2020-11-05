@@ -12,7 +12,7 @@ const MINUTE_MILLISECONDS = 1000 * 60;
 
 export function relativeFormat() {
     return {
-        format: value => {
+        format: (value) => {
             const now = Date.now();
             const timestamp = Number(value);
 

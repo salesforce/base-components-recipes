@@ -725,7 +725,7 @@
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>
-    <label>เลือกตัวเลือกหรือลบเงื่อนไขการค้นหา</label>
+    <label>เลือกตัวเลือกจากรายการให้เลือก หรือนำคำค้นหาออก</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
@@ -767,6 +767,10 @@
   <customLabels>
     <label>การค้นหาเริ่มต้นสำหรับ "{0}"</label>
     <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>เรกคอร์ดที่ไม่รู้จัก</label>
+    <name>lightning_LightningLookup_unknownRecord</name>
   </customLabels>
   <customLabels>
     <label>ไม่มี</label>

@@ -1,7 +1,7 @@
 {
     "orgName": "Base Components Recipes",
     "edition": "Developer",
-    "hasSampleData": false,
+    "hasSampleData": true,
     "settings": {
         "lightningExperienceSettings": {
             "enableS1DesktopEnabled": true

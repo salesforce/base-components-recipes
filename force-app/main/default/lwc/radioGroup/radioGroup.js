@@ -48,7 +48,7 @@ export default class cRadioGroup extends LightningElement {
 
     synchronizeA11y() {
         const inputs = this.template.querySelectorAll('input');
-        Array.prototype.slice.call(inputs).forEach(input => {
+        Array.prototype.slice.call(inputs).forEach((input) => {
             synchronizeAttrs(input, {
                 'aria-describedby': this.computedUniqueHelpElementId
             });
@@ -153,7 +153,7 @@ export default class cRadioGroup extends LightningElement {
 
     @api
     reportValidity() {
-        return this._constraint.reportValidity(message => {
+        return this._constraint.reportValidity((message) => {
             this._helpMessage = message;
         });
     }
@@ -194,8 +194,8 @@ export default class cRadioGroup extends LightningElement {
         this.interactingState.interacting();
 
         const value = Array.from(this.radioButtonElements)
-            .filter(radioButton => radioButton.checked)
-            .map(radioButton => radioButton.value)
+            .filter((radioButton) => radioButton.checked)
+            .map((radioButton) => radioButton.value)
             .toString();
 
         this._value = value;

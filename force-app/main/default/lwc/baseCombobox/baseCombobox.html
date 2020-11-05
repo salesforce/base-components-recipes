@@ -22,16 +22,18 @@
                     class="slds-icon_container slds-combobox__input-entity-icon"
                 ></c-icon>
             </template>
-            <!--  'required' on the input may present hints from the browser when within a form that doesn't have novalidate set,
-              specifically it may be problematic for cases when a selection has already been made say via pills and then the validation hint
-              is no longer correct/relevant -->
+            <!--
+                'required' on the input may present hints from the browser when within a form that doesn't have novalidate set,
+                specifically it may be problematic for cases when a selection has already been made say via pills and then the validation hint
+                is no longer correct/relevant
+            -->
             <input
                 id="input"
                 class={computedInputClass}
                 type="text"
                 role="textbox"
                 required={required}
-                autocomplete="off"
+                autocomplete={autocomplete}
                 value={computedInputValue}
                 name={name}
                 placeholder={computedPlaceholder}
@@ -115,6 +117,7 @@
                             item={item}
                             id={item.id}
                             data-item-id={item.id}
+                            aria-checked={item.checked}
                             key={item.value}
                             data-value={item.value}
                             onmouseenter={handleOptionMouseEnter}
@@ -160,6 +163,7 @@
                                         item={groupItem}
                                         id={groupItem.id}
                                         data-item-id={groupItem.id}
+                                        aria-checked={groupItem.checked}
                                         data-value={groupItem.value}
                                         class="slds-media slds-listbox__option slds-media_center"
                                         onmouseenter={handleOptionMouseEnter}

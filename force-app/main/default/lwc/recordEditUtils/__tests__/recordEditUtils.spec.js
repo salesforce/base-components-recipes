@@ -12,7 +12,7 @@ import {
     getFormValues,
     validateForm
 } from 'c/recordEditUtils';
-import { RESPONSES } from 'force/lds';
+import { RESPONSES } from 'force/ldsAdaptersUiapi';
 
 describe('page level errors', () => {
     it('handles body parse error', () => {
@@ -153,7 +153,7 @@ describe('lds update record', () => {
 });
 
 describe('validateForm', () => {
-    const getMockInputField = isValid => {
+    const getMockInputField = (isValid) => {
         return {
             tagName: 'LIGHTNING-INPUT-FIELD',
             reportValidity() {
@@ -280,7 +280,7 @@ describe('getFormValues', () => {
         });
     });
 
-    it('does not return values for readonly fields', () => {
+    it('does not return values for readOnly fields', () => {
         const fields = [
             {
                 fieldName: 'field1',
@@ -295,7 +295,7 @@ describe('getFormValues', () => {
             {
                 fieldName: 'field3',
                 value: 'Auf wiedersehen',
-                readonly: true
+                readOnly: true
             }
         ];
 

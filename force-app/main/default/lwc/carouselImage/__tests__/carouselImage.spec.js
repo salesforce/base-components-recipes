@@ -7,9 +7,9 @@
 
 import { createElement } from 'lwc';
 import Element from 'c/carouselImage';
-import { axe, toHaveNoViolations } from 'jest-axe';
+import { registerSa11yMatcher } from '@sa11y/jest';
 
-const createCarouselImage = attributes => {
+const createCarouselImage = (attributes) => {
     const element = createElement('c-carousel-image', { is: Element });
 
     Object.assign(element, attributes);
@@ -27,9 +27,9 @@ const DEFAULT_ATTRIBUTES = {
         'https://latest-212.lightningdesignsystem.com/assets/images/carousel/carousel-01.jpg'
 };
 
-expect.extend(toHaveNoViolations);
-
 describe('c-carousel-image', () => {
+    registerSa11yMatcher();
+
     it('default', () => {
         const element = createCarouselImage(DEFAULT_ATTRIBUTES);
 
@@ -38,16 +38,9 @@ describe('c-carousel-image', () => {
         });
     });
 
-    // eslint-disable-next-line @lwc/lwc/no-async-await
-    it('runs accesibility testing on default template', async () => {
-        expect.extend(toHaveNoViolations);
-
+    it('runs accessibility testing on default template', () => {
         const element = createCarouselImage(DEFAULT_ATTRIBUTES);
 
-        // eslint-disable-next-line @lwc/lwc/no-async-await
-        return Promise.resolve().then(async () => {
-            // eslint-disable-next-line @lwc/lwc/no-inner-html
-            expect(await axe(element.outerHTML)).toHaveNoViolations();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });

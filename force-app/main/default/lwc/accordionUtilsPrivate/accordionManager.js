@@ -22,7 +22,7 @@ function createAccordionSectionObserver(sectionId, eventEmitter) {
         notifySectionSelect: () => {
             eventEmitter.emit(ACCORDION_SECTION_SELECT, sectionId);
         },
-        notifySectionKeyNav: keyCode => {
+        notifySectionKeyNav: (keyCode) => {
             eventEmitter.emit(ACCORDION_SECTION_KEYNAV, sectionId, keyCode);
         }
     };
@@ -140,19 +140,19 @@ export class AccordionManager {
         this.privateEventEmitter = new EventEmitter();
 
         this.privateEventEmitter
-            .on(ACCORDION_SECTION_DEREGISTER, sectionId => {
+            .on(ACCORDION_SECTION_DEREGISTER, (sectionId) => {
                 this._deregisterSection(sectionId);
             })
             .on(ACCORDION_SECTION_KEYNAV, (sectionId, keyCode) => {
                 this._handleSectionKeyNav(sectionId, keyCode);
             })
-            .on(ACCORDION_SECTION_SELECT, sectionId => {
+            .on(ACCORDION_SECTION_SELECT, (sectionId) => {
                 this._handleSectionSelect(sectionId);
             });
     }
 
     _notifyOpenSectionChange() {
-        this.privateOpenSectionObservers.forEach(observerCallback =>
+        this.privateOpenSectionObservers.forEach((observerCallback) =>
             observerCallback()
         );
     }

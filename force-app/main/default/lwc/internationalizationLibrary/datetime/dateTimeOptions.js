@@ -159,13 +159,13 @@ function DateTimeOptions(options) {
     this.options = options || {};
 }
 
-DateTimeOptions.prototype.hasFormattingOptions = function() {
-    return FORMATTING_OPTS.some(opt => {
+DateTimeOptions.prototype.hasFormattingOptions = function () {
+    return FORMATTING_OPTS.some((opt) => {
         return this.options[opt] !== undefined;
     });
 };
 
-DateTimeOptions.prototype.getSkeleton = function() {
+DateTimeOptions.prototype.getSkeleton = function () {
     const format = [];
     getWeekDayPart(format, this.options);
     getMonthPart(format, this.options);
@@ -174,7 +174,7 @@ DateTimeOptions.prototype.getSkeleton = function() {
     getTimePart(format, this.options);
     getTZPart(format, this.options);
     let formatStr = format.join('');
-    SEPARATORS.forEach(element => {
+    SEPARATORS.forEach((element) => {
         if (formatStr.lastIndexOf(element) === formatStr.length - 1) {
             formatStr = formatStr.slice(0, -1);
         }

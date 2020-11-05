@@ -111,7 +111,7 @@ export default class cVerticalNavigation extends LightningElement {
         this.dispatchEvent(beforeselectevent);
 
         if (!beforeselectevent.defaultPrevented) {
-            this.verticalNavigationItems.forEach(navigationItem => {
+            this.verticalNavigationItems.forEach((navigationItem) => {
                 if (navigationItem.name === itemName) {
                     navigationItem.callbacks.select();
                 } else {

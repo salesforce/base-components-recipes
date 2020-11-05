@@ -22,6 +22,8 @@ export default class MockRecordEditHolder extends LightningElement {
 
     @track _density;
 
+    @track _layoutType;
+
     set density(val) {
         this._density = val;
     }
@@ -76,6 +78,14 @@ export default class MockRecordEditHolder extends LightningElement {
 
     @api get objectApiName() {
         return this._objectApiName;
+    }
+
+    set layoutType(val) {
+        this._layoutType = val;
+    }
+
+    @api get layoutType() {
+        return this._layoutType;
     }
 
     handleLoad(e) {

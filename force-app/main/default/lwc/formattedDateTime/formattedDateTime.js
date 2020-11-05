@@ -8,7 +8,7 @@
 import { LightningElement, api, track } from 'lwc';
 import { dateTimeFormat } from 'c/internationalizationLibrary';
 import { isValidISODateTimeString } from 'c/iso8601Utils';
-import { normalizeBoolean } from 'c/utilsPrivate';
+import { isIE11, normalizeBoolean } from 'c/utilsPrivate';
 
 export default class cFormattedDateTime extends LightningElement {
     @api value;
@@ -97,6 +97,11 @@ export default class cFormattedDateTime extends LightningElement {
 
         if (this._hour12Set) {
             options.hour12 = this.hour12;
+        }
+
+        if (options.hour12 === false && !isIE11) {
+            options.hourCycle = 'h23';
+            delete options.hour12;
         }
         return options;
     }

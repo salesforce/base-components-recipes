@@ -201,7 +201,7 @@ export default class cDualListbox extends LightningElement {
 
     @api
     reportValidity() {
-        return this._constraint.reportValidity(message => {
+        return this._constraint.reportValidity((message) => {
             this.errorMessage = message;
         });
     }
@@ -289,7 +289,7 @@ export default class cDualListbox extends LightningElement {
             const required = this.requiredOptions;
             const values = this.value;
             sourceListOptions = this.options.filter(
-                option =>
+                (option) =>
                     values.indexOf(option.value) === -1 &&
                     required.indexOf(option.value) === -1
             );
@@ -305,23 +305,23 @@ export default class cDualListbox extends LightningElement {
         const selectedListOptions = [];
         if (this.options) {
             const optionsMap = {};
-            this.options.forEach(option => {
+            this.options.forEach((option) => {
                 optionsMap[option.value] = { ...option };
             });
-            this.value.forEach(optionValue => {
+            this.value.forEach((optionValue) => {
                 const option = optionsMap[optionValue];
                 if (option) {
                     option.isSelected = true;
                 }
             });
-            this.requiredOptions.forEach(optionValue => {
+            this.requiredOptions.forEach((optionValue) => {
                 const option = optionsMap[optionValue];
                 if (option) {
                     option.isLocked = true;
                 }
             });
 
-            this.value.forEach(optionValue => {
+            this.value.forEach((optionValue) => {
                 const option = optionsMap[optionValue];
                 if (option) {
                     selectedListOptions.push(option);
@@ -337,14 +337,14 @@ export default class cDualListbox extends LightningElement {
 
     computeListOptions(options, focusableOptionValue) {
         if (options.length > 0) {
-            const focusableOption = options.find(option => {
+            const focusableOption = options.find((option) => {
                 return option.value === focusableOptionValue;
             });
 
             const focusableValue = focusableOption
                 ? focusableOption.value
                 : options[0].value;
-            return options.map(option => {
+            return options.map((option) => {
                 return this.computeOptionProperties(option, focusableValue);
             });
         }
@@ -538,14 +538,14 @@ export default class cDualListbox extends LightningElement {
             return;
         }
         const toMove = this.highlightedOptions;
-        const values = this.computedSelectedList.map(option => option.value);
+        const values = this.computedSelectedList.map((option) => option.value);
         const required = this.requiredOptions;
         let newValues = [];
         if (addToSelect) {
             newValues = values.concat(toMove);
         } else {
             newValues = values.filter(
-                value =>
+                (value) =>
                     toMove.indexOf(value) === -1 || required.indexOf(value) > -1
             );
         }
@@ -583,9 +583,9 @@ export default class cDualListbox extends LightningElement {
 
     changeOrderOfOptionsInList(moveUp) {
         const elementList = this.getElementsOfList(this.selectedList);
-        const values = this.computedSelectedList.map(option => option.value);
+        const values = this.computedSelectedList.map((option) => option.value);
         const toMove = values.filter(
-            option => this.highlightedOptions.indexOf(option) > -1
+            (option) => this.highlightedOptions.indexOf(option) > -1
         );
 
         const validSelection =
@@ -672,9 +672,9 @@ export default class cDualListbox extends LightningElement {
         }
 
         const numOfSelectedValues = this._selectedValues.length;
-        const allValues = this.options.map(option => option.value);
+        const allValues = this.options.map((option) => option.value);
 
-        const requiredValues = this._requiredOptions.filter(option =>
+        const requiredValues = this._requiredOptions.filter((option) =>
             allValues.includes(option)
         );
 

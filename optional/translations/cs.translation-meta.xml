@@ -725,7 +725,7 @@
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>
-    <label>Vyberte možnost nebo odstraňte hledaný výraz.</label>
+    <label>Vyberte možnost ze seznamu nebo hledaný výraz odstraňte.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
@@ -767,6 +767,10 @@
   <customLabels>
     <label>Počáteční výsledky pro "{0}"</label>
     <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>Neznámý záznam</label>
+    <name>lightning_LightningLookup_unknownRecord</name>
   </customLabels>
   <customLabels>
     <label>Žádný</label>

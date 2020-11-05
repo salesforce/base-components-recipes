@@ -21,7 +21,7 @@ function normalizeSectionNames(sectionName) {
 function getSectionsToOpenMap(sectionList, namesToOpen) {
     const idsToOpenMap = {};
 
-    namesToOpen.forEach(sectionName => {
+    namesToOpen.forEach((sectionName) => {
         const section = sectionList.getSectionByName(sectionName);
 
         if (section) {
@@ -52,7 +52,7 @@ export class MultipleOpenSectionStrategy {
         const sections = this.privateSectionList.sections;
         let sectionsChanged = false;
 
-        sections.forEach(section => {
+        sections.forEach((section) => {
             if (sectionsToOpenMap[section.id]) {
                 sectionsChanged = sectionsChanged || !section.isOpen();
                 section.open();

@@ -56,7 +56,7 @@ describe('parseToFormattedLinkifiedParts properly returns parts', () => {
         { isText: true, type: 'isText', value: ' and thank you ' }
     ];
 
-    const text = testParts.map(v => v.value || '\n').join('');
+    const text = testParts.map((v) => v.value || '\n').join('');
     const parts = parseToFormattedLinkifiedParts(text);
 
     it('generates right total amount of parts', () => {
@@ -64,31 +64,31 @@ describe('parseToFormattedLinkifiedParts properly returns parts', () => {
     });
 
     it('generates url node from a URL', () => {
-        expect(parts.filter(p => isUrl(p))).toHaveLength(1);
+        expect(parts.filter((p) => isUrl(p))).toHaveLength(1);
     });
 
     it('generates email node from a URL', () => {
-        expect(parts.filter(p => isEmail(p))).toHaveLength(1);
+        expect(parts.filter((p) => isEmail(p))).toHaveLength(1);
     });
 
     it('generates newline node from a URL', () => {
-        expect(parts.filter(p => p.isNewline)).toHaveLength(1);
+        expect(parts.filter((p) => p.isNewline)).toHaveLength(1);
     });
 
     it('parses URL', () => {
-        expect(parts.filter(p => isUrl(p))[0].value).toBe(url);
+        expect(parts.filter((p) => isUrl(p))[0].value).toBe(url);
     });
 
     it('adds https', () => {
-        expect(parts.filter(p => isUrl(p))[0].href).toBe(`http://${url}`);
+        expect(parts.filter((p) => isUrl(p))[0].href).toBe(`http://${url}`);
     });
 
     it('adds mailto:', () => {
-        expect(parts.filter(p => isEmail(p))[0].href).toBe(`mailto:${email}`);
+        expect(parts.filter((p) => isEmail(p))[0].href).toBe(`mailto:${email}`);
     });
 
     it('parses email', () => {
-        expect(parts.filter(p => isEmail(p))[0].value).toBe(email);
+        expect(parts.filter((p) => isEmail(p))[0].value).toBe(email);
     });
 });
 
@@ -110,7 +110,7 @@ describe('parseToFormattedLinkifiedParts with ignoreNewLines=true', () => {
         { isText: true, type: 'isText', value: ' and thank you ' }
     ];
 
-    const text = testParts.map(v => v.value || '\n').join('');
+    const text = testParts.map((v) => v.value || '\n').join('');
     const parts = parseToFormattedLinkifiedParts(text, true);
 
     it('should generates right total amount of parts', () => {
@@ -118,31 +118,31 @@ describe('parseToFormattedLinkifiedParts with ignoreNewLines=true', () => {
     });
 
     it('should generate url node when there is url in the text', () => {
-        expect(parts.filter(p => isUrl(p))).toHaveLength(1);
+        expect(parts.filter((p) => isUrl(p))).toHaveLength(1);
     });
 
     it('should generate email node when there is email in the text', () => {
-        expect(parts.filter(p => isEmail(p))).toHaveLength(1);
+        expect(parts.filter((p) => isEmail(p))).toHaveLength(1);
     });
 
     it('should not generate new line part even if there is new line in the text', () => {
-        expect(parts.filter(p => p.isNewline)).toHaveLength(0);
+        expect(parts.filter((p) => p.isNewline)).toHaveLength(0);
     });
 
     it('should parse URL correctly when there is url in the text', () => {
-        expect(parts.filter(p => isUrl(p))[0].value).toBe(url);
+        expect(parts.filter((p) => isUrl(p))[0].value).toBe(url);
     });
 
     it('should add https for urls with https', () => {
-        expect(parts.filter(p => isUrl(p))[0].href).toBe(`http://${url}`);
+        expect(parts.filter((p) => isUrl(p))[0].href).toBe(`http://${url}`);
     });
 
     it('should add mailto: for email', () => {
-        expect(parts.filter(p => isEmail(p))[0].href).toBe(`mailto:${email}`);
+        expect(parts.filter((p) => isEmail(p))[0].href).toBe(`mailto:${email}`);
     });
 
     it('should parse email correctly when there is email in the text', () => {
-        expect(parts.filter(p => isEmail(p))[0].value).toBe(email);
+        expect(parts.filter((p) => isEmail(p))[0].value).toBe(email);
     });
 });
 
@@ -153,15 +153,15 @@ describe('parseToFormattedLinkifiedParts properly parses urls', () => {
     );
 
     it('parses right amount of urls', () => {
-        expect(parts.filter(p => isUrl(p))).toHaveLength(urls.length);
+        expect(parts.filter((p) => isUrl(p))).toHaveLength(urls.length);
     });
 
     it('parses right amount of emails', () => {
-        expect(parts.filter(p => isEmail(p))).toHaveLength(0);
+        expect(parts.filter((p) => isEmail(p))).toHaveLength(0);
     });
 
     it('parses right amount of isTexts', () => {
-        expect(parts.filter(p => p.isText)).toHaveLength(urls.length);
+        expect(parts.filter((p) => p.isText)).toHaveLength(urls.length);
     });
 });
 
@@ -172,15 +172,15 @@ describe('parseToFormattedLinkifiedParts properly parses emails', () => {
     );
 
     it('parses right amount of emails', () => {
-        expect(parts.filter(p => isUrl(p))).toHaveLength(0);
+        expect(parts.filter((p) => isUrl(p))).toHaveLength(0);
     });
 
     it('parses right amount of urls', () => {
-        expect(parts.filter(p => isEmail(p))).toHaveLength(urls.length);
+        expect(parts.filter((p) => isEmail(p))).toHaveLength(urls.length);
     });
 
     it('parses right amount of text parts', () => {
-        expect(parts.filter(p => p.isText)).toHaveLength(urls.length);
+        expect(parts.filter((p) => p.isText)).toHaveLength(urls.length);
     });
 });
 
@@ -194,10 +194,10 @@ describe('parseToFormattedParts properly parses spaces', () => {
     });
 
     it('parses right amount of text parts', () => {
-        expect(parts.filter(p => p.isText)).toHaveLength(2);
+        expect(parts.filter((p) => p.isText)).toHaveLength(2);
     });
 
     it('parses right amount of new lines', () => {
-        expect(parts.filter(p => p.isNewline)).toHaveLength(1);
+        expect(parts.filter((p) => p.isNewline)).toHaveLength(1);
     });
 });

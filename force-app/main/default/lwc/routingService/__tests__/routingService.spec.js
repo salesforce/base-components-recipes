@@ -17,7 +17,7 @@ describe('routing-service', () => {
         };
 
         it('dispatches a bubbleable, cancellable custom event', () => {
-            const dispatchEvent = jest.fn(event => {
+            const dispatchEvent = jest.fn((event) => {
                 expect(event.bubbles).toBe(true);
                 expect(event.cancelable).toBe(true);
             });
@@ -26,7 +26,7 @@ describe('routing-service', () => {
         });
 
         it('passes state to event', () => {
-            const dispatchEvent = event => {
+            const dispatchEvent = (event) => {
                 expect(event.detail.stateRef).toBe(stateRef);
             };
             getLinkInfo({ dispatchEvent }, stateRef);
@@ -37,10 +37,10 @@ describe('routing-service', () => {
                 url: 'imurl.com'
             };
 
-            const resolveFn = jest.fn(linkInfoFromResolve => {
+            const resolveFn = jest.fn((linkInfoFromResolve) => {
                 expect(linkInfoFromResolve).toBe(linkInfo);
             });
-            const dispatchEvent = event => {
+            const dispatchEvent = (event) => {
                 event.detail.callback(null, linkInfo);
                 expect(resolveFn).toHaveBeenCalled();
             };
@@ -52,10 +52,10 @@ describe('routing-service', () => {
                 msg: 'oh no'
             };
 
-            const rejectFn = jest.fn(errorObjFromReject => {
+            const rejectFn = jest.fn((errorObjFromReject) => {
                 expect(errorObjFromReject).toBe(errorObj);
             });
-            const dispatchEvent = event => {
+            const dispatchEvent = (event) => {
                 event.detail.callback(errorObj, null);
                 expect(rejectFn).toHaveBeenCalled();
             };
@@ -66,8 +66,19 @@ describe('routing-service', () => {
     describe('updateRawLinkInfo', () => {
         const url = 'imurl.com';
 
-        it('dispatches a bubbleable, cancellable custom event', () => {
-            const dispatchEvent = jest.fn(event => {
+        const target = '_self';
+
+        it('dispatches a bubbleable, cancellable custom event when target=_self', () => {
+            const dispatchEvent = jest.fn((event) => {
+                expect(event.bubbles).toBe(true);
+                expect(event.cancelable).toBe(true);
+            });
+            updateRawLinkInfo({ dispatchEvent }, { url, target });
+            expect(dispatchEvent).toHaveBeenCalled();
+        });
+
+        it('dispatches a bubbleable, cancellable custom event when no target is specified (implied _self)', () => {
+            const dispatchEvent = jest.fn((event) => {
                 expect(event.bubbles).toBe(true);
                 expect(event.cancelable).toBe(true);
             });
@@ -75,12 +86,28 @@ describe('routing-service', () => {
             expect(dispatchEvent).toHaveBeenCalled();
         });
 
+        it('returns a no-op dispatcher when other targets are used', async () => {
+            const otherTargets = ['_blank', 'someFrame', '_top', '_parent'];
+            const dispatchEvent = jest.fn();
+            for (let i = 0; i < otherTargets.length; i++) {
+                await updateRawLinkInfo(
+                    { dispatchEvent },
+                    { url, target: otherTargets[i] }
+                ).then((linkInfo) => {
+                    expect(linkInfo.dispatcher).toBeDefined();
+                    expect(typeof linkInfo.dispatcher).toBe('function');
+                    linkInfo.dispatcher();
+                });
+                expect(dispatchEvent).not.toHaveBeenCalled();
+            }
+        });
+
         it('passes the correct state to event', () => {
-            const dispatchEvent = event => {
+            const dispatchEvent = (event) => {
                 expect(event.detail.stateRef.stateType).toBe(urlTypes.standard);
                 expect(event.detail.stateRef.attributes.url).toBe(url);
             };
-            updateRawLinkInfo({ dispatchEvent }, { url });
+            updateRawLinkInfo({ dispatchEvent }, { url, target });
         });
     });
 });

@@ -12,7 +12,7 @@ import { verifyClassSet } from 'lightning/testUtils';
 function getInputElements(element) {
     return Array.from(
         element.shadowRoot.querySelectorAll('lightning-input')
-    ).map(input => input.shadowRoot.querySelector('input'));
+    ).map((input) => input.shadowRoot.querySelector('input'));
 }
 
 const createComponent = (config = {}) => {

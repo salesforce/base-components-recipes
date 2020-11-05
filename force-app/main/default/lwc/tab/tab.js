@@ -20,7 +20,7 @@ export default class cTab extends LightningElement {
                 bubbles: true,
                 composed: true,
                 detail: {
-                    setDeRegistrationCallback: deRegistrationCallback => {
+                    setDeRegistrationCallback: (deRegistrationCallback) => {
                         this._deRegistrationCallback = deRegistrationCallback;
                     }
                 }

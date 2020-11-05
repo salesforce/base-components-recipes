@@ -725,7 +725,7 @@
     <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
   </customLabels>
   <customLabels>
-    <label>Chọn một tùy chọn hoặc xóa cụm từ tìm kiếm.</label>
+    <label>Chọn một tùy chọn trong danh sách chọn hoặc xóa thuật ngữ tìm kiếm.</label>
     <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
   </customLabels>
   <customLabels>
@@ -767,6 +767,10 @@
   <customLabels>
     <label>Kết Quả Ban Đầu cho "{0}"</label>
     <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>Bản ghi không xác định</label>
+    <name>lightning_LightningLookup_unknownRecord</name>
   </customLabels>
   <customLabels>
     <label>Không Có</label>

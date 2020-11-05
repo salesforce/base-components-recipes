@@ -6,25 +6,45 @@
  -->
 
 <template>
-    <a
-        href={href}
-        onclick={handleClick}
-        tabindex={_tabIndex}
-        aria-selected={_ariaSelected}
-        role={_role}
-    >
+    <span>
         <template if:true={_hasMedia}>
-            <slot></slot>
+            <span class="slds-pill__icon_container">
+                <slot></slot>
+            </span>
         </template>
-        <span class="slds-pill__label">{label}</span>
-        <c-primitive-icon
-            class="slds-icon_container slds-pill__remove"
-            title={i18n.pillRemove}
-            icon-name="utility:close"
-            svg-class="slds-icon slds-icon_x-small slds-icon-text-default"
-            variant="bare"
+        <a
+            class="slds-pill__action"
+            href={href}
+            onclick={handleClick}
+            tabindex={_tabIndex}
+            aria-selected={_ariaSelected}
+            role={_role}
+            title={label}
         >
-        </c-primitive-icon>
-        <span class="slds-assistive-text">{assistiveText}</span>
-    </a>
+            <span class="slds-pill__label">{label}</span>
+            <template if:false={useRemoveButton}>
+                <c-primitive-icon
+                    class="slds-icon_container slds-pill__remove"
+                    title={i18n.pillRemove}
+                    icon-name="utility:close"
+                    svg-class="slds-icon slds-icon_x-small slds-icon-text-default"
+                    variant="bare"
+                >
+                </c-primitive-icon>
+                <span class="slds-assistive-text">{assistiveText}</span>
+            </template>
+        </a>
+        <template if:true={useRemoveButton}>
+            <c-button-icon
+                icon-name="utility:close"
+                class="slds-pill__remove"
+                variant="bare"
+                onclick={handleRemoveClick}
+                title={i18n.pillRemove}
+                tabindex={_tabIndex}
+                alternative-text={assistiveText}
+            >
+            </c-button-icon>
+        </template>
+    </span>
 </template>

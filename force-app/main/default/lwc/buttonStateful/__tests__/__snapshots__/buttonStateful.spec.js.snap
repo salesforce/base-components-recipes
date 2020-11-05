@@ -4,7 +4,7 @@ exports[`c-button-stateful Variant should add correct classes on brand variant 1
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-button_brand slds-not-selected"
     >
       <span
@@ -69,7 +69,7 @@ exports[`c-button-stateful Variant should add correct classes on inverse variant
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-button_inverse slds-not-selected"
     >
       <span
@@ -134,7 +134,7 @@ exports[`c-button-stateful Variant should add correct classes on neutral variant
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
     >
       <span
@@ -199,7 +199,7 @@ exports[`c-button-stateful Variant should add correct classes on text variant 1`
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-not-selected"
     >
       <span
@@ -264,7 +264,7 @@ exports[`c-button-stateful Variant should add default classes on invalid variant
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
     >
       <span
@@ -329,7 +329,7 @@ exports[`c-button-stateful default 1`] = `
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
     >
       <span
@@ -355,7 +355,7 @@ exports[`c-button-stateful testIconNames Expected icons should render for each s
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
     >
       <span
@@ -420,7 +420,7 @@ exports[`c-button-stateful testIconNames Invalid or empty icon names should rend
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
     >
       <span
@@ -472,7 +472,7 @@ exports[`c-button-stateful testLabels \`labelWhenOn\` value should be used when 
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
     >
       <span
@@ -498,7 +498,7 @@ exports[`c-button-stateful testLabels Expected labels should render for each sta
 <c-button-stateful>
   #shadow-root(open)
     <button
-      aria-live="assertive"
+      aria-live="polite"
       class="slds-button slds-button_stateful slds-button_neutral slds-not-selected"
     >
       <span

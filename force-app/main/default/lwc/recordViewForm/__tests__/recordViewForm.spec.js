@@ -33,7 +33,7 @@ const createMockedForm = (recordId, objectApiName, props = {}) => {
     return element;
 };
 
-const expectToEqualWiredData = data => {
+const expectToEqualWiredData = (data) => {
     expect(data).toEqual(
         expect.objectContaining({
             record: expect.any(Object),
@@ -89,7 +89,7 @@ describe('record view form', () => {
 
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
         });
@@ -126,7 +126,7 @@ describe('record view form', () => {
 
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
         });
@@ -155,7 +155,7 @@ describe('record view form', () => {
     it('displays a warning in the console when record id is undefined', () => {
         return new Promise((resolve, reject) => {
             // eslint-disable-next-line no-console
-            console.warn = jest.fn(warn => {
+            console.warn = jest.fn((warn) => {
                 expect(warn).toEqual(
                     'record id is required but is currently undefined or null'
                 );
@@ -171,7 +171,7 @@ describe('record view form', () => {
     it('displays a warning in the console when api name is undefined', () => {
         return new Promise((resolve, reject) => {
             // eslint-disable-next-line no-console
-            console.warn = jest.fn(warn => {
+            console.warn = jest.fn((warn) => {
                 expect(warn).toEqual(
                     'API Name is required but is currently undefined or null'
                 );
@@ -204,7 +204,7 @@ describe('record view form', () => {
 
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error.message);
             });
 
@@ -236,7 +236,7 @@ describe('record view form', () => {
         return new Promise((resolve, reject) => {
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
 
@@ -260,7 +260,7 @@ describe('record view form', () => {
         return new Promise((resolve, reject) => {
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
 
@@ -299,7 +299,7 @@ describe('record view form', () => {
         return new Promise((resolve, reject) => {
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
 
@@ -307,7 +307,7 @@ describe('record view form', () => {
                 verifyDefaultNameValue(element, resolve, reject);
 
                 // eslint-disable-next-line no-console
-                console.warn = jest.fn(warn => {
+                console.warn = jest.fn((warn) => {
                     resolve(warn);
                 });
 
@@ -347,7 +347,7 @@ describe('record view form', () => {
 
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
         });
@@ -380,7 +380,7 @@ describe('record view form', () => {
 
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
         });
@@ -429,15 +429,46 @@ describe('record view form', () => {
 
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
         });
     });
 
+    it('should render dynamic fields that are wired before', () => {
+        const element = createMockedForm(DEFAULT_RECORD_ID, DEFAULT_API_NAME, {
+            showExcludedField: true
+        });
+
+        const getOutputField = () => {
+            return shadowQuerySelector(element, '.excludedField');
+        };
+
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                const outputField = getOutputField();
+                expect(outputField.getWiredData()).not.toBe(null);
+
+                element.showExcludedField = false;
+
+                resolve();
+            }, 1);
+        })
+            .then(() => {
+                const outputField = getOutputField();
+                expect(outputField).toBe(null);
+
+                element.showExcludedField = true;
+            })
+            .then(() => {
+                const outputField = getOutputField();
+                expect(outputField.getWiredData()).not.toBe(null);
+            });
+    });
+
     it('should render fields when the outputField is a child of the slot element', () => {
         const element = createMockedForm('a00R0000000jq5e', DEFAULT_API_NAME);
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             element.addEventListener('load', () => {
                 element.showNestedChild = true;
 
@@ -487,7 +518,7 @@ describe('record view form', () => {
 
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error.message);
             });
         });
@@ -552,7 +583,7 @@ describe('record view form', () => {
 
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
         });
@@ -585,7 +616,7 @@ describe('record view form', () => {
 
             const form = shadowQuerySelector(element, 'c-record-view-form');
 
-            form.addEventListener('error', error => {
+            form.addEventListener('error', (error) => {
                 reject(error);
             });
         }).then(() => {

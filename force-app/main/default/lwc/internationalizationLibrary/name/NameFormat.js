@@ -105,7 +105,7 @@ var fieldConstants = {
     INFORMAL: Symbol('Informal Name')
 };
 
-var _createClass = (function() {
+var _createClass = (function () {
     function defineProperties(target, props) {
         for (var i = 0; i < props.length; i++) {
             var descriptor = props[i];
@@ -115,7 +115,7 @@ var _createClass = (function() {
             Object.defineProperty(target, descriptor.key, descriptor);
         }
     }
-    return function(Constructor, protoProps, staticProps) {
+    return function (Constructor, protoProps, staticProps) {
         if (protoProps) defineProperties(Constructor.prototype, protoProps);
         if (staticProps) defineProperties(Constructor, staticProps);
         return Constructor;
@@ -160,7 +160,7 @@ var fieldFormatParts = Object.freeze({
     INFORMAL: new FieldFormatPart(fieldConstants.INFORMAL)
 });
 
-var FormatParser = (function() {
+var FormatParser = (function () {
     function FormatParser() {
         _classCallCheck(this, FormatParser);
     }
@@ -334,10 +334,7 @@ var name = {
             }
         }
 
-        return sb
-            .join('')
-            .trim()
-            .replace(/  /g, ' ');
+        return sb.join('').trim().replace(/  /g, ' ');
     },
 
     followReferences: function followReferences(key) {

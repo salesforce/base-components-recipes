@@ -6,7 +6,18 @@
  */
 
 import { numberFormat } from './../number/NumberFormat';
-import { updateFractionPart } from './../number/utils';
+import { exceedsSafeLength, updateFractionPart } from './../number/utils';
+import { getNumberFormat } from '../localizationService';
+
+jest.mock('../localizationService', () => {
+    return {
+        getNumberFormat: jest.fn(() => {
+            return {
+                format: jest.fn()
+            };
+        })
+    };
+});
 
 describe('When formatting currency', () => {
     it("should use the user's default currency when currency not provided", () => {
@@ -47,9 +58,9 @@ describe('When formatting currency', () => {
 
         const formattedValue = numberFormat(options)
             .format(5345643)
-            .replace(/\s?/g, '');
+            .replace(/\s/g, ' ');
 
-        expect(formattedValue).toBe('USD5,345,643.00');
+        expect(formattedValue).toBe('USD 5,345,643.00');
     });
     it('should use the currency name when "currencyDisplay" is set to "name"', () => {
         const options = {
@@ -179,5 +190,82 @@ describe('When options has minimum/maximumFractionDigits', () => {
         );
 
         expect(updatedPattern).toEqual('¤#,##0.00000;(¤#,##0.00000)');
+    });
+});
+
+describe('When formatting large numbers', () => {
+    it('should call the fallback formatter with the correct pattern', () => {
+        const LARGE_NUMBER = 123456789.123456789;
+
+        const options = {
+            style: 'percent',
+            maximumFractionDigits: 5
+        };
+
+        const formatter = numberFormat(options);
+        formatter.format(LARGE_NUMBER);
+
+        expect(getNumberFormat).toHaveBeenCalledWith('#,##0.#####%');
+    });
+    it('should call the primary currency formatter when the number length after trimming trailing zeroes is in the safe length range', () => {
+        const LONG_NUMBER = '12.34567890000000000000';
+
+        const options = {
+            style: 'currency',
+            currency: 'EUR',
+            currencyDisplay: 'code',
+            maximumFractionDigits: 6
+        };
+
+        const formatter = numberFormat(options);
+
+        expect(formatter.format(LONG_NUMBER)).toBe('EUR 12.345679');
+    });
+    it('should call the fallback formatter when the number length is outside the safe length range', () => {
+        const LONG_NUMBER = '12.34567890000000000012';
+
+        const options = {
+            style: 'currency',
+            currency: 'EUR',
+            currencyDisplay: 'code',
+            maximumFractionDigits: 13
+        };
+
+        const formatter = numberFormat(options);
+        formatter.format(LONG_NUMBER);
+
+        expect(getNumberFormat).toHaveBeenCalledWith(
+            'EUR#,##0.00###########;(¤#,##0.00###########)'
+        );
+    });
+
+    describe('When determining if a number exceeds a safe length', () => {
+        it('should return false for integers shorter than 15 in length', () => {
+            expect(exceedsSafeLength('12345678901234')).toBe(false);
+        });
+        it('should return false for decimals shorter than 15 in length', () => {
+            expect(exceedsSafeLength('1.2345678901234')).toBe(false);
+        });
+        it('should return false for long decimals with a long trailing run of zeroes', () => {
+            expect(exceedsSafeLength('1.23450000000000')).toBe(false);
+        });
+        it('should return false for long decimals that only have zeroes in the fractional part', () => {
+            expect(exceedsSafeLength('1234567890000.00')).toBe(false);
+        });
+        it('should return false for 15-digit decimals that have a trailing zero', () => {
+            expect(exceedsSafeLength('1.23456789012340')).toBe(false);
+        });
+        it('should return true for integers longer than 14 in length', () => {
+            expect(exceedsSafeLength('123456789012345')).toBe(true);
+        });
+        it('should return true for decimals longer than 14 in length', () => {
+            expect(exceedsSafeLength('1.23456789012345')).toBe(true);
+        });
+        it('should return true for long integers with a trailing run zeroes', () => {
+            expect(exceedsSafeLength('100000000000000')).toBe(true);
+        });
+        it('should return true for long decimals with non-trailing runs of zeroes', () => {
+            expect(exceedsSafeLength('100.000000000001')).toBe(true);
+        });
     });
 });

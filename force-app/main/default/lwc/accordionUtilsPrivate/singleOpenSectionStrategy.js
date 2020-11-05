@@ -10,7 +10,7 @@ function openSection(sectionList, sectionToOpen) {
 
     if (sectionToOpen) {
         const sections = sectionList.sections;
-        sections.forEach(section => {
+        sections.forEach((section) => {
             if (section !== sectionToOpen) {
                 sectionChanged = sectionChanged || section.isOpen();
                 section.close();

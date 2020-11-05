@@ -6,18 +6,36 @@
  -->
 
 <template>
-    <template if:true={_hasMedia}>
-        <slot></slot>
-    </template>
-    <span class="slds-pill__label">{label}</span>
-    <c-primitive-icon
-        class="slds-icon_container slds-pill__remove"
-        title={i18n.pillRemove}
-        onclick={handleRemove}
-        icon-name="utility:close"
-        svg-class="slds-icon slds-icon_x-small slds-icon-text-default"
-        variant="bare"
-    >
-    </c-primitive-icon>
-    <span class="slds-assistive-text">{assistiveText}</span>
+    <span>
+        <template if:true={_hasMedia}>
+            <span class="slds-pill__icon_container">
+                <slot></slot>
+            </span>
+        </template>
+        <span class="slds-pill__label" title={label}>{label}</span>
+        <template if:false={useRemoveButton}>
+            <c-primitive-icon
+                class="slds-icon_container slds-pill__remove"
+                title={i18n.pillRemove}
+                icon-name="utility:close"
+                onclick={handleRemoveClick}
+                svg-class="slds-icon slds-icon_x-small slds-icon-text-default"
+                variant="bare"
+            >
+            </c-primitive-icon>
+            <span class="slds-assistive-text">{assistiveText}</span>
+        </template>
+        <template if:true={useRemoveButton}>
+            <c-button-icon
+                icon-name="utility:close"
+                class="slds-pill__remove"
+                variant="bare"
+                onclick={handleRemoveClick}
+                title={i18n.pillRemove}
+                tabindex={_tabIndex}
+                alternative-text={assistiveText}
+            >
+            </c-button-icon>
+        </template>
+    </span>
 </template>

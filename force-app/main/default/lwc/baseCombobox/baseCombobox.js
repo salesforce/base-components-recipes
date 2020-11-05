@@ -45,6 +45,8 @@ const ARIA_ACTIVEDESCENDANT = 'aria-activedescendant';
 export default class cBaseCombobox extends LightningElement {
     static delegatesFocus = true;
 
+    @api autocomplete = 'off';
+
     @api inputText = '';
     @api inputIconName = 'utility:down';
     @api inputIconSize = 'x-small';
@@ -151,7 +153,7 @@ export default class cBaseCombobox extends LightningElement {
 
     get computedAriaDescribedBy() {
         const ariaValues = [];
-        this._inputDescribedBy.forEach(el => {
+        this._inputDescribedBy.forEach((el) => {
             ariaValues.push(getRealDOMId(el));
         });
         return normalizeAriaAttribute(ariaValues);
@@ -320,6 +322,8 @@ export default class cBaseCombobox extends LightningElement {
         itemCopy.text = item.text;
         itemCopy.subText = item.subText;
         itemCopy.value = item.value;
+
+        itemCopy.checked = item.checked || false;
 
         itemCopy.selectable =
             ['option-card', 'option-inline'].indexOf(item.type) >= 0;
@@ -620,8 +624,8 @@ export default class cBaseCombobox extends LightningElement {
 
         this.inputElement.focus();
 
-        const value = optionElement.getAttribute('data-value');
-        this._events.dispatchSelect(value);
+        const selectedValue = optionElement.getAttribute('data-value');
+        this._events.dispatchSelect(selectedValue);
     }
 
     handleInputSelect(event) {
@@ -730,10 +734,10 @@ export default class cBaseCombobox extends LightningElement {
         this._selectableItems = 0;
         this._highlightedItemIndex = 0;
 
-        this._items = items.map(item => {
+        this._items = items.map((item) => {
             if (item.items) {
                 const groupCopy = { label: item.label };
-                groupCopy.items = item.items.map(groupItem => {
+                groupCopy.items = item.items.map((groupItem) => {
                     return this.processItem(groupItem);
                 });
                 return groupCopy;

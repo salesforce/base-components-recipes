@@ -14,7 +14,7 @@ const createComponent = () => {
     return element;
 };
 
-describe('pass in media', () => {
+describe('pill with media elements', () => {
     it('label', () => {
         const element = createComponent();
         return Promise.resolve().then(() => {

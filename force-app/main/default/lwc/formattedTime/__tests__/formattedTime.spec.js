@@ -17,7 +17,7 @@ const createFormattedTimeComponent = () => {
     return element;
 };
 
-const getText = element => {
+const getText = (element) => {
     return element.shadowRoot.textContent;
 };
 

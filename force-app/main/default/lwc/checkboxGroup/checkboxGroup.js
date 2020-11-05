@@ -56,7 +56,7 @@ export default class cCheckboxGroup extends LightningElement {
 
     synchronizeA11y() {
         const inputs = this.template.querySelectorAll('input');
-        Array.prototype.slice.call(inputs).forEach(input => {
+        Array.prototype.slice.call(inputs).forEach((input) => {
             synchronizeAttrs(input, {
                 'aria-describedby': this.computedUniqueHelpElementId
             });
@@ -118,7 +118,7 @@ export default class cCheckboxGroup extends LightningElement {
     get transformedOptions() {
         const { options, value } = this;
         if (Array.isArray(options)) {
-            return options.map(option => ({
+            return options.map((option) => ({
                 label: option.label,
                 value: option.value,
                 id: `checkbox-${this.itemIndex++}`,
@@ -139,7 +139,7 @@ export default class cCheckboxGroup extends LightningElement {
 
     @api
     reportValidity() {
-        return this._constraint.reportValidity(message => {
+        return this._constraint.reportValidity((message) => {
             this._helpMessage = message;
         });
     }
@@ -191,8 +191,8 @@ export default class cCheckboxGroup extends LightningElement {
 
         const checkboxes = this.template.querySelectorAll('input');
         const value = Array.from(checkboxes)
-            .filter(checkbox => checkbox.checked)
-            .map(checkbox => checkbox.value);
+            .filter((checkbox) => checkbox.checked)
+            .map((checkbox) => checkbox.value);
 
         this._value = value;
 

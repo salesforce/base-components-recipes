@@ -29,13 +29,13 @@ export function normalizeArray(value) {
 export function normalizeAriaAttribute(value) {
     let arias = Array.isArray(value) ? value : [value];
     arias = arias
-        .map(ariaValue => {
+        .map((ariaValue) => {
             if (typeof ariaValue === 'string') {
                 return ariaValue.replace(/\s+/g, ' ').trim();
             }
             return '';
         })
-        .filter(ariaValue => !!ariaValue);
+        .filter((ariaValue) => !!ariaValue);
 
     return arias.length > 0 ? arias.join(' ') : null;
 }

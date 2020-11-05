@@ -9,7 +9,7 @@ import templates from 'lightning/iconSvgTemplates';
 
 describe('iconSvgTemplates', () => {
     it('should export an object with the icon templates', () => {
-        Object.keys(templates).forEach(propName => {
+        Object.keys(templates).forEach((propName) => {
             expect(typeof templates[propName]).toBe('function');
         });
     });

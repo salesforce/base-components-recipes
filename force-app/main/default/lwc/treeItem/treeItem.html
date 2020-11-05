@@ -16,6 +16,7 @@
                     node-key={item.node.key}
                     aria-selected={item.selected}
                     aria-level={item.node.level}
+                    aria-disabled={item.node.isDisabled}
                     label={item.node.label}
                     href={item.node.href}
                     metatext={item.node.metatext}
@@ -49,6 +50,7 @@
                     child-items={item.node.children}
                     aria-label={item.node.label}
                     aria-expanded={item.node.strexpanded}
+                    aria-disabled={item.node.isDisabled}
                 >
                 </c-tree-item>
             </template>
@@ -69,12 +71,10 @@
                     svg-class="slds-button__icon slds-button__icon_small"
                 >
                 </c-primitive-icon>
-                <span class="slds-assistive-text">
-                    {buttonLabel}
-                </span>
+                <span class="slds-assistive-text">{buttonLabel}</span>
             </button>
             <span class="slds-has-flexi-truncate">
-                <a href={href} tabindex="-1" role="presentation">
+                <template if:true={isDisabled}>
                     <span
                         class="slds-tree__item-label slds-truncate"
                         title={label}
@@ -88,7 +88,26 @@
                             <span class="slds-assistive-text">:</span>{metatext}
                         </span>
                     </template>
-                </a>
+                </template>
+
+                <template if:false={isDisabled}>
+                    <a href={href} tabindex="-1" role="presentation">
+                        <span
+                            class="slds-tree__item-label slds-truncate"
+                            title={label}
+                            >{label}</span
+                        >
+                        <template if:true={metatext}>
+                            <span
+                                class="slds-tree__item-meta slds-truncate"
+                                title={metatext}
+                            >
+                                <span class="slds-assistive-text">:</span
+                                >{metatext}
+                            </span>
+                        </template>
+                    </a>
+                </template>
             </span>
         </div>
         <template if:true={showExpanded}>
@@ -102,6 +121,7 @@
                             node-key={item.node.key}
                             aria-selected={item.selected}
                             aria-level={item.node.level}
+                            aria-disabled={item.node.isDisabled}
                             label={item.node.label}
                             href={item.node.href}
                             metatext={item.node.metatext}
@@ -123,6 +143,7 @@
                             node-key={item.node.key}
                             aria-selected={item.selected}
                             aria-level={item.node.level}
+                            aria-disabled={item.node.isDisabled}
                             label={item.node.label}
                             href={item.node.href}
                             metatext={item.node.metatext}

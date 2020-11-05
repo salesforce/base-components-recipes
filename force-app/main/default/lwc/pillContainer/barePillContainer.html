@@ -1,0 +1,60 @@
+<!--
+  Copyright (c) 2019, salesforce.com, inc.
+  All rights reserved.
+  SPDX-License-Identifier: MIT
+  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
+ -->
+
+<template>
+    <div class="slds-pill_container">
+        <template if:true={_showMore}>
+            <span class="slds-listbox-toggle" aria-hidden="true"
+                ><button
+                    class="slds-button"
+                    tabindex="-1"
+                    onclick={handleMoreClick}
+                >
+                    {computedPillCountMoreLabel}
+                </button></span
+            >
+        </template>
+        <template
+            for:each={pillViewModels}
+            for:item="pillViewModel"
+            for:index="index"
+        >
+            <c-pill
+                label={pillViewModel.pill.item.label}
+                onclick={handlePillClick}
+                name={index}
+                href={pillViewModel.pill.item.href}
+                onremove={handleRemove}
+                onblur={handlePillBlur}
+                onfocus={handlePillFocus}
+                variant={pillViewModel.pill.variant}
+                key={pillViewModel.pill.item.label}
+                class="slds-truncate"
+            >
+                <template if:true={pillViewModel.pill.isIcon}>
+                    <c-icon
+                        class="slds-icon_container"
+                        icon-name={pillViewModel.pill.item.iconName}
+                        alternative-text={pillViewModel.pill.item.alternativeText}
+                    >
+                    </c-icon>
+                </template>
+                <template if:true={pillViewModel.pill.isAvatar}>
+                    <c-avatar
+                        src={pillViewModel.pill.item.src}
+                        fallback-icon-name={pillViewModel.pill.item.fallbackIconName}
+                        variant={pillViewModel.pill.item.variant}
+                        size="x-small"
+                        class="slds-icon_container"
+                        alternative-text={pillViewModel.pill.item.alternativeText}
+                    >
+                    </c-avatar>
+                </template>
+            </c-pill>
+        </template>
+    </div>
+</template>

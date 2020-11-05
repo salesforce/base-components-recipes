@@ -62,7 +62,7 @@ describe('c-tab-bar', () => {
         ];
 
         let selectedTabId;
-        element.addEventListener('select', event => {
+        element.addEventListener('select', (event) => {
             selectedTabId = event.detail.value;
         });
         return Promise.resolve()

@@ -61,13 +61,13 @@ export function getNode(items, key) {
 }
 
 function addNodes(label, nodes, levelOptions, level, withMetatext = false) {
-    const levelTotal = Object.keys(levelOptions).map(key =>
+    const levelTotal = Object.keys(levelOptions).map((key) =>
         Object.prototype.hasOwnProperty.call(levelOptions, key)
     ).length;
     if (level > levelTotal) {
         return;
     }
-    nodes.forEach(node => {
+    nodes.forEach((node) => {
         const children = getTree(label, levelOptions[level], withMetatext);
         node.items = node.items.concat(children);
         addNodes(label, node.items, levelOptions, level + 1, withMetatext);

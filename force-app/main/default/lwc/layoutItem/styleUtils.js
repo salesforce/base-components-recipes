@@ -82,8 +82,8 @@ export const STYLE_ERROR = {
 
 function hasConflict(value) {
     return (
-        value.some(item => item === 'auto') &&
-        value.some(item => item === 'no-flex')
+        value.some((item) => item === 'auto') &&
+        value.some((item) => item === 'no-flex')
     );
 }
 
@@ -92,7 +92,7 @@ function toArray(value) {
         return value;
     } else if (typeof value === 'string') {
         value = value.split(',');
-        return value.map(item => item.trim());
+        return value.map((item) => item.trim());
     }
     return [value];
 }
@@ -119,7 +119,9 @@ export function normalizeFlexibility(value) {
         throw new Error(STYLE_ERROR.FLEX_CONFLICT);
     }
 
-    return value.filter(item => FLEXIBILITY.some(allowed => item === allowed));
+    return value.filter((item) =>
+        FLEXIBILITY.some((allowed) => item === allowed)
+    );
 }
 
 export function normalizeSize(value) {
@@ -133,7 +135,7 @@ export function normalizeSize(value) {
 function computePaddingClass(padding, computedClass) {
     computedClass = computedClass || classSet();
     padding = padding || ' ';
-    Object.keys(PADDING_CLASS).forEach(key => {
+    Object.keys(PADDING_CLASS).forEach((key) => {
         if (PADDING_CLASS[key].toLowerCase() === padding) {
             computedClass.add(key);
         }
@@ -144,8 +146,8 @@ function computePaddingClass(padding, computedClass) {
 function computeFlexibilityClass(flexibility, computedClass) {
     computedClass = computedClass || classSet();
     flexibility = flexibility || [];
-    Object.keys(FLEX_CLASS).forEach(key => {
-        if (flexibility.some(flex => flex === FLEX_CLASS[key])) {
+    Object.keys(FLEX_CLASS).forEach((key) => {
+        if (flexibility.some((flex) => flex === FLEX_CLASS[key])) {
             computedClass.add(key);
         }
     });
@@ -155,7 +157,7 @@ function computeFlexibilityClass(flexibility, computedClass) {
 function computeSizeClass(layoutSize, computedClass) {
     computedClass = computedClass || classSet();
     layoutSize = layoutSize || DEFAULT_LAYOUT_SIZE;
-    Object.keys(SIZE_CLASS).forEach(key => {
+    Object.keys(SIZE_CLASS).forEach((key) => {
         const size = layoutSize[key];
         if (size != null && size !== 0) {
             computedClass.add(`${SIZE_CLASS[key]}${size}-of-12`);

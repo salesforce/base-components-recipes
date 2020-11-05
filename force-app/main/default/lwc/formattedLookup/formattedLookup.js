@@ -66,7 +66,7 @@ export default class cFormattedLookup extends LightningElement {
                     recordId: this.state.recordId,
                     actionName: 'view'
                 }
-            }).then(linkInfo => {
+            }).then((linkInfo) => {
                 this.state.url = linkInfo.url;
                 this.dispatcher = linkInfo.dispatcher;
                 this.state.isNavigable =

@@ -6,7 +6,7 @@ exports[`c-base-combobox-item renders card 1`] = `
 >
   #shadow-root(open)
     <span
-      class="slds-media__figure"
+      class="slds-media__figure slds-listbox__option-icon"
     >
       <c-icon
         class="slds-icon-utility-search slds-icon_container"
@@ -60,7 +60,7 @@ exports[`c-base-combobox-item renders card w/ highlighted text 1`] = `
 >
   #shadow-root(open)
     <span
-      class="slds-media__figure"
+      class="slds-media__figure slds-listbox__option-icon"
     >
       <c-icon
         class="slds-icon-utility-search slds-icon_container"
@@ -124,7 +124,7 @@ exports[`c-base-combobox-item renders card w/o subtext 1`] = `
 >
   #shadow-root(open)
     <span
-      class="slds-media__figure"
+      class="slds-media__figure slds-listbox__option-icon"
     >
       <c-icon
         class="slds-icon-utility-search slds-icon_container"
@@ -208,7 +208,7 @@ exports[`c-base-combobox-item renders inline text w/ alternative text for card 1
 >
   #shadow-root(open)
     <span
-      class="slds-media__figure"
+      class="slds-media__figure slds-listbox__option-icon"
     >
       <c-icon
         class="slds-icon-utility-search slds-icon_container"

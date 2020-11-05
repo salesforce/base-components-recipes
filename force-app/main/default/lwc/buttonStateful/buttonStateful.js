@@ -167,7 +167,7 @@ export default class cButtonStateful extends LightningElement {
             detail: {
                 callbacks: {
                     setOrder: this.setOrder.bind(this),
-                    setDeRegistrationCallback: deRegistrationCallback => {
+                    setDeRegistrationCallback: (deRegistrationCallback) => {
                         this._deRegistrationCallback = deRegistrationCallback;
                     }
                 }

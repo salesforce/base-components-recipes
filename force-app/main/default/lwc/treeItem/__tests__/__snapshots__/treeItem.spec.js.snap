@@ -8,7 +8,7 @@ exports[`c-tree-item renders leaf tree-item 1`] = `
     >
       <button
         aria-hidden="true"
-        class="slds-button slds-button_icon slds-m-right_x-small slds-is-disabled"
+        class="slds-button slds-button_icon slds-m-right_x-small slds-hidden"
         tabindex="-1"
         title="Expand Tree Branch"
         type="button"

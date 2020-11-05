@@ -6,12 +6,14 @@
  -->
 
 <template>
-    <span class="slds-media__figure">
-        <c-icon
-            size={iconSize}
-            alternative-text={item.iconAlternativeText}
-            icon-name={item.iconName}
-        ></c-icon>
+    <span class="slds-media__figure slds-listbox__option-icon">
+        <template if:true={item.iconName}>
+            <c-icon
+                size={iconSize}
+                alternative-text={item.iconAlternativeText}
+                icon-name={item.iconName}
+            ></c-icon>
+        </template>
     </span>
     <span class="slds-media__body">
         <span

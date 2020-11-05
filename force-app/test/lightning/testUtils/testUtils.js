@@ -15,8 +15,9 @@ export function getShadowRoot(element) {
         const tagName =
             element && element.tagName && element.tagName.toLowerCase();
         throw new Error(
-            `Attempting to retrieve the shadow root of '${tagName ||
-                element}' but no shadowRoot property found`
+            `Attempting to retrieve the shadow root of '${
+                tagName || element
+            }' but no shadowRoot property found`
         );
     }
     return element.shadowRoot;
@@ -37,11 +38,11 @@ export function testConnectedElement(element, attributes, ...tests) {
     return tests
         .reduce((promise, test) => promise.then(test), Promise.resolve())
         .then(
-            value => {
+            (value) => {
                 document.body.removeChild(element);
                 return value;
             },
-            value => {
+            (value) => {
                 document.body.removeChild(element);
                 return Promise.reject(value);
             }
@@ -50,14 +51,14 @@ export function testConnectedElement(element, attributes, ...tests) {
 
 export function verifyClassSet(node, classSet) {
     const nodeClasses = node.getAttribute('class').split(' ');
-    const expectedClasses = Object.keys(classSet).filter(className => {
+    const expectedClasses = Object.keys(classSet).filter((className) => {
         return classSet[className];
     });
     const hasExpectedClasses = expectedClasses.reduce((soFar, className) => {
         return soFar && nodeClasses.indexOf(className) !== -1;
     }, true);
     const hasUnexpectedClasses = Object.keys(classSet)
-        .filter(className => {
+        .filter((className) => {
             return !classSet[className];
         })
         .reduce((soFar, className) => {
@@ -102,4 +103,9 @@ export function getElementWithFocus() {
     }
 
     return currentFocusedElement;
+}
+
+export function getMock(path) {
+    const mock = window.__mockData[path];
+    return JSON.parse(JSON.stringify(mock));
 }

@@ -37,7 +37,7 @@ describe('c-spinner', () => {
         });
     });
 
-    ['small', 'medium', 'large'].forEach(size => {
+    ['small', 'medium', 'large'].forEach((size) => {
         it(`size=${size}`, () => {
             const element = createComponent({
                 size,
@@ -50,7 +50,7 @@ describe('c-spinner', () => {
         });
     });
 
-    ['base', 'brand', 'inverse'].forEach(variant => {
+    ['base', 'brand', 'inverse'].forEach((variant) => {
         it(`variant=${variant}`, () => {
             const element = createComponent({
                 variant,

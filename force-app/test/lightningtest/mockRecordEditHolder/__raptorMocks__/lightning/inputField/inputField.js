@@ -58,6 +58,12 @@ export default class MockInputField extends LightningElement {
     @api
     setValue(val) {
         this.internalValue = val;
+        this.dirty = true;
+    }
+
+    @api
+    clean() {
+        this.dirty = false;
     }
 
     @api

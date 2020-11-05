@@ -141,7 +141,7 @@ export default class cButton extends cPrimitiveButton {
             detail: {
                 callbacks: {
                     setOrder: this.setOrder.bind(this),
-                    setDeRegistrationCallback: deRegistrationCallback => {
+                    setDeRegistrationCallback: (deRegistrationCallback) => {
                         this._deRegistrationCallback = deRegistrationCallback;
                     }
                 }

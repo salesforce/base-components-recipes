@@ -29,7 +29,7 @@ function mockWithOptionalFields(recordId, optionalFields) {
     const ret = JSON.parse(JSON.stringify(store));
 
     if (optionalFields) {
-        optionalFields.forEach(qualifiedField => {
+        optionalFields.forEach((qualifiedField) => {
             const tokenizedField = qualifiedField.split('.');
             const entity = tokenizedField[0];
             const field = tokenizedField[1];
@@ -71,7 +71,7 @@ function getMockRecordCreateDefaults(apiName) {
 
 function getRecordWithFields(recordId) {
     return getMockRecordUi(recordId).then(
-        recordUi => recordUi.records[recordId]
+        (recordUi) => recordUi.records[recordId]
     );
 }
 
@@ -140,6 +140,10 @@ function getMockPicklistValuesByRecordType(objectApiName, recordTypeId) {
 }
 
 export function getRecord(config) {
+    if (this && this.constructor.adapter) {
+        return new this.constructor.adapter(config);
+    }
+
     if (!config || !config.recordId || !config.fields) {
         return undefined;
     }
@@ -154,6 +158,10 @@ export function getRecord(config) {
 }
 
 export function getObjectInfo(config) {
+    if (this && this.constructor.adapter) {
+        return new this.constructor.adapter(config);
+    }
+
     if (!config || !config.objectApiName) {
         return undefined;
     }
@@ -161,6 +169,10 @@ export function getObjectInfo(config) {
 }
 
 export function getPicklistValues(config) {
+    if (this && this.constructor.adapter) {
+        return new this.constructor.adapter(config);
+    }
+
     if (
         !config ||
         !config.objectApiName ||
@@ -179,6 +191,10 @@ export function getPicklistValues(config) {
 }
 
 export function getPicklistValuesByRecordType(config) {
+    if (this && this.constructor.adapter) {
+        return new this.constructor.adapter(config);
+    }
+
     if (!config || !config.objectApiName || !config.recordTypeId) {
         return undefined;
     }
@@ -191,6 +207,10 @@ export function getPicklistValuesByRecordType(config) {
 }
 
 export function getRecordUi(config) {
+    if (this && this.constructor.adapter) {
+        return new this.constructor.adapter(config);
+    }
+
     if (!config || !config.recordIds || !config.layoutTypes || !config.modes) {
         return undefined;
     }
@@ -200,6 +220,9 @@ export function getRecordUi(config) {
 }
 
 export function getRecordCreateDefaults(config) {
+    if (this && this.constructor.adapter) {
+        return new this.constructor.adapter(config);
+    }
     if (!config || !config.objectApiName) {
         return undefined;
     }

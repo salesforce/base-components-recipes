@@ -66,16 +66,17 @@ exports[`c-base-combobox is accessible renders alternative text for icon 1`] = `
 
 exports[`c-base-combobox renders properly renders correctly an "option-card" item with all attributes 1`] = `
 <c-base-combobox-item
+  aria-checked="false"
   aria-selected="true"
   class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity slds-has-focus"
-  data-item-id="input-4-0"
+  data-item-id="input-6-0"
   data-value="accountGlobalMediaCard"
   id="[shadow:guid]"
   role="option"
 >
   #shadow-root(open)
     <span
-      class="slds-media__figure"
+      class="slds-media__figure slds-listbox__option-icon"
     >
       <c-icon
         class="slds-icon-standard-account slds-icon_container"
@@ -212,9 +213,10 @@ exports[`c-base-combobox renders properly with dropdown open 1`] = `
         role="listbox"
       >
         <c-base-combobox-item
+          aria-checked="false"
           aria-selected="true"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
-          data-item-id="input-18-0"
+          data-item-id="input-20-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -254,16 +256,17 @@ exports[`c-base-combobox renders properly with dropdown open 1`] = `
             </span>
         </c-base-combobox-item>
         <c-base-combobox-item
+          aria-checked="false"
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-18-1"
+          data-item-id="input-20-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"
         >
           #shadow-root(open)
             <span
-              class="slds-media__figure"
+              class="slds-media__figure slds-listbox__option-icon"
             >
               <c-icon
                 class="slds-icon-standard-account slds-icon_container"
@@ -608,9 +611,10 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         role="listbox"
       >
         <c-base-combobox-item
+          aria-checked="false"
           aria-selected="true"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
-          data-item-id="input-205-0"
+          data-item-id="input-207-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -650,16 +654,17 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
             </span>
         </c-base-combobox-item>
         <c-base-combobox-item
+          aria-checked="false"
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-205-1"
+          data-item-id="input-207-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"
         >
           #shadow-root(open)
             <span
-              class="slds-media__figure"
+              class="slds-media__figure slds-listbox__option-icon"
             >
               <c-icon
                 class="slds-icon-standard-account slds-icon_container"
@@ -766,9 +771,10 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
         role="listbox"
       >
         <c-base-combobox-item
+          aria-checked="false"
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
-          data-item-id="input-205-0"
+          data-item-id="input-207-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -808,16 +814,17 @@ exports[`c-base-combobox triggers events triggers closing dropdown with escape k
             </span>
         </c-base-combobox-item>
         <c-base-combobox-item
+          aria-checked="false"
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-205-1"
+          data-item-id="input-207-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"
         >
           #shadow-root(open)
             <span
-              class="slds-media__figure"
+              class="slds-media__figure slds-listbox__option-icon"
             >
               <c-icon
                 class="slds-icon-standard-account slds-icon_container"
@@ -925,9 +932,10 @@ exports[`c-base-combobox triggers events triggers open dropdown on keyboard inpu
         role="listbox"
       >
         <c-base-combobox-item
+          aria-checked="false"
           aria-selected="true"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain slds-has-focus"
-          data-item-id="input-187-0"
+          data-item-id="input-189-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -967,16 +975,17 @@ exports[`c-base-combobox triggers events triggers open dropdown on keyboard inpu
             </span>
         </c-base-combobox-item>
         <c-base-combobox-item
+          aria-checked="false"
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-          data-item-id="input-187-1"
+          data-item-id="input-189-1"
           data-value="accountGlobalMedia"
           id="[shadow:guid]"
           role="option"
         >
           #shadow-root(open)
             <span
-              class="slds-media__figure"
+              class="slds-media__figure slds-listbox__option-icon"
             >
               <c-icon
                 class="slds-icon-standard-account slds-icon_container"
@@ -1230,9 +1239,10 @@ exports[`c-base-combobox with items supports groups 1`] = `
         role="listbox"
       >
         <c-base-combobox-item
+          aria-checked="false"
           aria-selected="false"
           class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
-          data-item-id="input-80-0"
+          data-item-id="input-82-0"
           data-value="actionSearchAdvanced"
           id="[shadow:guid]"
           role="option"
@@ -1296,9 +1306,10 @@ exports[`c-base-combobox with items supports groups 1`] = `
             role="presentation"
           >
             <c-base-combobox-item
+              aria-checked="false"
               aria-selected="false"
               class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
-              data-item-id="input-80-1"
+              data-item-id="input-82-1"
               data-value="actionSearchAdvanced"
               id="[shadow:guid]"
               role="option"
@@ -1364,16 +1375,17 @@ exports[`c-base-combobox with items supports groups 1`] = `
             role="presentation"
           >
             <c-base-combobox-item
+              aria-checked="false"
               aria-selected="false"
               class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-              data-item-id="input-80-2"
+              data-item-id="input-82-2"
               data-value="accountGlobalMediaCardHighlighted"
               id="[shadow:guid]"
               role="option"
             >
               #shadow-root(open)
                 <span
-                  class="slds-media__figure"
+                  class="slds-media__figure slds-listbox__option-icon"
                 >
                   <c-icon
                     class="slds-icon-standard-account slds-icon_container"
@@ -1425,16 +1437,17 @@ exports[`c-base-combobox with items supports groups 1`] = `
             role="presentation"
           >
             <c-base-combobox-item
+              aria-checked="false"
               aria-selected="false"
               class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-              data-item-id="input-80-3"
+              data-item-id="input-82-3"
               data-value="accountGlobalMedia"
               id="[shadow:guid]"
               role="option"
             >
               #shadow-root(open)
                 <span
-                  class="slds-media__figure"
+                  class="slds-media__figure slds-listbox__option-icon"
                 >
                   <c-icon
                     class="slds-icon-standard-account slds-icon_container"
@@ -1486,16 +1499,17 @@ exports[`c-base-combobox with items supports groups 1`] = `
             role="presentation"
           >
             <c-base-combobox-item
+              aria-checked="false"
               aria-selected="false"
               class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-              data-item-id="input-80-4"
+              data-item-id="input-82-4"
               data-value="accountGlobalMediaCard"
               id="[shadow:guid]"
               role="option"
             >
               #shadow-root(open)
                 <span
-                  class="slds-media__figure"
+                  class="slds-media__figure slds-listbox__option-icon"
                 >
                   <c-icon
                     class="slds-icon-standard-account slds-icon_container"
@@ -1600,16 +1614,17 @@ exports[`c-base-combobox with items supports groups 1`] = `
             role="presentation"
           >
             <c-base-combobox-item
+              aria-checked="false"
               aria-selected="true"
               class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity slds-has-focus"
-              data-item-id="input-80-5"
+              data-item-id="input-82-5"
               data-value="accountGlobalMediaCardHighlighted"
               id="[shadow:guid]"
               role="option"
             >
               #shadow-root(open)
                 <span
-                  class="slds-media__figure"
+                  class="slds-media__figure slds-listbox__option-icon"
                 >
                   <c-icon
                     class="slds-icon-standard-account slds-icon_container"
@@ -1661,9 +1676,10 @@ exports[`c-base-combobox with items supports groups 1`] = `
             role="presentation"
           >
             <c-base-combobox-item
+              aria-checked="false"
               aria-selected="false"
               class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
-              data-item-id="input-80-6"
+              data-item-id="input-82-6"
               data-value="actionSearchAdvanced"
               id="[shadow:guid]"
               role="option"
@@ -1708,16 +1724,17 @@ exports[`c-base-combobox with items supports groups 1`] = `
             role="presentation"
           >
             <c-base-combobox-item
+              aria-checked="false"
               aria-selected="false"
               class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-              data-item-id="input-80-7"
+              data-item-id="input-82-7"
               data-value="accountGlobalMedia"
               id="[shadow:guid]"
               role="option"
             >
               #shadow-root(open)
                 <span
-                  class="slds-media__figure"
+                  class="slds-media__figure slds-listbox__option-icon"
                 >
                   <c-icon
                     class="slds-icon-standard-account slds-icon_container"
@@ -1769,16 +1786,17 @@ exports[`c-base-combobox with items supports groups 1`] = `
             role="presentation"
           >
             <c-base-combobox-item
+              aria-checked="false"
               aria-selected="false"
               class="slds-media slds-listbox__option slds-media_center slds-listbox__option_entity"
-              data-item-id="input-80-8"
+              data-item-id="input-82-8"
               data-value="accountGlobalMediaCard"
               id="[shadow:guid]"
               role="option"
             >
               #shadow-root(open)
                 <span
-                  class="slds-media__figure"
+                  class="slds-media__figure slds-listbox__option-icon"
                 >
                   <c-icon
                     class="slds-icon-standard-account slds-icon_container"

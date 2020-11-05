@@ -8,7 +8,7 @@
 import { createElement } from 'lwc';
 import Element from 'c/formattedLocation';
 
-const createComponent = attributes => {
+const createComponent = (attributes) => {
     const element = createElement('c-formatted-location', {
         is: Element
     });

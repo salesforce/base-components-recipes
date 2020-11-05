@@ -9,7 +9,7 @@ import { createElement, register } from 'lwc';
 import MockRecordHolder from 'lightningtest/mockRecordEditHolder';
 import { registerMockedWireService } from 'lwc-wire-service-sfdc-mocks';
 registerMockedWireService({ register });
-import { RESPONSES } from 'force/lds';
+import { RESPONSES } from 'force/ldsAdaptersUiapi';
 const DEFAULT_RECORD_ID = 'a00R0000000jq5eIAA';
 const DEFAULT_RECORD_TYPE_ID = '012000000000000AAA';
 import picklistRepresentation from './mockPicklistData.json';
@@ -93,7 +93,7 @@ describe('record edit form', () => {
         element.objectApiName = { objectApiName: 'Bad_Guy__c' };
         document.body.appendChild(element);
         return new Promise((resolve, reject) => {
-            element.addEventListener('error', err => {
+            element.addEventListener('error', (err) => {
                 reject(err.detail);
             });
             element.addEventListener('load', () => {
@@ -137,14 +137,14 @@ describe('record edit form', () => {
         document.body.appendChild(element);
         return new Promise((resolve, reject) => {
             element.addEventListener('load', () => {
-                const inputField = shadowQuerySelector(
+                const outputField = shadowQuerySelector(
                     element,
                     'c-output-field'
                 );
 
-                if (inputField) {
+                if (outputField) {
                     try {
-                        const data = inputField.getWiredData();
+                        const data = outputField.getWiredData();
                         expect(data).toEqual(
                             expect.objectContaining({
                                 record: expect.any(Object),
@@ -176,7 +176,7 @@ describe('record edit form', () => {
         element.objectApiName = 'Bad_Guy__c';
         document.body.appendChild(element);
         return new Promise((resolve, reject) => {
-            element.addEventListener('error', err => {
+            element.addEventListener('error', (err) => {
                 reject(err.detail);
             });
             element.addEventListener('load', () => {
@@ -213,7 +213,7 @@ describe('record edit form', () => {
         document.body.appendChild(element);
 
         return new Promise((resolve, reject) => {
-            element.addEventListener('error', err => {
+            element.addEventListener('error', (err) => {
                 reject(err.detail);
             });
             element.addEventListener('load', () => {
@@ -302,6 +302,8 @@ describe('record edit form', () => {
                         expect(window.LAST_SAVED_RECORD.fields.Name).toEqual(
                             'Banana'
                         );
+
+                        expect(input.dirty).toBe(false);
                     } catch (err) {
                         reject(err);
                     }
@@ -458,7 +460,7 @@ describe('record edit form', () => {
                 const form = shadowQuerySelector(element, 'c-record-edit-form');
 
                 const button = shadowQuerySelector(element, 'c-button');
-                form.addEventListener('submit', e => {
+                form.addEventListener('submit', (e) => {
                     e.preventDefault();
                 });
                 // eslint-disable-next-line @lwc/lwc/no-async-operation
@@ -556,7 +558,7 @@ describe('record edit form', () => {
 
                 const button = shadowQuerySelector(element, 'c-button');
                 input.setValue('Banana');
-                form.addEventListener('error', err => {
+                form.addEventListener('error', (err) => {
                     reject(err.detail);
                 });
                 form.addEventListener('success', () => {
@@ -931,7 +933,7 @@ describe('record edit form', () => {
         element.recordId = DEFAULT_RECORD_ID;
         document.body.appendChild(element);
         jest.runAllTimers();
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             element.addEventListener('load', () => {
                 element.showNestedChild = true;
                 resolve();
@@ -939,7 +941,7 @@ describe('record edit form', () => {
             jest.runAllTimers();
         })
             .then(() => {
-                return new Promise(resolve => {
+                return new Promise((resolve) => {
                     element.addEventListener('load', () => {
                         resolve();
                     });
@@ -967,6 +969,80 @@ describe('record edit form', () => {
                     );
                 });
             });
+    });
+
+    it('should wire layout labels to inputField when the form has a layout', () => {
+        const element = createElement('lightningtest-mock-record-edit-holder', {
+            is: MockRecordHolder
+        });
+
+        element.recordId = DEFAULT_RECORD_ID;
+        element.objectApiName = 'Bad_Guy__c';
+        element.layoutType = 'Full';
+        document.body.appendChild(element);
+        return new Promise((resolve, reject) => {
+            element.addEventListener('load', () => {
+                const inputField = shadowQuerySelector(
+                    element,
+                    'lightning-input-field'
+                );
+
+                if (inputField) {
+                    try {
+                        const data = inputField.getWiredData();
+                        expect(data.layoutFieldData).toEqual(
+                            expect.objectContaining({
+                                OwnerId: {
+                                    label: 'Owner'
+                                }
+                            })
+                        );
+                    } catch (e) {
+                        reject(e);
+                    }
+                    resolve();
+                } else {
+                    reject('input field is missing');
+                }
+            });
+        });
+    });
+
+    it('should wire layout labels to outputField when the form has a layout', () => {
+        const element = createElement('lightningtest-mock-record-edit-holder', {
+            is: MockRecordHolder
+        });
+
+        element.recordId = DEFAULT_RECORD_ID;
+        element.objectApiName = 'Bad_Guy__c';
+        element.layoutType = 'Full';
+        document.body.appendChild(element);
+        return new Promise((resolve, reject) => {
+            element.addEventListener('load', () => {
+                const outputField = shadowQuerySelector(
+                    element,
+                    'c-output-field'
+                );
+
+                if (outputField) {
+                    try {
+                        const data = outputField.getWiredData();
+                        expect(data.layoutFieldData).toEqual(
+                            expect.objectContaining({
+                                OwnerId: {
+                                    label: 'Owner'
+                                }
+                            })
+                        );
+                    } catch (e) {
+                        reject(e);
+                    }
+                    resolve();
+                } else {
+                    reject('input field is missing');
+                }
+            });
+        });
     });
 
     it('wires label alignment for auto density and reacts on changing density', () => {

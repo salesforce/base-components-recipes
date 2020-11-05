@@ -27,8 +27,8 @@ export function getImmutable(obj) {
 
 export function getImmutableObservable(promise) {
     return {
-        subscribe: config => {
-            promise.then(value => {
+        subscribe: (config) => {
+            promise.then((value) => {
                 config.next(getImmutable(value));
             }, config.error);
             return {

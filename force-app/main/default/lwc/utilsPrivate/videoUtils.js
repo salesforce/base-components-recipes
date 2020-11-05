@@ -14,7 +14,9 @@ const ALLOWED_DOMAINS = new Set([
     'player.cloudinary.com',
     'fast.wistia.net',
     'i1.adis.ws',
-    's1.adis.ws'
+    's1.adis.ws',
+    'scormanywhere.secure.force.com',
+    'appiniummastertrial.secure.force.com'
 ]);
 
 export function hasOnlyAllowedVideoIframes(htmlString) {
@@ -30,7 +32,7 @@ export function hasOnlyAllowedVideoIframes(htmlString) {
 
         return (
             iframesList.length > 0 &&
-            !iframesList.some(iframe => !isUrlAllowed(iframe.src))
+            !iframesList.some((iframe) => !isUrlAllowed(iframe.src))
         );
     }
     return false;

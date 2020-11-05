@@ -79,6 +79,10 @@ export default class cTree extends LightningElement {
             );
 
             this.syncCurrentFocused();
+
+            if (this._selectedItem === null) {
+                this.setFocusToItem(this._currentFocusedItem, false, false);
+            }
         }
     }
 
@@ -86,7 +90,7 @@ export default class cTree extends LightningElement {
         if (items) {
             this.treedata = new TreeData();
 
-            this._items = items.map(item => {
+            this._items = items.map((item) => {
                 return this.treedata.cloneItems(item);
             });
 
@@ -103,12 +107,10 @@ export default class cTree extends LightningElement {
     syncCurrentFocused() {
         if (this._selectedItem) {
             this._currentFocusedItem = this._selectedItem;
-        } else if (
-            !this._currentFocusedItem ||
-            !this.treedata.isValidCurrent(this._currentFocusedItem)
-        ) {
+        } else {
             this._currentFocusedItem = this._defaultFocused;
         }
+
         this.updateCurrentFocusedChild();
     }
 
@@ -259,7 +261,7 @@ export default class cTree extends LightningElement {
         }
     }
 
-    setFocusToItem(item, shouldFocus = true) {
+    setFocusToItem(item, shouldFocus = true, shouldSelect = true) {
         const currentFocused = this.treedata.getItemAtIndex(
             this.treedata.currentFocusedItemIndex
         );
@@ -279,7 +281,8 @@ export default class cTree extends LightningElement {
             if (this.callbackMap[item.parent]) {
                 this.callbackMap[item.parent].focusCallback(
                     item.key,
-                    shouldFocus
+                    shouldFocus,
+                    shouldSelect
                 );
             }
         }

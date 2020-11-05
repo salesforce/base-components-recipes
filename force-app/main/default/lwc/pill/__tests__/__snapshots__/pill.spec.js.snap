@@ -1,198 +1,190 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`c-pill has error state 1`] = `
-<c-pill
-  class="slds-pill slds-pill_link slds-has-error"
->
+<c-pill>
   #shadow-root(open)
-    <c-primitive-icon
-      class="slds-icon_container slds-pill__icon_container"
-      title="Error"
-    >
-      #shadow-root(open)
-        <svg
-          aria-hidden="true"
-          class="slds-icon slds-icon-text-error"
-          data-key="error"
-          focusable="false"
-        >
-          <use
-            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"
-          />
-        </svg>
-    </c-primitive-icon>
     <span
-      class="slds-assistive-text"
-    >
-      Warning
-    </span>
-    <span
-      class="slds-pill__action"
+      class="slds-pill slds-has-error"
     >
       <span
         class="slds-pill__label"
+        title="Pill Label"
       >
         Pill Label
       </span>
-    </span>
-    <c-button-icon
-      class="slds-pill__remove"
-      tabindex="0"
-    >
-      #shadow-root(open)
-        <button
-          class="slds-button slds-button_icon slds-button_icon-bare"
-          title="Remove"
-          type="button"
-        >
-          <c-primitive-icon>
-            #shadow-root(open)
-              <svg
-                aria-hidden="true"
-                class="slds-button__icon"
-                data-key="close"
-                focusable="false"
-              >
-                <use
-                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-                />
-              </svg>
-          </c-primitive-icon>
-          <span
-            class="slds-assistive-text"
+      <c-button-icon
+        class="slds-pill__remove"
+        tabindex="0"
+      >
+        #shadow-root(open)
+          <button
+            class="slds-button slds-button_icon slds-button_icon-bare"
+            title="Remove"
+            type="button"
           >
-            Remove
-          </span>
-        </button>
-    </c-button-icon>
+            <c-primitive-icon>
+              #shadow-root(open)
+                <svg
+                  aria-hidden="true"
+                  class="slds-button__icon"
+                  data-key="close"
+                  focusable="false"
+                >
+                  <use
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                  />
+                </svg>
+            </c-primitive-icon>
+            <span
+              class="slds-assistive-text"
+            >
+              Press delete or backspace to remove
+            </span>
+          </button>
+      </c-button-icon>
+    </span>
 </c-pill>
 `;
 
 exports[`c-pill is plain pill 1`] = `
-<c-pill
-  class="slds-pill"
->
+<c-pill>
   #shadow-root(open)
     <span
-      class="slds-pill__label"
+      class="slds-pill"
     >
-      Plain Pill Label
-    </span>
-    <c-primitive-icon
-      class="slds-icon_container slds-pill__remove"
-      title="Remove"
-    >
-      #shadow-root(open)
-        <svg
-          aria-hidden="true"
-          class="slds-icon slds-icon_x-small slds-icon-text-default"
-          data-key="close"
-          focusable="false"
-        >
-          <use
-            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-          />
-        </svg>
-    </c-primitive-icon>
-    <span
-      class="slds-assistive-text"
-    >
-      Press delete or backspace to remove
+      <span
+        class="slds-pill__label"
+        title="Plain Pill Label"
+      >
+        Plain Pill Label
+      </span>
+      <c-button-icon
+        class="slds-pill__remove"
+        tabindex="0"
+      >
+        #shadow-root(open)
+          <button
+            class="slds-button slds-button_icon slds-button_icon-bare"
+            title="Remove"
+            type="button"
+          >
+            <c-primitive-icon>
+              #shadow-root(open)
+                <svg
+                  aria-hidden="true"
+                  class="slds-button__icon"
+                  data-key="close"
+                  focusable="false"
+                >
+                  <use
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                  />
+                </svg>
+            </c-primitive-icon>
+            <span
+              class="slds-assistive-text"
+            >
+              Press delete or backspace to remove
+            </span>
+          </button>
+      </c-button-icon>
     </span>
 </c-pill>
 `;
 
 exports[`c-pill should have a label when label prop is provided 1`] = `
-<c-pill
-  class="slds-pill slds-pill_link"
->
+<c-pill>
   #shadow-root(open)
     <span
-      class="slds-pill__action"
+      class="slds-pill"
     >
       <span
         class="slds-pill__label"
+        title="Pill Label"
       >
         Pill Label
       </span>
-    </span>
-    <c-button-icon
-      class="slds-pill__remove"
-      tabindex="0"
-    >
-      #shadow-root(open)
-        <button
-          class="slds-button slds-button_icon slds-button_icon-bare"
-          title="Remove"
-          type="button"
-        >
-          <c-primitive-icon>
-            #shadow-root(open)
-              <svg
-                aria-hidden="true"
-                class="slds-button__icon"
-                data-key="close"
-                focusable="false"
-              >
-                <use
-                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-                />
-              </svg>
-          </c-primitive-icon>
-          <span
-            class="slds-assistive-text"
+      <c-button-icon
+        class="slds-pill__remove"
+        tabindex="0"
+      >
+        #shadow-root(open)
+          <button
+            class="slds-button slds-button_icon slds-button_icon-bare"
+            title="Remove"
+            type="button"
           >
-            Remove
-          </span>
-        </button>
-    </c-button-icon>
+            <c-primitive-icon>
+              #shadow-root(open)
+                <svg
+                  aria-hidden="true"
+                  class="slds-button__icon"
+                  data-key="close"
+                  focusable="false"
+                >
+                  <use
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                  />
+                </svg>
+            </c-primitive-icon>
+            <span
+              class="slds-assistive-text"
+            >
+              Press delete or backspace to remove
+            </span>
+          </button>
+      </c-button-icon>
+    </span>
 </c-pill>
 `;
 
 exports[`c-pill should have href when href prop is provided 1`] = `
-<c-pill
-  class="slds-pill slds-pill_link"
->
+<c-pill>
   #shadow-root(open)
-    <a
-      class="slds-pill__action"
-      href="/path/to/some/where"
+    <span
+      class="slds-pill slds-pill_link"
     >
-      <span
-        class="slds-pill__label"
+      <a
+        class="slds-pill__action"
+        href="/path/to/some/where"
+        title="Pill Label"
       >
-        Pill Label
-      </span>
-    </a>
-    <c-button-icon
-      class="slds-pill__remove"
-      tabindex="0"
-    >
-      #shadow-root(open)
-        <button
-          class="slds-button slds-button_icon slds-button_icon-bare"
-          title="Remove"
-          type="button"
+        <span
+          class="slds-pill__label"
         >
-          <c-primitive-icon>
-            #shadow-root(open)
-              <svg
-                aria-hidden="true"
-                class="slds-button__icon"
-                data-key="close"
-                focusable="false"
-              >
-                <use
-                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
-                />
-              </svg>
-          </c-primitive-icon>
-          <span
-            class="slds-assistive-text"
+          Pill Label
+        </span>
+      </a>
+      <c-button-icon
+        class="slds-pill__remove"
+        tabindex="0"
+      >
+        #shadow-root(open)
+          <button
+            class="slds-button slds-button_icon slds-button_icon-bare"
+            title="Remove"
+            type="button"
           >
-            Remove
-          </span>
-        </button>
-    </c-button-icon>
+            <c-primitive-icon>
+              #shadow-root(open)
+                <svg
+                  aria-hidden="true"
+                  class="slds-button__icon"
+                  data-key="close"
+                  focusable="false"
+                >
+                  <use
+                    xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"
+                  />
+                </svg>
+            </c-primitive-icon>
+            <span
+              class="slds-assistive-text"
+            >
+              Remove
+            </span>
+          </button>
+      </c-button-icon>
+    </span>
 </c-pill>
 `;

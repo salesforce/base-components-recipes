@@ -11,8 +11,13 @@ import { LightningElement, api, track } from 'lwc';
 import LightningPillItem from './pillItem';
 import { keyCodes, normalizeBoolean, normalizeString } from 'c/utilsPrivate';
 import { LightningResizeObserver } from 'c/resizeObserver';
+import formFactor from '@salesforce/client/formFactor';
+import barePillContainer from './barePillContainer.html';
+import standardPillContainer from './standardPillContainer.html';
 
 const PILL_SELECTOR = 'c-pill';
+const BARE = 'bare';
+const STANDARD = 'standard';
 
 const i18n = {
     containerLabel: labelContainerLabel
@@ -32,9 +37,6 @@ export default class cPillContainer extends LightningElement {
 
     connectedCallback() {
         this._connected = true;
-        if (this.variant !== 'bare') {
-            this.classList.add('slds-pill_container');
-        }
     }
 
     disconnectedCallback() {
@@ -42,6 +44,13 @@ export default class cPillContainer extends LightningElement {
         if (this._resizeObserver) {
             this._resizeObserver.disconnect();
         }
+    }
+
+    render() {
+        if (this.variant === BARE || formFactor === 'Small') {
+            return barePillContainer;
+        }
+        return standardPillContainer;
     }
 
     renderedCallback() {
@@ -54,15 +63,25 @@ export default class cPillContainer extends LightningElement {
             this._resizeObserver = this._setupResizeObserver();
         }
 
-        const ul = this.template.querySelector('ul');
-        if (this.pills.length === 0) {
-            ul.tabIndex = 0;
-        } else {
-            ul.tabIndex = -1;
-            this.setFocusedItemTabIndex(0);
+        const groupElm = this.template.querySelector(
+            '.slds-listbox_selection-group'
+        );
 
-            if (this.template.querySelector('ul:focus')) {
-                this.focus();
+        if (groupElm) {
+            groupElm.classList.toggle('slds-is-expanded', this._isExpanded);
+        }
+
+        const ul = this.template.querySelector('ul');
+        if (ul) {
+            if (this.pills.length === 0) {
+                ul.tabIndex = 0;
+            } else {
+                ul.tabIndex = -1;
+                this.setFocusedItemTabIndex(0);
+
+                if (this.template.querySelector('ul:focus')) {
+                    this.focus();
+                }
             }
         }
     }
@@ -73,8 +92,8 @@ export default class cPillContainer extends LightningElement {
 
     set variant(value) {
         this._variant = normalizeString(value, {
-            fallbackValue: 'standard',
-            validValues: ['standard', 'bare']
+            fallbackValue: STANDARD,
+            validValues: [STANDARD, BARE]
         });
     }
 
@@ -100,7 +119,6 @@ export default class cPillContainer extends LightningElement {
 
     set isExpanded(value) {
         this._isExpanded = normalizeBoolean(value);
-        this.classList.toggle('slds-is-expanded', this._isExpanded);
     }
 
     @api items;
@@ -239,7 +257,6 @@ export default class cPillContainer extends LightningElement {
             !this.template.contains(event.relatedTarget)
         ) {
             this._hasFocus = false;
-
             this.dispatchEvent(new CustomEvent('blur'));
         }
     }
@@ -284,6 +301,8 @@ export default class cPillContainer extends LightningElement {
     }
 
     _setupResizeObserver() {
+        const listBox = this.template.querySelector('[role="listbox"]');
+        if (!listBox) return null;
         const resizeObserver = new LightningResizeObserver(() => {
             const visibleHeight = this.getBoundingClientRect().height;
 
@@ -296,7 +315,7 @@ export default class cPillContainer extends LightningElement {
             }
             this._pillsNotFittingCount = notFittingCount;
         });
-        resizeObserver.observe(this.template.querySelector('[role="listbox"]'));
+        resizeObserver.observe(listBox);
         return resizeObserver;
     }
 }

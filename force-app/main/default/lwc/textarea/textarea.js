@@ -183,7 +183,7 @@ export default class cTextarea extends LightningElement {
 
     @api
     reportValidity() {
-        return this._constraint.reportValidity(message => {
+        return this._constraint.reportValidity((message) => {
             this._helpMessage = message;
         });
     }
@@ -217,6 +217,14 @@ export default class cTextarea extends LightningElement {
     blur() {
         if (this._connected) {
             this.inputElement.blur();
+        }
+    }
+
+    @api
+    setRangeText() {
+        if (this._connected) {
+            this.inputElement.setRangeText.apply(this.inputElement, arguments);
+            this.value = this.inputElement.value;
         }
     }
 

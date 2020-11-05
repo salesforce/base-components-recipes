@@ -15,6 +15,7 @@ function createDependencyManager() {
 
 function mockInputField(value, optionsMap) {
     return {
+        setFieldValue: () => {},
         getFieldValue: () => {
             return value;
         },
@@ -788,14 +789,14 @@ describe('dependency manager including checkbox fields', () => {
 
 expect.extend({
     toContainOptions(actual, expected) {
-        const valueExists = valueToCheck =>
-            [...actual].some(actualValue => {
+        const valueExists = (valueToCheck) =>
+            [...actual].some((actualValue) => {
                 return actualValue.value === valueToCheck;
             });
         const lengthCheck = actual.length === expected.length;
         const pass =
             lengthCheck &&
-            [...expected].every(expectedValue => {
+            [...expected].every((expectedValue) => {
                 return valueExists(expectedValue);
             });
 

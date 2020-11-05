@@ -79,7 +79,7 @@ function toDate(value) {
     return dateObj;
 }
 
-const isTimeZonesSupported = (function() {
+const isTimeZonesSupported = (function () {
     try {
         // eslint-disable-next-line new-cap
         Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles' });
@@ -93,7 +93,7 @@ function dateTimeFormatFallback(dto) {
     const format = dto.hasFormattingOptions() ? dto.getSkeleton() : null;
     const { timeZone } = dto.options;
     return {
-        format: value => {
+        format: (value) => {
             if (
                 isValidISODateTimeString(value) &&
                 value.indexOf(TIME_SEPARATOR) < 0
@@ -129,7 +129,7 @@ export function dateTimeFormat(opts) {
     }
 
     return {
-        format: value => {
+        format: (value) => {
             const dtf = getFromCache(options);
             return dtf.format(toDate(value));
         }
