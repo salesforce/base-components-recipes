@@ -17,7 +17,7 @@ describe('getTimeoutUnitsTillInvalid', () => {
 
         expect(getTimeoutUnitsTillInvalid(new Date())).toBe(MINUTE);
 
-        testValues.forEach(delta => {
+        testValues.forEach((delta) => {
             expect(getTimeoutUnitsTillInvalid(Date.now() + delta)).toBe(MINUTE);
             expect(getTimeoutUnitsTillInvalid(Date.now() - delta)).toBe(MINUTE);
         });
@@ -26,7 +26,7 @@ describe('getTimeoutUnitsTillInvalid', () => {
     it('should return minute when delta is minutes', () => {
         const testValues = [MINUTE + 1000, HOUR - 1000];
 
-        testValues.forEach(delta => {
+        testValues.forEach((delta) => {
             expect(getTimeoutUnitsTillInvalid(Date.now() + delta)).toBe(MINUTE);
             expect(getTimeoutUnitsTillInvalid(Date.now() - delta)).toBe(MINUTE);
         });
@@ -35,7 +35,7 @@ describe('getTimeoutUnitsTillInvalid', () => {
     it('should return hour when delta is hours', () => {
         const testValues = [HOUR + 1000, DAY - 1000];
 
-        testValues.forEach(delta => {
+        testValues.forEach((delta) => {
             expect(getTimeoutUnitsTillInvalid(Date.now() + delta)).toBe(HOUR);
             expect(getTimeoutUnitsTillInvalid(Date.now() - delta)).toBe(HOUR);
         });
@@ -44,7 +44,7 @@ describe('getTimeoutUnitsTillInvalid', () => {
     it('should return days when delta is hour or more', () => {
         const testValues = [DAY + 1000, 360 * DAY, 400 * DAY];
 
-        testValues.forEach(delta => {
+        testValues.forEach((delta) => {
             expect(getTimeoutUnitsTillInvalid(Date.now() + delta)).toBe(DAY);
             expect(getTimeoutUnitsTillInvalid(Date.now() - delta)).toBe(DAY);
         });

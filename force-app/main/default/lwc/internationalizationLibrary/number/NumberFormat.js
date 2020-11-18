@@ -15,7 +15,7 @@ export function numberFormat(options) {
     }
 
     return {
-        format: value => {
+        format: (value) => {
             if (value && exceedsSafeLength(value)) {
                 return numberFormatFallback(normalizedOpts).format(value);
             }

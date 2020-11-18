@@ -25,7 +25,7 @@ const defaultProps = {
     value: []
 };
 
-const createCheckboxGroup = props => {
+const createCheckboxGroup = (props) => {
     const element = createElement('c-checkbox-group', { is: Element });
     Object.assign(element, defaultProps, props);
     document.body.appendChild(element);

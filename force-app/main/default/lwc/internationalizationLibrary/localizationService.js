@@ -52,7 +52,7 @@ export function syncUTCToWallTime(date, timeZone) {
     let converted = null;
 
     // eslint-disable-next-line new-cap
-    getLocalizationService().UTCToWallTime(date, timeZone, result => {
+    getLocalizationService().UTCToWallTime(date, timeZone, (result) => {
         converted = result;
     });
     return converted;
@@ -62,7 +62,7 @@ export function syncWallTimeToUTC(date, timeZone) {
     let converted = null;
 
     // eslint-disable-next-line new-cap
-    getLocalizationService().WallTimeToUTC(date, timeZone, result => {
+    getLocalizationService().WallTimeToUTC(date, timeZone, (result) => {
         converted = result;
     });
     return converted;

@@ -190,7 +190,7 @@ describe('record form', () => {
 
                 const fieldNames = Array.prototype.slice
                     .call(inputFields)
-                    .map(field => {
+                    .map((field) => {
                         return field.fieldName;
                     });
                 expect(fieldNames).toEqual(fields);
@@ -231,11 +231,11 @@ describe('record form', () => {
 
                 const fieldNames = Array.prototype.slice
                     .call(inputFields)
-                    .map(field => {
+                    .map((field) => {
                         return field.fieldName;
                     });
                 expect(fieldNames).toEqual(
-                    fields.map(field => {
+                    fields.map((field) => {
                         return field.fieldApiName;
                     })
                 );
@@ -298,7 +298,7 @@ describe('record form', () => {
 
                 const fieldNames = Array.prototype.slice
                     .call(inputFields)
-                    .map(field => {
+                    .map((field) => {
                         return field.fieldName;
                     });
                 expect(fieldNames).toEqual(fields);
@@ -351,7 +351,7 @@ describe('record form', () => {
 
                 const fieldNames = Array.prototype.slice
                     .call(inputFields)
-                    .map(field => {
+                    .map((field) => {
                         return field.fieldName;
                     });
                 expect(fieldNames).toEqual(fields);
@@ -404,7 +404,7 @@ describe('record form', () => {
 
                 const fieldNames = Array.prototype.slice
                     .call(inputFields)
-                    .map(field => {
+                    .map((field) => {
                         return field.fieldName;
                     });
                 expect(fieldNames).toEqual(fields);
@@ -735,7 +735,7 @@ describe('record form', () => {
         });
     });
 
-    it('fires a cancel event on cancel', done => {
+    it('fires a cancel event on cancel', (done) => {
         const element = createForm({
             objectApiName: 'Lead',
             fields: 'Name'
@@ -984,7 +984,7 @@ describe('record form', () => {
         });
 
         function findInFields(fields, fieldName) {
-            return fields.find(field => {
+            return fields.find((field) => {
                 return field.fieldName === fieldName;
             });
         }
@@ -1053,7 +1053,7 @@ describe('record form', () => {
         });
 
         function findInFields(fields, fieldName) {
-            return fields.find(field => {
+            return fields.find((field) => {
                 return field.fieldName === fieldName;
             });
         }

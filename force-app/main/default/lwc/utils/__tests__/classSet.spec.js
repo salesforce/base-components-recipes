@@ -51,130 +51,69 @@ describe('classSet()', () => {
 
     describe('add()', () => {
         it('handles strings', () => {
-            expect(
-                classSet()
-                    .add('foo')
-                    .toString()
-            ).toBe('foo');
+            expect(classSet().add('foo').toString()).toBe('foo');
 
-            expect(
-                classSet('foo')
-                    .add('bar')
-                    .toString()
-            ).toBe('foo bar');
+            expect(classSet('foo').add('bar').toString()).toBe('foo bar');
 
-            expect(
-                classSet({ foo: true })
-                    .add('bar')
-                    .toString()
-            ).toBe('foo bar');
+            expect(classSet({ foo: true }).add('bar').toString()).toBe(
+                'foo bar'
+            );
         });
 
         it('handles objects', () => {
-            expect(
-                classSet()
-                    .add({ foo: true })
-                    .toString()
-            ).toBe('foo');
+            expect(classSet().add({ foo: true }).toString()).toBe('foo');
 
-            expect(
-                classSet('foo')
-                    .add({ bar: true })
-                    .toString()
-            ).toBe('foo bar');
+            expect(classSet('foo').add({ bar: true }).toString()).toBe(
+                'foo bar'
+            );
 
-            expect(
-                classSet({ foo: true })
-                    .add({ bar: true })
-                    .toString()
-            ).toBe('foo bar');
+            expect(classSet({ foo: true }).add({ bar: true }).toString()).toBe(
+                'foo bar'
+            );
         });
 
         it('returns empty string by default', () => {
-            expect(
-                classSet()
-                    .add()
-                    .toString()
-            ).toBe('');
+            expect(classSet().add().toString()).toBe('');
         });
 
         it('returns empty string when given an empty string', () => {
-            expect(
-                classSet()
-                    .add('')
-                    .toString()
-            ).toBe('');
+            expect(classSet().add('').toString()).toBe('');
         });
 
         it('returns empty string when given undefined', () => {
-            expect(
-                classSet()
-                    .add(undefined)
-                    .toString()
-            ).toBe('');
+            expect(classSet().add(undefined).toString()).toBe('');
         });
 
         it('returns empty string when given null', () => {
-            expect(
-                classSet()
-                    .add(null)
-                    .toString()
-            ).toBe('');
+            expect(classSet().add(null).toString()).toBe('');
         });
 
         it('returns empty string when given a boolean', () => {
-            expect(
-                classSet()
-                    .add(false)
-                    .toString()
-            ).toBe('');
-            expect(
-                classSet()
-                    .add(true)
-                    .toString()
-            ).toBe('');
+            expect(classSet().add(false).toString()).toBe('');
+            expect(classSet().add(true).toString()).toBe('');
         });
 
         it('returns empty string when given an empty object', () => {
-            expect(
-                classSet()
-                    .add({})
-                    .toString()
-            ).toBe('');
+            expect(classSet().add({}).toString()).toBe('');
         });
 
         it('supports chaining', () => {
             expect(
-                classSet()
-                    .add('foo')
-                    .add({ bar: true })
-                    .add('baz')
-                    .toString()
+                classSet().add('foo').add({ bar: true }).add('baz').toString()
             ).toBe('foo bar baz');
         });
     });
 
     describe('invert()', () => {
         it('handles strings', () => {
-            expect(
-                classSet('foo')
-                    .add('bar')
-                    .invert()
-                    .toString()
-            ).toBe('');
+            expect(classSet('foo').add('bar').invert().toString()).toBe('');
         });
 
         it('handles objects', () => {
-            expect(
-                classSet({ foo: true })
-                    .invert()
-                    .toString()
-            ).toBe('');
+            expect(classSet({ foo: true }).invert().toString()).toBe('');
 
             expect(
-                classSet({ foo: true, bar: false })
-                    .invert()
-                    .toString()
+                classSet({ foo: true, bar: false }).invert().toString()
             ).toBe('bar');
         });
 

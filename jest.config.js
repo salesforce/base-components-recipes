@@ -1,5 +1,7 @@
 const { jestConfig } = require('@salesforce/sfdx-lwc-jest/config');
 const jestPreset = require('@lwc/jest-preset');
+const setupFilesAfterEnv = jestPreset.setupFilesAfterEnv || [];
+setupFilesAfterEnv.push('<rootDir>/jest-sa11y-setup.js');
 module.exports = {
     ...jestConfig,
     resolver: '<rootDir>/bin/bcr-resolver.js',
@@ -21,5 +23,5 @@ module.exports = {
     },
     testPathIgnorePatterns: ['/node_modules/'],
     setupFiles: ['<rootDir>/bin/jest-setup'],
-    setupFilesAfterEnv: jestPreset.setupFilesAfterEnv
+    setupFilesAfterEnv
 };

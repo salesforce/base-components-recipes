@@ -32,7 +32,7 @@ export default class cButtonGroup extends LightningElement {
 
         button.callbacks.setDeRegistrationCallback(() => {
             const indexToDelete = this.privateButtons.findIndex(
-                el => el.ref === ref
+                (el) => el.ref === ref
             );
 
             this.privateButtons.splice(indexToDelete, 1);

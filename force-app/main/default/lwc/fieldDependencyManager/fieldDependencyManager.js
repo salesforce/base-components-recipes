@@ -89,14 +89,14 @@ function initializeField(fieldName) {
     }
 
     const fieldValue = getFieldValue(fieldName, field.fieldElement);
-    updateDependentFields.call(this, fieldName, fieldValue);
+    updateDependentFields.call(this, fieldName, fieldValue, false);
 }
 
 function handleFieldValueChange(fieldName, fieldValue) {
-    updateDependentFields.call(this, fieldName, fieldValue);
+    updateDependentFields.call(this, fieldName, fieldValue, true);
 }
 
-function updateDependentFields(fieldName, fieldValue) {
+function updateDependentFields(fieldName, fieldValue, clearDependentValue) {
     const dependentFieldNames = this._dependencyMap[fieldName] || [];
     if (!dependentFieldNames.length) {
         return;
@@ -107,6 +107,10 @@ function updateDependentFields(fieldName, fieldValue) {
         const field = this._fieldValues[dependentFieldName];
 
         if (field) {
+            if (clearDependentValue) {
+                field.fieldElement.setFieldValue('');
+            }
+
             const newOptions = getPicklistOptions.call(
                 this,
                 dependentFieldName,
@@ -123,7 +127,7 @@ function updateDependentFields(fieldName, fieldValue) {
 }
 
 function getControllerName(fieldName) {
-    return Object.keys(this._dependencyMap).find(key =>
+    return Object.keys(this._dependencyMap).find((key) =>
         this._dependencyMap[key].includes(fieldName)
     );
 }

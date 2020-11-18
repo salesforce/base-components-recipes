@@ -10,6 +10,7 @@ import labelPillError from '@salesforce/label/c.lightning_LightningPill_error';
 import labelPillRemove from '@salesforce/label/c.lightning_LightningPill_remove';
 import labelPillWarning from '@salesforce/label/c.lightning_LightningPill_warning';
 import labelPillDeleteAndNavigate from '@salesforce/label/c.lightning_LightningPill_deleteAndNavigate';
+import formFactor from '@salesforce/client/formFactor';
 import { LightningElement, api, track } from 'lwc';
 import {
     keyCodes,
@@ -30,6 +31,7 @@ const i18n = {
     pillDeleteAndNavigate: labelPillDeleteAndNavigate
 };
 
+const STANDARD_CONTAINER = 'standard';
 const VARIANT = {
     PLAIN: 'plain',
     PLAIN_LINK: 'plainLink',
@@ -71,20 +73,18 @@ export default class cPill extends LightningElement {
     @track _hasMedia = true;
     @track _hasError;
     @track _tabIndex;
+    @track _standardContainer;
 
     _connected = false;
     _dispatcher = () => {};
 
     render() {
-        switch (this.variant) {
-            case VARIANT.PLAIN:
-                return plain;
-            case VARIANT.PLAIN_LINK:
-                return plainLink;
-            case VARIANT.LINK:
-            default:
-                return link;
+        if (this.isPlainLink) {
+            return plainLink;
+        } else if (this.isPlain) {
+            return plain;
         }
+        return link;
     }
 
     @api get hasError() {
@@ -105,20 +105,6 @@ export default class cPill extends LightningElement {
         this.addEventListener('keydown', this.handleKeypress.bind(this));
     }
 
-    get pillClass() {
-        const cssClass = ['slds-pill'];
-        switch (this.variant) {
-            case VARIANT.PLAIN:
-            case VARIANT.PLAIN_LINK:
-                break;
-            case VARIANT.LINK:
-            default:
-                cssClass.push('slds-pill_link');
-        }
-
-        return cssClass;
-    }
-
     checkMediaElement() {
         if (!this._mediaElement) {
             this._mediaElement = this.template.querySelector('slot');
@@ -128,26 +114,32 @@ export default class cPill extends LightningElement {
         );
     }
     renderedCallback() {
-        const el = this.isPlainLink ? this.template.querySelector('a') : this;
-        this.pillClass.forEach(name => el.classList.add(name));
-
         this._hasMedia = this.checkMediaElement();
+        const wrapper = this.template.querySelector('span');
 
-        classListMutation(this.classList, {
+        classListMutation(wrapper.classList, {
+            'slds-pill': true,
+            'slds-pill_link': this.isPlainLink || this.isLink,
             'slds-has-error': this.hasError
         });
 
         modifyAttribute(this, 'tabindex', this.tabIndex);
         modifyAttribute(this, 'role', this.role);
         modifyAttribute(this, 'aria-selected', this.ariaSelected);
+
+        this.checkAndRemoveContainerClassName();
     }
 
     @api get isPlainLink() {
         return this.variant === VARIANT.PLAIN_LINK;
     }
 
+    get isPlain() {
+        return this.variant === VARIANT.PLAIN || !this.href;
+    }
+
     get isLink() {
-        return this.variant === VARIANT.LINK;
+        return this.variant === VARIANT.LINK && !!this.href;
     }
 
     @api get tabIndex() {
@@ -185,7 +177,7 @@ export default class cPill extends LightningElement {
     get labelElement() {
         if (!this._labelElement) {
             this._labelElement = this.template.querySelector(
-                'a.slds-pill__label'
+                '.slds-pill__label'
             );
         }
         return this._labelElement;
@@ -198,6 +190,10 @@ export default class cPill extends LightningElement {
             );
         }
         return this._removeIconElement;
+    }
+
+    get useRemoveButton() {
+        return !this._standardContainer || formFactor === 'Small';
     }
 
     connectedCallback() {
@@ -234,12 +230,15 @@ export default class cPill extends LightningElement {
 
     handleClick(event) {
         if (event.target === this.removeIconElement) {
-            event.stopPropagation();
-            event.preventDefault();
-            this.handleRemove(event);
+            this.handleRemoveClick(event);
         } else if (this.isPlainLink || this.isLink) {
             this._dispatcher(event);
         }
+    }
+
+    handleRemoveClick(event) {
+        event.preventDefault();
+        this.handleRemove(event);
     }
 
     handleRemove(event) {
@@ -267,11 +266,21 @@ export default class cPill extends LightningElement {
 
     updateLinkInfo(url) {
         updateRawLinkInfo(this, { url: this.makeAbsoluteUrl(url) }).then(
-            linkInfo => {
+            (linkInfo) => {
                 this._url = linkInfo.url;
                 this._dispatcher = linkInfo.dispatcher;
             }
         );
+    }
+
+    checkAndRemoveContainerClassName() {
+        if (this.classList.contains(STANDARD_CONTAINER)) {
+            this._standardContainer = true;
+            this.classList.remove(STANDARD_CONTAINER);
+            if (this.classList.length === 0) {
+                this.removeAttribute('class');
+            }
+        }
     }
 
     makeAbsoluteUrl(url) {

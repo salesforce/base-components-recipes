@@ -9,7 +9,7 @@ import { createElement } from 'lwc';
 import { shadowQuerySelector, querySelectorAll } from 'lightning/testUtils';
 import Element from 'lightningtest/carouselTest';
 
-const createCarousel = attributes => {
+const createCarousel = (attributes) => {
     const element = createElement('lightningtest-carousel-test', {
         is: Element
     });
@@ -50,7 +50,7 @@ const DEFAULT_ITEMS = [
 ];
 
 function assertNthItemActive(n) {
-    return element => {
+    return (element) => {
         const panels = querySelectorAll(element, '.slds-carousel__panel');
         const indicators = querySelectorAll(
             element,

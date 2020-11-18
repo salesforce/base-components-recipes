@@ -8,32 +8,34 @@ exports[`c-card using slots should render with the right markup 1`] = `
         <article
           class="slds-card slds-card_narrow"
         >
-          <header
+          <div
             class="slds-card__header slds-grid"
           >
-            <div
+            <header
               class="slds-media slds-media_center slds-has-flexi-truncate"
             >
               <div
-                class="slds-media__body slds-truncate"
+                class="slds-media__body"
               >
-                <h2>
+                <h2
+                  class="slds-card__header-title"
+                >
                   <span
-                    class="slds-text-heading_small"
+                    class="slds-text-heading_small slds-truncate"
                   >
                     this is the title
                   </span>
                 </h2>
               </div>
-            </div>
-            <div
-              class="slds-no-flex"
-            >
-              <slot
-                name="actions"
-              />
-            </div>
-          </header>
+              <div
+                class="slds-no-flex"
+              >
+                <slot
+                  name="actions"
+                />
+              </div>
+            </header>
+          </div>
           <div
             class="slds-card__body"
           >
@@ -61,18 +63,20 @@ exports[`c-card using slots should render with the right markup 1`] = `
         <article
           class="slds-card"
         >
-          <header
+          <div
             class="slds-card__header slds-grid"
           >
-            <div
+            <header
               class="slds-media slds-media_center slds-has-flexi-truncate"
             >
               <div
-                class="slds-media__body slds-truncate"
+                class="slds-media__body"
               >
-                <h2>
+                <h2
+                  class="slds-card__header-title"
+                >
                   <span
-                    class="slds-text-heading_small"
+                    class="slds-text-heading_small slds-truncate"
                   >
                     <slot
                       name="title"
@@ -80,15 +84,15 @@ exports[`c-card using slots should render with the right markup 1`] = `
                   </span>
                 </h2>
               </div>
-            </div>
-            <div
-              class="slds-no-flex"
-            >
-              <slot
-                name="actions"
-              />
-            </div>
-          </header>
+              <div
+                class="slds-no-flex"
+              >
+                <slot
+                  name="actions"
+                />
+              </div>
+            </header>
+          </div>
           <div
             class="slds-card__body"
           >

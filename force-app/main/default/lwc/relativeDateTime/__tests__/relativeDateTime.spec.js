@@ -8,7 +8,7 @@
 import { createElement } from 'lwc';
 import Element from 'c/relativeDateTime';
 
-const createRelativeDateTime = value => {
+const createRelativeDateTime = (value) => {
     const element = createElement('c-relative-date-time', {
         is: Element
     });
@@ -18,7 +18,7 @@ const createRelativeDateTime = value => {
     return element;
 };
 
-const getText = element => {
+const getText = (element) => {
     return element.shadowRoot.textContent;
 };
 

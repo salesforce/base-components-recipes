@@ -187,7 +187,7 @@ function translateFromLocalizedDigits(input) {
 
 function getNumberFormat() {
     return {
-        format: value => {
+        format: (value) => {
             // eslint-disable-next-line no-console
             console.warn(
                 `The current environment does not support large numbers and the original value of ${value} will be returned.`
@@ -218,7 +218,7 @@ function parseFormattedTime(value) {
     const isAfternoon = ampm.toLowerCase() === 'pm';
 
     values.splice(-1, 1);
-    const allNumbers = values.every(item => !isNaN(item));
+    const allNumbers = values.every((item) => !isNaN(item));
     if ((!isAfternoon && !isBeforeNoon) || !allNumbers) {
         return null;
     }
@@ -257,7 +257,7 @@ function parseFormattedDate(value, format) {
     const year = match[3];
 
     if (format !== DATE_FORMAT.short) {
-        month = MONTH_NAMES.findIndex(item =>
+        month = MONTH_NAMES.findIndex((item) =>
             item.toLowerCase().includes(month.toLowerCase())
         );
 
@@ -285,8 +285,9 @@ function formatDateInternal(value, format, isUTC) {
                 date.getDate()
             )}`;
         case DATE_FORMAT.short:
-            return `${date.getMonth() +
-                1}/${date.getDate()}/${date.getFullYear()}`;
+            return `${
+                date.getMonth() + 1
+            }/${date.getDate()}/${date.getFullYear()}`;
         case DATE_FORMAT.long:
             return `${
                 MONTH_NAMES[date.getMonth()]

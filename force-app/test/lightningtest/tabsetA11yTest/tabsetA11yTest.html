@@ -8,9 +8,7 @@
 <template>
     <c-tabset class="default_tabset">
         <template for:each={tabs} for:item="tab">
-            <c-tab label={tab.label} key={tab.id}>
-                {tab.content}
-            </c-tab>
+            <c-tab label={tab.label} key={tab.id}>{tab.content}</c-tab>
         </template>
     </c-tabset>
 </template>

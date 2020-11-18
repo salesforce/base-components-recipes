@@ -460,7 +460,7 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 2),
-                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
+                set: jest.fn((idx) => {}) // eslint-disable-line no-unused-vars
             });
             const indices = {};
             indices['1.1'] = { key: '1.1' };
@@ -484,7 +484,7 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 1),
-                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
+                set: jest.fn((idx) => {}) // eslint-disable-line no-unused-vars
             });
             const indices = {};
             indices['1'] = { key: '1' };
@@ -508,7 +508,7 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 0),
-                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
+                set: jest.fn((idx) => {}) // eslint-disable-line no-unused-vars
             });
             const indices = {};
             indices['1'] = { key: '1' };
@@ -541,7 +541,7 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 0),
-                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
+                set: jest.fn((idx) => {}) // eslint-disable-line no-unused-vars
             });
             const indices = {};
             indices['2'] = { key: '2' };
@@ -565,7 +565,7 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 4),
-                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
+                set: jest.fn((idx) => {}) // eslint-disable-line no-unused-vars
             });
             const indices = {};
             indices['3.3'] = { key: '3.3' };
@@ -589,7 +589,7 @@ describe('finds the nodes to focus correctly', () => {
 
             Object.defineProperty(data, '_currentFocusedItemIndex', {
                 get: jest.fn(() => 5),
-                set: jest.fn(idx => {}) // eslint-disable-line no-unused-vars
+                set: jest.fn((idx) => {}) // eslint-disable-line no-unused-vars
             });
             const indices = {};
             indices['2'] = { key: '2' };
@@ -758,7 +758,7 @@ describe('updateExpanded', () => {
         const data = new TreeData();
 
         const indices = {
-            '1': {
+            1: {
                 index: 0,
                 key: '1',
                 parent: '0',
@@ -766,7 +766,7 @@ describe('updateExpanded', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '1.1': {
+            1.1: {
                 index: 1,
                 key: '1.1',
                 parent: '1',
@@ -774,7 +774,7 @@ describe('updateExpanded', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '2': {
+            2: {
                 index: 7,
                 key: '2',
                 parent: '0',
@@ -796,7 +796,7 @@ describe('updateExpanded', () => {
         const data = new TreeData();
 
         const indices = {
-            '1': {
+            1: {
                 index: 0,
                 key: '1',
                 parent: '0',
@@ -804,7 +804,7 @@ describe('updateExpanded', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '1.1': {
+            1.1: {
                 index: 1,
                 key: '1.1',
                 parent: '1',
@@ -812,7 +812,7 @@ describe('updateExpanded', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '2': {
+            2: {
                 index: 7,
                 key: '2',
                 parent: '0',
@@ -834,7 +834,7 @@ describe('updateExpanded', () => {
         const data = new TreeData();
 
         const indices = {
-            '1': {
+            1: {
                 index: 0,
                 key: '1',
                 parent: '0',
@@ -842,7 +842,7 @@ describe('updateExpanded', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '1.1': {
+            1.1: {
                 index: 1,
                 key: '1.1',
                 parent: '1',
@@ -850,7 +850,7 @@ describe('updateExpanded', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '1.2': {
+            1.2: {
                 index: 2,
                 key: '1.2',
                 parent: '1',
@@ -898,7 +898,7 @@ describe('updateExpanded', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '2': {
+            2: {
                 index: 7,
                 key: '2',
                 parent: '0',
@@ -926,7 +926,7 @@ describe('syncSelectedToData', () => {
         const data = new TreeData();
 
         const indices = {
-            '1': {
+            1: {
                 index: 0,
                 key: '1',
                 parent: '0',
@@ -934,7 +934,7 @@ describe('syncSelectedToData', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '1.1': {
+            1.1: {
                 index: 1,
                 key: '1.1',
                 parent: '1',
@@ -942,7 +942,7 @@ describe('syncSelectedToData', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '2': {
+            2: {
                 index: 2,
                 key: '2',
                 parent: '0',
@@ -950,7 +950,7 @@ describe('syncSelectedToData', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '2.1': {
+            2.1: {
                 index: 3,
                 key: '2.1',
                 parent: '1',
@@ -982,7 +982,7 @@ describe('syncSelectedToData', () => {
         const data = new TreeData();
 
         const indices = {
-            '1': {
+            1: {
                 index: 0,
                 key: '1',
                 parent: '0',
@@ -990,7 +990,7 @@ describe('syncSelectedToData', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '1.1': {
+            1.1: {
                 index: 1,
                 key: '1.1',
                 parent: '1',
@@ -998,7 +998,7 @@ describe('syncSelectedToData', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '2': {
+            2: {
                 index: 2,
                 key: '2',
                 parent: '0',
@@ -1006,7 +1006,7 @@ describe('syncSelectedToData', () => {
                 treeNode: { nodeRef: { expanded: false } }
             },
 
-            '2.1': {
+            2.1: {
                 index: 3,
                 key: '2.1',
                 parent: '1',

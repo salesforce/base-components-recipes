@@ -34,7 +34,7 @@ const validIconNames = [
 
 describe('computeSldsClass()', () => {
     it('returns empty string for invalid icon name', () => {
-        invalidIconNames.forEach(invalidName => {
+        invalidIconNames.forEach((invalidName) => {
             expect(computeSldsClass(invalidName)).toBe('');
         });
     });
@@ -51,7 +51,7 @@ describe('computeSldsClass()', () => {
 
 describe('getCategory()', () => {
     it('returns empty string for invalid category', () => {
-        invalidIconNames.forEach(invalidName => {
+        invalidIconNames.forEach((invalidName) => {
             expect(getCategory(invalidName)).toBe('');
         });
     });
@@ -63,7 +63,7 @@ describe('getCategory()', () => {
 
 describe('getIconPath()', () => {
     it('returns empty string for invalid icon name', () => {
-        invalidIconNames.forEach(invalidName => {
+        invalidIconNames.forEach((invalidName) => {
             expect(getIconPath(invalidName)).toBe('');
         });
     });
@@ -116,13 +116,13 @@ describe('getName()', () => {
 
 describe('isValidName()', () => {
     it('returns false for invalid name', () => {
-        invalidIconNames.forEach(invalidName => {
+        invalidIconNames.forEach((invalidName) => {
             expect(isValidName(invalidName)).toBe(false);
         });
     });
 
     it('returns true for valid name', () => {
-        validIconNames.forEach(validName => {
+        validIconNames.forEach((validName) => {
             expect(isValidName(validName)).toBe(true);
         });
     });

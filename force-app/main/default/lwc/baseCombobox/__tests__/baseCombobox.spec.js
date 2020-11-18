@@ -74,6 +74,15 @@ describe('c-base-combobox', () => {
             expect(element).toMatchSnapshot();
         });
 
+        it('with autocomplete is off by default', () => {
+            const element = createComponent({
+                label: 'List Box Example',
+                items: exampleData.exampleItems
+            });
+
+            expect(element.autocomplete).toBe('off');
+        });
+
         it('renders correctly an "option-card" item with all attributes', () => {
             const element = createComponent({
                 label: 'List Box Example',
@@ -390,10 +399,10 @@ describe('c-base-combobox', () => {
 
                 const ids = [].slice
                     .call(selectableOptions)
-                    .map(el => el.getAttribute('data-item-id'));
+                    .map((el) => el.getAttribute('data-item-id'));
                 expect(ids).toHaveLength(selectableItemsAmount);
 
-                const indexes = ids.map(idString =>
+                const indexes = ids.map((idString) =>
                     parseInt(idString.replace(`${id}-`, ''), 10)
                 );
 
@@ -477,7 +486,7 @@ describe('c-base-combobox', () => {
 
                 expect(items.indexOf(selectedItem)).toBe(
                     exampleData.exampleDataWithHighlightedCard.findIndex(
-                        e => e.highlight
+                        (e) => e.highlight
                     )
                 );
             });
@@ -650,7 +659,7 @@ describe('c-base-combobox', () => {
                 iconAlternativeText: 'Account',
                 label: 'Some Choice'
             }
-        ].forEach(inputPill => {
+        ].forEach((inputPill) => {
             // eslint-disable-next-line jest/valid-describe
             describe(inputPill ? 'with pill' : 'without pill', () => {
                 [

@@ -26,8 +26,8 @@ function extractElements(root, selector) {
 
 function extractContent(elements) {
     return elements
-        .map(element => element.textContent)
-        .filter(text => text.length)
+        .map((element) => element.textContent)
+        .filter((text) => text.length)
         .join(CONTENT_SEPARATOR);
 }
 
@@ -80,6 +80,7 @@ function removeAriaRefWhenPossible(elm, attrName, computedIds) {
 
 export class ContentMutation {
     constructor(component) {
+        this.component = component;
         this.template = component.template;
         this.isNative = this.template.constructor
             .toString()
@@ -93,7 +94,7 @@ export class ContentMutation {
         const selector = (refs + '')
             .trim()
             .split(/\s+/)
-            .map(ref => `[id*="${ref}"]`)
+            .map((ref) => `[id*="${ref}"]`)
             .join(',');
         const liveId = { selector, callback };
         this.liveIds[refs] = liveId;
@@ -120,18 +121,18 @@ export class ContentMutation {
             attrState.outerSelector = (ids + '')
                 .trim()
                 .split(/\s+/)
-                .map(ref => `#${ref}`)
+                .map((ref) => `#${ref}`)
                 .join(',');
             attrState.placeholder = document.createElement('span');
             attrState.placeholder.id = `auto-link-${attrName}-${this.guid}`;
         }
-        if (this.template.host.parentNode) {
+        if (this.component.isConnected) {
             this.privateUpdate(attrName);
         }
     }
 
     sync() {
-        if (!this.template.host.parentNode) {
+        if (!this.component.isConnected) {
             throw new Error(
                 `Invalid sync invocation. It can only be invoked during renderedCallback().`
             );
@@ -152,7 +153,7 @@ export class ContentMutation {
 
     privateExtractIds(elements) {
         return elements
-            .map(el => {
+            .map((el) => {
                 return el.getAttribute('id');
             })
             .join(' ');
@@ -225,7 +226,7 @@ export class ContentMutation {
         this.root = this.template.host.getRootNode();
 
         const mo = new MutationObserver(() => {
-            if (!this.template.host.parentNode) {
+            if (!this.component.isConnected) {
                 return;
             }
             this.sync();

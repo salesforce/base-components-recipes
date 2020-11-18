@@ -6,42 +6,42 @@
  -->
 
 <template>
-    <template if:false={_hasError}>
-        <template if:true={_hasMedia}>
-            <span class="slds-pill__icon_container">
-                <slot></slot>
-            </span>
+    <span>
+        <template if:false={_hasError}>
+            <template if:true={_hasMedia}>
+                <span class="slds-pill__icon_container">
+                    <slot></slot>
+                </span>
+            </template>
         </template>
-    </template>
-    <template if:true={_hasError}>
-        <c-primitive-icon
-            class="slds-icon_container slds-pill__icon_container"
-            title={i18n.pillError}
-            icon-name="utility:error"
+        <template if:true={_hasError}>
+            <c-primitive-icon
+                class="slds-icon_container slds-pill__icon_container"
+                title={i18n.pillError}
+                icon-name="utility:error"
+                variant="bare"
+                svg-class="slds-icon slds-icon-text-error"
+            >
+            </c-primitive-icon>
+            <span class="slds-assistive-text">{i18n.pillWarning}</span>
+        </template>
+        <template if:true={hasHref}>
+            <a href={href} class="slds-pill__action" title={label}>
+                <span class="slds-pill__label">{label}</span>
+            </a>
+        </template>
+        <template if:false={hasHref}>
+            <span class="slds-pill__label" title={label}>{label}</span>
+        </template>
+        <c-button-icon
+            icon-name="utility:close"
+            class="slds-pill__remove"
             variant="bare"
-            svg-class="slds-icon slds-icon-text-error"
+            onclick={handleRemove}
+            title={i18n.pillRemove}
+            tabindex={_tabIndex}
+            alternative-text={i18n.pillRemove}
         >
-        </c-primitive-icon>
-        <span class="slds-assistive-text">{i18n.pillWarning}</span>
-    </template>
-    <template if:true={hasHref}>
-        <a href={href} class="slds-pill__action">
-            <span class="slds-pill__label">{label}</span>
-        </a>
-    </template>
-    <template if:false={hasHref}>
-        <span class="slds-pill__action">
-            <span class="slds-pill__label">{label}</span>
-        </span>
-    </template>
-    <c-button-icon
-        icon-name="utility:close"
-        class="slds-pill__remove"
-        variant="bare"
-        onclick={handleRemove}
-        title={i18n.pillRemove}
-        tabindex={_tabIndex}
-        alternative-text={i18n.pillRemove}
-    >
-    </c-button-icon>
+        </c-button-icon>
+    </span>
 </template>

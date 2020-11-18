@@ -69,7 +69,7 @@ export default class cTabBar extends LightningElement {
             if (this._resizeObserver) {
                 this._resizeObserver.disconnect();
 
-                this._allTabs.forEach(tab => {
+                this._allTabs.forEach((tab) => {
                     tab.visible = true;
                 });
             }
@@ -83,7 +83,7 @@ export default class cTabBar extends LightningElement {
 
     set tabHeaders(tabHeaders = []) {
         this._tabHeaders = tabHeaders;
-        const allTabs = tabHeaders.map(tab => {
+        const allTabs = tabHeaders.map((tab) => {
             const classNames = this._tabClass({});
             const linkClassNames = this.computedLinkClass;
             return {
@@ -109,7 +109,7 @@ export default class cTabBar extends LightningElement {
         let selectedTab = allTabs[0];
         if (this._selectedTab) {
             selectedTab = allTabs.find(
-                tab => tab.value === this._selectedTab.value
+                (tab) => tab.value === this._selectedTab.value
             );
 
             if (!selectedTab) {
@@ -182,7 +182,7 @@ export default class cTabBar extends LightningElement {
     }
 
     get _visibleTabs() {
-        return this._allTabs.filter(tab => tab.visible);
+        return this._allTabs.filter((tab) => tab.visible);
     }
 
     get computedAriaOrientation() {
@@ -235,7 +235,7 @@ export default class cTabBar extends LightningElement {
     }
 
     _findTabByValue(tabValue) {
-        return this._allTabs.find(tab => tab.value === tabValue);
+        return this._allTabs.find((tab) => tab.value === tabValue);
     }
 
     _selectTabAndFireSelectEvent(tabValue, options) {
@@ -308,13 +308,13 @@ export default class cTabBar extends LightningElement {
 
         if (this._selectedTab) {
             currentFocusedIndex = this._visibleTabs.findIndex(
-                tab => tab.value === this._selectedTab.value
+                (tab) => tab.value === this._selectedTab.value
             );
         }
         handleKeyDownOnTabList(event, currentFocusedIndex, {
             isVerticalOrientation: () => this.isVerticalVariant,
             totalTabs: () => this._visibleTabs.length,
-            selectTabIndex: index => {
+            selectTabIndex: (index) => {
                 const tab = this._visibleTabs[index];
                 this._selectTabAndFireSelectEvent(tab.value, {
                     hasFocus: true
@@ -344,9 +344,9 @@ export default class cTabBar extends LightningElement {
     _synchronizeA11y() {
         const tabLinks = this.template.querySelectorAll('a[role="tab"]');
 
-        tabLinks.forEach(tabLink => {
+        tabLinks.forEach((tabLink) => {
             const tabData = this._allTabs.find(
-                tab => tabLink.getAttribute('data-tab-value') === tab.value
+                (tab) => tabLink.getAttribute('data-tab-value') === tab.value
             );
 
             tabLink.setAttribute('id', tabData.linkId);
@@ -380,7 +380,7 @@ export default class cTabBar extends LightningElement {
     }
 
     _queueOverflow() {
-        this._allTabs.forEach(tab => {
+        this._allTabs.forEach((tab) => {
             tab.visible = true;
         });
         // eslint-disable-next-line @lwc/lwc/no-async-operation
@@ -421,7 +421,7 @@ export default class cTabBar extends LightningElement {
             overflowWidth: overflowElement.getBoundingClientRect().width
         });
 
-        overflowData.overflowItems.forEach(overflowItem => {
+        overflowData.overflowItems.forEach((overflowItem) => {
             if (overflowItem.visible) {
                 overflowItem.visible = false;
             }
@@ -429,7 +429,7 @@ export default class cTabBar extends LightningElement {
         this._hasOverflow =
             overflowData.overflowItems && overflowData.overflowItems.length > 0;
 
-        overflowData.visibleItems.forEach(overflowItem => {
+        overflowData.visibleItems.forEach((overflowItem) => {
             if (!overflowItem.visible) {
                 overflowItem.visible = true;
             }

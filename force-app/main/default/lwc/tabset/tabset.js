@@ -98,7 +98,7 @@ export default class cTabset extends LightningElement {
                 return;
             }
             const index = this._tabHeaders.findIndex(
-                existingTab => existingTab.value === tabValue
+                (existingTab) => existingTab.value === tabValue
             );
 
             if (index >= 0) {
@@ -188,7 +188,7 @@ export default class cTabset extends LightningElement {
         const newTabValue = changedTab.value;
         const currentTabValue = changedTab.dataTabValue;
         const matchingTabHeader = this._tabHeaders.find(
-            tabHeader => tabHeader.value === currentTabValue
+            (tabHeader) => tabHeader.value === currentTabValue
         );
 
         if (matchingTabHeader) {

@@ -8,7 +8,7 @@
 import { createElement } from 'lwc';
 import Element from 'c/accordionSection';
 
-const createAccordionSection = props => {
+const createAccordionSection = (props) => {
     const element = createElement('c-accordion-section', {
         is: Element
     });
@@ -72,7 +72,7 @@ describe('c-accordion-section', () => {
     });
 
     describe('accordion section behavior', () => {
-        const createSectionWithMock = mock => {
+        const createSectionWithMock = (mock) => {
             const element = createElement('c-accordion-section', {
                 is: Element
             });
@@ -152,7 +152,7 @@ describe('c-accordion-section', () => {
     });
 
     describe('accordion section interactions', () => {
-        const createSectionWithMock = mock => {
+        const createSectionWithMock = (mock) => {
             const element = createElement('c-accordion-section', {
                 is: Element
             });
@@ -177,7 +177,7 @@ describe('c-accordion-section', () => {
 
         it('should notify of section select on button click', () => {
             const sectionObserver = createSectionObserver();
-            const accordionHandlerMock = jest.fn(evt =>
+            const accordionHandlerMock = jest.fn((evt) =>
                 evt.detail.ackParentAccordion(sectionObserver)
             );
 
@@ -189,7 +189,7 @@ describe('c-accordion-section', () => {
             });
         });
 
-        ['up', 'left', 'down', 'right'].forEach(keyDesc => {
+        ['up', 'left', 'down', 'right'].forEach((keyDesc) => {
             const keyCodeMap = {
                 left: 37,
                 up: 38,
@@ -199,7 +199,7 @@ describe('c-accordion-section', () => {
 
             it(`should notify of section keynav on ${keyDesc} keydown`, () => {
                 const sectionObserver = createSectionObserver();
-                const accordionHandlerMock = jest.fn(evt =>
+                const accordionHandlerMock = jest.fn((evt) =>
                     evt.detail.ackParentAccordion(sectionObserver)
                 );
 
@@ -225,7 +225,7 @@ describe('c-accordion-section', () => {
 
         it('should NOT notify of section keynav on any other than arrow keydown', () => {
             const sectionObserver = createSectionObserver();
-            const accordionHandlerMock = jest.fn(evt =>
+            const accordionHandlerMock = jest.fn((evt) =>
                 evt.detail.ackParentAccordion(sectionObserver)
             );
 
@@ -244,7 +244,7 @@ describe('c-accordion-section', () => {
 
         it('should notify of section deregister when element is removed form dom', () => {
             const sectionObserver = createSectionObserver();
-            const accordionHandlerMock = jest.fn(evt =>
+            const accordionHandlerMock = jest.fn((evt) =>
                 evt.detail.ackParentAccordion(sectionObserver)
             );
 

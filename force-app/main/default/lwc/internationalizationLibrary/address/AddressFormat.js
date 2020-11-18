@@ -754,13 +754,13 @@ var AddressFormatPattern = Object.freeze({
     }
 });
 
-var classCallCheck = function(instance, Constructor) {
+var classCallCheck = function (instance, Constructor) {
     if (!(instance instanceof Constructor)) {
         throw new TypeError('Cannot call a class as a function');
     }
 };
 
-var createClass = (function() {
+var createClass = (function () {
     function defineProperties(target, props) {
         for (var i = 0; i < props.length; i++) {
             var descriptor = props[i];
@@ -771,7 +771,7 @@ var createClass = (function() {
         }
     }
 
-    return function(Constructor, protoProps, staticProps) {
+    return function (Constructor, protoProps, staticProps) {
         if (protoProps) defineProperties(Constructor.prototype, protoProps);
         if (staticProps) defineProperties(Constructor, staticProps);
         return Constructor;
@@ -785,7 +785,7 @@ var AddressTokenTypes = Object.freeze({
     GROUP: Symbol('group')
 });
 
-var AddressToken = (function() {
+var AddressToken = (function () {
     function AddressToken(type, string, pattern) {
         classCallCheck(this, AddressToken);
 
@@ -1224,7 +1224,7 @@ var address = {
         }
 
         if (!values || !Array.isArray(values)) return false;
-        return values.some(function(value) {
+        return values.some(function (value) {
             if (!value) return false;
 
             var _iteratorNormalCompletion = true;

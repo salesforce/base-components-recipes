@@ -73,7 +73,7 @@ describe('getCompoundFields', () => {
         const fields = getCompoundFields(
             'Name',
             store.record,
-            store.objectInfo
+            store.objectInfos.Lead
         );
 
         expect(fields).toEqual(['FirstName', 'LastName', 'Salutation']);
@@ -83,7 +83,7 @@ describe('getCompoundFields', () => {
         const fields = getCompoundFields(
             'Name',
             store.record,
-            store.objectInfo
+            store.objectInfos.Lead
         );
 
         expect(fields).toEqual(['FirstName', 'LastName', 'Salutation']);
@@ -108,31 +108,31 @@ describe('isPersonNameField', () => {
 
 describe('compoundFieldIsUpdateable', () => {
     it('returns true for a name field if all fields are updateable', () => {
-        Object.keys(store.objectInfo.fields).forEach(key => {
+        Object.keys(store.objectInfos.Lead.fields).forEach((key) => {
             if (key.match(/FirstName|LastName|Salutation/)) {
-                store.objectInfo.fields[key].updateable = true;
+                store.objectInfos.Lead.fields[key].updateable = true;
             }
         });
         expect(
             compoundFieldIsUpdateable(
                 ['FirstName', 'LastName', 'Salutation'],
                 null,
-                store.objectInfo
+                store.objectInfos.Lead
             )
         ).toEqual(true);
     });
 
     it('returns false for a name field if any field is not updateable', () => {
-        Object.keys(store.objectInfo.fields).forEach(key => {
+        Object.keys(store.objectInfos.Lead.fields).forEach((key) => {
             if (key.match(/FirstName|LastName|Salutation/)) {
-                store.objectInfo.fields[key].updateable = false;
+                store.objectInfos.Lead.fields[key].updateable = false;
             }
         });
         expect(
             compoundFieldIsUpdateable(
                 ['FirstName', 'LastName', 'Salutation'],
                 null,
-                store.objectInfo
+                store.objectInfos.Lead
             )
         ).toEqual(false);
     });
@@ -140,31 +140,31 @@ describe('compoundFieldIsUpdateable', () => {
 
 describe('compoundFieldIsCreateable', () => {
     it('returns true for a name field if all fields are createable', () => {
-        Object.keys(store.objectInfo.fields).forEach(key => {
+        Object.keys(store.objectInfos.Lead.fields).forEach((key) => {
             if (key.match(/FirstName|LastName|Salutation/)) {
-                store.objectInfo.fields[key].createable = true;
+                store.objectInfos.Lead.fields[key].createable = true;
             }
         });
         expect(
             compoundFieldIsCreateable(
                 ['FirstName', 'LastName', 'Salutation'],
                 null,
-                store.objectInfo
+                store.objectInfos.Lead
             )
         ).toEqual(true);
     });
 
     it('returns false for a name field if any field is not createable', () => {
-        Object.keys(store.objectInfo.fields).forEach(key => {
+        Object.keys(store.objectInfos.Lead.fields).forEach((key) => {
             if (key.match(/FirstName|LastName|Salutation/)) {
-                store.objectInfo.fields[key].createable = false;
+                store.objectInfos.Lead.fields[key].createable = false;
             }
         });
         expect(
             compoundFieldIsCreateable(
                 ['FirstName', 'LastName', 'Salutation'],
                 null,
-                store.objectInfo
+                store.objectInfos.Lead
             )
         ).toEqual(false);
     });
@@ -172,7 +172,7 @@ describe('compoundFieldIsCreateable', () => {
 
 describe('isCompoundField', () => {
     it('returns true for a standard name field', () => {
-        const isCompound = isCompoundField('Name', store.objectInfo);
+        const isCompound = isCompoundField('Name', store.objectInfos.Lead);
         expect(isCompound).toEqual(true);
     });
 
@@ -202,7 +202,7 @@ describe('getUiField', () => {
         const compoundField = getUiField(
             'Name',
             store.record,
-            store.objectInfo
+            store.objectInfos.Lead
         );
 
         expect(compoundField.value).toEqual({
@@ -218,26 +218,57 @@ describe('getUiField', () => {
 });
 
 describe('getFieldsForLayout', () => {
-    it('returns the field list for the Full layout', () => {
-        const fields = getFieldsForLayout(
-            store.layouts.Lead.Full.View,
-            store.objectInfo
-        );
+    it('should return the field list with their layout labels when getting the fields for the Full layout', () => {
+        const fields = getFieldsForLayout(store, 'Lead', 'Full');
+        expect(fields).toEqual({
+            Address: {
+                label: 'Address'
+            },
 
-        expect(fields).toEqual([
-            'OwnerId',
-            'Status',
-            'Name',
-            'Phone',
-            'Company',
-            'Email',
-            'Title',
-            'Rating',
-            'Address',
-            'Website',
-            'AnnualRevenue',
-            'Description'
-        ]);
+            AnnualRevenue: {
+                label: 'Annual Revenue'
+            },
+
+            Company: {
+                label: 'Company'
+            },
+
+            Description: {
+                label: 'Description'
+            },
+
+            Email: {
+                label: 'Email'
+            },
+
+            Name: {
+                label: 'Name'
+            },
+
+            OwnerId: {
+                label: 'Lead Owner'
+            },
+
+            Phone: {
+                label: 'Phone'
+            },
+
+            Rating: {
+                label: 'Rating'
+            },
+
+            Status: {
+                label: 'Lead Status'
+            },
+
+            Title: {
+                label: 'Title'
+            },
+
+            Website: {
+                label: 'Website'
+            }
+        });
     });
 });
 
@@ -246,7 +277,7 @@ describe('reference utils', () => {
         const referenceInfo = getUiField(
             'OwnerId',
             store.record,
-            store.objectInfo
+            store.objectInfos.Lead
         );
 
         expect(referenceInfo).toEqual(
@@ -259,7 +290,7 @@ describe('reference utils', () => {
     it('gets the reference relationships from an objectInfo', () => {
         const relationships = getReferenceRelationships(
             ['Name', 'OwnerId', 'CreatedById', 'State'],
-            store.objectInfo
+            store.objectInfos.Lead
         );
 
         expect(relationships).toEqual({

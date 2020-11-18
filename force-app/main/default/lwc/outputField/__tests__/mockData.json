@@ -76,6 +76,22 @@
                 "dataType": "Picklist",
                 "label": "Salutation"
             },
+            "OwnerId": {
+                "apiName": "OwnerId",
+                "compound": false,
+                "compoundComponentName": null,
+                "compoundFieldName": null,
+                "dataType": "Reference",
+                "label": "Owner ID",
+                "reference": true,
+                "referenceToInfos": [
+                    {
+                        "apiName": "User",
+                        "nameFields": ["FirstName", "LastName", "Name"]
+                    }
+                ],
+                "relationshipName": "Owner"
+            },
             "BillingAddress": {
                 "apiName": "BillingAddress",
                 "compound": true,
@@ -190,6 +206,50 @@
             }
         }
     },
+    "layouts": {
+        "entity": {
+            "012000000000000AAA": {
+                "Full": {
+                    "View": {
+                        "id": "00hxx000000000LAAQ",
+                        "layoutType": "Full",
+                        "mode": "View",
+                        "sections": [
+                            {
+                                "collapsible": false,
+                                "columns": 2,
+                                "heading": "Information",
+                                "id": "01Bxx000000000wEAA",
+                                "layoutRows": [
+                                    {
+                                        "layoutItems": [
+                                            {
+                                                "editableForNew": false,
+                                                "editableForUpdate": false,
+                                                "label": "Entity Owner",
+                                                "layoutComponents": [
+                                                    {
+                                                        "apiName": "OwnerId",
+                                                        "componentType": "Field",
+                                                        "label": "Owner ID"
+                                                    }
+                                                ],
+                                                "lookupIdApiName": "OwnerId",
+                                                "required": false,
+                                                "sortable": false
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "rows": 4,
+                                "useHeading": false
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
     "record": {
         "apiName": "entity",
         "fields": {
@@ -236,6 +296,10 @@
             "Salutation": {
                 "displayValue": "Mister",
                 "value": "Mr."
+            },
+            "OwnerId": {
+                "displayValue": null,
+                "value": "005R0000000F9tkIAC"
             },
             "BillingCity": {
                 "displayValue": null,

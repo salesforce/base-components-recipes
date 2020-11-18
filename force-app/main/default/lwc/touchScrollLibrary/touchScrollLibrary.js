@@ -70,11 +70,11 @@ export class TouchScroller {
     initialize() {
         if (!this._initialized && this._target) {
             if (TouchScroller.isMobile()) {
-                this._target.addEventListener('touchstart', event =>
+                this._target.addEventListener('touchstart', (event) =>
                     this.handleTouchStart(event)
                 );
 
-                this._target.addEventListener('touchmove', event =>
+                this._target.addEventListener('touchmove', (event) =>
                     this.handleTouchMove(event)
                 );
             }

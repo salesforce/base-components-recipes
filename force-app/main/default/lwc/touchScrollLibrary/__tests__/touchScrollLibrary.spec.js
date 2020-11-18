@@ -46,7 +46,7 @@ describe('c-touch-scroll-library', () => {
             const target = createMockElement('target');
             TouchScroller.isMobile = jest.fn(() => false);
             const touchScroller = new TouchScroller(target);
-            const hasExcludedListeners = touchListeners.some(current => {
+            const hasExcludedListeners = touchListeners.some((current) => {
                 const handlers = touchScroller._target.listeners[current];
                 return handlers && handlers.length === 1;
             });
@@ -59,7 +59,7 @@ describe('c-touch-scroll-library', () => {
             const target = createMockElement('target');
             TouchScroller.isMobile = jest.fn(() => true);
             const touchScroller = new TouchScroller(target);
-            const hasExpectedListeners = touchListeners.every(current => {
+            const hasExpectedListeners = touchListeners.every((current) => {
                 const handlers = touchScroller._target.listeners[current];
                 return handlers && handlers.length === 1;
             });

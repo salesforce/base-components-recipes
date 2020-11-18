@@ -101,7 +101,7 @@ export default class cTreeItem extends LightningElement {
     get computedButtonClass() {
         return classSet('slds-button slds-button_icon slds-m-right_x-small ')
             .add({
-                'slds-is-disabled': this.isLeaf || this.isDisabled
+                'slds-hidden': this.isLeaf || this.isDisabled
             })
             .toString();
     }
@@ -219,7 +219,7 @@ export default class cTreeItem extends LightningElement {
         return childNum - 1;
     }
 
-    makeChildFocusable(childKey, shouldFocus) {
+    makeChildFocusable(childKey, shouldFocus, shouldSelect) {
         const child = this.getImmediateChildItem(childKey);
         if (child) {
             if (child.tabIndex !== '0') {
@@ -228,7 +228,9 @@ export default class cTreeItem extends LightningElement {
             if (shouldFocus) {
                 child.focus();
             }
-            child.ariaSelected = true;
+            if (shouldSelect) {
+                child.ariaSelected = true;
+            }
         }
     }
 

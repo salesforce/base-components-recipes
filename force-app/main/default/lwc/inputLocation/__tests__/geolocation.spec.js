@@ -9,7 +9,7 @@ import { validateCoordinate } from '../geolocation';
 
 describe('validateCoordinate()', () => {
     it('should return true for valid latitude values', () => {
-        ['88.123', '-81.2321231', '0'].forEach(coordinate => {
+        ['88.123', '-81.2321231', '0'].forEach((coordinate) => {
             expect(validateCoordinate('Latitude', coordinate)).toBe(true);
         });
     });
@@ -20,7 +20,7 @@ describe('validateCoordinate()', () => {
     });
 
     it('should return true for valid longitude values', () => {
-        ['179.123', '-178.2321231', '0'].forEach(coordinate => {
+        ['179.123', '-178.2321231', '0'].forEach((coordinate) => {
             expect(validateCoordinate('Longitude', coordinate)).toBe(true);
         });
     });
@@ -32,7 +32,7 @@ describe('validateCoordinate()', () => {
 
     it('should return false for invalid longitude values (bad format)', () => {
         ['191.12.3', '19$1.12', 'Latitude', '123,754', '</html>'].forEach(
-            coordinate => {
+            (coordinate) => {
                 expect(validateCoordinate('Longitude', coordinate)).toBe(false);
             }
         );

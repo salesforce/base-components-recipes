@@ -37,6 +37,17 @@ describe('c-button-menu', () => {
     });
 });
 
+describe('c-button-menu-label', () => {
+    it('should default with label defined', () => {
+        const buttonMenu = createButtonMenu();
+        buttonMenu.label = 'label';
+
+        return Promise.resolve().then(() => {
+            expect(buttonMenu).toMatchSnapshot();
+        });
+    });
+});
+
 describe('c-button-menu-class-attr', () => {
     it('should add slds-open when menu is open', () => {
         const buttonMenu = createButtonMenu();
@@ -84,7 +95,7 @@ describe('c-button-menu-variant-attr', () => {
         'border-filled',
         'bare-inverse',
         'border-inverse'
-    ].forEach(variant =>
+    ].forEach((variant) =>
         it(`button class attribute should reflect variant=${variant}`, () => {
             const buttonMenu = createButtonMenu();
             buttonMenu.variant = variant;
@@ -99,7 +110,7 @@ describe('c-button-menu-variant-attr', () => {
 });
 
 describe('c-button-menu-icon-size-attr', () => {
-    ['xx-small', 'x-small', 'small', 'medium', 'large'].forEach(iconSize =>
+    ['xx-small', 'x-small', 'small', 'medium', 'large'].forEach((iconSize) =>
         it(`button class attribute should reflect size=${iconSize}`, () => {
             const buttonMenu = createButtonMenu();
             buttonMenu.iconSize = iconSize;
@@ -112,23 +123,24 @@ describe('c-button-menu-icon-size-attr', () => {
         })
     );
 
-    ['bare', 'bare-inverse'].forEach(variant => {
-        ['xx-small', 'x-small', 'small', 'medium', 'large'].forEach(iconSize =>
-            it(`Button size = ${iconSize} should be medium if variant=${variant}`, () => {
-                const buttonMenu = createButtonMenu();
-                buttonMenu.variant = variant;
-                buttonMenu.iconSize = iconSize;
+    ['bare', 'bare-inverse'].forEach((variant) => {
+        ['xx-small', 'x-small', 'small', 'medium', 'large'].forEach(
+            (iconSize) =>
+                it(`Button size = ${iconSize} should be medium if variant=${variant}`, () => {
+                    const buttonMenu = createButtonMenu();
+                    buttonMenu.variant = variant;
+                    buttonMenu.iconSize = iconSize;
 
-                const classes = shadowQuerySelector(buttonMenu, 'button')
-                    .className;
-                expect(classes).toMatchSnapshot();
-            })
+                    const classes = shadowQuerySelector(buttonMenu, 'button')
+                        .className;
+                    expect(classes).toMatchSnapshot();
+                })
         );
     });
 });
 
 describe('c-button-menu-icon-name-attr', () => {
-    const getIconCount = buttonMenu => {
+    const getIconCount = (buttonMenu) => {
         return shadowQuerySelectorAll(buttonMenu, 'c-primitive-icon').length;
     };
 
@@ -171,7 +183,7 @@ describe('c-button-menu-menu-alignment-attr', () => {
         { value: 'bottom-left', class: 'bottom-left' },
         { value: 'bottom-center', class: 'bottom' },
         { value: 'bottom-right', class: 'bottom-right' }
-    ].forEach(menuAlignment => {
+    ].forEach((menuAlignment) => {
         it(`should have correct classes when menu-alignment=${menuAlignment.value}`, () => {
             const buttonMenu = createButtonMenu();
             buttonMenu.menuAlignment = menuAlignment.value;

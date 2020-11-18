@@ -64,7 +64,7 @@ export default class cBaseComboboxItem extends LightningElement {
 
     partsToText(parts) {
         if (parts && Array.isArray(parts) && parts.length > 0) {
-            return parts.map(part => part.text).join('');
+            return parts.map((part) => part.text).join('');
         }
         return parts;
     }

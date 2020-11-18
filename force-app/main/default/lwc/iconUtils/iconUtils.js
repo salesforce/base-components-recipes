@@ -54,7 +54,7 @@ const getBaseIconPath = (category, direction) => {
     );
 };
 
-const getMatchAtIndex = index => iconName => {
+const getMatchAtIndex = (index) => (iconName) => {
     const result = validNameRe.exec(iconName);
     return result ? result[index] : '';
 };
@@ -63,7 +63,7 @@ const getCategory = getMatchAtIndex(1);
 const getName = getMatchAtIndex(2);
 export { getCategory, getName };
 
-export const isValidName = iconName => validNameRe.test(iconName);
+export const isValidName = (iconName) => validNameRe.test(iconName);
 
 export const getIconPath = (iconName, direction = 'ltr') => {
     pathPrefix = pathPrefix !== undefined ? pathPrefix : getPathPrefix();
@@ -83,7 +83,7 @@ export const getIconPath = (iconName, direction = 'ltr') => {
     return '';
 };
 
-export const computeSldsClass = iconName => {
+export const computeSldsClass = (iconName) => {
     if (isValidName(iconName)) {
         const category = getCategory(iconName);
         const name = getName(iconName).replace(underscoreRe, '-');

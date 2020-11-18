@@ -29,7 +29,7 @@ export const tagRegexString =
     '<del[\\s]+[^>]+[^/]>[\\s\\S]*?</del>|<del[\\s]+[^>]+/>|' +
     '<ins[\\s]+[^>]+[^/]>[\\s\\S]*?</ins>|<ins[\\s]+[^>]+/>)';
 
-export const createHttpHref = function(url) {
+export const createHttpHref = function (url) {
     let href = url;
     if (
         url.toLowerCase().lastIndexOf('http', 0) !== 0 &&
@@ -40,6 +40,6 @@ export const createHttpHref = function(url) {
     return href;
 };
 
-export const createEmailHref = function(email) {
+export const createEmailHref = function (email) {
     return `mailto:${email}`;
 };

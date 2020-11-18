@@ -47,13 +47,13 @@ describe('c-tabset a11y', () => {
 
             expect(tabElements).toHaveLength(anchorLinks.length);
 
-            tabElements.forEach(tabElement => {
+            tabElements.forEach((tabElement) => {
                 const labelledByValue = tabElement.getAttribute(
                     'aria-labelledby'
                 );
 
                 const anchorsWithIdMatchingTabLabelledBy = anchorLinks.filter(
-                    anchor => anchor.id === labelledByValue
+                    (anchor) => anchor.id === labelledByValue
                 );
 
                 expect(anchorsWithIdMatchingTabLabelledBy).toHaveLength(1);
@@ -75,10 +75,10 @@ describe('c-tabset a11y', () => {
 
             expect(tabElements).toHaveLength(anchorLinks.length);
 
-            tabElements.forEach(tabElement => {
+            tabElements.forEach((tabElement) => {
                 const tabId = tabElement.id;
                 const anchorsWithAriaControlMatchingTabId = anchorLinks.filter(
-                    anchor => anchor.getAttribute('aria-controls') === tabId
+                    (anchor) => anchor.getAttribute('aria-controls') === tabId
                 );
 
                 expect(anchorsWithAriaControlMatchingTabId).toHaveLength(1);

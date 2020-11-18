@@ -37,7 +37,7 @@ export class AccordionSectionList {
     }
 
     get openSections() {
-        return this.privateSortedSections.filter(section => section.isOpen());
+        return this.privateSortedSections.filter((section) => section.isOpen());
     }
 
     getSectionByName(name) {

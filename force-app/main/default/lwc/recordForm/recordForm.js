@@ -31,20 +31,6 @@ function isUnsupportedReferenceField(name) {
     return UNSUPPORTED_REFERENCE_FIELDS.indexOf(name) !== -1;
 }
 
-function extractLayoutFromLayouts(layouts, apiName, layout) {
-    const layoutId = Object.keys(layouts[apiName])[0];
-    if (
-        layoutId &&
-        layouts[apiName] &&
-        layouts[apiName][layoutId] &&
-        layouts[apiName][layoutId][layout] &&
-        layouts[apiName][layoutId][layout].View
-    ) {
-        return layouts[apiName][layoutId][layout].View;
-    }
-    return null;
-}
-
 export default class cRecordForm extends LightningElement {
     @track readOnly = false;
     @track _recordId;
@@ -326,31 +312,18 @@ export default class cRecordForm extends LightningElement {
 
     handleLoad(e) {
         e.stopPropagation();
-        let fields;
         const apiName = this._objectApiName.objectApiName
             ? this._objectApiName.objectApiName
             : this._objectApiName;
 
         if (!this._fieldsHandled && this._layout && e.detail.objectInfos) {
-            if (e.detail.layout) {
-                fields = getFieldsForLayout(
-                    e.detail.layout,
-                    e.detail.objectInfos[apiName]
-                );
-            } else if (e.detail.layouts) {
-                const layout = extractLayoutFromLayouts(
-                    e.detail.layouts,
-                    apiName,
-                    this._layout
-                );
+            const layoutFields = getFieldsForLayout(
+                e.detail,
+                apiName,
+                this._layout
+            );
 
-                if (layout) {
-                    fields = getFieldsForLayout(
-                        layout,
-                        e.detail.objectInfos[apiName]
-                    );
-                }
-            }
+            this.fields = Object.keys(layoutFields);
             this._fieldsHandled = true;
         }
 
@@ -360,10 +333,6 @@ export default class cRecordForm extends LightningElement {
         this._record = record;
 
         this._isPersonAccount = record ? isPersonAccount(record) : false;
-
-        if (fields) {
-            this.fields = deepCopy(fields);
-        }
 
         if (this._firstLoad) {
             this._loading = false;
@@ -411,7 +380,7 @@ export default class cRecordForm extends LightningElement {
         );
 
         if (inputFields) {
-            inputFields.forEach(field => {
+            inputFields.forEach((field) => {
                 field.reset();
             });
         }

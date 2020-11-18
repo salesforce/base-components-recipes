@@ -183,7 +183,7 @@ export default class cInputLocation extends LightningElement {
             return valid;
         }
 
-        Object.keys(this._coordinateConstraints).forEach(coordinate => {
+        Object.keys(this._coordinateConstraints).forEach((coordinate) => {
             this._reportValidityForCoordinate(coordinate);
         });
 
@@ -282,9 +282,9 @@ export default class cInputLocation extends LightningElement {
     get _combinedConstraint() {
         if (!this._combinedConstraintApi) {
             const { _coordinateConstraints } = this;
-            const checkCoordinates = property =>
+            const checkCoordinates = (property) =>
                 Object.values(_coordinateConstraints).some(
-                    coordinateConstraint =>
+                    (coordinateConstraint) =>
                         coordinateConstraint.validity[property]
                 );
 
@@ -308,10 +308,12 @@ export default class cInputLocation extends LightningElement {
     }
 
     _reportValidityForCoordinate(coordinate) {
-        this._coordinateConstraints[coordinate].reportValidity(helpMessage => {
-            const coordinateElement = this.getCoordinateElement(coordinate);
-            coordinateElement.setCustomValidity(helpMessage);
-            coordinateElement.reportValidity();
-        });
+        this._coordinateConstraints[coordinate].reportValidity(
+            (helpMessage) => {
+                const coordinateElement = this.getCoordinateElement(coordinate);
+                coordinateElement.setCustomValidity(helpMessage);
+                coordinateElement.reportValidity();
+            }
+        );
     }
 }

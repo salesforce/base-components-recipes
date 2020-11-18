@@ -26,9 +26,12 @@ function getPicklistFields(objectInfo, fields) {
                 field.dataType === Fields.PICKLIST ||
                 field.dataType === Fields.MULTI_PICKLIST
             ) {
-                const fieldNameToCheck = field.compoundFieldName || fieldName;
                 if (
-                    fields.includes(`${objectInfo.apiName}.${fieldNameToCheck}`)
+                    fields.includes(`${objectInfo.apiName}.${fieldName}`) ||
+                    (field.compoundFieldName &&
+                        fields.includes(
+                            `${objectInfo.apiName}.${field.compoundFieldName}`
+                        ))
                 ) {
                     picklistFields.add(field.apiName);
                 }
@@ -41,7 +44,7 @@ function getPicklistFields(objectInfo, fields) {
 
 function filterPicklistValues(picklistsByRecordType, picklistsInForm) {
     return Object.keys(picklistsByRecordType)
-        .filter(key => picklistsInForm.has(key))
+        .filter((key) => picklistsInForm.has(key))
         .reduce((obj, key) => {
             return {
                 ...obj,

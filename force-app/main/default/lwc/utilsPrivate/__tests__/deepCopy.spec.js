@@ -19,7 +19,7 @@ describe('deepCopy()', () => {
     });
 
     it('should clone a function', () => {
-        const value = function(num) {
+        const value = function (num) {
             return num + 1;
         };
         const copy = deepCopy(value);

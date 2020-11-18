@@ -35,7 +35,7 @@ function createDropdownInterface({ readOnly, visible }) {
 
 describe('Keyboard navigation for a base combobox', () => {
     beforeAll(() => {
-        window.requestAnimationFrame = window.setTimeout = action => {
+        window.requestAnimationFrame = window.setTimeout = (action) => {
             action();
         };
     });

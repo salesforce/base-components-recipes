@@ -85,6 +85,17 @@ describe('c-output-field', () => {
         }).toThrowErrorMatchingSnapshot();
     });
 
+    it('does not throw an error when fieldName is null', () => {
+        const element = createElement('c-output-field', {
+            is: Element
+        });
+
+        document.body.appendChild(element);
+        expect(() => {
+            element.fieldName = null;
+        }).not.toThrow();
+    });
+
     it('noLabel', () => {
         const element = createOutputField('Text');
         element.variant = 'label-hidden';
@@ -226,6 +237,32 @@ describe('c-output-field', () => {
                     ).toBeTruthy();
                     store.labelAlignment = 'stacked';
                 });
+        });
+    });
+
+    describe('layout override for labels', () => {
+        it('should use the field label from the record when there is no layout override', () => {
+            const element = createOutputField('OwnerId');
+            return Promise.resolve().then(() => {
+                expect(element.shadowRoot.textContent).toContain('Owner ID');
+            });
+        });
+
+        it('should use the label from the layout when there is an override', () => {
+            const element = createOutputField('OwnerId');
+            const data = JSON.parse(JSON.stringify(store));
+            data.layoutFieldData = {
+                OwnerId: {
+                    label: 'Parent Account'
+                }
+            };
+
+            element.wireRecordUi(data);
+            return Promise.resolve().then(() => {
+                expect(element.shadowRoot.textContent).toContain(
+                    'Parent Account'
+                );
+            });
         });
     });
 

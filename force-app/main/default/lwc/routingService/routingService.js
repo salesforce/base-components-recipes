@@ -56,8 +56,8 @@ export function updateRawLinkInfo(element, { url, target }) {
         // eslint-disable-next-line no-console
         console.error('url must be specified');
     }
-    if (target === '_blank') {
-        return new Promise(resolve => {
+    if (target && target !== '_self') {
+        return new Promise((resolve) => {
             resolve({ url, dispatcher: () => {} });
         });
     }

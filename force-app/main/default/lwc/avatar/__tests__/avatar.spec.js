@@ -9,7 +9,7 @@ import { createElement } from 'lwc';
 import Element from 'c/avatar';
 import { shadowQuerySelector } from 'lightning/testUtils';
 
-const createAvatar = attributes => {
+const createAvatar = (attributes) => {
     const element = createElement('c-avatar', { is: Element });
 
     Object.assign(element, attributes);
@@ -144,7 +144,7 @@ describe('c-avatar', () => {
     });
 
     describe('Variant', () => {
-        const createAvatarWithVariant = variant => {
+        const createAvatarWithVariant = (variant) => {
             const element = createAvatar({
                 alternativeText: 'account owner',
                 fallbackIconName: 'standard:account',
@@ -181,7 +181,7 @@ describe('c-avatar', () => {
     });
 
     describe('Size', () => {
-        const createAvatarWithSize = size => {
+        const createAvatarWithSize = (size) => {
             const element = createAvatar({
                 alternativeText: 'account owner',
                 fallbackIconName: 'standard:account',

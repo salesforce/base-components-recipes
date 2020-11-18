@@ -21,7 +21,7 @@ const defaultAttributes = {
     suffix: 'The 3rd'
 };
 
-const createFormattedNameComponent = params => {
+const createFormattedNameComponent = (params) => {
     const element = createElement('c-formatted-name', {
         is: Element
     });
@@ -31,7 +31,7 @@ const createFormattedNameComponent = params => {
     return element;
 };
 
-const getText = element => {
+const getText = (element) => {
     return element.shadowRoot.textContent;
 };
 

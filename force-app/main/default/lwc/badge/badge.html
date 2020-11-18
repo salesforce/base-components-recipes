@@ -6,9 +6,7 @@
  -->
 
 <template>
-    <template if:false={isIconBeforeLabel}>
-        {label}
-    </template>
+    <template if:false={isIconBeforeLabel}>{label}</template>
 
     <template if:true={iconName}>
         <span class={computedClass}>
@@ -24,7 +22,5 @@
         </span>
     </template>
 
-    <template if:true={isIconBeforeLabel}>
-        {label}
-    </template>
+    <template if:true={isIconBeforeLabel}>{label}</template>
 </template>

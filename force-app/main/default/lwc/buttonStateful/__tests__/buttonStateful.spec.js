@@ -8,7 +8,7 @@
 import { createElement } from 'lwc';
 import Element from 'c/buttonStateful';
 
-const createButtonStateful = attributes => {
+const createButtonStateful = (attributes) => {
     const element = createElement('c-button-stateful', { is: Element });
     Object.assign(element, attributes);
     document.body.appendChild(element);
@@ -62,7 +62,7 @@ describe('c-button-stateful', () => {
     });
 
     describe('Variant', () => {
-        const createButtonStatefulWithVariant = variant => {
+        const createButtonStatefulWithVariant = (variant) => {
             const element = createButtonStateful({
                 iconNameWhenOff: 'utility:add',
                 iconNameWhenOn: 'utility:check',

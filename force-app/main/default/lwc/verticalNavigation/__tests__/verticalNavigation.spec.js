@@ -39,7 +39,7 @@ const createVerticalNavigation = (props = {}) => {
 };
 
 function assertNthItemActive(n) {
-    return element => {
+    return (element) => {
         const items = shadowQuerySelectorAll(element, selector.item);
         expect(items).toHaveLength(11);
 
@@ -341,7 +341,7 @@ describe('c-vertical-navigation', () => {
     it('default action prevented', () => {
         const element = createVerticalNavigation();
         const selectHandler = jest.fn();
-        element.addEventListener('mockbeforeselect', e => e.preventDefault());
+        element.addEventListener('mockbeforeselect', (e) => e.preventDefault());
         element.addEventListener('mockselect', selectHandler);
 
         return Promise.resolve()

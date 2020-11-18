@@ -203,7 +203,7 @@ export default class cCombobox extends LightningElement {
 
     @api
     reportValidity() {
-        return this._constraint.reportValidity(message => {
+        return this._constraint.reportValidity((message) => {
             this._helpMessage = message;
         });
     }
@@ -303,9 +303,12 @@ export default class cCombobox extends LightningElement {
 
     markOptionSelectedFromValue(value) {
         if (this._items) {
-            const selectedItem = this._items.find(item => item.value === value);
+            const selectedItem = this._items.find(
+                (item) => item.value === value
+            );
 
             if (this._selectedItem) {
+                this._selectedItem.checked = false;
                 this._selectedItem.iconName = undefined;
                 this._selectedItem.highlight = false;
             }
@@ -313,6 +316,7 @@ export default class cCombobox extends LightningElement {
             if (selectedItem) {
                 selectedItem.iconName = 'utility:check';
                 this._selectedItem.highlight = true;
+                this._selectedItem.checked = true;
             }
 
             this._items = this._items.slice();
@@ -324,7 +328,9 @@ export default class cCombobox extends LightningElement {
     }
 
     getOptionLabelByValue(value) {
-        const foundOption = this.options.find(option => option.value === value);
+        const foundOption = this.options.find(
+            (option) => option.value === value
+        );
         if (foundOption) {
             return foundOption.label;
         }
@@ -332,11 +338,14 @@ export default class cCombobox extends LightningElement {
     }
 
     generateItems(options) {
-        return options.map(option => {
+        return options.map((option) => {
+            const type = option.description ? 'option-card' : 'option-inline';
             return {
-                type: 'option-inline',
+                type,
                 text: option.label,
+                subText: option.description,
                 highlight: this.value === option.value,
+                iconSize: 'x-small',
                 value: option.value
             };
         });

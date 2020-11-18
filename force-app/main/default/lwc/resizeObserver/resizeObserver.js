@@ -12,7 +12,7 @@ export class LightningResizeObserver {
     constructor(resizeCallback) {
         this._resizeObserverAvailable = typeof ResizeObserver === 'function';
 
-        const delayedCallback = callback => {
+        const delayedCallback = (callback) => {
             if (this._running) {
                 return;
             }

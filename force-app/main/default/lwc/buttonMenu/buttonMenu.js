@@ -12,7 +12,9 @@ import { classSet } from 'c/utils';
 import {
     normalizeBoolean,
     normalizeString,
-    observePosition
+    observePosition,
+    animationFrame,
+    timeout
 } from 'c/utilsPrivate';
 import {
     handleKeyDownOnMenuItem,
@@ -91,7 +93,7 @@ export default class cButtonMenu extends LightningElement {
             detail: {
                 callbacks: {
                     setOrder: this.setOrder.bind(this),
-                    setDeRegistrationCallback: deRegistrationCallback => {
+                    setDeRegistrationCallback: (deRegistrationCallback) => {
                         this._deRegistrationCallback = deRegistrationCallback;
                     }
                 }
@@ -266,8 +268,7 @@ export default class cButtonMenu extends LightningElement {
 
         if (this.label) {
             classes.add({
-                'slds-button_neutral':
-                    this.variant === 'border' && isDropdownIcon,
+                'slds-button_neutral': this.variant === 'border',
                 'slds-button_inverse': this.variant === 'border-inverse'
             });
         } else {
@@ -557,7 +558,7 @@ export default class cButtonMenu extends LightningElement {
                 that.toggleMenuVisibility();
             },
             focusMenuItemWithText(text) {
-                const match = [...that.getMenuItems()].filter(menuItem => {
+                const match = [...that.getMenuItems()].filter((menuItem) => {
                     const label = menuItem.label;
                     return label && label.toLowerCase().indexOf(text) === 0;
                 });

@@ -15,14 +15,14 @@ const proto = {
         return this;
     },
     invert() {
-        Object.keys(this).forEach(key => {
+        Object.keys(this).forEach((key) => {
             this[key] = !this[key];
         });
         return this;
     },
     toString() {
         return Object.keys(this)
-            .filter(key => this[key])
+            .filter((key) => this[key])
             .join(' ');
     }
 };

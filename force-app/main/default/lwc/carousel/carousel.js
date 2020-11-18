@@ -232,8 +232,9 @@ export default class cCarousel extends LightningElement {
             activePaginationItem.className =
                 INDICATOR_ACTION + ' ' + SLDS_ACTIVE;
 
-            this.carouselPanelsStyle = `transform:translateX(-${itemIndex *
-                100}%);`;
+            this.carouselPanelsStyle = `transform:translateX(-${
+                itemIndex * 100
+            }%);`;
             this.carouselItems[itemIndex].callbacks.select();
             this.activeIndexItem = itemIndex;
         }

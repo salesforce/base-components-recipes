@@ -21,7 +21,7 @@ describe('getIconPath()', () => {
 
     it('requests the RTL sprites when specified', () => {
         cp({
-            getToken: name => `/${name}`
+            getToken: (name) => `/${name}`
         });
 
         expect(getIconPath('action:foo', 'rtl')).toBe(

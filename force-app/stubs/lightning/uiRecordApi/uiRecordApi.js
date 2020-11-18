@@ -15,8 +15,9 @@ export {
     generateRecordInputForUpdate,
     createRecordInputFilteredByEditedFields,
     getRecordInput,
+    getRecordNotifyChange,
     refresh,
     getRecordUi,
     getFieldValue,
     getFieldDisplayValue
-} from 'force/lds';
+} from 'force/ldsAdaptersUiapi';

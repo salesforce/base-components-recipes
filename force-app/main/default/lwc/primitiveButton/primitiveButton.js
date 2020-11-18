@@ -141,7 +141,7 @@ export default class cPrimitiveButton extends LightningElement {
         super();
 
         if (isIE11) {
-            this.template.addEventListener('click', event => {
+            this.template.addEventListener('click', (event) => {
                 if (this.disabled) {
                     event.stopImmediatePropagation();
                 }

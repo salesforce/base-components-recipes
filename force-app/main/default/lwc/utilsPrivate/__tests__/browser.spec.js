@@ -80,7 +80,7 @@ describe('browser', () => {
         describe('ie11 detection', () => {
             it('should return true for IE11 user agents', () => {
                 [userAgents.ie11Win7, userAgents.ie11Win8].forEach(
-                    navigator => {
+                    (navigator) => {
                         expect(isIE11Test(navigator)).toBe(true);
                     }
                 );
@@ -90,7 +90,7 @@ describe('browser', () => {
                     userAgents.ie10WinNT,
                     userAgents.chrome60Win10,
                     userAgents.firefox41Android
-                ].forEach(navigator => {
+                ].forEach((navigator) => {
                     expect(isIE11Test(navigator)).toBe(false);
                 });
             });
@@ -102,7 +102,7 @@ describe('browser', () => {
             });
             it('should return false for non chrome user agents', () => {
                 [userAgents.edge42Win10, userAgents.chromeIOSEmulator].forEach(
-                    navigator => {
+                    (navigator) => {
                         expect(isChromeTest(navigator)).toBe(false);
                     }
                 );
@@ -116,7 +116,7 @@ describe('browser', () => {
                     userAgents.safari13Mojave,
                     userAgents.chromeIOSEmulator,
                     userAgents.safari66iOS13
-                ].forEach(navigator => {
+                ].forEach((navigator) => {
                     expect(isSafariTest(navigator)).toBe(true);
                 });
             });
@@ -125,7 +125,7 @@ describe('browser', () => {
                     userAgents.edge42Win10,
                     userAgents.firefox41Android,
                     userAgents.chrome67HighSierra
-                ].forEach(navigator => {
+                ].forEach((navigator) => {
                     expect(isSafariTest(navigator)).toBe(false);
                 });
             });

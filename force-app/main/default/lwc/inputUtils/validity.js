@@ -46,7 +46,7 @@ function resolveBestMatch(validity) {
     let validityState;
     if (validity && validity.valid === false) {
         validityState = 'badInput';
-        constraintsSortedByPriority.some(stateName => {
+        constraintsSortedByPriority.some((stateName) => {
             if (validity[stateName] === true) {
                 validityState = stateName;
                 return true;
@@ -226,7 +226,7 @@ export class FieldConstraintApiWithProxyInput {
     setInputAttributes(attributes) {
         this._attributes = attributes;
 
-        this._attributeUpdater = attributeNames => {
+        this._attributeUpdater = (attributeNames) => {
             if (!attributes) {
                 return;
             }
@@ -236,7 +236,7 @@ export class FieldConstraintApiWithProxyInput {
                     attributes[attributeNames]()
                 );
             } else {
-                attributeNames.forEach(attributeName => {
+                attributeNames.forEach((attributeName) => {
                     this._setAttribute(
                         attributeName,
                         attributes[attributeName]()
@@ -291,7 +291,7 @@ export class FieldConstraintApiWithProxyInput {
         if (!this._privateConstraintApi) {
             this._updateAllAttributes();
 
-            const computeConstraintWithProxyInput = constraintName => {
+            const computeConstraintWithProxyInput = (constraintName) => {
                 const constraintOverride = this._overrides[constraintName];
 
                 const isDisabledOrReadOnly =

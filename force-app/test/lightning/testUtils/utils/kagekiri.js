@@ -36,7 +36,7 @@ function shouldUseNative() {
         for (var i = 0; i < 10; i++) {
             test2['_' + String.fromCharCode(i)] = i;
         }
-        var order2 = Object.getOwnPropertyNames(test2).map(function(n) {
+        var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
             return test2[n];
         });
         if (order2.join('') !== '0123456789') {
@@ -44,7 +44,7 @@ function shouldUseNative() {
         }
 
         var test3 = {};
-        'abcdefghijklmnopqrst'.split('').forEach(function(letter) {
+        'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
             test3[letter] = letter;
         });
         if (
@@ -62,7 +62,7 @@ function shouldUseNative() {
 
 var objectAssign = shouldUseNative()
     ? Object.assign
-    : function(target, source) {
+    : function (target, source) {
           var arguments$1 = arguments;
 
           var from;
@@ -109,7 +109,7 @@ function getCjsExportFromNamespace(n) {
     return (n && n['default']) || n;
 }
 
-var indexesOf = function(ary, item) {
+var indexesOf = function (ary, item) {
     var i = -1,
         indexes = [];
     while ((i = ary.indexOf(item, i + 1)) !== -1) {
@@ -176,7 +176,7 @@ function unique(list, compare, sorted) {
 
 var uniq = unique;
 
-var unesc_1 = createCommonjsModule(function(module, exports) {
+var unesc_1 = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = unesc;
     var whitespace = '[\\x20\\t\\r\\n\\f]';
@@ -186,7 +186,7 @@ var unesc_1 = createCommonjsModule(function(module, exports) {
     );
 
     function unesc(str) {
-        return str.replace(unescapeRegExp, function(
+        return str.replace(unescapeRegExp, function (
             _,
             escaped,
             escapedWhitespace
@@ -211,7 +211,7 @@ var unesc_1 = createCommonjsModule(function(module, exports) {
 
 unwrapExports(unesc_1);
 
-var getProp_1 = createCommonjsModule(function(module, exports) {
+var getProp_1 = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = getProp;
 
@@ -246,7 +246,7 @@ var getProp_1 = createCommonjsModule(function(module, exports) {
 
 unwrapExports(getProp_1);
 
-var ensureObject_1 = createCommonjsModule(function(module, exports) {
+var ensureObject_1 = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = ensureObject;
 
@@ -279,7 +279,7 @@ var ensureObject_1 = createCommonjsModule(function(module, exports) {
 
 unwrapExports(ensureObject_1);
 
-var stripComments_1 = createCommonjsModule(function(module, exports) {
+var stripComments_1 = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = stripComments;
 
@@ -309,7 +309,7 @@ var stripComments_1 = createCommonjsModule(function(module, exports) {
 
 unwrapExports(stripComments_1);
 
-var util = createCommonjsModule(function(module, exports) {
+var util = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.stripComments = exports.ensureObject = exports.getProp = exports.unesc = void 0;
 
@@ -340,7 +340,7 @@ var util_2 = util.ensureObject;
 var util_3 = util.getProp;
 var util_4 = util.unesc;
 
-var node = createCommonjsModule(function(module, exports) {
+var node = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -386,7 +386,7 @@ var node = createCommonjsModule(function(module, exports) {
                     cloned[i] = parent;
                 }
             } else if (value instanceof Array) {
-                cloned[i] = value.map(function(j) {
+                cloned[i] = value.map(function (j) {
                     return cloneNode(j, cloned);
                 });
             } else {
@@ -397,7 +397,7 @@ var node = createCommonjsModule(function(module, exports) {
         return cloned;
     };
 
-    var Node = (function() {
+    var Node = (function () {
         function Node(opts) {
             if (opts === void 0) {
                 opts = {};
@@ -593,7 +593,7 @@ var node = createCommonjsModule(function(module, exports) {
 
 unwrapExports(node);
 
-var types = createCommonjsModule(function(module, exports) {
+var types = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.UNIVERSAL = exports.ATTRIBUTE = exports.CLASS = exports.COMBINATOR = exports.COMMENT = exports.ID = exports.NESTING = exports.PSEUDO = exports.ROOT = exports.SELECTOR = exports.STRING = exports.TAG = void 0;
     var TAG = 'tag';
@@ -636,7 +636,7 @@ var types_10 = types.SELECTOR;
 var types_11 = types.STRING;
 var types_12 = types.TAG;
 
-var container = createCommonjsModule(function(module, exports) {
+var container = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -702,7 +702,7 @@ var container = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Container = (function(_Node) {
+    var Container = (function (_Node) {
         _inheritsLoose(Container, _Node);
 
         function Container(opts) {
@@ -836,7 +836,7 @@ var container = createCommonjsModule(function(module, exports) {
 
         _proto._findChildAtPosition = function _findChildAtPosition(line, col) {
             var found = undefined;
-            this.each(function(node) {
+            this.each(function (node) {
                 if (node.atPosition) {
                     var foundChild = node.atPosition(line, col);
 
@@ -906,7 +906,7 @@ var container = createCommonjsModule(function(module, exports) {
         };
 
         _proto.walk = function walk(callback) {
-            return this.each(function(node, i) {
+            return this.each(function (node, i) {
                 var result = callback(node, i);
 
                 if (result !== false && node.length) {
@@ -922,7 +922,7 @@ var container = createCommonjsModule(function(module, exports) {
         _proto.walkAttributes = function walkAttributes(callback) {
             var _this2 = this;
 
-            return this.walk(function(selector) {
+            return this.walk(function (selector) {
                 if (selector.type === types$1.ATTRIBUTE) {
                     return callback.call(_this2, selector);
                 }
@@ -932,7 +932,7 @@ var container = createCommonjsModule(function(module, exports) {
         _proto.walkClasses = function walkClasses(callback) {
             var _this3 = this;
 
-            return this.walk(function(selector) {
+            return this.walk(function (selector) {
                 if (selector.type === types$1.CLASS) {
                     return callback.call(_this3, selector);
                 }
@@ -942,7 +942,7 @@ var container = createCommonjsModule(function(module, exports) {
         _proto.walkCombinators = function walkCombinators(callback) {
             var _this4 = this;
 
-            return this.walk(function(selector) {
+            return this.walk(function (selector) {
                 if (selector.type === types$1.COMBINATOR) {
                     return callback.call(_this4, selector);
                 }
@@ -952,7 +952,7 @@ var container = createCommonjsModule(function(module, exports) {
         _proto.walkComments = function walkComments(callback) {
             var _this5 = this;
 
-            return this.walk(function(selector) {
+            return this.walk(function (selector) {
                 if (selector.type === types$1.COMMENT) {
                     return callback.call(_this5, selector);
                 }
@@ -962,7 +962,7 @@ var container = createCommonjsModule(function(module, exports) {
         _proto.walkIds = function walkIds(callback) {
             var _this6 = this;
 
-            return this.walk(function(selector) {
+            return this.walk(function (selector) {
                 if (selector.type === types$1.ID) {
                     return callback.call(_this6, selector);
                 }
@@ -972,7 +972,7 @@ var container = createCommonjsModule(function(module, exports) {
         _proto.walkNesting = function walkNesting(callback) {
             var _this7 = this;
 
-            return this.walk(function(selector) {
+            return this.walk(function (selector) {
                 if (selector.type === types$1.NESTING) {
                     return callback.call(_this7, selector);
                 }
@@ -982,7 +982,7 @@ var container = createCommonjsModule(function(module, exports) {
         _proto.walkPseudos = function walkPseudos(callback) {
             var _this8 = this;
 
-            return this.walk(function(selector) {
+            return this.walk(function (selector) {
                 if (selector.type === types$1.PSEUDO) {
                     return callback.call(_this8, selector);
                 }
@@ -992,7 +992,7 @@ var container = createCommonjsModule(function(module, exports) {
         _proto.walkTags = function walkTags(callback) {
             var _this9 = this;
 
-            return this.walk(function(selector) {
+            return this.walk(function (selector) {
                 if (selector.type === types$1.TAG) {
                     return callback.call(_this9, selector);
                 }
@@ -1002,7 +1002,7 @@ var container = createCommonjsModule(function(module, exports) {
         _proto.walkUniversals = function walkUniversals(callback) {
             var _this10 = this;
 
-            return this.walk(function(selector) {
+            return this.walk(function (selector) {
                 if (selector.type === types$1.UNIVERSAL) {
                     return callback.call(_this10, selector);
                 }
@@ -1013,7 +1013,7 @@ var container = createCommonjsModule(function(module, exports) {
             var _this11 = this;
 
             var current = [];
-            return this.reduce(function(memo, node, index) {
+            return this.reduce(function (memo, node, index) {
                 var split = callback.call(_this11, node);
                 current.push(node);
 
@@ -1088,7 +1088,7 @@ var container = createCommonjsModule(function(module, exports) {
 
 unwrapExports(container);
 
-var root = createCommonjsModule(function(module, exports) {
+var root = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -1126,7 +1126,7 @@ var root = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Root = (function(_Container) {
+    var Root = (function (_Container) {
         _inheritsLoose(Root, _Container);
 
         function Root(opts) {
@@ -1140,7 +1140,7 @@ var root = createCommonjsModule(function(module, exports) {
         var _proto = Root.prototype;
 
         _proto.toString = function toString() {
-            var str = this.reduce(function(memo, selector) {
+            var str = this.reduce(function (memo, selector) {
                 memo.push(String(selector));
                 return memo;
             }, []).join(',');
@@ -1173,7 +1173,7 @@ var root = createCommonjsModule(function(module, exports) {
 
 unwrapExports(root);
 
-var selector = createCommonjsModule(function(module, exports) {
+var selector = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -1189,7 +1189,7 @@ var selector = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Selector = (function(_Container) {
+    var Selector = (function (_Container) {
         _inheritsLoose(Selector, _Container);
 
         function Selector(opts) {
@@ -1292,7 +1292,7 @@ var cssesc = function cssesc(string, options) {
         }
     }
 
-    output = output.replace(regexExcessiveSpaces, function($0, $1, $2) {
+    output = output.replace(regexExcessiveSpaces, function ($0, $1, $2) {
         if ($1 && $1.length % 2) {
             return $0;
         }
@@ -1317,7 +1317,7 @@ cssesc.version = '3.0.0';
 
 var cssesc_1 = cssesc;
 
-var className = createCommonjsModule(function(module, exports) {
+var className = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -1357,7 +1357,7 @@ var className = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var ClassName = (function(_Node) {
+    var ClassName = (function (_Node) {
         _inheritsLoose(ClassName, _Node);
 
         function ClassName(opts) {
@@ -1413,7 +1413,7 @@ var className = createCommonjsModule(function(module, exports) {
 
 unwrapExports(className);
 
-var comment = createCommonjsModule(function(module, exports) {
+var comment = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -1429,7 +1429,7 @@ var comment = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Comment = (function(_Node) {
+    var Comment = (function (_Node) {
         _inheritsLoose(Comment, _Node);
 
         function Comment(opts) {
@@ -1449,7 +1449,7 @@ var comment = createCommonjsModule(function(module, exports) {
 
 unwrapExports(comment);
 
-var id = createCommonjsModule(function(module, exports) {
+var id = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -1465,7 +1465,7 @@ var id = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var ID = (function(_Node) {
+    var ID = (function (_Node) {
         _inheritsLoose(ID, _Node);
 
         function ID(opts) {
@@ -1495,7 +1495,7 @@ var id = createCommonjsModule(function(module, exports) {
 
 unwrapExports(id);
 
-var namespace = createCommonjsModule(function(module, exports) {
+var namespace = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -1535,7 +1535,7 @@ var namespace = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Namespace = (function(_Node) {
+    var Namespace = (function (_Node) {
         _inheritsLoose(Namespace, _Node);
 
         function Namespace() {
@@ -1633,7 +1633,7 @@ var namespace = createCommonjsModule(function(module, exports) {
 
 unwrapExports(namespace);
 
-var tag = createCommonjsModule(function(module, exports) {
+var tag = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -1649,7 +1649,7 @@ var tag = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Tag = (function(_Namespace) {
+    var Tag = (function (_Namespace) {
         _inheritsLoose(Tag, _Namespace);
 
         function Tag(opts) {
@@ -1669,7 +1669,7 @@ var tag = createCommonjsModule(function(module, exports) {
 
 unwrapExports(tag);
 
-var string = createCommonjsModule(function(module, exports) {
+var string = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -1685,7 +1685,7 @@ var string = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var String = (function(_Node) {
+    var String = (function (_Node) {
         _inheritsLoose(String, _Node);
 
         function String(opts) {
@@ -1705,7 +1705,7 @@ var string = createCommonjsModule(function(module, exports) {
 
 unwrapExports(string);
 
-var pseudo = createCommonjsModule(function(module, exports) {
+var pseudo = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -1721,7 +1721,7 @@ var pseudo = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Pseudo = (function(_Container) {
+    var Pseudo = (function (_Container) {
         _inheritsLoose(Pseudo, _Container);
 
         function Pseudo(opts) {
@@ -1983,7 +1983,7 @@ var toString = {}.toString;
 
 var isArray =
     Array.isArray ||
-    function(arr) {
+    function (arr) {
         return toString.call(arr) == '[object Array]';
     };
 
@@ -2033,7 +2033,7 @@ function Buffer(arg, encodingOrOffset, length) {
 
 Buffer.poolSize = 8192;
 
-Buffer._augment = function(arr) {
+Buffer._augment = function (arr) {
     arr.__proto__ = Buffer.prototype;
     return arr;
 };
@@ -2054,7 +2054,7 @@ function from(that, value, encodingOrOffset, length) {
     return fromObject(that, value);
 }
 
-Buffer.from = function(value, encodingOrOffset, length) {
+Buffer.from = function (value, encodingOrOffset, length) {
     return from(null, value, encodingOrOffset, length);
 };
 
@@ -2084,7 +2084,7 @@ function alloc(that, size, fill, encoding) {
     return createBuffer(that, size);
 }
 
-Buffer.alloc = function(size, fill, encoding) {
+Buffer.alloc = function (size, fill, encoding) {
     return alloc(null, size, fill, encoding);
 };
 
@@ -2099,11 +2099,11 @@ function allocUnsafe(that, size) {
     return that;
 }
 
-Buffer.allocUnsafe = function(size) {
+Buffer.allocUnsafe = function (size) {
     return allocUnsafe(null, size);
 };
 
-Buffer.allocUnsafeSlow = function(size) {
+Buffer.allocUnsafeSlow = function (size) {
     return allocUnsafe(null, size);
 };
 
@@ -2480,9 +2480,7 @@ Buffer.prototype.inspect = function inspect() {
     var str = '';
     var max = INSPECT_MAX_BYTES;
     if (this.length > 0) {
-        str = this.toString('hex', 0, max)
-            .match(/.{2}/g)
-            .join(' ');
+        str = this.toString('hex', 0, max).match(/.{2}/g).join(' ');
         if (this.length > max) {
             str += ' ... ';
         }
@@ -3967,7 +3965,7 @@ var performanceNow =
     performance.msNow ||
     performance.oNow ||
     performance.webkitNow ||
-    function() {
+    function () {
         return new Date().getTime();
     };
 
@@ -3987,7 +3985,7 @@ if (typeof Object.create === 'function') {
 } else {
     inherits = function inherits(ctor, superCtor) {
         ctor.super_ = superCtor;
-        var TempCtor = function() {};
+        var TempCtor = function () {};
         TempCtor.prototype = superCtor.prototype;
         ctor.prototype = new TempCtor();
         ctor.prototype.constructor = ctor;
@@ -4010,7 +4008,7 @@ function format(f) {
     var i = 1;
     var args = arguments;
     var len = args.length;
-    var str = String(f).replace(formatRegExp, function(x) {
+    var str = String(f).replace(formatRegExp, function (x) {
         if (x === '%%') {
             return '%';
         }
@@ -4044,7 +4042,7 @@ function format(f) {
 
 function deprecate(fn, msg) {
     if (isUndefined(global$1.process)) {
-        return function() {
+        return function () {
             return deprecate(fn, msg).apply(this, arguments);
         };
     }
@@ -4073,12 +4071,12 @@ function debuglog(set) {
     if (!debugs[set]) {
         if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
             var pid = 0;
-            debugs[set] = function() {
+            debugs[set] = function () {
                 var msg = format.apply(null, arguments);
                 console.error('%s %d: %s', set, pid, msg);
             };
         } else {
-            debugs[set] = function() {};
+            debugs[set] = function () {};
         }
     }
     return debugs[set];
@@ -4173,7 +4171,7 @@ function stylizeNoColor(str, styleType) {
 function arrayToHash(array) {
     var hash = {};
 
-    array.forEach(function(val, idx) {
+    array.forEach(function (val, idx) {
         hash[val] = true;
     });
 
@@ -4274,7 +4272,7 @@ function formatValue(ctx, value, recurseTimes) {
     if (array) {
         output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
     } else {
-        output = keys.map(function(key) {
+        output = keys.map(function (key) {
             return formatProperty(
                 ctx,
                 value,
@@ -4339,7 +4337,7 @@ function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
             output.push('');
         }
     }
-    keys.forEach(function(key) {
+    keys.forEach(function (key) {
         if (!key.match(/^\d+$/)) {
             output.push(
                 formatProperty(ctx, value, recurseTimes, visibleKeys, key, true)
@@ -4377,7 +4375,7 @@ function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
                 if (array) {
                     str = str
                         .split('\n')
-                        .map(function(line) {
+                        .map(function (line) {
                             return '  ' + line;
                         })
                         .join('\n')
@@ -4387,7 +4385,7 @@ function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
                         '\n' +
                         str
                             .split('\n')
-                            .map(function(line) {
+                            .map(function (line) {
                                 return '   ' + line;
                             })
                             .join('\n');
@@ -4418,7 +4416,7 @@ function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
 }
 
 function reduceToSingleString(output, base, braces) {
-    var length = output.reduce(function(prev, cur) {
+    var length = output.reduce(function (prev, cur) {
         if (cur.indexOf('\n') >= 0);
         return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
     }, 0);
@@ -4613,7 +4611,7 @@ var util$2 = Object.freeze({
 
 var _require = getCjsExportFromNamespace(util$2);
 
-var attribute = createCommonjsModule(function(module, exports) {
+var attribute = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.unescapeValue = unescapeValue;
     exports.default = void 0;
@@ -4661,11 +4659,11 @@ var attribute = createCommonjsModule(function(module, exports) {
     var deprecate = _require.deprecate;
 
     var WRAPPED_IN_QUOTES = /^('|")(.*)\1$/;
-    var warnOfDeprecatedValueAssignment = deprecate(function() {},
+    var warnOfDeprecatedValueAssignment = deprecate(function () {},
     'Assigning an attribute a value containing characters that might need to be escaped is deprecated. ' + 'Call attribute.setValue() instead.');
-    var warnOfDeprecatedQuotedAssignment = deprecate(function() {},
+    var warnOfDeprecatedQuotedAssignment = deprecate(function () {},
     'Assigning attr.quoted is deprecated and has no effect. Assign to attr.quoteMark instead.');
-    var warnOfDeprecatedConstructor = deprecate(function() {},
+    var warnOfDeprecatedConstructor = deprecate(function () {},
     'Constructing an Attribute selector with a value without specifying quoteMark is deprecated. Note: The value should be unescaped now.');
 
     function unescapeValue(value) {
@@ -4720,7 +4718,7 @@ var attribute = createCommonjsModule(function(module, exports) {
         return opts;
     }
 
-    var Attribute = (function(_Namespace) {
+    var Attribute = (function (_Namespace) {
         _inheritsLoose(Attribute, _Namespace);
 
         function Attribute(opts) {
@@ -4736,10 +4734,10 @@ var attribute = createCommonjsModule(function(module, exports) {
             _this.type = types.ATTRIBUTE;
             _this.raws = _this.raws || {};
             Object.defineProperty(_this.raws, 'unquoted', {
-                get: deprecate(function() {
+                get: deprecate(function () {
                     return _this.value;
                 }, 'attr.raws.unquoted is deprecated. Call attr.value instead.'),
-                set: deprecate(function() {
+                set: deprecate(function () {
                     return _this.value;
                 }, 'Setting attr.raws.unquoted is deprecated and has no effect. attr.value is unescaped by default now.')
             });
@@ -4963,7 +4961,7 @@ var attribute = createCommonjsModule(function(module, exports) {
                 selector.push(this._stringFor('operator'));
                 selector.push(this._stringFor('value'));
                 selector.push(
-                    this._stringFor('insensitiveFlag', 'insensitive', function(
+                    this._stringFor('insensitiveFlag', 'insensitive', function (
                         attrValue,
                         attrSpaces
                     ) {
@@ -5113,7 +5111,7 @@ var attribute = createCommonjsModule(function(module, exports) {
 unwrapExports(attribute);
 var attribute_1 = attribute.unescapeValue;
 
-var universal = createCommonjsModule(function(module, exports) {
+var universal = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -5129,7 +5127,7 @@ var universal = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Universal = (function(_Namespace) {
+    var Universal = (function (_Namespace) {
         _inheritsLoose(Universal, _Namespace);
 
         function Universal(opts) {
@@ -5150,7 +5148,7 @@ var universal = createCommonjsModule(function(module, exports) {
 
 unwrapExports(universal);
 
-var combinator = createCommonjsModule(function(module, exports) {
+var combinator = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -5166,7 +5164,7 @@ var combinator = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Combinator = (function(_Node) {
+    var Combinator = (function (_Node) {
         _inheritsLoose(Combinator, _Node);
 
         function Combinator(opts) {
@@ -5186,7 +5184,7 @@ var combinator = createCommonjsModule(function(module, exports) {
 
 unwrapExports(combinator);
 
-var nesting = createCommonjsModule(function(module, exports) {
+var nesting = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -5202,7 +5200,7 @@ var nesting = createCommonjsModule(function(module, exports) {
         subClass.__proto__ = superClass;
     }
 
-    var Nesting = (function(_Node) {
+    var Nesting = (function (_Node) {
         _inheritsLoose(Nesting, _Node);
 
         function Nesting(opts) {
@@ -5223,12 +5221,12 @@ var nesting = createCommonjsModule(function(module, exports) {
 
 unwrapExports(nesting);
 
-var sortAscending_1 = createCommonjsModule(function(module, exports) {
+var sortAscending_1 = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = sortAscending;
 
     function sortAscending(list) {
-        return list.sort(function(a, b) {
+        return list.sort(function (a, b) {
             return a - b;
         });
     }
@@ -5237,7 +5235,7 @@ var sortAscending_1 = createCommonjsModule(function(module, exports) {
 
 unwrapExports(sortAscending_1);
 
-var tokenTypes = createCommonjsModule(function(module, exports) {
+var tokenTypes = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.combinator = exports.word = exports.comment = exports.str = exports.tab = exports.newline = exports.feed = exports.cr = exports.backslash = exports.bang = exports.slash = exports.doubleQuote = exports.singleQuote = exports.space = exports.greaterThan = exports.pipe = exports.equals = exports.plus = exports.caret = exports.tilde = exports.dollar = exports.closeSquare = exports.openSquare = exports.closeParenthesis = exports.openParenthesis = exports.semicolon = exports.colon = exports.comma = exports.at = exports.asterisk = exports.ampersand = void 0;
     var ampersand = 38;
@@ -5365,7 +5363,7 @@ var tokenTypes_29 = tokenTypes.at;
 var tokenTypes_30 = tokenTypes.asterisk;
 var tokenTypes_31 = tokenTypes.ampersand;
 
-var tokenize_1 = createCommonjsModule(function(module, exports) {
+var tokenize_1 = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = tokenize;
     exports.FIELDS = void 0;
@@ -5710,7 +5708,7 @@ var tokenize_1 = createCommonjsModule(function(module, exports) {
 unwrapExports(tokenize_1);
 var tokenize_2 = tokenize_1.FIELDS;
 
-var parser = createCommonjsModule(function(module, exports) {
+var parser = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -5889,7 +5887,7 @@ var parser = createCommonjsModule(function(module, exports) {
         return node;
     }
 
-    var Parser = (function() {
+    var Parser = (function () {
         function Parser(rule, options) {
             if (options === void 0) {
                 options = {};
@@ -5943,7 +5941,7 @@ var parser = createCommonjsModule(function(module, exports) {
         _proto._errorGenerator = function _errorGenerator() {
             var _this = this;
 
-            return function(message, errorOptions) {
+            return function (message, errorOptions) {
                 if (typeof _this.rule === 'string') {
                     return new Error(message);
                 }
@@ -6459,7 +6457,7 @@ var parser = createCommonjsModule(function(module, exports) {
 
             var space = '';
             var rawSpace = '';
-            nodes.forEach(function(n) {
+            nodes.forEach(function (n) {
                 var spaceBefore = _this2.lossySpace(
                     n.spaces.before,
                     requiredSpace
@@ -6583,7 +6581,7 @@ var parser = createCommonjsModule(function(module, exports) {
 
                         last.spaces.after += space;
                     } else {
-                        nodes.forEach(function(n) {
+                        nodes.forEach(function (n) {
                             return _this3.newNode(n);
                         });
                     }
@@ -6916,7 +6914,7 @@ var parser = createCommonjsModule(function(module, exports) {
             }
 
             if (this.currToken[_tokenize.FIELDS.TYPE] === tokens.word) {
-                this.splitWord(false, function(first, length) {
+                this.splitWord(false, function (first, length) {
                     pseudoStr += first;
 
                     _this4.newNode(
@@ -7041,20 +7039,20 @@ var parser = createCommonjsModule(function(module, exports) {
                 nextToken = this.nextToken;
             }
 
-            var hasClass = (0, _indexesOf.default)(word, '.').filter(function(
+            var hasClass = (0, _indexesOf.default)(word, '.').filter(function (
                 i
             ) {
                 return word[i - 1] !== '\\';
             });
 
-            var hasId = (0, _indexesOf.default)(word, '#').filter(function(i) {
+            var hasId = (0, _indexesOf.default)(word, '#').filter(function (i) {
                 return word[i - 1] !== '\\';
             });
 
             var interpolations = (0, _indexesOf.default)(word, '#{');
 
             if (interpolations.length) {
-                hasId = hasId.filter(function(hashIndex) {
+                hasId = hasId.filter(function (hashIndex) {
                     return !~interpolations.indexOf(hashIndex);
                 });
             }
@@ -7063,7 +7061,7 @@ var parser = createCommonjsModule(function(module, exports) {
                 (0, _uniq.default)([0].concat(hasClass, hasId))
             );
 
-            indices.forEach(function(ind, i) {
+            indices.forEach(function (ind, i) {
                 var index = indices[i + 1] || word.length;
                 var value = word.slice(ind, index);
 
@@ -7351,7 +7349,7 @@ var parser = createCommonjsModule(function(module, exports) {
 
 unwrapExports(parser);
 
-var processor = createCommonjsModule(function(module, exports) {
+var processor = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 
@@ -7361,7 +7359,7 @@ var processor = createCommonjsModule(function(module, exports) {
         return obj && obj.__esModule ? obj : { default: obj };
     }
 
-    var Processor = (function() {
+    var Processor = (function () {
         function Processor(func, options) {
             this.func = func || function noop() {};
 
@@ -7425,12 +7423,12 @@ var processor = createCommonjsModule(function(module, exports) {
                 options = {};
             }
 
-            return new Promise(function(resolve, reject) {
+            return new Promise(function (resolve, reject) {
                 try {
                     var root = _this._root(rule, options);
 
                     Promise.resolve(_this.func(root))
-                        .then(function(transform) {
+                        .then(function (transform) {
                             var string = undefined;
 
                             if (_this._shouldUpdateSelector(rule, options)) {
@@ -7482,7 +7480,7 @@ var processor = createCommonjsModule(function(module, exports) {
         };
 
         _proto.ast = function ast(rule, options) {
-            return this._run(rule, options).then(function(result) {
+            return this._run(rule, options).then(function (result) {
                 return result.root;
             });
         };
@@ -7492,7 +7490,7 @@ var processor = createCommonjsModule(function(module, exports) {
         };
 
         _proto.transform = function transform(rule, options) {
-            return this._run(rule, options).then(function(result) {
+            return this._run(rule, options).then(function (result) {
                 return result.transform;
             });
         };
@@ -7502,7 +7500,7 @@ var processor = createCommonjsModule(function(module, exports) {
         };
 
         _proto.process = function process(rule, options) {
-            return this._run(rule, options).then(function(result) {
+            return this._run(rule, options).then(function (result) {
                 return result.string || result.root.toString();
             });
         };
@@ -7522,7 +7520,7 @@ var processor = createCommonjsModule(function(module, exports) {
 
 unwrapExports(processor);
 
-var constructors = createCommonjsModule(function(module, exports) {
+var constructors = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.universal = exports.tag = exports.string = exports.selector = exports.root = exports.pseudo = exports.nesting = exports.id = exports.comment = exports.combinator = exports.className = exports.attribute = void 0;
 
@@ -7641,7 +7639,7 @@ var constructors_10 = constructors.combinator;
 var constructors_11 = constructors.className;
 var constructors_12 = constructors.attribute;
 
-var guards = createCommonjsModule(function(module, exports) {
+var guards = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.isNode = isNode;
     exports.isPseudoElement = isPseudoElement;
@@ -7743,24 +7741,24 @@ var guards_15 = guards.isCombinator;
 var guards_16 = guards.isClassName;
 var guards_17 = guards.isAttribute;
 
-var selectors = createCommonjsModule(function(module, exports) {
+var selectors = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
 
-    Object.keys(types).forEach(function(key) {
+    Object.keys(types).forEach(function (key) {
         if (key === 'default' || key === '__esModule') {
             return;
         }
         exports[key] = types[key];
     });
 
-    Object.keys(constructors).forEach(function(key) {
+    Object.keys(constructors).forEach(function (key) {
         if (key === 'default' || key === '__esModule') {
             return;
         }
         exports[key] = constructors[key];
     });
 
-    Object.keys(guards).forEach(function(key) {
+    Object.keys(guards).forEach(function (key) {
         if (key === 'default' || key === '__esModule') {
             return;
         }
@@ -7770,7 +7768,7 @@ var selectors = createCommonjsModule(function(module, exports) {
 
 unwrapExports(selectors);
 
-var dist = createCommonjsModule(function(module, exports) {
+var dist = createCommonjsModule(function (module, exports) {
     exports.__esModule = true;
     exports.default = void 0;
 

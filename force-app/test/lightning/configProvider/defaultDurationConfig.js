@@ -91,7 +91,7 @@ function daysToMonth(days) {
 }
 
 function findBestUnitMatch(duration) {
-    const match = Object.keys(units).find(key => {
+    const match = Object.keys(units).find((key) => {
         const unit = units[key];
 
         return (

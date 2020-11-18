@@ -1454,7 +1454,7 @@
     <language>en_US</language>
     <protected>false</protected>
     <shortDescription>messageWhenBadInputDefault</shortDescription>
-    <value>Select an option or remove the search term.</value>
+    <value>Select an option from the picklist or remove the search term.</value>
   </labels>
   <labels>
     <categories>lightning</categories>
@@ -1535,6 +1535,14 @@
     <protected>false</protected>
     <shortDescription>typeaheadResultsListHeaderMobile</shortDescription>
     <value>Initial Results for "{0}"</value>
+  </labels>
+  <labels>
+    <categories>lightning</categories>
+    <fullName>lightning_LightningLookup_unknownRecord</fullName>
+    <language>en_US</language>
+    <protected>false</protected>
+    <shortDescription>unknownRecord</shortDescription>
+    <value>Unknown record</value>
   </labels>
   <labels>
     <categories>lightning</categories>

@@ -7,6 +7,7 @@
 
 export {
     getObjectInfo,
+    getObjectInfos,
     getPicklistValues,
     getPicklistValuesByRecordType
-} from 'force/lds';
+} from 'force/ldsAdaptersUiapi';

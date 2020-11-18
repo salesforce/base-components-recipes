@@ -24,6 +24,7 @@ const SLDS_FIELD_CLASS = 'slds-form-element__static';
 export default class cOutputField extends LightningElement {
     @track computedFieldClass = SLDS_FIELD_CLASS;
     @track _fieldName;
+    @track _label = '';
 
     _rawFieldName;
     _labelAlignment = 'stacked';
@@ -51,7 +52,8 @@ export default class cOutputField extends LightningElement {
 
     set fieldName(value) {
         this._rawFieldName = value;
-        this._fieldName = value.fieldApiName ? value.fieldApiName : value;
+        this._fieldName =
+            value && value.fieldApiName ? value.fieldApiName : value;
     }
 
     @api get fieldName() {
@@ -136,7 +138,14 @@ export default class cOutputField extends LightningElement {
         this._labelAlignment = data.labelAlignment
             ? data.labelAlignment
             : 'stacked';
+        this.updateFieldLabel(data.layoutFieldData);
         this.updateClassList();
+    }
+
+    updateFieldLabel(layoutData = {}) {
+        const layoutLabel =
+            layoutData[this.fieldName] && layoutData[this.fieldName].label;
+        this._label = layoutLabel || this.uiField.label;
     }
 
     get showLabel() {
@@ -148,7 +157,7 @@ export default class cOutputField extends LightningElement {
     }
 
     get fieldLabel() {
-        return this.uiField.label;
+        return this._label;
     }
 
     get displayValue() {
