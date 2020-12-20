@@ -54,6 +54,24 @@ describe('c-button-menu-class-attr', () => {
         shadowQuerySelector(buttonMenu, 'button').click();
         expect(buttonMenu.classList.contains('slds-is-open')).toBe(true);
     });
+
+    it('should remove slds-open when menu is closed', () => {
+        const buttonMenu = createButtonMenu();
+        shadowQuerySelector(buttonMenu, 'button').click();
+        shadowQuerySelector(buttonMenu, 'button').click();
+        expect(buttonMenu.classList.contains('slds-is-open')).toBe(false);
+    });
+});
+
+describe('c-button-menu-onclose', () => {
+    it('should trigger close event on close of menu', () => {
+        const buttonMenu = createButtonMenu();
+        const closeHandler = jest.fn();
+        buttonMenu.addEventListener('close', closeHandler);
+        shadowQuerySelector(buttonMenu, 'button').click();
+        shadowQuerySelector(buttonMenu, 'button').click();
+        expect(closeHandler).toHaveBeenCalled();
+    });
 });
 
 describe('c-button-menu-onselect', () => {

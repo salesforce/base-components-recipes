@@ -733,7 +733,7 @@
     <name>lightning_LightningLookup_panelHeaderMobile</name>
   </customLabels>
   <customLabels>
-    <label>Senest {0}</label>
+    <label>Seneste {0}</label>
     <name>lightning_LightningLookup_recentObject</name>
   </customLabels>
   <customLabels>
