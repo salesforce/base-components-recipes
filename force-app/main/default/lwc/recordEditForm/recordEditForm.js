@@ -496,16 +496,16 @@ export default class cRecordEditForm extends LightningElement {
     }
 
     handleSubmit(e) {
+        const eventHasNoTarget = e.target === undefined || e.target === null;
+
+        if (eventHasNoTarget || e.target.type !== 'submit') {
+            return;
+        }
+
         e.preventDefault();
         e.stopPropagation();
 
         if (!this.recordUi) {
-            return;
-        }
-
-        const eventHasNoTarget = e.target === undefined || e.target === null;
-
-        if (eventHasNoTarget || e.target.type !== 'submit') {
             return;
         }
 

@@ -435,6 +435,7 @@ export default class cButtonMenu extends LightningElement {
 
                 this.pollBoundingRect();
             } else {
+                this.dispatchEvent(new CustomEvent('close'));
             }
 
             this.classList.toggle('slds-is-open');

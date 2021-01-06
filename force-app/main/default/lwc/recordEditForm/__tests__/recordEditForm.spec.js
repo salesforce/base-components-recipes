@@ -44,6 +44,14 @@ describe('record edit form', () => {
         jest.clearAllMocks();
     });
 
+    function waitForFormLoad(element) {
+        return new Promise((resolve) => {
+            element.addEventListener('load', () => {
+                resolve(element);
+            });
+        });
+    }
+
     it('wires recordUi to input fields', () => {
         const element = createElement('lightningtest-mock-record-edit-holder', {
             is: MockRecordHolder
@@ -475,6 +483,34 @@ describe('record edit form', () => {
 
                 shadowQuerySelector(button, 'button').click();
             });
+        });
+    });
+
+    it('should not submit if submit event has the wrong target', () => {
+        const element = createElement('lightningtest-mock-record-edit-holder', {
+            is: MockRecordHolder
+        });
+
+        element.recordId = DEFAULT_RECORD_ID;
+        element.objectApiName = 'Bad_Guy__c';
+        element.showChild = true;
+
+        document.body.appendChild(element);
+
+        return waitForFormLoad(element).then(() => {
+            const handleSubmit = jest.fn();
+            element.addEventListener('submit', handleSubmit);
+
+            const input = shadowQuerySelector(element, 'lightning-input-field');
+
+            input.dispatchEvent(
+                // eslint-disable-next-line lightning-global/no-custom-event-bubbling
+                new CustomEvent('click', {
+                    bubbles: true
+                })
+            );
+
+            expect(handleSubmit).not.toHaveBeenCalled();
         });
     });
 
