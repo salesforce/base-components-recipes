@@ -23,9 +23,6 @@
             for:item="pillViewModel"
             for:index="index"
         >
-            <!--
-             W-8012126: Temporarily adding slds-truncate so pills truncate on small form factors.
-            -->
             <c-pill
                 label={pillViewModel.pill.item.label}
                 onclick={handlePillClick}
