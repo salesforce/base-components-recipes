@@ -6,7 +6,13 @@ Base component recipes open up the source code for the base components shown in 
 
 Only a subset of the components in the Component Library are available. For more information, see the [Documentation](#documentation) section.
 
-Base components implement Lightning Design System and are developed using Lightning Web Components. A `c` namespace component can contain components in the `lightning` namespace.
+Base components implement Salesforce Lightning Design System (SLDS) and are developed using Lightning Web Components. A `c` namespace component can contain components in the `lightning` namespace.
+
+## Before You Start
+
+Consider using base component recipes only if the base components in the `lightning` namespace don't work for your requirements. For example, use base component recipes if you need to customize the styles of the base components beyond supported styling mechanisms. For a list of available base components in the `lightning` namespace, see the [Component Library](https://developer.salesforce.com/docs/component-library).
+
+ To customize the styles on `lightning` namespace components, we recommend using [SLDS styling hooks](https://lightningdesignsystem.com/platforms/lightning/styling-hooks/#site-main-content). For more information, see [Style Components with SLDS](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.create_components_css_slds).
 
 ## Getting Started
 
