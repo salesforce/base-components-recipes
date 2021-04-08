@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+  <customLabels>
+    <label>Введіть дійсне значення.</label>
+    <name>lightning_LightningErrorMessage_validityBadInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Ваш запис не відповідає дозволеному зразку.</label>
+    <name>lightning_LightningErrorMessage_validityPatternMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>Невірний формат вводу.</label>
+    <name>lightning_LightningErrorMessage_validityTypeMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>Заповніть це поле.</label>
+    <name>lightning_LightningErrorMessage_validityValueMissing</name>
+  </customLabels>
+  <customLabels>
+    <label>Число надто велике.</label>
+    <name>lightning_LightningErrorMessage_validityRangeOverflow</name>
+  </customLabels>
+  <customLabels>
+    <label>Число надто мале.</label>
+    <name>lightning_LightningErrorMessage_validityRangeUnderflow</name>
+  </customLabels>
+  <customLabels>
+    <label>Введено недійсний інкремент.</label>
+    <name>lightning_LightningErrorMessage_validityStepMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>Ваш запис надто довгий.</label>
+    <name>lightning_LightningErrorMessage_validityTooLong</name>
+  </customLabels>
+  <customLabels>
+    <label>Ваш запис надто короткий.</label>
+    <name>lightning_LightningErrorMessage_validityTooShort</name>
+  </customLabels>
+  <customLabels>
+    <label>Вкладка</label>
+    <name>lightning_LightningCarousel_tabString</name>
+  </customLabels>
+  <customLabels>
+    <label>Зупинити автовідтворення</label>
+    <name>lightning_LightningCarousel_autoPlay</name>
+  </customLabels>
+  <customLabels>
+    <label>Передати файли</label>
+    <name>lightning_LightningInputFile_buttonLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Або відпустити файли</label>
+    <name>lightning_LightningInputFile_bodyText</name>
+  </customLabels>
+  <customLabels>
+    <label>Широта</label>
+    <name>lightning_LightningInputLocation_latitude</name>
+  </customLabels>
+  <customLabels>
+    <label>Довгота</label>
+    <name>lightning_LightningInputLocation_longitude</name>
+  </customLabels>
+  <customLabels>
+    <label>Широта повинна бути десятковим числом у діапазоні [-90, 90]</label>
+    <name>lightning_LightningInputLocation_invalidLatitude</name>
+  </customLabels>
+  <customLabels>
+    <label>Довгота повинна бути десятковим числом у діапазоні [-180, 180]</label>
+    <name>lightning_LightningInputLocation_invalidLongitude</name>
+  </customLabels>
+  <customLabels>
+    <label>Координата обов’язкова</label>
+    <name>lightning_LightningInputLocation_coordinateIsRequired</name>
+  </customLabels>
+  <customLabels>
+    <label>Електронна пошта</label>
+    <name>lightning_LightningFormattedEmail_emailIconLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Виберіть шрифт</label>
+    <name>lightning_LightningRichTextAssist_chooseFont</name>
+  </customLabels>
+  <customLabels>
+    <label>Виберіть розмір шрифту</label>
+    <name>lightning_LightningRichTextAssist_chooseSize</name>
+  </customLabels>
+  <customLabels>
+    <label>Створити текст</label>
+    <name>lightning_LightningRichTextAssist_composeText</name>
+  </customLabels>
+  <customLabels>
+    <label>Жирний</label>
+    <name>lightning_LightningRichTextButton_bold</name>
+  </customLabels>
+  <customLabels>
+    <label>Курсив</label>
+    <name>lightning_LightningRichTextButton_italic</name>
+  </customLabels>
+  <customLabels>
+    <label>Підкреслено</label>
+    <name>lightning_LightningRichTextButton_underline</name>
+  </customLabels>
+  <customLabels>
+    <label>Закреслено</label>
+    <name>lightning_LightningRichTextButton_strike</name>
+  </customLabels>
+  <customLabels>
+    <label>Маркований список</label>
+    <name>lightning_LightningRichTextButton_bullet</name>
+  </customLabels>
+  <customLabels>
+    <label>Нумерований список</label>
+    <name>lightning_LightningRichTextButton_number</name>
+  </customLabels>
+  <customLabels>
+    <label>Відступ вправо</label>
+    <name>lightning_LightningRichTextButton_indent</name>
+  </customLabels>
+  <customLabels>
+    <label>Відступ вліво</label>
+    <name>lightning_LightningRichTextButton_outdent</name>
+  </customLabels>
+  <customLabels>
+    <label>Вирівняти текст по лівому краю</label>
+    <name>lightning_LightningRichTextButton_leftAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>Вирівняти текст по центру</label>
+    <name>lightning_LightningRichTextButton_centerAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>Вирівняти текст по правому краю</label>
+    <name>lightning_LightningRichTextButton_rightAlign</name>
+  </customLabels>
+  <customLabels>
+    <label>Більше дій</label>
+    <name>lightning_LightningRichTextButton_moreActions</name>
+  </customLabels>
+  <customLabels>
+    <label>Посилання</label>
+    <name>lightning_LightningRichTextButton_link</name>
+  </customLabels>
+  <customLabels>
+    <label>Зображення</label>
+    <name>lightning_LightningRichTextButton_image</name>
+  </customLabels>
+  <customLabels>
+    <label>Видалити форматування</label>
+    <name>lightning_LightningRichTextButton_removeFormatting</name>
+  </customLabels>
+  <customLabels>
+    <label>Форматувати текст</label>
+    <name>lightning_LightningRichTextEditor_formatText</name>
+  </customLabels>
+  <customLabels>
+    <label>Форматувати фон і колір тексту</label>
+    <name>lightning_LightningRichTextEditor_formatBackground</name>
+  </customLabels>
+  <customLabels>
+    <label>Форматувати тіло</label>
+    <name>lightning_LightningRichTextEditor_formatBody</name>
+  </customLabels>
+  <customLabels>
+    <label>Вирівняти текст</label>
+    <name>lightning_LightningRichTextEditor_alignText</name>
+  </customLabels>
+  <customLabels>
+    <label>Вставити текст</label>
+    <name>lightning_LightningRichTextEditor_insertContent</name>
+  </customLabels>
+  <customLabels>
+    <label>Видалити форматування</label>
+    <name>lightning_LightningRichTextEditor_removeFormatting</name>
+  </customLabels>
+  <customLabels>
+    <label>Форматувати гарнітуру і розмір шрифту</label>
+    <name>lightning_LightningRichTextEditor_formatFont</name>
+  </customLabels>
+  <customLabels>
+    <label>Шрифт</label>
+    <name>lightning_LightningRichTextEditor_font</name>
+  </customLabels>
+  <customLabels>
+    <label>Розмір шрифту</label>
+    <name>lightning_LightningRichTextEditor_fontSize</name>
+  </customLabels>
+  <customLabels>
+    <label>Зв’язати URL-адресу</label>
+    <name>lightning_LightningRichTextEditor_linkInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Зберегти</label>
+    <name>lightning_LightningRichTextEditor_linkSave</name>
+  </customLabels>
+  <customLabels>
+    <label>Скасувати</label>
+    <name>lightning_LightningRichTextEditor_linkCancel</name>
+  </customLabels>
+  <customLabels>
+    <label>Зображення перевищує максимальний розмір 1 МБ.</label>
+    <name>lightning_LightningRichTextEditor_imageSizeExceeded</name>
+  </customLabels>
+  <customLabels>
+    <label>Під час передачі файлу виникла проблема.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadFailed</name>
+  </customLabels>
+  <customLabels>
+    <label>Завантаження зображень не підтримується для користувачів гостей.</label>
+    <name>lightning_LightningRichTextEditor_imageUploadNotSupported</name>
+  </customLabels>
+  <customLabels>
+    <label>обов’язково</label>
+    <name>lightning_LightningControl_required</name>
+  </customLabels>
+  <customLabels>
+    <label>активно</label>
+    <name>lightning_LightningControl_active</name>
+  </customLabels>
+  <customLabels>
+    <label>Активно</label>
+    <name>lightning_LightningControl_activeCapitalized</name>
+  </customLabels>
+  <customLabels>
+    <label>не є активною</label>
+    <name>lightning_LightningControl_inactive</name>
+  </customLabels>
+  <customLabels>
+    <label>Неактивно</label>
+    <name>lightning_LightningControl_inactiveCapitalized</name>
+  </customLabels>
+  <customLabels>
+    <label>Завантаження</label>
+    <name>lightning_LightningControl_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>Очистити</label>
+    <name>lightning_LightningControl_clear</name>
+  </customLabels>
+  <customLabels>
+    <label>Збільшити число</label>
+    <name>lightning_LightningInputNumber_incrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Зменшити число</label>
+    <name>lightning_LightningInputNumber_decrementCounter</name>
+  </customLabels>
+  <customLabels>
+    <label>Попередження</label>
+    <name>lightning_LightningPill_warning</name>
+  </customLabels>
+  <customLabels>
+    <label>Видалити</label>
+    <name>lightning_LightningPill_remove</name>
+  </customLabels>
+  <customLabels>
+    <label>Помилка</label>
+    <name>lightning_LightningPill_error</name>
+  </customLabels>
+  <customLabels>
+    <label>Для видалення натисніть клавішу «delete» або «backspace»</label>
+    <name>lightning_LightningPill_delete</name>
+  </customLabels>
+  <customLabels>
+    <label>Натисніть delete або backspace для видалення, а enter для навігації</label>
+    <name>lightning_LightningPill_deleteAndNavigate</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрані параметри:</label>
+    <name>lightning_LightningPillContainer_label</name>
+  </customLabels>
+  <customLabels>
+    <label>Ще {0}</label>
+    <name>lightning_LightningPillContainer_more</name>
+  </customLabels>
+  <customLabels>
+    <label>Хід виконання</label>
+    <name>lightning_LightningProgressBar_progress</name>
+  </customLabels>
+  <customLabels>
+    <label>Натисніть для набору</label>
+    <name>lightning_LightningClickToDial_enabled</name>
+  </customLabels>
+  <customLabels>
+    <label>Натисніть для вимкнення набору</label>
+    <name>lightning_LightningClickToDial_disabled</name>
+  </customLabels>
+  <customLabels>
+    <label>Натиснути Ctrl (Cmd на Mac) +ліву стрілку або Ctrl (Cmd на Mac) +праву стрілку для перенесення елементів між списками.</label>
+    <name>lightning_LightningDualListbox_componentAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>Перемістити вибір до {0}</label>
+    <name>lightning_LightningDualListbox_moveSelectionToAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>Перемістити вибір вгору</label>
+    <name>lightning_LightningDualListbox_upButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>Перемістити вибір вниз</label>
+    <name>lightning_LightningDualListbox_downButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>: елемент неможливо видалити з {0}</label>
+    <name>lightning_LightningDualListbox_optionLockAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label> [і максимум {0}]</label>
+    <name>lightning_LightningDualListbox_maxHelp</name>
+  </customLabels>
+  <customLabels>
+    <label> [і мінімум {0}]</label>
+    <name>lightning_LightningDualListbox_minHelp</name>
+  </customLabels>
+  <customLabels>
+    <label>Максимальна кількість параметрів для вибору — {0}</label>
+    <name>lightning_LightningDualListbox_maxError</name>
+  </customLabels>
+  <customLabels>
+    <label>Мінімальна кількість параметрів для вибору — {0}</label>
+    <name>lightning_LightningDualListbox_minErrorPlural</name>
+  </customLabels>
+  <customLabels>
+    <label>Виберіть щонайменше 1 параметр</label>
+    <name>lightning_LightningDualListbox_minErrorSingular</name>
+  </customLabels>
+  <customLabels>
+    <label>Потрібно вибрати параметр</label>
+    <name>lightning_LightningDualListbox_requiredError</name>
+  </customLabels>
+  <customLabels>
+    <label>Потрібно вибрати щонайменше {0} параметрів</label>
+    <name>lightning_LightningDualListbox_minRequiredErrorPlural</name>
+  </customLabels>
+  <customLabels>
+    <label>Потрібно вибрати щонайменше 1 параметр</label>
+    <name>lightning_LightningDualListbox_minRequiredErrorSingular</name>
+  </customLabels>
+  <customLabels>
+    <label>Необхідно вибрати {0}</label>
+    <name>lightning_LightningDualListbox_requiredOptionError</name>
+  </customLabels>
+  <customLabels>
+    <label>Етап завершено</label>
+    <name>lightning_LightningProgressIndicator_stageComplete</name>
+  </customLabels>
+  <customLabels>
+    <label>Поточний етап</label>
+    <name>lightning_LightningProgressIndicator_currentStage</name>
+  </customLabels>
+  <customLabels>
+    <label>Завантажити ще</label>
+    <name>lightning_LightningListView_loadMore</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрати все</label>
+    <name>lightning_LightningDatatable_selectAll</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрати елемент</label>
+    <name>lightning_LightningDatatable_selectItem</name>
+  </customLabels>
+  <customLabels>
+    <label>ширина стовпця</label>
+    <name>lightning_LightningDatatable_columnWidth</name>
+  </customLabels>
+  <customLabels>
+    <label>Сортувати за:</label>
+    <name>lightning_LightningDatatable_sort</name>
+  </customLabels>
+  <customLabels>
+    <label>Відсортовано за зростанням</label>
+    <name>lightning_LightningDatatable_sortAsc</name>
+  </customLabels>
+  <customLabels>
+    <label>Відсортовано за спаданням</label>
+    <name>lightning_LightningDatatable_sortDesc</name>
+  </customLabels>
+  <customLabels>
+    <label>Відсортовано: немає</label>
+    <name>lightning_LightningDatatable_sortNone</name>
+  </customLabels>
+  <customLabels>
+    <label>Завантаження</label>
+    <name>lightning_LightningDatatable_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>Показати дії</label>
+    <name>lightning_LightningDatatable_showActions</name>
+  </customLabels>
+  <customLabels>
+    <label>Обтікання текстом</label>
+    <name>lightning_LightningDatatable_wrapText</name>
+  </customLabels>
+  <customLabels>
+    <label>Обрізання тексту</label>
+    <name>lightning_LightningDatatable_clipText</name>
+  </customLabels>
+  <customLabels>
+    <label>Редагувати</label>
+    <name>lightning_LightningDatatable_edit</name>
+  </customLabels>
+  <customLabels>
+    <label>містить помилку</label>
+    <name>lightning_LightningDatatable_editHasError</name>
+  </customLabels>
+  <customLabels>
+    <label>Обрати рядок для вибору</label>
+    <name>lightning_LightningDatatable_chooseARow</name>
+  </customLabels>
+  <customLabels>
+    <label>Зберегти</label>
+    <name>lightning_LightningDatatable_save</name>
+  </customLabels>
+  <customLabels>
+    <label>Застосувати</label>
+    <name>lightning_LightningDatatable_apply</name>
+  </customLabels>
+  <customLabels>
+    <label>Скасувати</label>
+    <name>lightning_LightningDatatable_cancel</name>
+  </customLabels>
+  <customLabels>
+    <label>Виправте помилки і спробуйте зберегти ще раз</label>
+    <name>lightning_LightningDatatable_error</name>
+  </customLabels>
+  <customLabels>
+    <label>Закрити діалог</label>
+    <name>lightning_LightningDatatable_closeButtonAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>{0} має {1} помилок</label>
+    <name>lightning_LightningDatatable_rowLevelErrorAssistiveText</name>
+  </customLabels>
+  <customLabels>
+    <label>Оновити {0} обраних елементів</label>
+    <name>lightning_LightningDatatable_updateSelectedItems</name>
+  </customLabels>
+  <customLabels>
+    <label>Дії</label>
+    <name>lightning_LightningDatatable_rowActionsDefaultAriaLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Режим навігації</label>
+    <name>lightning_LightningDatatable_ariaLiveNavigationMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Режим дії</label>
+    <name>lightning_LightningDatatable_ariaLiveActionMode</name>
+  </customLabels>
+  <customLabels>
+    <label>Номер рядка</label>
+    <name>lightning_LightningDatatable_rowNumber</name>
+  </customLabels>
+  <customLabels>
+    <label>Нові елементи</label>
+    <name>lightning_LightningVerticalNavigation_newItems</name>
+  </customLabels>
+  <customLabels>
+    <label>Показати менше</label>
+    <name>lightning_LightningVerticalNavigation_showLess</name>
+  </customLabels>
+  <customLabels>
+    <label>Показати більше</label>
+    <name>lightning_LightningVerticalNavigation_showMore</name>
+  </customLabels>
+  <customLabels>
+    <label>Підсторінка</label>
+    <name>lightning_LightningVerticalNavigation_subPage</name>
+  </customLabels>
+  <customLabels>
+    <label>ОК</label>
+    <name>lightning_LightningNoticeFooter_okButton</name>
+  </customLabels>
+  <customLabels>
+    <label>Слайдер</label>
+    <name>lightning_LightningSlider_slider</name>
+  </customLabels>
+  <customLabels>
+    <label>Виберіть параметр</label>
+    <name>lightning_LightningCombobox_placeholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Очистити вибір</label>
+    <name>lightning_LightningCombobox_pillCloseButtonAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрано 1 параметр</label>
+    <name>lightning_LightningCombobox_selectedLabelSingle</name>
+  </customLabels>
+  <customLabels>
+    <label>Кількість обраних параметрів: {0}</label>
+    <name>lightning_LightningCombobox_selectedLabelMore</name>
+  </customLabels>
+  <customLabels>
+    <label>Поточний вибір:</label>
+    <name>lightning_LightningCombobox_currentSelection</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрані параметри:</label>
+    <name>lightning_LightningCombobox_ariaSelectedOptions</name>
+  </customLabels>
+  <customLabels>
+    <label>Завантаження</label>
+    <name>lightning_LightningCombobox_loadingText</name>
+  </customLabels>
+  <customLabels>
+    <label>Для видалення натисніть клавішу «delete» або «backspace»</label>
+    <name>lightning_LightningCombobox_deselectOptionKeyboard</name>
+  </customLabels>
+  <customLabels>
+    <label>За замовчуванням</label>
+    <name>lightning_LightningColorPickerPanel_defaultTab</name>
+  </customLabels>
+  <customLabels>
+    <label>Настроювані</label>
+    <name>lightning_LightningColorPickerPanel_customTab</name>
+  </customLabels>
+  <customLabels>
+    <label>Використати клавіші зі стрілками щоб вибрати насиченість і яскравість на осях х та у.</label>
+    <name>lightning_LightningColorPicker_colorPickerInstructions</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрати колір. Поточний колір: </label>
+    <name>lightning_LightningColorPicker_a11yTriggerText</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрати відтінок</label>
+    <name>lightning_LightningColorPicker_hueInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Шістнадцяткове число</label>
+    <name>lightning_LightningColorPicker_hexLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Червоний</label>
+    <name>lightning_LightningColorPicker_redAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>Ч</label>
+    <name>lightning_LightningColorPicker_rInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Зелений</label>
+    <name>lightning_LightningColorPicker_greenAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>З</label>
+    <name>lightning_LightningColorPicker_gInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Синій</label>
+    <name>lightning_LightningColorPicker_blueAbbr</name>
+  </customLabels>
+  <customLabels>
+    <label>С</label>
+    <name>lightning_LightningColorPicker_bInput</name>
+  </customLabels>
+  <customLabels>
+    <label>Готово</label>
+    <name>lightning_LightningColorPicker_doneButton</name>
+  </customLabels>
+  <customLabels>
+    <label>Скасувати</label>
+    <name>lightning_LightningColorPicker_cancelButton</name>
+  </customLabels>
+  <customLabels>
+    <label>Введіть дійсне шістнадцяткове значення.</label>
+    <name>lightning_LightningColorPicker_errorMessage</name>
+  </customLabels>
+  <customLabels>
+    <label>Довідка</label>
+    <name>lightning_LightningHelptext_buttonAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>Розгорнути гілку дерева</label>
+    <name>lightning_LightningTree_expandBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>Згорнути гілку дерева</label>
+    <name>lightning_LightningTree_collapseBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>Попередній місяць</label>
+    <name>lightning_LightningDateTimePicker_previousMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>Наступний місяць</label>
+    <name>lightning_LightningDateTimePicker_nextMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрати рік</label>
+    <name>lightning_LightningDateTimePicker_yearSelector</name>
+  </customLabels>
+  <customLabels>
+    <label>Сьогодні</label>
+    <name>lightning_LightningDateTimePicker_today</name>
+  </customLabels>
+  <customLabels>
+    <label>Інструмент вибору дати: </label>
+    <name>lightning_LightningDateTimePicker_ariaLabelMonth</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрати дату</label>
+    <name>lightning_LightningDateTimePicker_selectDate</name>
+  </customLabels>
+  <customLabels>
+    <label>Дата</label>
+    <name>lightning_LightningDateTimePicker_dateLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Час</label>
+    <name>lightning_LightningDateTimePicker_timeLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Ваш запис не відповідає дозволеному формату {0}.</label>
+    <name>lightning_LightningDateTimePicker_invalidDate</name>
+  </customLabels>
+  <customLabels>
+    <label>Значення має бути {0} або раніше.</label>
+    <name>lightning_LightningDateTimePicker_rangeOverflow</name>
+  </customLabels>
+  <customLabels>
+    <label>Значення має бути {0} або пізніше.</label>
+    <name>lightning_LightningDateTimePicker_rangeUnderflow</name>
+  </customLabels>
+  <customLabels>
+    <label>Показати дії</label>
+    <name>lightning_LightningPrimitiveCellActions_showActions</name>
+  </customLabels>
+  <customLabels>
+    <label>Завантаження дій</label>
+    <name>lightning_LightningPrimitiveCellActions_loadingActions</name>
+  </customLabels>
+  <customLabels>
+    <label>Привітання</label>
+    <name>lightning_LightningInputName_salutation</name>
+  </customLabels>
+  <customLabels>
+    <label>Ім'я</label>
+    <name>lightning_LightningInputName_firstName</name>
+  </customLabels>
+  <customLabels>
+    <label>Середнє ім'я</label>
+    <name>lightning_LightningInputName_middleName</name>
+  </customLabels>
+  <customLabels>
+    <label>Неформальне ім'я</label>
+    <name>lightning_LightningInputName_informalName</name>
+  </customLabels>
+  <customLabels>
+    <label>Прізвище</label>
+    <name>lightning_LightningInputName_lastName</name>
+  </customLabels>
+  <customLabels>
+    <label>Суфікс</label>
+    <name>lightning_LightningInputName_suffix</name>
+  </customLabels>
+  <customLabels>
+    <label>Немає</label>
+    <name>lightning_LightningInputName_none</name>
+  </customLabels>
+  <customLabels>
+    <label>Розгорнути {0}</label>
+    <name>lightning_LightningPrimitiveCellTree_expandBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>Згорнути {0}</label>
+    <name>lightning_LightningPrimitiveCellTree_collapseBranch</name>
+  </customLabels>
+  <customLabels>
+    <label>Ім’я API {0} недійсне, ви мали на увазі "{1}?"</label>
+    <name>lightning_LightningRecordEditForm_apiNameMismatch</name>
+  </customLabels>
+  <customLabels>
+    <label>Помилка збору записів або метаданих записів.</label>
+    <name>lightning_LightningRecordEditForm_genericError</name>
+  </customLabels>
+  <customLabels>
+    <label>Помилка збору записів: недійсний ідентифікатор запису.</label>
+    <name>lightning_LightningRecordEditForm_invalidID</name>
+  </customLabels>
+  <customLabels>
+    <label>Значення, надане для атрибута {0} не є дійсним Aura.Action.</label>
+    <name>lightning_LightningRecordEditForm_invalidActionAsHandler</name>
+  </customLabels>
+  <customLabels>
+    <label>Зберегти</label>
+    <name>lightning_LightningRecordForm_save</name>
+  </customLabels>
+  <customLabels>
+    <label>Скасувати</label>
+    <name>lightning_LightningRecordForm_cancel</name>
+  </customLabels>
+  <customLabels>
+    <label>Завантаження</label>
+    <name>lightning_LightningRecordForm_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>Додати</label>
+    <name>lightning_LightningLookup_add</name>
+  </customLabels>
+  <customLabels>
+    <label>Показати всі результати для «{0}»</label>
+    <name>lightning_LightningLookup_advancedSearchMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>Створити {0}</label>
+    <name>lightning_LightningLookup_createNewObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Поточний вибір</label>
+    <name>lightning_LightningLookup_currentSelection</name>
+  </customLabels>
+  <customLabels>
+    <label>Жодного результату для «{0}»</label>
+    <name>lightning_LightningLookup_emptyStateNoResultText</name>
+  </customLabels>
+  <customLabels>
+    <label>Наразі немає результатів...</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUText</name>
+  </customLabels>
+  <customLabels>
+    <label>Спробуйте ввести пошуковий термін.</label>
+    <name>lightning_LightningLookup_emptyStateNoResultMRUWithoutText</name>
+  </customLabels>
+  <customLabels>
+    <label>Виберіть варіант зі списку або видаліть пошуковий термін.</label>
+    <name>lightning_LightningLookup_messageWhenBadInputDefault</name>
+  </customLabels>
+  <customLabels>
+    <label>Пов’язати {0} з</label>
+    <name>lightning_LightningLookup_panelHeaderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>Нещодавн. {0}</label>
+    <name>lightning_LightningLookup_recentObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Всі результати для «{0}»</label>
+    <name>lightning_LightningLookup_resultsListHeaderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>Пошук</label>
+    <name>lightning_LightningLookup_search</name>
+  </customLabels>
+  <customLabels>
+    <label>Пошук {0}...</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>Шукати {0}</label>
+    <name>lightning_LightningLookup_searchObjectsPlaceholderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>Пошук...</label>
+    <name>lightning_LightningLookup_searchPlaceholder</name>
+  </customLabels>
+  <customLabels>
+    <label>«{0}» в {1}</label>
+    <name>lightning_LightningLookup_searchForInObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Виберіть об'єкт</label>
+    <name>lightning_LightningLookup_selectObject</name>
+  </customLabels>
+  <customLabels>
+    <label>Початкові результати для «{0}»</label>
+    <name>lightning_LightningLookup_typeaheadResultsListHeaderMobile</name>
+  </customLabels>
+  <customLabels>
+    <label>Невідомий запис</label>
+    <name>lightning_LightningLookup_unknownRecord</name>
+  </customLabels>
+  <customLabels>
+    <label>Відсутні</label>
+    <name>lightning_LightningLookup_none</name>
+  </customLabels>
+  <customLabels>
+    <label>Доступні</label>
+    <name>lightning_LightningPicklist_available</name>
+  </customLabels>
+  <customLabels>
+    <label>Вибрані</label>
+    <name>lightning_LightningPicklist_chosen</name>
+  </customLabels>
+  <customLabels>
+    <label>--Відсутній--</label>
+    <name>lightning_LightningPicklist_noneLabel</name>
+  </customLabels>
+  <customLabels>
+    <label>Маркери</label>
+    <name>lightning_LightningMap_coordinatesTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>Відкрити в Google Maps</label>
+    <name>lightning_LightningMap_openInGoogleMaps</name>
+  </customLabels>
+  <customLabels>
+    <label>Контейнер карти</label>
+    <name>lightning_LightningMap_iframeTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>наразі вибране</label>
+    <name>lightning_LightningPrimitiveCoordinate_selected</name>
+  </customLabels>
+  <customLabels>
+    <label>Завантаження елементів меню...</label>
+    <name>lightning_LightningButtonMenu_loading</name>
+  </customLabels>
+  <customLabels>
+    <label>Показати меню</label>
+    <name>lightning_LightningButtonMenu_showMenu</name>
+  </customLabels>
+  <customLabels>
+    <label>Більше</label>
+    <name>lightning_LightningTabs_overflowMore</name>
+  </customLabels>
+  <customLabels>
+    <label>Інші вкладки</label>
+    <name>lightning_LightningTabs_overflowMoreTitle</name>
+  </customLabels>
+  <customLabels>
+    <label>Вкладки</label>
+    <name>lightning_LightningTabs_overflowMoreAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>У цьому елементі є помилка</label>
+    <name>lightning_LightningTabs_errorStateAlternativeText</name>
+  </customLabels>
+  <customLabels>
+    <label>за кілька секунд</label>
+    <name>lightning_Duration_secondsLater</name>
+  </customLabels>
+  <customLabels>
+    <label>кілька секунд тому</label>
+    <name>lightning_Duration_secondsAgo</name>
+  </customLabels>
+  <customLabels>
+    <label>Закрити</label>
+    <name>lightning_LightningDialog_close</name>
+  </customLabels>
+  <customLabels>
+    <label>Служба повідомлень Lightning - Компонент потрібно опрацювати, перш ніж публікувати в каналі: {0}</label>
+    <name>lightning_LightningMessageChannel_publishWithoutContext</name>
+  </customLabels>
+  <customLabels>
+    <label>Служба повідомлень Lightning - Не вдається підписатися на канал {0} з недійсним діапазоном: {1}</label>
+    <name>lightning_LightningMessageChannel_invalidScope</name>
+  </customLabels>
+</Translations>
