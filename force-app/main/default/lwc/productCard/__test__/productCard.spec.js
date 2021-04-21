@@ -2,7 +2,7 @@ import {
     createElement
 } from 'lwc';
 import {registerLdsTestWireAdapter} from '@salesforce/sfdx-lwc-jest';
-import ProductCard from 'c/productCard'; // updated - grabbing locally instead of   ../productCard
+import ProductCard from '../productCard'; // updated - grabbing locally instead of c/productCard
 import {getRecord} from 'lightning/uiRecordApi';
 
 // Import mock data to send through the wire adapter.
