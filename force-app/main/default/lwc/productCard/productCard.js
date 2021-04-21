@@ -3,7 +3,6 @@ import { LightningElement, wire } from 'lwc';
 // Wire adapter to load records.
 import { getRecord } from 'lightning/uiRecordApi';
 
-
 export default class ProductCard extends LightningElement {
     // Id of Product__c to display.
     recordId;

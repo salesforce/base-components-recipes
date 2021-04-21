@@ -2,11 +2,13 @@ import {
     createElement
 } from 'lwc';
 import {registerLdsTestWireAdapter} from '@salesforce/sfdx-lwc-jest';
-import ProductCard from '../productCard'; // updated - grabbing locally instead of c/productCard
-import {getRecord} from 'lightning/uiRecordApi';
+import ProductCard from '../productCard'; // updated - grabbing locally instead of c/productCard - not extensible
+import {getRecord} from 'lightning/uiRecordApi'; //<-- problem  - THIS is not extensible
+
+
 
 // Import mock data to send through the wire adapter.
-const mockGetRecord = require('./data/getRecord.json');
+const mockGetRecord = require('./getRecord.json');
 
 // Register a test wire adapter. - 2.0 way!
 const getRecordWireAdapter = registerLdsTestWireAdapter(getRecord);
@@ -29,9 +31,10 @@ describe('@wire demonstration test', () => {
 
 // Resolve a promise to wait for a rerender of the new content.
         return Promise.resolve().then(() => {
-            const content = element.querySelector('.content');
+            const content = element.shadowRoot.querySelector('.content');
             const nameField = mockGetRecord.fields.Name.value;
-            expect(content.textContent).toBe(`Name:${nameField}`)
+            expect(content.textContent).toBe(`Name:${nameField}`); // both not null
+
         });
     });
 });
