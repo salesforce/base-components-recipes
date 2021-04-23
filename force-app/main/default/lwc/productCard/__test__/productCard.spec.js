@@ -12,7 +12,9 @@ import {getRecord} from 'lightning/uiRecordApi'; // NOW importing MODERN mocks. 
 const mockGetRecord = require('./getRecord.json');
 
 // Register a test wire adapter. - 2.0 way!
-const getRecordWireAdapter = registerLdsTestWireAdapter("getRecord");
+// const getRecordWireAdapter = registerLdsTestWireAdapter("getRecord");
+console.warn(`JOSE 2`, getRecord);
+const getRecordAdapter = registerLdsTestWireAdapter(getRecord);
 
 describe('@wire demonstration test', () => {
 // Disconnect the component to reset the adapter. It is also
@@ -29,14 +31,15 @@ describe('@wire demonstration test', () => {
             is: ProductCard
         });
         document.body.appendChild(element);
-        getRecordWireAdapter.emit(mockGetRecord);
+        debugger;
+        getRecordAdapter.emit(mockGetRecord);
 
 // Resolve a promise to wait for a rerender of the new content.
         return Promise.resolve().then(() => {
             debugger;
 
             const content = element.shadowRoot.querySelector('.content');
-            const name = content.shadowRoot.querySelector('.name');
+            const name = content.querySelector('.name');
             // console.warn(`content:`)
             // console.error(content)
             // console.error(content.shadowRoot);

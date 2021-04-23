@@ -5,7 +5,7 @@ console.warn("LOCAL productCard");
 debugger;
 
 import { getRecord } from 'lightning/uiRecordApi';
-
+console.warn(`JOSE `, getRecord);
 export default class ProductCard extends LightningElement {
     // Id of Product__c to display.
     // @api
@@ -19,11 +19,17 @@ export default class ProductCard extends LightningElement {
     // @api
     name = '';
 
+    /*
+    Trevor example
+    @wire(getRecord, { recordId: '$recordId', ['Contact.Name']})
+     */
+
     @wire(getRecord, { recordId: '$recordId',
     // fields
-        fields: ["Product__c.name"]
+        fields: ["Product__c.Name"]
     })
     wiredRecord({ data, error}) {
+        debugger
         console.error(error)
         console.error('DOING WIRE')
         console.error(data)
