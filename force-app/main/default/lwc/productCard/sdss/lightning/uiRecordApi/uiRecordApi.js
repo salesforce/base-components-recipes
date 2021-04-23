@@ -19,9 +19,15 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-import { createLdsTestWireAdapter } from '@salesforce/wire-service-jest-util'; // NAUGHTY NAUGHTY!  USE 2.0
+// import { createLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
+import {registerLdsTestWireAdapter} from "@salesforce/sfdx-lwc-jest"; // NAUGHTY NAUGHTY!  USE 2.0
+debugger;
+// const getRecordAdapter = createLdsTestWireAdapter(jest.fn());
+export const getRecord = jest.fn();
 
-export const getRecord = createLdsTestWireAdapter(jest.fn());
+
+
+
 
 
 // export const getRecordCreateDefaults = createLdsTestWireAdapter(jest.fn());
