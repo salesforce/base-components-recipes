@@ -236,25 +236,20 @@ export default class cRecordForm extends LightningElement {
                         );
                     }
 
-                    const hasFields =
-                        this._objectInfo && this._objectInfo.fields;
-
                     const fieldUpdateable = compound
                         ? compoundFieldIsUpdateable(
                               compoundFields, // eslint-disable-line indent
                               this._record, // eslint-disable-line indent
                               this._objectInfo // eslint-disable-line indent
                           ) // eslint-disable-line indent
-                        : hasFields &&
-                          this._objectInfo.fields[field].updateable;
+                        : this._objectInfo.fields[field].updateable;
                     const fieldCreateable = compound
                         ? compoundFieldIsCreateable(
                               compoundFields, // eslint-disable-line indent
                               this._record, // eslint-disable-line indent
                               this._objectInfo // eslint-disable-line indent
                           ) // eslint-disable-line indent
-                        : hasFields &&
-                          this._objectInfo.fields[field].createable;
+                        : this._objectInfo.fields[field].createable;
                     const shouldShowAsInputInEditMode =
                         fieldUpdateable || (!this._recordId && fieldCreateable);
                     const updateable =
@@ -264,9 +259,7 @@ export default class cRecordForm extends LightningElement {
                     const editable =
                         !isUnsupportedReferenceField(field) &&
                         this._editable &&
-                        (hasFields && this._objectInfo.fields[field]
-                            ? fieldUpdateable
-                            : false);
+                        fieldUpdateable;
                     thisRow.fields.push({
                         field,
                         editable,
