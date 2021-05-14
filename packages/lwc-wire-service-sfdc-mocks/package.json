@@ -1,0 +1,48 @@
+{
+  "name": "lwc-wire-service-sfdc-mocks",
+  "version": "4.0.0-alpha4",
+  "description": "sample data sets for @wire Lightning Data Service and UI API",
+  "license": "MIT",
+  "main": "dist/wire-service-sfdc-mocks.common.js",
+  "module": "dist/wire-service-sfdc-mocks.es.js",
+  "scripts": {
+    "clean": "yarn run clean:dist; yarn run clean:node_modules",
+    "clean:dist": "rimraf dist playground/index.js",
+    "clean:node_modules": "rimraf node_modules",
+    "lint": "eslint src playground",
+    "build": "rollup -c",
+    "build:playground": "rollup -c playground/rollup.config.js",
+    "serve": "node playground/server.js",
+    "start": "concurrently \"yarn run build:playground --watch\" \"yarn run serve\"",
+    "test": "jest --coverage",
+    "debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "release": "npm publish --registry https://nexus.soma.salesforce.com/nexus/content/repositories/npmjs-internal/",
+    "release:external": "npm publish --registry https://npm.lwcjs.org"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "keywords": [
+    "lwc",
+    "wire-service",
+    "@wire"
+  ],
+  "repository": "git@git.soma.salesforce.com:lwc/wire-service-sfdc-mocks.git",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "eslint": "^4.6.1",
+    "@lwc/eslint-plugin-lwc": "^0.6.0",
+    "express": "^4.15.5",
+    "jest": "21.2.1",
+    "@lwc/compiler": "1.3.7-228.2",
+    "@lwc/engine": "1.3.7-228.2",
+    "@lwc/jest-transformer": "4.3.1",
+    "@lwc/wire-service": "1.3.7-228.2",
+    "rimraf": "^2.6.1",
+    "rollup": "0.50.0",
+    "rollup-plugin-json": "^2.3.0",
+    "@lwc/rollup-plugin": "1.3.7-228.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0"
+  }
+}
