@@ -5,6 +5,7 @@
 .localdevserver
 .sfdx
 coverage/
+packages/
 .vscode
 jsconfig.json
 
