@@ -5,7 +5,14 @@ const defaultResolver = require('@salesforce/sfdx-lwc-jest/src/resolver');
 
 function getLightningMock(modulePath, options) {
     const { ns, name } = getInfoFromId(modulePath);
-    if (ns === 'lightning') {
+    // if (ns === 'lightning' || (ns === '..' && name === 'productCard')) {
+    //     debugger;
+    // }
+    // if (ns === 'lightning' && name === 'uiRecordApi.js') {
+    //     debugger;
+    // }
+    if (ns === 'lightning' && name !== 'uiRecordApi.js') {
+        ////// ALLLLL lightning goes to stubs!!
         const p = path.join(options.rootDir, 'force-app/stubs', modulePath);
         if (fs.existsSync(p)) {
             return path.join(p, `${name}.js`);
