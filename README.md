@@ -1,4 +1,6 @@
-# Base Components Recipes
+:bangbang: **This repo is archived as of April 2023.** Developers looking for source code should reference the public npm package [lightning-base-components](https://www.npmjs.com/package/lightning-base-components). Source code is provided as-is with no support contract. :bangbang:
+
+# ARCHIVED: Base Components Recipes
 
 View examples for base components in small bites. Each recipe demonstrates a working example of the base components to build pages and apps quickly. Use and customize the base components and the recipes in your apps.
 
