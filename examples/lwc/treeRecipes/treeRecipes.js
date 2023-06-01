@@ -103,7 +103,8 @@ export default class TreeRecipes extends LightningElement {
                                 {
                                     label: 'Assistant Manager 1',
                                     name: 'CFO-ASM-1'
-                                }, {
+                                },
+                                {
                                     label: 'Assistant Manager 2',
                                     name: 'CFO-ASM-2'
                                 }
